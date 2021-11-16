@@ -18,7 +18,6 @@ cd teamengine
 mvn package
 cd ..
 git clone https://github.com/opengeospatial/ets-ogcapi-features10.git
-mvn package
 cd ets-ogcapi-features10
 mvn package
 ```
