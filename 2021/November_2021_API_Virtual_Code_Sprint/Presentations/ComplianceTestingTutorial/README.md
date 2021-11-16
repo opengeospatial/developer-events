@@ -6,20 +6,22 @@ This tutorial will walk through the compliance testing process to demonstrate ho
 
 Like other modern OGC Standards, both Parts 1 and 2 of OGC API - Features contain the following normative content:
 
-* Requirements Class
+* **Requirements Class**
   * aggregate of all requirements that have the same specification target to satisfy a conformance test class
-* Requirement
- * expression in the content of a document conveying criteria to be fulfilled if compliance with the document is to be claimed and from which no deviation is permitted (source: ISO Directives Part 2)
-* Conformance Class
- * set of abstract test cases that when applied receive a single certificate of conformance
-* Abstract Test Suite (ATS)
- * set of conformance classes that define tests for all requirements of a specification
+* **Requirement**
+  * expression in the content of a document conveying criteria to be fulfilled if compliance with the document is to be claimed and from which no deviation is permitted (source: ISO Directives Part 2)
+* **Conformance Class**
+  * set of abstract test cases that when applied receive a single certificate of conformance
+* **Abstract Test Suite (ATS)**
+  * set of conformance classes that define tests for all requirements of a specification
 
-The OGC Validator hosts Executable Test Suites (ETS) that implement the test methods described in the Abstract Test Suite.
+The OGC Validator hosts **Executable Test Suites (ETS)** that implement the test methods described in the Abstract Test Suite.
 
 Here is how the specification elements relate to one another.
 
 ![speclements](images/specelements.png)
+
+
 
 ### Exercise 1: Basics on Validating an Implementation through a hosted Validator
 
