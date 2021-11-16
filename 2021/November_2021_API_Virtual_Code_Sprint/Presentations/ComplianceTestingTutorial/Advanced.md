@@ -1,6 +1,6 @@
 ### Exercise 3: Building a Validator for On-Premise deployment
 
-NOTE: This is for advanced users that want to deploy the validator in their own premises.
+This is for advanced users that want to deploy the validator in their own premises. Note that only test results from the hosted OGC Validator may be accepted with Certification applications. Therefore even if you deploy an on-premise instance of the OGC Validator, you still have to use the hosted validator in order to submit your application for certification.
 
 Technologies: Java 8, Docker, Maven
 
