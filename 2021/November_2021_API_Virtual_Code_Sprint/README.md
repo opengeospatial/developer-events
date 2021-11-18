@@ -37,7 +37,7 @@ There is a need to offer JSON-FG fallback geometry to support different situatio
 
 For geometry simplification, the sprint participants started with the `zoom-level`, `scale-denominator` and a number of other parameters and then by the end of the code sprint there was agreement that we should use `zoom-level`.
 
-The sprint participants wanted to support situations in which, based on the zoom level, the server could return a number of features and not some.
+The sprint participants wanted to support situations in which, based on the zoom level, the server could return some features and not all of them.
 
 A use case for clipping was also demonstrated. For example, if you are looking at New York, you should not need to get the whole of the US coastline.
 
