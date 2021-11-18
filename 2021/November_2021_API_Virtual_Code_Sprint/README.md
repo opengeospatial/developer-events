@@ -77,8 +77,7 @@ The participants made the following recommendations for future work.
 * Further alignment between STAC and OGC API - Records
 *	There’s a vote on going in ISO for Part 2. So there may be an opportunity to do some event in the SP once ISO 19168-2 has been approved.
 
-
-## Conclusions
+## Conclusions
 
 The code sprint successfully met its objectives. The sprint participants were able to discuss and prototype new capabilities. The sprint participants also found the tutorials and Lightning Talk provided in the Mentor Stream were helpful.
 
