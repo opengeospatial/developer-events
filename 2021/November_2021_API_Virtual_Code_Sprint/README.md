@@ -11,7 +11,7 @@ Day 1 kicked off with Welcome remarks from Dr Joana Simoes (OGC DevRel) and Pete
 
 On Day 2, we had Mentor Stream sessions on [How to Load feature data into your frontend application](https://github.com/opengeospatial/developer-events/wiki/November-2021-Geospatial-API-Code-Sprint#load-feature-data-into-your-frontend-application) led by Antonio Cerciello (EarthPulse) and [Testing implementations of OGC API - Features for Compliance to the Standard](https://github.com/opengeospatial/developer-events/wiki/November-2021-Geospatial-API-Code-Sprint#testing-implementations-of-ogc-api---features-for-compliance-to-the-standard) led by Dr Gobe Hobona (OGC). There were preliminary demos of geometry simplification through OGC API - Features. Similarly, in between the discussions and the mentor streams, there was plenty more coding.
 
-On Day 3, there was further coding, as well as a **Features and Geometry JSON Lightning Talk** and a final demonstration session. Checkout the screenshots from the final demo below.
+On Day 3, there was further coding, as well as a **Features and Geometry JSON Lightning Talk** led by Clemens Portele (interactive instruments) and Panagiotis (Peter) Vretanos (CubeWerx), as well as a final demonstration session. Checkout the screenshots from the final demo below.
 
 ## Demonstration Screenshots
 
