@@ -1,7 +1,7 @@
 # How it Went! The November 2021 Geospatial API Virtual Code Sprint
 
 
-From 15th to 17th of November, 2021, the OGC and ISO/TC 211 jointly hosted the November 2021 Geospatial API Virtual Code Sprint. The code sprint focused on the OGC API Features and ISO 19168-1:2020 standards. OGC API - Features offers the capability to serve, create, modify, and query spatial data on the Web and specifies requirements and recommendations for creating APIs that follow a standard way of sharing feature data. ISO 19168-1:2020 Geospatial API for Features is the ISO version of Part 1 of OGC API - Features, which focuses on delivery of feature content.
+From 15th to 17th of November, 2021, the OGC and ISO/TC 211 jointly hosted the November 2021 Geospatial API Virtual Code Sprint. The code sprint focused on the [OGC API](https://ogcapi.ogc.org/) Features and ISO 19168 standards. OGC API - Features offers the capability to serve, create, modify, and query spatial data on the Web and specifies requirements and recommendations for creating APIs that follow a standard way of sharing feature data. ISO 19168-1:2020 Geospatial API for Features is the ISO version of Part 1 of OGC API - Features, which focuses on delivery of feature content; ISO/DIS 19168-2 is the ISO version of Part 2, which adds further support for coordinate reference systems.
 
 An OGC Code Sprint is a collaborative and inclusive event driven by innovative and rapid programming with minimal process and organization constraints to support the development of new applications and candidate standards. Over the past three years we have been refining the process for organising and hosting OGC code sprints.
 
