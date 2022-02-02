@@ -34,3 +34,8 @@ Some projects where a GGXF reader could be implemented (non-exhaustive list):
   * Martin Desruisseaux
 
 Participants are free to propose an implementation in their own project.
+
+
+## Relationship with other Code Sprint projects
+
+A test case could be created and added to the [GIGS executable test suite](../GIGS/README.md).

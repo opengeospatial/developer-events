@@ -17,3 +17,8 @@ In particular it allows the test to run on current GeoAPI 3.0 release.
 
 Current implementation was for GIGS 1.0 and did not covered all test series.
 We need to upgrade to GIGS 2.0 and complete the missing tests.
+
+
+## Relationship with other Code Sprint projects
+
+We could create a test case for the [Gridded Geodetic data eXchange Format](../GGXF/README.md) (GGXF).
