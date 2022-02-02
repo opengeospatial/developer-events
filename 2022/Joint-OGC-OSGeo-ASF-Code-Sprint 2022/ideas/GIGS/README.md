@@ -7,8 +7,9 @@ GIGS tests are available as dataset (CSV files), web service and executable JUni
 The JUnit tests can be executed on any [GeoAPI 3.0](http://www.geoapi.org/) implementations.
 It includes at this time:
 
-* [PROJ](https://proj.org/) (in C/C++) through [PROJ-JNI](https://github.com/OSGeo/PROJ-JNI) bindings.
 * [Apache SIS](https://sis.apache.org/) (in Java)
+* [PROJ](https://proj.org/) (in C/C++) through [PROJ-JNI](https://github.com/OSGeo/PROJ-JNI) bindings.
+* [UCAR library](https://github.com/Unidata/netcdf-java) through [GeoAPI wrappers](https://github.com/Unidata/geoapi-netcdf-java).
 
 The JUnit GIGS tests, previously part of GeoAPI 4 draft (not yet released),
 are moving to a separated repository hosted by IOGP.
@@ -17,6 +18,22 @@ In particular it allows the test to run on current GeoAPI 3.0 release.
 
 Current implementation was for GIGS 1.0 and did not covered all test series.
 We need to upgrade to GIGS 2.0 and complete the missing tests.
+
+
+## Mentors
+
+The following peoples will be present in the project room during parts of the code sprint:
+
+* TBD, editor of GIGS tests.
+* Martin Desruisseaux, editor of GeoAPI specification and contributor of Apache SIS project.
+
+
+## Requirements
+
+Execution of GIGS tests as JUnit tests requires:
+
+* JUnit 4 (migration to JUnit 5 can be a topic for this code sprint).
+* [GeoAPI 3.0](http://www.geoapi.org/) implementation or wrappers (see above list).
 
 
 ## Relationship with other Code Sprint projects

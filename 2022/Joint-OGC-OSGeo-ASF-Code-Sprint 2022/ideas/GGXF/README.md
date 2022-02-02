@@ -14,6 +14,15 @@ We hope to collect implementation feedback for adjustment of GGXF standard.
 * [Prototype in Python](https://github.com/opengeospatial/CRS-Gridded-Geodetic-data-eXchange-Format/tree/master/scripts)
 
 
+## Mentors
+
+The following peoples will be present in the project room during parts of the code sprint:
+
+* Roger Lott, editor of GGXF specification.
+* Chris Crook, contributor of GGXF specification and implementor of Python prototype.
+* Martin Desruisseaux, contributor of GGXF specification and Apache SIS project.
+
+
 ## Requirements
 
 GGXF implementation requires the use of libraries with following capabilities:
@@ -31,7 +40,7 @@ Some projects where a GGXF reader could be implemented (non-exhaustive list):
 * [PROJ](https://proj.org/) (in C/C++)
   * Contact person: TBD
 * [Apache SIS](https://sis.apache.org/) (in Java)
-  * Martin Desruisseaux
+  * Contact person: Martin Desruisseaux
 
 Participants are free to propose an implementation in their own project.
 
