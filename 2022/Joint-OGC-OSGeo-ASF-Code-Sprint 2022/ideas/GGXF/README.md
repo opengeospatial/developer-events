@@ -28,7 +28,7 @@ The following peoples will be present in the project room during parts of the co
 GGXF implementation requires the use of libraries with following capabilities:
 
 * Read Coordinate Reference System (CRS) definitions in Well Known Text (WKT) format as defined by ISO 19162.
-* Read netCDF-4 (or HDF5) format. This is the current GGXF carrier for grid data.
+* Read netCDF-4 (or HDF5) format. This is the proposed format for GGXF files.
 
 Note that supporting CF-convention is currently not a requirement.
 
