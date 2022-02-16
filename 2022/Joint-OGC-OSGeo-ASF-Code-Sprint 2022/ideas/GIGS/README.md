@@ -20,11 +20,17 @@ Current implementation was for GIGS 1.0 and did not covered all test series.
 We need to upgrade to GIGS 2.0 and complete the missing tests.
 
 
+## Resources
+
+* [GIGS Test Dataset](https://github.com/IOGP-GIGS/GIGSTestDataset)
+* [GIGS-GeoAPI repository](https://github.com/IOGP-GIGS/GIGSGeoAPI)
+
+
 ## Mentors
 
 The following peoples will be present in the project room during parts of the code sprint:
 
-* TBD, editor of GIGS tests.
+* Josh Townsend, editor of GIGS tests.
 * Martin Desruisseaux, editor of GeoAPI specification and contributor of Apache SIS project.
 
 
@@ -34,6 +40,7 @@ Execution of GIGS tests as JUnit tests requires:
 
 * JUnit 4 (migration to JUnit 5 can be a topic for this code sprint).
 * [GeoAPI 3.0](http://www.geoapi.org/) implementation or wrappers (see above list).
+* An implementation to test (e.g. [PROJ-JNI](https://github.com/OSGeo/PROJ-JNI) or [Apache SIS](https://sis.apache.org/)).
 
 
 ## Relationship with other Code Sprint projects
