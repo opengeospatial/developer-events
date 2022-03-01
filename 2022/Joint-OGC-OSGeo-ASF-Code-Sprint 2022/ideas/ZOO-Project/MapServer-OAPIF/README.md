@@ -2,14 +2,15 @@
 
 The [ZOO-Project](http://zoo-project.org) is an Open Source Server Implementation of the [OGC API - Processes](https://ogcapi.ogc.org/processes/).
 Currently, the ZOO-Project supports automatic publication of the data resulting of a service execution by using [Mapserver](http://mapserver.org) to provide the data as OGC Web Services using WMS, WFS and WCS.
-It basicaly means that in case your service produce a vector dataset, this data will be available as WMS and WFS depending on the mimeType requested for the output ('''image/png''' or '''text/xml'''). In case your service output a raster dataset then, this data will be available as WMS and WCS depending on the mimeType ('''image/png''' or '''image/tif''').
+It basicaly means that in case your service produce a vector dataset, this data will be available as WMS and WFS depending on the mimeType requested for the output (```image/png``` or ```text/xml```). In case your service output a raster dataset then, this data will be available as WMS and WCS depending on the mimeType (```image/png``` or ```image/tif```).
 The purpose of this effort is to support automatic publication of the data resulting of a service execution as OGC API - Features collections using MapServer as the Server Implementation.
 This new support should be integrated in an updated [MS4W](https://ms4w.com/) package containing the latest ZOO-Project.
 
 ## Resources
 
-* [RFC 134 document](https://mapserver.org/development/rfc/ms-rfc-134.html) (Current status 2021-06-23)
+* [MapServer RFC 134 document](https://mapserver.org/development/rfc/ms-rfc-134.html) (Current status 2021-06-23)
 * [ZOO-Project OGC API - Processes Demo Instance](https://zooprojectdemo.azurewebsites.net/ogc-api/)
+* [ZOO-Project GitHub repo](https://github.com/ZOO-Project/ZOO-Project)
 * [MS4W Packages](https://ms4w.com/download.html)
 
 
