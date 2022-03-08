@@ -10,7 +10,7 @@ We hope to collect implementation feedback for adjustment of GGXF standard.
 
 ## Resources
 
-* [GGXF standard draft](https://github.com/opengeospatial/CRS-Gridded-Geodetic-data-eXchange-Format/issues/29) (draft 0.9 2022-01-30)
+* [GGXF standard draft](https://github.com/opengeospatial/CRS-Gridded-Geodetic-data-eXchange-Format/issues/34) (draft 0.91 2022-03-02)
 * [Prototype in Python](https://github.com/opengeospatial/CRS-Gridded-Geodetic-data-eXchange-Format/tree/master/scripts)
 
 

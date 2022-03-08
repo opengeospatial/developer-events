@@ -38,9 +38,17 @@ The following peoples will be present in the project room during parts of the co
 
 Execution of GIGS tests as JUnit tests requires:
 
-* JUnit 4 (migration to JUnit 5 can be a topic for this code sprint).
-* [GeoAPI 3.0](http://www.geoapi.org/) implementation or wrappers (see above list).
+* JUnit 4 (migration to JUnit 5 in progress).
+* [GeoAPI 3.0.1](http://www.geoapi.org/) implementation or wrappers (see above list).
 * An implementation to test (e.g. [PROJ-JNI](https://github.com/OSGeo/PROJ-JNI) or [Apache SIS](https://sis.apache.org/)).
+
+
+## Work items
+
+The work can be done on the IOGP-GIGS repository or in project-specific repository:
+
+* Translation of GIGS test files to implementation-neutral JUnit tests should be done in IOGP-GIGS repository.
+* Completing (if needed) GeoAPI wrappers for making possible to execute the tests should be done in project-specific repository.
 
 
 ## Relationship with other Code Sprint projects
