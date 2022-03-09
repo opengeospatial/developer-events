@@ -11,6 +11,7 @@
 4.2.4.  OGC API — Records
 4.2.5.  OGC API — Routes
 4.2.6.  OGC API — Tiles
+4.2.6.  GIGS GGXF
 
 4.3.  OSGeo Projects
 4.3.1.  OSGeo GRASS GIS
