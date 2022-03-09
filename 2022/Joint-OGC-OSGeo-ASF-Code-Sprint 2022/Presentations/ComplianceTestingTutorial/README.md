@@ -34,7 +34,7 @@ Requirements: Web browser
 1. Create an account on the OGC Validator. We will use the Beta version of the validator for this Code Sprint (https://cite.ogc.org/te2). 
 2. Log into the OGC Validator.
 3. Select OGC from the list of test providers.
-4. Select OGC API - Features from the list of available tests.
+4. Select OGC API - Environmental Data Retrieval from the list of available tests.
 5. Create a test session.
 6. Enter the address of the landing page.
 7. Select the number of collections to parse. The default setting of 3 is fine.
