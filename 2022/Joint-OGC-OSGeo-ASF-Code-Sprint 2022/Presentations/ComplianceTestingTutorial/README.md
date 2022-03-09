@@ -1,6 +1,6 @@
-## Testing implementations of OGC API - Features for Compliance to the Standard
+## Testing implementations of OGC API Standards for Compliance to the Standards
 
-This tutorial will walk through the compliance testing process to demonstrate how to check whether a product correctly implements the OGC API - Features standard. Two approaches will be demonstrated: through the hosted TEAM Engine web application, and through the Eclipse IDE (using Maven).
+This tutorial will walk through the compliance testing process to demonstrate how to check whether a product correctly implements an OGC API standard. Two approaches will be demonstrated: through the hosted TEAM Engine web application, and through the Eclipse IDE (using Maven).
 
 ### Introduction
 
