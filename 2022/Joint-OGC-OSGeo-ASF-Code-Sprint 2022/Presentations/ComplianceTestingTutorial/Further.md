@@ -16,6 +16,6 @@ This workflow has been tested on an Ubuntu 18.04 running Java 8.
 1. Download image, create and start a container
 
 ```
-docker run -p 8081:8080 ogccite/ets-ogcapi-features10
+docker run -p 8081:8080 ogccite/ets-ogcapi-edr10
 ```
 2. Access application via web browser interface
