@@ -4,7 +4,7 @@ This tutorial will walk through the compliance testing process to demonstrate ho
 
 ### Introduction
 
-Like other modern OGC Standards, both Parts 1 and 2 of OGC API - Features contain the following normative content:
+OGC API Standards contain the following normative content:
 
 * **Requirements Class**
   * aggregate of all requirements that have the same specification target to satisfy a conformance test class
