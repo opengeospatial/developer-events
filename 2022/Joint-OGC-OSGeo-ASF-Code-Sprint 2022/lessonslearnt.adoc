@@ -7,6 +7,10 @@
 * There is a need to always have a bbox response in the HTTP header, to help with determing the extent of the data returned.
 * OGC API standards offer an improved developer experience compared to the OGC Web Services suite of standards. 
 * The examples in OGC API standards are absolutely key to helping developers to implement the standards.
+* There is a frequently asked question of: What is the relationship between OGC API Records and STAC? There is a need for clear communications on what the relationship is and which standard to use where. There is a need to delineate these from both a communications and technical.
+* There is a need to make OGC API standards stand out.
+* There is some similarity between STAC and some of the OGC API Standards. STAC also uses OGC API Features. The idea is to specify OGC API Records such that STAC can be a profile of OGC API Records.
+* Which some resources it is not sufficient to record a link to a resource. For example, with a WMS there would be a need to parse the capabilities.
 
 == Next Steps for the innovation side
 
