@@ -1,0 +1,17 @@
+= Immediate Lessons and Next Steps
+
+== Immediate Lessons
+
+* There is concern about the format for presenting attribution of collections and collection metadata. There is a need for some compromise on the attribution format.
+* The code sprints provide an opportunity for feedback from more developers within and outside of the OGC and OSGeo community.
+* There is a need to always have a bbox response in the HTTP header, to help with determing the extent of the data returned.
+* OGC API standards offer an improved developer experience compared to the OGC Web Services suite of standards. 
+* The examples in OGC API standards are absolutely key to helping developers to implement the standards.
+
+== Next Steps for the innovation side
+
+TBA
+
+== Next Steps for the standards side
+
+TBA
