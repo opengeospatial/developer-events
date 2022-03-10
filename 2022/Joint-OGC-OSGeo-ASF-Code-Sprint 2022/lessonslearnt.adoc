@@ -14,7 +14,11 @@
 
 == Next Steps for the innovation side
 
-TBA
+* Prototypes of crawlable catalogues. Currently there are several searchable catalogues but not crawlable ones.
+* More spec validation work for OGC API Records.
+* More experiments for OGC API Processes - Workflows extension. This could try out the various workflow approaches. https://github.com/opengeospatial/ideas/issues/115
+* Experimentation on how a processing server can interact properly with other OGC API implementations that serve data. For example, in this code sprint there was an implementation of OGC API Processes (ZOO Project) that interacted with an OGC API Features implementation (MapServer).
+* Experimentation with OGC's geoparquet specification and Apache Arrow.
 
 == Next Steps for the standards side
 
