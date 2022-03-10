@@ -22,4 +22,5 @@
 
 == Next Steps for the standards side
 
-TBA
+* To improve examples and documentation related to OGC API Records.
+* To advance the development of the Executable Test Suites of OGC API Processes, Tiles and Coverages.
