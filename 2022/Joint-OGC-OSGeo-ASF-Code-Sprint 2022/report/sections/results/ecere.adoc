@@ -1,0 +1,9 @@
+=== Ecere GNOSIS Cartographer
+
+Developers from Ecere supported the code sprint through provision of client-side and server-side implementations of various OGC API candidate and approved standards. Ecere demonstrated visualization of data accessed via OGC APIs through GNOSIS Cartographer.
+
+[[img_gnosis]]
+.Screenshot of the Ecere GNOSIS Cartographer demo
+image::../images/gnosis.png[align="center",width=800]
+
+Ecere also provided an instance of the GNOSIS Maps Server, which implements multiple OGC API candidate and approved standards. Other sprint participants were then able to interact with GNOSIS Maps Server to help build OGC API support in their client applications, for example leaflet.

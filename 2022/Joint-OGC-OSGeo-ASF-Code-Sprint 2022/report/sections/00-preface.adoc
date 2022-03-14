@@ -1,0 +1,118 @@
+
+////
+Preface sections must include [.preface] attribute
+in order to get them placed in the preface area (and not in the main content).
+
+Keywords specified in document preamble will display in this area
+after the abstract
+////
+
+[.preface]
+== Abstract
+
+The subject of this Engineering Report (ER) is a code sprint that was held from the 8th to the 10th of March 2022 to advance support of open geospatial standards within the developer community, whilst also advancing the standards themselves. The code sprint was hosted by the Open Geospatial Consortium (OGC), the Apache Software Foundation (ASF), and Open Source Geospatial Foundation (OSGeo). The code sprint was sponsored by Ordnance Survey (OS), and held as a completely virtual event.
+
+
+[.preface]
+== Executive Summary
+
+Over the past decade, geospatial technologies and data have become more widespread in use and application. A key catalyst for this increased uptake of geospatial technologies is the interoperability achieved through implementation of open geospatial standards. Another important catalyst for this increased uptake is the availability of open source software products that are able to extract, transform, analyse, and disseminate geospatial data.
+
+In February 2021, the Open Geospatial Consortium (OGC), the Apache Software Foundation (ASF), and the Open Source Geospatial Foundation (OSGeo) held their first joint Open Source Software and Open Standards Code Sprint (https://docs.ogc.org/per/21-008.html[OGC 21-008]). The success of that first joint code sprint provided the foundation for a second joint code sprint. This Engineering Report (ER) summarizes the main achievements of the second joint code sprint, conducted between March 8th and 10th, 2022. The code sprint, named the 2022 Joint OGC OSGeo ASF Code Sprint, served to accelerate the support of open geospatial standards within the developer community.
+
+Part of the motivation for holding the code sprint was the growing uptake of location across the global developer communities. The code sprint brought together developers of Open Standards, Open Source Software and Proprietary Software. The code sprint therefore provided a rare opportunity for developers across these communities to focus on common challenges within a short space of time in a shared collaborative environment.
+
+The Open Geospatial Consortium (OGC) is an international consortium of more than 500 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR - Findable, Accessible, Interoperable, and Reusable. The consortium consists of Standards Working Groups (SWGs) that have responsibility for designing a candidate standard prior to approval as an OGC standard and for making revisions to an existing OGC standard. The sprint objectives for the SWGs were to:
+
+* Develop prototype implementations of OGC standards, including implementations of draft OGC Application Programming Interface (API) standards
+* Test the prototype implementations
+* Provide feedback to the Editor about what worked and what did not
+* Provide feedback about the specification document
+
+The Open Source Geospatial Foundation (OSGeo) is a not-for-profit organization whose mission is to foster global adoption of open geospatial technology by being an inclusive software foundation devoted to an open philosophy and participatory community driven development. The foundation consists of projects that develop open source software products. The sprint objectives for OSGeo projects were:
+
+* Release new software versions
+* Fix open issues
+* Develop new features
+* Improve documentation, translations
+* Develop prototype implementations of OGC standards
+
+The Apache Software Foundation (ASF) is an all-volunteer community comprising 815 individual Members and 8,500 Committers on six continents stewarding more than 227 million lines of code, and overseeing more than 350 Apache projects and their communities. The sprint objectives for ASF projects were:
+
+* Improve support of OGC standards
+* Improve visualization capabilities
+* Improve documentation
+* Improve interoperability with other libraries
+
+The code sprint facilitated the development and testing of prototype implementations of OGC standards, including implementations of draft OGC API standards. Further, the code sprint also enabled the participating developers to provide feedback to the editors of OGC standards. Furthermore, the code sprint provided a collaborative environment for OSGeo and ASF developers to fix open issues in products, develop new features, improve documentation, improve interoperability with other libraries/products, and develop prototype implementations of OGC standards. The code sprint therefore met all of its objectives and achieved its goal of accelerating the support of open geospatial standards within the developer community.
+
+The engineering report makes the following recommendations for future innovation work items:
+
+* Prototypes of catalogues that can be crawled through by an application. Currently there are several searchable catalogues but not catalogues that can be crawled through by an application.
+* More spec validation work for OGC API Records.
+* More experiments for OGC API Processes - Workflows extension. This could try out the various workflow approaches. https://github.com/opengeospatial/ideas/issues/115
+* Experimentation on how a processing server can interact properly with other OGC API implementations that serve data. For example, in this code sprint there was an implementation of OGC API Processes (ZOO Project) that interacted with an OGC API Features implementation (MapServer).
+* Experimentation with OGC's geoparquet specification and Apache Arrow.
+
+The engineering report also makes the following recommendations for things that the Standards Working Groups should consider introducing support for:
+
+* To improve examples and documentation related to OGC API Records.
+* To advance the development of the Executable Test Suites of OGC API Processes, Tiles and Coverages.
+
+
+== Submitters
+
+All questions regarding this document should be directed to the editor or the contributors:
+
+[%unnumbered]
+[options="header"]
+|===
+| Name | Organization | Role
+|Gobe Hobona| Open Geospatial Consortium | Editor
+|Joana Simoes | Open Geospatial Consortium |Editor
+|Angelos Tzotsos | Open Source Geospatial Foundation |Editor
+|Martin Desruisseaux | Geomatys |Editor
+|Tom Kralidis | Meteorological Service of Canada |Editor
+|	Gérald	Fenoy	|	GeoLabs	|	Contributor
+|	Rajat	Shinde	|	IIT Bombay	|	Contributor
+|	Michael	Arneson	|	INT	|	Contributor
+|	Blasco	Brauzzi	|	Terradue Srl	|	Contributor
+|	Vicky	Vergara	|	pgRouting (OSGeo)	|	Contributor
+|	Josh	Townsend	|	bp	|	Contributor
+|	Jerome	Jacovella-St-Louis	|	Ecere Corporation	|	Contributor
+|	Massimiliano	Cannata	|	SUPSI	|	Contributor
+|	Morten	Breiner	|	EIVA	|	Contributor
+|	Ana Paula	Seraphim	|	University of Cambridge	|	Contributor
+|	Paloma	Abad	|	National Center of Geographic Information (Spain)	|	Contributor
+|	Carmen	Tawalika	|	mundialis	|	Contributor
+|	Clemens	Portele	|	interactive instruments GmbH	|	Contributor
+|	Haifeng	Niu	|	Department of Land Economy, University of Cambridge	|	Contributor
+|	Samantha	Lavender	|	Pixalytics Ltd	|	Contributor
+|	Ashish	Kumar	|	IIT (BHU) Varanasi	|	Contributor
+|	Carlos Eduardo	Mota	|	CPRM	|	Contributor
+|	Bruno	Kinoshita	|	Apache Software Foundation	|	Contributor
+|	Paul	van Genuchten	|	ISRIC World Soil Information	|	Contributor
+|	Panagiotis	Vretanos	|	CubeWerx Inc.	|	Contributor
+|	Anika	Weinmann	|	mundialis	|	Contributor
+|	Eugene	Yu	|	George Mason University	|	Contributor
+|	Iván	Sánchez Ortega	|	OSGeo charter member	|	Contributor
+|	Ayodele	Michael A	|	(self)	|	Contributor
+|	Weston	Renoud	|	QPS BV	|	Contributor
+|	Luca	Delucchi	|	Fondazione Edmund Mach	|	Contributor
+|	Constantin	Drabo	|	TRESOR	|	Contributor
+|	Francesco 	Bartoli	|	Geobeyond 	|	Contributor
+|	Patrick	Dion	|	Ecere Corporation	|	Contributor
+|	Antonio	Cerciello	|	Byte Road	|	Contributor
+|	Brian M.	Hamlin	|	OSGeo California Chapter	|	Contributor
+|	Jack	Riley	|	NOAA	|	Contributor
+|	James	Case	|	Case Ocean Services LLC	|	Contributor
+|	Kevin	Lalli	|	Hydrosat	|	Contributor
+|	Marta	Conceição	|	FMUL	|	Contributor
+|	Matthias	Loeks	|	BASF Digital Farming GmbH	|	Contributor
+|	Maxime	Collombin	|	University of Applied Sciences, Western Switzerland, School of Business & Engineering Vaud (HEIG-VD)	|	Contributor
+|	Mehmet Akif	Ortak	|	IT	|	Contributor
+|	Tracey	Birch	|	(self)	|	Contributor
+|	Add Yourself	|	Add Yourself	|	Contributor
+|	Add Yourself	|	Add Yourself	|	Contributor
+|	Add Yourself	|	Add Yourself	|	Contributor
+|===

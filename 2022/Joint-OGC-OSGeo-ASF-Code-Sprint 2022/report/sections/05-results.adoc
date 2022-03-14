@@ -1,0 +1,18 @@
+[[results]]
+== Results
+
+The code sprint included multiple software libraries, OWS implementations, OGC API implementations and different client applications. In addition to supporting OWS and OGC API standards, various ASF and OSGeo software products involved in the code sprint also supported a variety of OGC encoding standards. This section presents some of the results from the code sprint.
+
+include::results/leaflet.adoc[]
+
+include::results/metasearch.adoc[]
+
+include::results/t17d166.adoc[]
+
+include::results/t17d168.adoc[]
+
+include::results/cubeserv.adoc[]
+
+include::results/ecere.adoc[]
+
+include::results/zooproject.adoc[]

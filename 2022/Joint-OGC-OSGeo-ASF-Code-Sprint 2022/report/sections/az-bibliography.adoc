@@ -1,0 +1,9 @@
+
+[appendix,obligation=informative]
+[[annex-bibliography]]
+[bibliography]
+== Bibliography
+
+* [[[ogc21-008,OGC 21-008]]], OGC: OGC 21-008: Joint OGC OSGeo ASF Code Sprint 2021 Summary Engineering Report, 2021
+
+* [[[ogc21-019,OGC 21-019]]], Aleksandar Balaban: OGC 21-019, OGC Testbed-17: Attracting Developers: Lowering the entry barrier for implementing OGC Web APIs. Open Geospatial Consortium (2022). https://docs.ogc.org/per/21-019.html

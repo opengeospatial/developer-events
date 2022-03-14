@@ -1,0 +1,7 @@
+=== Extension of the Testbed-17 Dataset testing (D168) prototype
+
+For this code sprint, the prototype was extended to support OGC API - Records. The maintainers of the prototype deployed catalogs with multiple objects. They leverages the pygeometa toolkit to support the generation of metadata records.
+
+[[img_t17d168]]
+.Screenshot of part of a script from the Testbed-17 Dataset testing (D168) prototype
+image::../images/t17d168.png[align="center",width=800]

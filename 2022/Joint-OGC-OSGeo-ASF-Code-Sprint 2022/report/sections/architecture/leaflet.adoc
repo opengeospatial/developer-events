@@ -1,0 +1,4 @@
+[[leaflet]]
+==== OSGeo Leaflet
+
+Leaflet is an open-source JavaScript library for mobile-friendly interactive maps. It works across all major desktop and mobile platforms, can be extended with a variety of plugins, and offers a well-documented API.

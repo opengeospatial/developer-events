@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="semantic" version="2.0.3">
+<bibdata type="standard">
+<title language="en" format="text/plain">Joint OGC OSGeo ASF Code Sprint 2022 Summary Engineering Report</title>
+<docidentifier type="ogc-external">http://www.opengis.net/doc/PER/eoep-Hack2018</docidentifier><docidentifier type="ogc-internal">18-046</docidentifier>
+
+<docnumber>18-046</docnumber>
+<date type="published">
+<on>2029-06-12</on>
+</date>
+<date type="issued">
+<on>2018-07-10</on>
+</date>
+<date type="received">
+<on>2018-12-20</on>
+</date>
+<contributor>
+<role type="editor"/>
+<person>
+<name>
+<completename>Gobe Hobona</completename>
+</name>
+</person>
+</contributor>
+<contributor>
+<role type="editor"/>
+<person>
+<name>
+<completename>Joana Simoes</completename>
+</name>
+</person>
+</contributor>
+<contributor>
+<role type="editor"/>
+<person>
+<name>
+<completename>Angelos Tzotsos</completename>
+</name>
+</person>
+</contributor>
+<contributor>
+<role type="editor"/>
+<person>
+<name>
+<completename>Tom Kralidis</completename>
+</name>
+</person>
+</contributor>
+<contributor>
+<role type="editor"/>
+<person>
+<name>
+<completename>Martin Desruisseaux</completename>
+</name>
+</person>
+</contributor>
+<contributor>
+<role type="publisher"/>
+<organization>
+<name>Open Geospatial Consortium</name>
+</organization>
+</contributor>
+
+<language>en</language>
+<script>Latn</script>
+<status>
+<stage>approved</stage>
+</status>
+<copyright>
+<from>2022</from>
+<owner>
+<organization>
+<name>Open Geospatial Consortium</name>
+</organization>
+</owner>
+</copyright>
+<keyword>hackaton</keyword>
+<keyword>application-to-the-cloud</keyword>
+<keyword>testbed</keyword>
+<keyword>docker</keyword>
+<keyword>web service</keyword>
+<ext>
+<doctype>engineering-report</doctype>
+<editorialgroup>
+<committee>technical</committee>
+</editorialgroup>
+</ext>
+</bibdata>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <title>Copyright notice</title>
+
+      <p align="center" id="_609a02a1-fa53-7a69-1cb9-ff2ed59292e2">Copyright
+        © 2022 Open Geospatial Consortium<br/>
+        To obtain additional rights of use, visit
+        <link target="http://www.ogc.org/legal/">http://www.ogc.org/legal/</link></p>
+    </clause>
+    <clause>
+      <title>Note</title>
+      <p align="left" id="_11e88dba-9912-1a89-a82d-7291bf232191">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+      <p align="left" id="_15067213-c07b-cba0-7e18-395ab2e00ab3">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+    </clause>
+  </copyright-statement>
+  <license-statement>
+    <clause>
+      <title>License Agreement</title>
+
+      <p id="_e8566381-218f-c22d-320d-4d0371bfd58f">Permission is hereby granted by the Open Geospatial
+        Consortium, (“Licensor”), free of charge and subject to the terms set
+        forth below, to any person obtaining a copy of this Intellectual Property and
+        any associated documentation, to deal in the Intellectual Property without
+        restriction (except as set forth below), including without limitation the
+        rights to implement, use, copy, modify, merge, publish, distribute, and/or
+        sublicense copies of the Intellectual Property, and to permit persons to whom
+        the Intellectual Property is furnished to do so, provided that all copyright notices
+        on the intellectual property are retained intact and that each person to whom
+        the Intellectual Property is furnished agrees to the terms of this Agreement.</p>
+
+      <p id="_52ebb386-d365-27d0-d76d-a59ac165fc4d">If you modify the Intellectual Property, all copies of
+        the modified Intellectual Property must include, in addition to the above
+        copyright notice, a notice that the Intellectual Property includes
+        modifications that have not been approved or adopted by LICENSOR.</p>
+
+      <p id="_178f14b4-0718-a5b8-09cd-84f8f4b756ed">THIS LICENSE IS A COPYRIGHT LICENSE ONLY, AND DOES NOT
+        CONVEY ANY RIGHTS UNDER ANY PATENTS THAT MAY BE IN FORCE ANYWHERE IN THE WORLD.
+        THE INTELLECTUAL PROPERTY IS PROVIDED “AS
+        IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+        LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+        AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. THE COPYRIGHT HOLDER OR HOLDERS
+        INCLUDED IN THIS NOTICE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE
+        INTELLECTUAL PROPERTY WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE
+        INTELLECTUAL PROPERTY WILL BE UNINTERRUPTED OR ERROR FREE. ANY USE OF THE
+        INTELLECTUAL PROPERTY SHALL BE MADE ENTIRELY AT THE USER’S OWN RISK. IN NO
+        EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR OF INTELLECTUAL PROPERTY
+        RIGHTS TO THE INTELLECTUAL PROPERTY BE LIABLE FOR ANY CLAIM, OR ANY DIRECT,
+        SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING
+        FROM ANY ALLEGED INFRINGEMENT OR ANY LOSS OF USE, DATA OR PROFITS, WHETHER IN
+        AN ACTION OF CONTRACT, NEGLIGENCE OR UNDER ANY OTHER LEGAL THEORY, ARISING OUT
+        OF OR IN CONNECTION WITH THE IMPLEMENTATION, USE, COMMERCIALIZATION OR
+        PERFORMANCE OF THIS INTELLECTUAL PROPERTY.</p>
+
+      <p id="_2ad7fe27-9ae4-52c5-9dd9-faa4004247fb">This license is effective until terminated. You may
+        terminate it at any time by destroying the Intellectual Property together with
+        all copies in any form. The license will also terminate if you fail to comply
+        with any term or condition of this Agreement. Except as provided in the
+        following sentence, no such termination of this license shall require the
+        termination of any third party end-user sublicense to the Intellectual Property
+        which is in force as of the date of notice of such termination. In addition,
+        should the Intellectual Property, or the operation of the Intellectual
+        Property, infringe, or in LICENSOR’s sole opinion be
+        likely to infringe, any patent, copyright, trademark or other right of a third
+        party, you agree that LICENSOR, in its sole discretion, may terminate this
+        license without any compensation or liability to you, your licensees or any
+        other party. You agree upon termination of any kind to destroy or cause to be
+        destroyed the Intellectual Property together with all copies in any form,
+        whether held by you or by any third party.</p>
+
+      <p id="_3254c815-179c-5f54-9a01-b8e964837171">Except as contained in this notice, the name of
+        LICENSOR or of any other holder of a copyright in all or part of the Intellectual
+        Property shall not be used in advertising or otherwise to promote the sale, use
+        or other dealings in this Intellectual Property without prior written
+        authorization of LICENSOR or such copyright holder. LICENSOR is and shall at
+        all times be the sole entity that may authorize you or any third party to use
+        certification marks, trademarks or other special designations to indicate
+        compliance with any LICENSOR standards or specifications.
+        This Agreement is
+        governed by the laws of the Commonwealth of Massachusetts. The application to
+        this Agreement of the United Nations Convention on Contracts for the
+        International Sale of Goods is hereby expressly excluded. In the event any
+        provision of this Agreement shall be deemed unenforceable, void or invalid, such
+        provision shall be modified so as to make it valid and enforceable, and as so
+        modified the entire Agreement shall remain in full force and effect. No
+        decision, action or inaction by LICENSOR shall be construed to be a waiver of
+        any rights or remedies available to it.</p>
+
+      <p id="_4fa1ef5b-3dd5-7a05-3c68-bca93a0f14bb">None of the Intellectual Property or underlying information or technology may be downloaded or otherwise exported or reexported in violation of U.S. export laws and regulations. In addition, you are responsible for complying with any local laws in your jurisdiction which may impact your right to import, export or use the Intellectual Property, and you represent that you have complied with any regulations or registration procedures required by applicable law to make this license enforceable.</p>
+    </clause>
+  </license-statement>
+
+  <legal-statement>
+    
+    <clause>
+      <title>Notice</title>
+      <p id="_d77564dd-5c08-f5db-c385-3f48de70a288">This document is not an OGC Standard. This document is an OGC Public Engineering Report created as a deliverable in an OGC Interoperability Initiative and is <em>not an official position</em> of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
+
+      <p id="_4fd16e4e-920f-8043-296a-05b51b2afc3c">Further, any OGC Engineering Report should not be referenced as required or mandatory technology in procurements. However, the discussions in this document could very well lead to the definition of an OGC Standard.</p>
+    </clause>
+
+
+    
+
+  </legal-statement>
+
+
+
+
+  <feedback-statement>
+    
+  </feedback-statement>
+</boilerplate>
+<preface><clause id="_abstract" obligation="informative">
+<title>Abstract</title>
+<p id="_4fb4a6c4-be90-5da9-dcd9-40f3c17a8e29">The subject of this Engineering Report (ER) is a code sprint that was held from 8 to 10 March 2022 to advance support of open geospatial standards within the developer community, whilst also advancing the standards themselves. The code sprint was hosted by the Open Geospatial Consortium (OGC), the Apache Software Foundation (ASF), and Open Source Geospatial Foundation (OSGeo). The event was sponsored by Ordnance Survey (OS), and held as a completely virtual event.</p>
+</clause><clause id="_executive_summary" type="executivesummary" obligation="informative"><title>Executive Summary</title><p id="_5084c5d1-d6dd-fbe3-e1a9-809ce9f8d852">This Engineering Report (ER) summarizes the main achievements of the Joint OGC OSGeo ASF Code Sprint, conducted between March 8th and 10th, 2022. The sprint served to accelerate the support of open geospatial standards within the developer community.</p>
+<p id="_58d1a4bd-2887-f313-9dee-7f85b2982529">Part of the motivation for holding the sprint was the growing uptake of location across the global developer communities. The code sprint brought together developers of Open Standards, Open Source Software and Proprietary Software, providing a rare opportunity for developers across these communities to focus on common challenges within a short space of time in a shared collaborative environment.
+The Open Geospatial Consortium (OGC) is an international consortium of more than 500 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR — Findable, Accessible, Interoperable, and Reusable. The consortium consists of Standards Working Groups (SWGs) that have responsibility for designing a candidate standard prior to approval as an OGC standard and for making revisions to an existing OGC standard. The sprint objectives for the SWGs were:</p>
+<ul id="_3e4348c4-be95-6bf8-4a82-5094e39781d8">
+<li>
+<p id="_d99ccdd6-5c95-fd2f-5823-fa843977ee8e">Develop prototype implementations of OGC standards, including implementations of draft OGC Application Programming Interface (API) standards</p>
+</li>
+<li>
+<p id="_86830992-8baf-76be-4bbf-1faaba95f80b">Test the prototype implementations</p>
+</li>
+<li>
+<p id="_305c4dfe-59a1-4a05-1d1b-fa751c659e59">Provide feedback to the Editor about what worked and what did not</p>
+</li>
+<li>
+<p id="_cfeabb4a-6d7f-7a9b-30db-ccb7e4719023">Provide feedback about the specification document</p>
+</li>
+</ul>
+<p id="_3ee78f18-db97-c92e-ec32-3887fc0e2c3f">The Open Source Geospatial Foundation (OSGeo) is a not-for-profit organization whose mission is to foster global adoption of open geospatial technology by being an inclusive software foundation devoted to an open philosophy and participatory community driven development. The foundation consists of projects that develop open source software products. The sprint objectives for OSGeo projects were:</p>
+<ul id="_b6de0b59-e481-d487-4b12-62fbd4d4629c">
+<li>
+<p id="_77e0cc1c-7de7-0b50-573e-165dc8a363ab">Release new software versions</p>
+</li>
+<li>
+<p id="_b94ccd32-08aa-554c-befd-835a626f5723">Fix open issues</p>
+</li>
+<li>
+<p id="_94b59bf2-3edd-a537-667e-c35d10249001">Develop new features</p>
+</li>
+<li>
+<p id="_b4b69021-af65-67e5-7ac5-3a59da75aba4">Improve documentation, translations</p>
+</li>
+<li>
+<p id="_7201ad9b-2d60-5dc1-f9a4-efc22bda4d4b">Develop prototype implementations of OGC standards</p>
+</li>
+</ul>
+<p id="_b1d30df2-d75f-c9c7-27b5-e76f6b0cc6a7">The Apache Software Foundation (ASF) is an all-volunteer community comprising 815 individual Members and 8,500 Committers on six continents stewarding more than 227 million lines of code, and overseeing more than 350 Apache projects and their communities. The sprint objectives for ASF projects were:</p>
+<ul id="_c663fd84-3907-6801-7e6f-c9d6c7a63b35">
+<li>
+<p id="_584f5112-1c33-aab6-5b2c-8caf5e45bc9b">Improve support of OGC standards</p>
+</li>
+<li>
+<p id="_d271f6cb-b8ec-3b57-1fad-8f3bb90b22ae">Improve visualization capabilities</p>
+</li>
+<li>
+<p id="_7d79bed5-c5f3-be2f-6f1f-15d172efb5e3">Improve documentation</p>
+</li>
+<li>
+<p id="_4e7d75d2-b5a2-683d-454e-623ddf57f16b">Improve interoperability with other libraries</p>
+</li>
+</ul>
+<p id="_069caf10-3c19-d71e-bce6-770b88b8faf8">The code sprint facilitated the development and testing of prototype implementations of OGC standards, including implementations of draft OGC API standards. Further, the code sprint also enabled the participating developers to provide feedback to the editors of OGC standards. Furthermore, the code sprint provided a collaborative environment for OSGeo and ASF developers to fix open issues in products, develop new features, improve documentation, improve interoperability with other libraries/products, and develop prototype implementations of OGC standards. The code sprint therefore met all of its objectives and achieved its goal of accelerating the support of open geospatial standards within the developer community.
+The engineering report makes the following recommendations for future innovation work items:</p>
+<ul id="_ee75a781-8dd5-595d-47fb-cfeb52c989d4">
+<li>
+<p id="_345d597d-e1de-f823-7487-69a6cb71d42d">TBA</p>
+</li>
+<li>
+<p id="_83babc39-58ef-83d7-9c40-1991336cb5b7">TBA</p>
+</li>
+<li>
+<p id="_cccfcd12-da5e-77ac-0dbf-c93bd4feb6c9">TBA</p>
+</li>
+</ul>
+<p id="_11645388-e26d-65a1-e3e6-6046d80b7944">The engineering report also makes the following recommendations for things that the Standards Working Groups should consider introducing support for:</p>
+<ul id="_891fa713-e92d-de3f-7b55-a2c85caa913b">
+<li>
+<p id="_7992141b-c322-bb58-a14b-80c4aeefa56c">TBA</p>
+</li>
+<li>
+<p id="_a8513e60-5fe2-6764-22e6-74a048933e9b">TBA</p>
+</li>
+</ul></clause><clause type="security" id="_84476eba-52da-934e-3a1a-a337e9f0023d" obligation="informative"><title>Security considerations</title><p id="_00cd3d40-4516-744c-2347-0a8ef76c4724">No security considerations have been made for this document.</p></clause></preface><sections>
+
+<clause id="_scope" type="scope" obligation="normative"><title>Scope</title><p id="_33e0d09d-c748-03d6-b473-63cfc497b9f7">This Engineering Report (ER) summarizes the main achievements of the Joint OGC OSGeo ASF Code Sprint, conducted between March 8th and 10th, 2022. Sponsored by Ordnance Survey (OS), the code sprint was hosted by the OGC, ASF, and OSGeo with the goal of accelerating the support of open geospatial standards within the developer community.</p>
+<p id="_992e6966-067a-65db-f739-889ff410f1f7">A Code Sprint is a collaborative and inclusive event driven by innovative and rapid programming with minimal process and organization constraints to support the development of new applications and open standards. Code Sprints experiment with emerging ideas in the context of geospatial standards, help improve interoperability of existing standards by experimenting with new extensions or profiles, and are used for building proofs of concept to support standards development activities and enhancement of software products.</p></clause>
+<terms id="_terms_and_definitions" obligation="normative"><title>Terms, definitions and abbreviated terms</title><p id="_7fe04b5b-db41-5d9b-ebe1-463b3a0c16c9">This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p id="_e0235fe8-8273-26b4-faeb-a580ad58929f">This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the ‘ModSpec’. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p id="_1448dc16-8929-d666-6525-0249826c75e3">For the purposes of this document, the following additional terms and definitions apply.</p>
+<term id="term-api"><preferred>
+<expression>
+<name>API</name>
+</expression>
+</preferred>
+
+<definition><verbal-definition><p id="_fe8dfab9-7f50-0ca5-0129-1488bddefe9a">An Application Programming Interface (API) is a standard set of documented and supported functions and procedures that expose the capabilities or data of an operating system, application, or service to other applications (adapted from ISO/IEC TR 13066-2:2016).</p></verbal-definition></definition>
+</term>
+<term id="term-coordinate-reference-system"><preferred>
+<expression>
+<name>coordinate reference system</name>
+</expression>
+</preferred>
+
+<definition><verbal-definition><p id="_b5c6b07b-7b32-38f8-9662-b24c9d3ddb40">A coordinate system that is related to the real world by a datum term name (source: ISO 19111)</p></verbal-definition></definition>
+</term>
+<term id="term-openapi-document"><preferred>
+<expression>
+<name>OpenAPI Document</name>
+</expression>
+</preferred>
+
+<definition><verbal-definition><p id="_f47c5ba5-bbe1-9a4f-cac6-cafe14a0afb7">A document (or set of documents) that defines or describes an API. An OpenAPI definition uses and conforms to the OpenAPI Specification (<link target="https://www.openapis.org"/>)</p></verbal-definition></definition>
+</term>
+<term id="term-web-api"><preferred>
+<expression>
+<name>Web API</name>
+</expression>
+</preferred>
+
+<definition><verbal-definition><p id="_fdc37e15-ded1-b345-c6bc-775a44396519">API using an architectural style that is founded on the technologies of the Web [source: OGC API — Features — Part 1: Core]</p></verbal-definition></definition>
+</term>
+<definitions id="_abbreviated_terms" type="abbreviated_terms" obligation="normative">
+<title>Abbreviated terms</title>
+<dl id="_ef175ecb-3a76-279a-0db8-65529b5e40b8"><dt id="symbol-api">API</dt><dd>
+<p id="_c2ec84f9-56a4-64df-5bcc-a179dbb68ed1">Application Programming Interface</p>
+</dd>
+<dt id="symbol-asf">ASF</dt><dd>
+<p id="_4dc3f29a-ff1a-3b66-fa7f-67f01e650c35">Apache Software Foundation</p>
+</dd>
+<dt id="symbol-cis">CIS</dt><dd>
+<p id="_2caa6b48-91a1-c12d-ff57-8a6d3f43c48b">Coverage Implementation Schema</p>
+</dd>
+<dt id="symbol-crs">CRS</dt><dd>
+<p id="_5d54d6e0-7358-a4f5-cad0-cc9ed3a35caa">Coordinate Reference System</p>
+</dd>
+<dt id="symbol-dggs">DGGS</dt><dd>
+<p id="_c5f4eaa7-1380-5046-3867-3fe66a16782e">Discrete Global Grid Systems</p>
+</dd>
+<dt id="symbol-edr">EDR</dt><dd>
+<p id="_b67e19c2-4b51-6bb4-f188-a1094fb0a7a5">Environmental Data Retrieval</p>
+</dd>
+<dt id="symbol-gis">GIS</dt><dd>
+<p id="_41bd747e-bab1-7ebd-f052-4f78e2cad5d1">Geographic Information System</p>
+</dd>
+<dt id="symbol-grass">GRASS</dt><dd>
+<p id="_ac55d093-4b82-1db8-9542-55c5fa276342">Geographic Resources Analysis Support System</p>
+</dd>
+<dt id="symbol-mou">MOU</dt><dd>
+<p id="_c931b4e7-9070-9eae-cd42-ba890abb5dd8">Memorandum of Understanding</p>
+</dd>
+<dt id="symbol-ogc">OGC</dt><dd>
+<p id="_6ce21c67-e5ea-bd58-72cc-fcd31ded3ad1">Open Geospatial Consortium</p>
+</dd>
+<dt id="symbol-osgeo">OSGeo</dt><dd>
+<p id="_32274fe2-f72f-23f9-54e0-b2768015d255">Open Source Geospatial Foundation</p>
+</dd>
+<dt id="symbol-ows">OWS</dt><dd>
+<p id="_f6758b3f-73ba-e52d-d24f-39329c9a7ac2">OGC Web Services</p>
+</dd>
+<dt id="symbol-rem">REM</dt><dd>
+<p id="_e91e5a44-3a35-77db-afab-ac1e3166fa4e">Route Exchange Model</p>
+</dd>
+<dt id="symbol-rest">REST</dt><dd>
+<p id="_86c28c64-6156-7902-d851-d603bdba0397">Representational State Transfer</p>
+</dd>
+<dt id="symbol-sdi">SDI</dt><dd>
+<p id="_937f9be8-a6a2-88b0-64f3-541774e272e2">Spatial Data Infrastructure</p>
+</dd>
+<dt id="symbol-tms">TMS</dt><dd>
+<p id="_1370745b-4d40-9525-f51a-d51e2a767a01">Tile Matrix Set</p>
+</dd>
+<dt id="symbol-wcs">WCS</dt><dd>
+<p id="_8850553f-f8fb-6689-476d-561bad3ea6d3">Web Coverage Service</p>
+</dd>
+<dt id="symbol-wfs">WFS</dt><dd>
+<p id="_eeda019c-095a-0fb9-66ed-de2d21b98b28">Web Feature Service</p>
+</dd>
+<dt id="symbol-wms">WMS</dt><dd>
+<p id="_ebcb6f62-5a1e-8e2c-15f1-1ef42d2c645d">Web Map Service</p>
+</dd>
+<dt id="symbol-wmts">WMTS</dt><dd>
+<p id="_c213190c-1b2b-a68f-ef59-aa3f0ac0c3e5">Web Map Tile Service</p>
+</dd>
+<dt id="symbol-wps">WPS</dt><dd>
+<p id="_6a62bc25-9e06-5cf1-ae25-2bb5117c9512">Web Processing Service</p>
+</dd></dl>
+</definitions></terms>
+
+<clause id="architecture" obligation="normative"><title>High-Level Architecture</title><p id="_093123b6-3524-905f-d17b-d46d163042b4">The focus of the sprint was on support of the development of the open geospatial standard across various open source software projects. Implementations of these draft standards were deployed in participants’ own infrastructure in order to build a solution with the architecture shown below in Figure 1.</p>
+<p id="_35dd90a1-b1b3-d66e-42ff-d0dd8280bddd">Figure 1. High Level Overview of the Sprint Architecture</p>
+<p id="_f91b2806-7df9-c1c4-b65a-062e7aca4c11">As illustrated the sprint architecture was designed with the view of enabling client applications to connect to different servers that implement open geospatial standards such as the suite of OGC API standards. The architecture also included several different software libraries that support open geospatial standards and enable the extraction, transformation and loading of geospatial data.
+The rest of this section describes the software deployed and standards implemented during the code sprint.</p>
+<clause id="_approved_ogc_standards" obligation="normative"><title>Approved OGC Standards</title><p id="_c6044b12-0778-9fc8-70b1-c021d8976d93">This section describes the approved OGC standards implemented during the code sprint.</p>
+<clause id="_ogc_api_features" obligation="normative"><title>OGC API — Features</title><p id="_40639b03-487e-1317-d519-35cdb3ff2ac4">The OGC API — Features standard offers the capability to create, modify, and query spatial data on the Web and specifies requirements and recommendations for APIs that want to follow a standard way of sharing feature data. The specification is a multi-part standard. Part 1, labelled the Core, describes the mandatory capabilities that every implementing service has to support and is restricted to read-access to spatial data that is referenced to the World Geodetic System 1984 (WGS 84) Coordinate Reference System (CRS). Part 2 enables the use of different CRS, in addition to the WGS 84. Additional capabilities that address specific needs will be specified in additional parts. Envisaged future capabilities include, for example, support for creating and modifying data, more complex data models, and richer queries.</p>
+<p id="_3213a31d-7da5-d963-10c6-df8ef4a1612b">The OGC API — Features standard is part of the OGC API family of standards. OGC API standards define modular API building blocks to spatially enable Web APIs in a consistent way. The standards make use of the OpenAPI specification for defining the API building blocks.</p></clause>
+<clause id="_ogc_api_environmental_data_retrieval" obligation="normative">
+<title>OGC API — Environmental Data Retrieval</title>
+<p id="_2156c589-5a22-8511-b8f9-389b0dc64e3e">An Environmental Data Retrieval (EDR) API provides a family of lightweight interfaces to access environmental data resources. Each resource addressed by an EDR API maps to a defined query pattern. The OGC API – Environmental Data Retrieval standard identifies resources, captures compliance classes, and specifies requirements that are applicable to environmental data retrieval. The standard addresses two fundamental operations; discovery and query of environmental data resources. Discovery operations allow the API to be interrogated to determine its capabilities and retrieve information (metadata) about this distribution of a resource. This includes the API definition of the server as well as metadata about the environmental data resources provided by the server. Query operations allow environmental data resources to be retrieved from the underlying data store based upon simple selection criteria, defined by this standard and selected by the client. The OGC API – Environmental Data Retrieval standard is part of the OGC API family of standards. The OGC API – Environmental Data Retrieval standard is part of the OGC API family of standards.</p>
+</clause>
+<clause id="_ogc_api_processes" obligation="normative">
+<title>OGC API — Processes</title>
+<p id="_8a17ea5b-c23a-235d-81cd-99e64802194a">The OGC API — Processes standard enables the execution of computing processes and the retrieval of metadata describing their purpose and functionality. Typically, these processes combine raster, vector, and/or coverage data with well-defined algorithms to produce new raster, vector, and/or coverage information. The OGC API – Processes specification is part of the OGC API family of standards.</p>
+</clause>
+<clause id="_ogc_geoapi" obligation="normative"><title>OGC GeoAPI</title><p id="_e7e530ac-1eff-acce-e5a2-2578bafc2e21">The GeoAPI Implementation Standard defines the normalized use of the GeoAPI library. The GeoAPI library contains a series of interfaces and classes in the Java programming language defined in several packages which interpret into Java the data model and Unified Modeling Language (UML) types that are specified in ISO and OGC standards documents. The library includes extensive Javadoc code documentation which complements the implementation of the ISO/OGC specifications by explaining particularities of the GeoAPI library: interpretations made of the specifications where there was room for choice, constraints due to the library’s use of Java, or standard patterns of behavior expected by the library, notably in its handling of return types during exceptional situations.</p>
+<p id="_3f136712-eabe-495d-cbbc-f7eee89d2bfc">In this code sprint, the GeoAPI implementors focused on support for the GIGS specification.</p></clause></clause>
+<clause id="_draft_ogc_specifications" obligation="normative"><title>Draft OGC Specifications</title><p id="_5082e9bb-265f-4063-59ef-3e3fce52cc5a">This section describes the draft OGC specifications implemented during the code sprint.</p>
+<clause id="_ogc_api_common" obligation="normative">
+<title>OGC API — Common</title>
+<p id="_ad1da232-d45d-fb65-9fd6-15991f1353b0">The draft OGC API — Common specification documents the set of common practices and shared requirements that have emerged from the development of Resource Oriented Architectures and Web APIs within the OGC. The draft OGC API — Common specification is part of the OGC API family of standards. The specification serves as a common foundation upon which all OGC APIs will be built. Consistent with the architecture of the Web, this specification uses a resource architecture that conforms to principles of Representational State Transfer (REST). The draft OGC API – Common specification establishes a common pattern that leverages the OpenAPI specification for describing APIs.</p>
+</clause>
+<clause id="_ogc_api_coverages" obligation="normative">
+<title>OGC API — Coverages</title>
+<p id="_4b1564df-baf6-6b18-cdc7-ddc84630712b">The OGC API — Coverages specification defines a Web API for accessing coverages that are modeled according to the Coverage Implementation Schema (CIS) 1.1. Coverages are represented by some binary or ASCII serialization, specified by some data (en-coding) format. Arguably the most popular type of coverage is that of a gridded coverage. Gridded coverages have a grid as their domain set describing the direct positions in multi-dimensional coordinate space, depending on the type of grid. Satellite imagery is typically modeled as a gridded coverage, for example. The draft OGC API — Coverages specification is part of the OGC API family of standards.</p>
+</clause>
+<clause id="_ogc_api_maps" obligation="normative">
+<title>OGC API — Maps</title>
+<p id="_3c982040-868c-55cc-9810-0cda3d08e57b">The draft OGC API — Maps standard describes an API that presents maps portraying data that has been rendered according to a style. The maps served by implementations of the draft OGC API — Maps standard are retrieved as images of any size, generated on-the-fly, and with the styling determined by the client application. The draft standard can be considered the successor to the widely implemented WMS standard. The draft OGC API – Maps specification is part of the OGC API family of standards.</p>
+</clause>
+<clause id="_ogc_api_records" obligation="normative">
+<title>OGC API — Records</title>
+<p id="_de26dd3d-d645-6673-2407-985b612b3dc2">OGC API — Records provides discovery and access to metadata records about resources such as features, coverages, tiles / maps, models, assets, services or widgets. The draft specification enables the discovery of geospatial resources by standardizing the way collections of descriptive information about the resources (metadata) are exposed. The draft specification also enables the discovery and sharing of related resources that may be referenced from geospatial resources or their metadata by standardizing the way all kinds of records are exposed and managed. The draft OGC API – Records specification is part of the OGC API family of standards.</p>
+</clause>
+<clause id="_ogc_api_routes" obligation="normative">
+<title>OGC API — Routes</title>
+<p id="_a9f6733f-5010-cf5b-cdb5-78a95cb79293">OGC API — Routes describes the requirements for interoperable web-based route computation and specifies a number of alternative approaches to fulfill these requirements. One of the approaches is based on the current draft of the draft OGC API — Processes — Part 1: Core specification while the other comprises a specialized API although also based on the draft OGC API — Common — Part 1: Core specification. Both approaches facilitate a common Route Exchange Model (REM) that is based on GeoJSON.</p>
+</clause>
+<clause id="_ogc_api_tiles" obligation="normative">
+<title>OGC API — Tiles</title>
+<p id="_e320d143-72f8-9ff5-48ea-467566a1cb2e">OGC API — Tiles references the OGC Two Dimensional Tile Matrix Set (TMS) standard. The TMS standard defines the rules and requirements for a tile matrix set as a way to index space based on a set of regular grids defining a domain (tile matrix) for a limited list of scales in a CRS. The draft OGC API – Tiles specification is part of the OGC API family of standards.</p>
+</clause>
+<clause id="_ogc_gridded_geodetic_data_exchange_format_ggxf" obligation="normative">
+<title>OGC Gridded Geodetic Data Exchange Format (GGXF)</title>
+<p id="_8c831ac2-5856-c3fd-6202-ab8331de26fd">The purpose of the Gridded Geodetic Data Exchange Format (GGXF) project team is to design a file structure and computer storage mechanism for the efficient exchange of regularly gridded geodetic data.</p>
+</clause></clause>
+<clause id="_osgeo_projects" obligation="normative"><title>OSGeo Projects</title><p id="_b4786342-547f-7e0f-6242-4809b9ae7db4">This section describes software, by OSGeo Projects, that was deployed during the code sprint.</p>
+<clause id="grass" obligation="normative">
+<title>OSGeo GRASS GIS</title>
+<p id="_e11ece66-bfbb-b304-6c67-4c657436150f">The Geographic Resources Analysis Support System (GRASS) is an open source GIS providing raster, vector and geospatial processing capabilities. It can be used either as a stand-alone application or as backend for other software packages such as QGIS and R or in the cloud [2].</p>
+</clause>
+<clause id="mapserver" obligation="normative"><title>OSGeo MapServer</title><p id="_70e3d252-e502-d6cf-aa6b-3b340dcbb4b7">MapServer is an open source platform for publishing spatial data and interactive mapping applications to the web.</p>
+<p id="_cf99f5c8-160a-a16d-7b8a-fe2319acfb54">In this code sprint, the participants implemented an extension to mapserver that enabled mapserver to offer an interface conforming to OGC API — Features.</p></clause>
+<clause id="postgis" obligation="normative">
+<title>OSGeo PostGIS</title>
+<p id="_1ca9470e-f5f3-7170-3e8f-cf61c958f5a3">PostGIS provides spatial objects for the PostgreSQL database, allowing storage and query of information about location and mapping.</p>
+</clause>
+<clause id="proj" obligation="normative">
+<title>OSGeo Proj</title>
+<p id="_2582b3dc-f1fa-3488-5f5a-cd6406d1c625">PROJ is a generic coordinate transformation software library that transforms geospatial coordinates from one coordinate reference system (CRS) to another.</p>
+</clause>
+<clause id="pycsw" obligation="normative">
+<title>OSGeo pycsw</title>
+<p id="_5c7ee745-b926-27e7-420d-c4e3a0a4e118">pycsw is a server-side python implementation of the OGC Catalogue Services for the Web (CSW) standard.</p>
+</clause>
+<clause id="qgis" obligation="normative">
+<title>OSGeo QGIS</title>
+<p id="_157108eb-37d7-f37e-7c01-e47476fe6852">QGIS is a free and open-source cross-platform desktop GIS that supports viewing, editing, and analysis of geospatial data.</p>
+</clause></clause>
+<clause id="_osgeo_community_projects" obligation="normative"><title>OSGeo Community Projects</title><p id="_eda12df0-5085-6bb9-2b63-94d4027b20a8">This section describes software, by OSGeo Community Projects, that was deployed during the code sprint.</p>
+<clause id="leaflet" obligation="normative">
+<title>Leaflet</title>
+<p id="_746cf569-c331-b613-93b6-6331f299cca3">Leaflet is an open-source JavaScript library for mobile-friendly interactive maps. It works across all major desktop and mobile platforms, can be extended with a variety of plugins, and offers a well-documented API.</p>
+</clause>
+<clause id="owslib" obligation="normative">
+<title>OSGeo OWSLib</title>
+<p id="_c174756c-dac4-d86c-686d-022126dce95e">OWSLib is a Python package for client programming with OGC Web Service (OWS) interface standards, and their related content models.</p>
+</clause>
+<clause id="pgrouting" obligation="normative">
+<title>OSGeo pgRouting</title>
+<p id="_f1e9dd43-ccd8-0f16-e7ed-fa5ad53e9237">pgRouting extends the PostGIS / PostgreSQL geospatial database to provide geospatial routing functionality.</p>
+</clause>
+<clause id="pygeoapi" obligation="normative">
+<title>OSGeo pygeoapi</title>
+<p id="_e0def7b2-8a57-9277-5137-ac0b3b335f19"><link target="https://pygeoapi.io/">pygeoapi</link> is a Python server implementation of the OGC API suite of standards.</p>
+</clause>
+<clause id="pygeoapi" obligation="normative">
+<title>OSGeo pygeometa</title>
+<p id="_959a27a0-68c4-dc3f-a5c2-b84a10453eae"><link target="https://github.com/geopython/pygeometa">pygeometa</link> is a Python package to generate metadata for geospatial datasets.</p>
+</clause>
+<clause id="teamengine" obligation="normative">
+<title>TEAM Engine</title>
+<p id="_faead3cd-3edb-9ad1-140f-0a9105986c0b">The Test, Evaluation, And Measurement (TEAM) Engine is a testing facility that executes test suites developed using the TestNG framework or the OGC Compliance Test Language (CTL). It is typically used to verify specification compliance and is the official test harness of the OGC Compliance Testing Program (CITE).</p>
+</clause>
+<clause id="zooproject" obligation="normative">
+<title>OSGeo ZOO-Project</title>
+<p id="_fbf526ab-0bd3-6336-ee9c-c2c75971339b">ZOO-Project is a Web Processing Service (WPS) implementation written in C. It is an open source platform which implements the WPS 1.0.0 and WPS 2.0.0 standards edited by the Open Geospatial Consortium (OGC).</p>
+</clause></clause>
+<clause id="_asf_projects" obligation="normative"><title>ASF Projects</title><p id="_bdb15afc-9c5a-e9b0-72ec-d3f56d811930">This section describes software, by ASF Projects, that was deployed during the code sprint.</p>
+<clause id="apachesis" obligation="normative">
+<title>Apache SIS</title>
+<p id="_f8d3b4fe-21e6-e455-f740-157803f4ef30">Apache Spatial Information System (SIS) is a free software, Java language library for developing geospatial applications. The library is an implementation of OGC GeoAPI 3.0.1 interfaces and can be used for desktop or server applications.</p>
+</clause></clause>
+<clause id="_other_open_source_products" obligation="normative"><title>Other open source products</title><clause id="ldproxy" obligation="normative"><title>ldproxy</title><p id="_202be414-ea6c-215f-fe85-5003adbc62c4">ldproxy is an implementation of the OGC API family of specifications, inspired on the W3C/OGC Spatial Data on the Web Best Practices. ldproxy is developed by interactive instruments GmbH, written in Java (Source Code) and is typically deployed using docker (DockerHub). The software originally started in 2015 as a Web API for feature data based on WFS 2.0 capabilities. In addition to the JSON/XML encodings, an emphasis is placed on an intuitive HTML representation.</p>
+<p id="_7a4c4479-66f0-443d-8e21-41c1ee9ff380">The current version supports WFS 2.0 instances as well as PostgreSQL/PostGIS databases as backends. It implements all conformance classes and recommendations of “OGC API — Features — Part 1: Core” and “OGC API — Features- Part 2: Coordinate Reference Systems By Reference”, as well as other draft extensions (including Part 3 and Part 4). ldproxy also has draft implementations for additional resource types (Tiles, Styles).</p></clause>
+<clause id="rabbitmq" obligation="normative"><title>RabbitMQ</title><p id="_785feb1d-0dc5-4a4d-8952-569122d236ea">RabbitMQ is an open source message broker that supports multiple messaging protocols. RabbitMQ is lightweight and deployable on premises and cloud computing environments. RabbitMQ can support distributed and federated enterprises to meet scalability and availability requirements.</p>
+<p id="_4e924ca6-41e9-1cc9-eb85-2fae8f3c2a4c">In this code sprint, RabbitMQ was reviewed by ZOO Project developers as an option for supporting pubsub (publish/subscribe) needs.</p></clause></clause>
+<clause id="_proprietary_products" obligation="normative"><title>Proprietary products</title><clause id="cubeserv" obligation="normative"><title>CubeWerx CubeServ</title><p id="_717cc0cb-5264-7a34-9a88-49901b3680cf">The CubeWerx server (“cubeserv”) is implemented in C and currently implements the following OGC specifications:</p>
+<ul id="_c018e7ab-f525-9cb9-7641-f251c34a97b3">
+<li>
+<p id="_e63c2748-9266-2151-d05e-3f09ebabe34d">All conformance classes and recommendations of the OGC API — Features — Part 1: Core standard.</p>
+</li>
+<li>
+<p id="_54b79a24-ff67-1e22-8fab-aa73401c4804">Multiple conformance classes and recommendations of the draft OGC API — Records — Part 1: Core specification.</p>
+</li>
+<li>
+<p id="_07f93bfa-b631-cbd1-c4a8-eac22cbbb3b1">Multiple conformance classes and recommendations of the draft OGC API — Coverages — Part 1: Core specification.</p>
+</li>
+<li>
+<p id="_31178604-9001-9601-b117-e4e77198dd50">Multiple conformance classes and recommendations of the draft OGC API — Processes — Part 1: Core specification.</p>
+</li>
+<li>
+<p id="_6c058990-0695-84a6-ffd9-ea93757ab29b">Multiple versions of the Web Map Service (WMS), Web Processing Service (WPS), Web Map Tile Service (WMTS) and Web Feature Service (WFS) standards</p>
+</li>
+<li>
+<p id="_643f35a5-0b83-cfd9-3656-3825ae6df316">A number of other “un-adopted” OGC web services including the Testbed-12 Web Integration Service, OWS-7 Engineering Report — GeoSynchronization Service, Web Object Service Implementation Specification.</p>
+</li>
+</ul>
+<p id="_e5ebdba1-ddde-91e1-fd09-5c2ea3e1e69c">The cubeserv executable supports a wide variety of back ends including Oracle, MariaDB, SHAPE files, etc. It also supports a wide array of service-dependent output formats (e.g. GML, GeoJSON, Mapbox Vector Tiles, MapMP, etc.) and coordinate reference systems.</p></clause>
+<clause id="gnosis" obligation="normative">
+<title>GNOSIS Map Server</title>
+<p id="_88bb8dd9-bc3c-0c6d-58b5-fdb949053b4c">The GNOSIS Map Server is written in the eC programming language and supports multiple OGC API specifications. GNOSIS Map Server supports multiple encodings including GNOSIS Map Tiles (which can contain either vector data, gridded coverages, imagery, point clouds or 3D meshes), Mapbox Vector Tiles, GeoJSON, GeoECON, GML and MapML. An experimental server is available online at <link target="https://maps.ecere.com/ogcapi"/> and has been used in multiple OGC Innovation Program initiatives.</p>
+</clause></clause></clause>
+<clause id="results" obligation="normative"><title>Results</title><p id="_c1fd1b40-b271-be04-f8d2-07402324dde5">The code sprint included multiple software libraries, OWS implementations, OGC API implementations and different client applications. In addition to supporting OWS and OGC API standards, various ASF and OSGeo software products involved in the code sprint also supported a variety of OGC encoding standards. This section presents some of the results from the code sprint.</p>
+<clause id="_leaflet" obligation="normative"><title>Leaflet</title><p id="_e5d13ba4-c247-50c2-afd5-672d23f55614">One of the contributors of Leaflet implemented support for OGC API — Maps in the code sprint. Support for OGC API — Maps in Leaflet was implemented as a plug-in, enabling anyone to integrate the JavaScript files into their JavaScript application.
+=== QGIS MetaSearch Plugin</p>
+<p id="_99152d76-e019-c5d2-990a-1ec8b6f7fe97">Developers from OSGeo and the Meteorological Service of Canada (MSC) worked on an enhancement to the QGIS MetaSearch plugin to improve support for OGC API — Records. MetaSearch is a core plugin that enables QGIS to act as a client application for interacting with metadata catalogue services.
+=== Extension of the Testbed-17 Dataset testing (D168) prototype</p>
+<p id="_25f29628-0f0f-109c-3607-77ff4d7b00d4">The aim of the <link target="https://github.com/opengeospatial/T17-API-D168/">Testbed-17 D168 prototype</link> was to help with optimizing documentation and scripts to support data providers implementing OGC API Standards in Cloud environments. The testing involved storing the data in specific cloud environments, primarily AWS with some parallel testing of CreoDIAS, with a specific focus on cloud object storage. For this code sprint, the prototype was extended to support OGC API — Records.
+=== CubeWerx CubeSERV</p>
+<p id="_e39e4cfc-ce0a-3356-231a-034559e6d40b">TBA
+=== Ecere GNOSIS Map Server</p>
+<p id="_abb8c8b9-ce1f-656c-830c-8a24de498dd4">TBA</p></clause></clause>
+<clause id="discussion" obligation="normative"><title>Discussion</title><clause id="_ogc_api_records_2" obligation="normative"><title>OGC API — Records</title><p id="_2153c01e-b5e0-a379-0cc6-0e36cc0cdc85">Media type.</p>
+<p id="_bc912b4a-8bdc-9ab8-975f-510652e093ea">Schema elements in CSW</p>
+<p id="_954a8e7f-2154-cc1d-4604-afaa9bfecab6">profile part of media type.</p>
+<p id="_525fae44-070d-8fb6-52f0-3b2ff22d5e76">The participants also prototyped implementations of a static catalogue. The idea with the crawlable catalogues is that they can be created using static files in accessible locations and then link them together. It is therefore more of a manifest or a register.</p></clause>
+<clause id="_ogc_api_routes_2" obligation="normative">
+<title>OGC API — Routes</title>
+<p id="_e94b5073-7d37-d501-8408-45a6dfddd21d">There was some discussion around the Route Exchange Model (REM). One of the <link target="https://github.com/opengeospatial/ogcapi-routes/issues/49">observations</link> made by sprint participants was that attaching the units of a value to a property name (e.g. <tt>length_m</tt>) could potentially lead to ambiguity (e.g. whether the <tt>_m</tt> stands for meters or miles). Another <link target="https://github.com/opengeospatial/ogcapi-routes/issues/48">observation</link> was that assigning a value of <tt>Segment</tt> to a feature with a <tt>Point</tt> geometry could lead to confusion amongst implementers that use Graph databases to calculate routes. This is because in Graph theory Nodes are typically represented as points, and Edges are typically represented as lines.</p>
+</clause>
+<clause id="_ogc_api_maps_and_ogc_api_common" obligation="normative"><title>OGC API — Maps and OGC API — Common</title><p id="_2cd080b4-bbcf-006e-94fc-f7ad63862cc5">One of the sprint participants, a contributor to Leaflet, observed that the implementation of OGC API — Maps that they were interacting with did not offer much attribution.</p>
+<p id="_fee9278c-b52b-6af4-0555-c90bbd72dc01">A summary of the <link target="https://github.com/opengeospatial/ogcapi-common/issues/303">issue</link> recorded by the participants is below. The issue related to attribution on both the list of collections, and the metadata of a collection:</p>
+<ul id="_e1e64812-abde-5d1f-db40-be13f17e8893">
+<li>
+<p id="_4146a961-c679-b4c3-b7a6-d622473e68b4">Clarity is needed on whether attribution belongs to OGC API — Common — Part 1 (Core) or Part 2 (Geospatial Data). Currently it appears there can be an attribution field in either/both the list of collections (Part 1) or in the metadata of a specific collection (Part 2). Therefore, clarity is needed on what the behavior of a client should be — shall a client display attribution about the service, or only about the collections being displayed/used? Allowing attribution only in Part 2, or clarifying how the attribution in part 1 would be displayed would solve this concern.</p>
+</li>
+<li>
+<p id="_c70cb8c5-d425-19c9-72cc-6932e8612691">Allowing servers to use any kind of HTML markup in the attribution field might be problematic due to three specific problems: <tt>&lt;script&gt;`s, tracking pixels, and parsing. In a best-case scenario, an OGC API server might push some invisible tracking pixels to clients (an image linking to an invisible 1x1 pixel). While good-intentioned, this opens a rabbit hole of cookies and privacy concerns. Another concern is clients with no means of parsing HTML and building a document model about it. Using a specific format of markup will force clients to include a parser for that markup language. A similar concern would arise if another markup language would be used, e.g. markdown. The worst-case scenario would be an infosec attacker gaining a hold of an OGC API server, and changing the attribution field to include a &lt;script&gt; reference. That would be an attack vector to inject malware in any clients. Therefore there appears not to be any scenario where allowing `&lt;script&gt;</tt> as part of attribution might be useful.</p>
+</li>
+</ul></clause>
+<clause id="_editorial" obligation="normative"><title>Editorial</title><p id="_70673e5b-7381-c6f4-9c00-d06599398d7d">The sprint participants also identified a number of editorial issues in draft specifications and recorded the issues for Standards editors to address. Examples include:</p>
+<ul id="_03459b34-d691-4bfa-d81e-3184ebfc4907">
+<li>
+<p id="_0b474f32-f453-45c7-28a7-454ab5c788de">
+<link target="https://github.com/opengeospatial/ogcapi-records/issues/164">References to example files of the draft OGC API — Records — Part 1: Core</link>
+</p>
+</li>
+<li>
+<p id="_76de7171-c71e-a656-8926-559ba5d595a1">
+<link target="https://github.com/opengeospatial/ogcapi-routes/issues/47">Use of the correct case in link relations in a draft future extension of OGC API — Routes</link>
+</p>
+</li>
+<li>
+<p id="_a7466bd9-49f2-c97b-eefa-9ec90a647dd0"><link target="https://github.com/opengeospatial/ogcapi-maps/pull/84">Documentation in yaml files of the draft OGC API — Maps — Part Core</link>
+== Conclusions</p>
+</li>
+</ul>
+<p id="_e3de8deb-f848-93cf-2c3a-c4a220dea32a">TBA</p></clause>
+<clause id="_future_work" obligation="normative">
+<title>Future Work</title>
+<clause id="_google_summer_of_code" obligation="normative">
+<title>Google Summer of Code</title>
+<p id="_14c937bb-44f4-984e-f5d5-851797ac23e0">Sprint participants discussed the possibility of submitting a proposal to the Google Summer of Code initiative. One of the suggestions was to submit a proposal around extending pgRouting to support OGC API — Routes.</p>
+</clause>
+</clause></clause>
+
+</sections><annex id="_revision_history" obligation="informative">
+<title>Revision History</title>
+<table id="_19e1b9e7-44aa-1999-e432-ec47d6fcf096" unnumbered="true" width="90%">
+<thead>
+<tr>
+<th valign="middle" align="left">Date</th>
+<th valign="middle" align="left">Release</th>
+<th valign="middle" align="left">Author</th>
+<th valign="middle" align="left">Primary clauses modified</th>
+<th valign="middle" align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td valign="middle" align="left">2016-04-28</td>
+<td valign="middle" align="left">0.1</td>
+<td valign="middle" align="left">G. Editor</td>
+<td valign="middle" align="left">all</td>
+<td valign="middle" align="left">initial version</td>
+</tr>
+</tbody>
+</table>
+</annex><bibliography><references id="_references" normative="true" obligation="informative"><title>Normative references</title><p id="_307b20e2-9e40-db56-abbf-2822ab2941cc">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p><bibitem id="openapi"><formattedref format="application/x-isodoc+xml">Open API Initiative: OpenAPI Specification 3.0.3, <link target="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md"/></formattedref><docidentifier>openapi</docidentifier></bibitem><bibitem id="rfc2616"><formattedref format="application/x-isodoc+xml">Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., Berners-Lee, T.: IETF RFC 2616, HTTP/1.1, <link target="https://tools.ietf.org/rfc/rfc2616.txt"/></formattedref><docidentifier>rfc2616</docidentifier><docnumber>2616</docnumber></bibitem><bibitem id="rfc3896"><formattedref format="application/x-isodoc+xml">Berners-Lee, T., Fielding, R., Masinter, L: IETF RFC 3896, Uniform Resource Identifier (URI): Generic Syntax, <link target="https://tools.ietf.org/rfc/rfc3896.txt"/></formattedref><docidentifier>rfc3896</docidentifier><docnumber>3896</docnumber></bibitem><bibitem id="html5"><formattedref format="application/x-isodoc+xml">W3C: HTML5, W3C Recommendation, <link target="https://www.w3.org/TR/html5/"/></formattedref><docidentifier>html5</docidentifier><docnumber>5</docnumber></bibitem><bibitem id="schema_org"><formattedref format="application/x-isodoc+xml">Schema.org: <link target="https://schema.org/docs/schemas.html"/></formattedref><docidentifier>schema_org</docidentifier></bibitem><bibitem id="covjson"><formattedref format="application/x-isodoc+xml">Blower, J., Riechert, M., Roberts, B.: Overview of the CoverageJSON format, <link target="https://www.w3.org/TR/covjson-overview/"/></formattedref><docidentifier>covjson</docidentifier></bibitem><bibitem id="OGC18-010r7" type="standard">  <fetched>2022-03-09</fetched>  <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Well-known text representation of coordinate reference systems</title>  <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Well-known text representation of coordinate reference systems</title>  <uri type="obp">http://docs.opengeospatial.org/is/18-010r7/18-010r7.html</uri>  <docidentifier type="OGC" primary="true">18-010r7</docidentifier>  <date type="published">    <on>2019-08-13</on>  </date>  <contributor>    <role type="author"/>    <person>      <name>        <completename>Roger Lot</completename>      </name>    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>Open Geospatial Consortium</name>    </organization>  </contributor>  <edition>7</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This Standard defines the structure and content of well-known text strings describing coordinate reference systems (CRSs) and coordinate operations between coordinate reference systems. It does not prescribe how implementations should read or write these strings.  This Standard provides an updated version of WKT representation of coordinate reference systems that follows the provisions of ISO 19111:2019. It extends the WKT in OGC document 12-063r5 (ISO 19162) which was based on ISO 19111:2007 and ISO 19111-2:2009. That version consolidated several disparate versions of earlier WKT (so-called WKT1) and added the description of coordinate operations.  This jointly developed draft has been submitted by ISO TC211 for circulation as a Draft International Standard (DIS). This version incorporates comments made during the ISO TC211 New Work Item Proposal acceptance ballot.</abstract>  </bibitem> <bibitem id="OGC17-069r3" type="standard">  <fetched>2022-03-09</fetched>  <title type="title-intro" format="text/plain" language="en" script="Latn">OGC API</title>  <title type="title-main" format="text/plain" language="en" script="Latn">Features</title>  <title type="title-part" format="text/plain" language="en" script="Latn">Part 1: Core</title>  <title type="main" format="text/plain" language="en" script="Latn">OGC API — Features — Part 1: Core</title>  <uri type="obp">http://docs.opengeospatial.org/is/17-069r3/17-069r3.html</uri>  <docidentifier type="OGC" primary="true">17-069r3</docidentifier>  <date type="published">    <on>2019-10-07</on>  </date>  <contributor>    <role type="author"/>    <person>      <name>        <completename>Clemens Portele</completename>      </name>    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      <name>        <completename>Panagiotis (Peter) A. Vretanos</completename>      </name>    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      <name>        <completename>Charles Heazel</completename>      </name>    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>Open Geospatial Consortium</name>    </organization>  </contributor>  <edition>3</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">OGC API standards define modular API building blocks to spatially enable Web APIs in a consistent way. The OpenAPI specification is used to define the API building blocks.  The OGC API family of standards is organized by resource type. This standard specifies the fundamental API building blocks for interacting with features. The spatial data community uses the term ‘feature’ for things in the real world that are of interest.</abstract>  </bibitem><bibitem id="OGC19-072"><formattedref format="application/x-isodoc+xml">Heazel, C.: OGC API — Common — Part 1: Core (Draft). OGC 19-072, Open Geospatial Consortium, <link target="http://docs.ogc.org/DRAFTS/19-072.html"/></formattedref><docidentifier type="OGC">OGC 19-072</docidentifier><docnumber>19-072</docnumber></bibitem><bibitem id="OGC20-024"><formattedref format="application/x-isodoc+xml">Heazel, C.: OGC API — Common — Part 2: Geospatial Data (Draft). OGC 20-024, Open Geospatial Consortium, <link target="http://docs.ogc.org/DRAFTS/20-024.html"/></formattedref><docidentifier type="OGC">OGC 20-024</docidentifier><docnumber>20-024</docnumber></bibitem></references><references id="annex-bibliography" normative="false" obligation="informative"><title>Bibliography</title><bibitem id="Simonis2018">
+  <formattedref format="application/x-isodoc+xml">Standardized Big Data Processing in Hybrid Clouds. In: Proceedings of the 4th International Conference on Geographical Information Systems Theory, Applications and Management — Volume 1: GISTAM, pp. 205–210. SciTePress (2018).</formattedref>
+  <docidentifier>Simonis, I.</docidentifier>
+  
+</bibitem><bibitem id="ogc14-083r2" type="standard">  <fetched>2022-03-09</fetched>  <title type="title-main" format="text/plain" language="en" script="Latn">OGC® Moving Features Encoding Part I: XML Core</title>  <title type="main" format="text/plain" language="en" script="Latn">OGC® Moving Features Encoding Part I: XML Core</title>  <uri type="obp">http://docs.opengeospatial.org/is/14-083r2/14-083r2.html</uri>  <docidentifier type="OGC" primary="true">14-083r2</docidentifier>  <date type="published">    <on>2015-02-17</on>  </date>  <contributor>    <role type="author"/>    <person>      <name>        <completename>Akinori Asahara</completename>      </name>    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      <name>        <completename>Ryosuke Shibasaki</completename>      </name>    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      <name>        <completename>Nobuhiro Ishimaru</completename>      </name>    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      <name>        <completename>David Burggraf</completename>      </name>    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>Open Geospatial Consortium</name>    </organization>  </contributor>  <edition>2</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This OGC® Standard specifies standard encoding representations of movement of geographic features. The primary use case is information exchange.</abstract>  </bibitem><bibitem id="ogc14-084r2" type="standard">  <fetched>2022-03-09</fetched>  <title type="title-main" format="text/plain" language="en" script="Latn">OGC® Moving Features Encoding Extension: Simple Comma Separated Values (CSV)</title>  <title type="main" format="text/plain" language="en" script="Latn">OGC® Moving Features Encoding Extension: Simple Comma Separated Values (CSV)</title>  <uri type="obp">http://docs.opengeospatial.org/is/14-084r2/14-084r2.html</uri>  <docidentifier type="OGC" primary="true">14-084r2</docidentifier><docidentifier type="metanorma">[nofetch]</docidentifier>  <date type="published">    <on>2015-02-17</on>  </date>  <contributor>    <role type="author"/>    <person>      <name>        <completename>Akinori Asahara</completename>      </name>    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      <name>        <completename>Ryosuke Shibasaki</completename>      </name>    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      <name>        <completename>Nobuhiro Ishimaru</completename>      </name>    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      <name>        <completename>David Burggraf</completename>      </name>    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>Open Geospatial Consortium</name>    </organization>  </contributor>  <edition>2</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This OGC® Standard specifies standard encoding representations of movement of geographic features. The primary use case is information exchange.</abstract>  </bibitem><bibitem id="ogc11-165r2">
+  <formattedref format="application/x-isodoc+xml">OGC: OGC 11-165r2: CF-netCDF3 Data Model Extension standard, 2012</formattedref>
+  <docidentifier type="metanorma">[CF-netCDF3]</docidentifier>
+</bibitem><bibitem id="ogc10-092r3" type="standard">  <fetched>2022-03-09</fetched>  <title type="title-main" format="text/plain" language="en" script="Latn">NetCDF Binary Encoding Extension Standard: NetCDF Classic and 64-bit Offset Format</title>  <title type="main" format="text/plain" language="en" script="Latn">NetCDF Binary Encoding Extension Standard: NetCDF Classic and 64-bit Offset Format</title>  <uri type="obp">https://portal.ogc.org/files/?artifact_id=43734</uri>  <docidentifier type="OGC" primary="true">10-092r3</docidentifier><docidentifier type="metanorma">[NetCDF]</docidentifier>  <date type="published">    <on>2011-04-05</on>  </date>  <contributor>    <role type="author"/>    <person>      <name>        <completename>Ben Domenico</completename>      </name>    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>Open Geospatial Consortium</name>    </organization>  </contributor>  <edition>3</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This document defines an OGC® Standard for encoding binary representations of space-time varying geo-referenced data. Specifically, this standard specifies the netCDF classic and 64-bit offset file binary encoding formats. This standard specifies a set of requirements that every netCDF classic or 64-bit offset binary encoding must fulfil.</abstract>  </bibitem><bibitem id="netcdf">
+  <formattedref format="application/x-isodoc+xml">Lawrence Livermore National Laboratory: NetCDF CF Metadata Conventions – <link target="http://cfconventions.org/"/></formattedref>
+  <docidentifier type="metanorma">[6]</docidentifier>
+</bibitem><bibitem id="acdd">
+  <formattedref format="application/x-isodoc+xml">ESIP: Attribute Convention for Data Discovery (ACDD) – <link target="http://wiki.esipfed.org/index.php/"/></formattedref>
+  <docidentifier type="metanorma">[7]</docidentifier>
+</bibitem>
+ 
+ 
+
+ 
+</references></bibliography>
+</ogc-standard>

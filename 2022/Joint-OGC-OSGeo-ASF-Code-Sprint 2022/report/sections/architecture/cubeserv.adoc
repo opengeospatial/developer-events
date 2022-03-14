@@ -1,0 +1,13 @@
+[[cubeserv]]
+==== CubeWerx CubeServ
+
+The CubeWerx server ("cubeserv") is implemented in C and currently implements the following OGC specifications:
+
+* All conformance classes and recommendations of the OGC API - Features - Part 1: Core standard.
+* Multiple conformance classes and recommendations of the draft OGC API - Records - Part 1: Core specification.
+* Multiple conformance classes and recommendations of the draft OGC API - Coverages - Part 1: Core specification.
+* Multiple conformance classes and recommendations of the draft OGC API - Processes - Part 1: Core specification.
+* Multiple versions of the Web Map Service (WMS), Web Processing Service (WPS), Web Map Tile Service (WMTS) and Web Feature Service (WFS) standards
+* A number of other "un-adopted" OGC web services including the Testbed-12 Web Integration Service, OWS-7 Engineering Report - GeoSynchronization Service, Web Object Service Implementation Specification.
+
+The cubeserv executable supports a wide variety of back ends including Oracle, MariaDB, SHAPE files, etc. It also supports a wide array of service-dependent output formats (e.g. GML, GeoJSON, Mapbox Vector Tiles, MapMP, etc.) and coordinate reference systems.

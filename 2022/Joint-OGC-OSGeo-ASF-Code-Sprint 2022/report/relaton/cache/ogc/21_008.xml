@@ -1,0 +1,57 @@
+<bibdata type="standard">
+  <fetched>2022-03-11</fetched>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Joint OGC OSGeo ASF Code Sprint 2021 Summary Engineering Report</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Joint OGC OSGeo ASF Code Sprint 2021 Summary Engineering Report</title>
+  <uri type="obp">https://docs.ogc.org/per/21-008.html</uri>
+  <docidentifier type="OGC" primary="true">21-008</docidentifier>
+  <date type="published">
+    <on>2021-04-12</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Gobe Hobona</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Angelos Tzotsos</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Tom Kralidis</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Martin Desruisseaux</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">The subject of this Engineering Report (ER) is a code sprint that was held from 17 to 19 February 2021 to advance support of open geospatial standards within the developer community, whilst also advancing the standards themselves. The code sprint was hosted by the Open Geospatial Consortium (OGC), the Apache Software Foundation (ASF), and Open Source Geospatial Foundation (OSGeo). The event was sponsored by Ordnance Survey (OS) and GeoCat BV, and held as a completely virtual event.</abstract>
+  <ext>
+    <doctype>engineering-report</doctype>
+    <editorialgroup>
+      <committee>technical</committee>
+    </editorialgroup>
+  </ext>
+</bibdata>

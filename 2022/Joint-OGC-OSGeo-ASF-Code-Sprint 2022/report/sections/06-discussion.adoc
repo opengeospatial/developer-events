@@ -1,0 +1,54 @@
+[[discussion]]
+== Discussion
+
+=== OGC API - Records
+
+The participants prototyped implementations of a static catalogue. The idea of a crawlable catalogue is that the catalogue can be created using static files in accessible locations and then to have records linked together. It is therefore more of a manifest or a register. This approach is useful for publishing metadata records on Cloud storage services such as Amazon S3. There was a discussion around having fixed various files in a crawable catalogue. It was agreed that it would be better for the Standards to only make a recommendation, and then allow the implementer to decide on what names to give to the files.
+
+There was discussion about schemas, including around the nesting of the `properties` keys i.e. one provided by GeoJSON and the one provided by OGC API - Records. There was also a discussion around some of the structures of STAC, for example the STAC Catalogue. It was agreed that the STAC Catalogue structure is a useful structure that could inform the approach taken for OGC API - Records.
+
+The participants discussed the challenge of identifying a profile or extension of GeoJSON through a media type, when the media type is not registered with IANA. This topic came about because of work undertaken during the code sprint to implement an Executable Test Suite for the https://docs.ogc.org/is/17-003r2/17-003r2.html[EO Dataset Metadata GeoJSON (-LD) Standard (OGC 17-003r2)]. If a conformance class for the EO Data Metadata standard is specified in a future extension of OGC API - Records, then a way to identify the profile of GeoJSON requested by the client from the server would need to be specified.
+
+=== OGC API - Routes
+
+There was discussion around the Route Exchange Model (REM). One of the https://github.com/opengeospatial/ogcapi-routes/issues/49[observations] made by sprint participants was that attaching the units of a value to a property name (e.g. `length_m`) could potentially lead to ambiguity (e.g. whether the `_m` stands for meters or miles).
+
+Another https://github.com/opengeospatial/ogcapi-routes/issues/48[observation] was that assigning a value of `Segment` to a feature with a `Point` geometry could lead to confusion amongst implementers that use Graph databases to calculate routes. This is because in Graph theory Nodes are typically represented as points, and Edges are typically represented as lines.
+
+There was a suggestion that a proposal should be submitted to the Google Summer of Code (GSOC) programme for a project that implements OGC API - Records and/or the Route Exchange Model in the open source pgRouting extension of PostgreSQL/PostGIS.
+
+=== OGC API - Environmental Data Retrieval
+
+Results of the <<results_T17D166,extension of the Testbed-17 Dataset testing (D166) prototype>> led to a https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/352[discussion] with the editors of the OGC API - Environmental Data Retrieval standard and a https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/pull/353[Pull Request] was created for updating the API definition files of the standard. It was noted that the modification might also be relevant to OGC API - Common.
+
+=== OGC API - Maps and OGC API - Common
+
+One of the sprint participants, a contributor to Leaflet, observed that the implementation of OGC API - Maps that they were interacting with did not offer much attribution.
+
+A summary of the https://github.com/opengeospatial/ogcapi-common/issues/303[issue] recorded by the participants is below. The issue related to attribution on both the list of collections, and the metadata of a collection:
+
+* Clarity is needed on whether attribution belongs to OGC API - Common - Part 1 (Core) or Part 2 (Geospatial Data). Currently it appears there can be an attribution field in either/both the list of collections (Part 1) or in the metadata of a specific collection (Part 2). Therefore, clarity is needed on what the behavior of a client should be - shall a client display attribution about the service, or only about the collections being displayed/used? Allowing attribution only in Part 2, or clarifying how the attribution in part 1 would be displayed would solve this concern.
+
+* Allowing servers to use any kind of HTML markup in the attribution field might be problematic due to three specific problems: <script>s, tracking pixels, and parsing. In a best-case scenario, an OGC API server might push some invisible tracking pixels to clients (an image linking to an invisible 1x1 pixel). While good-intentioned, this opens a rabbit hole of cookies and privacy concerns. Another concern is clients with no means of parsing HTML and building a document model about it. Using a specific format of markup will force clients to include a parser for that markup language. A similar concern would arise if another markup language would be used, e.g. markdown. The worst-case scenario would be an infosec attacker gaining a hold of an OGC API server, and changing the attribution field to include a <script> reference. That would be an attack vector to inject malware in any clients. Therefore there appears not to be any scenario where allowing <script> as part of attribution might be useful.
+
+=== Editorial
+
+The sprint participants also identified a number of editorial issues in draft specifications and recorded the issues for Standards editors to address. Examples include:
+
+* https://github.com/opengeospatial/ogcapi-records/issues/164[References to example files of the draft OGC API - Records - Part 1: Core]
+* https://github.com/opengeospatial/ogcapi-routes/issues/47[Use of the correct case in link relations in a draft future extension of OGC API - Routes]
+* https://github.com/opengeospatial/ogcapi-maps/pull/84[Documentation in yaml files of the draft OGC API - Maps - Part Core]
+
+=== Summary of Lessons Identified
+
+* There is concern about the format for presenting attribution of collections and collection metadata. There is a need for some compromise on the attribution format.
+* The code sprints provide an opportunity for feedback from more developers within and outside of the OGC and OSGeo community.
+* There is a need to always have a bbox response in the HTTP header, to help with determining the extent of the data returned.
+* OGC API standards offer an improved developer experience compared to the OGC Web Services suite of standards.
+* The examples in OGC API standards are absolutely key to helping developers to implement the standards.
+* There is a frequently asked question of: What is the relationship between OGC API Records and STAC? There is a need for clear communications on what the relationship is and which standard to use where. There is a need to delineate these from both a communications and technical.
+* There is a need to make OGC API standards stand out.
+* There is some similarity between STAC and some of the OGC API Standards. STAC also uses OGC API Features. The idea is to specify OGC API Records such that STAC can be a profile of OGC API Records.
+* Which some resources it is not sufficient to record a link to a resource. For example, with a WMS there would be a need to parse the capabilities.
+
+Whereas some of the lessons listed above might have implications for standards, others may have implications for developer guide documentation and similar resources. This highlights why conducting code sprints that involve open standards and open source software communities is critical for the uptake of standards.

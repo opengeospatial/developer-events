@@ -1,0 +1,35 @@
+<bibdata type="standard">
+  <fetched>2022-03-09</fetched>
+  <title type="title-main" format="text/plain" language="en" script="Latn">NetCDF Binary Encoding Extension Standard: NetCDF Classic and 64-bit Offset Format</title>
+  <title type="main" format="text/plain" language="en" script="Latn">NetCDF Binary Encoding Extension Standard: NetCDF Classic and 64-bit Offset Format</title>
+  <uri type="obp">https://portal.ogc.org/files/?artifact_id=43734</uri>
+  <docidentifier type="OGC" primary="true">10-092r3</docidentifier>
+  <date type="published">
+    <on>2011-04-05</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Ben Domenico</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <edition>3</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This document defines an OGC® Standard for encoding binary representations of space-time varying geo-referenced data. Specifically, this standard specifies the netCDF classic and 64-bit offset file binary encoding formats. This standard specifies a set of requirements that every netCDF classic or 64-bit offset binary encoding must fulfil.</abstract>
+  <ext>
+    <doctype>standard</doctype>
+    <subdoctype>extension</subdoctype>
+    <editorialgroup>
+      <committee>technical</committee>
+    </editorialgroup>
+  </ext>
+</bibdata>

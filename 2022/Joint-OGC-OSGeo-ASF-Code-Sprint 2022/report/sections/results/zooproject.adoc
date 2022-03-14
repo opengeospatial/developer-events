@@ -1,0 +1,23 @@
+=== ZOO Project
+
+The maintainers of ZOO Project worked on an extension of ZOO Project that enabled third party software to interoperate with an instance of ZOO Project. The third party software products integrated with ZOO Project during the code sprint included RabbitMQ and OSGeo MapServer.
+
+[[img_zoo_project]]
+.Screenshot of the landing page of an instance ZOO Project
+image::../images/zooproject.png[align="center",width=800]
+
+=== Integration with OSGeo MapServer
+
+The integration with OSGeo MapServer made it possible for the results of a process that had been executed through the OGC API - Processes interface to be automatically configured for display in an instance of OSGeo MapServer.
+
+[[img_mapserver]]
+.Screenshot of an instance of MapServer interoperating with an instance of ZOO Project
+image::../images/mapserver3.png[align="center",width=800]
+
+=== Integration with RabbitMQ
+
+The integration with RabbitMQ made it possible to use the RabbitMQ for invoking a process that is available through the OGC API - Processes interface. 
+
+[[img_rabbitmq]]
+.Screenshot of the interface of RabbitMQ
+image::../images/rabbitmq.png[align="center",width=800]

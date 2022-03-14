@@ -1,0 +1,6 @@
+
+== Scope
+
+This Engineering Report (ER) summarizes the main achievements of the Joint OGC OSGeo ASF Code Sprint, conducted between March 8th and 10th, 2022. Sponsored by Ordnance Survey (OS), the code sprint was hosted by the OGC, ASF, and OSGeo with the goal of accelerating the support of open geospatial standards within the developer community.
+
+A Code Sprint is a collaborative and inclusive event driven by innovative and rapid programming with minimal process and organization constraints to support the development of new applications and open standards. Code Sprints experiment with emerging ideas in the context of geospatial standards, help improve interoperability of existing standards by experimenting with new extensions or profiles, and are used for building proofs of concept to support standards development activities and enhancement of software products.
