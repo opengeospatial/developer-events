@@ -99,7 +99,6 @@ All questions regarding this document should be directed to the editor or the co
 |	Ayodele	Michael A	|	(self)	|	Contributor
 |	Weston	Renoud	|	QPS BV	|	Contributor
 |	Luca	Delucchi	|	Fondazione Edmund Mach	|	Contributor
-|	Constantin	Drabo	|	TRESOR	|	Contributor
 |	Francesco 	Bartoli	|	Geobeyond 	|	Contributor
 |	Patrick	Dion	|	Ecere Corporation	|	Contributor
 |	Antonio	Cerciello	|	Byte Road	|	Contributor
