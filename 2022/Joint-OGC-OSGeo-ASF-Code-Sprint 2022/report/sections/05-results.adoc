@@ -16,3 +16,5 @@ include::results/cubeserv.adoc[]
 include::results/ecere.adoc[]
 
 include::results/zooproject.adoc[]
+
+include::results/GIGS.adoc[]
