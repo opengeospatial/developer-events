@@ -1,4 +1,4 @@
 [[teamengine]]
 ==== TEAM Engine
 
-The Test, Evaluation, And Measurement (TEAM) Engine is a testing facility that executes test suites developed using the TestNG framework or the OGC Compliance Test Language (CTL). It is typically used to verify specification compliance and is the official test harness of the OGC Compliance Testing Program (CITE).
+The https://opengeospatial.github.io/teamengine/[Test, Evaluation, And Measurement (TEAM) Engine] is a testing facility that executes test suites developed using the TestNG framework or the OGC Compliance Test Language (CTL). It is typically used to verify specification compliance and is the official test harness of the https://www.ogc.org/compliance[OGC Compliance Testing Program (CITE)].

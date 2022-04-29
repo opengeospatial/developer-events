@@ -81,7 +81,7 @@ The draft https://ogcapi.ogc.org/tiles[OGC API - Tiles] standard specifies the
 
 ==== OGC Gridded Geodetic Data Exchange Format (GGXF)
 
-The purpose of the Gridded Geodetic Data Exchange Format (GGXF) project team is to design a file structure and computer storage mechanism for the efficient exchange of regularly gridded geodetic data.
+The purpose of the https://github.com/opengeospatial/CRS-Gridded-Geodetic-data-eXchange-Format[Gridded Geodetic Data Exchange Format (GGXF)] project team is to design a file structure and computer storage mechanism for the efficient exchange of regularly gridded geodetic data.
 
 === OSGeo Projects
 

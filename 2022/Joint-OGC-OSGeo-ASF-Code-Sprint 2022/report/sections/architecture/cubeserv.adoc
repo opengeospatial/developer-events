@@ -1,7 +1,7 @@
 [[cubeserv]]
 ==== CubeWerx CubeServ
 
-The CubeWerx server ("cubeserv") is implemented in C and currently implements the following OGC specifications:
+The https://www.cubewerx.com/[CubeWerx server ("cubeserv")] is implemented in C and currently implements the following OGC specifications:
 
 * All conformance classes and recommendations of the OGC API - Features - Part 1: Core standard.
 * Multiple conformance classes and recommendations of the draft OGC API - Records - Part 1: Core standard.
