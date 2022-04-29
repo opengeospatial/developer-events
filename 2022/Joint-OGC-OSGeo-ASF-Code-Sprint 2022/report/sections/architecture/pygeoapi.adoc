@@ -1,4 +1,0 @@
-[[pygeoapi]]
-==== OSGeo pygeoapi
-
-https://pygeoapi.io/[pygeoapi] is a Python server implementation of the OGC API suite of standards.

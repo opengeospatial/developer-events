@@ -1,4 +1,0 @@
-[[postgis]]
-==== OSGeo PostGIS
-
-https://www.osgeo.org/projects/postgis/[PostGIS] provides spatial objects for the PostgreSQL database, allowing storage and query of information about location and mapping.

@@ -1,4 +1,0 @@
-[[t17_d166]]
-==== Testbed-17 D166 Prototype
-
-The aim of the https://github.com/opengeospatial/T17-API-D166/[Testbed-17 D166 prototype] was to support experimentation on lowering the entry barrier for implementing OGC Web APIs <<ogc21-019>>. The prototype uses JavaScript to implement offer interfaces conforming to OGC API Features and OGC API EDR standards. The base system is provisioned by a PostgreSQL database and supported by an instance of the GDAL library.

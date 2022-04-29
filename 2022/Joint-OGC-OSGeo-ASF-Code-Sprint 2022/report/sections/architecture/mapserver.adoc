@@ -1,6 +1,0 @@
-[[mapserver]]
-==== OSGeo MapServer
-
-https://www.osgeo.org/projects/mapserver/[MapServer] is an open source platform for publishing spatial data and interactive mapping applications to the web.
-
-In this code sprint, the participants implemented an extension to MapServer that enabled MapServer to offer an interface conforming to OGC API — Features.
