@@ -16,13 +16,13 @@ The subject of this Engineering Report (ER) is a code sprint that was held from 
 [.preface]
 == Executive Summary
 
-Over the past decade, geospatial technologies and data have become more widespread in use and application. A key catalyst for this increased uptake of geospatial technologies is the interoperability achieved through implementation of open geospatial standards. Another important catalyst for this increased uptake is the availability of open source software products that are able to extract, transform, analyse, and disseminate geospatial data.
+Over the past decade, geospatial technologies and data have become more widespread in use and application. A key catalyst for this increased uptake of geospatial technologies is the interoperability achieved through implementation of open geospatial standards. Another important catalyst for this increased uptake is the availability of open source software products that are able to extract, transform, analyze, and disseminate geospatial data.
 
-In February 2021, the Open Geospatial Consortium (OGC), the Apache Software Foundation (ASF), and the Open Source Geospatial Foundation (OSGeo) held their first joint Open Source Software and Open Standards Code Sprint (https://docs.ogc.org/per/21-008.html[OGC 21-008]). The success of that first joint code sprint provided the foundation for a second joint code sprint. This Engineering Report (ER) summarizes the main achievements of the second joint code sprint, conducted between March 8th and 10th, 2022. The code sprint, named the 2022 Joint OGC OSGeo ASF Code Sprint, served to accelerate the support of open geospatial standards within the developer community.
+In February 2021, the Open Geospatial Consortium (OGC), the Apache Software Foundation (ASF), and the Open Source Geospatial Foundation (OSGeo) held their first joint Open Source Software and Open Standards Code Sprint (https://docs.ogc.org/per/21-008.html[OGC 21-008]). The success of that first joint code sprint provided the foundation for a second joint code sprint. This Engineering Report (ER) summarizes the main achievements of the second joint code sprint, conducted between March 8th and 10th, 2022. The second code sprint, named the 2022 Joint OGC OSGeo ASF Code Sprint, served to accelerate the support of open geospatial standards within the developer community.
 
-Part of the motivation for holding the code sprint was the growing uptake of location across the global developer communities. The code sprint brought together developers of Open Standards, Open Source Software and Proprietary Software. The code sprint therefore provided a rare opportunity for developers across these communities to focus on common challenges within a short space of time in a shared collaborative environment.
+Part of the motivation for holding the code sprint in 2022 was the growing uptake of location information across the global developer communities. The code sprint brought together developers of Open Standards, Open Source Software and Proprietary Software. The code sprint therefore provided a rare opportunity for developers across these communities to focus on common challenges, within a short space of time, and in a shared collaborative environment.
 
-The Open Geospatial Consortium (OGC) is an international consortium of more than 500 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR - Findable, Accessible, Interoperable, and Reusable. The consortium consists of Standards Working Groups (SWGs) that have responsibility for designing a candidate standard prior to approval as an OGC standard and for making revisions to an existing OGC standard. The sprint objectives for the SWGs were to:
+The OGC is an international consortium of more than 500 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR - Findable, Accessible, Interoperable, and Reusable. The consortium consists of Standards Working Groups (SWGs) that have responsibility for designing a candidate standard prior to approval as an OGC Standard and for making revisions to an existing OGC Standard. The sprint objectives for the SWGs were to:
 
 * Develop prototype implementations of OGC standards, including implementations of draft OGC Application Programming Interface (API) standards
 * Test the prototype implementations
@@ -44,20 +44,25 @@ The Apache Software Foundation (ASF) is an all-volunteer community comprising 81
 * Improve documentation
 * Improve interoperability with other libraries
 
+The 2022 Joint Code Sprint introduced several changes that were not there during the 2021 Joint Code Sprint. First, a new collaboration platform – Discord- was used. Discord allowed both chat and video communications to be offered from within the same environment. Discord also supported the creation of multiple chat channels, thereby making it possible for separate projects to have their own dedicated chat channels. Second, the code sprint offered Mentor Streams that presented tutorials for developers that were getting started in using various standards or software products. Finally, a dedicated chat channel was created for the event sponsor, Ordnance Survey, on the code sprint's Discord environment thereby making it possible for sprint participants to visit the channel and ask about the sponsor’s products.
+
 The code sprint facilitated the development and testing of prototype implementations of OGC standards, including implementations of draft OGC API standards. Further, the code sprint also enabled the participating developers to provide feedback to the editors of OGC standards. Furthermore, the code sprint provided a collaborative environment for OSGeo and ASF developers to fix open issues in products, develop new features, improve documentation, improve interoperability with other libraries/products, and develop prototype implementations of OGC standards. The code sprint therefore met all of its objectives and achieved its goal of accelerating the support of open geospatial standards within the developer community.
 
 The engineering report makes the following recommendations for future innovation work items:
 
-* Prototypes of catalogues that can be crawled through by an application. Currently there are several searchable catalogues but not catalogues that can be crawled through by an application.
-* More spec validation work for OGC API Records.
-* More experiments for OGC API Processes - Workflows extension. This could try out the various workflow approaches. https://github.com/opengeospatial/ideas/issues/115
+* Prototypes of catalogues that can be crawled through by an application. Currently there are several searchable catalogues but no catalogues that can be crawled through by an application.
+* More specification validation work for OGC API Records.
+* More experiments for the Workflows extension of OGC API Processes. This could try out a variety of workflow approaches.
 * Experimentation on how a processing server can interact properly with other OGC API implementations that serve data. For example, in this code sprint there was an implementation of OGC API Processes (ZOO Project) that interacted with an OGC API Features implementation (MapServer).
-* Experimentation with OGC's geoparquet specification and Apache Arrow.
+* Experimentation with OGC's geoparquet candidate standard and Apache Arrow.
 
 The engineering report also makes the following recommendations for things that the Standards Working Groups should consider introducing support for:
 
 * To improve examples and documentation related to OGC API Records.
-* To advance the development of the Executable Test Suites of OGC API Processes, Tiles and Coverages.
+*	To advance the development of the Executable Test Suites of OGC API Processes.
+*	To advance the development of the Executable Test Suites of OGC API Tiles.
+*	To advance the development of the Executable Test Suites of OGC API Coverages.
+
 
 
 == Submitters
@@ -111,7 +116,4 @@ All questions regarding this document should be directed to the editor or the co
 |	Maxime	Collombin	|	University of Applied Sciences, Western Switzerland, School of Business & Engineering Vaud (HEIG-VD)	|	Contributor
 |	Mehmet Akif	Ortak	|	IT	|	Contributor
 |	Tracey	Birch	|	(self)	|	Contributor
-|	Add Yourself	|	Add Yourself	|	Contributor
-|	Add Yourself	|	Add Yourself	|	Contributor
-|	Add Yourself	|	Add Yourself	|	Contributor
 |===

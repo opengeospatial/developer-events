@@ -1,10 +1,11 @@
 === Extension of the Testbed-17 Dataset testing (D168) prototype
 
-For this code sprint, the prototype's support for OGC API - Records was reviewed. 
+For this code sprint, the prototype's support for OGC API - Records was reviewed.
 
-The OSGeo pygeometa package is used to create the metadata for both the crawlable catalog Record and individual object Records. The current implementation uses a fork of pygeometa with a new schema for the catalog versus existing chema for the objects. It was tested whether the existing pygeometa schema could be adjusted to also satisfy the catalog Record creation.
+The OSGeo pygeometa package is used to create the metadata for both the crawlable catalogue Record and individual object Records. The current implementation uses a fork of pygeometa with a new schema for the catalogue versus existing schema for the objects. It was tested whether the existing pygeometa schema could be adjusted to also satisfy the catalogue Record creation.
 
-The maintainers of the prototype deployed catalogs with multiple objects, stored in an AWS S3 bucket, to test various options and support the discussion.
+The maintainers of the prototype deployed catalogues with multiple objects, stored in an AWS S3 bucket, to test various options and support the discussion.
+
 
 [[img_t17d168]]
 .Screenshot of part of a script from the Testbed-17 Dataset testing (D168) prototype

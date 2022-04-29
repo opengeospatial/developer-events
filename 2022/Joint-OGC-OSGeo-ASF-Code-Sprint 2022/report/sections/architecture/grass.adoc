@@ -1,4 +1,4 @@
 [[grass]]
 ==== OSGeo GRASS GIS
 
-The Geographic Resources Analysis Support System (GRASS) is an open source GIS providing raster, vector and geospatial processing capabilities. It can be used either as a stand-alone application or as backend for other software packages such as QGIS and R or in the cloud [2].
+The Geographic Resources Analysis Support System (GRASS) is an open source GIS providing raster, vector and geospatial processing capabilities. It can be used either as a stand-alone application or as backend for other software packages such as QGIS and R or in the cloud <<ogc21-008>>.

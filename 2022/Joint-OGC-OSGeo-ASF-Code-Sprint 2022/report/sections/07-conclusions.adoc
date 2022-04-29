@@ -1,19 +1,21 @@
 [[conclusions]]
 == Conclusions
 
-The code sprint facilitated the development and testing of prototype implementations of OGC standards, including implementations of draft OGC APIs standards. Further, the code sprint also enabled the participating developers to provide feedback to the editors of OGC standards. Furthermore, the code sprint provided a collaborative environment for OSGeo and ASF developers to fix open issues in products, develop new features, improve documentation, improve interoperability with other libraries/products, and develop prototype implementations of OGC standards. The code sprint therefore met all of its objectives and achieved its goal of accelerating the support of open geospatial standards within the developer community.
+The code sprint facilitated the development and testing of prototype implementations of OGC Standards, including implementations of draft OGC API Standards. Further, the code sprint also enabled the participating developers to provide feedback to the editors of OGC Standards. Furthermore, the code sprint provided a collaborative environment for OSGeo and ASF developers to fix open issues in products, develop new features, improve documentation, improve interoperability with other libraries/products, and develop prototype implementations of OGC standards. The code sprint therefore met all of its objectives and achieved its goal of accelerating the support of open geospatial standards within the developer community.
 
 === Future Work
 
 The sprint participants made the following recommendations for future innovation work items:
 
-* Prototypes of catalogues that can be crawled through by an application. Currently there are several searchable catalogues but not catalogues that can be crawled through by an application.
-* More spec validation work for OGC API Records.
-* More experiments for OGC API Processes - Workflows extension. This could try out the various workflow approaches. https://github.com/opengeospatial/ideas/issues/115
-* Experimentation on how a processing server can interact properly with other OGC API implementations that serve data. For example, in this code sprint there was an implementation of OGC API Processes (ZOO Project) that interacted with an OGC API Features implementation (MapServer).
-* Experimentation with OGC's geoparquet specification and Apache Arrow.
+*	Prototypes of catalogues that can be crawled through by an application. Currently there are several searchable catalogues but not catalogues that can be crawled through by an application.
+*	More specification validation work for OGC API Records.
+*	More experiments for the Workflows extension of OGC API Processes. This could try out the various workflow approaches. https://github.com/opengeospatial/ideas/issues/115
+*	Experimentation on how a processing server can interact properly with other OGC API implementations that serve data. For example, in this code sprint there was an implementation of OGC API Processes (ZOO Project) that interacted with an OGC API Features implementation (MapServer).
+*	Experimentation with OGC’s geoparquet specification and Apache Arrow.
 
-The sprint participants also made the following recommendations for things that the Standards Working Groups should consider:
+The sprint participants also made the following recommendations for things that the SWGs should consider:
 
-* To improve examples and documentation related to OGC API Records.
-* To advance the development of the Executable Test Suites of OGC API Processes, Tiles and Coverages.
+*	To improve examples and documentation related to OGC API Records.
+*	To advance the development of the Executable Test Suites of OGC API Processes.
+*	To advance the development of the Executable Test Suites of OGC API Tiles.
+*	To advance the development of the Executable Test Suites of OGC API Coverages.
