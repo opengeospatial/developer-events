@@ -1,4 +1,0 @@
-[[proj]]
-==== OSGeo Proj
-
-PROJ is a generic coordinate transformation software library that transforms geospatial coordinates from one coordinate reference system (CRS) to another.

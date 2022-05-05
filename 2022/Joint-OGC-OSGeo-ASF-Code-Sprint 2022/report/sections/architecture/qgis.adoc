@@ -1,4 +1,0 @@
-[[qgis]]
-==== OSGeo QGIS
-
-QGIS is a free and open-source cross-platform desktop GIS that supports viewing, editing, and analysis of geospatial data.

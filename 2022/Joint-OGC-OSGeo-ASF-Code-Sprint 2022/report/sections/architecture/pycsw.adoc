@@ -1,3 +1,0 @@
-[[pycsw]]
-==== OSGeo pycsw
-pycsw is a server-side python implementation of the OGC Catalogue Services for the Web (CSW) standard.

@@ -1,4 +1,0 @@
-[[t17_d168]]
-==== Testbed-17 D168 Prototype
-
-The aim of the https://github.com/opengeospatial/T17-API-D168/[Testbed-17 D168 prototype] was to help with optimizing documentation and scripts to support data providers implementing OGC API Standards in Cloud environments. The prototype is designed to be a https://conda.io[conda]-deployable python environment.

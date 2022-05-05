@@ -1,6 +1,0 @@
-[[rabbitmq]]
-==== RabbitMQ
-
-RabbitMQ is an open source message broker that supports multiple messaging protocols. RabbitMQ is lightweight and deployable on premises and cloud computing environments. RabbitMQ can support distributed and federated enterprises to meet scalability and availability requirements.
-
-In this code sprint, RabbitMQ was reviewed by ZOO Project developers as an option for supporting pubsub (publish/subscribe) needs.

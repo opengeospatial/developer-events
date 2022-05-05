@@ -1,3 +1,0 @@
-[[owslib]]
-==== OSGeo OWSLib
-OWSLib is a Python package for client programming with OGC Web Service (OWS) interface standards, and their related content models.

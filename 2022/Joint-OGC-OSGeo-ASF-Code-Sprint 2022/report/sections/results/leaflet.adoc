@@ -1,7 +1,0 @@
-=== Leaflet
-
-One of the contributors of Leaflet implemented support for OGC API - Maps in the code sprint. Support for OGC API - Maps in Leaflet was implemented as a plug-in, enabling anyone to integrate the JavaScript files into their JavaScript application.
-
-[[img_leaflet]]
-.Screenshot of the leaflet demo
-image::../images/leaflet.png[align="center",width=800]

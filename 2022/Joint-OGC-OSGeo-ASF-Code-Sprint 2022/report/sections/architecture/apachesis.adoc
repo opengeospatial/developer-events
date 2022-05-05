@@ -1,9 +1,0 @@
-[[apachesis]]
-==== Apache SIS
-
-Apache Spatial Information System (SIS) is a free software, Java language library for developing geospatial applications.
-The library is an implementation of OGC GeoAPI 3.0.1 interfaces and can be used for desktop or server applications.
-Services provided by Apache SIS include metadata, coordinate transformations, filtering and grid coverages.
-
-In this code sprint, Apache SIS was used for testing the
-Geospatial Integrity of Geoscience Software (GIGS) tests runner.
