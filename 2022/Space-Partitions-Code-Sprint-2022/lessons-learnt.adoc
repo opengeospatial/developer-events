@@ -1,0 +1,17 @@
+= Immediate Lessons and Next Steps
+
+== Immediate Lessons
+
+* Would be great to maintain compatibility with existing specs, when designing the hierarchical layers. 
+* The need for all OGC API Standards to be more explicit about which resources are offered by a collection. Previously itemType was considered and there was a suggestion to use relation types. This issue appears to not have been resolved.
+* There is a lot of value in having common building blocks. We need slightly different policies on different types of building blocks. Examples of types of building blocks include paths, parameters, responses, etc. Different types of building blocks might need different levels of detail. Two main types include API building blocks, and Specification building blocks.
+* TBA
+* TBA
+
+== Next Steps for the innovation side
+
+* TBA
+
+== Next Steps for the standards side
+
+* TBA
