@@ -3,15 +3,22 @@
 == Immediate Lessons
 
 * Would be great to maintain compatibility with existing specs, when designing the hierarchical layers. 
-* The need for all OGC API Standards to be more explicit about which resources are offered by a collection. Previously itemType was considered and there was a suggestion to use relation types. This issue appears to not have been resolved.
+* The need for all OGC API Standards to be more explicit about which resources are offered by a collection. Previously itemType was considered and there was a suggestion to use relation types. https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/334#issuecomment-1125410866[Further guidance is needed].
 * There is a lot of value in having common building blocks. We need slightly different policies on different types of building blocks. Examples of types of building blocks include paths, parameters, responses, etc. Different types of building blocks might need different levels of detail. Two main types include API building blocks, and Specification building blocks.
-* TBA
-* TBA
+* Could there be a Coverage Processing Language for Coverages and EDR? There are some aspects that are not harmonised between EDR and Coverages. A https://github.com/opengeospatial/ogcapi-coverages/issues/164[Basic Analytics through Common Query Parameters Building Block] could address this need. 
+* The specification (Tiles API) could be made more constrained to ease adoption by Client implementers. 
+* The actual size of the images (in Tiles API) is not correlated to the size advertised in the metadata of the tile matrices.
+* The possibility of having a parameter for the resolution came up. https://github.com/opengeospatial/2D-Tile-Matrix-Set/issues/29
 
 == Next Steps for the innovation side
 
-* TBA
+* The Space Partitions Code Sprint has shown the potential for holding an Analytics Pilot. This could pull in common query extensions from OGC API - Features and other building blocks from OGC API Records. This could demonstrate Geo Data Cubes.
+* Implement more client applications for OGC API Tiles. Perhaps a Pilot that focuses more on Client Applications.
+* A DGGS Pilot or even another code sprint. Main focus should be on use cases for doing queries across different collections.
+
 
 == Next Steps for the standards side
 
-* TBA
+* Resurrect the DGGS Registry
+* Explore a DGGS description encoding
+
