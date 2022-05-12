@@ -21,4 +21,6 @@
 
 * Resurrect the DGGS Registry
 * Explore a DGGS description encoding
-
+* Improve the documentation around Tile Matrix Sets to make it clearer that no TMS is mandatory. Pull Request already done.
+* The OGC API Common SWG should take an active role in seeking and collecting feedback on the design of building blocks.
+* Development of the registry of building blocks.
