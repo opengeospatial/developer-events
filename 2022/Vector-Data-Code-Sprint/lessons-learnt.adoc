@@ -1,0 +1,19 @@
+= Immediate Lessons and Next Steps
+
+== Immediate Lessons
+
+* There is interest in holding a security focused event. We need to collect Best Practices. So perhaps a code sprint focused on security would be useful.
+* There is a need to represent uncertainty in the OGC Moving Features model.
+* The code sprints should continue to offer an environment that welcomes constructive criticism and freedback. Participants should be encouraged to share their thoughts, even if the thoughts highlight issues in OGC Standards.
+
+== Next Steps for the innovation side
+
+* Security-focused event
+* Bug bounty initiatives
+* A 3D GeoVolumes focused effort in the Joint OGC OSGeo ASF Code Sprint in 2023
+
+== Next Steps for the standards side
+
+* Tutorials relating to security for OGC API Standards
+* Best Practices relating to OGC API Standards
+* Explore possible integration of the PDOK prototype into the official OGC validation tools
