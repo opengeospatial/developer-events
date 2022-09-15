@@ -1,0 +1,38 @@
+
+////
+Preface sections must include [.preface] attribute
+in order to get them placed in the preface area (and not in the main content).
+
+Keywords specified in document preamble will display in this area
+after the abstract
+////
+
+[.preface]
+== Abstract
+
+TBA
+
+[.preface]
+== Executive Summary
+
+TBA
+
+
+== Submitters
+
+All questions regarding this document should be directed to the editor or the contributors:
+
+[%unnumbered]
+[options="header"]
+|===
+| Name | Organization | Role
+|Gobe Hobona| Open Geospatial Consortium | Editor
+|Joana Simoes | Open Geospatial Consortium |Editor
+|Panagiotis	Vretanos	|	CubeWerx Inc.	|	Contributor
+|Clemens Portele	|	interactive instruments GmbH	|	Contributor
+|Matthias Mohr	|	WWU Münster	|	Contributor
+|Tom Kralidis 	|	Meteorological Service of Canada	|	Contributor
+|Byron Cochrane	|	OpenWork Ltd |	Contributor
+|Andreas Matheus	|	Secure Dimensions	|	Contributor
+|Jeroen Ticheler	|	GeoCat	|	Contributor
+|===

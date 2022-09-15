@@ -1,0 +1,28 @@
+[[discussion]]
+== Discussion
+
+=== OGC API - Records
+
+TBA
+
+=== ISO 19115
+
+TBA
+
+=== STAC
+
+TBA
+
+=== JSON-FG
+
+TBA
+
+=== Summary of Lessons Identified
+
+The following are the immediate lessons identified by the sprint participants:
+
+* TBA
+* TBA
+* TBA
+
+The following section presents the conclusions.

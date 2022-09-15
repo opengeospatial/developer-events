@@ -1,0 +1,4 @@
+[[pygeometa]]
+==== OSGeo pygeometa
+
+https://github.com/geopython/pygeometa[pygeometa] is a Python package to generate metadata for geospatial datasets.
