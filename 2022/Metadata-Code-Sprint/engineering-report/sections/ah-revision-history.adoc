@@ -1,0 +1,13 @@
+
+[appendix,obligation="informative"]
+== Revision History
+
+// Insert revision history
+// Structure
+[%unnumbered]
+[width="90%",options="header"]
+|===
+|Date |Release |Author | Primary clauses modified |Description
+|2022-03-11 |0.1 |G. Hobona |all |initial version
+|2022-04-29 |0.2 |G. Hobona |all |Updated with feedback from participants
+|===

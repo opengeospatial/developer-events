@@ -1,0 +1,12 @@
+[[results]]
+== Results
+
+The code sprint included multiple software products and implementations of OGC and ISO Standards. This section presents some of the results from the code sprint.
+
+include::results/leaflet.adoc[]
+
+include::results/cubeserv.adoc[]
+
+include::results/ldproxy.adoc[]
+
+include::results/geonetwork.adoc[]
