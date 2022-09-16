@@ -32,8 +32,28 @@
 * There are various considerations relating to alignment with ISO 19115 e.g. alignment with DCAT
 * We need to balance how deeply we want to represent ISO metadata in JSON
 
-=== Version
+=== Versioning
 
-TBA
+* TBA
+
+
+== Future Work
+
+=== Innovation work
+
+* Initiatives to facilitate implementation of JSON-FG (e.g. 3D, cadastral data, etc)
+* Initiatives to facilitate implementation of catalogues
+* Prototyping of tools for creating metadata (e.g. the automated STAC metadata crawler demonstrated during the sprint)
+* 
+
+=== Standards
+
+* Outreach for JSON-FG
+* Code Sprint for designing profiles of JSON-FG for different communities of interest
+* Documentation of the different roles of catalogues and API, as well as guidance on when to use them
+* Code Sprint on versioning, possibly combining an OGC API Features Part 4 with OGC API Records
+* TBA
+
+
 
 
