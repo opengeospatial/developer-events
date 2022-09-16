@@ -1,0 +1,39 @@
+== Lessons learnt
+
+=== Harvesting
+
+* It's important to be clear about what harvesting means.
+* Keeping the metadata close to the data is more efficient than copying the metadata to a separate server.
+* Ideally harvesting would be of selected bits of metadata instead of the complete metadata record.
+* There are different types of harvesting, in some cases there may be some processing needed. One type of approach means harvesting the discovery metadata.
+* In some cases, augmented metadata may need to be pushed back to the source.
+* We need to be clear about what we mean when we say "close to the data".
+
+
+=== Harmonisation btwn STAC and OGC API Records
+
+* Modified the create and updated times to match the way STAC does it
+* Extended the Link to include a created and updated
+
+=== The consideration of adding JSON-FG as another encoding for OGC API Records
+
+* There is not an identified need for JSON-FG encodings in OGC API Records and STAC. However, it could be identified in the future.
+* The canonical time is a top-level element in JSON-FG. This could be useful for OGC API Records.
+* More feedback is needed
+
+=== ISO metadata and OGC API Records
+
+* Expressing ISO 19115 metadata in OGC API Records should focus on discovery elements.
+* Initial prototyping has been focused on Keywords to Themes
+* What is needed is a profile that enables us to work with ISO 19115
+* Content negotiation by profile could be useful. 
+* The incremental approach would be useful. 
+* It may be necessary to also design a JSON profile of ISO 19139 as well.
+* There are various considerations relating to alignment with ISO 19115 e.g. alignment with DCAT
+* We need to balance how deeply we want to represent ISO metadata in JSON
+
+=== Version
+
+TBA
+
+
