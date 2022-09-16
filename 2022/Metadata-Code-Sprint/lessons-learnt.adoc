@@ -52,7 +52,7 @@
 * Code Sprint for designing profiles of JSON-FG for different communities of interest
 * Documentation of the different roles of catalogues and API, as well as guidance on when to use them
 * Code Sprint on versioning, possibly combining an OGC API Features Part 4 with OGC API Records
-* TBA
+* Exploring how to move GeoDCAT forward within OGC
 
 
 
