@@ -10,3 +10,5 @@ include::results/cubeserv.adoc[]
 include::results/ldproxy.adoc[]
 
 include::results/geonetwork.adoc[]
+
+include::results/pycsw.adoc[]

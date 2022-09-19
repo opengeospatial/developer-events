@@ -1,0 +1,7 @@
+==== OGC Testbed-18 instance of pycsw
+
+An instance of pycsw, implemented for Testbed-18, was included in the code sprint to support a demonstration of asynchronous catalogues that implement OGC API - Records.
+
+[[img_pycsw]]
+.Screenshot of the instance of pycsw
+image::../images/pycsw.png[align="center",width=800]
