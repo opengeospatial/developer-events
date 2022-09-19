@@ -20,6 +20,13 @@ Over the past two decades, standards such as ISO 19115:2003 and the OGC Catalogu
 
 In November 2021, the Open Geospatial Consortium (OGC) and the International Organization for Standardization (ISO) held their first joint code sprint. The success of that first joint code sprint provided the foundation for a second joint code sprint. This Engineering Report (ER) summarizes the main achievements of the second joint code sprint, conducted between September 14th and 16th, 2022. The second code sprint, named the 2022 Joint OGC and ISO Code Sprint - The Metadata Code Sprint, served to accelerate the support of open geospatial standards that relate to geospatial metadata and catalogues. The code sprint was sponsored by Ordnance Survey (OS) at the Gold-level and Geonovum at the Silver-level. The code sprint was held as a hybrid event, with the face-to-face element hosted at the Geovation Hub in London, United Kingdom.
 
+The code sprint focused on the following group of APIs and encodings:
+
+* https://ogcapi.ogc.org/records/[OGC API - Records] candidate standard
+* ISO 19115 metadata Standards (i.e., https://www.iso.org/standard/53798.html[ISO 19115-1], https://www.iso.org/standard/67039.html[ISO 19115-2], https://www.iso.org/standard/32579.html[ISO 19115-3])
+* OGC Features and Geometries JSON (JSON-FG) candidate standard
+* Spatio-Temporal Asset Catalog (STAC), which leverages the OGC API - Features Standard
+
 The OGC is an international consortium of more than 500 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR - Findable, Accessible, Interoperable, and Reusable. The consortium consists of Standards Working Groups (SWGs) that have responsibility for designing a candidate standard prior to approval as an OGC Standard and for making revisions to an existing OGC Standard. The sprint objectives for the SWGs were to:
 
 * Develop prototype implementations of OGC standards, including implementations of draft OGC Application Programming Interface (API) standards
