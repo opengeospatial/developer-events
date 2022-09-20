@@ -13,6 +13,10 @@ A coordinate system that is related to the real world by a datum term name (sour
 
 A document (or set of documents) that defines or describes an API. An OpenAPI definition uses and conforms to the OpenAPI Specification (https://www.openapis.org)
 
+=== Metadata
+
+information about a resource [source: ISO 19115-1:2014, Amendment 2]
+
 === Web API
 
 API using an architectural style that is founded on the technologies of the Web [source: OGC API - Features - Part 1: Core]

@@ -11,4 +11,6 @@ include::results/ldproxy.adoc[]
 
 include::results/geonetwork.adoc[]
 
+include::results/pycsw.adoc[]
+
 include::results/gemplus.adoc[]

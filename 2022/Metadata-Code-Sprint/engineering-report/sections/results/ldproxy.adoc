@@ -1,3 +1,7 @@
 === ldproxy
 
-TBA
+The participants from interactive instruments worked on their implementation of OGC API – Features to prototype support for JSON-FG. A screenshot from their prototype implementation is shown in the figure below.
+
+[[img_ldproxy]]
+.Screenshot of the CubeWerx CubeSERV demo
+image::../images/ldproxy.png[align="center",width=800]
