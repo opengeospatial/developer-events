@@ -1,3 +1,33 @@
 === GeoNetwork
 
-TBA
+GeoNetwork team improved the following topics during the Metadata Code Sprint
+
+#### ISO19115
+
+Following discussions with participants, some would like to benefit from the possibility in ISO19115-3 to describe the dataset's feature catalogue using the following method:
+
+* As a citation in the dataset record (was also available in ISO19139)
+* As an embedded feature catalogue
+* As a standalone feature catalogue
+
+GeoNetwork was supporting previous version of ISO19110 as standalone record and it can be more relevant now to use ISO19115-3 (which contains the latest version of ISO19110) for standalone (or embedded) feature catalogue. With that change, users can decide how to relate dataset description and their corresponding feature catalogue using one of the 3 approaches above.
+
+Work in progress here https://github.com/geonetwork/core-geonetwork/pull/6545
+
+
+#### OGC API Record implementation
+
+Output formats improved:
+
+* GeoJSON for /items and /items/uuid 
+* DCAT for /items (not only for /items/uuid). Improved DCAT conversion.
+
+Added a conformance section.
+
+See https://github.com/geonetwork/geonetwork-microservices/pull/59 
+
+
+Elasticsearch by default return only 10K records. Add support for larger catalogue using track total hits (see https://github.com/geonetwork/geonetwork-microservices/pull/58).
+
+
+QGIS client interaction was tested and requires a conformance section and GeoJSON output. Work to be continued.
