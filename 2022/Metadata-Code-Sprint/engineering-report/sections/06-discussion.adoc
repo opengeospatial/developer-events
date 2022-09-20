@@ -5,7 +5,7 @@
 
 Although both STAC and OGC API - Records use GeoJSON for encoding metadata, alignment is necessary in order to improve metadata exchange. STAC has an Asset construct and OGC API - Records uses a Link construct. If OGC API - Records adopts the use of Assets then there is a need to be clear about the difference between Assets and Links.
 
-There is a perception that STAC is focused on Earth Observation (EO). The Record metadata model which is specified in OGC API - Records is supposed to cover more than just EO. The idea with the Records metadata model is that it offers a small set of generic properties that can be used to describe anything. This makes it possible for communities of interest to extend the model to support their particular use case.
+There is a perception that STAC is focused on Earth Observation (EO). The Record metadata model which is specified in OGC API - Records is supposed to cover more than just EO. The idea with the Records metadata model is that it offers a small set of generic properties that can be used to describe anything. This makes it possible for communities of interest to extend the model to support their particular use case. The way that one uses a Record depends on how the person wants to make the resource discoverable. This impacts how the record is created and how it is linked with other Records.
 
 There is a conflict between some elements where they may have the same name but different meaning (e.g. created and updated dates). The Records metadata model targets a the resource, whereas STAC targets a distribution. This creates a challenge for Records because it would be impossible to give different dates of update for different distributions of the same resource. To align OGC API Records with STAC there would be a need to change 'record-created' and 'record-updated' fields to simply 'created' and 'updated'. Other potential opportunities for alignment include the use a 'roles' element in the links section.
 
@@ -15,6 +15,7 @@ The lessons identified regarding harmonization can be summarized as:
 
 * Modify the create and updated fields by removing them from the Record class add them to the links. This would improve alignment with STAC.
 * In some cases it may be necessary to use either STAC or OGC API - Records, depending on the needs of the community of interest.
+
 
 
 === STAC
