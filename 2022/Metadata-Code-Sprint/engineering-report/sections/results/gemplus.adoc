@@ -1,0 +1,10 @@
+[[GeMPlus-CREAF]]
+==== GeM+
+GeM+ is a desktop application developed in C for managing and editing geospatial metadata.
+The participants from CREAF have worked on the implementation of an OGC API Record client integrated into GeM+.
+The implemented prototype of GeM+ is able to read metadata in XML format according to ISO 19115 (ISO 19139) and ISO 19115-2 by connecting to OGC API Records.
+The following figures show several screenshots of the implementation in GeM+.
+
+image::../images/gemplus1.png
+
+image::../images/gemplus2.png
