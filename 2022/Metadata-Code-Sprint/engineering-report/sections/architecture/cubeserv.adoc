@@ -1,5 +1,5 @@
 [[cubeserv]]
-==== CubeWerx CubeServ
+==== MariaDB CubeWerx CubeServ
 
 The https://www.cubewerx.com/[CubeWerx server ("cubeserv")] is implemented in C and currently implements the following OGC specifications:
 

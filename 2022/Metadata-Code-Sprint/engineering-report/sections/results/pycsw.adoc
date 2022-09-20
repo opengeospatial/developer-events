@@ -1,0 +1,19 @@
+=== pycsw
+
+==== Transactions support
+
+The pycsw project implemented capability for metadata transactions following the OGC API - Records - Part 4: Create, Replace, Update and Delete draft specification.  Support for the "Requirements Class "Create/Replace/Delete" requirements class was https://github.com/geopython/pycsw/pull/781[implemented], in review and expected to be included in the main codebase. The functionality leverages pycsw's existing underlying transactional support made available by CSW-T. As a result, pycsw implementations are now able to provide OGC API based transactional support for metadata management via OGC API - Records.
+
+A screenshot of the associated OpenAPI/Swagger interface from the implementation is shown in the figure below.
+
+[[img_pycsw_transactions]]
+.Screenshot of the pycsw transactions demo
+image::../images/pycsw-transactions.png[align="center"]
+
+==== OGC Testbed-18 instance of pycsw
+
+An instance of pycsw, implemented for Testbed-18, was included in the code sprint to support a demonstration of asynchronous catalogues that implement OGC API - Records.
+
+[[img_pycsw]]
+.Screenshot of the instance of pycsw
+image::../images/pycsw.png[align="center",width=800]

@@ -49,7 +49,16 @@ The individual parts of ISO 19115 that each serve as an approved standard includ
 
 ==== STAC
 
-TBA
+The SpatioTemporal Asset Catalog (STAC) is a specification that offers a language for describing geospatial information, so it can be worked with, indexed, and discovered. The STAC API offers an interface that implements OGC API - Features. Although STAC has been developed outside of the OGC, in the long term it is envisaged that the https://github.com/radiantearth/stac-api-spec/[STAC API] specification will be developed into an OGC Community Standard that implements OGC API building blocks that are relevant for the STAC use cases.
+
+STAC is a multi-part specification that includes the following consituent parts:
+
+* https://github.com/radiantearth/stac-spec/blob/master/item-spec/item-spec.md[STAC Item] is a representation of a single spatio-temporal asset, encoded as a GeoJSON feature with datetime and links properties.
+*  https://github.com/radiantearth/stac-spec/blob/master/catalog-spec/catalog-spec.md[STAC Catalog] is a JSON-encoded representation of links that provides a structure for organizing and browsing STAC Items.
+*  https://github.com/radiantearth/stac-spec/blob/master/collection-spec/collection-spec.md[STAC Collection] extends the STAC Catalog to offer additional information such as the extents, keywords, license, providers, and other elements that describe STAC Items that grouped within the Collection.
+* https://github.com/radiantearth/stac-api-spec[STAC API] provides a RESTful interface that conforms to the OGC API - Features standard, described in an OpenAPI definition document, and supports search of STAC Items.
+
+Each of the above-listed parts can be used on its own, however the parts have been designed to offer optimal capabilities when used together.
 
 === Open Source Software Projects
 
@@ -59,7 +68,9 @@ include::architecture/geonetwork.adoc[]
 include::architecture/ldproxy.adoc[]
 include::architecture/leaflet.adoc[]
 include::architecture/pygeoapi.adoc[]
+include::architecture/pycsw.adoc[]
 include::architecture/pygeometa.adoc[]
+include::architecture/owslib.adoc[]
 
 
 === Proprietary products
