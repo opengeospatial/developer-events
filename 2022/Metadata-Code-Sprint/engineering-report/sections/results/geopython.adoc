@@ -1,0 +1,16 @@
+=== Geopython stack
+
+The geopython suite of tooling was integrated and demonstrated as part of a mentor stream to demonstrate
+end to end metadata lifecycle management.
+
+* pygeometa: create / manage metadata from simple YAML configurations, exporting to numerous metadata formats
+* OWSLib: publish metadata via OGC API - Features - Part 4: Create, Replace, Update and Delete to an OGC API - Records server
+* pygeoapi: serve published metadata via OGC API - Records
+* pycsw: serve published metadata via OGC API - Records
+* QGIS: use QGIS' MetaSearch capability to discover resources via OGC API - Records
+
+A screenshot of the mentor session is shown in the figure below.
+
+[[img_geopython]]
+.Screenshot of metadata lifecycle management mentor stream using pygeometa, OWSLib, pygeoapi/pycsw, and QGIS
+image::../images/geopython-metadata-lifecycle.jpg[align="center"]
