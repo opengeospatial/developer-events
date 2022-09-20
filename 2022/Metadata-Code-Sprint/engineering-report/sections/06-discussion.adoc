@@ -11,7 +11,7 @@ TBA
 
 === STAC
 
-TBA
+STAC 'root' link relation types need to be further clarified as OGC link relation types or Compact URIs (CURIEs).
 
 === JSON-FG
 
@@ -30,6 +30,9 @@ The following are the immediate lessons identified by the sprint participants:
 * In some cases, augmented metadata may need to be pushed back to the source.
 * We need to be clear about what we mean when we say "close to the data".
 
+==== Transactions
+
+* Currently, OGC API - Features - Part 4: Create, Replace, Update and Delete defines two requirements classes ("Create/Replace/Delete", and "Update").  It would be valuable to split the "Create/Replace/Delete" requirements class into 3 separate classes, to allow for finer granularity for resource management.
 
 ==== Harmonisation between STAC and OGC API Records
 

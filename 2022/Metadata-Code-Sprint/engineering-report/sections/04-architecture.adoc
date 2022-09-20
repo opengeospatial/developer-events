@@ -68,7 +68,9 @@ include::architecture/geonetwork.adoc[]
 include::architecture/ldproxy.adoc[]
 include::architecture/leaflet.adoc[]
 include::architecture/pygeoapi.adoc[]
+include::architecture/pycsw.adoc[]
 include::architecture/pygeometa.adoc[]
+include::architecture/owslib.adoc[]
 
 
 === Proprietary products
