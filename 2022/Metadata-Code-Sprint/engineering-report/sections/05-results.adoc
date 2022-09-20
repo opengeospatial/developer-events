@@ -11,6 +11,8 @@ include::results/ldproxy.adoc[]
 
 include::results/geonetwork.adoc[]
 
+include::results/gemplus.adoc[]
+
 include::results/pygeoapi.adoc[]
 
 include::results/pycsw.adoc[]
@@ -18,3 +20,4 @@ include::results/pycsw.adoc[]
 include::results/owslib.adoc[]
 
 include::results/geopython.adoc[]
+
