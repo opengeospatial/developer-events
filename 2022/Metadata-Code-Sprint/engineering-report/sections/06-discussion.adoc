@@ -1,13 +1,21 @@
 [[discussion]]
 == Discussion
 
-=== OGC API - Records
+==== Harmonization between STAC and OGC API Records
 
-TBA
+Although both STAC and OGC API - Records use GeoJSON for encoding metadata, alignment is necessary in order to improve metadata exchange. STAC has an Asset construct and OGC API - Records uses a Link construct. If OGC API - Records adopts the use of Assets then there is a need to be clear about the difference between Assets and Links.
 
-=== ISO 19115
+There is a perception that STAC is focused on Earth Observation (EO). The Record metadata model which is specified in OGC API - Records is supposed to cover more than just EO. The idea with the Records metadata model is that it offers a small set of generic properties that can be used to describe anything. This makes it possible for communities of interest to extend the model to support their particular use case.
 
-TBA
+There is a conflict between some elements where they may have the same name but different meaning (e.g. created and updated dates). The Records metadata model targets a the resource, whereas STAC targets a distribution. This creates a challenge for Records because it would be impossible to give different dates of update for different distributions of the same resource. To align OGC API Records with STAC there would be a need to change 'record-created' and 'record-updated' fields to simply 'created' and 'updated'. Other potential opportunities for alignment include the use a 'roles' element in the links section.
+
+Every Item has a link to one collection. You could create a hierarchy using a collection. One level of collection and then the items are records. In this context, STAC and OGC API - Records are already aligned.
+
+The lessons identified regarding harmonization can be summarized as:
+
+* Modify the create and updated fields by removing them from the Record class add them to the links. This would improve alignment with STAC.
+* In some cases it may be necessary to use either STAC or OGC API - Records, depending on the needs of the community of interest.
+
 
 === STAC
 
@@ -34,10 +42,6 @@ The following are the immediate lessons identified by the sprint participants:
 
 * Currently, OGC API - Features - Part 4: Create, Replace, Update and Delete defines two requirements classes ("Create/Replace/Delete", and "Update").  It would be valuable to split the "Create/Replace/Delete" requirements class into 3 separate classes, to allow for finer granularity for resource management.
 
-==== Harmonisation between STAC and OGC API Records
-
-* Modified the create and updated times to match the way STAC does it
-* Extended the Link to include a created and updated
 
 ==== The consideration of adding JSON-FG as another encoding for OGC API Records
 
