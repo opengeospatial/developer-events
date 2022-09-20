@@ -20,4 +20,3 @@ include::results/pycsw.adoc[]
 include::results/owslib.adoc[]
 
 include::results/geopython.adoc[]
-
