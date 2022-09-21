@@ -16,9 +16,9 @@
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
 :external-id: http://www.opengis.net/doc/PER/eoep-Hack2018
 :comment: ### Author one
-:fullname: John Doe
+:fullname: Gobe Hobona
 :comment: ### Author two
-:fullname_2: Jane Doe
+:fullname_2: Joana Simoes
 :comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
 :role_2: editor
 :comment: ### Comma delimited keywords; mandatory
