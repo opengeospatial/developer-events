@@ -9,12 +9,15 @@ There is a perception that STAC is focused on Earth Observation (EO). The Record
 
 There is a conflict between some elements where they may have the same name but different meaning (e.g. created and updated dates). The Records metadata model targets a the resource, whereas STAC targets a distribution. This creates a challenge for Records because it would be impossible to give different dates of update for different distributions of the same resource. To align OGC API Records with STAC there would be a need to change 'record-created' and 'record-updated' fields to simply 'created' and 'updated'. Other potential opportunities for alignment include the use a 'roles' element in the links section.
 
+It was also determined that the STAC 'root' link relation types need to be further clarified as OGC link relation types or Compact URIs (CURIEs).
+
 Every Item has a link to one collection. You could create a hierarchy using a collection. One level of collection and then the items are records. In this context, STAC and OGC API - Records are already aligned.
 
 The lessons identified regarding harmonization can be summarized as:
 
 * Modify the create and updated fields by removing them from the Record class add them to the links. This would improve alignment with STAC.
 * In some cases it may be necessary to use either STAC or OGC API - Records, depending on the needs of the community of interest.
+* Clarify definition and intent of STAC 'root' link relation types in relation to OGC link relation types or Compact URIs (CURIEs)
 
 ==== Harvesting
 
@@ -24,7 +27,8 @@ Is is also a question, if you point it to something, should we leave that to the
 
 In certain instances, for example in the local Catalogue offered by OGC API Records, we cover that with local instance resources. This supports a situation where an entity might have a catalogue but the catalogue might have records about a separate entity.
 
-An example workflow would be to: Submit a harvest request, with a prefer header, then the request would be executed synchronously or asynchronously, then it would notify you that it is initiated a job meaning that the client application can monitor the job and retrieve the results when the job is complete. It could then leverage an approach similar to that demonstrated by Secure Dimensions.
+An example workflow would be to: Submit a harvest request, with a prefer header, then the request would be executed synchronously or asynchronously, then it would notify you that it is initiated a job meaning that the client application can monitor the job and retrieve the results when the job is complete. It could then leverage an approach similar to that demonstrated by Secure Dimensions. To achieve such a workflow, there is a need to define an API for harvesting resources or collections of resources. Providing guidance on how to crawl an OGC API resource tree and to harvest the resources it offers.
+
 
 The lessons identified regarding harmonization can be summarized as:
 
@@ -36,31 +40,28 @@ The lessons identified regarding harmonization can be summarized as:
 * We need to be clear about what we mean when we say "close to the data".
 
 
-=== STAC
-
-STAC 'root' link relation types need to be further clarified as OGC link relation types or Compact URIs (CURIEs).
-
 === JSON-FG
 
 TBA
 
-=== Summary of Lessons Identified
+=== Transactions
 
-The following are the immediate lessons identified by the sprint participants:
-
-
-==== Transactions
+The lessons identified regarding transactions can be summarized as:
 
 * Currently, OGC API - Features - Part 4: Create, Replace, Update and Delete defines two requirements classes ("Create/Replace/Delete", and "Update").  It would be valuable to split the "Create/Replace/Delete" requirements class into 3 separate classes, to allow for finer granularity for resource management.
 
 
-==== The consideration of adding JSON-FG as another encoding for OGC API Records
+=== Addition of JSON-FG as another encoding for OGC API Records
+
+The lessons identified regarding addition of JSON-FG as another encoding for OGC API Records can be summarized as:
 
 * There is not an identified need for JSON-FG encodings in OGC API Records and STAC. However, it could be identified in the future.
 * The canonical time is a top-level element in JSON-FG. This could be useful for OGC API Records.
 * More feedback is needed
 
-==== ISO metadata and OGC API Records
+=== ISO metadata and OGC API Records
+
+The lessons identified regarding ISO metadata and OGC API Records can be summarized as:
 
 * Expressing ISO 19115 metadata in OGC API Records should focus on discovery elements.
 * Initial prototyping has been focused on Keywords to Themes
