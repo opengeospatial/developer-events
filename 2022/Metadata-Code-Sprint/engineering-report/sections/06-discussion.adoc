@@ -39,6 +39,22 @@ The lessons identified regarding harmonization can be summarized as:
 * In some cases, augmented metadata may need to be pushed back to the source.
 * We need to be clear about what we mean when we say "close to the data".
 
+=== ISO 19115 metadata and OGC API Records
+
+The lessons identified regarding ISO 19115 metadata and OGC API Records can be summarized as:
+
+* Expressing ISO 19115 metadata in OGC API Records should focus on discovery elements.
+* Initial prototyping has been focused on Keywords to Themes
+* What is needed is a profile that enables us to work with ISO 19115
+* Content negotiation by profile could be useful.
+* The incremental approach would be useful.
+* It may be necessary to also design a JSON profile of ISO 19139 as well.
+* There are various considerations relating to alignment with ISO 19115 e.g. alignment with DCAT
+* We need to balance how deeply we want to represent ISO metadata in JSON
+
+The following section presents the conclusions.
+
+
 
 === JSON-FG
 
@@ -58,18 +74,3 @@ The lessons identified regarding addition of JSON-FG as another encoding for OGC
 * There is not an identified need for JSON-FG encodings in OGC API Records and STAC. However, it could be identified in the future.
 * The canonical time is a top-level element in JSON-FG. This could be useful for OGC API Records.
 * More feedback is needed
-
-=== ISO metadata and OGC API Records
-
-The lessons identified regarding ISO metadata and OGC API Records can be summarized as:
-
-* Expressing ISO 19115 metadata in OGC API Records should focus on discovery elements.
-* Initial prototyping has been focused on Keywords to Themes
-* What is needed is a profile that enables us to work with ISO 19115
-* Content negotiation by profile could be useful.
-* The incremental approach would be useful.
-* It may be necessary to also design a JSON profile of ISO 19139 as well.
-* There are various considerations relating to alignment with ISO 19115 e.g. alignment with DCAT
-* We need to balance how deeply we want to represent ISO metadata in JSON
-
-The following section presents the conclusions.
