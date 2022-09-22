@@ -73,4 +73,5 @@ The lessons identified regarding addition of JSON-FG as another encoding for OGC
 
 * There is not an identified need for JSON-FG encodings in OGC API Records and STAC. However, it could be identified in the future.
 * The canonical time is a top-level element in JSON-FG. This could be useful for OGC API Records.
-* More feedback is needed
+
+More feedback from implementers is needed in order to improve understanding of the potential use of JSON-FG in OGC API - Records.
