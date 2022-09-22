@@ -16,6 +16,24 @@ The lessons identified regarding harmonization can be summarized as:
 * Modify the create and updated fields by removing them from the Record class add them to the links. This would improve alignment with STAC.
 * In some cases it may be necessary to use either STAC or OGC API - Records, depending on the needs of the community of interest.
 
+==== Harvesting
+
+It is important to be clear about what harvesting means. It is the complementary operation to Transactions. In Transactions you push a record to the catalogue, that requires the client to take the source and push that to the catalogue. For harvesting, you tell the catalogue "here is the resource" and the catalogue extracts the metadata and takes care of the rest. It is always possible that the catalogue will go to the resource and not know what to do with it. In the CSW standard there was support for harvesting. With harvesting the onus is on the catalogue to determine how to transform the resource and create the record for that resource.
+
+Is is also a question, if you point it to something, should we leave that to the harvestor? The simplest approach is to leave it up to the harvestor once the client has directed the harvestor towards a resource. In the CSW ebrim model there was guidance of how to harvest a GetCapabilities response. As a minimum they would look for all of the fields that are in the record and try to populare those. More guidance would be needed for OGC API Standards, for example how deep to go in navigating the link graph.
+
+In certain instances, for example in the local Catalogue offered by OGC API Records, we cover that with local instance resources. This supports a situation where an entity might have a catalogue but the catalogue might have records about a separate entity.
+
+An example workflow would be to: Submit a harvest request, with a prefer header, then the request would be executed synchronously or asynchronously, then it would notify you that it is initiated a job meaning that the client application can monitor the job and retrieve the results when the job is complete. It could then leverage an approach similar to that demonstrated by Secure Dimensions.
+
+The lessons identified regarding harmonization can be summarized as:
+
+* It is important to be clear about what harvesting means.
+* Keeping the metadata close to the data is more efficient than copying the metadata to a separate server.
+* Ideally harvesting would be of selected bits of metadata instead of the complete metadata record.
+* There are different types of harvesting, in some cases there may be some processing needed. One type of approach means harvesting the discovery metadata.
+* In some cases, augmented metadata may need to be pushed back to the source.
+* We need to be clear about what we mean when we say "close to the data".
 
 
 === STAC
@@ -30,14 +48,6 @@ TBA
 
 The following are the immediate lessons identified by the sprint participants:
 
-==== Harvesting
-
-* It's important to be clear about what harvesting means.
-* Keeping the metadata close to the data is more efficient than copying the metadata to a separate server.
-* Ideally harvesting would be of selected bits of metadata instead of the complete metadata record.
-* There are different types of harvesting, in some cases there may be some processing needed. One type of approach means harvesting the discovery metadata.
-* In some cases, augmented metadata may need to be pushed back to the source.
-* We need to be clear about what we mean when we say "close to the data".
 
 ==== Transactions
 
