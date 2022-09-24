@@ -65,11 +65,17 @@ Each of the above-listed parts can be used on its own, however the parts have be
 This section describes open source software products that were deployed during the code sprint.
 
 include::architecture/geonetwork.adoc[]
+
 include::architecture/ldproxy.adoc[]
+
 include::architecture/leaflet.adoc[]
+
 include::architecture/pygeoapi.adoc[]
+
 include::architecture/pycsw.adoc[]
+
 include::architecture/pygeometa.adoc[]
+
 include::architecture/owslib.adoc[]
 
 
