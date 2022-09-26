@@ -26,3 +26,5 @@ include::results/geopython.adoc[]
 include::results/openwork.adoc[]
 
 include::results/3dgi_json_fg.adoc[]
+
+include::results/secure_async_catalog.adoc[]

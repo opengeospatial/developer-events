@@ -1,3 +1,3 @@
 [[ogcapitestclient]]
-==== Geonovum OGC API Testclient 
-The OGC API testclient is a basic client to showcase the interaction with implementations of OGC API Features and API Records. It is built with https://leafletjs.com/[LeafletJS] and https://jquery.com/[jQuery], for simplicty.
+==== Geonovum OGC API Testclient
+The Geonovum OGC API Testclient is a basic client to showcase the interaction with implementations of OGC API - Features and OGC API - Records. It is built with https://leafletjs.com/[LeafletJS] and https://jquery.com/[jQuery], for simplicity.

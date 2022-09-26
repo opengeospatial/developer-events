@@ -4,8 +4,10 @@
 [bibliography]
 == Bibliography
 
-* [[[ogc21-008,1]]], OGC: OGC 21-008: Joint OGC OSGeo ASF Code Sprint 2021 Summary Engineering Report, 2021
+* [[[ogc20-004,1]]], Vretanos, P.A, Kralidis, T., Heazel, C.: OGC 20-004: Draft OGC API - Records - Part 1: Core, http://docs.ogc.org/DRAFTS/20-004.html
 
-* [[[ogc21-019,2]]], Balaban, A.: OGC 21-019, OGC Testbed-17: Attracting Developers: Lowering the entry barrier for implementing OGC Web APIs. Open Geospatial Consortium (2022). https://docs.ogc.org/per/21-019.html
+* [[[ogc21-045,1]]], Portele, C., Vretanos, P.A: OGC 21-045: OGC Features and Geometries JSON - Part 1: Core, https://docs.ogc.org/DRAFTS/21-045.html
 
-* [[[Holmes2021,STAC Blog Post]]], Holmes, C.: Static SpatioTemporal Asset Catalogs in Depth, Available at https://medium.com/radiant-earth-insights/static-spatiotemporal-asset-catalogs-in-depth-710530934a84
+* [[[stacref,3]]], STAC Community: SpatioTemporal Asset Catalog, https://stacspec.org/en
+
+* [[[Holmes2021,4]]], Holmes, C.: Static SpatioTemporal Asset Catalogs in Depth, Available at https://medium.com/radiant-earth-insights/static-spatiotemporal-asset-catalogs-in-depth-710530934a84

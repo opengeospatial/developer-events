@@ -58,7 +58,7 @@ STAC is a multi-part specification that includes the following constituent parts
 *  https://github.com/radiantearth/stac-spec/blob/master/collection-spec/collection-spec.md[STAC Collection] extends the STAC Catalog to offer additional information such as the extents, keywords, license, providers, and other elements that describe STAC Items grouped within the Collection.
 * https://github.com/radiantearth/stac-api-spec[STAC API] provides a RESTful interface that conforms to the OGC API - Features standard, described in an OpenAPI definition document, and supports search of STAC Items.
 
-Each of the above-listed parts can be used on its own, however the parts have been designed to offer optimal capabilities when used together.
+Each of the above-listed parts can be used on its own, however the parts have been designed to offer optimal capabilities when used together. An in-depth description of the relationship between the STAC API and Static STAC catalogs is provided in a blog post by Chris Holmes <<Holmes2021>>.
 
 === Open Source Software Projects
 
@@ -87,4 +87,10 @@ include::architecture/cubeserv.adoc[]
 
 include::architecture/geonovum_ogcapitestclient.adoc[]
 
-include:architecture/3dgi_jsonfg_viewer.adoc[]
+include::architecture/3dgi_jsonfg_viewer.adoc[]
+
+=== Other solutions
+
+This section describes other solutions that were deployed for the code sprint.
+
+include::architecture/secure_async_catalog.adoc[]
