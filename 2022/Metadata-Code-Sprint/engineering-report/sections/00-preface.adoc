@@ -66,8 +66,9 @@ All questions regarding this document should be directed to the editor or the co
 |Gobe Hobona| Open Geospatial Consortium | Editor
 |Joana Simoes | Open Geospatial Consortium |Editor
 |Panagiotis	Vretanos	|	CubeWerx Inc.	|	Contributor
-| Núria Julià Selvas |	UAB-CREAF	|	Contributor
-| Joan Maso |	UAB-CREAF	|	Contributor
+|Núria Julià Selvas |	UAB-CREAF	|	Contributor
+|Joan Maso |	UAB-CREAF	|	Contributor
+|Moozhan Shakeri |	University of Manchester	|	Contributor
 |Clemens Portele	|	interactive instruments GmbH	|	Contributor
 |Matthias Mohr	|	WWU Münster	|	Contributor
 |Jeroen Ticheler	|	GeoCat	|	Contributor

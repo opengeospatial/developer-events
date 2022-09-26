@@ -94,3 +94,5 @@ include::architecture/3dgi_jsonfg_viewer.adoc[]
 This section describes other solutions that were deployed for the code sprint.
 
 include::architecture/secure_async_catalog.adoc[]
+
+include::architecture/uom_nlp_spatial.adoc[]
