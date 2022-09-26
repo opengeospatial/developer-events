@@ -1,0 +1,4 @@
+[[3dgi_json_fg]]
+==== 3DGI CityJSON and JSON-FG Viewer
+
+Participants from 3DGI and Geonovum worked on an extension of a CityJSON viewer to enable support for JSON-FG. CityJSON is an OGC Community Standard for a JSON-based encoding for a well-documented subset of the OGC CityGML data model (version 2.0.0). CityJSON defines how to store digital 3D models of cities and landscapes.

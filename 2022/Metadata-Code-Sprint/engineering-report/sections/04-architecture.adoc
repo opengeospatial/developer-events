@@ -86,3 +86,5 @@ This section describes proprietary software products that were deployed during t
 include::architecture/cubeserv.adoc[]
 
 include::architecture/geonovum_ogcapitestclient.adoc[]
+
+include:architecture/3dgi_jsonfg_viewer.adoc[]

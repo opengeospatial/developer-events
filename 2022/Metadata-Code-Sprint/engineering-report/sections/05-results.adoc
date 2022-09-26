@@ -24,3 +24,5 @@ include::results/owslib.adoc[]
 include::results/geopython.adoc[]
 
 include::results/openwork.adoc[]
+
+include::results/3dgi_json_fg.adoc[]
