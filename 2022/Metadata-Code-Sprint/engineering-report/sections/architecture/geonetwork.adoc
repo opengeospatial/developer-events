@@ -5,5 +5,4 @@ https://geonetwork-opensource.org[GeoNetwork] is a catalog application for manag
 
 GeoNetwork is used for (meta)-data management by governments, local communities and private sector. It is also used to discover geospatial (and other) (open) data supporting multiple metadata standards and multiple catalog interfaces.
 
-OGC standards have been core to the GeoNetwork project and the community is now working on the implementation of the OGC API Records specification. 
-
+OGC standards have been core to the GeoNetwork project and the community is now working on the implementation of the OGC API - Records specification. 
