@@ -84,3 +84,5 @@ include::architecture/owslib.adoc[]
 This section describes proprietary software products that were deployed during the code sprint.
 
 include::architecture/cubeserv.adoc[]
+
+include::architecture/geonovum_ogcapitestclient.adoc[]

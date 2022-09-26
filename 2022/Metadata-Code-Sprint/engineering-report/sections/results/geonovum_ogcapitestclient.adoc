@@ -1,0 +1,7 @@
+=== Geonovum OGC API Testclient
+
+Geonovum worked on an OGC API client, to showcase the interaction with APIs implementing OGC API Features and OGC API Records. It also shows loading a JSON-FG file with a different CRSes than WGS84.
+
+[[img_ogcapitestclient]]
+.Screenshot of the OGC API testclient
+image::../images/ogcapitestclient.png[align="center",width=800]

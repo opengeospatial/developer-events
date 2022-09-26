@@ -11,6 +11,8 @@ include::results/ldproxy.adoc[]
 
 include::results/geonetwork.adoc[]
 
+include::results/geonovum_ogcapitestclient.adoc[]
+
 include::results/gemplus.adoc[]
 
 include::results/pygeoapi.adoc[]
