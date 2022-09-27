@@ -1,0 +1,34 @@
+Reflections on the 2022 Joint OGC and ISO Code Sprint - The Metadata Code Sprint
+
+Over the past two decades, standards such as ISO 19115:2003 and the OGC Catalog Services for the Web (CSW) have been integrated into several Spatial Data Infrastructure (SDI) initiatives at national and international levels. These standards leveraged the Extensible Markup Language (XML) which, at the time, was the primary encoding for data exchange across much of Information Technology. In recent times, however, the increasing use of JavaScript Object Notation (JSON) and the uptake of Web Application Programming Interface (API) has meant that modernization of metadata and catalog approaches is necessary.
+
+In November 2021, the Open Geospatial Consortium (OGC) and Technical Committee 211 (TC 211) of the International Organization for Standardization (ISO) held their first joint code sprint, which was held as a virtual code sprint because of the pandemic. The success of that first joint code sprint provided the foundation for a second joint code sprint which was held from September 14th to 16th, 2022. The second joint code sprint, named the 2022 Joint OGC and ISO Code Sprint — The Metadata Code Sprint, served to accelerate the support of open geospatial standards that relate to geospatial metadata and catalogs. The code sprint was sponsored by Ordnance Survey (OS) at the Gold-level and Geonovum at the Silver-level. The code sprint was held as a hybrid event, with the face-to-face element hosted at the Geovation Hub in London, United Kingdom.
+
+The code sprint focused on the following group of specifications:
+
+* OGC API — Records candidate Standard
+* ISO 19115 metadata Standards (i.e., ISO 19115-1, ISO 19115-2, ISO 19115-3)
+* OGC Features and Geometries JSON (JSON-FG) candidate Standard
+* Spatio-Temporal Asset Catalog (STAC), which leverages the OGC API — Features Standard
+
+The discussions during the code sprint covered topics such as harmonization of STAC and OGC API - Records; harvesting of metadata to populate instances of OGC API - Records; the possibility of a JSON encoding of ISO 19115; and others. The demonstrations showcased at the end of the code sprint included client-side and server-side implementations of OGC API - Records, JSON-FG, STAC, and ISO 19115 metadata. A high-level overview of the sprint architecture is shown below.
+
+image:extracted-media/media/image1.png[image,width=624,height=306]
+
+The code sprint successfully facilitated the development and testing of prototype implementations of OGC and ISO Standards that relate to geospatial metadata and catalogs. The code sprint also enabled the participating developers to provide feedback to the editors of candidate standards. The code sprint therefore met all of its objectives and achieved its goal of accelerating the support of open geospatial standards that relate to geospatial metadata and catalogs.
+
+The sprint participants made the following recommendations for future innovation work items:
+
+* Initiatives to facilitate implementation of JSON-FG (e.g. three-dimensional (3D) data, cadastral data, etc.)
+* Initiatives to facilitate implementation of catalogs
+* Prototyping of tools for creating metadata (e.g. the automated STAC metadata crawler demonstrated during the sprint)
+
+The sprint participants also made the following recommendations for activities that the Standards Working Groups should consider:
+
+* Outreach for promoting JSON-FG
+* Code Sprint for designing profiles of JSON-FG for different communities of interest
+* Documentation of the different roles of catalogs and API, as well as guidance on when to use them
+* Code Sprint on versioning, possibly involving both OGC API — Records and OGC API — Features
+* Exploring how to move GeoDCAT forward within OGC
+
+This was the first hybrid code sprint (consisting of both in-person and remote elements) organized by the OGC in more than two years, due to the pandemic. A record number of participants registered to attend the code sprint, exceeding pre-pandemic registration numbers. There were however, more remote participants than those attending in-person. This suggests that there continues to be significant interest in code sprints, and that the online collaboration environment that OGC uses in code sprints should continue to be used post-pandemic.
