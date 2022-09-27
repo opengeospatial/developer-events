@@ -1,4 +1,4 @@
-Reflections on the 2022 Joint OGC and ISO Code Sprint - The Metadata Code Sprint
+== Reflections on the 2022 Joint OGC and ISO Code Sprint - The Metadata Code Sprint
 
 Over the past two decades, standards such as ISO 19115:2003 and the OGC Catalog Services for the Web (CSW) have been integrated into several Spatial Data Infrastructure (SDI) initiatives at national and international levels. These standards leveraged the Extensible Markup Language (XML) which, at the time, was the primary encoding for data exchange across much of Information Technology. In recent times, however, the increasing use of JavaScript Object Notation (JSON) and the uptake of Web Application Programming Interface (API) has meant that modernization of metadata and catalog approaches is necessary.
 
@@ -13,7 +13,7 @@ The code sprint focused on the following group of specifications:
 
 The discussions during the code sprint covered topics such as harmonization of STAC and OGC API - Records; harvesting of metadata to populate instances of OGC API - Records; the possibility of a JSON encoding of ISO 19115; and others. The demonstrations showcased at the end of the code sprint included client-side and server-side implementations of OGC API - Records, JSON-FG, STAC, and ISO 19115 metadata. A high-level overview of the sprint architecture is shown below.
 
-image:extracted-media/media/image1.png[image,width=624,height=306]
+image::engineering-report/images/architecture.png[image,width=624,height=306]
 
 The code sprint successfully facilitated the development and testing of prototype implementations of OGC and ISO Standards that relate to geospatial metadata and catalogs. The code sprint also enabled the participating developers to provide feedback to the editors of candidate standards. The code sprint therefore met all of its objectives and achieved its goal of accelerating the support of open geospatial standards that relate to geospatial metadata and catalogs.
 
