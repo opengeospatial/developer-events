@@ -6,7 +6,7 @@
 
 * [[[ogc20-004,1]]], Vretanos, P.A, Kralidis, T., Heazel, C.: OGC 20-004: Draft OGC API - Records - Part 1: Core, http://docs.ogc.org/DRAFTS/20-004.html
 
-* [[[ogc21-045,1]]], Portele, C., Vretanos, P.A: OGC 21-045: OGC Features and Geometries JSON - Part 1: Core, https://docs.ogc.org/DRAFTS/21-045.html
+* [[[ogc21-045,2]]], Portele, C., Vretanos, P.A: OGC 21-045: OGC Features and Geometries JSON - Part 1: Core, https://docs.ogc.org/DRAFTS/21-045.html
 
 * [[[stacref,3]]], STAC Community: SpatioTemporal Asset Catalog, https://stacspec.org/en
 
