@@ -51,6 +51,16 @@ The individual parts of ISO 19115 that each serve as an approved standard includ
 
 The SpatioTemporal Asset Catalog (STAC) is a specification that offers a language for describing geospatial information, so it can be worked with, indexed, and discovered. The STAC API offers an interface that implements OGC API - Features. Although STAC has been developed outside of the OGC, in the long term it is envisaged that the https://github.com/radiantearth/stac-api-spec/[STAC API] specification will be developed into an OGC Community Standard that implements OGC API building blocks that are relevant for the STAC use cases.
 
+The goals for the STAC part of the code sprint were:
+
+* Alignment with OGC API - Records - Content Model and/or Extensions
+* Alignment with other standards, for example GeoDCAT and/or JSON-LD
+* Collection Search
+* JSON-FG vs. STAC projection extension
+* Push towards STAC API 1.0.0 release?
+* Advance the STAC ecosystem (e.g. PySTAC, QGIS plugin, ...)
+* Look through the issue trackers, e.g. https://stacindex.org/ecosystem[ecosystem], https://github.com/stac-utils[stac-utils], and https://github.com/stactools-packages[stactools-packages]
+
 STAC is a multi-part specification that includes the following constituent parts:
 
 * https://github.com/radiantearth/stac-spec/blob/master/item-spec/item-spec.md[STAC Item] is a representation of a single spatio-temporal asset, encoded as a GeoJSON feature with datetime and links properties.
@@ -59,6 +69,7 @@ STAC is a multi-part specification that includes the following constituent parts
 * https://github.com/radiantearth/stac-api-spec[STAC API] provides a RESTful interface that conforms to the OGC API - Features standard, described in an OpenAPI definition document, and supports search of STAC Items.
 
 Each of the above-listed parts can be used on its own, however the parts have been designed to offer optimal capabilities when used together. An in-depth description of the relationship between the STAC API and Static STAC catalogs is provided in a blog post by Chris Holmes <<Holmes2021>>.
+
 
 === Open Source Software Projects
 
