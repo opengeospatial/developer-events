@@ -1,0 +1,7 @@
+=== University of Manchester Natural Language Processing for Spatial Analysis
+
+The team from the University of Manchester implemented a Natural Language Processing (NLP) toolkit for conducting spatial analysis. The toolkit was configured to ingest feature data represented as a GeoJSON FeatureCollection. The team experimented with the use of OGC API - Features for serving feature data to an implementation of the Leaflet client application. A screenshot showing the toolkit is presented in <<img_uom_nlp>>.
+
+[[img_uom_nlp]]
+.Screenshot of the Natural Language Processing for Spatial Analysis toolkit prototype by the University of Manchester
+image::../images/uom_nlp.png[align="center",width=800]

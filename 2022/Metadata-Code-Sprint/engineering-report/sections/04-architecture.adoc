@@ -1,0 +1,109 @@
+[[architecture]]
+== High-Level Architecture
+
+As illustrated in <<img_architecture>>, the sprint architecture was designed with the view of enabling client applications to connect to different servers that implement open geospatial standards that relate to metadata and catalogues. Implementations of JSON-FG, ISO 19115, STAC, and OGC API - Records were deployed in participants' own infrastructure in order to build a solution with the architecture shown below in <<img_architecture>>.
+
+[[img_architecture]]
+.High Level Overview of the Sprint Architecture
+image::../images/architecture.png[align="center",width=800]
+
+The rest of this section describes the software deployed and standards implemented during the code sprint.
+
+=== Approved and Draft Standards
+
+This section describes the approved and draft standards implemented during the code sprint.
+
+==== OGC API - Records
+
+The https://ogcapi.ogc.org/records[OGC API - Records] candidate standard provides discovery and access to catalogues of metadata records about resources such as features, coverages, tiles / maps, models, assets, services or widgets. The candidate standard enables the discovery of geospatial resources by standardizing the way collections of descriptive information about the resources (metadata) are exposed. The candidate standard also enables the discovery and sharing of related resources that may be referenced from geospatial resources or their metadata by standardizing the way all kinds of records are exposed and managed. OGC API - Records can be considered the future successor to the widely implemented Catalogue Services for the Web (CSW) standard.
+
+The candidate standard specifies the information content of a record. A record contains summary descriptive information about a resource that a provider wishes to make discoverable. Records are organized into collections. A record represents resource characteristics that can be presented for evaluation and further processing by both humans and software. Examples of resources include: a data collection, a service, a process, a style, a code list, an Earth observation asset, a machine learning model, a code list and so on.
+
+
+==== JSON-FG
+
+JSON-FG (Features and Geometry JSON) extends GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.
+
+This candidate standard extends GeoJSON in the following minimal ways:
+
+* The ability to use Coordinate Reference Systems (CRSs) other than WGS 84
+* The ability to use non-Euclidean metrics, in particular ellipsoidal metrics
+* Support for solids and prisms as geometry types
+* The ability to encode temporal characteristics of a feature
+* The ability to declare the type and the schema of a feature
+
+Where it is possible to represent information as GeoJSON, the candidate standard allows for the information to be represented as such. Additional information is supported through the use of additional members which are represented using keys that should not conflict with those specified by GeoJSON. This means that JSON-FG enabled clients will be able to parse and understand the additional members.
+
+
+==== ISO 19115
+
+ISO 19115 Standards define the schema required for describing geographic information and services by means of metadata. Metadata is information about a resource such as a dataset, web service, or API. This multi-part International Standard is applicable to the cataloguing of datasets, clearinghouse activities, geographic datasets, dataset series, individual geographic features, and feature properties.
+
+The individual parts of ISO 19115 that each serve as an approved standard include:
+
+* ISO 19115-1:2014 defines the schema required for describing geographic information and services by means of metadata.
+* ISO 19115-2:2019 extends ISO 19115-1:2014 by defining the schema required for an enhanced description of the acquisition and processing of geographic information, including imagery.
+* ISO/TS 19115-3:2016 defines an integrated XML implementation of ISO 19115‑1, ISO 19115‑2, and concepts from ISO/TS 19139.
+
+
+
+==== STAC
+
+The SpatioTemporal Asset Catalog (STAC) is a specification that offers a language for describing geospatial information, so it can be worked with, indexed, and discovered. The STAC API offers an interface that implements OGC API - Features. Although STAC has been developed outside of the OGC, in the long term it is envisaged that the https://github.com/radiantearth/stac-api-spec/[STAC API] specification will be developed into an OGC Community Standard that implements OGC API building blocks that are relevant for the STAC use cases.
+
+The goals for the STAC part of the code sprint were:
+
+* Alignment with OGC API - Records - Content Model and/or Extensions
+* Alignment with other standards, for example GeoDCAT and/or JSON-LD
+* Collection Search
+* JSON-FG vs. STAC projection extension
+* Push towards STAC API 1.0.0 release?
+* Advance the STAC ecosystem (e.g. PySTAC, QGIS plugin, ...)
+* Look through the issue trackers, e.g. https://stacindex.org/ecosystem[ecosystem], https://github.com/stac-utils[stac-utils], and https://github.com/stactools-packages[stactools-packages]
+
+STAC is a multi-part specification that includes the following constituent parts:
+
+* https://github.com/radiantearth/stac-spec/blob/master/item-spec/item-spec.md[STAC Item] is a representation of a single spatio-temporal asset, encoded as a GeoJSON feature with datetime and links properties.
+*  https://github.com/radiantearth/stac-spec/blob/master/catalog-spec/catalog-spec.md[STAC Catalog] is a JSON-encoded representation of links that provides a structure for organizing and browsing STAC Items.
+*  https://github.com/radiantearth/stac-spec/blob/master/collection-spec/collection-spec.md[STAC Collection] extends the STAC Catalog to offer additional information such as the extents, keywords, license, providers, and other elements that describe STAC Items grouped within the Collection.
+* https://github.com/radiantearth/stac-api-spec[STAC API] provides a RESTful interface that conforms to the OGC API - Features standard, described in an OpenAPI definition document, and supports search of STAC Items.
+
+Each of the above-listed parts can be used on its own, however the parts have been designed to offer optimal capabilities when used together. An in-depth description of the relationship between the STAC API and Static STAC catalogs is provided in a blog post by Chris Holmes <<Holmes2021>>.
+
+
+=== Open Source Software Projects
+
+This section describes open source software products that were deployed during the code sprint.
+
+include::architecture/geonetwork.adoc[]
+
+include::architecture/ldproxy.adoc[]
+
+include::architecture/leaflet.adoc[]
+
+include::architecture/pygeoapi.adoc[]
+
+include::architecture/pycsw.adoc[]
+
+include::architecture/pygeometa.adoc[]
+
+include::architecture/owslib.adoc[]
+
+
+=== Proprietary products
+
+This section describes proprietary software products that were deployed during the code sprint.
+
+include::architecture/cubeserv.adoc[]
+
+include::architecture/geonovum_ogcapitestclient.adoc[]
+
+include::architecture/3dgi_jsonfg_viewer.adoc[]
+
+=== Other solutions
+
+This section describes other solutions that were deployed for the code sprint.
+
+include::architecture/secure_async_catalog.adoc[]
+
+include::architecture/uom_nlp_spatial.adoc[]

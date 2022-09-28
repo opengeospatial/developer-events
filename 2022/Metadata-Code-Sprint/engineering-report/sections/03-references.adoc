@@ -1,0 +1,8 @@
+[bibliography]
+== References
+
+* [[[openapi,openapi]]] Open API Initiative: OpenAPI Specification 3.0.3, https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md[https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md]
+* [[[rfc3896,rfc3896]]] Berners-Lee, T., Fielding, R., Masinter, L: IETF RFC 3896, Uniform Resource Identifier (URI): Generic Syntax, https://tools.ietf.org/rfc/rfc3896.txt[https://tools.ietf.org/rfc/rfc3896.txt]
+* [[[iso19115-1,ISO 19115-1]]]
+* [[[iso19115-2,ISO 19115-2]]]
+* [[[iso19115-3,ISO 19115-3]]]

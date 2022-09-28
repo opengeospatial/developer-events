@@ -1,0 +1,7 @@
+=== MariaDB CubeWerx CubeSERV
+
+The participants from CubeWerx worked on their implementation of OGC API – Records and the interoperability with STAC. A screenshot from their prototype implementation is shown in the figure below.
+
+[[img_cubeserv]]
+.Screenshot of the CubeWerx CubeSERV demo
+image::../images/cubeserv.png[align="center",width=800]

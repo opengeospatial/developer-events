@@ -1,0 +1,9 @@
+=== 3DGI CityJSON and JSON-FG Viewer
+
+The viewer was extended to support the loading of JSON-FG files, the querying of the feature data, and the display of the feature data. The viewer was implemented to support polyhedrons, as well as multipolygons.
+
+[[img_3dgi_json_fg_viewer]]
+.Screenshot of the 3DGI CityJSON and JSON-FG Viewer
+image::../images/3dgi_json_fg_viewer2.png[align="center",width=800]
+
+The viewer has been deployed at https://dev.3dgi.xyz/jsonfg-viewer

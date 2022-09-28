@@ -1,0 +1,26 @@
+=== GeoNetwork
+
+The GeoNetwork team from GeoCat worked on the following topics during the Metadata Code Sprint.
+
+==== Use of ISO 19115-3 for feature catalogues
+
+Following discussions with participants, some would like to benefit from the possibility in ISO 19115-3 to describe the dataset's feature catalogue using the following method:
+
+* As a citation in the dataset record (was also available in ISO 19139)
+* As an embedded feature catalogue
+* As a standalone feature catalogue
+
+GeoNetwork supports the previous version of ISO 19110 as a standalone record. Given that it is more relevant now to use ISO 19115-3 (which contains the latest version of ISO 19110) for standalone (or embedded) feature catalogues, the code sprint provided an opportunity to implement this capability. With that change, users can decide how to relate dataset descriptions and their corresponding feature catalogues using one of the 3 approaches above. The relevant work is in progress at https://github.com/geonetwork/core-geonetwork/pull/6545
+
+==== OGC API - Records implementation
+
+During the code sprint, support for the following output formats was improved:
+
+* GeoJSON for /items and /items/uuid
+* DCAT for /items (not only for /items/uuid). Improved DCAT conversion.
+
+A conformance section was also added during the code sprint. A https://github.com/geonetwork/geonetwork-microservices/pull/59[Pull Request was created] for this purpose.
+
+Note that Elasticsearch by default returns only 10K records. A https://github.com/geonetwork/geonetwork-microservices/pull/58[Pull Request was created] for adding support for larger catalogues using track total hits.
+
+QGIS client interaction was tested and determined to require a conformance section and GeoJSON output. The work is to be continued.

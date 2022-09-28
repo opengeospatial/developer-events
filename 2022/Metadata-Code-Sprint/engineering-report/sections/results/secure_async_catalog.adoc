@@ -1,0 +1,75 @@
+=== Secure and Asynchronous Catalogue
+
+During the Code Sprint, a demo was implemented that introduces the use of WebPush to a Web Browser / device to notify the user when a Catalogue resource changes. To make the demo work, a simple client application was implemented that allows the use of Web Push notifications to the Google Chrome and Firefox Web Browser. The demo does currently not work on a MAC OS with Safari and mobile devices operating iOS 15. To make the demo work in a Chrome Browser on a MAC OS, WebPush settings must be enabled in “notifications and alerts”.
+
+The focus was to demonstrate the ability to use WebPush with OGC API records. The actual demo does not demonstrate the use of the Prefer header; instead, the demo focuses on creating a subscription with WebPush notification.
+
+From the Secure Dimensions https://ogc.demo.secure-dimensions.de/[index page] of the OGC Testbed 18 contributions, you can access all relevant services.
+
+A subscription can be crated via the OpenAPI page by pasting a JSON object representing the Web Push details and providing a resources-uri. The resources-uri is the OGC Records API URL that is to be observed for changes.
+
+(1) Use Google Chrome or Firefox browser and go to https://ogc.demo.secure-dimensions.de/sms/api
+
+(2) Click the button “ENABLE PUSH MESSAGING” which will display the web push subscription details such as
+
+[%unnumbered%]
+[source,json]
+----
+{
+    "endpoint": "https://updates.push.services.mozilla.com/wpush/v2/gAAAAABjJD6BS4NUg76G5ozRH5kwnR5sl3cT4RwCWLwtDjK8ebnwnm53lU_M3ppWTPE_3_JyQdDd3hZnaHZ90M_vZlrFXzu4W9GN2Xakxplk943b1R4J8vRATmL4Ny0chjrZfBmLuo8x9IzTHQf-7BxuGh43stVak926qFfkHGd90R8K8k8sJjo",
+    "expirationTime": null,
+    "keys": {
+        "auth": "HmhIs6yKqb-EgVRkYstsvQ",
+        "p256dh": "BNmU2tQiJc5R3vM2hPHz9vPvxxkakPtp93F2I90H-JQPjpjWbaVhKeMl-h8ERQUlcjCaswvzx1Qq0B0Lei4jsNk"
+    }
+}
+----
+
+
+(3) Obtain an access token from the https://ogc.demo.secure-dimensions.de/token-app/[OGC Testbed Token APP]
+
+(4) Copy the access token into the Swagger form (click “Authorize” and paste the access token)
+
+(5) Go to the POST operation to https://ogc.demo.secure-dimensions.de/sms/api#/Subscription/addSubscription[create] a subscription.
+
+(6) Copy the following JSON object (including the web push details from above). Make sure you replace this information with the information displayed in your Web Browser
+
+[%unnumbered%]
+[source,json]
+----
+{
+    "name": "mySubscription",
+    "delivery": "webpush://",
+    "schedule": "* */1 * * *",
+    "resources-uri": "https://ogc.demo.secure-dimensions.de/pycsw/collections/metadata:main/items/e17fe655-987c-4c5f-bbae-b10dcd4fccc3?f=json",
+    "expires": 1759104237,
+    "sec-opts": {
+        "push-subscription": {
+            "endpoint": "https://updates.push.services.mozilla.com/wpush/v2/gAAAAABjJD6BS4NUg76G5ozRH5kwnR5sl3cT4RwCWLwtDjK8ebnwnm53lU_M3ppWTPE_3_JyQdDd3hZnaHZ90M_vZlrFXzu4W9GN2Xakxplk943b1R4J8vRATmL4Ny0chjrZfBmLuo8x9IzTHQf-7BxuGh43stVak926qFfkHGd90R8K8k8sJjo",
+            "expirationTime": null,
+            "keys": {
+                "auth": "HmhIs6yKqb-EgVRkYstsvQ",
+                "p256dh": "BNmU2tQiJc5R3vM2hPHz9vPvxxkakPtp93F2I90H-JQPjpjWbaVhKeMl-h8ERQUlcjCaswvzx1Qq0B0Lei4jsNk"
+            }
+        }
+    }
+}
+----
+
+The created subscription will run every 1 minute and compare the result from the resources-uri. You should receive one notification after 1 minute unless the record changes.
+
+(7) To start the subscription, you need to do a state change via the PATCH operation. You can paste the following JSON to start the subscription. For all states of the subscription, please observe https://ogc.demo.secure-dimensions.de/sms/images/SubscriptionStateDiagam.png[this] diagram.
+
+[%unnumbered%]
+[source,json]
+----
+{
+   "state": "start"
+}
+----
+
+After one minute, you should see the notification in your browser / on your device. Clicking on the notification will open a new Web Browser window opening the resources-uri from the subscription.
+
+==== Follow-Up
+
+The results of the Code Sprint will be contributed to Testbed 18. In particular, more details will become available in the Testbed 18 Engineering Report “Secure and Asynchronous Catalogue”. Also, the demo of using the _Prefer_ header with OGC API Records to control the asynchronous follow-up communication, will be available with the Testbed 18 results.

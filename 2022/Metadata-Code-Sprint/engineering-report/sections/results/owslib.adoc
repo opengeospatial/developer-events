@@ -1,0 +1,9 @@
+=== OWSLib
+
+The OWSLib project implemented capability for client transactions following the OGC API - Records - Part 4: Create, Replace, Update and Delete draft specification.  Support for the "Requirements Class "Create/Replace/Delete" was https://github.com/geopython/OWSLib/pull/835[implemented], reviewed and approved by the OWSLib development team. As a result, Python clients can now use OWSLib for simple and Pythonic workflows to handle resource transactions for metadata (OGC API — Records) as well as data (OGC API — Features).
+
+A screenshot of a sample Python/OWSLib workflow of the new functionality is shown in the figure below.
+
+[[img_owslib]]
+.Screenshot of the OWSLib transactions demo
+image::../images/owslib-transactions.png[align="center"]
