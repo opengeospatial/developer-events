@@ -1,0 +1,4 @@
+[[gleo]]
+==== gleo
+
+The https://gitlab.com/IvanSanchez/gleo[gleo] library is an open-source JavaScript library for WebGL-powered geographic maps. The library supports the display of geographical maps and is intended to cover the same use cases as other libraries such as Leaflet, OpenLayers.
