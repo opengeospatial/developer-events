@@ -1,0 +1,13 @@
+=== STAC Browser
+
+During the code sprint, an implementation of the https://github.com/radiantearth/stac-browser[STAC Browser] was configured to enable access to implementations of OGC API - Features and OGC API - Records. The STAC Browser is a web application for browsing static STAC catalogs and STAC APIs. <<img_stacbrowser_features>> shows a screenshot of the STAC Browser accessing an implementation of OGC API - Features.
+
+[[img_stacbrowser_features]]
+.Screenshot of the STAC Browser accessing an implementation of OGC API - Features
+image::../images/feature-stac-browser.png[align="center"]
+
+<<img_stacbrowser_records>> shows a screenshot of the STAC Browser accessing an implementation of OGC API - Records.
+
+[[img_stacbrowser_records]]
+.Screenshot of the STAC Browser accessing an implementation of OGC API - Records
+image::../images/records-stac-browser.png[align="center"]

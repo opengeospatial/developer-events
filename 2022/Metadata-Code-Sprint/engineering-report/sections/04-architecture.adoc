@@ -79,7 +79,7 @@ include::architecture/geonetwork.adoc[]
 
 include::architecture/ldproxy.adoc[]
 
-include::architecture/leaflet.adoc[]
+include::architecture/gleo.adoc[]
 
 include::architecture/pygeoapi.adoc[]
 
