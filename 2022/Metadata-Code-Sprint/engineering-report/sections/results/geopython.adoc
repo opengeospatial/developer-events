@@ -1,4 +1,4 @@
-=== Geopython stack
+=== GeoPython stack
 
 The GeoPython suite of tooling was integrated and demonstrated as part of a Mentor Stream during the code sprint in order to demonstrate end-to-end metadata lifecycle management.
 
