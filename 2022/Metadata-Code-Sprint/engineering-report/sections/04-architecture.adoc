@@ -24,16 +24,17 @@ The candidate standard specifies the information content of a record. A record c
 
 JSON-FG (Features and Geometry JSON) extends GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.
 
-This candidate standard extends GeoJSON in the following minimal ways:
+The following extensions to the GeoJSON Standard were in particular tested during the Code Sprint:
 
-* The ability to use Coordinate Reference Systems (CRSs) other than WGS 84
-* The ability to use non-Euclidean metrics, in particular ellipsoidal metrics
-* Support for solids and prisms as geometry types
-* The ability to encode temporal characteristics of a feature
-* The ability to declare the type and the schema of a feature
+* The ability to use Coordinate Reference Systems (CRSs) other than WGS 84;
+* Support for solids as geometry types; and 
+* The ability to encode temporal characteristics of a feature.
 
-Where it is possible to represent information as GeoJSON, the candidate standard allows for the information to be represented as such. Additional information is supported through the use of additional members which are represented using keys that should not conflict with those specified by GeoJSON. This means that JSON-FG enabled clients will be able to parse and understand the additional members.
+A key design pattern of JSON-FG is that information that can be represented as GeoJSON is encoded as GeoJSON. Additional information is mainly encoded in additional members of the GeoJSON objects. The additional members use keys that do not conflict with GeoJSON or other known GeoJSON extensions. This is so existing and future GeoJSON clients will continue to parse and understand GeoJSON content. JSON-FG enabled clients will also be able to parse and understand the additional members.
 
+JSON Schema is used to formally specify the JSON-FG syntax.
+
+The draft specification is available at https://docs.ogc.org/DRAFTS/21-045.html.
 
 ==== ISO 19115
 
