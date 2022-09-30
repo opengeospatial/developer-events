@@ -27,7 +27,7 @@ JSON-FG (Features and Geometry JSON) extends GeoJSON to support a limited set of
 The following extensions to the GeoJSON Standard were in particular tested during the Code Sprint:
 
 * The ability to use Coordinate Reference Systems (CRSs) other than WGS 84;
-* Support for solids as geometry types; and 
+* Support for solids as geometry types; and
 * The ability to encode temporal characteristics of a feature.
 
 A key design pattern of JSON-FG is that information that can be represented as GeoJSON is encoded as GeoJSON. Additional information is mainly encoded in additional members of the GeoJSON objects. The additional members use keys that do not conflict with GeoJSON or other known GeoJSON extensions. This is so existing and future GeoJSON clients will continue to parse and understand GeoJSON content. JSON-FG enabled clients will also be able to parse and understand the additional members.
@@ -100,6 +100,8 @@ include::architecture/cubeserv.adoc[]
 include::architecture/geonovum_ogcapitestclient.adoc[]
 
 include::architecture/3dgi_jsonfg_viewer.adoc[]
+
+include::architecture/gemplus.adoc[]
 
 === Other solutions
 

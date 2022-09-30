@@ -1,0 +1,4 @@
+[[gemplus_1]]
+==== GeM+
+
+https://www.miramon.cat/USA/Prod-GeMPlus.htm[GeM+] is an application built for the MS Windows environment. It enables users to create, manage and edit metadata from a variety of geographic data. GeM+ is able to read some of the most common formats, and to dynamically transfer to the metadata some information extracted from the data itself. Note that GeM+ is the metadata editor of the MiraMon product suite from UAB-CREAF.
