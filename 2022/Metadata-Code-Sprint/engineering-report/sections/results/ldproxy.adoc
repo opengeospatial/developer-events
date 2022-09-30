@@ -1,7 +1,296 @@
 === ldproxy
 
-The participants from interactive instruments worked on their implementation of OGC API – Features to prototype support for JSON-FG. A screenshot from their prototype implementation is shown in the figure below.
+Before the Code Sprint, ldproxy supported the draft version of JSON-FG from January 2022. 
+
+In the Code Sprint, the implementation was updated by the participants from interactive instruments to support version 0.1, released just before the Code Sprint. In addition, support for the Polyhedron geometry type and for the `compatibility=geojson` media type parameter was adeed.
+
+The updated software was deployed on two servers for use by other participants:
+
+* The main demonstration deployment of ldproxy (demo.ldproxy.net), which includes among others the Ordnance Surface Zoomstack dataset.
+* A deployment from Testbed 18 with CityGML building data from the City of Montreal.
+
+A screenshot from the demo.ldproxy.net deployment is shown in the figure below.
 
 [[img_ldproxy]]
-.Screenshot of the CubeWerx CubeSERV demo
-image::../images/ldproxy.png[align="center",width=800]
+.Screenshot of the interactive instruments demo with ldproxy using OS Zoomstack data
+image::../images/ldproxy.png[align="center",width=823]
+
+The following examples illustrate the differences in responses depending on the request parameters:
+
+[#ldproxy-geojson-example]
+.Request three airports as GeoJSON
+====
+The request fetches three airports as GeoJSON in the default coordinate reference system WGS 84 longitude/latitude:
+
+[source,sh]
+----
+curl "https://demo.ldproxy.net/zoomstack/collections/airports/items?limit=3" -H "accept: application/geo+json" -o demo.geo.json 
+----
+
+The response consists of the standard GeoJSON response with additional members in the feature collection object specified by OGC API Features ("numberReturned" and "timeStamp"):
+
+[source,json]
+----
+{
+    "type": "FeatureCollection",
+    "numberReturned": 3,
+    "timeStamp": "2022-09-28T12:50:23Z",
+    "features": [
+        {
+            "type": "Feature",
+            "id": 1,
+            "geometry": { "type": "Point", "coordinates": [-1.6930015, 60.3216821] },
+            "properties": {"name": "Papa Stour Airstrip"}
+        },
+        {
+            "type": "Feature",
+            "id": 2,
+            "geometry": { "type": "Point", "coordinates": [-1.2922268, 59.8782666] },
+            "properties": {"name": "Sumburgh Airport"}
+        },
+        {
+            "type": "Feature",
+            "id": 3,
+            "geometry": { "type": "Point", "coordinates": [-1.2439112, 60.191746] },
+            "properties": {"name": "Tingwall Airport"}
+        }
+    ],
+    "links": [ ... ]
+}
+----
+====
+
+[#ldproxy-jsonfg-example]
+.Request three airports as JSON-FG
+====
+The request requests three airports as JSON-FG in the default coordinate reference system WGS 84 longitude/latitude:
+
+[source,sh]
+----
+curl "https://demo.ldproxy.net/zoomstack/collections/airports/items?limit=3" -H "accept: application/vnd.ogc.fg+json" -o demo.fg.json 
+----
+
+The response adds the following information to the feature collection object: The "coordRefSys" member with the identifier of the coordinate reference system (WGS 84 lon/lat) as well as the "geometryDimension" to signal to parsing clients that all features have a point geometry. 
+
+The geometry is still encoded in the "geometry" member from GeoJSON since it is in WGS84 longitude/latitude and one of the Simple Feature geometries supported by GeoJSON (points). The "place" member required by JSON-FG is added and set to `null`.
+
+The airport features have no temporal information, the required "time" member is therefore set to `null`.
+
+[source,json]
+----
+{
+    "type": "FeatureCollection",
+    "numberReturned": 3,
+    "timeStamp": "2022-09-28T12:51:23Z",
+    "coordRefSys": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+    "geometryDimension": 0,
+    "features": [
+        {
+            "type": "Feature",
+            "id": 1,
+            "geometry": { "type": "Point", "coordinates": [-1.6930015, 60.3216821] },
+            "properties": {"name": "Papa Stour Airstrip"},
+            "place": null,
+            "time": null
+        },
+        {
+            "type": "Feature",
+            "id": 2,
+            "geometry": { "type": "Point", "coordinates": [-1.2922268, 59.8782666] },
+            "properties": {"name": "Sumburgh Airport"},
+            "place": null,
+            "time": null
+        },
+        {
+            "type": "Feature",
+            "id": 3,
+            "geometry": { "type": "Point", "coordinates": [-1.2439112, 60.191746] },
+            "properties": {"name": "Tingwall Airport"},
+            "place": null,
+            "time": null
+        }
+    ],
+    "links": [ ... ]
+}
+----
+====
+
+[#ldproxy-jsonfg-crs-example]
+.Request three airports as JSON-FG in the British National Grid
+====
+The request requests three airports as JSON-FG in the coordinate reference system British National Grid:
+
+[source,sh]
+----
+curl "https://demo.ldproxy.net/zoomstack/collections/airports/items?limit=3&crs=http://www.opengis.net/def/crs/EPSG/0/27700" -H "accept: application/vnd.ogc.fg+json" -o demo.fg.json
+----
+
+The difference to the previous response is that the point geometry is now encoded in the JSON-FG "place" member since it is not in WGS 84 longitude/latitude. The "geometry" member is set to `null`.
+
+[source,json]
+----
+{
+    "type": "FeatureCollection",
+    "numberReturned": 3,
+    "timeStamp": "2022-09-28T12:54:35Z",
+    "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/27700",
+    "geometryDimension": 0,
+    "features": [
+        {
+            "type": "Feature",
+            "id": 1,
+            "geometry": null,
+            "properties": {"name": "Papa Stour Airstrip"},
+            "place": { "type": "Point", "coordinates": [417057.93, 1159772.2] },
+            "time": null
+        },
+        {
+            "type": "Feature",
+            "id": 2,
+            "geometry": null,
+            "properties": {"name": "Sumburgh Airport"},
+            "place": { "type": "Point", "coordinates": [439723.69, 1110559.95] },
+            "time": null
+        },
+        {
+            "type": "Feature",
+            "id": 3,
+            "geometry": null,
+            "properties": {"name": "Tingwall Airport"},
+            "place": { "type": "Point", "coordinates": [442029.48, 1145501.02] },
+            "time": null
+        }
+    ],
+    "links": [ ... ]
+}
+```
+----
+====
+
+[#ldproxy-jsonfg-compatibility-example]
+.Request three airports as JSON-FG in the British National Grid with an additional geometry in WGS 84
+====
+The request requests three airports as JSON-FG in the coordinate reference system British National Grid, but requests to also represent the geometry in WGS 84 to support GeoJSON clients that are not JSON-FG-aware or have no support for coordinate reference systems and only support WGS 84:
+
+[source,sh]
+----
+curl "https://demo.ldproxy.net/zoomstack/collections/airports/items?limit=3&crs=http://www.opengis.net/def/crs/EPSG/0/27700" -H "accept: application/vnd.ogc.fg+json;compatibility=geojson" -o demo.fg.json 
+----
+
+The difference to the previous response is that the point geometry is now also encoded in the GeoJSON "geometry" member.
+
+[source,json]
+----
+{
+    "type": "FeatureCollection",
+    "numberReturned": 3,
+    "timeStamp": "2022-09-28T12:56:06Z",
+    "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/27700",
+    "geometryDimension": 0,
+    "features": [
+        {
+            "type": "Feature",
+            "id": 1,
+            "geometry": { "type": "Point", "coordinates": [-1.6930015, 60.3216821] },
+            "properties": {"name": "Papa Stour Airstrip"},
+            "place": { "type": "Point", "coordinates": [417057.93, 1159772.2] },
+            "time": null
+        },
+        {
+            "type": "Feature",
+            "id": 2,
+            "geometry": { "type": "Point", "coordinates": [-1.2922268, 59.8782666] },
+            "properties": {"name": "Sumburgh Airport"},
+            "place": { "type": "Point", "coordinates": [439723.69, 1110559.95] },
+            "time": null
+        },
+        {
+            "type": "Feature",
+            "id": 3,
+            "geometry": { "type": "Point", "coordinates": [-1.2439112, 60.191746] },
+            "properties": {"name": "Tingwall Airport"},
+            "place": { "type": "Point", "coordinates": [442029.48, 1145501.02] },
+            "time": null
+        }
+    ],
+    "links": [ ... ]
+}
+----
+====
+
+[#ldproxy-polyhedron-example]
+.Request a 3D building as JSON-FG
+====
+The request fetches the Notre-Dame building from the CityGML LoD 2 dataset of the City of Montreal as JSON-FG:
+
+[source,sh]
+----
+curl "https://d123.ldproxy.net/montreal/collections/buildings/items/248460" -H "accept: application/vnd.ogc.fg+json" -o demo.fg.json
+----
+
+The geometry is a Polyhedron with an outer shell consisting of many patches (shorted in the snippet below) in the JSON-FG "place" member.
+
+[source,json]
+----
+{
+    "type": "Feature",
+    "featureType": "building",
+    "coordRefSys": "http://www.opengis.net/def/crs/OGC/0/CRS84h",
+    "id": 248460,
+    "geometry": null,
+    "properties": {
+        "gml_id": "uuid_9ea4602f-46d1-4dae-a786-4f5f43a2b5f9",
+        "creationDate": "2022-07-12",
+        "categorie": "Régulier",
+        "id_uev": "01091097",
+        "nom": "Ville-Marie",
+        "ori_bldgid": "2104973",
+        "function": 6911,
+        "yearOfConstruction": 1829,
+        "measuredHeight": 73.196
+    },
+    "place": {
+        "type": "Polyhedron",
+        "coordinates": [
+            [
+                [
+                    [
+                        [ -73.556373, 45.504773, 84.92 ],
+                        [ -73.556375, 45.504772, 83.86 ],
+                        [ -73.556374, 45.504772, 83.86 ],
+                        [ -73.556373, 45.504773, 84.92 ]
+                    ]
+                ], 
+                ...,
+                [
+                    [
+                        [ -73.555965, 45.504706, 15.33 ],
+                        [ -73.555977, 45.504686, 15.33 ],
+                        [ -73.555989, 45.504665, 15.33 ],
+                        ...,
+                        [ -73.556027, 45.504676, 15.33 ],
+                        [ -73.556003, 45.504715, 15.33 ],
+                        [ -73.555965, 45.504706, 15.33 ]
+                    ]
+                ]
+            ]
+        ]
+    },
+    "time": {"instant": "2022-07-12"},
+    "links": [ ... ]
+}
+----
+
+[[img_ldproxy_notre_dame]]
+.The same building as HTML provided by ldproxy
+image::../images/ldproxy_notre_dame.png[align="center",width=713]
+====
+
+All example documents have been validated using the https://www.npmjs.com/package/ajv-cli[ajv-cli tool] against the JSON-FG schemas. 
+
+[source,sh]
+----
+ajv validate --spec=draft2019 --validateFormats=false -s /Users/portele/Documents/GitHub/ogc-feat-geo-json/core/schemas/featurecollection.min.json -d demo.fg.json
+----
+
+The JSON-FG data from the APIs was used at least by the following clients: <<_leaflet,OSGeo Leaflet>>, <<_geonovum_ogc_api_testclient,Geonovum OGC API Testclient>> and the <<_3dgi_cityjson_and_json_fg_viewer_2,3DGI CityJSON and JSON-FG Viewer>>.

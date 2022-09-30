@@ -1,7 +1,7 @@
 [[discussion]]
 == Discussion
 
-==== Harmonization between STAC and OGC API Records
+=== Harmonization between STAC and OGC API Records
 
 Although both STAC and OGC API - Records use GeoJSON for encoding metadata, alignment is necessary in order to improve metadata exchange. STAC has an Asset construct and OGC API - Records uses a Link construct. If OGC API - Records adopts the use of Assets, then there is a need to be clear about the difference between Assets and Links.
 
@@ -19,7 +19,7 @@ The lessons identified regarding harmonization can be summarized as:
 * In some cases, it may be necessary to use either STAC or OGC API - Records, depending on the needs of the community of interest.
 * Clarify definition and intent of STAC 'root' link relation types in relation to OGC link relation types or Compact URIs (CURIEs).
 
-==== Harvesting
+=== Harvesting
 
 It is important to be clear about what harvesting means. It is the complementary operation to Transactions. In Transactions you push a record to the catalogue, that requires the client to take the source and push that to the catalogue. For harvesting, you tell the catalogue “here is the resource” and the catalogue extracts the metadata and takes care of the rest. It is always possible that the catalogue will go to the resource and not know what to do with it. In the CSW standard there was support for harvesting. With harvesting the onus is on the catalogue to determine how to transform the resource and create the record for that resource.
 
@@ -59,13 +59,69 @@ The lessons identified regarding ISO 19115 metadata and OGC API - Records can be
 
 The following section presents the conclusions.
 
-
-
 === JSON-FG
 
-The lessons identified regarding addition of JSON-FG as another encoding for OGC API Records can be summarized as:
+The feedback from implementations on the current draft of JSON-FG were positive, but several topics were identified where the specification should be clearer or where the language should be improved. These were recorded as https://github.com/opengeospatial/ogc-feat-geo-json/issues?q=is%3Aissue+label%3A%222022-09+Sprint%22[issues in the JSON-FG GitHub repository with the label "2022-09 Sprint"].
 
-* There is not an identified need for JSON-FG encodings in OGC API Records and STAC. However, it could be identified in the future.
-* The canonical time is a top-level element in JSON-FG. This could be useful for OGC API Records.
+==== Use of Geometry Collection is underspecified
 
-More feedback from implementers is needed in order to improve understanding of the potential use of JSON-FG in OGC API - Records.
+The specification needs to be clearer if and how a GeoJSON `GeometryCollection` geometry can be used in the JSON-FG "place" member.
+
+* In version 0.1 a `GeometryCollection`` is not one of the valid geometry objects in "place". See the https://github.com/opengeospatial/ogc-feat-geo-json/blob/main/core/schemas/place.json[place.json schema] and requirement `/req/core/geom-valid`.
+* However, since a `GeometryCollection` can be used as a value in the GeoJSON "geometry" member, it could be argued that such geometry objects should also be allowed in "place", if another coordinate reference system is used.
+* If `GeometryCollection` would be allowed in "place", the current scoping rules for the "coordRefSys" member would allow that multiple coordinate reference systems could be used in different geometry objects in the collection. This should not be allowed.
+
+==== Clarify `CustomGeometry`
+
+The `CustomGeometry` object in the JSON schema is an extension point for additional geometry objects specified by a community or by a future version of JSON-FG. The object validates JSON files with unknown geometry types in the "place" member, these files are considered valid JSON-FG. This implements the following statement in the specification:
+
+> JSON-FG readers should be prepared to parse values of "place" that go beyond the schema that is implemented by the reader. Unknown members should be ignored and geometries that include an unknown geometry type should be mapped to null.
+
+However, the `CustomGeometry` object is not discussed in the specification and just used in the JSON schema. The role of the object should be clarified.
+
+==== Always include "geometry" when "place" is not null?
+
+Currently the "geometry" member may be `null`, if the primary geometry of a feature is in the "place" member. According to the GeoJSON specification, such features are considered "unlocated", but the feature obviously has a location as expressed in the "place" member.
+
+==== Additional JSON-FG metadata to simplify parsing
+
+A proposal has been raised to add information to every JSON-FG document so that parsers can easily determine that the document is a JSON-FG document and the JSON-FG version used to encode the document. This could be addressed in multiple ways, e.g. by `"jsonfg_version": "0.1.0"` or by using the "conformsTo" member used in the OGC API standards and the URIs of the supported conformance classes.
+
+==== Use of JSON-FG in OGC API Records and STAC
+
+At the time of the Code Sprint, OGC API Records included a tentative requirements class with JSON-FG as an encoding of a record. 
+
+In addition, there is obvious overlap between new members specified by JSON-FG (e.g. "time") and content in a STAC item. A general difference is that JSON-FG adds members outside of the "properties" member to not interfere with the content of "properties", which is controlled by the generator of the data and may contain anything as needed for the intended use. This is a key design principle to also make information available to readers independent of how a community might represent the information in the "properties" member.
+
+This is different in STAC and OGC API Records. Both specify an application schema, i.e., properties to be added in the "properties" container. 
+
+There was agreement that the different approaches where to put properties are the result of the different scopes of the JSON-FG and STAC / OGC API Records specifications. 
+
+For example, if a STAC instance would (in the future) be encoded as JSON-FG, the relevant information would be duplicated in the "time", "place", "coordRefSys", "featureType" members of JSON-FG. 
+
+The same is true for OGC API Records. The JSON-FG requirements class should, for now, be removed from the OGC API Records specification.
+
+The way the information is represented may differ, but in general there is a straightforward mapping between the different representations.
+
+However, it would be good to revisit the ".." (based on ISO 8601) vs `null`` representation for unbounded interval ends:
+
+* OGC API Features uses `null`` in JSON interval arrays in the temporal extents of a Collection resource.
+* OGC API Features uses `..` in the "datetime" query parameter since the parameter uses the ISO 8601 interval text encoding.
+* CQL2 Text and CQL2 JSON currently use `".."`. Earlier this was `null` in CQL2 JSON, but was changed to align with the CQL2 Text.
+* JSON-FG also used `null`, but changed to `".."` to align with CQL2 JSON.
+
+This should be re-discussed in the Features API SWG before finalizing CQL2. Options include:
+
+* Always use `null` in JSON. A `NULL` keyword could also be added in CQL2 Text. The "datetime" query parameter uses the ISO 8601 text interval encoding with `/` as the separator and therefore also `..`.
+* Always use `null` in JSON responses (Collection resource, JSON-FG), but continue to use `".."` in filters (i.e. CQL2).
+* Leave as is.
+
+=== Filtering associations with CQL2
+
+Links and associations are a key part of record in OGC API Records and of a STAC item. To properly support filtering on "links" or "assets" members, the CQL2 grammar needs to be extended. 
+
+* There was agreement to work on an extension to CQL2 that supports queryables that have objects and arrays as values. CQL2 currently has support for arrays, but only with simple values (string, number, boolean).
+* This will be required for "links", but will also be needed for other cases including querying the "theme" property in Records or the "assets" member in STAC.
+* The property with structure like "links", "theme" or "assets" would be published as a queryable with their schema.
+* This is complementary to the approach to define a queryable that is not directly represented as a feature property in the response to make filtering data structures like "assets" simpler as described in OGC API Features - Part 3: Filtering.
+* The OGC API Records SWG should identify the requirements from the perspective of OGC API Records. Afterwards, the discussion should be moved to the Features API where the CQL2 extension should be drafted.
