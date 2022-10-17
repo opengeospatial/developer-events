@@ -1,12 +1,12 @@
 === ldproxy
 
-Before the Code Sprint, ldproxy supported the draft version of JSON-FG from January 2022. 
+Before the Code Sprint, ldproxy supported the draft version of JSON-FG from January 2022.
 
-In the Code Sprint, the implementation was updated by the participants from interactive instruments to support version 0.1, released just before the Code Sprint. In addition, support for the Polyhedron geometry type and for the `compatibility=geojson` media type parameter was adeed.
+In the Code Sprint, the implementation was updated by the participants from interactive instruments to support version 0.1, released just before the Code Sprint. In addition, support for the Polyhedron geometry type and for the `compatibility=geojson` media type parameter was added.
 
 The updated software was deployed on two servers for use by other participants:
 
-* The main demonstration deployment of ldproxy (demo.ldproxy.net), which includes among others the Ordnance Surface Zoomstack dataset.
+* The main demonstration deployment of ldproxy (demo.ldproxy.net), which includes among others the https://www.ordnancesurvey.co.uk/business-government/products/open-zoomstack[Ordnance Survey Open Zoomstack] dataset.
 * A deployment from Testbed 18 with CityGML building data from the City of Montreal.
 
 A screenshot from the demo.ldproxy.net deployment is shown in the figure below.
@@ -24,7 +24,7 @@ The request fetches three airports as GeoJSON in the default coordinate referenc
 
 [source,sh]
 ----
-curl "https://demo.ldproxy.net/zoomstack/collections/airports/items?limit=3" -H "accept: application/geo+json" -o demo.geo.json 
+curl "https://demo.ldproxy.net/zoomstack/collections/airports/items?limit=3" -H "accept: application/geo+json" -o demo.geo.json
 ----
 
 The response consists of the standard GeoJSON response with additional members in the feature collection object specified by OGC API Features ("numberReturned" and "timeStamp"):
@@ -67,10 +67,10 @@ The request requests three airports as JSON-FG in the default coordinate referen
 
 [source,sh]
 ----
-curl "https://demo.ldproxy.net/zoomstack/collections/airports/items?limit=3" -H "accept: application/vnd.ogc.fg+json" -o demo.fg.json 
+curl "https://demo.ldproxy.net/zoomstack/collections/airports/items?limit=3" -H "accept: application/vnd.ogc.fg+json" -o demo.fg.json
 ----
 
-The response adds the following information to the feature collection object: The "coordRefSys" member with the identifier of the coordinate reference system (WGS 84 lon/lat) as well as the "geometryDimension" to signal to parsing clients that all features have a point geometry. 
+The response adds the following information to the feature collection object: The "coordRefSys" member with the identifier of the coordinate reference system (WGS 84 lon/lat) as well as the "geometryDimension" to signal to parsing clients that all features have a point geometry.
 
 The geometry is still encoded in the "geometry" member from GeoJSON since it is in WGS84 longitude/latitude and one of the Simple Feature geometries supported by GeoJSON (points). The "place" member required by JSON-FG is added and set to `null`.
 
@@ -174,7 +174,7 @@ The request requests three airports as JSON-FG in the coordinate reference syste
 
 [source,sh]
 ----
-curl "https://demo.ldproxy.net/zoomstack/collections/airports/items?limit=3&crs=http://www.opengis.net/def/crs/EPSG/0/27700" -H "accept: application/vnd.ogc.fg+json;compatibility=geojson" -o demo.fg.json 
+curl "https://demo.ldproxy.net/zoomstack/collections/airports/items?limit=3&crs=http://www.opengis.net/def/crs/EPSG/0/27700" -H "accept: application/vnd.ogc.fg+json;compatibility=geojson" -o demo.fg.json
 ----
 
 The difference to the previous response is that the point geometry is now also encoded in the GeoJSON "geometry" member.
@@ -260,7 +260,7 @@ The geometry is a Polyhedron with an outer shell consisting of many patches (sho
                         [ -73.556374, 45.504772, 83.86 ],
                         [ -73.556373, 45.504773, 84.92 ]
                     ]
-                ], 
+                ],
                 ...,
                 [
                     [
@@ -286,8 +286,9 @@ The geometry is a Polyhedron with an outer shell consisting of many patches (sho
 image::../images/ldproxy_notre_dame.png[align="center",width=713]
 ====
 
-All example documents have been validated using the https://www.npmjs.com/package/ajv-cli[ajv-cli tool] against the JSON-FG schemas. 
+All example documents have been validated using the https://www.npmjs.com/package/ajv-cli[ajv-cli tool] against the JSON-FG schemas.
 
+[%unnumbered%]
 [source,sh]
 ----
 ajv validate --spec=draft2019 --validateFormats=false -s /Users/portele/Documents/GitHub/ogc-feat-geo-json/core/schemas/featurecollection.min.json -d demo.fg.json

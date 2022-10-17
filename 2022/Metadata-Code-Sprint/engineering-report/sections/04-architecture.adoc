@@ -24,7 +24,7 @@ The candidate standard specifies the information content of a record. A record c
 
 JSON-FG (Features and Geometry JSON) extends GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.
 
-The following extensions to the GeoJSON Standard were in particular tested during the Code Sprint:
+The following extensions to the GeoJSON Standard were, in particular, tested during the Code Sprint:
 
 * The ability to use Coordinate Reference Systems (CRSs) other than WGS 84;
 * Support for solids as geometry types; and
@@ -58,7 +58,7 @@ The goals for the STAC part of the code sprint were:
 * Alignment with other standards, for example GeoDCAT and/or JSON-LD
 * Collection Search
 * JSON-FG vs. STAC projection extension
-* Push towards STAC API 1.0.0 release?
+* A possible push towards STAC API 1.0.0 release
 * Advance the STAC ecosystem (e.g. PySTAC, QGIS plugin, ...)
 * Look through the issue trackers, e.g. https://stacindex.org/ecosystem[ecosystem], https://github.com/stac-utils[stac-utils], and https://github.com/stactools-packages[stactools-packages]
 
