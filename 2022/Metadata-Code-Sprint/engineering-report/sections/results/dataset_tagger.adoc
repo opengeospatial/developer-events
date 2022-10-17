@@ -1,0 +1,7 @@
+=== dataset-tagger
+
+During the code sprint, contributors to the dataset-tagger project https://github.com/pvgenuchten/mdme/commit/547636f0d3da6c8d019e2e2ab068ef8e45e5d10d[added] support for the handling of metadata served by implementations of the OGC API Records. <<img_tagger>> shows a screenshot of the application after importing an ISO 19139 https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/014dce7b-936d-4315-b0bf-de2ff38b8a5e[metadata document] from the _Nationaal Georegister_ of the Netherlands.
+
+[[img_tagger]]
+.Screenshot of the dataset tagger
+image::../images/dataset_tagger.png[align="center",width=800]

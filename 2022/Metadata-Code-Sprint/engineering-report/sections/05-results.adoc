@@ -29,6 +29,8 @@ include::results/3dgi_json_fg.adoc[]
 
 include::results/secure_async_catalog.adoc[]
 
+include::results/dataset_tagger.adoc[]
+
 include::results/uom_nlp_spatial.adoc[]
 
 include::results/stac_browser.adoc[]
