@@ -30,7 +30,7 @@ The following extensions to the GeoJSON Standard were, in particular, tested dur
 * Support for solids as geometry types; and
 * The ability to encode temporal characteristics of a feature.
 
-A key design pattern of JSON-FG is that information that can be represented as GeoJSON is encoded as GeoJSON. Additional information is mainly encoded in additional members of the GeoJSON objects. The additional members use keys that do not conflict with GeoJSON or other known GeoJSON extensions. This is so existing and future GeoJSON clients will continue to parse and understand GeoJSON content. JSON-FG enabled clients will also be able to parse and understand the additional members.
+A key design pattern of JSON-FG is that information that can be represented as GeoJSON is encoded as GeoJSON. Additional information is mainly encoded in additional members of the GeoJSON objects. The additional members use keys that do not conflict with GeoJSON or other known GeoJSON extensions. This is done so existing and future GeoJSON clients will continue to parse and understand GeoJSON content. JSON-FG enabled clients will also be able to parse and understand the additional members.
 
 JSON Schema is used to formally specify the JSON-FG syntax.
 
