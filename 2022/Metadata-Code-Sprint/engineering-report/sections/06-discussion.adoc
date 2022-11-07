@@ -15,6 +15,7 @@ Every Item has a link to one collection. You could create a hierarchy using a co
 
 The lessons identified regarding harmonization can be summarized as:
 
+[[stac-harmonization-lessons]]
 * Modify the create and updated fields by removing them from the Record class and add them to the links. This would improve alignment with STAC.
 * In some cases, it may be necessary to use either STAC or OGC API - Records, depending on the needs of the community of interest.
 * Clarify definition and intent of STAC 'root' link relation types in relation to OGC link relation types or Compact URIs (CURIEs).
