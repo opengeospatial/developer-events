@@ -16,25 +16,25 @@ The subject of this Engineering Report (ER) is a code sprint that was held from 
 [.preface]
 == Executive Summary
 
-Over the past two decades, standards such as ISO 19115:2003 and the OGC Catalogue Services for the Web (CSW) have been integrated into several Spatial Data Infrastructure (SDI) initiatives at national and international level. These standards leveraged the Extensible Markup Language (XML) which, at the time, was the primary encoding for data exchange across much of Information Technology. In recent times, however, the increasing use of JavaScript Object Notation (JSON) and the uptake of Web Application Programming Interface (API) has meant that modernisation of metadata and catalogues approaches is necessary.
+Over the past two decades, standards such as ISO 19115:2003 and the OGC Catalogue Services for the Web (CSW) have been integrated into several Spatial Data Infrastructure (SDI) initiatives at national and international levels. These standards leveraged the Extensible Markup Language (XML) which, at the time, was the primary encoding for data exchange across much of Information Technology. In recent times, however, the increasing use of JavaScript Object Notation (JSON) and the uptake of Web Application Programming Interface (API) technologies has meant that modernization of metadata and catalogue approaches is necessary.
 
-In November 2021, the Open Geospatial Consortium (OGC) and the International Organization for Standardization (ISO) held their first joint code sprint. The success of that first joint code sprint provided the foundation for a second joint code sprint. This Engineering Report (ER) summarizes the main achievements of the second joint code sprint, conducted between September 14th and 16th, 2022. The second code sprint, named the 2022 Joint OGC and ISO Code Sprint - The Metadata Code Sprint, served to accelerate the support of open geospatial standards that relate to geospatial metadata and catalogues. The code sprint was sponsored by Ordnance Survey (OS) at the Gold-level and Geonovum at the Silver-level. The code sprint was held as a hybrid event, with the face-to-face element hosted at the Geovation Hub in London, United Kingdom.
+In November 2021, the Open Geospatial Consortium (OGC) and the International Organization for Standardization (ISO) held their https://github.com/opengeospatial/developer-events/wiki/November-2021-Geospatial-API-Code-Sprint[first joint code sprint]. The success of that first joint code sprint provided the foundation for a second joint code sprint. This Engineering Report (ER) summarizes the main achievements of the second joint code sprint, conducted between September 14th and 16th, 2022. The https://developer.ogc.org/sprints/18/[second joint code sprint], named the 2022 Joint OGC and ISO Code Sprint - The Metadata Code Sprint, served to accelerate the support of open geospatial standards that relate to geospatial metadata and catalogues. The code sprint was sponsored by Ordnance Survey (OS) at the Gold-level and Geonovum at the Silver-level. The code sprint was held as a hybrid event, with the face-to-face element hosted at the Geovation Hub in London, United Kingdom.
 
-The code sprint focused on the following group of APIs and encodings:
+The code sprint focused on the following group of specifications:
 
-* https://ogcapi.ogc.org/records/[OGC API - Records] candidate standard
+* https://ogcapi.ogc.org/records/[OGC API - Records] candidate Standard <<ogc20-004>>
 * ISO 19115 metadata Standards (i.e., https://www.iso.org/standard/53798.html[ISO 19115-1], https://www.iso.org/standard/67039.html[ISO 19115-2], https://www.iso.org/standard/32579.html[ISO 19115-3])
-* OGC Features and Geometries JSON (JSON-FG) candidate standard
-* Spatio-Temporal Asset Catalog (STAC), which leverages the OGC API - Features Standard
+* OGC Features and Geometries JSON (JSON-FG) candidate Standard <<ogc21-045>>
+* Spatio-Temporal Asset Catalog (STAC), which leverages the OGC API - Features Standard <<stacref>>
 
 The OGC is an international consortium of more than 500 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR - Findable, Accessible, Interoperable, and Reusable. The consortium consists of Standards Working Groups (SWGs) that have responsibility for designing a candidate standard prior to approval as an OGC Standard and for making revisions to an existing OGC Standard. The sprint objectives for the SWGs were to:
 
-* Develop prototype implementations of OGC standards, including implementations of draft OGC Application Programming Interface (API) standards
+* Develop prototype implementations of OGC Standards, including implementations of draft OGC Application Programming Interface (API) Standards
 * Test the prototype implementations
 * Provide feedback to the Editor about what worked and what did not
 * Provide feedback about the specification document
 
-Technical Committee 211 (TC 211) of ISO is responsible for the development and publication of standards that relate to geographic information. As with other ISO committees, TC 211 consists of member nations, as well as liaison partner organizations. TC 211 and OGC have a liaison partnership that enables the organizations to participate in each others activities and also to collaborate of standards development initiatives. The sprint objectives for ISO/TC 211 were:
+Technical Committee 211 (TC 211) of ISO is responsible for the development and publication of standards that relate to geographic information. As with other ISO committees, TC 211 consists of member nations, as well as liaison partner organizations. TC 211 and OGC have a liaison partnership that enables the organizations to participate in each other's activities and also to collaborate on standards development initiatives. The sprint objectives for ISO/TC 211 were to:
 
 * Support the development of ISO Standards
 * Fix open issues
@@ -43,18 +43,17 @@ Technical Committee 211 (TC 211) of ISO is responsible for the development and p
 
 This engineering report makes the following recommendations for future innovation work items:
 
-* Initiatives to facilitate implementation of JSON-FG (e.g. 3D, cadastral data, etc)
+* Initiatives to facilitate implementation of JSON-FG (e.g. three-dimensional (3D) data, cadastral data, etc.)
 * Initiatives to facilitate implementation of catalogues
 * Prototyping of tools for creating metadata (e.g. the automated STAC metadata crawler demonstrated during the sprint)
 
 The engineering report also makes the following recommendations for things that the Standards Working Groups should consider:
 
-* Outreach for JSON-FG
+* Outreach for promoting JSON-FG
 * Code Sprint for designing profiles of JSON-FG for different communities of interest
 * Documentation of the different roles of catalogues and API, as well as guidance on when to use them
-* Code Sprint on versioning, possibly combining an OGC API Features Part 4 with OGC API Records
+* Code Sprint on versioning, possibly involving both OGC API - Records and OGC API - Features
 * Exploring how to move GeoDCAT forward within OGC
-
 
 == Submitters
 
@@ -67,12 +66,14 @@ All questions regarding this document should be directed to the editor or the co
 |Gobe Hobona| Open Geospatial Consortium | Editor
 |Joana Simoes | Open Geospatial Consortium |Editor
 |Panagiotis	Vretanos	|	CubeWerx Inc.	|	Contributor
-| Núria Julià Selvas |	UAB-CREAF	|	Contributor
-| Joan Maso |	UAB-CREAF	|	Contributor
+|Núria Julià Selvas |	UAB-CREAF	|	Contributor
+|Joan Maso |	UAB-CREAF	|	Contributor
+|Moozhan Shakeri |	University of Manchester	|	Contributor
 |Clemens Portele	|	interactive instruments GmbH	|	Contributor
 |Matthias Mohr	|	WWU Münster	|	Contributor
+|Jeroen Ticheler	|	GeoCat	|	Contributor
 |Tom Kralidis 	|	Meteorological Service of Canada	|	Contributor
 |Byron Cochrane	|	OpenWork Ltd |	Contributor
 |Andreas Matheus	|	Secure Dimensions	|	Contributor
-|Jeroen Ticheler	|	GeoCat	|	Contributor
+|Thijs Brentjens	|	Geonovum	|	Contributor
 |===

@@ -3,13 +3,15 @@
 
 The code sprint included multiple software products and implementations of OGC and ISO Standards. This section presents some of the results from the code sprint.
 
-include::results/leaflet.adoc[]
+include::results/gleo.adoc[]
 
 include::results/cubeserv.adoc[]
 
 include::results/ldproxy.adoc[]
 
 include::results/geonetwork.adoc[]
+
+include::results/geonovum_ogcapitestclient.adoc[]
 
 include::results/gemplus.adoc[]
 
@@ -20,3 +22,15 @@ include::results/pycsw.adoc[]
 include::results/owslib.adoc[]
 
 include::results/geopython.adoc[]
+
+include::results/openwork.adoc[]
+
+include::results/3dgi_json_fg.adoc[]
+
+include::results/secure_async_catalog.adoc[]
+
+include::results/dataset_tagger.adoc[]
+
+include::results/uom_nlp_spatial.adoc[]
+
+include::results/stac_browser.adoc[]

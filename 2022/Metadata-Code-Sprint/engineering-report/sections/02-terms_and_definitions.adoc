@@ -3,11 +3,11 @@
 
 === API
 
-An Application Programming Interface (API) is a standard set of documented and supported functions and procedures that expose the capabilities or data of an operating system, application, or service to other applications (adapted from ISO/IEC TR 13066-2:2016).
+An Application Programming Interface (API) is a standard set of documented and supported functions and procedures that expose the capabilities or data of an operating system, application, or service to other applications [adapted from ISO/IEC TR 13066-2:2016].
 
 === coordinate reference system
 
-A coordinate system that is related to the real world by a datum term name (source: ISO 19111)
+A coordinate system that is related to the real world by a datum term name [source: ISO 19111]
 
 === OpenAPI Document
 

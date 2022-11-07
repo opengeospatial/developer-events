@@ -1,6 +1,6 @@
 
 == Scope
 
-This Engineering Report (ER) summarizes the main achievements of the Joint OGC and ISO Code Sprint, conducted between September 14th and 16th, 2022. Sponsored by Ordnance Survey (OS) and Geonovum, the code sprint was hosted by the OGC and ISO with the goal of advancing the development and implementation open standards that relate to geospatial metadata and catalogues.
+The code sprint described in this engineering report was organized to provide a collaborative environment that enables software developers, users, and architects to work together on open standards that relate to geospatial metadata and catalogues. The engineering report presents the sprint architecture, the results of the prototyping, and a discussion resulting from the prototyping.
 
 A Code Sprint is a collaborative and inclusive event driven by innovative and rapid programming with minimal process and organization constraints to support the development of new applications and open standards. Code Sprints experiment with emerging ideas in the context of geospatial standards, help improve interoperability of existing standards by experimenting with new extensions or profiles, and are used for building proofs of concept to support standards development activities and enhancement of software products.

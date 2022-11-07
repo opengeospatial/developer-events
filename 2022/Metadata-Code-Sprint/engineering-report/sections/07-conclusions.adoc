@@ -1,7 +1,7 @@
 [[conclusions]]
 == Conclusions
 
-This was the first hybrid code sprint (consisting of both in-person and remote elements) organized by the OGC in more than two years, due to the pandemic. A record number of participants registered to attend the code sprint, exceeding pre-pandemic registration numbers. There were however, more remote participants than those attending in-person. This suggests that there continues to be significant interest in code sprints, and that the online collaboration environment should continue to be used post-pandemic.
+This was the first hybrid code sprint (consisting of both in-person and remote elements) organized by the OGC in more than two years, due to the pandemic. A record number of participants registered to attend the code sprint, exceeding pre-pandemic registration numbers. There were, however, more remote participants than those attending in-person. This suggests that there continues to be significant interest in code sprints, and that the online collaboration environment should continue to be used post-pandemic.
 
 The code sprint facilitated the development and testing of prototype implementations of OGC and ISO Standards that relate to geospatial metadata and catalogues. The code sprint also enabled the participating developers to provide feedback to the editors of candidate standards. The code sprint therefore met all of its objectives and achieved its goal of accelerating the support of open geospatial standards that relate to geospatial metadata and catalogues.
 

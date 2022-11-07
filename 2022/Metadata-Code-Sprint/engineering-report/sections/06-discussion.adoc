@@ -1,64 +1,126 @@
 [[discussion]]
 == Discussion
 
-==== Harmonization between STAC and OGC API Records
+=== Harmonization between STAC and OGC API Records
 
-Although both STAC and OGC API - Records use GeoJSON for encoding metadata, alignment is necessary in order to improve metadata exchange. STAC has an Asset construct and OGC API - Records uses a Link construct. If OGC API - Records adopts the use of Assets then there is a need to be clear about the difference between Assets and Links.
+Although both STAC and OGC API - Records use GeoJSON for encoding metadata, alignment is necessary in order to improve metadata exchange. STAC has an Asset construct and OGC API - Records uses a Link construct. If OGC API - Records adopts the use of Assets, then there is a need to be clear about the difference between Assets and Links.
 
 There is a perception that STAC is focused on Earth Observation (EO). The Record metadata model which is specified in OGC API - Records is supposed to cover more than just EO. The idea with the Records metadata model is that it offers a small set of generic properties that can be used to describe anything. This makes it possible for communities of interest to extend the model to support their particular use case. The way that one uses a Record depends on how the person wants to make the resource discoverable. This impacts how the record is created and how it is linked with other Records.
 
-There is a conflict between some elements where they may have the same name but different meaning (e.g. created and updated dates). The Records metadata model targets a the resource, whereas STAC targets a distribution. This creates a challenge for Records because it would be impossible to give different dates of update for different distributions of the same resource. To align OGC API Records with STAC there would be a need to change 'record-created' and 'record-updated' fields to simply 'created' and 'updated'. Other potential opportunities for alignment include the use a 'roles' element in the links section.
+There is a conflict between some elements where they may have the same name but different meaning (e.g. created and updated dates in STAC and OGC API - Records). The Records metadata model targets a resource, whereas STAC targets a distribution. This creates a challenge for Records because it would be impossible to give different dates of update for different distributions of the same resource. To align OGC API - Records with STAC there would be a need to change 'record-created' and 'record-updated' fields to simply 'created' and 'updated'. Other potential opportunities for alignment include the use of a 'roles' element in the links section.
+
+It was also determined that the STAC 'root' link relation types need to be further clarified as OGC link relation types or Compact URIs (CURIEs).
 
 Every Item has a link to one collection. You could create a hierarchy using a collection. One level of collection and then the items are records. In this context, STAC and OGC API - Records are already aligned.
 
 The lessons identified regarding harmonization can be summarized as:
 
-* Modify the create and updated fields by removing them from the Record class add them to the links. This would improve alignment with STAC.
-* In some cases it may be necessary to use either STAC or OGC API - Records, depending on the needs of the community of interest.
+* Modify the create and updated fields by removing them from the Record class and add them to the links. This would improve alignment with STAC.
+* In some cases, it may be necessary to use either STAC or OGC API - Records, depending on the needs of the community of interest.
+* Clarify definition and intent of STAC 'root' link relation types in relation to OGC link relation types or Compact URIs (CURIEs).
 
+=== Harvesting
 
+It is important to be clear about what harvesting means. It is the complementary operation to Transactions. In Transactions you push a record to the catalogue, that requires the client to take the source and push that to the catalogue. For harvesting, you tell the catalogue “here is the resource” and the catalogue extracts the metadata and takes care of the rest. It is always possible that the catalogue will go to the resource and not know what to do with it. In the CSW standard there was support for harvesting. With harvesting the onus is on the catalogue to determine how to transform the resource and create the record for that resource.
 
-=== STAC
+There is also the question of: if the user points the harvestor to a resource through the client, should the user leave the transformation of the resource to the harvestor? The simplest approach is to leave it up to the harvestor once the client has directed the harvestor towards a resource. In the CSW-ebRIM model there was guidance on how to harvest a GetCapabilities response. As a minimum they would look for all of the fields that are in the record and try to populate those. More guidance would be needed for OGC API Standards, for example how deep to go in navigating the link graph.
 
-STAC 'root' link relation types need to be further clarified as OGC link relation types or Compact URIs (CURIEs).
+An example workflow could be: The client application submits a harvest request, with a prefer header, then the request would be executed synchronously or asynchronously. The server would notify the client application that it has initiated a job, meaning that the client application can monitor the job and retrieve the results when the job is complete. To achieve such a workflow, there is a need to define an API for harvesting resources or collections of resources. Providing guidance on how to crawl an OGC API resource tree and to harvest the resources it offers.
 
-=== JSON-FG
+There are some aspects of harvesting that are shared with transactions. For example, the ability to create a record is an aspect of both harvesting and transactions. There are some aspects, for example ‘deletion', however of transactions that are less likely to be used in harvesting. Currently, OGC API — Features — Part 4: Create, Replace, Update and Delete defines two requirements classes (“Create/Replace/Delete”, and “Update”). Given that the intention is for OGC API – Records to leverage the capabilities specified by OGC API — Features — Part 4, it would be valuable to split the “Create/Replace/Delete” requirements class into 3 separate classes, to allow for finer granularity for resource management. This would make it possible for a harvestor to only implement the ability to ‘create’ a record, without needing to implement the ability to replace nor delete a record.
 
-TBA
+The lessons identified regarding harvesting can be summarized as:
 
-=== Summary of Lessons Identified
+*	It is important to be clear about what harvesting means.
+*	Keeping the metadata close to the data is more efficient than copying the metadata to a separate server. However, there is a need to be clear about what is meant by “close to the data”.
+*	Ideally harvesting would be of selected bits of metadata instead of the complete metadata record.
+*	There are different types of harvesting, in some cases there may be some processing needed. One type of approach means harvesting the discovery metadata.
+*	In some cases, augmented metadata may need to be pushed back to the source.
+*	It would be valuable to split the “Create/Replace/Delete” requirements class of OGC API – Features – Part 4 into 3 separate classes, to allow for finer granularity for resource management.
 
-The following are the immediate lessons identified by the sprint participants:
+=== ISO 19115 metadata and OGC API Records
 
-==== Harvesting
+There was a view put forward that the metadata should be managed with the data. It should not be stored away from the dataset it describes. If one wants to harvest ISO 19115 metadata, then they should be able to retrieve it from the API. Currently there is little guidance of how to harvest or link ISO 19115 metadata from the API definition documents or the API landing pages. There was an alternative view that often people want to catalogue things that they do not have access to, for example, for future reference. In some cases, the resource being catalogue might not even be online.
 
-* It's important to be clear about what harvesting means.
-* Keeping the metadata close to the data is more efficient than copying the metadata to a separate server.
-* Ideally harvesting would be of selected bits of metadata instead of the complete metadata record.
-* There are different types of harvesting, in some cases there may be some processing needed. One type of approach means harvesting the discovery metadata.
-* In some cases, augmented metadata may need to be pushed back to the source.
-* We need to be clear about what we mean when we say "close to the data".
+One could initiate a harvest, the catalogue could then go to the product directory and then find the associated metadata, and then harvest information from that into a record, including a link to that associated metadata. This approach means that the metadata does not actually need to be stored away from the dataset it describes. The enduring question is whether or not such a workflow requires an ISO 19115 metadata profile or some custom guidance. There is also a question of how much needs to be mapped between OGC API – Records and ISO 19115.
 
-==== Transactions
+Given the focus of OGC API – Records – Part 1 on discovery, fields that are related to ‘search’ are worth focusing on initially. That is part of the reason that the OpenWork activity in the code sprint focused initially on the Keywords class. The Keyword Type is meant to represent a category of Keywords.
 
-* Currently, OGC API - Features - Part 4: Create, Replace, Update and Delete defines two requirements classes ("Create/Replace/Delete", and "Update").  It would be valuable to split the "Create/Replace/Delete" requirements class into 3 separate classes, to allow for finer granularity for resource management.
-
-
-==== The consideration of adding JSON-FG as another encoding for OGC API Records
-
-* There is not an identified need for JSON-FG encodings in OGC API Records and STAC. However, it could be identified in the future.
-* The canonical time is a top-level element in JSON-FG. This could be useful for OGC API Records.
-* More feedback is needed
-
-==== ISO metadata and OGC API Records
+The lessons identified regarding ISO 19115 metadata and OGC API - Records can be summarized as:
 
 * Expressing ISO 19115 metadata in OGC API Records should focus on discovery elements.
 * Initial prototyping has been focused on Keywords to Themes
 * What is needed is a profile that enables us to work with ISO 19115
-* Content negotiation by profile could be useful.
+* Content Negotiation by Profile could be useful.
 * The incremental approach would be useful.
 * It may be necessary to also design a JSON profile of ISO 19139 as well.
 * There are various considerations relating to alignment with ISO 19115 e.g. alignment with DCAT
-* We need to balance how deeply we want to represent ISO metadata in JSON
 
-The following section presents the conclusions.
+There is a need to balance how deeply ISO metadata is represented in JSON. Therefore, further experimentation will be needed to arrive at a JSON encoding of ISO 19115-1 metadata.
+
+=== JSON-FG
+
+The feedback from implementations of the current draft of JSON-FG were positive, but several topics were identified where the specification should be clearer or where the language should be improved. These were recorded as https://github.com/opengeospatial/ogc-feat-geo-json/issues?q=is%3Aissue+label%3A%222022-09+Sprint%22[issues in the JSON-FG GitHub repository with the label "2022-09 Sprint"].
+
+==== Use of Geometry Collection is underspecified
+
+The specification needs to be clearer if and how a GeoJSON `GeometryCollection` geometry can be used in the JSON-FG "place" member.
+
+* In version 0.1 a `GeometryCollection`` is not one of the valid geometry objects in "place". See the https://github.com/opengeospatial/ogc-feat-geo-json/blob/main/core/schemas/place.json[place.json schema] and requirement `/req/core/geom-valid`.
+* However, since a `GeometryCollection` can be used as a value in the GeoJSON "geometry" member, it could be argued that such geometry objects should also be allowed in "place", if another coordinate reference system is used.
+* If `GeometryCollection` would be allowed in "place", the current scoping rules for the "coordRefSys" member would allow that multiple coordinate reference systems could be used in different geometry objects in the collection. This should not be allowed.
+
+==== Clarify `CustomGeometry`
+
+The `CustomGeometry` object in the JSON schema is an extension point for additional geometry objects specified by a community or by a future version of JSON-FG. The object validates JSON files with unknown geometry types in the "place" member, these files are considered valid JSON-FG. This implements the following statement in the specification:
+
+> JSON-FG readers should be prepared to parse values of "place" that go beyond the schema that is implemented by the reader. Unknown members should be ignored and geometries that include an unknown geometry type should be mapped to null.
+
+However, the `CustomGeometry` object is not discussed in the specification and just used in the JSON schema. The role of the object should be clarified.
+
+==== Always include "geometry" when "place" is not null?
+
+Currently the "geometry" member may be `null`, if the primary geometry of a feature is in the "place" member. According to the GeoJSON specification, such features are considered "unlocated", but the feature obviously has a location as expressed in the "place" member.
+
+==== Additional JSON-FG metadata to simplify parsing
+
+A proposal has been raised to add information to every JSON-FG document so that parsers can easily determine that the document is a JSON-FG document and the JSON-FG version used to encode the document. This could be addressed in multiple ways, e.g. by `"jsonfg_version": "0.1.0"` or by using the "conformsTo" member used in the OGC API standards and the URIs of the supported conformance classes.
+
+==== Use of JSON-FG in OGC API Records and STAC
+
+At the time of the Code Sprint, OGC API Records included a tentative requirements class with JSON-FG as an encoding of a record.
+
+In addition, there is obvious overlap between new members specified by JSON-FG (e.g. "time") and content in a STAC item. A general difference is that JSON-FG adds members outside of the "properties" member to not interfere with the content of "properties", which is controlled by the generator of the data and may contain anything as needed for the intended use. This is a key design principle to also make information available to readers independent of how a community might represent the information in the "properties" member.
+
+This is different in STAC and OGC API Records. Both specify an application schema, i.e., properties to be added in the "properties" container.
+
+There was agreement that the different approaches of where to put properties are the result of the different scopes of the JSON-FG and STAC / OGC API Records specifications.
+
+For example, if a STAC instance would (in the future) be encoded as JSON-FG, the relevant information would be duplicated in the "time", "place", "coordRefSys", "featureType" members of JSON-FG.
+
+The same is true for OGC API Records. The JSON-FG requirements class should, for now, be removed from the OGC API Records specification.
+
+The way the information is represented may differ, but in general there is a straightforward mapping between the different representations.
+
+However, it would be good to revisit the ".." (based on ISO 8601) vs `null`` representation for unbounded interval ends:
+
+* OGC API Features uses `null`` in JSON interval arrays in the temporal extents of a Collection resource.
+* OGC API Features uses `..` in the "datetime" query parameter since the parameter uses the ISO 8601 interval text encoding.
+* CQL2 Text and CQL2 JSON currently use `".."`. Earlier this was `null` in CQL2 JSON, but was changed to align with the CQL2 Text.
+* JSON-FG also used `null`, but changed to `".."` to align with CQL2 JSON.
+
+This should be re-discussed in the Features API SWG before finalizing CQL2. Options include:
+
+* Always use `null` in JSON. A `NULL` keyword could also be added in CQL2 Text. The "datetime" query parameter uses the ISO 8601 text interval encoding with `/` as the separator and therefore also `..`.
+* Always use `null` in JSON responses (Collection resource, JSON-FG), but continue to use `".."` in filters (i.e. CQL2).
+* Leave as is.
+
+=== Filtering associations with CQL2
+
+Links and associations are a key part of a record in OGC API Records and of a STAC item. To properly support filtering on "links" or "assets" members, the CQL2 grammar needs to be extended.
+
+* There was agreement to work on an extension to CQL2 that supports queryables that have objects and arrays as values. CQL2 currently has support for arrays, but only with simple values (string, number, boolean).
+* This will be required for "links", but will also be needed for other cases including querying the "theme" property in Records or the "assets" member in STAC.
+* The property with structure like "links", "theme" or "assets" would be published as a queryable with their schema.
+* This is complementary to the approach to define a queryable that is not directly represented as a feature property in the response to make filtering data structures like "assets" simpler as described in OGC API Features - Part 3: Filtering.
+* The OGC API Records SWG should identify the requirements from the perspective of OGC API Records. Afterwards, the discussion should be moved to the Features API where the CQL2 extension should be drafted.

@@ -1,0 +1,3 @@
+==== University of Manchester Natural Language Processing for Spatial Analysis
+
+Participants from the University of Manchester implemented a Natural Language Processing (NLP) toolkit for conducting spatial analysis. The toolkit takes as input a statement such as "I want to see parks in Westminster" and then displays the locations of the requested features (parks) in the location of interest (Westminster).

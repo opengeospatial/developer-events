@@ -1,6 +1,6 @@
 === pygeoapi
 
-The pygeoapi project implemented capability for metadata transactions following the OGC API - Records - Part 4: Create, Replace, Update and Delete draft specification.  Support for the "Requirements Class "Create/Replace/Delete" requirements class was https://github.com/geopython/pygeoapi/pull/984[implemented], reviewed and approved by the pygeoapi development team. As a result, pygeoapi implementations are now able to easily define "editable" resources for metadata (OGC API - Records) as well as data (OGC API - Features) thanks to the building block approach of OGC APIs.
+The pygeoapi project implemented capability for metadata transactions following the OGC API - Records - Part 4: Create, Replace, Update and Delete draft specification.  Support for the "Requirements Class "Create/Replace/Delete" was https://github.com/geopython/pygeoapi/pull/984[implemented], reviewed and approved by the pygeoapi development team. As a result, pygeoapi implementations are now able to easily define "editable" resources for metadata (OGC API - Records) as well as data (OGC API - Features) thanks to the building block approach of OGC API Standards.
 
 The https://docs.pygeoapi.io/en/latest/transactions.html[official pygeoapi documentation] provides more information on how to enable the new functionality. A screenshot of the associated OpenAPI/Swagger interface from the implementation is shown in the figure below.
 

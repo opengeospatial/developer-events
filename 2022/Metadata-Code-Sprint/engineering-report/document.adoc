@@ -6,15 +6,15 @@
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: technical
 :comment: ### Internal reference number; mandatory
-:docnumber: 22-043
+:docnumber: 22-043r1
 :comment: ### Date on which the standard was updated; mandatory
-:received-date: 2018-12-20
+:received-date: 2022-10-17
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
-:issued-date: 2018-07-10
+:issued-date: 2029-06-12
 :comment: ### Date on which the standard was published; mandatory
 :published-date: 2029-06-12
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
-:external-id: http://www.opengis.net/doc/PER/eoep-Hack2018
+:external-id: http://www.opengis.net/doc/PER/ogc-iso-codesprint2022
 :comment: ### Author one
 :fullname: Gobe Hobona
 :comment: ### Author two
@@ -22,7 +22,7 @@
 :comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
 :role_2: editor
 :comment: ### Comma delimited keywords; mandatory
-:keywords: hackaton, application-to-the-cloud, testbed, docker, web service
+:keywords: hackathon, metadata, code sprint, API, catalogue, record
 :comment: ### Metanorma flavor; mandatory
 :mn-document-class: ogc
 :comment: ### Desired output formats; mandatory
@@ -35,14 +35,21 @@
 
 // Clauses
 include::sections/00-preface.adoc[]
+
 include::sections/01-scope.adoc[]
+
 include::sections/02-terms_and_definitions.adoc[]
+
 include::sections/03-references.adoc[]
 
 // Add clause files as needed
+
 include::sections/04-architecture.adoc[]
+
 include::sections/05-results.adoc[]
+
 include::sections/06-discussion.adoc[]
+
 include::sections/07-conclusions.adoc[]
 
 ////
@@ -55,5 +62,7 @@ Add annex files as needed
 Revision History should be the last annex before the Bibliography
 Bibliography should be the last annex
 ////
+
 include::sections/ah-revision-history.adoc[]
+
 include::sections/az-bibliography.adoc[]
