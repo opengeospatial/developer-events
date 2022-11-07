@@ -105,8 +105,8 @@ The way the information is represented may differ, but in general there is a str
 
 However, it would be good to revisit the ".." (based on ISO 8601) vs `null`` representation for unbounded interval ends:
 
-* OGC API Features uses `null`` in JSON interval arrays in the temporal extents of a Collection resource.
-* OGC API Features uses `..` in the "datetime" query parameter since the parameter uses the ISO 8601 interval text encoding.
+* OGC API - Features uses `null`` in JSON interval arrays in the temporal extents of a Collection resource.
+* OGC API - Features uses `..` in the "datetime" query parameter since the parameter uses the ISO 8601 interval text encoding.
 * CQL2 Text and CQL2 JSON currently use `".."`. Earlier this was `null` in CQL2 JSON, but was changed to align with the CQL2 Text.
 * JSON-FG also used `null`, but changed to `".."` to align with CQL2 JSON.
 
@@ -123,5 +123,5 @@ Links and associations are a key part of a record in OGC API Records and of a ST
 * There was agreement to work on an extension to CQL2 that supports queryables that have objects and arrays as values. CQL2 currently has support for arrays, but only with simple values (string, number, boolean).
 * This will be required for "links", but will also be needed for other cases including querying the "theme" property in Records or the "assets" member in STAC.
 * The property with structure like "links", "theme" or "assets" would be published as a queryable with their schema.
-* This is complementary to the approach to define a queryable that is not directly represented as a feature property in the response to make filtering data structures like "assets" simpler as described in OGC API Features - Part 3: Filtering.
+* This is complementary to the approach to define a queryable that is not directly represented as a feature property in the response to make filtering data structures like "assets" simpler as described in OGC API - Features - Part 3: Filtering.
 * The OGC API Records SWG should identify the requirements from the perspective of OGC API Records. Afterwards, the discussion should be moved to the Features API where the CQL2 extension should be drafted.

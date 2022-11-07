@@ -18,7 +18,7 @@ The sprint participants also made the following recommendations for things that 
 * Outreach for JSON-FG
 * Code Sprint for designing profiles of JSON-FG for different communities of interest
 * Documentation of the different roles of catalogues and API, as well as guidance on when to use them
-* Code Sprint on versioning, possibly combining an OGC API Features Part 4 with OGC API Records
+* Code Sprint on versioning, possibly combining an http://docs.ogc.org/DRAFTS/20-002.html[OGC API - Features - Part 4] with http://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records]
 * Exploring how to move GeoDCAT forward within OGC
 
 It is envisaged that the SWGs will consider the above-listed recommendations for future work items.

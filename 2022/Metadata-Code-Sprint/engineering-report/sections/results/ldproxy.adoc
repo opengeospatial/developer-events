@@ -27,7 +27,7 @@ The request fetches three airports as GeoJSON in the default coordinate referenc
 curl "https://demo.ldproxy.net/zoomstack/collections/airports/items?limit=3" -H "accept: application/geo+json" -o demo.geo.json
 ----
 
-The response consists of the standard GeoJSON response with additional members in the feature collection object specified by OGC API Features ("numberReturned" and "timeStamp"):
+The response consists of the standard GeoJSON response with additional members in the feature collection object specified by OGC API - Features ("numberReturned" and "timeStamp"):
 
 [source,json]
 ----
