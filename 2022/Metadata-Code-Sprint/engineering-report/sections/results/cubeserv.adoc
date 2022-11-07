@@ -12,9 +12,9 @@ its catalogue to:
 
 By default the CubeWerx catalogue will generate a https://docs.ogc.org/DRAFTS/20-004.html#clause-record-core[catalogue record] as defined in the https://docs.ogc.org/DRAFTS/20-004.html[DRAFT OGC API - Records - Part 1: Core] specification.
 
-During the code sprint, CubeWerx modified the generated record to include the changes discusses in the <<stac-harmonization-lessons, STAC harmonization lessons>>.  Specifically, previously-defined fields `created` and `updated` were removed from the `properties` section of the record and instead added to the `link` structure.  
+During the code sprint, CubeWerx modified the generated record to include the changes discussed in the <<stac-harmonization-lessons, STAC harmonization lessons>>.  Specifically, previously-defined fields `created` and `updated` were removed from the `properties` section of the record and instead added to the `link` structure.
 
-The following examples illustrates the current structure of a record from the
+The following examples illustrate the current structure of a record from the
 CubeWerx catalogue:
 
 [source,json]
@@ -66,7 +66,7 @@ CubeWerx catalogue:
           "created": "2022-01-11T11:00:53Z"
         },
         {
-          "href": "s3://sentinel-s1-l1c/GRD/2022/1/11/IW/DV/S1A_IW_GRDH_1SDV_20220111T110053_20220111T110122_041412_04EC8F_56A0/preview/map-overlay.kml",  
+          "href": "s3://sentinel-s1-l1c/GRD/2022/1/11/IW/DV/S1A_IW_GRDH_1SDV_20220111T110053_20220111T110122_041412_04EC8F_56A0/preview/map-overlay.kml",
           "rel": "ogc:overlay"
         },
         {
@@ -142,7 +142,7 @@ CubeWerx catalogue:
     }
 ----
 
-Notice that the previously defined `recordCreated` member is now simple called `created` (with a value of "2022-09-15T09:17:34Z").  The previously defined `created` property has now been moved to the links with `rel=ogc:data` that point to the data products described by the record.
+Notice that the previously defined `recordCreated` member is now simply called `created` (with a value of "2022-09-15T09:17:34Z").  The previously defined `created` property has now been moved to the links with `rel=ogc:data` that point to the data products described by the record.
 
 NOTE: The CubeWerx server uses https://www.w3.org/TR/curie/[CURIES] (`ogc:data`, `ogc:overlay`, `ogc:product-preview`, `ogc:quickview`, `ogc:thumbnail`) for link relations that closely match the file relationships that exist within a Sentinel S1A product.  However, a set of link relations relevant to Earth observation imagery should be defined within the OGC.
 
@@ -150,7 +150,7 @@ NOTE: The CubeWerx server uses https://www.w3.org/TR/curie/[CURIES] (`ogc:data`,
 
 ===== Introduction
 
-The natural way of populating a catalogue though the API would be to use the https://docs.ogc.org/DRAFTS/20-002.html[OGC API - Features - Part 4: Create, Replace, Update and Delete] specification.  This approach however puts a heavy burden on the client to know exactly how to map metadata about the incoming resource into a https://docs.ogc.org/DRAFTS/20-004.html#clause-record-core[catalogue record].
+The natural way of populating a catalogue through the API would be to use the https://docs.ogc.org/DRAFTS/20-002.html[OGC API - Features - Part 4: Create, Replace, Update and Delete] specification.  This approach however puts a heavy burden on the client to know exactly how to map metadata about the incoming resource into a https://docs.ogc.org/DRAFTS/20-004.html#clause-record-core[catalogue record].
 
 The harvest API, as described in this section, attempts to shift this burden from the client to the server.  Rather than the client having to read the resource to be described in the catalogue and figure out how to map its metadata to a https://docs.ogc.org/DRAFTS/20-004.html#clause-record-core[catalogue record], the server reads the resource and creates (or updates) one or more new records.
 
@@ -169,7 +169,7 @@ The harvest API defined during the code sprint defines the following endpoint:
 |                                   |DELETE |Delete a harvest request |
 |===
 
-The harvest API reuses the `/jobs/{jobID}` endpoint defined in the https://docs.ogc.org/is/18-062r2/18-062r2.html#toc33[OGC API - Processes - Part 1: Core] to provide the status on an asynchronously executing harvest request.  The following table summarizes the behaviour:
+The harvest API reuses the `/jobs/{jobID}` endpoint defined in the https://docs.ogc.org/is/18-062r2/18-062r2.html#toc33[OGC API - Processes - Part 1: Core] to provide the status on an asynchronously executing harvest request.  The following table summarizes the behavior:
 
 [cols="20,5,55,20",options="header"]
 |===
@@ -184,7 +184,7 @@ The following table defines the parameters of a harvest request:
 
 [cols="20,10,15,55",options="header"]
 |===
-|Parameter |Requirement |Type| Description 
+|Parameter |Requirement |Type| Description
 |sources |Mandatory |URI |Reference(s) to the resource(s) to be harvested.
 |harvestInterval |Optional |Period/Interval |Reharvest interval
 |responseHandlers |Optional |URI |List of callbacks for asynchronous notifications.
@@ -238,7 +238,7 @@ NOTE: A re-harvest based on the `harvestInterval` should make use of conditional
    |  Content-Type: application/json                                 |
    |  Location: </collections/{collectionId}/harvest/hid007>         |
    |                                                                 |
-   |  {                                                              | 
+   |  {                                                              |
    |    "type": "FeatureCollection",                                 |
    |    .                                                            |
    |    .                                                            |
@@ -300,7 +300,7 @@ NOTE: A harvest may result in more than one record being created and that is why
    |  Prefer-Accept: ...                                             |
 
    |  Location: </collections/{collectionId}/harvest/hid007>         |
-   |  Link: <jobs/1013>, rel=monitor                                 | 
+   |  Link: <jobs/1013>, rel=monitor                                 |
    |<================================================================|
 ----
 
@@ -328,7 +328,7 @@ NOTE: A harvest may result in more than one record being created and that is why
    |<================================================================|
 ----
 
-.Example 3: Get the list of harvest requests (the harvest trail).  
+.Example 3: Get the list of harvest requests (the harvest trail).
 
 ----
  CLIENT                                                            SERVER
@@ -359,7 +359,7 @@ NOTE: A harvest may result in more than one record being created and that is why
    |<================================================================|
 ----
 
-NOTE: The correlation between a harvest request and the resulting record(s) is advertised via the "item" link(s).  The link to the resulting record(s) could also be a query if the number of resulting records is large.  That would likely require a different rel (`data` perhaps). 
+NOTE: The correlation between a harvest request and the resulting record(s) is advertised via the "item" link(s).  The link to the resulting record(s) could also be a query if the number of resulting records is large.  That would likely require a different rel (`data` perhaps).
 
 ===== Demonstration
 
