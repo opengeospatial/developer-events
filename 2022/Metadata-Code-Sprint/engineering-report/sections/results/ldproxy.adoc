@@ -4,7 +4,7 @@ Before the Code Sprint, ldproxy supported the draft version of JSON-FG from Janu
 
 In the Code Sprint, the implementation was updated by the participants from interactive instruments to support version 0.1, released just before the Code Sprint. In addition, support for the Polyhedron geometry type and for the `compatibility=geojson` media type parameter was added.
 
-The updated software was deployed on two servers for use by other participants:
+The updated software was deployed on two servers for use by other participants, as follows.
 
 * The main demonstration deployment of ldproxy (demo.ldproxy.net), which includes among others the https://www.ordnancesurvey.co.uk/business-government/products/open-zoomstack[Ordnance Survey Open Zoomstack] dataset.
 * A deployment from Testbed 18 with CityGML building data from the City of Montreal.

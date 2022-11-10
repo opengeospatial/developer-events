@@ -9,16 +9,16 @@ The code sprint facilitated the development and testing of prototype implementat
 
 The sprint participants made the following recommendations for future innovation work items:
 
-* Initiatives to facilitate implementation of JSON-FG (e.g. 3D, cadastral data, etc)
-* Initiatives to facilitate implementation of catalogues
-* Prototyping of tools for creating metadata (e.g. the automated STAC metadata crawler demonstrated during the sprint)
+* Initiatives to facilitate implementation of JSON-FG (e.g., 3D, cadastral data, etc);
+* Initiatives to facilitate implementation of catalogues; and
+* Prototyping of tools for creating metadata (e.g., the automated STAC metadata crawler demonstrated during the sprint),
 
 The sprint participants also made the following recommendations for things that the SWGs should consider:
 
-* Outreach for JSON-FG
-* Code Sprint for designing profiles of JSON-FG for different communities of interest
-* Documentation of the different roles of catalogues and API, as well as guidance on when to use them
-* Code Sprint on versioning, possibly combining an http://docs.ogc.org/DRAFTS/20-002.html[OGC API - Features - Part 4] with http://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records]
-* Exploring how to move GeoDCAT forward within OGC
+* Outreach for JSON-FG;
+* Code Sprint for designing profiles of JSON-FG for different communities of interest;
+* Documentation of the different roles of catalogues and API, as well as guidance on when to use them;
+* Code Sprint on versioning, possibly combining an http://docs.ogc.org/DRAFTS/20-002.html[OGC API - Features - Part 4] with http://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records]; and
+* Exploring how to move GeoDCAT forward within OGC.
 
 It is envisaged that the SWGs will consider the above-listed recommendations for future work items.

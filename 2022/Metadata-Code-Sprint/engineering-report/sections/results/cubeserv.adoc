@@ -2,11 +2,10 @@
 
 ==== Introduction
 
-CubeWerx has an implementation of a https://docs.ogc.org/DRAFTS/20-004.html#clause-searchable-catalogue[searchable catalogue] and during the code spint updated
-its catalogue to:
+CubeWerx has an implementation of a https://docs.ogc.org/DRAFTS/20-004.html#clause-searchable-catalogue[searchable catalogue] and during the code spint updated its catalogue to:
 
-* increase interoperability with STAC
-* develop a harvesting API
+* increase interoperability with STAC; and
+* develop a harvesting API.
 
 ==== STAC harmonization
 
@@ -154,7 +153,7 @@ The natural way of populating a catalogue through the API would be to use the ht
 
 The harvest API, as described in this section, attempts to shift this burden from the client to the server.  Rather than the client having to read the resource to be described in the catalogue and figure out how to map its metadata to a https://docs.ogc.org/DRAFTS/20-004.html#clause-record-core[catalogue record], the server reads the resource and creates (or updates) one or more new records.
 
-Consider the example of a Sentinel S1A imagery product.  Using https://docs.ogc.org/DRAFTS/20-002.html[Part 4] a client would need to scan the Sentinel product directory, figure out which files contain the relevant metadata, etc and then map that metadata to one or more catalogue records.  Using the harvest API, the client simply provides the server with a reference to the resource and the server does the rest of the heavy lifting required to create a record(s) that describes the resource.
+Consider the example of a Sentinel S1A imagery product. Using https://docs.ogc.org/DRAFTS/20-002.html[Part 4] a client would need to scan the Sentinel product directory, figure out which files contain the relevant metadata, etc and then map that metadata to one or more catalogue records.  Using the harvest API, the client simply provides the server with a reference to the resource and the server does the rest of the heavy lifting required to create a record(s) that describes the resource.
 
 ===== API definition
 
@@ -205,7 +204,7 @@ The following skeleton JSON document illustrates a JSON harvest request.
 
 NOTE: The `responseHandlers` parameter was inherited from CSW 3.0.  It might be better to define a new OGC header for specifying response handlers OR adding a custom parameter to the https://www.rfc-editor.org/rfc/rfc7240[Prefer HTTP header].
 
-NOTE: A re-harvest based on the `harvestInterval` should make use of conditional headers to only reharvest if something has changed (i.e. use `Last-Modified`, `If-Modified-Since`).
+NOTE: A re-harvest based on the `harvestInterval` should make use of conditional headers to only reharvest if something has changed (i.e., use `Last-Modified`, `If-Modified-Since`).
 
 ===== Examples
 

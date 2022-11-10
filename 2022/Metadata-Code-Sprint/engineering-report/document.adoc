@@ -10,9 +10,9 @@
 :comment: ### Date on which the standard was updated; mandatory
 :received-date: 2022-10-17
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
-:issued-date: 2029-06-12
+:issued-date: 2022-11-02
 :comment: ### Date on which the standard was published; mandatory
-:published-date: 2029-06-12
+:published-date: YYYY-MM-DD
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
 :external-id: http://www.opengis.net/doc/PER/ogc-iso-codesprint2022
 :comment: ### Author one

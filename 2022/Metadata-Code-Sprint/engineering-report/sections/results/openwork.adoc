@@ -8,8 +8,8 @@ One of the challenges of assisting and advising organizations in creating, manag
 
 Other sprint goals included to:
 
-*	Examine the possibility of creating a JSON encoding of ISO 19115-1
-*	Create Crosswalks between ISO 19115-1, STAC and OGC API Records
+*	Examine the possibility of creating a JSON encoding of ISO 19115-1; and
+*	Create Crosswalks between ISO 19115-1, STAC and OGC API Records.
 
 ==== Day 1
 
@@ -33,9 +33,9 @@ By the end of the evening, OpenWork had altered the YAML schema to support the i
 
 On Day 2, OpenWork focused on creating a Record document conforming to the OGC API - Records candidate standard to test the guidance that OpenWork had developed the previous evening. Several changes ensued, mainly relating to the ability to provide resolvable URIs to both the concepts and their controlled vocabularies. There is a need for more work and testing.
 
-Discussions clarified the roles that traditional catalogues, OGC API - Records and STAC serve. These can be summarized as follows:
+Discussions clarified the roles that traditional catalogues, OGC API - Records and STAC serve. These can be summarized as follows.
 
-*	STAC is most appropriate for fine-level metadata - particularly cataloguing scenes in a collection of images to allow their discovery
+*	STAC is most appropriate for fine-level metadata - particularly cataloguing scenes in a collection of images to allow their discovery.
 *	Part 1 (the Core part) of OGC API — Records focuses on the general discovery of spatial resources of any type. Because of this, it may not be useful or appropriate to capture in the Core part of OGC API — Records any ISO 19115-1 metadata that exists for purposes other than discovery. However, future extensions of OGC API — Records may support purposes other than discovery.
 *	ISO 19115-1 exists to document and manage a resource fully. Provenance, structural, informative, administrative and other metadata elements exist in this standard catalogue. This resource is most useful after discovery.
 

@@ -15,9 +15,9 @@ This section describes the approved and draft standards implemented during the c
 
 ==== OGC API - Records
 
-The https://ogcapi.ogc.org/records[OGC API - Records] candidate standard provides discovery and access to catalogues of metadata records about resources such as features, coverages, tiles / maps, models, assets, services or widgets. The candidate standard enables the discovery of geospatial resources by standardizing the way collections of descriptive information about the resources (metadata) are exposed. The candidate standard also enables the discovery and sharing of related resources that may be referenced from geospatial resources or their metadata by standardizing the way all kinds of records are exposed and managed. OGC API - Records can be considered the future successor to the widely implemented Catalogue Services for the Web (CSW) standard.
+The https://ogcapi.ogc.org/records[OGC API - Records] candidate standard provides discovery and access to catalogues of metadata records about resources such as features, coverages, tiles / maps, models, assets, services, or widgets. The candidate standard enables the discovery of geospatial resources by standardizing the way collections of descriptive information about the resources (metadata) are exposed. The candidate standard also enables the discovery and sharing of related resources that may be referenced from geospatial resources or their metadata by standardizing the way all kinds of records are exposed and managed. OGC API - Records can be considered the future successor to the widely implemented Catalogue Services for the Web (CSW) standard.
 
-The candidate standard specifies the information content of a record. A record contains summary descriptive information about a resource that a provider wishes to make discoverable. Records are organized into collections. A record represents resource characteristics that can be presented for evaluation and further processing by both humans and software. Examples of resources include: a data collection, a service, a process, a style, a code list, an Earth observation asset, a machine learning model, a code list and so on.
+The candidate standard specifies the information content of a record. A record contains summary descriptive information about a resource that a provider wishes to make discoverable. Records are organized into collections. A record represents resource characteristics that can be presented for evaluation and further processing by both humans and software. Examples of resources include: a data collection, a service, a process, a style, a code list, an Earth observation asset, a machine learning model, a code list, and so on.
 
 
 ==== JSON-FG
@@ -42,8 +42,8 @@ ISO 19115 Standards define the schema required for describing geographic informa
 
 The individual parts of ISO 19115 that each serve as an approved standard include:
 
-* ISO 19115-1:2014 defines the schema required for describing geographic information and services by means of metadata.
-* ISO 19115-2:2019 extends ISO 19115-1:2014 by defining the schema required for an enhanced description of the acquisition and processing of geographic information, including imagery.
+* ISO 19115-1:2014 defines the schema required for describing geographic information and services by means of metadata;
+* ISO 19115-2:2019 extends ISO 19115-1:2014 by defining the schema required for an enhanced description of the acquisition and processing of geographic information, including imagery; and
 * ISO/TS 19115-3:2016 defines an integrated XML implementation of ISO 19115‑1, ISO 19115‑2, and concepts from ISO/TS 19139.
 
 
@@ -54,15 +54,15 @@ The SpatioTemporal Asset Catalog (STAC) is a specification that offers a languag
 
 The goals for the STAC part of the code sprint were:
 
-* Alignment with OGC API - Records - Content Model and/or Extensions
-* Alignment with other standards, for example GeoDCAT and/or JSON-LD
-* Collection Search
-* JSON-FG vs. STAC projection extension
-* A possible push towards STAC API 1.0.0 release
-* Advance the STAC ecosystem (e.g. PySTAC, QGIS plugin, ...)
-* Look through the issue trackers, e.g. https://stacindex.org/ecosystem[ecosystem], https://github.com/stac-utils[stac-utils], and https://github.com/stactools-packages[stactools-packages]
+* Alignment with OGC API - Records - Content Model and/or Extensions;
+* Alignment with other standards, for example GeoDCAT and/or JSON-LD;
+* Collection Search;
+* JSON-FG vs. STAC projection extension;
+* A possible push towards STAC API 1.0.0 release;
+* Advance the STAC ecosystem (e.g., PySTAC, QGIS plugin, ...); and
+* Look through the issue trackers, e.g., https://stacindex.org/ecosystem[ecosystem], https://github.com/stac-utils[stac-utils], and https://github.com/stactools-packages[stactools-packages].
 
-STAC is a multi-part specification that includes the following constituent parts:
+STAC is a multi-part specification that includes the following constituent parts.
 
 * https://github.com/radiantearth/stac-spec/blob/master/item-spec/item-spec.md[STAC Item] is a representation of a single spatio-temporal asset, encoded as a GeoJSON feature with datetime and links properties.
 *  https://github.com/radiantearth/stac-spec/blob/master/catalog-spec/catalog-spec.md[STAC Catalog] is a JSON-encoded representation of links that provides a structure for organizing and browsing STAC Items.

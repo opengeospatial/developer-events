@@ -18,7 +18,7 @@ The subject of this Engineering Report (ER) is a code sprint that was held from 
 
 Over the past two decades, standards such as ISO 19115:2003 and the OGC Catalogue Services for the Web (CSW) have been integrated into several Spatial Data Infrastructure (SDI) initiatives at national and international levels. These standards leveraged the Extensible Markup Language (XML) which, at the time, was the primary encoding for data exchange across much of Information Technology. In recent times, however, the increasing use of JavaScript Object Notation (JSON) and the uptake of Web Application Programming Interface (API) technologies has meant that modernization of metadata and catalogue approaches is necessary.
 
-In November 2021, the Open Geospatial Consortium (OGC) and the International Organization for Standardization (ISO) held their https://github.com/opengeospatial/developer-events/wiki/November-2021-Geospatial-API-Code-Sprint[first joint code sprint]. The success of that first joint code sprint provided the foundation for a second joint code sprint. This Engineering Report (ER) summarizes the main achievements of the second joint code sprint, conducted between September 14th and 16th, 2022. The https://developer.ogc.org/sprints/18/[second joint code sprint], named the 2022 Joint OGC and ISO Code Sprint - The Metadata Code Sprint, served to accelerate the support of open geospatial standards that relate to geospatial metadata and catalogues. The code sprint was sponsored by Ordnance Survey (OS) at the Gold-level and Geonovum at the Silver-level. The code sprint was held as a hybrid event, with the face-to-face element hosted at the Geovation Hub in London, United Kingdom.
+In November 2021, OGC and ISO held their https://github.com/opengeospatial/developer-events/wiki/November-2021-Geospatial-API-Code-Sprint[first joint code sprint]. The success of that first joint code sprint provided the foundation for a second joint code sprint. This ER summarizes the main achievements of the second joint code sprint, conducted between September 14th and 16th, 2022. The https://developer.ogc.org/sprints/18/[second joint code sprint], named the 2022 Joint OGC and ISO Code Sprint - The Metadata Code Sprint, served to accelerate the support of open geospatial standards that relate to geospatial metadata and catalogues. The code sprint was sponsored by Ordnance Survey (OS) at the Gold-level and Geonovum at the Silver-level. The code sprint was held as a hybrid event, with the face-to-face element hosted at the Geovation Hub in London, United Kingdom.
 
 The code sprint focused on the following group of specifications:
 
@@ -29,31 +29,31 @@ The code sprint focused on the following group of specifications:
 
 The OGC is an international consortium of more than 500 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR - Findable, Accessible, Interoperable, and Reusable. The consortium consists of Standards Working Groups (SWGs) that have responsibility for designing a candidate standard prior to approval as an OGC Standard and for making revisions to an existing OGC Standard. The sprint objectives for the SWGs were to:
 
-* Develop prototype implementations of OGC Standards, including implementations of draft OGC Application Programming Interface (API) Standards
-* Test the prototype implementations
-* Provide feedback to the Editor about what worked and what did not
-* Provide feedback about the specification document
+* Develop prototype implementations of OGC Standards, including implementations of draft OGC Application Programming Interface (API) Standards;
+* Test the prototype implementations;
+* Provide feedback to the Editor about what worked and what did not; and
+* Provide feedback about the specification document.
 
 Technical Committee 211 (TC 211) of ISO is responsible for the development and publication of standards that relate to geographic information. As with other ISO committees, TC 211 consists of member nations, as well as liaison partner organizations. TC 211 and OGC have a liaison partnership that enables the organizations to participate in each other's activities and also to collaborate on standards development initiatives. The sprint objectives for ISO/TC 211 were to:
 
-* Support the development of ISO Standards
-* Fix open issues
-* Develop new features
-* Encourage the implementation of ISO Standards
+* Support the development of ISO Standards;
+* Fix open issues;
+* Develop new features; and
+* Encourage the implementation of ISO Standards.
 
 This engineering report makes the following recommendations for future innovation work items:
 
-* Initiatives to facilitate implementation of JSON-FG (e.g. three-dimensional (3D) data, cadastral data, etc.)
-* Initiatives to facilitate implementation of catalogues
-* Prototyping of tools for creating metadata (e.g. the automated STAC metadata crawler demonstrated during the sprint)
+* Initiatives to facilitate implementation of JSON-FG (e.g., three-dimensional (3D) data, cadastral data, etc.);
+* Initiatives to facilitate implementation of catalogues; and
+* Prototyping of tools for creating metadata (e.g., the automated STAC metadata crawler demonstrated during the sprint).
 
 The engineering report also makes the following recommendations for things that the Standards Working Groups should consider:
 
-* Outreach for promoting JSON-FG
-* Code Sprint for designing profiles of JSON-FG for different communities of interest
-* Documentation of the different roles of catalogues and API, as well as guidance on when to use them
-* Code Sprint on versioning, possibly involving both OGC API - Records and OGC API - Features
-* Exploring how to move GeoDCAT forward within OGC
+* Outreach for promoting JSON-FG;
+* Code Sprint for designing profiles of JSON-FG for different communities of interest;
+* Documentation of the different roles of catalogues and API, as well as guidance on when to use them;
+* Code Sprint on versioning, possibly involving both OGC API - Records and OGC API - Features; and
+* Exploring how to move GeoDCAT forward within OGC.
 
 == Submitters
 
