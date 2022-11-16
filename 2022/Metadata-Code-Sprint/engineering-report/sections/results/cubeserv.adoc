@@ -1,7 +1,420 @@
 === MariaDB CubeWerx CubeSERV
 
-The participants from CubeWerx worked on their implementation of OGC API – Records and the interoperability with STAC. A screenshot from their prototype implementation is shown in the figure below.
+==== Introduction
+
+CubeWerx has an implementation of a https://docs.ogc.org/DRAFTS/20-004.html#clause-searchable-catalogue[searchable catalogue] and during the code spint updated its catalogue to:
+
+* increase interoperability with STAC; and
+* develop a harvesting API.
+
+==== STAC harmonization
+
+By default the CubeWerx catalogue will generate a https://docs.ogc.org/DRAFTS/20-004.html#clause-record-core[catalogue record] as defined in the https://docs.ogc.org/DRAFTS/20-004.html[DRAFT OGC API - Records - Part 1: Core] specification.
+
+During the code sprint, CubeWerx modified the generated record to include the changes discussed in the <<stac-harmonization-lessons, STAC harmonization lessons>>.  Specifically, previously-defined fields `created` and `updated` were removed from the `properties` section of the record and instead added to the `link` structure.
+
+The following examples illustrate the current structure of a record from the
+CubeWerx catalogue:
+
+[source,json]
+----
+    {
+      "id": "urn:uuid:00000c8e-d493-11ec-a1bc-43c1b3ebff8b",
+      "type": "Feature",
+      "created": "2022-09-15T09:17:34Z",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[ -80.738129, -0.875548 ], [ -78.135155, -0.875548 ],
+                         [ -78.135155,  1.346873 ], [ -80.738129,  1.346873 ],
+                         [ -80.738129, -0.875548 ], [ -80.738129, -0.875548 ]]]
+      },
+      "properties": {
+        "type": "urn:cw:def:ebRIM-ObjectType:CubeWerx:DataProduct",
+        "title": "SENTINEL-1 Product (S1A_IW_GRDH_1SDV_20220111T110053_20220111T110122_041412_04EC8F_56A0)",
+        "crs": "http://www.opengis.net/def/crs/EPSG/0/4326",
+        "absoluteOrbitNumber": 41412,
+        "missionDataTakeId": "322703",
+        "missionId": "S1A",
+        "mode": "IW",
+        "passDirection": [
+          "Descending",
+          "Descending"
+        ],
+        "path": "GRD/2022/1/11/IW/DV/S1A_IW_GRDH_1SDV_20220111T110053_20220111T110122_041412_04EC8F_56A0",
+        "polarization": "DV",
+        "processingLevel": 1,
+        "productClass": "standard",
+        "productId": "S1A_IW_GRDH_1SDV_20220111T110053_20220111T110122_041412_04EC8F_56A0",
+        "productType": "GRD",
+        "productUniqueIdentifier": "56A0",
+        "resolutionClass": "high",
+        "s3Ingestion": "2022-01-11T14:42:50.970Z",
+        "sciHubIngestion": "2022-01-11T14:00:07.747Z",
+        "startTime": "2022-01-11T11:00:53Z",
+        "stopTime": "2022-01-11T11:01:22Z"
+      },
+      "links": [
+        {
+          "href":"s3://sentinel-s1-l1c/GRD/2022/1/11/IW/DV/S1A_IW_GRDH_1SDV_20220111T110053_20220111T110122_041412_04EC8F_56A0/measurement/iw-vv.tiff",
+          "rel": "ogc:data",
+          "created": "2022-01-11T11:00:53Z"
+        },
+        {
+          "href":"s3://sentinel-s1-l1c/GRD/2022/1/11/IW/DV/S1A_IW_GRDH_1SDV_20220111T110053_20220111T110122_041412_04EC8F_56A0/measurement/iw-vh.tiff",
+          "rel": "ogc:data",
+          "created": "2022-01-11T11:00:53Z"
+        },
+        {
+          "href": "s3://sentinel-s1-l1c/GRD/2022/1/11/IW/DV/S1A_IW_GRDH_1SDV_20220111T110053_20220111T110122_041412_04EC8F_56A0/preview/map-overlay.kml",
+          "rel": "ogc:overlay"
+        },
+        {
+          "href": "s3://sentinel-s1-l1c/GRD/2022/1/11/IW/DV/S1A_IW_GRDH_1SDV_20220111T110053_20220111T110122_041412_04EC8F_56A0/preview/product-preview.html",
+          "rel": "ogc:product-preview"
+        },
+        {
+          "href": "s3://sentinel-s1-l1c/GRD/2022/1/11/IW/DV/S1A_IW_GRDH_1SDV_20220111T110053_20220111T110122_041412_04EC8F_56A0/preview/quick-look.png",
+          "rel": "ogc:quickview"
+        },
+        {
+          "href": "https://www.pvretano.com/cubewerx/cubeserv?service=WRS&version=3.0&catalogueId=sentinelcat&request=GetRepositoryItem&id=urn%3Auuid%3A00000c8e-d493-11ec-a1bc-43c1b3ebff8b&repoId=3337",
+          "rel": "ogc:thumbnail"
+        },
+        {
+          "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues",
+          "rel": "service",
+          "title": "Link to service ..."
+        },
+        {
+          "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/sentinel1cat",
+          "rel": "collection",
+          "title": "Link to collection..."
+        },
+        {
+          "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/sentinel1cat/items/urn%3Auuid%3A00000c8e-d493-11ec-a1bc-43c1b3ebff8b?f=json&s=ogcapirecord",
+          "rel": "self",
+          "title": "Link to this record..."
+        },
+        {
+          "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/sentinel1cat/items/urn%3Auuid%3A00000c8e-d493-11ec-a1bc-43c1b3ebff8b?f=xml&s=ogcapirecord",
+          "rel": "alternate",
+          "type": "application/xml",
+          "title": "Link to record as \"OGC API Record\" encoded as application/xml"
+        },
+        {
+          "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/sentinel1cat/items/urn%3Auuid%3A00000c8e-d493-11ec-a1bc-43c1b3ebff8b?f=html&s=ogcapirecord",
+          "rel": "alternate",
+          "type": "text/html",
+          "title": "Link to record as \"OGC API Record\" encoded as text/html"
+        },
+        {
+          "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/sentinel1cat/items/urn%3Auuid%3A00000c8e-d493-11ec-a1bc-43c1b3ebff8b?f=xml&s=cswrecord30",
+          "rel": "alternate",
+          "type": "application/xml",
+          "title": "Link to record as \"CSW Record v3.0\" encoded as application/xml"
+        },
+        {
+          "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/sentinel1cat/items/urn%3Auuid%3A00000c8e-d493-11ec-a1bc-43c1b3ebff8b?f=xml&s=cswrecord20",
+          "rel": "alternate",
+          "type": "application/xml",
+          "title": "Link to record as \"CSW Record v2.X\" encoded as application/xml"
+        },
+        {
+          "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/sentinel1cat/items/urn%3Auuid%3A00000c8e-d493-11ec-a1bc-43c1b3ebff8b?f=xml&s=ebrim",
+          "rel": "alternate",
+          "type": "application/xml",
+          "title": "Link to record as \"ebRIM\" encoded as application/xml"
+        },
+        {
+          "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/sentinel1cat/items/urn%3Auuid%3A00000c8e-d493-11ec-a1bc-43c1b3ebff8b?f=xml&s=atom",
+          "rel": "alternate",
+          "type": "application/xml",
+          "title": "Link to record as \"ATOM\" encoded as application/xml"
+        },
+        {
+          "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/sentinel1cat/items/urn%3Auuid%3A00000c8e-d493-11ec-a1bc-43c1b3ebff8b?f=xml&s=rss",
+          "rel": "alternate",
+          "type": "application/xml",
+          "title": "Link to record as \"RSS\" encoded as application/xml"
+        }
+      ]
+    }
+----
+
+Notice that the previously defined `recordCreated` member is now simply called `created` (with a value of "2022-09-15T09:17:34Z").  The previously defined `created` property has now been moved to the links with `rel=ogc:data` that point to the data products described by the record.
+
+NOTE: The CubeWerx server uses https://www.w3.org/TR/curie/[CURIES] (`ogc:data`, `ogc:overlay`, `ogc:product-preview`, `ogc:quickview`, `ogc:thumbnail`) for link relations that closely match the file relationships that exist within a Sentinel S1A product.  However, a set of link relations relevant to Earth observation imagery should be defined within the OGC.
+
+==== Harvest API
+
+===== Introduction
+
+The natural way of populating a catalogue through the API would be to use the https://docs.ogc.org/DRAFTS/20-002.html[OGC API - Features - Part 4: Create, Replace, Update and Delete] specification.  This approach however puts a heavy burden on the client to know exactly how to map metadata about the incoming resource into a https://docs.ogc.org/DRAFTS/20-004.html#clause-record-core[catalogue record].
+
+The harvest API, as described in this section, attempts to shift this burden from the client to the server.  Rather than the client having to read the resource to be described in the catalogue and figure out how to map its metadata to a https://docs.ogc.org/DRAFTS/20-004.html#clause-record-core[catalogue record], the server reads the resource and creates (or updates) one or more new records.
+
+Consider the example of a Sentinel S1A imagery product. Using https://docs.ogc.org/DRAFTS/20-002.html[Part 4] a client would need to scan the Sentinel product directory, figure out which files contain the relevant metadata, etc and then map that metadata to one or more catalogue records.  Using the harvest API, the client simply provides the server with a reference to the resource and the server does the rest of the heavy lifting required to create a record(s) that describes the resource.
+
+===== API definition
+
+The harvest API defined during the code sprint defines the following endpoint:
+
+[cols="20,5,55,20",options="header"]
+|===
+|Endpoint |Method |Description | Body or Response
+|/collections/{catalogueId}/harvest |GET |Get a list of harvest requests. |Response is an array of harvest requests.
+|                                   |PUT |Modify a harvest request. |Body contains a harvest request.
+|                                   |POST |Submit a harvest request. |Body contains a harvest request, response is a brief record.
+|                                   |DELETE |Delete a harvest request |
+|===
+
+The harvest API reuses the `/jobs/{jobID}` endpoint defined in the https://docs.ogc.org/is/18-062r2/18-062r2.html#toc33[OGC API - Processes - Part 1: Core] to provide the status on an asynchronously executing harvest request.  The following table summarizes the behavior:
+
+[cols="20,5,55,20",options="header"]
+|===
+|Endpoint |Method |Description | Body or Response
+|/jobs/{jobID} |GET |Get the status of a harvest job. |Response is statusInfo.yaml.
+|              |DELETE |Cancel/remove a harvest job. |Body is empty.
+|===
+
+===== Harvest request parameters
+
+The following table defines the parameters of a harvest request:
+
+[cols="20,10,15,55",options="header"]
+|===
+|Parameter |Requirement |Type| Description
+|sources |Mandatory |URI |Reference(s) to the resource(s) to be harvested.
+|harvestInterval |Optional |Period/Interval |Reharvest interval
+|responseHandlers |Optional |URI |List of callbacks for asynchronous notifications.
+|links |Optional |URI |Links to related information.
+|===
+
+The following skeleton JSON document illustrates a JSON harvest request.
+
+[source,json]
+----
+  {
+    "harvestInterval": "P1W",
+    "sources": [ {...link...}, {...link...}, ...],
+    "responseHandlers": [ "...", "...", ... ]
+    "links": [ ... ],
+  }
+----
+
+NOTE: The `responseHandlers` parameter was inherited from CSW 3.0.  It might be better to define a new OGC header for specifying response handlers OR adding a custom parameter to the https://www.rfc-editor.org/rfc/rfc7240[Prefer HTTP header].
+
+NOTE: A re-harvest based on the `harvestInterval` should make use of conditional headers to only reharvest if something has changed (i.e., use `Last-Modified`, `If-Modified-Since`).
+
+===== Examples
+
+.Example 1: harvest a resource (sync response)
+
+----
+ CLIENT                                                            SERVER
+   |                                                                 |
+   |  POST /collections/{collectionId}/harvest  HTTP/1.1             |
+   |  Host: www.some-cat-server.com                                  |
+   |  Content-Type: application/json                                 |
+   |  Prefer: respond-async, wait=10, return=minimal                 |
+   |                                                                 |
+   |  {                                                              |
+   |     "harvestInterval": "P1W",                                   |
+   |     "sources": [                                                |
+   |       {                                                         |
+   |         "href": "s3://sentinel-s2-l1c/products/2022/9/15/.../", |
+   |         "type": "..."                                           |
+   |       }                                                         |
+   |     ],                                                          |
+   |     "responseHanders": [                                        |
+   |        "mailto:pvretano@pvretano.com",                          |
+   |        "http://www.some-web-hook.com"                           |
+   |     ]                                                           |
+   |  }                                                              |
+   |================================================================>|
+   |                                                                 |
+   |  HTTP/1.1 200 OK                                                |
+   |  Content-Type: application/json                                 |
+   |  Location: </collections/{collectionId}/harvest/hid007>         |
+   |                                                                 |
+   |  {                                                              |
+   |    "type": "FeatureCollection",                                 |
+   |    .                                                            |
+   |    .                                                            |
+   |    .                                                            |
+   |    "features": [                                                |
+   |      {                                                          |
+   |        "id": "urn:uuid:00029e0c-d530-11ec-8f05-cbee6233d299",   |
+   |        "type": "Feature",                                       |
+   |        "geometry": { ... },                                     |
+   |        "properties": {                                          |
+   |          "type": "data-product",                                |
+   |          "title": "..."                                         |
+   |        },                                                       |
+   |        "links": [                                               |
+   |          {                                                      |
+   |            "href": "http://...",                                |
+   |            "rel": "self"                                        |
+   |          }                                                      |
+   |        ]                                                        |
+   |      },                                                         |
+   |      .                                                          |
+   |      .                                                          |
+   |      .                                                          |
+   |    ]                                                            |
+   |  }                                                              |
+   |<================================================================|
+----
+
+NOTE: A harvest may result in more than one record being created and that is why the response is a collection.
+
+
+.Example 2: Harvest a resource (async response)
+
+----
+ CLIENT                                                            SERVER
+   |                                                                 |
+   |  POST /collections/{collectionId}/harvest  HTTP/1.1             |
+   |  Host: www.some-cat-server.com                                  |
+   |  Content-Type: application/json                                 |
+   |  Prefer: respond-async, wait=10, return=minimal                 |
+   |                                                                 |
+   |  {                                                              |
+   |     "harvestInterval": "P1W",                                   |
+   |     "sources": [                                                |
+   |       {                                                         |
+   |         "href": "s3://sentinel-s2-l1c/products/2022/9/15/.../", |
+   |         "type": "..."                                           |
+   |       }                                                         |
+   |     ],                                                          |
+   |     "responseHanders": [                                        |
+   |        "mailto:pvretano@pvretano.com",                          |
+   |        "http://www.some-web-hook.com"                           |
+   |     ]                                                           |
+   |  }                                                              |
+   |================================================================>|
+   |                                                                 |
+   |  HTTP/1.1 202 Accepted                                          |
+   |  Content-Type: application/json                                 |
+   |  Prefer-Accept: ...                                             |
+
+   |  Location: </collections/{collectionId}/harvest/hid007>         |
+   |  Link: <jobs/1013>, rel=monitor                                 |
+   |<================================================================|
+----
+
+.Example 3: Get the current status of a harvest job
+
+----
+ CLIENT                                                            SERVER
+   |                                                                 |
+   |  GET /jobs/1013                                                 |
+   |  Host: www.some-cat-server.com                                  |
+   |================================================================>|
+   |                                                                 |
+   |  HTTP/1.1 200 OK                                                |
+   |  Content-Type: application/json                                 |
+   |                                                                 |
+   |  {                                                              |
+   |    "jobId": "1013",                                             |
+   |    "status": "running",                                         |
+   |    "type": "harvest",                                           |
+   |    "created": "2022-09-15T06:10:00Z"                            |
+   |    "links": [                                                   |
+   |       {"rel": "monitor", "href": /jobs/1013"}                   |
+   |    ]                                                            |
+   |  }                                                              |
+   |<================================================================|
+----
+
+.Example 3: Get the list of harvest requests (the harvest trail).
+
+----
+ CLIENT                                                            SERVER
+   |                                                                 |
+   |  GET /collections/{catalogueId}/harvest                         |
+   |  Host: www.some-cat-server.com                                  |
+   |================================================================>|
+   |                                                                 |
+   |  HTTP/1.1 200 OK                                                |
+   |  Content-Type: application/json                                 |
+   |                                                                 |
+   |  [                                                              |
+   |    {                                                            |
+   |      "id": "hid007",                                            |
+   |      "harvestInterval": "P1W",                                  |
+   |      "sources": [                                               |
+   |        {                                                        |
+   |          "href": "s3://sentinel-s2-l1c/products/2022/9/15/.../",|
+   |          "type": "..."                                          |
+   |        },                                                       |
+   |      ],                                                         |
+   |      "responseHanders": [                                       |
+   |        "mailto:pvretano@pvretano.com",                          |
+   |        "http://www.some-web-hook.com"                           |
+   |      ]                                                          |
+   |    }                                                            |
+   |  ]                                                              |
+   |<================================================================|
+----
+
+NOTE: The correlation between a harvest request and the resulting record(s) is advertised via the "item" link(s).  The link to the resulting record(s) could also be a query if the number of resulting records is large.  That would likely require a different rel (`data` perhaps).
+
+===== Demonstration
+
+The demonstration at the code sprint consisted of a script that would generate a harvest request and post it to the harvest endpoint of the CubeWerx server.  The code of the script, named `harvest`, was:
+
+[source]
+----
+#!/usr/bin/csh
+
+echo '{"sources":[{"href": "'$1'","type":"SENTINEL1"}]}' > harvest.json
+cwhttp method=POST url='https://pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/sentinel1cat/harvest?pretty=true' content=harvest.json contentType=application/json extraheaders="Accept: text/xml"
+----
+
+The input to the script is an S3 reference to a Sentinel1 product.
+
+The script generates a JSON harvest request and saves it to a temporary file named `harvest.json`.  This file is then posted to the server's harvest endpoint at `https://pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/sentinel1cat/harvest`.
+
+In response to the following invocation:
+
+----
+./harvest s3://sentinel-s1-l1c/GRD/2022/9/16/EW/DH/S1A_EW_GRDM_1SDH_20220916T111355_20220916T111455_045029_056148_189B/
+----
+
+The server generated the following response to the harvest request:
+
+[source]
+----
+HTTP/1.1 200 OK
+Date: Thur, 17 Sep 2022 09:17:35 GMT
+Server: Apache
+Vary: Accept-Language,Origin
+CubeWerx-Suite-Version: 9.5.4
+Content-Disposition: inline; filename="HarvestResult.json"
+Content-Type: application/geo+json
+
+  {
+    "id": "urn:uuid:00000c8e-d493-11ec-a1bc-43c1b3ebff8b",
+    "type": "Feature",
+    "created": "2022-09-15T09:17:34Z",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[[ -80.738129, -0.875548 ], [ -78.135155, -0.875548 ],
+                       [ -78.135155,  1.346873 ], [ -80.738129,  1.346873 ],
+                       [ -80.738129, -0.875548 ], [ -80.738129, -0.875548 ]]]
+    },
+    "properties": {
+      "type": "urn:cw:def:ebRIM-ObjectType:CubeWerx:DataProduct",
+      "title": "SENTINEL-1 Product (S1A_EW_GRDM_1SDH_20220916T111355_20220916T111455_045029_056148_189B)"
+    }
+  }
+----
+
+NOTE: The CubeWerx server will generate a feature collection if more that one record is created in response to a harvest request.
+
+The following is the HTML representation of this complete record:
 
 [[img_cubeserv]]
-.Screenshot of the CubeWerx CubeSERV demo
+.Screenshot of the CubeWerx CubeSERV OGC API - Records demo
 image::../images/cubeserv.png[align="center",width=800]

@@ -9,11 +9,19 @@
 * In some cases, augmented metadata may need to be pushed back to the source.
 * We need to be clear about what we mean when we say "close to the data".
 
+=== Harmonisation between STAC and OGC API Records
 
-=== Harmonisation btwn STAC and OGC API Records
-
-* Modified the create and updated times to match the way STAC does it
-* Extended the Link to include a created and updated
+* Modified the create and updated times to match the way STAC does it.  That is
+  these are the created and updated times that are associated with the record.
+* The created and updated time associated with the resource that the record
+  describes are now part of the `link` structure to match what STAC does with
+  asserts.  The idea is that a record describes a resource(s).  That record then
+  points to one or more accessible representations of the resource(s).  For
+  example, the record describes a dataset and that dataset can be accessed via
+  an API or downloaded as a geopackage or downloaded as a zipped SHAPE file.
+* Each of these representations may have different create and updated times so
+  it makes sence to move that information into the link (or the asset in the 
+  case of STAC).
 
 === The consideration of adding JSON-FG as another encoding for OGC API Records
 
@@ -34,8 +42,17 @@
 
 === Versioning
 
-* TBA
-
+* Versioning means that an API maintains the versions of a record over time.
+* By default, GET'ing a record gets the latest version but previous versions
+  should be accessible too.
+* There is a stale STAC extension that looks like it provides a good start
+  here https://github.com/stac-extensions/version.
+** @m-mohr said we are free to use and modify as we see fit
+* Other considerations need to be taken into account too related to
+  transactions since each update will add a new version of a record and a
+  delete with deprecate a record but no remove it from the system.
+* More feedback will be needed.  Also, this is something that should be 
+  undertaken by the OGC API Feature SWG since they provide the API for records.
 
 == Future Work
 

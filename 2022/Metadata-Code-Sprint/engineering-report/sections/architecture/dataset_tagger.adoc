@@ -1,0 +1,4 @@
+[[dataset_tagger]]
+==== dataset-tagger
+
+The https://github.com/pvgenuchten/dataset-tagger/tree/ogc-api-records[dataset-tagger] open source software product offers an application for fetching metadata from a dataset. The metadata model is derived from that used by https://github.com/opengeospatial/ogcapi-records/blob/master/core/openapi/schemas/recordGeoJSON.yaml[OGC API Records].

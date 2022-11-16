@@ -1,14 +1,14 @@
 === Secure and Asynchronous Catalogue
 
-During the Code Sprint, a demo was implemented that introduces the use of WebPush to a Web Browser / device to notify the user when a Catalogue resource changes. To make the demo work, a simple client application was implemented that allows the use of Web Push notifications to the Google Chrome and Firefox Web Browser. The demo does currently not work on a MAC OS with Safari and mobile devices operating iOS 15. To make the demo work in a Chrome Browser on a MAC OS, WebPush settings must be enabled in “notifications and alerts”.
+During the Code Sprint, a demo was implemented that introduces the use of WebPush to a Web Browser / device to notify the user when a Catalogue resource changes. To make the demo work, a simple client application was implemented that allows the use of Web Push notifications to the Google Chrome and Firefox Web Browser. The demo does not currently work on devices running MacOS with Safari and mobile devices operating iOS 15. To make the demo work in a Chrome Browser on a device running MacOS, WebPush settings must be enabled in “notifications and alerts.”
 
-The focus was to demonstrate the ability to use WebPush with OGC API records. The actual demo does not demonstrate the use of the Prefer header; instead, the demo focuses on creating a subscription with WebPush notification.
+The focus was to demonstrate the ability to use WebPush with OGC API - Records. The actual demo does not demonstrate the use of the Prefer header; instead, the demo focuses on creating a subscription with WebPush notification.
 
 From the Secure Dimensions https://ogc.demo.secure-dimensions.de/[index page] of the OGC Testbed 18 contributions, you can access all relevant services.
 
-A subscription can be crated via the OpenAPI page by pasting a JSON object representing the Web Push details and providing a resources-uri. The resources-uri is the OGC Records API URL that is to be observed for changes.
+A subscription can be created via the OpenAPI definition documentation page by pasting a JSON object representing the Web Push details and providing a resources-uri. The resources-uri is the OGC Records API URL that is to be observed for changes.
 
-(1) Use Google Chrome or Firefox browser and go to https://ogc.demo.secure-dimensions.de/sms/api
+(1) Use Google Chrome or Firefox browser and go to https://ogc.demo.secure-dimensions.de/sms/api.
 
 (2) Click the button “ENABLE PUSH MESSAGING” which will display the web push subscription details such as
 
@@ -26,13 +26,13 @@ A subscription can be crated via the OpenAPI page by pasting a JSON object repre
 ----
 
 
-(3) Obtain an access token from the https://ogc.demo.secure-dimensions.de/token-app/[OGC Testbed Token APP]
+(3) Obtain an access token from the https://ogc.demo.secure-dimensions.de/token-app/[OGC Testbed Token APP].
 
-(4) Copy the access token into the Swagger form (click “Authorize” and paste the access token)
+(4) Copy the access token into the Swagger form (click “Authorize” and paste the access token).
 
 (5) Go to the POST operation to https://ogc.demo.secure-dimensions.de/sms/api#/Subscription/addSubscription[create] a subscription.
 
-(6) Copy the following JSON object (including the web push details from above). Make sure you replace this information with the information displayed in your Web Browser
+(6) Copy the following JSON object (including the web push details from above). Make sure you replace this information with the information displayed in your Web Browser.
 
 [%unnumbered%]
 [source,json]

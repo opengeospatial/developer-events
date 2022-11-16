@@ -1,0 +1,7 @@
+=== gleo
+
+One of the contributors of https://gitlab.com/IvanSanchez/gleo[gleo] implemented support for JSON-FG in the code sprint. Support for JSON-FG was implemented to enable anyone to integrate the JSON-FG files into a gleo application.
+
+[[img_gleo]]
+.Screenshot of the gleo demo
+image::../images/gleo.png[align="center",width=800]
