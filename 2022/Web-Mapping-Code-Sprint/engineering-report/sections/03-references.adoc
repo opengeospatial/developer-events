@@ -1,0 +1,38 @@
+
+[bibliography]
+== References
+
+////
+Insert References here. If there are no references, leave this section empty.
+
+This text is included as boilerplate:
+"The following documents are referred to in the text in such a way that
+some or all of their content constitutes requirements of this document.
+For dated references, only the edition cited applies. For undated references,
+the latest edition of the referenced document (including any amendments) applies."
+
+References are to follow the Springer LNCS style, with the exception that optional information may be appended to references: DOIs are added after the date and web resource references may include an access date at the end of the reference in parentheses. See examples from Springer and OGC below.
+////
+
+// Typical reference entries (without auto-fetch)
+// Reference content will display as written
+* [[[openapi,Open API Initiative]]], Open API Initiative: *OpenAPI Specification 3.0.2*, 2018 https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md
+
+* [[[gmlsf,GMLSF]]], van den Brink, L., Portele, C., Vretanos, P.: OGC 10-100r3, *Geography Markup Language (GML) Simple Features Profile*, 2012 http://portal.opengeospatial.org/files/?artifact_id=42729
+
+* [[[html5,HTML5]]], W3C: *HTML5*, W3C Recommendation, 2019 http://www.w3.org/TR/html5/
+
+* [[[schema,Schema.org]]], *Schema.org:* http://schema.org/docs/schemas.html
+
+// Automatic reference fetching entries (auto-fetch)
+// To verify the reference lookup syntax for all the supported flavors,
+// visit: https://www.metanorma.org/author/topics/building/reference-lookup/#reference-lookup-syntax
+* [[[rfc2616,RFC 2616]]], Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., Berners-Lee, T.: IETF RFC 2616, *HTTP/1.1*, 1999 http://tools.ietf.org/rfc/rfc2616.txt
+
+* [[[rfc2818,RFC 2818]]], Rescorla, E.: IETF RFC 2818, *HTTP Over TLS*, 2000 http://tools.ietf.org/rfc/rfc2818.txt
+
+* [[[rfc3339,RFC 3339]]], Klyne, G., Newman, C.: IETF RFC 3339, *Date and Time on the Internet: Timestamps*, 2002 http://tools.ietf.org/rfc/rfc3339.txt
+
+* [[[rfc8288,RFC 8288]]], Nottingham, M.: IETF RFC 8288, *Web Linking*, 2017 http://tools.ietf.org/rfc/rfc8288.txt
+
+* [[[rfc7946,RFC 7946]]], Butler, H., Daly, M., Doyle, A., Gillies, S., Hagen, S., Schaub, T.: IETF RFC 7946, *The GeoJSON Format*, 2016 https://tools.ietf.org/rfc/rfc7946.txt

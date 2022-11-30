@@ -1,0 +1,26 @@
+
+== Terms and definitions
+
+// Insert terms and definitions content
+// For example
+=== example term
+
+term used for exemplary purposes
+
+[.source]
+<<rfc2616>>
+
+NOTE: An example note.
+
+[example]
+Here's an example of an example term.
+
+=== Abbreviated terms
+
+// Insert abbreviated terms content
+// For example
+ADES:: Application Deployment and Execution Service
+AP:: Application Package
+EMS:: Exploitation Platform Management Service
+
+

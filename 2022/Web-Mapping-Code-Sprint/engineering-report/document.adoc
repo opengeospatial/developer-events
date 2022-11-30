@@ -1,0 +1,56 @@
+= Engineering report for OGC (add title text)
+:comment: ### Document type; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
+:doctype: engineering-report
+:comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
+:status: published
+:comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
+:committee: technical
+:comment: ### Internal reference number; mandatory
+:docnumber: 18-046
+:comment: ### Date on which the standard was updated; mandatory
+:received-date: 2018-12-20
+:comment: ### Date on which the standard was approved by the issuing authority; mandatory
+:issued-date: 2018-07-10
+:comment: ### Date on which the standard was published; mandatory
+:published-date: 2018-06-12
+:comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
+:external-id: http://www.opengis.net/doc/PER/eoep-Hack2018
+:comment: ### Author one
+:fullname: John Doe
+:comment: ### Author two
+:fullname_2: Jane Doe
+:comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
+:role_2: editor
+:comment: ### Comma delimited keywords; mandatory
+:keywords: hackathon, application-to-the-cloud, testbed, docker, web service
+:comment: ### Metanorma flavor; mandatory
+:mn-document-class: ogc
+:comment: ### Desired output formats; mandatory
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:comment: ### Directory in which images are located: all local image file locations are prefixed with this directory. (Optional.)
+:imagesdir: images
+:comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.org/author/ref/document-attributes/#caches, https://www.metanorma.org/author/topics/building/reference-lookup/#lookup-result-caching
+:local-cache-only:
+
+
+// Clauses
+include::sections/00-preface.adoc[]
+include::sections/01-introduction.adoc[]
+include::sections/02-terms_and_definitions.adoc[]
+include::sections/03-references.adoc[]
+
+// Add clause files as needed
+include::sections/04-other-clauses.adoc[]
+
+////
+Annexes
+Add annex files as needed
+////
+include::sections/aa-annexA.adoc[]
+
+////
+Revision History should be the last annex before the Bibliography
+Bibliography should be the last annex
+////
+include::sections/ah-revision-history.adoc[]
+include::sections/az-bibliography.adoc[]

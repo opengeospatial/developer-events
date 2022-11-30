@@ -1,0 +1,15 @@
+
+// If obligation is not specified, "normative" is taken by default
+[appendix,obligation="normative"]
+[[annex-reference]]
+== Annex Title
+
+// Insert annex content here
+
+Annex content.
+
+[NOTE]
+====
+Place annex material in sequential order and set `obligation` attribute as "normative" (default) or "informative" according to the case.
+====
+
