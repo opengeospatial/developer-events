@@ -1,0 +1,33 @@
+
+[appendix,obligation=informative]
+[[annex-bibliography]]
+[bibliography]
+== Bibliography
+
+// Typical reference entry (without auto-fetch)
+// Reference content will display as written
+* [[[Simonis2018,Simonis, I.]]], Standardized Big Data Processing in Hybrid Clouds. In: Proceedings of the 4th International Conference on Geographical Information Systems Theory, Applications and Management - Volume 1: GISTAM, pp. 205–210. SciTePress (2018).
+
+// Automatic reference fetching (auto-fetch)
+// To verify the reference lookup syntax for all the supported flavors,
+// visit: https://www.metanorma.org/author/topics/building/reference-lookup/#reference-lookup-syntax
+* [[[ogc14-083r2,OGC 14-083r2]]], OGC: OGC 14-083r2: Moving Features Encoding Part I: XML Core, 2015
+
+// Disabling auto-fetch
+// You can disable auto-fetch by wrapping the identifier into nofetch() -- `nofetch({identifier})`
+// (To disable auto-fetch in all references at once, set `no-isobib` attribute at the beginning of the document)
+* [[[ogc14-084r2,(nofetch)OGC 14-084r2]]], OGC: OGC 14-084r2: Moving Features Encoding Extension: Simple Comma Separated Values
+
+// Reference entry with user-supplied label (non-auto-fetch)
+* [[[ogc11-165r2,(CF-netCDF3)]]], OGC: OGC 11-165r2: CF-netCDF3 Data Model Extension standard, 2012
+
+// Reference entry with user-supplied label (with auto-fetch enabled)
+* [[[ogc10-092r3,(NetCDF)OGC 10-092r3]]], OGC: OGC 10-092r3: NetCDF Binary Encoding Extension Standard: netCDF Classic and 64-bit Offset Format, 2011
+
+// Numeric reference entry (with no auto-fetch)
+// To use numeric reference system, place a number as identifier
+// Any number can be used. All references will be re-sorted and auto-incremented during compilation
+* [[[netcdf,1]]], Lawrence Livermore National Laboratory: NetCDF CF Metadata Conventions – http://cfconventions.org/[http://cfconventions.org/]
+
+* [[[acdd,1]]], ESIP: Attribute Convention for Data Discovery (ACDD) – http://wiki.esipfed.org/index.php/
+

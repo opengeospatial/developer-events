@@ -1,0 +1,43 @@
+<bibdata type="standard">
+  <fetched>2022-11-30</fetched>
+  <title type="title-main" format="text/plain" language="en" script="Latn">OGC Two Dimensional Tile Matrix Set and Tile Set Metadata</title>
+  <title type="main" format="text/plain" language="en" script="Latn">OGC Two Dimensional Tile Matrix Set and Tile Set Metadata</title>
+  <uri type="obp">https://docs.ogc.org/is/17-083r4/17-083r4.html</uri>
+  <docidentifier type="OGC" primary="true">17-083r4</docidentifier>
+  <date type="published">
+    <on>2022-09-09</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Joan Masó </completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Jérôme Jacovella-St-Louis</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <edition>4</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">The OGC Two Dimensional Tile Matrix Set and Tile Set Metadata Standard defines the rules and requirements for a tile matrix set as a way to index space based on a set of regular grids defining a domain (tile matrix) for a limited list of scales in a Coordinate Reference System (CRS) as defined in OGC 18-005r5 Abstract Specification Topic 2: Referencing by Coordinates. This content was initially included in the OGC 07-057r7 OpenGIS Web Map Tile Service Implementation Standard (WMTS) and was separated out into the OGC 17-083r2 OGC Two Dimensional Tile Matrix Set Standard version 1.0, to support reusability in other data formats of services that need a tiling scheme. This document is a revision of the OGC 17-083r2 document and the general tile matrix set concept is inherited from it with small additions. In a tile matrix set, each tile matrix is divided into regular tiles. In a tile matrix set, a tile can be univocally identified by a tile column, a tile row, and a tile matrix identifier. The OGC Two Dimensional Tile Matrix Set and Tile Set Metadata Standard describes a data structure defining the properties of the tile matrix set in both Unified Modeling Language (UML) diagrams and in tabular form. This document also defines a new data structure, called tile set metadata, that can be used to describe a particular set of tiles following a tile matrix set. Extensible Markup Language (XML) and JavaScript Object Notation (JSON) encodings are described both for tile matrix sets and tile matrix set metadata. It includes tile matrix set limits, links to the tile matrix set, details of the original data represented by the tile set and a nice point of origin to start exploring the tile set. Finally, the document offers practical examples of tile matrix sets both for common global projections and for specific regions.</abstract>
+  <ext>
+    <doctype>standard</doctype>
+    <subdoctype>implementation</subdoctype>
+    <editorialgroup>
+      <committee>technical</committee>
+    </editorialgroup>
+  </ext>
+</bibdata>

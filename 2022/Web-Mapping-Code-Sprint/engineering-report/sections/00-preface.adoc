@@ -1,0 +1,67 @@
+
+////
+Preface sections must include [.preface] attribute
+in order to get them placed in the preface area (and not in the main content).
+
+Keywords specified in document preamble will display in this area
+after the abstract
+////
+
+[.preface]
+== Abstract
+
+The subject of this Engineering Report (ER) is a code sprint that was held from November 29th to December 1st, 2022 to advance OGC API Standards that relate to web mapping, and others that relate to styling and symbology encoding standards. The code sprint was hosted by the Open Geospatial Consortium (OGC) and EuroGeographics. The code sprint was sponsored by Ordnance Survey (OS), and held as a hybrid event with the face-to-face element hosted at the Mundo Madou centre  in Brussels, Belgium.
+
+
+[.preface]
+== Executive Summary
+
+
+The code sprint focused on the following group of specifications:
+
+* https://ogcapi.ogc.org/maps/[OGC API - Maps] candidate Standard
+* https://ogcapi.ogc.org/tiles/[OGC API - Tiles] Standard
+* https://ogcapi.ogc.org/styles/[OGC API - Styles] candidate Standard
+* https://docs.ogc.org/is/18-067r3/18-067r3.html[OGC Symbology Conceptual Model: Core Part]
+
+The sprint objectives for the Standards Working Groups (SWGs) were to:
+
+* Develop prototype implementations of OGC Standards, including implementations of draft OGC Application Programming Interface (API) Standards;
+* Test the prototype implementations;
+* Provide feedback to the Editor about what worked and what did not; and
+* Provide feedback about the specification document.
+
+This engineering report makes the following recommendations for future innovation work items:
+
+* TBA
+* TBA
+* TBA
+
+The engineering report also makes the following recommendations for things that the Standards Working Groups should consider:
+
+* TBA
+* TBA
+* TBA
+
+== Submitters
+
+All questions regarding this document should be directed to the editor or the contributors:
+
+[%unnumbered]
+[options="header"]
+|===
+| Name | Organization | Role
+|Gobe Hobona| Open Geospatial Consortium | Editor
+|Joana Simoes | Open Geospatial Consortium |Editor
+|Keith Pomakis	|	MariaDB	|	Contributor
+|Núria Julià Selvas |	UAB-CREAF	|	Contributor
+|Joan Maso |	UAB-CREAF	|	Contributor
+|Clemens Portele	|	interactive instruments GmbH	|	Contributor
+|Tom Kralidis 	|	Meteorological Service of Canada	|	Contributor
+|Andreas Matheus	|	Secure Dimensions	|	Contributor
+| Add Name	|	Add Name |	Contributor
+| Add Name	|	Add Name |	Contributor
+| Add Name	|	Add Name |	Contributor
+| Add Name	|	Add Name |	Contributor
+| Add Name	|	Add Name |	Contributor
+|===
