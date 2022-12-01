@@ -1,3 +1,11 @@
-=== OSGeo OWSLib
+=== OWSLib
 
-TBA
+The OWSLib project implemented client capability for the OGC API - Records - Part 1: Core draft specification.  Support for the "Requirements Class "Map Core" was https://github.com/geopython/OWSLib/pull/847[implemented], reviewed and approved by the OWSLib development team. As a result, Python clients can now use OWSLib for simple Pythonic workflows to request and visualize data from an OGC API - Maps service.
+
+A screenshot of a sample Python/OWSLib workflow of the new functionality is shown in the figure below.
+
+[[img_owslib]]
+.Screenshot of the OWSLib OGC API - Maps demo
+image::../images/owslib-oamaps1.png[align="center"]
+image::../images/owslib-oamaps2.png[align="center"]
+>>>>>>> d37b112 (pygeoapi/OWSLib updates)

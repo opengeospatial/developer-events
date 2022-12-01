@@ -1,3 +1,41 @@
 === pygeoapi
 
-TBA
+==== OGC API - Maps implementation
+
+The pygeoapi project implemented support for the OGC API - Maps - Part 1: Core draft specification.  Support for the Requirements Class "Map Core" was https://github.com/geopython/pygeoapi/pull/1048[implemented], reviewed and approved by the pygeoapi development team. As a result, pygeoapi implementations are now able to easily publish geospatial data as dynamic maps thanks to the building block approach of OGC API Standards.
+
+pygeoapi's plugin architecture facilitated the implementation of two plugin backends for maps:
+
+- MapScript: using the MapServer[https://mapserver.org] web mapping engine as the map renderer, using data and styling definitions (Styled Layer Descriptor [SLD], MapServer CLASS configuraiton files).
+- WMSFacade: a bridge/mediator to expose existing OGC WMS 1.3 services via OGC API - Maps
+
+The https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-maps.html[official pygeoapi documentation] provides more information on how to enable the new functionality. A screenshot of the associated OpenAPI/Swagger interface from the implementation is shown in the figure below.
+
+[[img_pygeoapi]]
+.Screenshot of pygeoapi OGC API - Maps MapScript plugin
+image::../images/pygeoapi-oamaps-mapscript.png[align="center"]
+
+.Screenshot of pygeoapi OGC API - Maps WMSFacade plugin
+image::../images/pygeoapi-oamaps-facade.png[align="center"]
+
+.Screenshot of pygeoapi OGC API - Maps via OpenAPI/Swagger
+image::../images/pygeoapi-oamaps-openapi-swagger.png[align="center"]
+
+.Screenshot of pygeoapi OGC API - Maps WMSFacade using the Open Maps for Europe WMS from Eurogeographics
+image::../images/pygeoapi-oamaps-wmsfacade-eurogeographics.png[align="center"]
+
+==== OGC API Tiles updates
+
+TODO: Joana/Antonio
+
+==== OGC API - Coverages browser rendering
+
+TODO: Iván
+
+==== Mentor session
+
+TODO: Krishna
+
+==== Developer outreach
+
+Members of the pygeoapi development team discussed project participation and contributions with various developers at the sprint.
