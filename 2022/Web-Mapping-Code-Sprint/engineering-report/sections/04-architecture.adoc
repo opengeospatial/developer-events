@@ -1,0 +1,50 @@
+[[architecture]]
+== High-Level Architecture
+
+As illustrated in <<img_architecture>>, the sprint architecture was designed with the view of enabling client applications to connect to different servers that implement open geospatial standards that relate to web mapping, styles and symbology. Implementations of OGC API - Maps, OGC API - Tiles, and OGC API - Styles were deployed in participants' own infrastructure in order to build a solution with the architecture shown below in <<img_architecture>>.
+
+[[img_architecture]]
+.High Level Overview of the Sprint Architecture
+image::../images/architecture.png[align="center",width=800]
+
+The rest of this section describes the software deployed and standards implemented during the code sprint.
+
+=== Approved and Draft Standards
+
+This section describes the approved and draft standards implemented during the code sprint.
+
+==== OGC API - Maps
+
+OGC API - Maps is a draft API standard that provides maps representing geospatial data. These building blocks can be combined with several origins such as the ones suggested in the Origin Conformance Classes.
+
+==== OGC API - Tiles
+
+OGC API - Tiles specifies a standard for Web APIs that provide tiles of geospatial information.
+
+Different forms of geospatial information are supported, such as tiles of vector features ("vector tiles"), coverages, maps (or imagery) and potentially eventually additional types of tiles of geospatial information.
+
+Vector data represents geospatial objects such as points, lines, and polygons. Tiles of vector feature data (i.e. Vector Tiles) represent partitions of vector data covering a large area (e.g. lines representing rivers in a country).
+
+In this context, a map is essentially an image representing at least one type of geospatial information. Tiles of maps (i.e. Map Tiles) represent subsets of maps covering a large area (e.g. a satellite image).
+
+==== OGC API - Styles
+
+OGC API - Styles specifies building blocks for Web APIs that enable map servers and clients as well as visual style editors to manage and fetch styles.
+
+=== Open Source Software Projects
+
+This section describes open source software products that were deployed during the code sprint.
+
+
+include::architecture/ldproxy.adoc[]
+
+
+include::architecture/pygeoapi.adoc[]
+
+
+
+=== Proprietary products
+
+This section describes proprietary software products that were deployed during the code sprint.
+
+include::architecture/cubeserv.adoc[]

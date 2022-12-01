@@ -1,8 +1,8 @@
-= Engineering report for OGC (add title text)
+= 2022 Web Mapping Code Sprint Summary Engineering Report
 :comment: ### Document type; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
 :doctype: engineering-report
 :comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
-:status: published
+:status: draft
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: technical
 :comment: ### Internal reference number; mandatory
@@ -12,7 +12,7 @@
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
 :issued-date: 2018-07-10
 :comment: ### Date on which the standard was published; mandatory
-:published-date: 2018-06-12
+:published-date: 2028-06-12
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
 :external-id: http://www.opengis.net/doc/PER/eoep-Hack2018
 :comment: ### Author one
@@ -35,12 +35,14 @@
 
 // Clauses
 include::sections/00-preface.adoc[]
-include::sections/01-introduction.adoc[]
+include::sections/01-scope.adoc[]
 include::sections/02-terms_and_definitions.adoc[]
 include::sections/03-references.adoc[]
 
-// Add clause files as needed
-include::sections/04-other-clauses.adoc[]
+
+include::sections/04-architecture.adoc[]
+
+include::sections/05-results.adoc[]
 
 ////
 Annexes
