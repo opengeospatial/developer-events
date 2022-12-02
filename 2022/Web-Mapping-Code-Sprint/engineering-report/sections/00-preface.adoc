@@ -61,6 +61,8 @@ All questions regarding this document should be directed to the editor or the co
 |Andreas Matheus	|	Secure Dimensions	|	Contributor
 |Antonio Cerciello	|	OSGeo |	Contributor
 |Francesco Bartoli	|	OSGeo |	Contributor
+|Iván Sánchez Ortega	|	OSGeo |	Contributor
+| Add Name	|	Add Name |	Contributor
 | Add Name	|	Add Name |	Contributor
 | Add Name	|	Add Name |	Contributor
 | Add Name	|	Add Name |	Contributor

@@ -37,7 +37,16 @@ image::../images/pygeoapi-oatiles-tilesetmetadata.png[align="center"]
 
 ==== OGC API - Coverages browser rendering
 
-TODO: Iván
+pygeoapi gained HTML representation of a coverages, as a lightweight HTML viewer.
+
+This viewer is a Leaflet[https://leafletjs.com/] implementation, which uses the Leaflet.ImageOverlay.Arrugator[https://gitlab.com/IvanSanchez/Leaflet.ImageOverlay.Arrugator/] plugin, and the proj4js[https://github.com/proj4js/proj4js/] library to provide client-side reprojection.
+
+.Screenshot of pygeoapi lightweight coverage viewer
+image::../images/pygeoapi-coverage-viewer.png[align="center"]
+
+The emphasis is not in the viewer, but rather in the fact that the viewer is the HTML representation of the coverage resource. Whenever a API client requests the coverage resource, it will be given a HTML map viewer, or the JSON-LD representation of the coverage, or the raw coverage data (as PNG, GeoTIFF, NetCDF, etc), in accordance to the established HTTP content negotiation rules ("Accept" HTTP headers, or "f" URL parameter).
+
+This is aligned with pygeoapi's implementation of OGC API - Features, where requesting features as HTML returns a map viewer loaded with those features.
 
 ==== Mentor session
 
