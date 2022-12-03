@@ -13,38 +13,42 @@ The rest of this section describes the software deployed and standards implement
 
 This section describes the approved and draft standards implemented during the code sprint.
 
-==== OGC API - Maps
+include::architecture/ogcapi_maps.adoc[]
 
-OGC API - Maps is a draft API standard that provides maps representing geospatial data. These building blocks can be combined with several origins such as the ones suggested in the Origin Conformance Classes.
+include::architecture/ogcapi_styles.adoc[]
 
-==== OGC API - Tiles
+include::architecture/ogcapi_tiles.adoc[]
 
-OGC API - Tiles specifies a standard for Web APIs that provide tiles of geospatial information.
+include::architecture/ogcstaplus.adoc[]
 
-Different forms of geospatial information are supported, such as tiles of vector features ("vector tiles"), coverages, maps (or imagery) and potentially eventually additional types of tiles of geospatial information.
-
-Vector data represents geospatial objects such as points, lines, and polygons. Tiles of vector feature data (i.e. Vector Tiles) represent partitions of vector data covering a large area (e.g. lines representing rivers in a country).
-
-In this context, a map is essentially an image representing at least one type of geospatial information. Tiles of maps (i.e. Map Tiles) represent subsets of maps covering a large area (e.g. a satellite image).
-
-==== OGC API - Styles
-
-OGC API - Styles specifies building blocks for Web APIs that enable map servers and clients as well as visual style editors to manage and fetch styles.
+include::architecture/ogcsld.adoc[]
 
 === Open Source Software Projects
 
 This section describes open source software products that were deployed during the code sprint.
 
+include::architecture/geotools.adoc[]
+
+include::architecture/leaflet.adoc[]
 
 include::architecture/ldproxy.adoc[]
 
+include::architecture/owslib.adoc[]
 
 include::architecture/pygeoapi.adoc[]
 
+include::architecture/staplusviewer.adoc[]
 
+include::architecture/teamengine.adoc[]
+
+include::architecture/xyz2ogc.adoc[]
 
 === Proprietary products
 
 This section describes proprietary software products that were deployed during the code sprint.
 
 include::architecture/cubeserv.adoc[]
+
+include::architecture/gnosis.adoc[]
+
+include::architecture/luciadria.adoc[]

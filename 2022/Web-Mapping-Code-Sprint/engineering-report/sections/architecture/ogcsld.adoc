@@ -1,0 +1,4 @@
+[[ogcsld]]
+==== OGC Styled Layer Descriptor
+
+The Styled Layer Descriptor (SLD) encoding standard defines an encoding that supports user-defined symbolization and coloring of geographic feature and coverage data. SLD addresses the need for users and software to be able to control the visual portrayal of the geospatial data. The ability to define styling rules requires a styling language that the client and server can both understand. SLD is often used in combination with the OGC Symbology Encoding Standard (SE).

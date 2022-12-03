@@ -10,7 +10,7 @@ after the abstract
 [.preface]
 == Abstract
 
-The subject of this Engineering Report (ER) is a code sprint that was held from November 29th to December 1st, 2022 to advance OGC API Standards that relate to web mapping, and others that relate to styling and symbology encoding standards. The code sprint was hosted by the Open Geospatial Consortium (OGC) and EuroGeographics. The code sprint was sponsored by Ordnance Survey (OS), and held as a hybrid event with the face-to-face element hosted at the Mundo Madou centre  in Brussels, Belgium.
+The subject of this Engineering Report (ER) is a code sprint that was held from November 29th to December 1st, 2022 to advance OGC API Standards that relate to web mapping, and others that relate to styling and symbology encoding standards. The code sprint was hosted by the Open Geospatial Consortium (OGC) and EuroGeographics. The code sprint was sponsored by Ordnance Survey (OS), and was held as a hybrid event with the face-to-face element hosted at the Mundo Madou centre  in Brussels, Belgium.
 
 
 [.preface]

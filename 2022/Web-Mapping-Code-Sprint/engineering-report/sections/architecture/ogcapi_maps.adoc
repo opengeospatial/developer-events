@@ -1,0 +1,4 @@
+[[ogcapi_maps]]
+==== OGC API - Maps
+
+The OGC API - Maps draft specification describes an API that can serve spatially referenced and dynamically rendered electronic maps. The specification describes the discovery and query operations of an API that provides access to electronic maps in a manner independent of the underlying data store. The query operations allow dynamically rendered maps to be retrieved from the underlying data store based upon simple selection criteria, defined by the client.

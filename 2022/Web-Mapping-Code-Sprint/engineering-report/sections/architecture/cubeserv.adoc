@@ -3,6 +3,8 @@
 
 The https://www.cubewerx.com/[CubeWerx server ("cubeserv")] is implemented in C and currently implements the following OGC Standards and draft specifications.
 
+* Multiple conformance classes and recommendations of the OGC API - Tiles - Part 1: Core Standard.
+* Multiple conformance classes and recommendations of the OGC API - Maps - Part 1: Core candidate Standard.
 * All conformance classes and recommendations of the OGC API - Features - Part 1: Core Standard.
 * Multiple conformance classes and recommendations of the OGC API - Records - Part 1: Core candidate Standard.
 * Multiple conformance classes and recommendations of the OGC API - Coverages - Part 1: Core candidate Standard.

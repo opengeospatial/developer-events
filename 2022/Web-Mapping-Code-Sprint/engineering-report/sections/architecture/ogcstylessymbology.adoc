@@ -1,0 +1,7 @@
+[[ogc_styles_and_symbology]]
+
+==== OGC Styles and Symbology
+
+The OGC Symbology Conceptual Model: Core Part standard (OGC 18-067r3), also known as OGC SymCore, specifies the conceptual basis to define symbology rules for the portrayal of geographical data. It is modular and extensible (one core model, many extensions), also encoding agnostic (one symbology model, many encodings). It contains a minimal set of abstract classes representing explicit extension points of the model.
+
+OGC Styles and Symbology is a vision for a standard that implements the OGC Symbology Conceptual Model: Core Part standard (OGC 18-067r3). In contrast the OGC SymCore, the envisaged OGC Styles and Symbology candidate standard will specify both a conceptual and a logical model, as well as options for encodings.
