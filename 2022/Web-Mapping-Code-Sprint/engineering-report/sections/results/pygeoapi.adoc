@@ -26,14 +26,23 @@ image::../images/pygeoapi-oamaps-wmsfacade-eurogeographics.png[align="center"]
 
 ==== OGC API Tiles updates
 
-TODO: Joana
-
-Tile Metadata: 
+===== Tile Metadata
 
 Support for the Tile Set Metadata schema has been added to TileJSON MapBox. It is also possible to support any format by adding a JSON metadata file directly into the filesystem. As well, the absence of metadata does not represent an issue, facilitating support for different tiles providers.
 
 image::../images/pygeoapi-oatiles-tilesetmetadata.png[align="center"]
 
+===== Vector tiles URL templates
+
+pygeoapi added support for rendering OGC API - (vector) tiles from a third-party service, using a generic URL template. One use case for this functionality would be to stream https://www.elastic.co/guide/en/elasticsearch/reference/current/search-vector-tile-api.html[elasticsearch vector tiles], which are provided in elasticsearch >=8, as OGC API - Tiles.
+
+.Screenshot of pygeoapi OGC API - Tiles using the elasticsearch vector tiles
+image::../images/pygeoapi-oatiles-elastic.png[align="center"]
+
+We could also use this functionality to render https://access.crunchydata.com/documentation/pg_tileserv/1.0.8/introduction/[pg_tileserv] vector tiles, or any other service which uses format `{z}/{y}/{x}` or `{z}/{x}/{y}`
+
+.Screenshot of pygeoapi OGC API - Tiles using the elasticsearch vector tiles
+image::../images/pygeoapi-oatiles-pg_tileserve.png[align="center"]
 
 ==== OGC API - Coverages browser rendering
 
