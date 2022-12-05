@@ -26,7 +26,14 @@ image::../images/pygeoapi-oamaps-wmsfacade-eurogeographics.png[align="center"]
 
 ==== OGC API Tiles updates
 
-TODO: Joana/Antonio
+TODO: Joana
+
+Tile Metadata: 
+
+Support for the Tile Set Metadata schema has been added to TileJSON MapBox. It is also possible to support any format by adding a JSON metadata file directly into the filesystem. As well, the absence of metadata does not represent an issue, facilitating support for different tiles providers.
+
+image::../images/pygeoapi-oatiles-tilesetmetadata.png[align="center"]
+
 
 ==== OGC API - Coverages browser rendering
 
