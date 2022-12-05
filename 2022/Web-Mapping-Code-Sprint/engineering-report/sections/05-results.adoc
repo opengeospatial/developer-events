@@ -6,6 +6,28 @@ The code sprint included multiple software products and implementations of OGC a
 
 include::results/cubeserv.adoc[]
 
+include::results/geotools.adoc[]
+
+include::results/gnosis.adoc[]
+
+include::results/leaflet.adoc[]
+
 include::results/ldproxy.adoc[]
 
+include::results/luciadria.adoc[]
+
+include::results/miramon.adoc[]
+
+include::results/os_implementation_of_ogcapi_styles.adoc[]
+
+include::results/ogcstylessymbology.adoc[]
+
+include::results/owslib.adoc[]
+
 include::results/pygeoapi.adoc[]
+
+include::results/staplusviewer.adoc[]
+
+include::results/teamengine.adoc[]
+
+include::results/xyz2ogc.adoc[]

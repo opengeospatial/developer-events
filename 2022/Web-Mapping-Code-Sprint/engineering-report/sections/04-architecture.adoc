@@ -49,6 +49,8 @@ This section describes proprietary software products that were deployed during t
 
 include::architecture/cubeserv.adoc[]
 
+include::architecture/os_implementation_of_ogcapi_styles.adoc[]
+
 include::architecture/gnosis.adoc[]
 
 include::architecture/luciadria.adoc[]
