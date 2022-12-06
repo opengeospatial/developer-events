@@ -59,8 +59,8 @@ All questions regarding this document should be directed to the editor or the co
 |Clemens Portele	|	interactive instruments GmbH	|	Contributor
 |Tom Kralidis 	|	Meteorological Service of Canada	|	Contributor
 |Andreas Matheus	|	Secure Dimensions	|	Contributor
-| Add Name	|	Add Name |	Contributor
-| Add Name	|	Add Name |	Contributor
+|Antonio Cerciello	|	OSGeo |	Contributor
+|Francesco Bartoli	|	OSGeo |	Contributor
 | Add Name	|	Add Name |	Contributor
 | Add Name	|	Add Name |	Contributor
 | Add Name	|	Add Name |	Contributor
