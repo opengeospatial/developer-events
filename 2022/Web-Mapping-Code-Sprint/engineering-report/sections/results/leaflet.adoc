@@ -1,3 +1,9 @@
-=== OSGeo Leaflet
+=== Leaflet
 
-TBA
+==== OGC API - Tiles implementation
+
+Leaflet has built-in support for map tiles (or "TileLayer"s), but its internal implementation has significant constrains: All TileLayers must share the same coordinate system, must be aligned to the same origin of coordinates, and all tiles in any given TileLayer must have the same pixel size.
+
+The flexibility of OGC API - Tiles in regards of tile size and origin of coordinates both prove a handicap for a Leaflet client implementation.
+
+The reached consensus is to ignore TileMatrixSets which do not have a constant tile size, or that do not have a common origin of coordinates for the (0,0) tiles.
