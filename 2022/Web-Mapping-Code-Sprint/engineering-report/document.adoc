@@ -44,6 +44,10 @@ include::sections/04-architecture.adoc[]
 
 include::sections/05-results.adoc[]
 
+include::sections/06-discussion.adoc[]
+
+include::sections/07-conclusions.adoc[]
+
 ////
 Annexes
 Add annex files as needed
