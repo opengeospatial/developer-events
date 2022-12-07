@@ -7,3 +7,11 @@ Leaflet has built-in support for map tiles (or "TileLayer"s), but its internal i
 The flexibility of OGC API - Tiles in regards of tile size and origin of coordinates both prove a handicap for a Leaflet client implementation.
 
 The reached consensus is to ignore TileMatrixSets which do not have a constant tile size, or that do not have a common origin of coordinates for the (0,0) tiles.
+
+==== OGC API - Maps implementation
+
+An instance of leaflet was configured to access an OGC API - Maps implementation from a MariaDB CubeSERV instance. The CubeSERV instance had been configured to offer an OGC API - Maps façade in front of a WMS that offered layers of the EuroRegionalMap of EuroGeographics. A screenshot of the leaflet instance is shown in <<img_leaflet_and_cubeserv>>.
+
+[[img_leaflet_and_cubeserv]]
+.Screenshot of leaflet accessing a CubeSERV implementation of OGC API - Maps.
+image::../images/leaflet_and_cubeserv.png[align="center"]
