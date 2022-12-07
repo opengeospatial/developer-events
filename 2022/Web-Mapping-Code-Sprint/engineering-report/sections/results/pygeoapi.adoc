@@ -24,7 +24,7 @@ image::../images/pygeoapi-oamaps-openapi-swagger.png[align="center"]
 .Screenshot of pygeoapi OGC API - Maps WMSFacade using the Open Maps for Europe WMS from Eurogeographics
 image::../images/pygeoapi-oamaps-wmsfacade-eurogeographics.png[align="center"]
 
-==== OGC API Tiles updates
+==== OGC API - Tiles updates
 
 ===== Tile Metadata
 
@@ -36,12 +36,12 @@ image::../images/pygeoapi-oatiles-tilesetmetadata.png[align="center"]
 
 pygeoapi added support for rendering OGC API - (vector) tiles from a third-party service, using a generic URL template. One use case for this functionality would be to stream https://www.elastic.co/guide/en/elasticsearch/reference/current/search-vector-tile-api.html[elasticsearch vector tiles], which are provided in elasticsearch >=8, as OGC API - Tiles.
 
-.Screenshot of pygeoapi OGC API - Tiles using the elasticsearch vector tiles
+.Screenshot of pygeoapi OGC API - Tiles using the Elasticsearch vector tiles
 image::../images/pygeoapi-oatiles-elastic.png[align="center"]
 
 We could also use this functionality to render https://access.crunchydata.com/documentation/pg_tileserv/1.0.8/introduction/[pg_tileserv] vector tiles, or any other service which uses format `{z}/{y}/{x}` or `{z}/{x}/{y}`
 
-.Screenshot of pygeoapi OGC API - Tiles using the elasticsearch vector tiles
+.Screenshot of pygeoapi OGC API - Tiles connecting to a pg_tileserv vector tiles service
 image::../images/pygeoapi-oatiles-pg_tileserve.png[align="center"]
 
 ==== OGC API - Coverages browser rendering
@@ -59,7 +59,13 @@ This is aligned with pygeoapi's implementation of OGC API - Features, where requ
 
 ==== Mentor session
 
-TODO: Krishna
+A pygeoapi mentor session was provided in support of delivering Vector Tiles using pygeoapi.  The session focused on:
+
+- installation
+- overview of various endpoints and Creating standard source
+- creating vector tiles
+- serving vector tiles
+- reading vector tiles from different clients
 
 ==== Developer outreach
 
