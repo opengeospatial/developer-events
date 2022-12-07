@@ -4,8 +4,12 @@ The OWSLib project implemented client capability for the OGC API - Records - Par
 
 A screenshot of a sample Python/OWSLib workflow of the new functionality is shown in the figure below.
 
+[[img_owslib_workflow]]
+.Screenshot of a sample Python/OWSLib workflow
+image::../images/owslib-oamaps1.png[align="center"]
+
+A screenshot of the OWSLib OGC API - Maps demo is shown below.
+
 [[img_owslib]]
 .Screenshot of the OWSLib OGC API - Maps demo
-image::../images/owslib-oamaps1.png[align="center"]
 image::../images/owslib-oamaps2.png[align="center"]
->>>>>>> d37b112 (pygeoapi/OWSLib updates)

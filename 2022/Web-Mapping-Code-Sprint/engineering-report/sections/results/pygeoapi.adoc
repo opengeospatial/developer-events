@@ -16,7 +16,7 @@ The https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-maps.html[official
 image::../images/pygeoapi-oamaps-mapscript.png[align="center"]
 
 .Screenshot of pygeoapi OGC API - Maps WMSFacade plugin
-image::../images/pygeoapi-oamaps-facade.png[align="center"]
+image::../images/pygeoapi-oamaps-wmsfacade.png[align="center"]
 
 .Screenshot of pygeoapi OGC API - Maps via OpenAPI/Swagger
 image::../images/pygeoapi-oamaps-openapi-swagger.png[align="center"]

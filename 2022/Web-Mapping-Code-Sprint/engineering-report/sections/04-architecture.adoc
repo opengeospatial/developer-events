@@ -37,11 +37,7 @@ include::architecture/owslib.adoc[]
 
 include::architecture/pygeoapi.adoc[]
 
-include::architecture/owslib.adoc[]
-
 include::architecture/staplusviewer.adoc[]
-
-include::architecture/leaflet.adoc[]
 
 include::architecture/teamengine.adoc[]
 
