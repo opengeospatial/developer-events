@@ -27,7 +27,6 @@ include::architecture/ogcsld.adoc[]
 
 This section describes open source software products that were deployed during the code sprint.
 
-include::architecture/geotools.adoc[]
 
 include::architecture/leaflet.adoc[]
 

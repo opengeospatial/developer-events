@@ -1,3 +1,0 @@
-=== OSGeo GeoTools
-
-TBA

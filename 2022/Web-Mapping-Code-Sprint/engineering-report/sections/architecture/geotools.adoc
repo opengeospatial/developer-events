@@ -1,4 +1,0 @@
-[[GeoTools]]
-==== OSGeo GeoTools
-
-The https://geotools.org[GeoTools] product is a software library, implemented in Java, that offers a variety of geospatial tools.

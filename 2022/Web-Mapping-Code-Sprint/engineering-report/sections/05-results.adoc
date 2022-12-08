@@ -6,8 +6,6 @@ The code sprint included multiple software products and implementations of OGC a
 
 include::results/cubeserv.adoc[]
 
-include::results/geotools.adoc[]
-
 include::results/gnosis.adoc[]
 
 include::results/leaflet.adoc[]
