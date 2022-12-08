@@ -1,3 +1,7 @@
 === Ordnance Survey Implementation of OGC API - Styles
 
-TBA
+Have implemented a managed styles mechanism.
+
+In terms of being able to post styles to the server.
+
+The prototype implements support for Mapbox Vector Tiles.

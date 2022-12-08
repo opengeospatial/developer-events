@@ -1,6 +1,8 @@
 [[discussion]]
 == Discussion
 
+include::discussion/jpeg-or-png.adoc[]
+
 include::discussion/data-statistics.adoc[]
 
 include::discussion/cancel-requests.adoc[]
@@ -9,4 +11,5 @@ include::discussion/security-access-control.adoc[]
 
 include::discussion/filtering-styles.adoc[]
 
-include::discussion/jpeg-or-png.adoc[]
+
+include::discussion/html-previews.adoc[]

@@ -10,3 +10,4 @@ The following normative documents contain provisions that, through reference in 
 * [[[OGC20-058,OGC 20-058]]] Joan Masó, Jérôme Jacovella-St-Louis: OGC API - Maps - Part 1: Core (Draft). OGC 20-058, Open Geospatial Consortium, http://docs.ogc.org/DRAFTS/20-058.html[http://docs.ogc.org/DRAFTS/20-058.html]
 * [[[OGC20-009,OGC 20-009]]] Clemens Portele: OGC API - Styles (Draft). OGC 20-009, Open Geospatial Consortium, http://docs.ogc.org/DRAFTS/20-009.html[http://docs.ogc.org/DRAFTS/20-009.html]
 * [[[ogc05-078r4,OGC 05-078r4]]], OpenGIS Styled Layer Descriptor Profile of the Web Map Service Implementation Specification (2007)
+* [[[WHATWG_HTML, HTML]]], WHATWG. HTML, Living Standard [online, viewed 2022-12-08]. Available at https://html.spec.whatwg.org/

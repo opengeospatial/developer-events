@@ -7,13 +7,13 @@ TBA
 
 The sprint participants made the following recommendations for future innovation work items:
 
-* TBA
+* Prototyping and demonstration of support for the querying of coverages in HTML Previews of coverage tiles
 * TBA
 * TBA
 
 The sprint participants also made the following recommendations for things that the SWGs should consider:
 
-* TBA
+* A code sprint focused on general security/access control issues, across OGC API and broader OGC standards
 * TBA
 * TBA
 

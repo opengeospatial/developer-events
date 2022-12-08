@@ -44,11 +44,12 @@ We could also use this functionality to render https://access.crunchydata.com/do
 .Screenshot of pygeoapi OGC API - Tiles connecting to a pg_tileserv vector tiles service
 image::../images/pygeoapi-oatiles-pg_tileserve.png[align="center"]
 
+[[pygeoapi_leaflet_coverages]]
 ==== OGC API - Coverages browser rendering
 
 pygeoapi gained HTML representation of a coverages, as a lightweight HTML viewer.
 
-This viewer is a Leaflet[https://leafletjs.com/] implementation, which uses the Leaflet.ImageOverlay.Arrugator[https://gitlab.com/IvanSanchez/Leaflet.ImageOverlay.Arrugator/] plugin, and the proj4js[https://github.com/proj4js/proj4js/] library to provide client-side reprojection.
+This viewer is a Leaflet[https://leafletjs.com/] implementation, which uses the Leaflet.ImageOverlay.Arrugator[https://gitlab.com/IvanSanchez/Leaflet.ImageOverlay.Arrugator/] plugin, and the proj4js[https://github.com/proj4js/proj4js/] library to provide client-side reprojection. Whenever a web browser visits a `/coverage` path on pygeoapi, the web browser sends an `Accept: text/html` header which triggers pygeoapi to respond with the lightweight coverage viewer.
 
 .Screenshot of pygeoapi lightweight coverage viewer
 image::../images/pygeoapi-coverage-viewer.png[align="center"]
