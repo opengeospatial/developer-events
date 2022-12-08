@@ -5,3 +5,5 @@
 == Bibliography
 
 * [[[ogc21-068,OGC 21-068]]], Andreas Matheus: OGC 21-068, OGC Best Practice for using SensorThings API with Citizen Science. Open Geospatial Consortium (2022). https://docs.ogc.org/bp/21-068.pdf
+* [[[ogc20-091, OGC 20-091]]], Gobe Hobona: OGC API – Common and OGC API – Features Sprint 2020: Summary Engineering Report. Open Geospatial Consortium (2020). https://docs.ogc.org/per/20-091.html
+* [[[ogc21-020r1, OGC 21-020r1]]], Aleksandar Balaban, Andreas Matheus: Testbed-17: Data Centric Security ER. Open Geospatial Consortium (2020). https://docs.ogc.org/per/21-020r1.html

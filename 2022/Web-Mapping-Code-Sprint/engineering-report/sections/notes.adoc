@@ -1,0 +1,39 @@
+== Notes from recordings
+
+PC: IIT Bombay worked on styles and symbology. How we can color the maps based on unique colors, for example the name of a region.
+
+
+JM: Trying to complete clients of OGC API Maps and TIles, the trick is how to get access to the collections and to present them to the user as collections. Also, with AM, working on a SensorThings API implementation that renders representations of the sensors.
+
+IS: Trying to do a visualiser for pygeoapi. A leaflet client for coverages built into pygeoapi. Going to use some WebGL, have leaflat map in the background but reproject the coverage in front. One of the problems is how to get the CRS string for what ever the CRS is. Need the proj4 string so that it can be fed to proj4js (the javascript implementation of proj4). Currently looking at a PNG with a world file, but will look at a GeoTIFF later. The idea is to have the web map of leaflet in the background and then reproject.
+
+TK: For the pygeoapi, hoping to implement OGC API - Maps, doing it in two ays, one way is to connect it directly to a renderer. The idea is to use a MapServer renderer. The user would only need to pass where the data is. The other back end is that of a WMS facade. You would tell it where the WMS is, and it would forward requests and responses between them.
+
+In the channel for EuroGeographics we were talking about OGC API - Tiles, but the current situation is that people just do web map tiles without metadata,. The idea is to create a series of static tiles and then point them at an existing instance of OGC API - Tiles.
+
+TS: Working on documentation and utilities that will allow the tile services to comply with OGC API - Tiles. Go-lang implementations. Have a command line utility that you can point to an XYZ service and it generates tiles that comply with OGC API - Tiles.
+
+TS: START WITH A small config file that configures the tMS, and then start running the service which reads the config file and then starts a small server that provides the OGC API metadata. The tiling scheme is also hosted here and can be put into an S3 bucket. This includes a bit more metadata than we want to show. We just need an OpenAPI conformance class but a subset of that would be sufficient.
+
+TS: If we are looking at a single tile set, you are just picking the tile URL template and then translating it into a tile URL that you want to use. What about the extents of the tile matrix set? These are all well known (i.e. the origin and cell size), everything else could be added.
+
+TC: Deployed the Hexagon Luciad RIA web client, and connected with some servers e.g. gnosis. Ran into some issues, especially with regard to CRS. The client supports OGC API - Maps and can load maps rendered as images. It works with different projections. It will, on-the-fly, reproject data.
+
+DS: Working on the OGC API - Tiles executable test suite.
+
+=== JPEG or PNG
+
+KP: Posted a couple of issues to recommend a recommendation to optimse how a server decides which format to return, whether JPEG or PNG.
+
+JM:
+
+=== TBA
+
+TBA
+
+
+
+=== Filtering of styles
+
+There was a discussion about whether it is possible to filter styles returned by OGC API - Styles in a standardised way.
+It like with feature, you just get a list of collections. There have been suggestions that all collections should have the ability to be filtered. This would support the ability to filter on a particular field, such as the description. You would only get the list of styles that are relevant to that filter. However, at present it is not standardised.

@@ -1,14 +1,10 @@
 [[discussion]]
 == Discussion
 
-=== TBA
+include::discussion/data-statistics.adoc[]
 
-TBA
+include::discussion/cancel-requests.adoc[]
 
-=== TBA
+include::discussion/security-access-control.adoc[]
 
-TBA
-
-=== TBA
-
-TBA
+include::discussion/filtering-styles.adoc[]
