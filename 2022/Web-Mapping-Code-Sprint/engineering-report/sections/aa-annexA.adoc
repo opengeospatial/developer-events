@@ -1,7 +1,7 @@
 
 // If obligation is not specified, "normative" is taken by default
 [appendix,obligation="informative"]
-[[annex-reference]]
+[[annex_a]]
 == Styles and Symbology Use Cases
 
 This annex presents the Styles and Symbology use cases that were discussed and documented during the code sprint.
