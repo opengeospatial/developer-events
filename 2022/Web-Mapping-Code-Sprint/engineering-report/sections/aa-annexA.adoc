@@ -21,6 +21,7 @@ Describe any capability not already addressed by existing conformance classes:
 * Graduated: coloring map according to a range of values eg. coloring map according to the population of a zone in a particular range(0-5000, 5000-10000)
 
 Example image illustrating the portrayal use case:
+
 * Categorized:
 
 [[img_symcore_issue17a]]
