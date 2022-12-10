@@ -1,3 +1,40 @@
 === xyz2ogc
 
-TBA
+The xyz2ogc program was developed to demonstrate how metadata can be added to XYZ tilesets to conform with additional OGC API – Tile conformance classes.  A goal of the project was to investigate how much of the OGC API – Tile specification can be implemented as a "static" service.
+
+The xyz2ogc program has two primary commands: ``serve`` and ``generate``.  The program is configured with a single https://toml.io/[TOML] file that lists URL templates and additional optional metadata for existing XYZ tilesets.  The ``serve`` command reads the configuration file and starts a local webserver that provides OGC API – Tile compliant metadata.  The ``generate`` command writes out a set of metadata files that can be hosted as a static website conforming to the specification.
+
+The program generates metadata that conforms to the following OGC API – Tile conformance classes:
+
+* http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
+* http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/json
+* http://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30
+* http://www.opengis.net/spec/ogcapi-tiles-1/1.0/conf/core
+* http://www.opengis.net/spec/ogcapi-tiles-1/1.0/conf/tileset
+* http://www.opengis.net/spec/ogcapi-tiles-1/1.0/conf/tilesets-list
+* http://www.opengis.net/spec/tms/2.0/conf/tilematrixset
+* http://www.opengis.net/spec/tms/2.0/conf/tilesetmetadata
+* http://www.opengis.net/spec/tms/2.0/conf/json-tilematrixset
+* http://www.opengis.net/spec/tms/2.0/conf/json-tilesetmetadata
+* http://www.opengis.net/spec/tms/2.0/conf/tilematrixsetlimits
+* http://www.opengis.net/spec/tms/2.0/conf/json-tilematrixsetlimits
+
+==== Findings
+
+The OGC API – Tiles specification makes it easy for existing XYZ tilesets to conform with the Core requirements.  This is possible as long as the service provides some way for the tile URL template and the meaning of the variables in that template to be obtained.
+
+Since many existing XYZ tilesets do not have a formalized way for clients to obtain the tile URL template or understand the meaning of the variables, it makes sense for tile providers to "upgrade" their services by conforming with the Tileset requirements.
+
+In practice, conforming with the Tileset requirements means hosting two metadata documents for a single XYZ tileset: one providing the tileset metadata and one describing the tiling scheme.  This can be reduced to a single document for the tileset metadata linking to an existing document hosted elsewhere that describes the tiling scheme.
+
+It would be more convenient if OGC specifications were developed in a way that URIs for things like CRS or TileMatrixSet resolved to definitions of those resources.  For example, it would be convenient if the http://www.opengis.net/def/tilematrixset/OGC/1.0/WebMercatorQuad[WebMercatorQuad URI] resolved to https://raw.githubusercontent.com/opengeospatial/2D-Tile-Matrix-Set/master/registry/json/WebMercatorQuad.json[the definition] for this tile matrix set.  This would allow the tiling scheme for a tileset to be specified with the tile matrix set URI alone, and clients could reliably fetch the definition from this.  Unfortunately, it is not enough for the OGC URIs to redirect to a different resource providing this content.  A browser-based client served via the HTTPS protocol will not fetch the OGC URI unless it is served via HTTPS (to avoid https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content#mixed_active_content[mixed active content violations]) and it is served with Cross-Origin Resource Sharing (https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS[CORS]) headers.
+
+**Suggestion:** If in the future OGC URI 1) used the HTTPS scheme, 2) resolved to useful resources, and 3) were served with CORS headers, it would make browser-based client implementations easier.
+
+For services providing more than a single tileset, it makes sense to conform to the Tileset List requirements.  Having conformed with the Tileset requirements, it is mostly straightforward to conform to the Tileset List requirements by providing a document that lists the metadata (or a subset of the metadata) for each tileset.  In the case of a static server, https://docs.ogc.org/is/20-057/20-057.html#req_tilesets-list_tileset-path[requirement 9] adds a small additional burden on implementators.  The specification requires that the URL for the list of tilesets ends with ``/tiles``.  In many cases, static servers determine the conent type for a response based on a document extension.  For example, a common pattern is to have an `index.html` document that the server will provide in response to a request that matches a directory location (e.g. https://example.com/path/to/directory/).  The same can be done for an `index.json` document with a list of tilesets as long as the service can be configured to treat `index.json` files as the "default" document.  The additional potential complication is that the service may need to be configured to redirect a slash-less URL (e.g. https://example.com/path/to/tiles) to a URL ending in a slash (e.g. https://example.com/path/to/tiles/) so that the default document will be served.
+
+**Suggestion:** If there is not a real benefit to requiring that the tileset list URL ends with `/tiles`, perhaps a future version of the specification could relax or remove this requirement.
+
+In addition to the Tilset, Tileset List, and associated TMS conformance classes, the ``xyz2ogc`` program implements the a few of the conformance classes from OGC API – Common: Core, JSON, and OpenAPI 3.0.  However, ``xyz2ogc`` chose not to implement the additional requirements from the OGC API – Tiles OpenAPI 3.0 conformance class.  In particular, the requirements related to homogenous collections of tilesets (e.g. not including vector tiles in a list that includes map tiles) didn't match the design of the project (a single listing of tilesets that may include both vector and map types).  A client capable of rendering both vector and map tiles can make this distinction invisible to users, and the idea with the ``xyz2ogc`` program is to provide users with a list of tilesets to choose from – dividing those into multiple lists based on tile content type seems arbitrary and a bit awkward.
+
+**Suggestion:** In the future, it could be useful if the specification allowed for linking to tilesets lists of mixed types.
