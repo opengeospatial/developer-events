@@ -40,6 +40,8 @@ include::architecture/staplusviewer.adoc[]
 
 include::architecture/teamengine.adoc[]
 
+include::architecture/openlayers.adoc[]
+
 include::architecture/xyz2ogc.adoc[]
 
 === Proprietary products
