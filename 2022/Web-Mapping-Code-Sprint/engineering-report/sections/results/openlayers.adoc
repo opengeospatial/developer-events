@@ -1,0 +1,16 @@
+=== OpenLayers
+
+==== OGC API – Tiles updates
+
+A previous OpenLayers release had "experimental" support for rendering tiles from OGC API – Tiles services.  This was added prior to the OGC API – Tiles standard being finalized.
+
+:map-example: https://openlayers.org/en/latest/examples/ogc-map-tiles.html
+:vector-example: https://openlayers.org/en/latest/examples/ogc-vector-tiles.html
+
+During the sprint, the implementation was tested against services conforming to the Tileset conformance class.  Changes were proposed to graduate the the source classes for rendering {vector-example}[vector] and {map-example}[map] tiles from experimental to stable.  These changes were approved, and the classes will be part of the OpenLayers API in the next release.
+
+.Map tiles from an OGC API – Tiles service in OpenLayers
+image::../images/ol-map-tiles.png[align="center" link="{map-example}>"]
+
+.Vector tiles from an OGC API – Tiles service in OpenLayers
+image::../images/ol-vector-tiles.png[align="center" link="{vector-example}"]

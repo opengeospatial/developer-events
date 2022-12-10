@@ -1,5 +1,4 @@
 [[xyz2ogc]]
-
 ==== xyz2ogc
 
-The https://github.com/tschaub/go-ogc[xyz2ogc] program supports the generation of OGC API – Tiles metadata from existing XYZ tilesets. The program is implemented in the Go programming language.
+The https://github.com/tschaub/go-ogc[xyz2ogc] program supports the generation of OGC API – Tiles metadata from existing XYZ tilesets. The program is implemented in the Go programming language and the https://pkg.go.dev/github.com/tschaub/go-ogc[published module] can be used in Go-based services that implement the OGC API – Tiles specification.

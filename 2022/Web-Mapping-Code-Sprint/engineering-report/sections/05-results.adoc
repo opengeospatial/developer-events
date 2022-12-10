@@ -28,4 +28,6 @@ include::results/staplusviewer.adoc[]
 
 include::results/teamengine.adoc[]
 
+include::results/openlayers.adoc[]
+
 include::results/xyz2ogc.adoc[]
