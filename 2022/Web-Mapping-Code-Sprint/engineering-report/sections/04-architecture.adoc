@@ -23,6 +23,8 @@ include::architecture/ogcstaplus.adoc[]
 
 include::architecture/ogcsld.adoc[]
 
+include::architecture/ogcstylessymbology.adoc[]
+
 === Open Source Software Projects
 
 This section describes open source software products that were deployed during the code sprint.

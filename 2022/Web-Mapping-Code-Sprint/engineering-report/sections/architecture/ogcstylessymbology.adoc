@@ -6,14 +6,3 @@ The OGC Symbology Conceptual Model: Core Part standard (OGC 18-067r3), also know
 
 
 OGC Styles and Symbology is a vision for a standard that implements the OGC Symbology Conceptual Model: Core Part standard (OGC 18-067r3). The Web Mapping Code Sprint was a key moment to consolidate the roadmap to achieve this vision. The plan towards such a candidate SymCore 2.0 standard specdoc will consist in the definition of a conceptual and logical model, CSS and JSON encodings and a mapping to SLD/SE (eventually with existing well known vendor options). The requirements described will be supported by illustrated and encoded cartographic use cases.
-
-During the code sprint, the Styles & Symbology team identified portrayal use cases and as a result new conformance classes or functionality that would be required to support these:
-
-- we went through the conformance classes to check that none were missing. Some were missing. For example: Geometry Selection conformance class in relation to the possibility in a symbolizer to access the underlying geometry to manipulate it (e.g. transforming a polygon into a point with ST-Centroid to draw a proportional symbol -- cf. use case Proportional symbol).
-
-- following the idea presented at the opening plenary, we are indeed moving towards a version 2.0 "Styles & Symbology Model & Encodings" gathering SymCore and the conceptual/logical definitions of the concrete extensions to be packaged in a Part 1. It term of naming, we want to keep the SymCore naming.
-
-- in parallel we worked on relevant 9 use cases to test the functional coverage of the proposed model and to relate them to the conformance classes we have, while also testing existing encodings (e.g. GeoCSS) to start imagining the "natural" JSON encoding that would be also documented within such a candidate SymCore 2.0 standard specdoc Part 1
-
-Hereinafter the use cases open issues that inspired this work and will continue to inspire the OGC Styles and Symbology SWG for the next monthes of work (next major milestone: as ready as possible for an implementation / comments period for the Frascati meeting).
-
