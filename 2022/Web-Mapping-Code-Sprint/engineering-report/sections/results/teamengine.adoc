@@ -1,3 +1,18 @@
 === TEAM Engine
 
-TBA
+The focus of work was put on the https://github.com/opengeospatial/ets-ogcapi-tiles10[OGC CITE executable test suite (ETS) OGC API - Tiles].
+
+The code sprint was structured by creating https://github.com/opengeospatial/ets-ogcapi-tiles10/issues[GitHub issues] for tasks to be worked on. In total, five issues were part of the code sprint.
+Following screenshot summarizes those issues.
+
+.Screenshot of GitHub issues created during code sprint
+image::../images/ets-ogcapi-tiles10-github-issues.png[align="center"]
+
+A focus was put on cleaning up the test suite and re-structuring it so that it is closer to the structure of the abstract test suite of the standard.
+Afterwards, the test implementation of the Core conformance class was enhanced. This includes the parsing of the OpenAPI document which is required to extract parameters needed to build requests. The parsing of the OpenAPI document is also part of the Tilesets List conformance class.
+In addition, an already reported bug was solved.
+
+The result can be summarized by a screenshot of the HTML report of OGC API - Tiles test suite created by TEAM Engine. The report structures the already existing tests into the correct conformance classes and gives an overview of already implemented tests.
+
+.Screenshot of HTML report of OGC API - Tiles test suite created by TEAM Engine
+image::../images/ets-ogcapi-tiles10-html-report.png[align="center"]
