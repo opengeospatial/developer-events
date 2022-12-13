@@ -16,6 +16,7 @@ During the code sprint, CubeWerx modified the generated record to include the ch
 The following examples illustrate the current structure of a record from the
 CubeWerx catalogue:
 
+[%unnumbered%]
 [source,json]
 ----
     {
@@ -159,6 +160,7 @@ Consider the example of a Sentinel S1A imagery product. Using https://docs.ogc.o
 
 The harvest API defined during the code sprint defines the following endpoint:
 
+.Harvest interface defined during the code sprint
 [cols="20,5,55,20",options="header"]
 |===
 |Endpoint |Method |Description | Body or Response
@@ -170,6 +172,7 @@ The harvest API defined during the code sprint defines the following endpoint:
 
 The harvest API reuses the `/jobs/{jobID}` endpoint defined in the https://docs.ogc.org/is/18-062r2/18-062r2.html#toc33[OGC API - Processes - Part 1: Core] to provide the status on an asynchronously executing harvest request.  The following table summarizes the behavior:
 
+.Jobs interface defined during the code sprint
 [cols="20,5,55,20",options="header"]
 |===
 |Endpoint |Method |Description | Body or Response
@@ -181,6 +184,7 @@ The harvest API reuses the `/jobs/{jobID}` endpoint defined in the https://docs.
 
 The following table defines the parameters of a harvest request:
 
+.The parameters of a harvest request
 [cols="20,10,15,55",options="header"]
 |===
 |Parameter |Requirement |Type| Description
@@ -192,6 +196,7 @@ The following table defines the parameters of a harvest request:
 
 The following skeleton JSON document illustrates a JSON harvest request.
 
+[%unnumbered%]
 [source,json]
 ----
   {
@@ -364,6 +369,7 @@ NOTE: The correlation between a harvest request and the resulting record(s) is a
 
 The demonstration at the code sprint consisted of a script that would generate a harvest request and post it to the harvest endpoint of the CubeWerx server.  The code of the script, named `harvest`, was:
 
+[%unnumbered%]
 [source]
 ----
 #!/usr/bin/csh
@@ -378,12 +384,15 @@ The script generates a JSON harvest request and saves it to a temporary file nam
 
 In response to the following invocation:
 
+[%unnumbered%]
+[source]
 ----
 ./harvest s3://sentinel-s1-l1c/GRD/2022/9/16/EW/DH/S1A_EW_GRDM_1SDH_20220916T111355_20220916T111455_045029_056148_189B/
 ----
 
 The server generated the following response to the harvest request:
 
+[%unnumbered%]
 [source]
 ----
 HTTP/1.1 200 OK
