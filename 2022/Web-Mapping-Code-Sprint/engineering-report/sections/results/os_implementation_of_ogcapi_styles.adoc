@@ -1,7 +1,13 @@
 === Ordnance Survey Implementation of OGC API - Styles
 
-Have implemented a managed styles mechanism.
+Sprint participants from Ordnance Survey implemented a prototype that supports _OGC API - Styles_. The prototype was implemented to offer the landing page, API definition, conformance declaration, list of styles, and styles metadata. To demonstrate the prototype, Esri stylesheets were served through the API. The prototype was implemented to support both the British National Grid projection (which has the identifier EPSG:27700) and the WGS 84 / Pseudo-Mercator (which has the identifier EPSG:3857).
 
-In terms of being able to post styles to the server.
+[[img_os_styles_api_prototype_landing_page]]
+.Screenshot of the landing page of the OS NGD Styles API prototype
+image::../images/os_styles_api_prototype_landing_page.png[align="center"]
 
-The prototype implements support for Mapbox Vector Tiles.
+In addition to supporting the publication of styles, the prototype was implemented to also support the management of styles. The functionality was demonstrated during the code sprint, using Postman to send the request for creating a style. Future work will involve implementation of input validation, handling of error responses, support for PATCH functionality, and support for the management of resources such as sprites and fonts.
+
+[[img_os_styles_api_prototype_styleslist]]
+.Screenshot of the styles list of the OS NGD Styles API prototype
+image::../images/os_styles_api_prototype_styleslist.png[align="center"]
