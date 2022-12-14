@@ -1,3 +1,51 @@
 === ldproxy
 
-TBA
+Sprint participants from interactive instruments GmbH updated ldproxy's implementation of _OGC API - Tiles_ and _OGC API - Styles_.
+
+==== OGC API - Tiles
+
+The participants from interactive instruments GmbH updated their OS Zoomstack demonstration server to support the released version of _OGC API - Tiles - Part 1: Core_ standard. Specifically, ldproxy now offers a link that can be followed to get to a tile matrix set definition. The link is provided through a `uri` property as shown in the following listing.
+
+[%unnumbered%]
+[source,json]
+----
+{
+  "links" : [ {
+    "rel" : "self",
+    "type" : "application/json",
+    "title" : "This document",
+    "href" : "https://demo.ldproxy.net/zoomstack/tileMatrixSets?f=json"
+  }, {
+    "rel" : "alternate",
+    "type" : "text/html",
+    "title" : "This document as HTML",
+    "href" : "https://demo.ldproxy.net/zoomstack/tileMatrixSets?f=html"
+  } ],
+  "tileMatrixSets" : [ {
+    "title" : "Google Maps Compatible for the World",
+    "links" : [ {
+      "rel" : "self",
+      "title" : "Tile matrix set 'WebMercatorQuad'",
+      "href" : "https://demo.ldproxy.net/zoomstack/tileMatrixSets/WebMercatorQuad"
+    } ],
+    "id" : "WebMercatorQuad",
+    "uri" : "http://www.opengis.net/def/tilematrixset/OGC/1.0/WebMercatorQuad"
+  } ]
+}
+----
+
+Screenshots of the ldproxy landing page (a) and its WebMercatorQuad tile matrix set definition (b) are shown in <<img_ldproxy>>.
+
+[[img_ldproxy]]
+.Screenshot of the ldproxy landing page (a) and its WebMercatorQuad tile matrix set definition (b)
+image::../images/ldproxy_combined.png[align="center"]
+
+==== OGC API - Styles
+
+The ldproxy demonstration implementation of OGC API - Styles was updated with additional styles during the code sprint. The demo server provided a reference for other participants to validate their implementations by. A screenshot a listing of styles offered by the ldproxy demo is shown in <<img_ldproxy_styles>> (a) and metadata about a single style is demonstrated in <<img_ldproxy_styles>> (b).
+
+[[img_ldproxy_styles]]
+.Screenshot of the listing of styles offered by the ldproxy demo (a) and style metadata (b)
+image::../images/ldproxy_styles.png[align="center"]
+
+The work on OGC API - Styles during the code sprint led to a https://github.com/opengeospatial/ogcapi-styles/pull/42[pull request] being created to update the candidate standard. The pull request clarifies how to apply changes to a style with multiple occurrences in an API.
