@@ -14,7 +14,7 @@ The sprint participants made the following recommendations for future innovation
 The sprint participants also made the following recommendations for things that the SWGs should consider:
 
 * A code sprint focused on general security/access control issues, across OGC API and broader OGC standards
-* TBA
+* The OGC API - Styles SWG needs to be reinvigorated in order to push the candidate standard to completion
 * TBA
 
 It is envisaged that the SWGs will consider the above-listed recommendations for future work items.

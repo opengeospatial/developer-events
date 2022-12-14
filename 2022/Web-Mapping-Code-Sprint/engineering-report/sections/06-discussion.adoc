@@ -13,3 +13,5 @@ include::discussion/filtering-styles.adoc[]
 
 
 include::discussion/html-previews.adoc[]
+
+include::discussion/creating-styles.adoc[]
