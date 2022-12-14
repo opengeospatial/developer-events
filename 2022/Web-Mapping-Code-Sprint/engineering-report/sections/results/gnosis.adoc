@@ -1,3 +1,9 @@
 === GNOSIS Map Server
 
-TBA
+A demonstration instance of GNOSIS Map Server was used in the code sprint to support implementation of various client applications, including for example Leaflet which is described in <<results_leaflet>>. GNOSIS Map Server was also used to support the implementation of the Executable Test Suite, which is described in <<results_team_engine>>.
+
+<<img_gnosis_map_server>> shows a screenshot of the GNOSIS web client (left hand-side) and the responses it is receiving from an instance of GNOSIS Map Server (right hand-side). The interface between the client and server implements the OGC API - Tiles Standard. Notice that the responses are individual tiles encoded in the Mapbox Vector Tiles format.
+
+[[img_gnosis_map_server]]
+.Screenshot of the GNOSIS web client (left) and responses from an instance of GNOSIS Map Server (right)
+image::../images/gnosis_map_server.png[align="center"]
