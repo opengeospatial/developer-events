@@ -39,7 +39,7 @@ The OGC is an international consortium of more than 500 businesses, government a
 * Create awareness about the standards; and
 * Provide feedback about the standards and candidate standards.
 
-EuroGeographics is a not-for-profit organisation that represents many of the National Mapping, Cadastral and Land Registration Authorities across the European continent. The organisation facilitates access to data, services, and expertise, as well as supporting the sharing of knowledge across the continent. The organisation also publishes a product called Open Maps for Europe, which provided a useful source for sprint participants. For example, within the first day of the code sprint, the sprint participants had implemented an OGC API -Maps façade in front of a Web Map Service (WMS) that was serving maps from the https://eurogeographics.org/open-maps-for-europe/[Open Maps for Europe] product.
+EuroGeographics is a not-for-profit organisation that represents many of the National Mapping, Cadastral and Land Registration Authorities across Europe. The organisation facilitates access to data, services, and expertise, as well as supporting the sharing of knowledge across the continent. The organisation also publishes a product called Open Maps for Europe, which provided a useful source for sprint participants. For example, within the first day of the code sprint, the sprint participants had implemented an OGC API -Maps façade in front of a Web Map Service (WMS) that was serving maps from the https://eurogeographics.org/open-maps-for-europe/[Open Maps for Europe] product.
 
 Ordnance Survey (OS) is the National Mapping Agency of Great Britain. OS publishes printed and digital maps, as well as offering access to the maps and data through a variety of APIs. In September 2022, OS launched the https://osdatahub.os.uk/docs[OS NGD API] suite of products which implement a number of OGC API Standards. The Web Mapping Code Sprint therefore provided an opportunity for OS to directly support the advancement and implementation of the OGC API Standards on which the new OS NGD API products are built. The code sprint also provided an opportunity for OS engineers to directly engage with the editors of the Standards. Such access to editors and SWG members greatly accelerates development of applications. For example, during the code sprint, OS engineers were able to implement and demonstrate a prototype of OGC API - Styles.
 
@@ -54,6 +54,8 @@ The engineering report also makes the following recommendations for things that 
 * TBA
 * TBA
 * TBA
+
+The code sprint successfully facilitated the development and testing of prototype implementations of OGC API Standards, including  candidate Standards, that relate to web mapping. Further, the code sprint provided a foundation for the development of the next version of the Symbology Core Standard. Furthermore, sprint participants were able to provide feedback directly to the editors of the standards, whereas the editors were able to clarify any issues encountered by the sprint participants. The code sprint also raised awareness about the standards. The code sprint therefore met all of its objectives.
 
 == Submitters
 

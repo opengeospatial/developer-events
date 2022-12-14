@@ -1,7 +1,7 @@
 [[conclusions]]
 == Conclusions
 
-TBA
+The code sprint successfully facilitated the development and testing of prototype implementations of OGC API Standards, including  candidate Standards, that relate to web mapping. Further, the code sprint provided a foundation for the development of the next version of the Symbology Core Standard. Furthermore, sprint participants were able to provide feedback directly to the editors of the standards, whereas the editors were able to clarify any issues encountered by the sprint participants. The code sprint also raised awareness about the standards. The code sprint therefore met all of its objectives.
 
 === Future Work
 
