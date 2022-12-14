@@ -24,8 +24,6 @@ include::results/owslib.adoc[]
 
 include::results/pygeoapi.adoc[]
 
-include::results/staplusviewer.adoc[]
-
 include::results/teamengine.adoc[]
 
 include::results/openlayers.adoc[]

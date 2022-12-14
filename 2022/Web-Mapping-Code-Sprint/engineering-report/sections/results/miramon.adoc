@@ -1,3 +1,14 @@
+[[results_miramon]]
 === Miramon Map Browser
 
-TBA
+Sprint participants from CREAF extended the Miramon Map Browser to support the tiling of content from an implementation of the OGC SensorThings API. They also extended the Miramon Map Browser to support the addition of layers from implementations of OGC API - Maps.
+
+[[img_miramon_maps]]
+.Screenshot of the Miramon Map Browser configuration for layers from OGC API - Maps
+image::../images/miramon_maps_config.png[align="center"]
+
+<<img_miramon_staplus>> shows a screenshot of the Miramon Map Browser accessing a SensorThings API (top) and with objects being queried (bottom). The use case implemented was that of aggregation of objects in tiles, and the presentation of the number of objects in each tile. This addressed the situation of a server that offers a significant number of vector objects, whether those objects represent features, sensors, or their observations. Miramon was configured to issue a request for each tile twice, the first request is for getting the count (i.e. number of objects in a tile), and then second request is for getting the actual objects.
+
+[[img_miramon_staplus]]
+.Screenshot of the Miramon Map Browser accessing a SensorThings API (top) and with objects being queried (bottom)
+image::../images/miramon_combined.png[align="center"]
