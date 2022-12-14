@@ -1,3 +1,13 @@
 === Hexagon Luciad RIA
 
-TBA
+Sprint participants from Hexagon worked on an implementation of their Luciad RIA product. They extended the web client application to support OGC API - Maps. A screenshot of a Hexagon Luciad RIA client application listing collections of maps available from an OGC API - Maps implementation is shown in <<img_luciad_ria_1>>.
+
+[[img_luciad_ria_1]]
+.Screenshot of Hexagon Luciad RIA listing collections available from an OGC API - Maps implementation
+image::../images/luciad_ria_1.png[align="center"]
+
+The participants also worked on support for re-projection of data and maps on-the-fly. This included the ability to re-project data and maps that have been retrieved from an OGC API - Maps instance into a variety of coordinate reference systems, for example the British National Grid projection (EPSG:27700), as well as several other projections. This capability is demonstrated by the screenshots in <<img_luciad_ria_combined>>.
+
+[[img_luciad_ria_combined]]
+.Screenshot of Hexagon Luciad RIA with data reprojected from one projection to another
+image::../images/luciad_ria_combined.png[align="center"]
