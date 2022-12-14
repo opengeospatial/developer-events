@@ -16,20 +16,32 @@ The subject of this Engineering Report (ER) is a code sprint that was held from 
 [.preface]
 == Executive Summary
 
+The mechanisms through which maps are delivered across the Internet have evolved significantly over the past two decades. Advancement of such mechanisms has been driven by a combination of factors, for example, new data formats have emerged, the SWaP-C (size, weight, power, and cost) of the devices has improved, and the capabilities of web browsers have been enhanced by improvements brought by HTML5. This means that some of the functionality that web mapping applications could not implement in a standardised way, are now becoming increasingly common.
 
-The code sprint focused on the following group of specifications:
+To support the development of OGC API Standards that standardise many of the new capabilities available to web mapping applications, the Open Geospatial Consortium (OGC) and EuroGeographics hosted the 2022 Web Mapping Code Sprint from November 29th to December 1st, 2022. The event was sponsored at the Gold Level by OGC Strategic Member, Ordnance Survey. The code sprint was held as a hybrid event, consisting of a virtual element hosted on the OGC’s Discord environment and an in-person element hosted by EuroGeographics in Brussels, Belgium. This Engineering Report (ER) summarizes the main achievements of the code sprint.
 
-* https://ogcapi.ogc.org/maps/[OGC API - Maps] candidate Standard
-* https://ogcapi.ogc.org/tiles/[OGC API - Tiles] Standard
-* https://ogcapi.ogc.org/styles/[OGC API - Styles] candidate Standard
-* https://docs.ogc.org/is/18-067r3/18-067r3.html[OGC Symbology Conceptual Model: Core Part]
+Code Sprints experiment with emerging ideas in the context of geospatial standards, help improve interoperability of existing standards by experimenting with new extensions or profiles, and are used for building proofs-of-concept to support standards-development activities and the enhancement of software products.
 
-The sprint objectives for the Standards Working Groups (SWGs) were to:
+Non-coding activities such as testing, working on documentation, or reporting issues are also conducted during the code sprint. In addition, the code sprints’ mentor stream provides an excellent opportunity to onboard developers new to the standards.
+
+The 2022 Web Mapping Code Sprint focused on the following:
+
+* OGC API – Maps candidate standard: This candidate Standard describes an API building block that can enable implementations to serve spatially referenced and dynamically rendered electronic maps.
+* OGC API – Tiles Standard: This Standard describes an API building block that can enable implementations to serve map tiles, vector tiles (tiled feature data). or tiled coverage data.
+* OGC API – Styles candidate Standard: This candidate Standard describes an API building block that can enable implementations to manage and fetch styles that consist of symbolizing instructions that can be applied by a rendering engine to features and/or coverages.
+* and various Styles & Symbology Encodings (e.g. SLD, SymCore, etc)
+
+The OGC is an international consortium of more than 500 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR — Findable, Accessible, Interoperable, and Reusable. The consortium consists of Standards Working Groups (SWGs) that have responsibility for designing a candidate standard prior to approval as an OGC Standard and for making revisions to an existing OGC Standard. The sprint objectives for the SWGs were to:
 
 * Develop prototype implementations of OGC Standards, including implementations of draft OGC Application Programming Interface (API) Standards;
 * Test the prototype implementations;
-* Provide feedback to the Editor about what worked and what did not; and
-* Provide feedback about the specification document.
+* Provide feedback to the Editor about what worked and what did not;
+* Create awareness about the standards; and
+* Provide feedback about the standards and candidate standards.
+
+EuroGeographics is a not-for-profit organisation that represents many of the National Mapping, Cadastral and Land Registration Authorities across the European continent. The organisation facilitates access to data, services, and expertise, as well as supporting the sharing of knowledge across the continent. The organisation also publishes a product called Open Maps for Europe, which provided a useful source for sprint participants. For example, within the first day of the code sprint, the sprint participants had implemented an OGC API -Maps façade in front of a Web Map Service (WMS) that was serving maps from the Open Maps for Europe product.
+
+Ordnance Survey (OS) is the National Mapping Agency of Great Britain. OS publishes printed and digital maps, as well as offering access to the maps and data through a variety of APIs. In September 2022, OS launched the https://osdatahub.os.uk/docs[OS NGD API] suite of products which implement a number of OGC API Standards. The Web Mapping Code Sprint therefore provided an opportunity for OS to directly support the advancement and implementation of the OGC API Standards on which the new OS NGD API products are built. The code sprint also provided an opportunity for OS engineers to directly engage with the editors of the Standards. Such access to editors and SWG members greatly accelerates development of applications. For example, during the code sprint, OS engineers were able to implement and demonstrate a prototype of OGC API - Styles.
 
 This engineering report makes the following recommendations for future innovation work items:
 
@@ -62,6 +74,7 @@ All questions regarding this document should be directed to the editor or the co
 |Jérôme Jacovella-St-Louis	|	Ecere Corporation |	Contributor
 |Joan Maso |	UAB-CREAF	|	Contributor
 |Keith Pomakis	|	MariaDB	|	Contributor
+|Michael Gordon |	Ordnance Survey	|	Contributor
 |Núria Julià Selvas |	UAB-CREAF	|	Contributor
 |Olivier Ertz	|	HEIG-VD (School of Management and Engineering Vaud) |	Contributor
 |Prajwalita Chavan 	|	IIT Bombay |	Contributor
