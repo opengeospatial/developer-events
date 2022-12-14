@@ -34,6 +34,8 @@ image::../images/annex/issue17a.png[align="center"]
 .Graduated conditional coloring of a map
 image::../images/annex/issue17b.png[align="center"]
 
+One possible solution is that when classes are unknown (in a raster map) then pixel gradient values can be used to group the pixels into classes and to color them according to that class, creating a choropleth or graduated map. In this use case, the vector data is presented as graduated (colour maps) even where there is a large number of unknown classes.
+
 === Unique values map
 
 This use case is discussed in https://github.com/opengeospatial/styles-and-symbology/issues/18[styles-and-symbology#Issue 18].

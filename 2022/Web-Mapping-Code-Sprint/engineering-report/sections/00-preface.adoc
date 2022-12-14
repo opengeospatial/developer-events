@@ -53,16 +53,20 @@ All questions regarding this document should be directed to the editor or the co
 | Name | Organization | Role
 |Gobe Hobona| Open Geospatial Consortium | Editor
 |Joana Simoes | Open Geospatial Consortium |Editor
-|Keith Pomakis	|	MariaDB	|	Contributor
-|Núria Julià Selvas |	UAB-CREAF	|	Contributor
-|Joan Maso |	UAB-CREAF	|	Contributor
-|Clemens Portele	|	interactive instruments GmbH	|	Contributor
-|Tom Kralidis 	|	Meteorological Service of Canada	|	Contributor
 |Andreas Matheus	|	Secure Dimensions	|	Contributor
 |Antonio Cerciello	|	OSGeo |	Contributor
+|Clemens Portele	|	interactive instruments GmbH	|	Contributor
+|Erwan Bocher	|	CNRS (National Center for Scientific Research) |	Contributor
 |Francesco Bartoli	|	OSGeo |	Contributor
 |Iván Sánchez Ortega	|	OSGeo |	Contributor
+|Jérôme Jacovella-St-Louis	|	Ecere Corporation |	Contributor
+|Joan Maso |	UAB-CREAF	|	Contributor
+|Keith Pomakis	|	MariaDB	|	Contributor
+|Núria Julià Selvas |	UAB-CREAF	|	Contributor
+|Olivier Ertz	|	HEIG-VD (School of Management and Engineering Vaud) |	Contributor
+|Prajwalita Chavan 	|	IIT Bombay |	Contributor
 |Tim Schaub |	Planet Labs PBC |	Contributor
+|Tom Kralidis 	|	Meteorological Service of Canada	|	Contributor
 | Add Name	|	Add Name |	Contributor
 | Add Name	|	Add Name |	Contributor
 | Add Name	|	Add Name |	Contributor
