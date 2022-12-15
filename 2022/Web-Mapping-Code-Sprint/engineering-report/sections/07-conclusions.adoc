@@ -8,13 +8,13 @@ The code sprint successfully facilitated the development and testing of prototyp
 The sprint participants made the following recommendations for future innovation work items:
 
 * Prototyping and demonstration of support for the querying of coverages in HTML Previews of coverage tiles
-* TBA
-* TBA
+* A testbed activity to implement the prototype Symbology Core v2.0 would help to evaluate support for the various use cases identified in this sprint
+* A testbed activity to evaluate options for access control across OGC API Standards (covering at least the Features, Records, Tiles, and Styles APIs)
 
 The sprint participants also made the following recommendations for things that the SWGs should consider:
 
 * A code sprint focused on general security/access control issues, across OGC API and broader OGC standards
 * The OGC API - Styles SWG needs to be reinvigorated in order to push the candidate standard to completion
-* TBA
+* A user guide for OGC API - Tiles would help to accelerate uptake (e.g. describing how to build static tile servers in the Cloud)
 
 It is envisaged that the SWGs will consider the above-listed recommendations for future work items.
