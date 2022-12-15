@@ -10,6 +10,7 @@ The sprint participants made the following recommendations for future innovation
 * Prototyping and demonstration of support for the querying of coverages in HTML Previews of coverage tiles
 * A testbed activity to implement the prototype Symbology Core v2.0 would help to evaluate support for the various use cases identified in this sprint
 * A testbed activity to evaluate options for access control across OGC API Standards (covering at least the Features, Records, Tiles, and Styles APIs)
+* A testbed activity analysing the potential for consistent modification and harmonization of different stylesheets (e.g. SLD, Mapbox styles, ArcGIS, MapInfo)
 
 The sprint participants also made the following recommendations for things that the SWGs should consider:
 
