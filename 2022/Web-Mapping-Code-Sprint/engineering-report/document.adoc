@@ -35,10 +35,12 @@
 
 // Clauses
 include::sections/00-preface.adoc[]
-include::sections/01-scope.adoc[]
-include::sections/02-terms_and_definitions.adoc[]
-include::sections/03-references.adoc[]
 
+include::sections/01-scope.adoc[]
+
+include::sections/02-terms_and_definitions.adoc[]
+
+include::sections/03-references.adoc[]
 
 include::sections/04-architecture.adoc[]
 
@@ -52,11 +54,14 @@ include::sections/07-conclusions.adoc[]
 Annexes
 Add annex files as needed
 ////
+
 include::sections/aa-annexA.adoc[]
 
 ////
 Revision History should be the last annex before the Bibliography
 Bibliography should be the last annex
 ////
+
 include::sections/ah-revision-history.adoc[]
+
 include::sections/az-bibliography.adoc[]
