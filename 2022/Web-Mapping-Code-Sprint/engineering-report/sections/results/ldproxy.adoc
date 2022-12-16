@@ -4,32 +4,165 @@ Sprint participants from interactive instruments GmbH updated ldproxy's implemen
 
 ==== OGC API - Tiles
 
-The participants from interactive instruments GmbH updated their OS Zoomstack demonstration server to support the released version of _OGC API - Tiles - Part 1: Core_ standard. Specifically, ldproxy now offers a link that can be followed to get to a tile matrix set definition. The link is provided through a `uri` property as shown in the following listing.
+The participants from interactive instruments GmbH updated the ldproxy implementation of _OGC API - Tiles - Part 1: Core_ to support the released version 1.0.0 of the Standard. Specifically, the main updates are:
+
+* updated conformance class URIs;
+* removed `tileMatrixSetDefinition` member from the tile set metadata;
+* added `tiling-scheme` links to the tile set metadata;
+* added the `Link-Template` header for the tile URI template;
+* added `operationId` to all OpenAPI operations (in addition to setting the `operationId` for all Tiles operations, `operationIds` have been added to all other API operations, too);
+* the member `tileMatrixSetURI` in a tile matrix set was changed to `uri`.
+
+Work was also started during the Code Sprint to support the optional `OATiles-hint` header, but this requires more complex changes in various layers of the software and was not finalized during the Code Sprint.
+
+In addition, several improvements to the Tiles building blocks were implemented and tested before and during the Code Sprint:
+
+* For tiles from an MBTiles provider, additional information from the MBTiles container is used for the tile set metadata, including the vector layer and bounding box information;
+* harmonize the behavior of the map with tiles in the HTML representation of a tile set, independent of how the representation is configured (using a Mapbox Style, using feature data with a wireframe style, or using tiles from an MBTiles container).
+
+All changes are included in ldproxy v3.3.0, which was released on December 16, 2022.
+
+The ldproxy demonstration deployment at https://demo.ldproxy.net/ was updated with the changes. The deployment includes an API that shares the Ordnance Survey Zoomstack dataset supporting feature, tiles and style resources.
+
+For example, below is the (shortened) tile set metadata for the Zoomstack vector tiles, including the HTTP headers of the response:
 
 [%unnumbered%]
-[source,json]
+[source]
 ----
+HTTP/2 200 
+content-disposition: inline; filename="WebMercatorQuad.json"
+content-language: en
+content-type: application/json
+date: Fri, 16 Dec 2022 16:26:03 GMT
+etag: W/"ed1c7a5750df7c526823056406274c6e--gzip"
+link: <https://demo.ldproxy.net/zoomstack/tiles/WebMercatorQuad?f=tilejson>; rel="alternate"; title="This document as TileJSON"; type="application/vnd.mapbox.tile+json"
+link: <https://demo.ldproxy.net/zoomstack/tileMatrixSets/WebMercatorQuad>; rel="http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme"; title="Definition of the tiling scheme"
+link: <https://demo.ldproxy.net/zoomstack/tiles/WebMercatorQuad?f=json>; rel="self"; title="This document"; type="application/json"
+link-template: <https://demo.ldproxy.net/zoomstack/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt>; rel="item"; title="Mapbox vector tiles; the link is a URI template where {tileMatrix}/{tileRow}/{tileCol} is the tile in the tiling scheme '{{tileMatrixSetId}}'"; type="application/vnd.mapbox-vector-tile"
+vary: Accept,Accept-Language,Accept-Encoding
+x-request-id: 72c93630-2a72-4ec0-a58d-e883e5a93bf5
+
 {
   "links" : [ {
     "rel" : "self",
     "type" : "application/json",
-    "title" : "This document",
-    "href" : "https://demo.ldproxy.net/zoomstack/tileMatrixSets?f=json"
+    "title" : "Dieses Dokument",
+    "href" : "https://demo.ldproxy.net/zoomstack/tiles/WebMercatorQuad?f=json"
   }, {
     "rel" : "alternate",
-    "type" : "text/html",
-    "title" : "This document as HTML",
-    "href" : "https://demo.ldproxy.net/zoomstack/tileMatrixSets?f=html"
+    "type" : "application/vnd.mapbox.tile+json",
+    "title" : "Dieses Dokument als TileJSON",
+    "href" : "https://demo.ldproxy.net/zoomstack/tiles/WebMercatorQuad?f=tilejson"
+  }, {
+    "rel" : "http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme",
+    "title" : "Beschreibung des Kachelschemas",
+    "href" : "https://demo.ldproxy.net/zoomstack/tileMatrixSets/WebMercatorQuad"
+  }, {
+    "rel" : "item",
+    "type" : "application/vnd.mapbox-vector-tile",
+    "title" : "Mapbox Vector Tiles; der Link ist ein URI-Template wobei {tileMatrix}/{tileRow}/{tileCol} die Kachel im Kachelschema '{{tileMatrixSetId}}' identifiziert",
+    "href" : "https://demo.ldproxy.net/zoomstack/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt",
+    "templated" : true
   } ],
-  "tileMatrixSets" : [ {
-    "title" : "Google Maps Compatible for the World",
-    "links" : [ {
-      "rel" : "self",
-      "title" : "Tile matrix set 'WebMercatorQuad'",
-      "href" : "https://demo.ldproxy.net/zoomstack/tileMatrixSets/WebMercatorQuad"
-    } ],
-    "id" : "WebMercatorQuad",
-    "uri" : "http://www.opengis.net/def/tilematrixset/OGC/1.0/WebMercatorQuad"
+  "dataType" : "vector",
+  "tileMatrixSetId" : "WebMercatorQuad",
+  "tileMatrixSetURI" : "http://www.opengis.net/def/tilematrixset/OGC/1.0/WebMercatorQuad",
+  "tileMatrixSetLimits" : [ {
+    "tileMatrix" : "0",
+    "minTileRow" : 0,
+    "maxTileRow" : 0,
+    "minTileCol" : 0,
+    "maxTileCol" : 0
+  }, ..., {
+    "tileMatrix" : "13",
+    "minTileRow" : 2343,
+    "maxTileRow" : 2784,
+    "minTileCol" : 3886,
+    "maxTileCol" : 4157
+  }, {
+    "tileMatrix" : "14",
+    "minTileRow" : 4686,
+    "maxTileRow" : 5569,
+    "minTileCol" : 7772,
+    "maxTileCol" : 8314
+  } ],
+  "boundingBox" : {
+    "lowerLeft" : [ -9.2230281, 49.8211737 ],
+    "upperRight" : [ 2.6891998, 60.7781954 ],
+    "crs" : "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+  },
+  "centerPoint" : {
+    "coordinates" : [ -3.2835, 58.6359 ],
+    "tileMatrix" : "10"
+  },
+  "layers" : [ {
+    "title" : "sea",
+    "id" : "sea",
+    "dataType" : "vector"
+  }, {
+    "title" : "names",
+    "id" : "names",
+    "dataType" : "vector",
+    "propertiesSchema" : {
+      "properties" : {
+        "name2language" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "name2" : {
+          "type" : "string"
+        },
+        "name1" : {
+          "type" : "string"
+        },
+        "name1language" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  }, {
+    "title" : "rail",
+    "id" : "rail",
+    "dataType" : "vector",
+    "propertiesSchema" : {
+      "properties" : {
+        "type" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  }, ..., {
+    "title" : "airports",
+    "id" : "airports",
+    "dataType" : "vector",
+    "propertiesSchema" : {
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  }, {
+    "title" : "woodland",
+    "id" : "woodland",
+    "dataType" : "vector"
+  }, {
+    "title" : "national_parks",
+    "id" : "national_parks",
+    "dataType" : "vector"
+  }, {
+    "title" : "urban_areas",
+    "id" : "urban_areas",
+    "dataType" : "vector"
+  }, {
+    "title" : "surfacewater",
+    "id" : "surfacewater",
+    "dataType" : "vector"
   } ]
 }
 ----
@@ -42,10 +175,14 @@ image::../images/ldproxy_combined.png[align="center"]
 
 ==== OGC API - Styles
 
-The ldproxy demonstration implementation of OGC API - Styles was updated with additional styles during the code sprint. The demo server provided a reference for other participants to validate their implementations by. A screenshot a listing of styles offered by the ldproxy demo is shown in <<img_ldproxy_styles>> (a) and metadata about a single style is demonstrated in <<img_ldproxy_styles>> (b).
+The ldproxy demonstration implementation of OGC API - Styles was updated with additional styles during the code sprint. The demo server provided a reference for other participants to validate their implementations by. A screenshot a listing of styles offered by the ldproxy demo is shown in <<img_ldproxy_styles>> (a) and metadata about a single style, derived from the information in the style, is demonstrated in <<img_ldproxy_styles>> (b).
 
 [[img_ldproxy_styles]]
 .Screenshot of the listing of styles offered by the ldproxy demo (a) and style metadata (b)
 image::../images/ldproxy_styles.png[align="center"]
 
-The work on OGC API - Styles during the code sprint led to a https://github.com/opengeospatial/ogcapi-styles/pull/42[pull request] being created to update the candidate standard. The pull request clarifies how to apply changes to a style with multiple occurrences in an API.
+<<img_ldproxy_zoomstack_hillshade>> shows a map using the MapLIbre JS library with a style from the API which accesses the Zoomstack vector tiles from the Tiles resources of the same API and hillshade coverage tiles from an Ordnance Survey server.
+
+[[img_ldproxy_zoomstack_hillshade]]
+.Screenshot of a map with the Zoomstack style "Outdoor" with additional hillshades
+image::../images/ldproxy_zoomstack_hillshade.png[align="center"]
