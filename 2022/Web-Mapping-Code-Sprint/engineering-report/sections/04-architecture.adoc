@@ -34,6 +34,8 @@ include::architecture/leaflet.adoc[]
 
 include::architecture/ldproxy.adoc[]
 
+include::architecture/miramon.adoc[]
+
 include::architecture/owslib.adoc[]
 
 include::architecture/pygeoapi.adoc[]
