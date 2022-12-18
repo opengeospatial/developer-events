@@ -20,6 +20,8 @@ include::results/os_implementation_of_ogcapi_styles.adoc[]
 
 include::results/ogcstylessymbology.adoc[]
 
+include::results/ogcapistyles.adoc[]
+
 include::results/owslib.adoc[]
 
 include::results/pygeoapi.adoc[]
