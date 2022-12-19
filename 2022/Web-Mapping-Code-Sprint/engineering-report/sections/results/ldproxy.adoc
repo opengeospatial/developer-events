@@ -22,14 +22,14 @@ In addition, several improvements to the Tiles building blocks were implemented 
 
 All changes are included in ldproxy v3.3.0, which was released on December 16, 2022.
 
-The ldproxy demonstration deployment at https://demo.ldproxy.net/ was updated with the changes. The deployment includes an API that shares the Ordnance Survey Zoomstack dataset supporting feature, tiles and style resources.
+The ldproxy demonstration deployment at https://demo.ldproxy.net/ was updated with the changes. The deployment includes an API that serves an Ordnance Survey Zoomstack dataset through features, tiles and styles resources.
 
 For example, below is the (shortened) tile set metadata for the Zoomstack vector tiles, including the HTTP headers of the response:
 
 [%unnumbered%]
 [source]
 ----
-HTTP/2 200 
+HTTP/2 200
 content-disposition: inline; filename="WebMercatorQuad.json"
 content-language: en
 content-type: application/json
@@ -175,13 +175,13 @@ image::../images/ldproxy_combined.png[align="center"]
 
 ==== OGC API - Styles
 
-The ldproxy demonstration implementation of OGC API - Styles was updated with additional styles during the code sprint. The demo server provided a reference for other participants to validate their implementations by. A screenshot a listing of styles offered by the ldproxy demo is shown in <<img_ldproxy_styles>> (a) and metadata about a single style, derived from the information in the style, is demonstrated in <<img_ldproxy_styles>> (b).
+The ldproxy demonstration implementation of OGC API - Styles was updated with additional styles during the code sprint. The demo server provided a reference for other participants to validate their implementations by. A screenshot of a listing of styles offered by the ldproxy demo is shown in <<img_ldproxy_styles>> (a) and metadata about a single style, derived from the information in the style, is demonstrated in <<img_ldproxy_styles>> (b).
 
 [[img_ldproxy_styles]]
 .Screenshot of the listing of styles offered by the ldproxy demo (a) and style metadata (b)
 image::../images/ldproxy_styles.png[align="center"]
 
-<<img_ldproxy_zoomstack_hillshade>> shows a map using the MapLIbre JS library with a style from the API which accesses the Zoomstack vector tiles from the Tiles resources of the same API and hillshade coverage tiles from an Ordnance Survey server.
+<<img_ldproxy_zoomstack_hillshade>> shows a map using the MapLibre JS library with a style from the API which accesses the Zoomstack vector tiles from the Tiles resources of the same API and hillshade coverage tiles from an Ordnance Survey server.
 
 [[img_ldproxy_zoomstack_hillshade]]
 .Screenshot of a map with the Zoomstack style "Outdoor" with additional hillshades
