@@ -1,43 +1,42 @@
 [[results_miramon]]
 === MiraMon Map Browser
 
-Sprint participants from CREAF
-worked mainly on improving the implementation of a web map client, called MiraMon Map Browser, to better accommodate OGC API Maps, OGC API Map Tiles support (e.g. extending the Miramon Map Browser to support the addition of layers from implementations of OGC API - Maps) and also to experiment on how to apply tessellation in an implementation of the OGC Sensor thing API. The analysis covered tiles generated at the server side as well as client side tiled requests to STA.
+Sprint participants from CREAF worked mainly on improving the implementation of a web map client, called the MiraMon Map Browser, to improve support for OGC API - Tiles, OGC API -Maps (e.g. extending the MiraMon Map Browser to support the addition of layers from implementations of OGC API - Maps) and also to experiment with how to apply tessellation in an implementation of the OGC SensorThings API (STA). The analysis covered tiles generated on the server-side, as well as client-side tiled requests to implementations of the STA.
 
-==== OGC API – Maps and Map Tiles implementation
+==== OGC API – Maps and support for Map Tiles
 
-To begin with, an overhaul of the code has been made to update the implementation to the approved version of OGC API Tiles and the current draft version OGC API Maps. A working instance of the MiraMon web client implementation was prepared showing collections from multiple providers.
+To begin with, the source code was overhauled to update the implementation to the approved version of OGC API - Tiles and the current draft version OGC API - Maps. A working instance of the MiraMon Map Browser was prepared showing collections from multiple providers, as demonstrated in <<img_miramon_maps_1>>.
 
 [[img_miramon_maps_1]]
-.Screenshot of the Miramon Map Browser with a combination of several collections (or layers) in the same client using different OGC protocols and APIs, like WMS, WMTS, OGC API - Maps, OGC API - Tiles, and SensorThings API
+.Screenshot of the MiraMon Map Browser with a combination of several collections (or layers) in the same client using different OGC protocols and APIs, like WMS, WMTS, OGC API - Maps, OGC API - Tiles, and SensorThings API
 image::../images/miramon_maps_1.png[align="center"]
 
-After that, the work focused on having a full implementation of the OGC API - Maps in our web client to allow end users to add collections from external server. The map client is able to establish the connection with a server from the landing page, inspect and follow the links and make the necessary requests to obtain a list of available map collections and their main characteristics.
+After that, the work focused on having a full implementation of the OGC API - Maps candidate Standard in the MiraMon Map Browser to enable end-users to add collections from external servers. The map client is able to establish a connection with a server from the information provided by the landing page. The map client  inspects the information and then follows the links, making the necessary requests to obtain a list of available map collections and their main characteristics.
 
-The interface allows end users to indicate the landing page of the service that should be explored. Once explored, it displays a list of map collection available and allows to users select the collection or collections to add them as layer in the legend and in the map screen.
-The following images show the .
+As shown in <<img_miramon_maps_2>>, the interface allows users to indicate the landing page of the service that should be explored. Once explored, it displays a list of available map collections and allows users to select the collection or collections to add as layers in the legend and the map display. The selected layers are added to the map display as demonstrated in <<img_miramon_maps_4>>.
+
 
 [[img_miramon_maps_2]]
 .Screenshot of the first step of the process for adding collections to the client from a OGC API - Maps compatible landing page prepared by Cubewerx
 image::../images/miramon_maps_2.png[align="center"]
 
 [[img_miramon_maps_4]]
-.Screenshot of the Eurogeographics map served by the Cubewerx API.
+.Screenshot of the EuroGeographics map served by the Cubewerx API.
 image::../images/miramon_maps_4.png[align="center"]
 
-Finally, the working shifted to connecting to map collections from OCG API - Tiles so that the end user can be added tiled maps to the client. The work consist on obtaining the tiled description and the list of tiled maps available in a service from the landing page. The work was more extensive that we anticipated and in the process of an in-depth review of the standard documents some difficulties have been found to properly understand some aspects. A suggestion for incorporating more coding examples in some of the requirements classes was made.
+Finally, the focus of the work shifted to connecting to map collections retrieved from OGC API - Tiles implementations so that an end-user could add tiled maps to the client. The work consisted of obtaining the tiled description and the list of tiled maps available in a service from the landing page. The work was more extensive than the team had anticipated and in the process of an in-depth review of the Standard some difficulties were encountered to properly understand some aspects. A suggestion for incorporating more coding examples in some of the requirements classes was made.
 
 ==== OGC Sensor Things API implementation
 
-When working with a large amount of citizen data accessible through a STA service. In particular, trying to request the necessary data to present a map with a the large volume of features of interest can very slow and inefficient. To solve two approaches to tessellate the data has been tested and others proposed.
+When working with a large amount of citizen data accessible through an implementation of the SensorThings API Standard, the performance of a client application can be adversely impacted. In particular, trying to request the necessary data to present a map with a large number of features of interest can be a very slow and inefficient process. To address this issue, two approaches for tessellation of the data were tested during the code sprint and other approaches were proposed.
 
-===== Some discussions on allowing tile requests in STA
+===== Some discussions on allowing tile requests in SensorThings API Standard
 
-An approach based on the combinations of OGC API - Tiles and STA will require modifying the current STA standard into support a request such as:
+An approach based on the combination of OGC API — Tiles and STA would require modifying the current SensorThings API Standard to support a request such as:
 
 https://cos4cloud.demo.secure-dimensions.de/staplus/v1.1/TileMatrixSetId("WorldMercatorWGS84Quad")/tileMatrix(45)/TileRow(3)/TileCol(2)?$select=feature
 
-Others approaches were discussed based on the extension of the Well Known Text filtering syntax to allow specifies new conditions and this can be something such as one of the following:
+Other approaches were discussed based on the extension of the Well Known Text filtering syntax to allow the specification of new conditions, for example:
 
 https://cos4cloud.demo.secure-dimensions.de/staplus/v1.1/FeaturesOfInterest/?$select=feature&$filter=properties/tilematrixset eq 'WorldMercatorWGS84Quad' and properties/tilematrix eq 4 and properties/tilerow eq 6 and properties/tilerow eq 10
 
@@ -45,25 +44,25 @@ https://cos4cloud.demo.secure-dimensions.de/staplus/v1.1/FeaturesOfInterest/?$se
 
 https://cos4cloud.demo.secure-dimensions.de/staplus/v1.1/DataStream/?$select=feature&$expand=Locations&$filter=tilematrixset eq 'WorldMercatorWGS84Quad' and tilematrix eq 4 and tilerow eq 6 and tilerow eq 10
 
-===== A client side implementation
+===== A client-side implementation
 
-A client-based tessellation solution was implemented in the sprint that addressed the situation of a server that offers a significant number of vector objects, whether those objects represent features, sensors, or their observations. This approach requires to implement two aspects directly in the client side: a tile matrix set and a "pre-fetch" STA request for the  number of features in a tile.
+A client-based tessellation solution was implemented that addressed the situation of a server that offers a significant number of vector objects, whether those objects represent features, sensors, or their observations. This approach required implementation of two capabilities directly in the client side: a tile matrix set and a “pre-fetch” SensorThings API request for the number of features in a tile.
 
-By defining a tile matrix set in several zoom in the client side, parallel tiled requests based on this division can be done to the server by specifying the bounding box of each tile without changing anything in the standard or the server implementations. In addition, only the tiles with a number of objects below a threshold will be completely requested.
+By defining a tile matrix set with several zoom levels on the client-side, parallel tiled requests based on this division can be sent to the server by specifying the bounding box of each tile without changing anything in the Standard or the server implementations. In addition, only the tiles with a number of objects below a threshold would be completely requested.
 
-Miramon was configured to issue a request for each STA tile twice, the first request is for getting the count (i.e. number of features of interest in a tile), and then second request is for getting the actual features of interest. The number of features of interest is requested to the STA server in a prefetch request. Only if the count of the features in the “tile” requested is greater than the threshold, only the number of features of interest is represented in the center of the tile with the presentation of the number of objects in each tile. Otherwise, the full description of the features of interest in the tile is requested and each feature of interested is represented in the screen. This approach is proposed by the https://github.com/DataCoveEU/STAM[STAM library] and it has been implemented from scratch in the MiraMon Map Browser using the same principles.
+MiraMon was configured to issue a request for each STA tile twice, the first request is for getting the count (i.e. number of features of interest in a tile), and then the second request is for getting the actual features of interest. The number of features of interest is requested from the STA server in a prefetch request. If the count of the features in the “tile” requested is greater than the threshold, then the number of features of interest is represented in the center of the tile with the presentation of the number of objects in each tile. Otherwise, the full description of the features of interest in the tile is requested and each feature of interested is represented in the screen. This approach  is proposed by the https://github.com/DataCoveEU/STAM[STAM library] and it has been implemented from scratch in the MiraMon Map Browser using the same principles.
 
 [[img_miramon_sta_2]]
-.Screenshot of the MiraMon Map Browser requesting some tiles with the count of features of interest represented as big circles and others with the features of interest represented as small red dots. In addition, the information related with a particular observation is shown, including a picture.
+.Screenshot of the MiraMon Map Browser requesting some tiles with the count of features of interest represented as big circles and others with the features of interest represented as small red dots. In addition, the information related to a particular observation is shown, including a picture.
 image::../images/miramon_sta_2.png[align="center"]
 
 [[img_miramon_sta_3]]
 .Screenshot of the MiraMon Map Browser showing the URLs requested for each tile where the each bounding box can be seen expressed in WKT as a polygon.
 image::../images/miramon_sta_3.png[align="center"]
 
-===== A Server side implementation
+===== A server-side implementation
 
-Secure Dimensions has contributed to this sprint a server side implementation of tiles of observations. In this case a OGC API - Tiles is used as a facade for STA. The server implementing the OGC API - Tiles, renders the STA observation in PNG on-the-flight that is immediately delivered to the client. The MiraMon Map Browser is used as a client for this approach in other to visually verify that both server and client side times generate the same view. Further work is need to evaluate which of the two approaches could be more efficient in concrete use cases.
+Secure Dimensions contributed to the code sprint through a server-side implementation of a mechanism for creating tiles of observations. In this case, an OGC API - Tiles implementation is used as a facade for STA. The server implementing the OGC API - Tiles, renders the STA observation in PNG on-the-flight that is immediately delivered to the client. The MiraMon Map Browser is used as a client for this approach in order to visually verify that both server-side and client-side tiles generate the same view. Further work is needed to evaluate which of the two approaches could be more efficient in concrete use cases.
 
 [[img_miramon_sta_4]]
 .Screenshot of the MiraMon Map Browser comparing the response of the the Secure Dimensions OGC API - tiles facade (bottom, represented as black dots) with a STA with the client side tile approach (top, represented as red dots) as described in the previous subsection. Spatial concordance between the position of the features of interest is checked.
