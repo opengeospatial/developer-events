@@ -1,5 +1,5 @@
 [[results_miramon]]
-=== Miramon Map Browser
+=== MiraMon Map Browser
 
 Sprint participants from CREAF
 worked mainly on improving the implementation of a web map client, called MiraMon Map Browser, to better accommodate OGC API Maps, OGC API Map Tiles support (e.g. extending the Miramon Map Browser to support the addition of layers from implementations of OGC API - Maps) and also to experiment on how to apply tessellation in an implementation of the OGC Sensor thing API. The analysis covered tiles generated at the server side as well as client side tiled requests to STA.
