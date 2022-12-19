@@ -4,5 +4,5 @@
 OGC API - Styles specifies building blocks for Web APIs that enable map servers and clients as well as visual style editors to manage and fetch styles that consist of symbolizing instructions that can be applied by a rendering engine on features and/or coverages. The API implements the conceptual model for style encodings and style metadata. The model defines three main concepts, namely the style, stylesheet, and style metadata. The concepts are explained below:
 
 * The *style* is the main resource.
-* Each style is available in one or more *stylesheets* - the representation of a style in an encoding like OGC SLD 1.0 or Mapbox Style. Clients will use the stylesheet of a style that fits best based on the capabilities of available tools and their preferences.
+* Each style is available in one or more *stylesheets* - the representation of a style in an encoding like OGC SLD 1.0 or Mapbox Style. Clients can use the stylesheet of a style that fits the user's needs best, based on the capabilities of available tools and their preferences.
 * For each style there is *style metadata* available, with general descriptive information about the style, structural information (e.g., layers and attributes), and so forth to allow users to discover and select existing styles for their data.
