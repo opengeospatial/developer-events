@@ -1,7 +1,7 @@
 [[results_miramon]]
 === Miramon Map Browser
 
-Sprint participants from CREAF 
+Sprint participants from CREAF
 worked mainly on improving the implementation of a web map client, called MiraMon Map Browser, to better accommodate OGC API Maps, OGC API Map Tiles support (e.g. extending the Miramon Map Browser to support the addition of layers from implementations of OGC API - Maps) and also to experiment on how to apply tessellation in an implementation of the OGC Sensor thing API. The analysis covered tiles generated at the server side as well as client side tiled requests to STA.
 
 ==== OGC API – Maps and Map Tiles implementation
@@ -14,16 +14,12 @@ image::../images/miramon_maps_1.png[align="center"]
 
 After that, the work focused on having a full implementation of the OGC API - Maps in our web client to allow end users to add collections from external server. The map client is able to establish the connection with a server from the landing page, inspect and follow the links and make the necessary requests to obtain a list of available map collections and their main characteristics.
 
-The interface allows to end users to indicate the landing page of the service that should be explored. Once explored, it displays a list of map collection available and allows to users select the collection or collections to add them as layer in the legend and in the map screen.
+The interface allows end users to indicate the landing page of the service that should be explored. Once explored, it displays a list of map collection available and allows to users select the collection or collections to add them as layer in the legend and in the map screen.
 The following images show the .
 
 [[img_miramon_maps_2]]
 .Screenshot of the first step of the process for adding collections to the client from a OGC API - Maps compatible landing page prepared by Cubewerx
 image::../images/miramon_maps_2.png[align="center"]
-
-[[img_miramon_maps_3]]
-.Screenshot of the collection list presented to the user to be added to the client. The Cubewerx offers only one collection: the European topographic map from the sponsor Eurogeographics.
-image::../images/miramon_maps_3.png[align="center"]
 
 [[img_miramon_maps_4]]
 .Screenshot of the Eurogeographics map served by the Cubewerx API.
@@ -33,7 +29,7 @@ Finally, the working shifted to connecting to map collections from OCG API - Til
 
 ==== OGC Sensor Things API implementation
 
-When working with a large amount of citizen data accessible through a STA service. In particular, trying to request the necessary data to present a map with a the large volume of features of interest can very slow and inefficient. To solve two approaches to tessellate the data has been tested and others proposed. 
+When working with a large amount of citizen data accessible through a STA service. In particular, trying to request the necessary data to present a map with a the large volume of features of interest can very slow and inefficient. To solve two approaches to tessellate the data has been tested and others proposed.
 
 ===== Some discussions on allowing tile requests in STA
 
@@ -57,12 +53,6 @@ By defining a tile matrix set in several zoom in the client side, parallel tiled
 
 Miramon was configured to issue a request for each STA tile twice, the first request is for getting the count (i.e. number of features of interest in a tile), and then second request is for getting the actual features of interest. The number of features of interest is requested to the STA server in a prefetch request. Only if the count of the features in the “tile” requested is greater than the threshold, only the number of features of interest is represented in the center of the tile with the presentation of the number of objects in each tile. Otherwise, the full description of the features of interest in the tile is requested and each feature of interested is represented in the screen. This approach is proposed by the https://github.com/DataCoveEU/STAM[STAM library] and it has been implemented from scratch in the MiraMon Map Browser using the same principles.
 
-
-
-[[img_miramon_sta_1]]
-.Screenshot of the MiraMon Map Browser requesting counts of features of interest to a modified FROST implementation of STA hosted by Secure Dimensions. The observations in the STA are point type biodiversity occurrences.
-image::../images/miramon_sta_1.png[align="center"]
-
 [[img_miramon_sta_2]]
 .Screenshot of the MiraMon Map Browser requesting some tiles with the count of features of interest represented as big circles and others with the features of interest represented as small red dots. In addition, the information related with a particular observation is shown, including a picture.
 image::../images/miramon_sta_2.png[align="center"]
@@ -78,5 +68,3 @@ Secure Dimensions has contributed to this sprint a server side implementation of
 [[img_miramon_sta_4]]
 .Screenshot of the MiraMon Map Browser comparing the response of the the Secure Dimensions OGC API - tiles facade (bottom, represented as black dots) with a STA with the client side tile approach (top, represented as red dots) as described in the previous subsection. Spatial concordance between the position of the features of interest is checked.
 image::../images/miramon_sta_4.png[align="center"]
-
-

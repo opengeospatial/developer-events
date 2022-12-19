@@ -1,13 +1,79 @@
 === Ordnance Survey Implementation of OGC API - Styles
 
-Sprint participants from Ordnance Survey implemented a prototype that supports _OGC API - Styles_. The prototype was implemented to offer the landing page, API definition, conformance declaration, list of styles, and styles metadata. To demonstrate the prototype, Esri stylesheets were served through the API. The prototype was implemented to support both the British National Grid projection (which has the identifier EPSG:27700) and the WGS 84 / Pseudo-Mercator (which has the identifier EPSG:3857).
+Sprint participants from Ordnance Survey implemented a prototype that supports _OGC API - Styles_. The prototype was implemented to offer the landing page, API definition, conformance declaration, list of styles, and styles metadata. To demonstrate the prototype, Esri stylesheets were served through the API. The prototype was implemented to support both the British National Grid projection (which has the identifier EPSG:27700) and the WGS 84 / Pseudo-Mercator (which has the identifier EPSG:3857). A sample from the landing page is shown below.
 
-[[img_os_styles_api_prototype_landing_page]]
-.Screenshot of the landing page of the OS NGD Styles API prototype
-image::../images/os_styles_api_prototype_landing_page.png[align="center"]
+[%unnumbered%]
+[source,json]
+----
+{
+  "title" : "OS NGD Styles API",
+  "links" : [
+    {
+      "href" : "https://localhost/api/v1",
+      "rel" : "self",
+      "type" : "application/json",
+      "title" : "this document"
+    },
+    {
+      "href" : "https://localhost/api/v1/conformance",
+      "rel" : "http://www.opengis.net/def/rel/ogc/1.0/conformance",
+      "type" : "application/json",
+      "title" : "list of conformance classes implemented by this API"
+    },
+    {
+      "href" : "https://localhost/api/v1/styles",
+      "rel" : "http://www.opengis.net/def/rel/ogc/1.0/styles",
+      "type" : "application/json",
+      "title" : "the styles shared via this API"
+    }
+  ]
 
-In addition to supporting the publication of styles, the prototype was implemented to also support the management of styles. The functionality was demonstrated during the code sprint, using Postman to send the request for creating a style. Future work will involve implementation of input validation, handling of error responses, support for PATCH functionality, and support for the management of resources such as sprites and fonts.
+}
+----
 
-[[img_os_styles_api_prototype_styleslist]]
-.Screenshot of the styles list of the OS NGD Styles API prototype
-image::../images/os_styles_api_prototype_styleslist.png[align="center"]
+In addition to supporting the publication of styles, the prototype was implemented to also support the management of styles. The functionality was demonstrated during the code sprint, using Postman to send the request for creating a style. Future work will involve implementation of input validation, handling of error responses, support for PATCH functionality, and support for the management of resources such as sprites and fonts. A sample of the styles list of the OS NGD Styles API prototype is shown below.
+
+[%unnumbered%]
+[source,json]
+----
+{
+  "styles" : [
+    {
+      "id" : "ngd27700",
+      "title" : "Style ngd27700 for OS NGD API",
+      "links" : [
+        {
+          "href" : "https://localhost/api/v1/styles/ngd27700?f=esri",
+          "rel" : "stylesheet",
+          "type" : "application/json",
+          "title" : "ESRI stylesheet for style ngd27700"
+        },
+        {
+          "href" : "https://localhost/api/v1/styles/ngd27700/metadata?f=json",
+          "rel" : "describedby",
+          "type" : "application/json",
+          "title" : "Metadata for style ngd27700"
+        }
+      ]
+    },
+    {
+      "id" : "ngd3857",
+      "title" : "Style ngd3857 for OS NGD API",
+      "links" : [
+        {
+          "href" : "https://localhost/api/v1/styles/ngd3857?f=esri",
+          "rel" : "stylesheet",
+          "type" : "application/json",
+          "title" : "ESRI stylesheet for style ngd3857"
+        },
+        {
+          "href" : "https://localhost/api/v1/styles/ngd3857/metadata?f=json",
+          "rel" : "describedby",
+          "type" : "application/json",
+          "title" : "Metadata for style ngd3857"
+        }
+      ]
+    }
+  ]
+}
+----
