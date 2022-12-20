@@ -14,9 +14,9 @@ The sprint participants made the following recommendations for future innovation
 
 The sprint participants also made the following recommendations for things that the SWGs should consider:
 
-* A code sprint focused on general security/access control issues, across OGC API and broader OGC standards
-* The OGC API - Styles SWG needs to be reinvigorated in order to push the candidate standard to completion
+* A code sprint focused on general security/access control issues, across OGC API and broader OGC Standards
+* Design an approach for supporting 'Cancel' requests, so that long-running jobs can be terminated as users zoom or pan across a map
 * A user guide for OGC API - Tiles would help to accelerate uptake (e.g. describing how to build static tile servers in the Cloud)
-* If there is not a real benefit to requiring that the tileset list URL ends with /tiles, perhaps a future version of the OGC API - Tiles Standard could relax or remove this requirement.
+* A future version of the OGC API - Tiles Standard could relax or remove the requirement that the tileset list URL ends with `/tiles`
 
 It is envisaged that the SWGs will consider the above-listed recommendations for future work items.
