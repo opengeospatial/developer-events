@@ -1,0 +1,4 @@
+=== OGC API - Tiles
+
+During the code sprint, the Standard Editors from UAB-CREAF and Ecere applied and reviewed fixes for some editorial issues that were identified by Carl Reed as well as by participants during the sprint.
+Those editorial changes had no impact on the normative content of the Standard.
