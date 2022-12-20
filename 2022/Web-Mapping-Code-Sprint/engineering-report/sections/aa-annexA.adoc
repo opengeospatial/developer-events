@@ -10,15 +10,15 @@ This annex presents the Styles and Symbology use cases that were discussed and d
 
 This use case is discussed in https://github.com/opengeospatial/styles-and-symbology/issues/17[styles-and-symbology#Issue 17].
 
-Existing conformance classes required for this use case:
+*Existing conformance classes required for this use case*
 
 * Symbology Core: Class Symbolizer
 * Example stylesheet:
 
-Describe any capability not already addressed by existing conformance classes:
+*Describe any capability not already addressed by existing conformance classes*
 
-*  Categorized: coloring map according to a unique value eg. coloring map according to region name (unique value)
-* Graduated: coloring map according to a range of values eg. coloring map according to the population of a zone in a particular range(0-5000, 5000-10000)
+*  Categorized: coloring map according to a unique value e.g. coloring map according to region name (unique value)
+* Graduated: coloring map according to a range of values e.g. coloring map according to the population of a zone in a particular range (0-5000, 5000-10000)
 
 Example image illustrating the portrayal use case:
 
@@ -34,20 +34,21 @@ image::../images/annex/issue17a.png[align="center"]
 .Graduated conditional coloring of a map
 image::../images/annex/issue17b.png[align="center"]
 
-One possible solution is that when classes are unknown (in a raster map) then pixel gradient values can be used to group the pixels into classes and to color them according to that class, creating a choropleth or graduated map. In this use case, the vector data is presented as graduated (colour maps) even where there is a large number of unknown classes.
+One possible solution is that when classes are unknown (in a raster map) then pixel gradient values can be used to group the pixels into classes and to color them according to that class, creating a choropleth or graduated map. In this use case, the vector data is presented as graduated (color maps) even where there is a large number of unknown classes.
 
 === Unique values map
 
 This use case is discussed in https://github.com/opengeospatial/styles-and-symbology/issues/18[styles-and-symbology#Issue 18].
 
-Existing conformance classes required for this use case:
+*Existing conformance classes required for this use case*
 
 * basic vector feature styling
 
 Example stylesheet:
 
-Below a CSS encoding to describe a unique values map to display Local Climate Zones type (LCZ_PRIMARY property).
+Below is a CSS encoding to describe a unique values map to display Local Climate Zones type (LCZ_PRIMARY property).
 
+[%unnumbered%]
 [source,css]
 ----
 /* Metadata
@@ -136,7 +137,7 @@ Below a CSS encoding to describe a unique values map to display Local Climate Zo
 ----
 
 
-Describe any capability not already addressed by existing conformance classes:
+*Describe any capability not already addressed by existing conformance classes*
 
 Example image illustrating the portrayal use case:
 
@@ -145,24 +146,24 @@ Example image illustrating the portrayal use case:
 image::../images/annex/issue18a.png[align="center"]
 
 Material:
-Data : https://github.com/orbisgis/POC-Carto/blob/main/data/rsu_lcz.geojson
 
-Tool : https://github.com/orbisgis/POC-Carto
-Based on Geotools library
+* Data : https://github.com/orbisgis/POC-Carto/blob/main/data/rsu_lcz.geojson
+* Tool : The https://github.com/orbisgis/POC-Carto[POC-Carto] is based on the Geotools library.
 
 
 === Choropleth or graduated map
 
 This use case is discussed in https://github.com/opengeospatial/styles-and-symbology/issues/19[styles-and-symbology#Issue 19].
 
-Existing conformance classes required for this use case:
+*Existing conformance classes required for this use case*
 
 * basic vector feature styling
 
 Example stylesheet:
 
-Below a CSS encoding to describe a graduated map to display fraction of vegetation on a grid (HIGH_VEGETATION_FRACTION property).
+Below is a CSS encoding to describe a graduated map that represents a fraction of vegetation on a grid (HIGH_VEGETATION_FRACTION property).
 
+[%unnumbered%]
 [source,css]
 ----
 *{
@@ -184,7 +185,8 @@ Below a CSS encoding to describe a graduated map to display fraction of vegetati
 
 ----
 
-Describe any capability not already addressed by existing conformance classes:
+*Describe any capability not already addressed by existing conformance classes*
+
 
 Example image illustrating the portrayal use case:
 
@@ -196,7 +198,7 @@ image::../images/annex/issue19a.png[align="center"]
 
 This use case is discussed in https://github.com/opengeospatial/styles-and-symbology/issues/20[styles-and-symbology#Issue 20].
 
-Existing conformance classes required for this use case:
+*Existing conformance classes required for this use case*
 
 * vector feature styling
 * viz/feature.pass (define conformance classes) 🧨
@@ -207,8 +209,9 @@ Existing conformance classes required for this use case:
 
 Example stylesheet:
 
-Below a CSS encoding to describe a proportional symbol map to display number of inhabitants on a regular grid (SUM_POP property).
+Below is a CSS encoding to describe a proportional symbol map that represents the number of inhabitants, on a regular grid (SUM_POP property).
 
+[%unnumbered%]
 [source,css]
 ----
 *{
@@ -234,7 +237,8 @@ Below a CSS encoding to describe a proportional symbol map to display number of 
 }
 ----
 
-Describe any capability not already addressed by existing conformance classes:
+*Describe any capability not already addressed by existing conformance classes*
+
 
 Example image illustrating the portrayal use case:
 
@@ -246,14 +250,15 @@ image::../images/annex/issue20a.png[align="center"]
 
 This use case is discussed in https://github.com/opengeospatial/styles-and-symbology/issues/21[styles-and-symbology#Issue 21].
 
-Existing conformance classes required for this use case:
+*Existing conformance classes required for this use case*
 
-Not specified.
+* Not specified
 
 Example stylesheet:
 
-Below a CSS encoding to describe a proportional symbol map with a color for each Local Climate Zones type filtered to represent a climate aleas.
+Below is a CSS encoding to describe a proportional symbol map with a color for each Local Climate Zones type filtered to represent a climatic hazards.
 
+[%unnumbered%]
 [source,css]
 ----
 *{
@@ -308,7 +313,8 @@ Below a CSS encoding to describe a proportional symbol map with a color for each
  }
 ----
 
-Describe any capability not already addressed by existing conformance classes:
+*Describe any capability not already addressed by existing conformance classes*
+
 
 Example image illustrating the portrayal use case:
 
@@ -320,25 +326,23 @@ image::../images/annex/issue21a.png[align="center"]
 
 This use case is discussed in https://github.com/opengeospatial/styles-and-symbology/issues/22[styles-and-symbology#Issue 22].
 
-Existing conformance classes required for this use case:
+*Existing conformance classes required for this use case*
 
 * Dashes, Stipples, Hatches and Gradients
 * (conformance class for more specific stippling)
 
 Example stylesheet:
 
-Bellow a CSS encoding to describe a dot map. A do map is used to create a visual impression of density by placing a dot or some other symbol in the approximate location of one or more instances of the variable being mapped.
-The mapped variable is the area of the LCZ geometry.
-The dot map can be colored according the LCZ types. a.e : LCZ equals to 1, 2 , 3 filled in red to represent a high climate aleas.
+Below is a CSS encoding to describe a dot map. A dot map is used to create a visual impression of density by placing a dot or some other symbol in the approximate location of one or more instances of the variable being mapped. The mapped variable is the area of the LCZ geometry. The dot map can be colored according the LCZ types. e.g. : LCZ equals to 1, 2 , 3 filled in red to represent a high climatic hazards.
 
-Describe any capability not already addressed by existing conformance classes:
+*Describe any capability not already addressed by existing conformance classes*
 
-DotFill must be defined with the following properties
+* DotFill must be defined with the following properties
+** quantityPerMark : the quantity represented by a single dot.
+** totalQuantity : the total quantity to be represented.
+** mode : the algorithm to distribute the mark random, grid...
 
-* quantityPerMark : the quantity represented by a single dot.
-* totalQuantity : the total quantity to be represented.
-* mode : the algorithm to distribute the mark random, grid...
-a mark or a set of marks
+* a mark or a set of marks
 
 Example image illustrating the portrayal use case:
 
@@ -350,12 +354,14 @@ image::../images/annex/issue22a.png[align="center"]
 
 This use case is discussed in https://github.com/opengeospatial/styles-and-symbology/issues/23[styles-and-symbology#Issue 23].
 
-Existing conformance classes required for this use case:
+*Existing conformance classes required for this use case*
+
 
 Example stylesheet:
 
-Bivariate map is a technique in cartography to display two different thematic variables at the same time. One of the most commun technique to create a bivariate map is to combine of visual variables. For most cartographers it may better support different map reading tasks. The following map uses the same visual variable to represent two variables (Half Circle). It permits a cross-variable comparison between the number of permits in 2005 and 2014.
+Bivariate map is a technique in cartography to display two different thematic variables at the same time. One of the most common techniques is to create a bivariate map is to combine of visual variables. The approach can support different map reading tasks. The following map uses the same visual variable to represent two variables (Half Circle). It permits a cross-variable comparison between the number of permits in 2005 and 2014.
 
+[%unnumbered%]
 [source,css]
 ----
 *{
@@ -397,7 +403,7 @@ Bivariate map is a technique in cartography to display two different thematic va
 }
 ----
 
-Describe any capability not already addressed by existing conformance classes:
+*Describe any capability not already addressed by existing conformance classes*
 
 Example image illustrating the portrayal use case:
 
@@ -415,12 +421,12 @@ image::../images/annex/issue23b.png[align="center"]
 
 This use case is discussed in https://github.com/opengeospatial/styles-and-symbology/issues/24[styles-and-symbology#Issue 24].
 
-Existing conformance classes required for this use case:
+*Existing conformance classes required for this use case*
 
 Example stylesheet:
 The following map shows assembled visual variables expressed with custom fills : Graphic Fill and Hatched Fill.
 
-Describe any capability not already addressed by existing conformance classes:
+*Describe any capability not already addressed by existing conformance classes*
 
 HatchedFill must be defined with the following properties
 
@@ -445,14 +451,17 @@ image::../images/annex/issue24b.png[align="center"]
 
 This use case is discussed in https://github.com/opengeospatial/styles-and-symbology/issues/25[styles-and-symbology#Issue 25].
 
-Existing conformance classes required for this use case:
+*Existing conformance classes required for this use case*
+
 
 Example stylesheet:
 
-Proportional label map uses the same technique than proportional symbols, expected that the size of the font is scaled proportionately.
+* Proportional label map uses the same technique as proportional symbols, provided that the size of the font is scaled proportionately.
 
-Here we describe a CSS file that represents the Local Climate Zone types with a text and a color according a climate aleas.
+* Here the Annex describes a CSS file that represents the Local Climate Zone types with a text and a color according a climatic hazards.
 
+
+[%unnumbered%]
 [source,css]
 ----
 *{
@@ -497,7 +506,7 @@ Here we describe a CSS file that represents the Local Climate Zone types with a 
 }
 ----
 
-Describe any capability not already addressed by existing conformance classes:
+*Describe any capability not already addressed by existing conformance classes*
 
 Example image illustrating the portrayal use case:
 

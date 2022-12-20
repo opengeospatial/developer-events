@@ -1,7 +1,7 @@
 [[conclusions]]
 == Conclusions
 
-The code sprint successfully facilitated the development and testing of prototype implementations of OGC API Standards, including  candidate Standards, that relate to web mapping. Further, the code sprint provided a foundation for the development of the next version of the Symbology Core Standard. Furthermore, sprint participants were able to provide feedback directly to the editors of the standards, whereas the editors were able to clarify any issues encountered by the sprint participants. The code sprint also raised awareness about the standards. The code sprint therefore met all of its objectives.
+The code sprint successfully facilitated the development and testing of prototype implementations of OGC API Standards, including  candidate Standards, that relate to web mapping. Further, the code sprint provided a foundation for the development of the next version of the Symbology Core Standard. Furthermore, sprint participants were able to provide feedback directly to the editors of the Standards, whereas the editors were able to clarify any issues encountered by the sprint participants. The code sprint also raised awareness about the Standards. The code sprint therefore met all of its objectives.
 
 === Future Work
 
@@ -10,7 +10,7 @@ The sprint participants made the following recommendations for future innovation
 * Prototyping and demonstration of support for the querying of coverages in HTML Previews of coverage tiles
 * A testbed activity to implement the prototype Symbology Core v2.0 would help to evaluate support for the various use cases identified in this sprint
 * A testbed activity to evaluate options for access control across OGC API Standards (covering at least the Features, Records, Tiles, and Styles APIs)
-* A testbed activity analysing the potential for consistent modification and harmonization of different stylesheets (e.g. SLD, Mapbox styles, ArcGIS, MapInfo)
+* A testbed activity analyzing the potential for consistent modification and harmonization of different stylesheets (e.g. SLD, Mapbox styles, ArcGIS, MapInfo)
 
 The sprint participants also made the following recommendations for things that the SWGs should consider:
 
