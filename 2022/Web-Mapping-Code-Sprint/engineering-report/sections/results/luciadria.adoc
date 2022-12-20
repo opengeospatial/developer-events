@@ -120,13 +120,7 @@ https://demo.luciad.com/OGCAPIClient/?webgl&reference=epsg:4978
 
 Using the 'Connect To' button at the bottom, an end-user can add connections to servers that implement OGC API - Maps.
 
-The video created, showcasing the LuciadFusion integration, can be found here:
-
-[%unnumbered%]
-[source]
-----
-https://hexmet-my.sharepoint.com/:v:/g/personal/robin_houtmeyers_hexagon_com/EXchVu0jsyFBiAMVf17xpmcBqjTV-WQHnX2uc17ckBan5w
-----
+The video created, showcasing the LuciadFusion integration, can be found https://hexmet-my.sharepoint.com/:v:/g/personal/robin_houtmeyers_hexagon_com/EXchVu0jsyFBiAMVf17xpmcBqjTV-WQHnX2uc17ckBan5w[here].
 
 Servers, from other participants, used by LuciadRIA during the sprint are listed below:
 
