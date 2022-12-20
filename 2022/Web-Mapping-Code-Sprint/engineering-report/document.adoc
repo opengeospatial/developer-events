@@ -8,9 +8,9 @@
 :comment: ### Internal reference number; mandatory
 :docnumber: 22-054
 :comment: ### Date on which the standard was updated; mandatory
-:received-date: 2018-12-20
+:received-date: 2022-12-20
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
-:issued-date: 2018-07-10
+:issued-date: 2028-07-10
 :comment: ### Date on which the standard was published; mandatory
 :published-date: 2028-06-12
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
