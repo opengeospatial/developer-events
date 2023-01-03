@@ -9,4 +9,5 @@
 |===
 |Date |Release |Author | Primary clauses modified |Description
 |2022-12-19 |0.1 |G. Hobona |all |initial version
+|2023-01-03 |0.2 |G. Hobona |5.2 and 5.11 |added GDAL and OGC API Tiles results
 |===
