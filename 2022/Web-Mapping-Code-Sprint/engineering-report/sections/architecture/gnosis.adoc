@@ -1,4 +1,4 @@
 [[gnosis]]
 ==== GNOSIS Map Server
 
-The https://ecere.ca/gnosis/[GNOSIS Map Server] is written in the eC programming language and supports multiple OGC API Standards. GNOSIS Map Server supports multiple encodings including GNOSIS Map Tiles (which can contain either vector data, gridded coverages, imagery, point clouds or 3D meshes), Mapbox Vector Tiles, GeoJSON, GeoECON, GML and MapML. An experimental server is available online at https://maps.ecere.com/ogcapi and has been used in multiple OGC Innovation Program initiatives.
+The https://ecere.ca/gnosis/[GNOSIS Map Server] is written in the eC programming language and supports multiple OGC API Standards. GNOSIS Map Server supports multiple encodings including GNOSIS Map Tiles (which can contain either vector data, gridded coverages, imagery, point clouds or 3D meshes), Mapbox Vector Tiles, GeoJSON, GeoTIFF, GML and MapML. An experimental server is available online at https://maps.gnosis.earth/ogcapi and has been used in multiple OGC Innovation Program initiatives.

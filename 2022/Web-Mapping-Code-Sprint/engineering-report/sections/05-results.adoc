@@ -6,6 +6,8 @@ The code sprint included multiple software products and implementations of OGC a
 
 include::results/cubeserv.adoc[]
 
+include::results/gdal.adoc[]
+
 include::results/gnosis.adoc[]
 
 include::results/leaflet.adoc[]
@@ -21,6 +23,8 @@ include::results/os_implementation_of_ogcapi_styles.adoc[]
 include::results/ogcstylessymbology.adoc[]
 
 include::results/ogcapistyles.adoc[]
+
+include::results/ogcapitiles.adoc[]
 
 include::results/owslib.adoc[]
 
