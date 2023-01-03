@@ -13,7 +13,6 @@ Several of the problems were quickly resolved by the GDAL maintainer.
 However, issues pertaining to changes in version 2.0 of the _2D Tile Matrix Set_ Standard remain to be addressed, for which a separate issue was filed: https://github.com/OSGeo/gdal/issues/6882 .
 
 In addition, participants noted that the QGIS interface to add an OGC API data source to a project is currently a very counter-intuitive hidden capability, requiring to select the "File" option
-from "Layer > Add Vector/Raster Layer" and prefixing an OGC API landing or collection URL by "OGCAPI:".
-Users could never figure out the procedure (which is also not explained in the documentation) by themselves.
+from "Layer > Add Vector/Raster Layer" and prefixing an OGC API landing or collection URL by "OGCAPI:". The sprint participants found that the procedure was nearly impossible for users to figure out by themselves. The sprint participants also noted that the procedure was not explained in the documentation.
 Participants suggested that a more intuitive "Layer > Add OGC API layer..." menu item (covering all OGC API access mechanisms) be added to QGIS in a future version.
 Details were added to this QGIS issue about supporting OGC APIs: https://github.com/qgis/QGIS/issues/50296 .
