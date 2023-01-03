@@ -14,7 +14,7 @@
 :comment: ### Date on which the standard was published; mandatory
 :published-date: 2028-06-12
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
-:external-id: http://www.opengis.net/doc/PER/eoep-Hack2018
+:external-id: http://www.opengis.net/doc/PER/web-mapping-codesprint2022
 :comment: ### Author one
 :fullname: Gobe Hobona
 :comment: ### Author two
