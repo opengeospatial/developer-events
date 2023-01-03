@@ -6,7 +6,7 @@ The GDAL library project implemented support for the _OGC API - Tiles - Part 1: 
 
 This library capability enables support for those Standards in QGIS.
 
-During the sprint, participants tested this capability and discovered that following changes to the Standard, the GDAL functionality no longer worked with the latest implementations.
+During the sprint, participants tested this capability and discovered that following the final edits to _OGC API - Tiles - Part 1: Core_, the GDAL functionality no longer worked with the latest implementations of the Standard.
 An issue was filed with GDAL about this problem https://github.com/OSGeo/gdal/issues/6832 .
 
 Several of the problems were quickly resolved by the GDAL maintainer.
