@@ -1,0 +1,9 @@
+=== Cancel Requests
+
+When requesting tiles, and panning around, clients often leave behind requests from tiles which are no longer in the viewport. This has a performance cost, as the server gets overloaded with requests which are no longer needed. One way of handling this situation, would be to fire a cancel request, for tiles which are no longer in the viewport. Some popular browsers, such as Mozilla Firefox, support this capability through the https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/abort[XMLHttpRequest.abort()] method.
+
+The sprint participants suggested the following as recommendations:
+
+* Clients should be able to send a cancel or abort request so that a server aborts a long-running operation.
+* Clients for OGC API - Maps should make a best effort to avoid making several requests in shorts periods of time (e.g. 1 second)
+* Servers for OGC API - Maps can reply with HTTP code `429 Too Many Requests` if a client is straining the server resources

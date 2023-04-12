@@ -1,0 +1,71 @@
+=== pygeoapi
+
+==== OGC API - Maps implementation
+
+The pygeoapi project implemented support for the OGC API - Maps - Part 1: Core candidate Standard.  Support for the Requirements Class "Map Core" was https://github.com/geopython/pygeoapi/pull/1048[implemented], reviewed and approved by the pygeoapi development team. As a result, pygeoapi implementations are now able to easily publish geospatial data as dynamic maps thanks to the building block approach of OGC API Standards.
+
+pygeoapi's plugin architecture facilitated the implementation of two plugin backends for maps:
+
+- MapScript: using the https://mapserver.org[MapServer] web mapping engine as the map renderer, using data and styling definitions (Styled Layer Descriptor [SLD], MapServer CLASS configuration files).
+- WMSFacade: a bridge/mediator to expose existing OGC WMS 1.3 services via OGC API - Maps
+
+The https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-maps.html[official pygeoapi documentation] provides more information on how to enable the new functionality. A screenshot of the associated OpenAPI/Swagger interface from the implementation is shown in the figure below.
+
+[[img_pygeoapi]]
+.Screenshot of the pygeoapi OGC API - Maps MapScript plugin
+image::../images/pygeoapi-oamaps-mapscript.png[align="center"]
+
+.Screenshot of the pygeoapi OGC API - Maps WMSFacade plugin
+image::../images/pygeoapi-oamaps-wmsfacade.png[align="center"]
+
+.Screenshot of the pygeoapi OGC API - Maps interface via OpenAPI/Swagger UI
+image::../images/pygeoapi-oamaps-openapi-swagger.png[align="center"]
+
+.Screenshot of the pygeoapi OGC API - Maps WMSFacade using the Open Maps for Europe WMS from Eurogeographics
+image::../images/pygeoapi-oamaps-wmsfacade-eurogeographics.png[align="center"]
+
+==== OGC API - Tiles updates
+
+===== Tile Metadata
+
+Support for the Tile Set Metadata schema has been added to TileJSON MapBox. It is also possible to support any format by adding a JSON metadata file directly into the filesystem. As well, the absence of metadata does not represent an issue, facilitating support for different tiles providers.
+
+image::../images/pygeoapi-oatiles-tilesetmetadata.png[align="center"]
+
+===== Vector tiles URL templates
+
+The pygeoapi team added support for rendering vector tiles retrieved from an OGC API — Tiles implementation from a third-party service, using a generic URL template. One use case for this functionality would be to stream https://www.elastic.co/guide/en/elasticsearch/reference/current/search-vector-tile-api.html[elasticsearch vector tiles], which are provided in elasticsearch >=8, as OGC API - Tiles.
+
+.Screenshot of pygeoapi OGC API - Tiles using the Elasticsearch vector tiles
+image::../images/pygeoapi-oatiles-elastic.png[align="center"]
+
+Users could also use this functionality to render https://access.crunchydata.com/documentation/pg_tileserv/1.0.8/introduction/[pg_tileserv] vector tiles, or any other service which uses format `{z}/{y}/{x}` or `{z}/{x}/{y}`
+
+.Screenshot of pygeoapi OGC API - Tiles connecting to a pg_tileserv vector tiles service
+image::../images/pygeoapi-oatiles-pg_tileserve.png[align="center"]
+
+[[pygeoapi_leaflet_coverages]]
+==== OGC API - Coverages browser rendering
+
+Through a lightweight HTML viewer, the team added HTML representation of coverages to pygeoapi. This viewer is a https://leafletjs.com/[Leaflet] implementation, which uses the https://gitlab.com/IvanSanchez/Leaflet.ImageOverlay.Arrugator/[Leaflet.ImageOverlay.Arrugator] plugin, and the https://github.com/proj4js/proj4js/[proj4js] library to provide client-side reprojection. Whenever a web browser visits a `/coverage` path on pygeoapi, the web browser sends an `Accept: text/html` header which triggers pygeoapi to respond with the lightweight coverage viewer.
+
+.Screenshot of pygeoapi lightweight coverage viewer
+image::../images/pygeoapi-coverage-viewer.png[align="center"]
+
+The emphasis is not in the viewer, but rather in the fact that the viewer is the HTML representation of the coverage resource. Whenever an API client requests the coverage resource, it will be given an HTML map viewer, or the JSON-LD representation of the coverage, or the raw coverage data (as PNG, GeoTIFF, NetCDF, etc), in accordance with the established HTTP content negotiation rules ("Accept" HTTP headers, or "f" URL parameter).
+
+This is aligned with pygeoapi's implementation of OGC API - Features, where requesting features as HTML returns a map viewer loaded with those features.
+
+==== Mentor session
+
+A pygeoapi mentor session was provided in support of delivering vector tiles using pygeoapi.  The session focused on:
+
+- installation
+- overview of various endpoints and creating a standard source
+- creating vector tiles
+- serving vector tiles
+- reading vector tiles from different clients
+
+==== Developer outreach
+
+Members of the pygeoapi development team discussed project participation and contributions with various developers at the sprint.

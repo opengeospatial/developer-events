@@ -1,0 +1,8 @@
+=== OGC API - Styles
+
+During the code sprint, participants of interactive instruments addressed two open issues in the specification. A https://github.com/opengeospatial/ogcapi-styles/pull/42[pull request] was created to update the candidate standard. 
+
+The pull request 
+
+* aligned the names of metadata properties with the OGC Two Dimensional Tile Matrix Set and Tile Set Metadata Standard 2.0;
+* clarified how to apply changes to a style with multiple occurrences in an API.

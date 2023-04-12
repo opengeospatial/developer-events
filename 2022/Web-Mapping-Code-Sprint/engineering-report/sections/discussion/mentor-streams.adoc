@@ -1,0 +1,3 @@
+=== Mentor Streams
+
+The code sprint featured two tutorials on the Mentor Stream, which were both well attended. The Mentor Stream provides an opportunity to on-board developers that are new to OGC Code Sprints. In addition, OGC Staff organized some ad-hoc meetings for the mentor stream, providing some general orientation and ideas to work on projects. There was a suggestion to add an "orientation session" to the schedule of future code sprints, possibly in the first day. Such a session would provide developers that are new to OGC Code Sprints the opportunity to familiarise themselves with the various resources and channels available during code sprints.

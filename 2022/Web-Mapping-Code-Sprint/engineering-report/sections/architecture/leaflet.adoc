@@ -1,0 +1,6 @@
+[[leaflet]]
+==== Leaflet
+
+https://leafletjs.com[Leaflet] is a popular JavaScript library for displaying maps in web pages, created in 2011 by Volodymir Agafonkin and released under a BSD-2 license. It has a minimalistic architectural design in order to provide a small code footprint. As a result, any advanced or specific functionality is implemented by plugins.
+
+https://gitlab.com/IvanSanchez/leaflet.imageoverlay.ogcapi[Leaflet.ImageOverlay.OGCAPI] is a Leaflet plugin implementing an OGC API - Maps client, and was created during a previous code sprint.

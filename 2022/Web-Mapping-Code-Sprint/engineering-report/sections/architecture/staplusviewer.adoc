@@ -1,0 +1,6 @@
+[[staplusviewer]]
+==== STAplus Viewer App by Secure Dimensions
+
+The STAplus Viewer App is a proof-of-concept implementation of a web-browser application based on JavaScript (JS) and Leaflet. The implementation further leverages JS libraries from https://github.com/DataCoveEU/API4INSPIRE[STAM] (SensorThings API Map) developed by Datacove for INSPIRE.
+
+The STAplus Viewer App is based on the Leaflet JavaScript library. It is however possible to base the application on OpenLayers. This alternative implementation is available from the https://cos4cloud.secd.eu/staplus-viewer-app/ol.html[COS4Cloud project]. Even though it looks and feels slightly different, both implementations provide the same functionality.

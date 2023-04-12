@@ -1,0 +1,12 @@
+[[ldproxy]]
+==== ldproxy
+
+https://github.com/interactive-instruments/ldproxy[ldproxy] is an implementation of the OGC API suite of Standards, inspired by the W3C/OGC Spatial Data on the Web Best Practices. ldproxy is developed by interactive instruments GmbH, written in Java (Source Code), and is typically deployed using docker (DockerHub). In addition to supporting commonly used data formats for geospatial data, an emphasis is placed on an intuitive HTML representation.
+
+The current version supports PostgreSQL/PostGIS databases, GeoPackages and WFS 2.0 instances as backends for feature data. MBTiles is supported for tilesets.
+
+ldproxy implements all conformance classes and recommendations of "OGC API - Features - Part 1: Core" and "OGC API - Features - Part 2: Coordinate Reference Systems By Reference" and is an OGC Reference Implementation for the two standards. ldproxy also supports the OGC API - Records candidate Standard as well as the draft extensions of OGC API - Features (that is Part 3, CQL2, Part 4 and most of the current proposals discussed by the Features API Standards Working Group). ldproxy supports GeoJSON, JSON-FG, HTML, FlatGeoBuf, CityJSON, glTF 2.0 and the Geography Markup Language (GML) as feature encodings.
+
+ldproxy also has implementations for additional resource types: Vector and Map Tiles, Styles, Routes, and 3D Tilesets.
+
+ldproxy is distributed under the Mozilla Public License 2.0.

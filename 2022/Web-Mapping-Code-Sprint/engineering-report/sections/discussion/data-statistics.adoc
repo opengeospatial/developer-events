@@ -1,0 +1,9 @@
+=== Data Statistics
+
+Many clients have the need to retrieve a *feature count* element from the server, in order to construct their visualizations. OGC API - Features addresses this need through a property called "numberMatched" when a feature collection is retrieved. However, this leads clients sometimes to issue two separate get items requests: one to count the items, and another one to actually draw them.
+
+There is a parallel with OGC API — Coverages as one of the use cases is fetching the coverage metadata (width, height, dimensions, bit depth, time dimension, number of channels/bands, native CRS) but not the data itself. That is how the pygeoapi viewer implementation works as of now.
+
+OGC API - Tiles addresses this issue by offering tile set metadata and TileMatrixSet definitions. However, a similar ability to retrieve data statistics without retrieving the data appears to be missing from OGC API - Features and OGC API - Coverages.
+
+The sprint participants suggested that a super class for presenting data statistics could be specified in OGC API - Common and then specialized in other OGC API Standards.

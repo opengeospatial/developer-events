@@ -1,0 +1,3 @@
+=== Filtering of styles
+
+There was a discussion about whether it is possible to filter styles returned by an implementation of OGC API - Styles in a standardized way. Currently, just like with OGC API - Features, a client simply receives a list of collections without the ability to filter the collections according to specific criteria. There have been suggestions that all collections should have the ability to be filtered. This would support the ability to filter on a particular field, such as the description. A client would only get the list of styles that are relevant to that filter. Whereas it is possible to do, at present this capability is not standardized.

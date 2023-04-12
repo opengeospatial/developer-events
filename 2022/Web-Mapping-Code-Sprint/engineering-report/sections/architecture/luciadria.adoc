@@ -1,0 +1,4 @@
+[[luciad_ria]]
+==== Hexagon Luciad RIA
+
+LuciadRIA is a product that enables applications running in a web browser to offer 2D, 3D, or 4D visualization of satellite and other imagery, vector-based data and dynamic content, such as tracks. LuciadRIA can connect to implementations of OGC API Standards, as well as implementations of OGC Web Service standards.

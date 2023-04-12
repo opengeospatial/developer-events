@@ -1,0 +1,13 @@
+
+== Scope
+
+A Code Sprint is a collaborative and inclusive event driven by innovative and rapid programming with minimal process and organization constraints to support the development of new applications and open standards. Code Sprints experiment with emerging ideas in the context of geospatial standards, help improve interoperability of existing standards by experimenting with new extensions or profiles, and are used for building proofs of concept to support standards development activities and enhancement of software products.
+
+The code sprint described in this engineering report focused on the following approved and candidate Standards:
+
+* https://ogcapi.ogc.org/tiles/[OGC API - Tiles] Standard
+* https://ogcapi.ogc.org/maps/[OGC API - Maps] candidate Standard
+* https://ogcapi.ogc.org/styles/[OGC API - Styles] candidate Standard
+* various Styles & Symbology Encodings (e.g. https://www.ogc.org/standards/sld[SLD], https://www.ogc.org/standards/se[SE], https://docs.ogc.org/is/18-067r3/18-067r3.html[SymCore], tc)
+
+The code sprint was organized to provide a collaborative environment that enables software developers, users, and architects to work together on open standards that relate to web mapping, styles, and symbology. This engineering report presents the sprint architecture, the results of the prototyping, and a discussion resulting from the prototyping.

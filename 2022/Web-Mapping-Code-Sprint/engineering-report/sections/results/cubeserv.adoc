@@ -1,0 +1,19 @@
+=== MariaDB CubeWerx CubeSERV
+
+Developers from MariaDB configured an instance of their CubeSERV product to offer an OGC API - Maps interface in front of a WMS that was serving EuroGeographics's EuroRegionalMap. A screenshot of the CubeSERV user interface is shown in <<img_cubeserv>>. The user interface lists the coordinate reference systems that are supported by the collection that is being retrieved.
+
+[[img_cubeserv]]
+.Screenshot of CubeSERV describing a collection
+image::../images/cubeserv_euroregionalmap1.png[align="center"]
+
+The styles that are supported by the collection can also be accessed, as demonstrated in <<img_cubeserv2>>.
+
+[[img_cubeserv2]]
+.Screenshot of CubeSERV describing styles supported by the collection
+image::../images/cubeserv_euroregionalmap2.png[align="center"]
+
+The supported map tiles can also be retrieved. A screenshot describing part of a supported tile matrix set is shown in <<img_cubeserv3>>.
+
+[[img_cubeserv3]]
+.Screenshot of CubeSERV describing a supported tile matrix set
+image::../images/cubeserv_euroregionalmap3.png[align="center"]

@@ -1,0 +1,132 @@
+=== Hexagon - LuciadFusion/LuciadRIA
+
+==== Contribution
+
+The sprint participants from https://www.hexagon.com[Hexagon], Robin Houtmeyers and Tom Crauwels, divided their efforts between the server side and the client side. On the server side they integrated _OGC API - Tiles_ as a possible service option in https://hexagon.com/products/luciadfusion[LuciadFusion] Studio. On the client side they created a prototype connector for the _OGC API -  Maps_ candidate Standard and the _OGC API - Tiles_ Standard in https://hexagon.com/products/luciadria[LuciadRIA] and integrated the connector into the https://dev.luciad.com/portal/packed-samples/ria/dataformats/index.html?webgl&reference=epsg:4978[LuciadRIA Data Formats sample]. More developer-focused information such as documentation, API reference, samples, videos, etc can be found on https://dev.luciad.com/ .
+
+==== Server side with LuciadFusion
+
+LuciadFusion provides an all-in-one server solution for geospatial data management. At its core is an API that can be used to develop custom server solutions. It ships with LuciadFusion Studio, an out-of-the-box web frontend application developed on top of that API, that lets an end-user manage data intelligently, store and process a multitude of data formats and feed data to multiple applications. A demonstration video can be found https://share.vidyard.com/watch/Cgwu3cpEbW4Nuoj4uDfgP8?[here].
+
+The sprint participants from Hexagon started from an earlier prototype that could offer data through an _OGC API - Tiles_ interface. The goal of the earlier prototype was a proof of concept, a document that explains how to add support for _OGC API - Tiles_ and a rough estimate of the workload. Since _OGC API - Tiles_ is defined using the OpenAPI specification, the OpenAPI specification and the tool https://github.com/OpenAPITools/openapi-generator[OpenAPI Generator] could be used to generate domain models and REST controllers (for example: https://spring.io/[Spring] controllers). 
+
+During this sprint, that earlier prototype was integrated into LuciadFusion Studio as a proof of concept. This means that after adding or crawling data, it could be published as a service that implements OGC API - Tiles, as illustrated in <<img_LuciadFusion_fig1>>, next to existing services such as WMS, WMTS, etc. This functionality was demonstrated in a https://osdatahub.os.uk/downloads/open/250kScaleColourRaster[short video] with sample data downloaded from Ordnance Survey's OS Data Hub.
+
+[[img_LuciadFusion_fig1]]
+.Dialog for adding a layer from an OGC API - Tiles instance to LuciadFusion
+image::../images/luciad_fusion_1.png[align="center"]
+
+
+Note: this is still work in progress; there is no out-of-the-box LuciadFusion prototype with OGC API support available yet. 
+
+==== Client side with LuciadRIA
+===== Overview
+
+LuciadRIA is a JavaScript API that uses WebGL and HTML5 to deliver desktop-like performance in geospatial applications on the web. A video demonstrating it in action can be found https://share.vidyard.com/watch/9s47KBZmR2N7wMwTYPeTH4?[here]. More developer oriented information, including live samples, can be found on the Hexagon https://dev.luciad.com/portal/productDocumentation/LuciadRIA/docs/documentationoverview.html[Luciad RIA Developer Platform].
+
+The sprint participants from Hexagon decided to extend the LuciadRIA Data Formats sample and worked towards integrating the _OGC API - Tiles_ & _OGC API - Maps_ functionality into its data loading functionality, similar to the existing WMS and WMTS capabilities parsing. Once a connection could be made to one of the servers made available by the other participants, the team from Hexagon implemented a model that could retrieve data and visualize it in a WebGLMap. The team also looked into implementing the vector tiling, but after some trials decided to defer that to future development and to use the remaining time in this sprint to make sure the demo highlights the capability to visualize data on-the-fly in any projection. The demo is available https://demo.luciad.com/OGCAPIClient/?webgl&reference=epsg:4978[here].
+
+===== Capability parsing
+
+Many of the new OGC API Standards offer a central overview of all data sets available on a server in JSON (or xml, html) at a "collections" URL. This central overview offers links to specific collections (with a unique ID) which in turn can offer links to maps, tiles, styles, etc. An overview from the GNOSIS Map Server:
+
+[%unnumbered%]
+[source]
+----
+/ogcapi/collections/{collectionID}(collection description)
+/ogcapi/collections/{collectionID}/tiles(vector tiles)
+/ogcapi/collections/{collectionID}/tiles/{tileMatrixSetId}/{tileMatrix}/{tileRow}/{tileCol}.{format}(individual vector tile)
+/ogcapi/collections/{collectionID}/map/tiles(map tiles)
+/ogcapi/collections/{collectionID}/map/tiles/{tileMatrixSetId}/{tileMatrix}/{tileRow}/{tileCol}.{format}(individual map tile)
+/ogcapi/collections/{collectionID}/coverage/tiles(map tiles)
+/ogcapi/collections/{collectionID}/coverage/tiles/{tileMatrixSetId}/{tileMatrix}/{tileRow}/{tileCol}.{format}(individual coverage tile)
+/ogcapi/collections/{collectionID}/items(vector features)
+/ogcapi/collections/{collectionID}/coverage(coverage)
+/ogcapi/collections/{collectionID}/map(map)
+/ogcapi/collections/{collectionID}/styles/{styleId}/map(styled layer map)
+/ogcapi/map(dataset map)
+/ogcapi/styles/{styleId}/map(styled dataset map)
+/ogcapi/tileMatrixSets/{tileMatrixSetId}(individual tiling scheme)
+----
+
+In the Data Formats sample, the team created a `ConnectToOGCAPIMapsWizard` and added it to the `ConnectToModal`. This wizard creates an `OGCAPIMapsCapabilities` object after connecting to a valid URL, which contains a collection of `OGCAPIMapsCapabilitiesLayer` objects, one for each collection available. <<img_luciad_ria_1>> shows a list of collections retrieved by a LuciadRIA web application from an OGC API - Maps instance. Finally, an `OGCAPIMapsLoader` is used to create a model and layer that LuciadRIA can use to load and visualize the data.
+
+[[img_luciad_ria_1]]
+.List of collections retrieved by LuciadRIA from an OGC API - Maps instance
+image::../images/luciad_ria_1.png[align="center"]
+
+
+===== Retrieving tiles
+
+Retrieving data can be done in 2 distinct ways: /map or /tiles. The first way, /map, is very similar to how WMS works, a user can request data for a certain bounding box. The newer way, available from /tiles, is similar to how many popular map servers, such as OpenStreetMap (OSM), work. The tiles are cut using a certain tile matrix set (https://www.ogc.org/standards/tms) and can then be requested using a format such as:
+
+collections/{collectionID}/tiles/{tileMatrixSetId}/{tileMatrix}/{tileRow}/{tileCol}.{format}
+
+So for example:
+
+collections/bluemarble/tiles/WebMercatorQuad/0/0/0.png
+
+Multiple tile matrix sets can be offered and their specifications can be requested (in JSON or HTML). The specification offers the width and height of tiles, the number of columns and rows, the scale and a way to calculate the bounding box, so everything a client needs to calculate each tile. In the LuciadRIA example implementation, the team focused on the classic quad tree structure such as WebMercatorQuad.
+
+:riaurl: https://dev.luciad.com/portal/productDocumentation/LuciadRIA/docs/reference/LuciadRIA/classes/_ria_model_tileset_urltilesetmodel_d_.urltilesetmodel.html
+
+The team extended {riaurl}[UrlTileSetModel] to implement such a connection. It would map easily on the /tiles offering, since it works exactly like that. To connect to the /maps offering, the team used the function `getTileBounds` to calculate the bounds of a tile and modify the URL so that it matches the template specified in the _OGC API - Maps_ candidate Standard, after which a request is sent to the server with a bounding box referenced to a CRS.
+
+===== Vector tiling
+
+OGC API - Tiles supports vector tiles, in addition to map tiles. The tiling structure is similar for imagery data and is equally available at /tiles, but instead of PNG images, you can retrieve GeoJSON. Since LuciadRIA has an out-of-the-box connector for GeoJSON, it would be fairly straight forward to visualize those tiles. Since there is a UrlTileSetModel that can follow the needed tiling pattern, the plan was to use that to request tiles at the correct moment and then use the GeoJSON decoder to load and visualize them. However, after some further research it turned out that while it is easy to get the correct tiles the first time, the functionality to switch back to lower detailed tiles while zooming out was unattainable. After writing some initial code to create a custom tiling mechanism based on the Tile Matrix Set, the team decided that it could not be completed within the sprint’s timeframe and consequently changed focus. The team noted, however, that the approach would be implementable if there was more time available.
+
+===== Reprojecting
+
+One of the core strengths of the Luciad portfolio is that it can be used to connect to and visualize data in any format or projection. LuciadRIA can even utilize the power of the GPU through WebGL to project data on-the-fly, such as imagery and vector data, to any known projection and visualize it as such. To demonstrate this, the team added another menu option in the sample to switch to different projections. <<img_luciad_ria_4978>> shows a representation of a map retrieved in the EPSG:4978 coordinate reference system. <<img_luciad_ria_6>> shows a menu for selecting different coordinate reference systems. <<img_luciad_ria_7>> shows a representation of a map retrieved in the EPSG:27700 coordinate reference system. In sequence, these three screenshots demonstrate the ease of switching between different coordinate reference systems in LuciadRIA.
+
+
+[[img_luciad_ria_4978]]
+.Display of a map retrieved in EPSG:4978
+image::../images/luciad_ria_4978.png[align="center"]
+
+[[img_luciad_ria_6]]
+.Dialog to select a coordinate reference system
+image::../images/luciad_ria_6.png[align="center"]
+
+[[img_luciad_ria_7]]
+.Display of a map retrieved in EPSG:27700
+image::../images/luciad_ria_7.png[align="center"]
+
+Next to some predefined options such as 3D, CRS84, WebMercator and a projection requested by another participant (British National Grid projection (EPSG:27700)), the team also added the option to load any projection known to LuciadRIA. To minimize the size of a LuciadRIA application, not all projections are available in it out of the box. However, other projections can be added as WKT (Well Known Text)) by its identifier, which in most cases will be an EPSG code. If LuciadRIA does not know this code, it will automatically try to request it from an external service that provides definitions of projections. After getting the WKT, the application can be restarted in the new projection and any subsequently loaded data will be reprojected into that projection.
+
+===== Conclusions
+
+There are some obvious quality-of-life benefits that come with this new API:
+
+* The switch from XML to HTML/JSON is a very welcome one as parsing of JSON is much easier in web environments.
+* Next to that, the building of tiles could definitely make it easier to load and visualize data.
+* The addition of vector tiles also offers some obvious benefits over WFS.
+
+All of the aforementioned benefits also come with some downsides, such as:
+
+* The API offers so many options in terms of tiling, formats, structures, etc with quite some freedom for whoever implements it, that it could cause confusion or incompatibilities later on. For example, a client that chooses to implement only a certain format and tiling structure may not be able to connect to a server that also only supports another format/tiling structure. 
+* This freedom was also notable when parsing the metadata, as sometimes links were absolute, and other times the links were relative, and at times links were missing altogether.
+
+==== Resources
+
+The LuciadRIA demonstration sample (= extended Data Formats sample) is available online:
+
+[%unnumbered%]
+[source]
+----
+https://demo.luciad.com/OGCAPIClient/?webgl&reference=epsg:4978
+----
+
+Using the 'Connect To' button at the bottom, an end-user can add connections to servers that implement OGC API - Maps.
+
+The video created, showcasing the LuciadFusion integration, can be found https://hexmet-my.sharepoint.com/:v:/g/personal/robin_houtmeyers_hexagon_com/EXchVu0jsyFBiAMVf17xpmcBqjTV-WQHnX2uc17ckBan5w[here].
+
+Servers, from other participants, used by LuciadRIA during the sprint are listed below:
+
+[%unnumbered%]
+[source]
+----
+GNOSIS Map Server: https://maps.gnosis.earth/ogcapi/
+CubeServ: https://test.cubewerx.com/cubewerx/cubeserv/demo/ogcapi/EuroRegionalMap
+----

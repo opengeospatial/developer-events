@@ -1,0 +1,37 @@
+[[results]]
+== Results
+
+The code sprint included multiple software products and implementations of OGC and ISO Standards. This section presents some of the results from the code sprint.
+
+
+include::results/cubeserv.adoc[]
+
+include::results/gdal.adoc[]
+
+include::results/gnosis.adoc[]
+
+include::results/leaflet.adoc[]
+
+include::results/ldproxy.adoc[]
+
+include::results/luciadria.adoc[]
+
+include::results/miramon.adoc[]
+
+include::results/os_implementation_of_ogcapi_styles.adoc[]
+
+include::results/ogcstylessymbology.adoc[]
+
+include::results/ogcapistyles.adoc[]
+
+include::results/ogcapitiles.adoc[]
+
+include::results/owslib.adoc[]
+
+include::results/pygeoapi.adoc[]
+
+include::results/teamengine.adoc[]
+
+include::results/openlayers.adoc[]
+
+include::results/xyz2ogc.adoc[]
