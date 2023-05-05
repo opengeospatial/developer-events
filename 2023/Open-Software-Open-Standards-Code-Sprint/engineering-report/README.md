@@ -1,8 +1,8 @@
-## 2022 Joint OGC OSGeo ASF Code Sprint Summary Engineering Report
+## 2023 Open Standards and Open Source Software Code Sprint Summary Engineering Report
 
 ### Preview
 
-A review of the Engineering Report is [here](https://htmlpreview.github.io/?https://github.com/opengeospatial/developer-events/blob/master/2022/Joint-OGC-OSGeo-ASF-Code-Sprint%202022/report/document.html).
+A review of the Engineering Report is [here](https://opengeospatial.github.io/ogcna-auto-review/23-025.html).
 
 
 ### Building
