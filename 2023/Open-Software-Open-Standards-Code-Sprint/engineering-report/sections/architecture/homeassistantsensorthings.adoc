@@ -1,4 +1,6 @@
 [[homeassistantsensorthings]]
 ==== HomeAssistant-SensorThings
 
-TBA
+https://www.home-assistant.io/[Home Assistant] is an award-winning free/libre/open-source home automation hub software written in Python. It can interface with over a thousand kinds of IoT devices and services, with a focus on domestic environments and data privacy.
+
+https://gitlab.com/IvanSanchez/homeassistant-sensorthings[HomeAssistant-SensorThings] is a client for the OGC SensorThings standard (part 1) in the form of a Home Assistant plugin (or "integration" in Home Assistant jargon). It implements discovery of available sensors in an endpoint, and periodic updates of the values of those sensors.

@@ -1,4 +1,27 @@
 [[homeassistantsensorthings_results]]
 ==== HomeAssistant-SensorThings
 
-TBA
+The SensorThings standard proved approachable enough so that HomeAssistant-SensorThings could be developed within the span of the codesprint, albeit not being feature complete.
+
+[[img_hoemassistant-sensorthings]]
+.Partial screenshot of a Home Assistant dashboard showing SensorThings observations from the British Geological Survey, from their FROST server.
+image::../images/homeassistant-sensorthings.png[align="center"]
+
+The SensorThings API has some traits that proved very helpful for the development and debugging of the client: the usage of JSON over HTTP, and the availability of full REST-like URIs withing the metadata offered by the endpoint.
+
+The nomenclature of concepts posed a minor challenge. An OGC _Datastream_ is a HA _sensor_, and a OGC _Thing_ is a HA _device_; and an OGC API endpoint becomes a _config entry_ in HA. The concept of an OGC _Observation_ is implicit in the behaviour of a HA _sensor_. The OGC concepts of _Sensor_, _Location_, _FeatureOfInterest_ and _ObservedProperty_ do not have an equivalent on HA. The HA concepts of _area_, _zone_, _scene_ and others do not have an OGC equivalent.
+
+Several concerns have been raised:
+
+- Units of measurement are inconsistent across endpoints. A temperature sensor from USGS uses `degC`, one from Fraunhofer uses `°C`, and one from BGS uses `C`. A human will interpret all those as "degrees celsius", but this mismatch makes automated data comparisons impossible. The standard recommends using UCUM (Unified Codes for Units of Measure), but none of the  SensorThings services explored were following this recommendation.
+
+- The values for the description and definition of `ObservedProperty` are unreliable, even though they are mandatory fields. All SensorThings services explored were either using empty strings, or reusing the name of an `ObservedProperty` as its description and/or definition. No servers produce URIs for the `ObservedProperty` definitions, as mandated by the standard.
+
+- Home Assistant focuses on realtime or quasi-realtime data, and the only viable strategy for SensorThings client is to periodically poll for new observations. However, there is no estimation on how often new observations are made, not even a rough one. Some sensors can provide new observations every second, while others might provide observations once every hour, or once per day. Polling data each second from a daily sensor is a waste of networking resources, whereas polling each day from a secondly sensor introduces an obvious data lag. It's impossible to choose the right approximate rate of polling. The MQTT extension of the SensorThings specification alleviates this issue, but complicates the implementation of both servers and clients.
+
+- The Home Assistant architecture relies on communicating the last known state of a sensor/device/service; this is arguably the most common use case for internet-connected sensors. However, SensorThings provides no specific facility for this. Instead, the generic way of fetching any and all historical observations must be used, including a query string like `?$top=1&$orderby=phenomenonType desc`. The specification states that «the SensorThings API is designed specifically for the resource-constrained IoT devices and the web developer community», but it can be argued that query languages are ill-suited to be implemented in constrained device.
+
+SensorThings is different than other contemporary OGC APIs (such as Maps, Features or Coverages) in that it doesn't implement content negotiation. It would be interesting to consider content negotiation as an extension, so the last observation could be fetched in human-readable HTML form, or so a series of ovservations could be downloaded as a machine-readable CSV.
+
+Finally, it would be possible to implement a SensorThings _server_ on top of a Home Assistant installation; the scope of such development falls out of a 3-day codesprint, but could be achieved in a timeframe of several weeks. This would provide a cheap way to provide SensorThings endpoints for domestic-grade sensor platforms such as weather stations or soil moisture sensors.
+
