@@ -1,0 +1,62 @@
+[[discussion]]
+== Discussion
+
+=== GIGS 
+
+On the gigs.iogp.org website there are a bungh of tests for testing. 
+
+PROJ can execute the tests. Geomatycs demonstrated the use of PROJ bindings for executing the GIGS tests.
+
+The name of the CRS is not the name that the GIGS test is expecting. 
+
+=== Maplibre
+
+TBA
+
+=== Home Assistant and OGC SensorThings API
+
+TBA
+
+=== GeoXAML 3.0
+
+TBA
+
+=== pygeoapi
+
+==== ERDDAP
+
+TBA
+
+==== AsyncAPI and MQTT for Publish/Subscribe
+
+TBA
+
+
+=== Styling in OpenLayers
+
+TBA
+
+=== New Vector Representation with GeoParquet, using Apache Arrow
+
+TBA
+
+=== OGC API support through Go
+
+TBA
+
+=== OpenLayers and CesiumJS
+
+TBA
+
+=== OLCesium in Geomapfish
+
+TBA
+
+=== Summary of Lessons Identified
+
+The following are the immediate lessons identified by the sprint participants:
+
+* TBA
+* TBA
+* TBA
+* TBA

@@ -1,0 +1,4 @@
+[[homeassistantsensorthings_results]]
+==== HomeAssistant-SensorThings
+
+TBA
