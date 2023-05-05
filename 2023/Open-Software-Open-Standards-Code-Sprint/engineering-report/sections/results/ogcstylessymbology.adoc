@@ -1,0 +1,5 @@
+[[ogc_styles_and_symbology_results]]
+
+==== OGC Styles and Symbology
+
+TBA

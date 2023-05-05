@@ -1,0 +1,4 @@
+
+== Scope
+
+This Engineering Report (ER) summarizes the main achievements of the 3rd annual Open Standards and Open Source Software Code Sprint that was held from the 25th to the 27th of April 2023 in Bussigny, Switzerland. The ER presents the high level architecture, and describes each of the standards and software packages that were deployed in support of the code sprint. The ER also discusses the results and presents a set of conclusions, including recommendations.

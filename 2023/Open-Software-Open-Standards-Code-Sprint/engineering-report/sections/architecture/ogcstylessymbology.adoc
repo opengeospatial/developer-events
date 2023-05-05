@@ -1,0 +1,8 @@
+[[ogc_styles_and_symbology]]
+
+==== OGC Styles and Symbology
+
+The OGC Symbology Conceptual Model: Core Part Standard (OGC 18-067r3), also known as OGC SymCore, specifies the conceptual basis to define symbology rules for the portrayal of geographical data. It is modular and extensible (one core model, many extensions), also encoding agnostic (one symbology model, many encodings). It contains a minimal set of abstract classes representing explicit extension points of the model.
+
+
+OGC Styles and Symbology is a vision for a standard that implements the OGC Symbology Conceptual Model: Core Part Standard (OGC 18-067r3). The Web Mapping Code Sprint was a key moment to consolidate the roadmap to achieve this vision. The plan towards such a candidate SymCore 2.0 Standard consists of the definition of a conceptual and logical model, Cascading Style Sheets (CSS) and JavaScript Object Notation (JSON) encodings, as well as a mapping to SLD/SE (eventually with existing well known vendor options). The requirements described will be supported by illustrated and encoded cartographic use cases.

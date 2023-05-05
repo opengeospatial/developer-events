@@ -1,0 +1,3 @@
+==== OSGeo GeoNetwork
+
+GeoNetwork is a catalog application for managing spatially referenced resources. It provides metadata editing and search functions as well as an interactive web map viewer.

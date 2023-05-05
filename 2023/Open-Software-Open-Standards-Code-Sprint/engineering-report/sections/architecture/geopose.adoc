@@ -1,0 +1,4 @@
+[[geopose]]
+==== OGC GeoPose
+
+TBA
