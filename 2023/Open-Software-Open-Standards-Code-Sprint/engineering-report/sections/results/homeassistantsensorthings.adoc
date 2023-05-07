@@ -7,7 +7,7 @@ The SensorThings standard proved approachable enough so that HomeAssistant-Senso
 .Partial screenshot of a Home Assistant dashboard showing SensorThings observations from the British Geological Survey, from their FROST server.
 image::../images/homeassistant-sensorthings.png[align="center"]
 
-The SensorThings API has some traits that proved very helpful for the development and debugging of the client: the usage of JSON over HTTP, and the availability of full REST-like URIs withing the metadata offered by the endpoint.
+The SensorThings standard has some traits that proved very helpful for the development and debugging of the client: the usage of JSON over HTTP, and the availability of full REST-like URIs within the metadata offered by the endpoint.
 
 The nomenclature of concepts posed a minor challenge. An OGC _Datastream_ is a HA _sensor_, and a OGC _Thing_ is a HA _device_; and an OGC API endpoint becomes a _config entry_ in HA. The concept of an OGC _Observation_ is implicit in the behaviour of a HA _sensor_. The OGC concepts of _Sensor_, _Location_, _FeatureOfInterest_ and _ObservedProperty_ do not have an equivalent on HA. The HA concepts of _area_, _zone_, _scene_ and others do not have an OGC equivalent.
 
