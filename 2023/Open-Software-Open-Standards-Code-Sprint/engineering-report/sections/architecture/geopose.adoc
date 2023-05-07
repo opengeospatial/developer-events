@@ -1,4 +1,5 @@
 [[geopose]]
 ==== OGC GeoPose
 
-TBA
+
+OGC GeoPose is an OGC Implementation Standard for exchanging the location and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth’s surface (Geo) or within other astronomical coordinate systems. GeoPose specifies a single encoding in JSON format (IETF RFC 8259). The use cases addressed by GeoPose involve interactions between information systems or between an information system and a storage medium. The role of a GeoPose is to convey the orientation and position of a real or virtual object.
