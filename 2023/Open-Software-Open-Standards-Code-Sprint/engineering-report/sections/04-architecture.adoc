@@ -53,6 +53,8 @@ include::architecture/geoserver.adoc[]
 
 include::architecture/openlayers.adoc[]
 
+include::architecture/owslib.adoc[]
+
 include::architecture/pycsw.adoc[]
 
 include::architecture/pygeoapi.adoc[]

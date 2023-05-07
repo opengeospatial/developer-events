@@ -1,4 +1,9 @@
 [[pygeometa]]
 ==== OSGeo pygeometa
 
-https://github.com/geopython/pygeometa[pygeometa] is a Python package to generate metadata for geospatial datasets.
+https://geopython.github.io/pygeometa[pygeometa] provides a lightweight and Pythonic approach for users to easily create geospatial metadata in standards-based formats using simple configuration files (affectionately called metadata control files (MCF)). The software has minimal dependencies (install is less than 50 kB), and provides a flexible extension mechanism leveraging the Jinja2 templating system. Leveraging the simple but powerful YAML format, pygeometa can generate metadata in numerous standards. Users can also create their own custom metadata formats which can be plugged into pygeometa for custom metadata format output. pygeometa is open source and released under an MIT license.
+
+For developers, pygeometa provides a Pythonic API that allows developers to tightly couple metadata generation within their systems and integrate nicely into metadata production pipelines.
+
+The project supports various metadata formats out of the box including ISO 19115, the WMO Core Metadata Profile, and the WIGOS Metadata Standard. The project also supports the OGC API - Records core record model as well as STAC (Item).
+
