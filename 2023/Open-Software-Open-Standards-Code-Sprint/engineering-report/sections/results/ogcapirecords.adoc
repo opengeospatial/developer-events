@@ -1,3 +1,9 @@
 ==== OGC API - Records
 
-TBA
+The OGC API - Records team held two breakouts which focused on advancing the specification for OAB review.
+
+Discussions included:
+
+* extension for faceted searching
+* Record model: contacts and roles
+* STAC harmonization

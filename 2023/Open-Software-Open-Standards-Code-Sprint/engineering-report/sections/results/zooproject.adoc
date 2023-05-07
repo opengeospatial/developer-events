@@ -1,4 +1,5 @@
 [[zooproject_results]]
 ==== OSGeo ZOO-Project
 
-TBA
+The ZOO-Project worked on moving forward https://github.com/ZOO-Project/ZOO-Project/wiki/OSGeoIncubationLandingPage[OSGeo Incubation]
+as well as the https://github.com/ZOO-Project/ZOO-Project/issues?q=is%3Aopen+is%3Aissue+label%3AIncubation+sort%3Aupdated-desc[remaining tasks] as part of the https://github.com/ZOO-Project/ZOO-Project/wiki/ProjectGraduationChecklist[Project Graduation Checklist] to become an OSGeo project.

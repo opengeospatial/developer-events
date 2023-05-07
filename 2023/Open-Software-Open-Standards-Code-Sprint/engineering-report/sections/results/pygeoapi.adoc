@@ -1,4 +1,27 @@
 [[pygeoapi_results]]
 ==== OSGeo pygeoapi
 
-TBA
+The pygeoapi project completed the https://github.com/geopython/pygeoapi/pull/1214[implementation] of a
+feature provider for the ERDDAP data server. https://coastwatch.pfeg.noaa.gov/erddap/index.html[ERDDAP]
+is a data server that provides a simple, consistent way to download subsets of scientific datasets in
+common file formats, graphs and maps. This new pygeoaopi feature was created by WMO as part of the
+https://docs.wis2box.wis.wmo.int project and has been promoted to be included in the pygeoapi core.
+
+.Screenshot of the pygeoapi OGC API - Features provider for the ERDDAP data server.
+image::../images/pygeoapi-erddap.png[align="center"]
+
+An https://github.com/geopython/pygeoapi/pull/1230[update] was also made in pygeoapi to highlight licensing when available as part of a collection
+definition's link object (where `+rel=license+`).
+
+The pygeoapi project implemented the draft https://github.com/geopython/pygeoapi/pull/1230[OGC API - Pub/Sub conformance class of OGC API - Environmental Data Retrieval standard] (see also
+original https://portal.ogc.org/files/?artifact_id=103606[discussion paper (23-013)]).
+
+.pygeoapi OGC API - Pub/Sub architecture.
+image::../images/pygeoapi-pubsub-architecture.png[align="center"]
+
+Using OWSLib support for OGC API - Features - Part 4: Create, Replace, Update and Delete, the workflow entailed
+publsihing new features via transactions, which then triggered push notifiations via the MQTT protocol.  Pub/Sub
+capabilities were made available via the AsyncAPI specification, leveraging the OGC API endpoints as subscription channels.
+
+.pygeoapi OGC API - Pub/Sub architecture.
+image::../images/pygeoapi-pubsub-architecture.png[align="center"]
