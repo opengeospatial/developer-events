@@ -1,4 +1,5 @@
 [[geoxacml]]
 ==== OGC GeoXACML
 
-TBA
+GeoXACML defines a geo-specific extension to the XACML Policy Language, as defined by the OASIS standard “eXtensible Access Control Markup Language (XACML), that allows managing access to geographic information and services in an interoperable way across jurisdictions. Although XACML is meant to be used as a multi-purpose language, XACML does not have the capabilities to express geo-specific constraints on access rights. GeoXACML provides support for spatial data types and spatial authorization decision functions. Those data types and functions can be used to define additional spatial constraints for XACML based policies. GeoXACML defines extensions for the policy encoding schema only, and thus does not affect the XACML context schema.
+
