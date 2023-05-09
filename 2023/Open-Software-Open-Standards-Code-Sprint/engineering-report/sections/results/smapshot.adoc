@@ -1,4 +1,6 @@
 [[smapshot_results]]
 ==== Smapshot
 
-TBA
+Geopose format has been tested as a way to return position and orientation data of the 3D geolocalized images from smapshot from a standard OGC API features.
+The Geopose data format has been added to the Open Source https://github.com/MediaComem/ogc-api-features[ NodeJs server of OGC API features]: https://github.com/MediaComem/ogc-api-features/commit/2665e7c997482d3f68e24540ce6f8e85410675e3[CodeSprint PR].
+A quick data visualisation has been implemented in Cesium to display the geopose of the camera retrieved from the API with smapshot data and the geopose of the photograph.

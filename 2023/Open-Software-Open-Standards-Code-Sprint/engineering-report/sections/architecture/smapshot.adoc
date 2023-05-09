@@ -1,4 +1,5 @@
 [[smapshot]]
 ==== Smapshot
 
-TBA
+https://smapshot.heig-vd.ch/[Smapshot] is a crowdsourcing platform allowing volunteers to geolocalise in 3D historical images. More than 1'000 volunteers have geolocalised up to 250'000 images.
+An Open API is available to integrate the data: https://smapshot.heig-vd.ch/development_documentation and the https://github.com/MediaComem/smapshot-api[API] and https://github.com/MediaComem/smapshot-georeferencer[georeferencer] are open source
