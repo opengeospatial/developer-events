@@ -1,3 +1,8 @@
 ==== OSGeo GeoServer
 
-TBA
+The GeoServer team worked remote focusing on seperating our implementation into individually downloadable modules. This work is required in anticpation of cql2 being finalized enabling the first public release of a GeoServer ogcapi module.
+
+* Pull-reqeust (merged) splitting ogcapi implementation into individual downloads
+* Pull-request (merged) nightly build docker image allowing public testing of ogcapi modules above
+
+We also checked in with the status of CQL2 which reqmains under active development. We are waiting on this activity before publishing our ogcapi-features module for the general public.
