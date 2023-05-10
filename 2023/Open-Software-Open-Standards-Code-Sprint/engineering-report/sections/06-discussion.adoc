@@ -1,27 +1,17 @@
 [[discussion]]
 == Discussion
 
-=== GIGS 
+include::discussion/gigs.adoc[]
 
-On the gigs.iogp.org website there are a bungh of tests for testing. 
+include::discussion/maplibre.adoc[]
 
-PROJ can execute the tests. Geomatycs demonstrated the use of PROJ bindings for executing the GIGS tests.
+include::discussion/homeassistant.adoc[]
 
-The name of the CRS is not the name that the GIGS test is expecting. 
-
-=== Maplibre
-
-TBA
-
-=== Home Assistant and OGC SensorThings API
-
-TBA
-
-=== GeoXAML 3.0
-
-TBA
+include::discussion/geoxacml.adoc[]
 
 === pygeoapi
+
+TBA
 
 ==== ERDDAP
 
