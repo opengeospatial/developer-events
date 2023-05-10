@@ -13,13 +13,11 @@ Not every software product will support every feature that the GIGS tests specif
 
 === Maplibre
 
-REWRITE
-
-The rendering pipleline is generally note exposed to the user. So we wanted to access it. Export the depth buffer (blank and white image). It is possible to create light effects and things such as an atmosphetic haze. So we configured it so that when you are far away it is disabled. The are other parts of the pipeline for example what ever is being rendered is based on the modified depth buffer. There is another one that was not expected, which is a coordinate buffer (orage screen) at the top of the screen the tiles represent a large space. The third aspect that can be modified is the color of the image. Grey image shows the modification of the color rendering. This could be used to enable a user to adjust the brightness or to create some nice visuals.
+The rendering pipleline is generally not exposed to the user. So the participants working on Maplibre experimented with accessing the rendering pipeline. They implemented functionality to export the depth buffer (shown in the top left of <<img_maplibre_discussion>>). The approach offers the ability to create light effects and special environmental effects such as an atmospheric haze (shown in the bottom right of <<img_maplibre_discussion>>). So the participants configured their prototype so that when the viewing point is far away the effect is disabled. The participants also examined other parts of the pipeline so that any object that is rendered is based on the modified depth buffer. This included for example modification of the coordinate buffer (shown in the bottom left of <<img_maplibre_discussion>>) so that tiles at the top of the screen represent a large space. The third aspect that can be modified using this approach is the color of the image, for example to enable a user to adjust the brightness or to create aesthetic visuals (shown in the top right of <<img_maplibre_discussion>>).
 
 [[img_maplibre_discussion]]
 .Screenshot of Maplibre demonstration
-image::../images/maplibre.png[align="center",width=800]
+image::../images/maplibre_all.png[align="center",width=800]
 
 === Home Assistant and OGC SensorThings API
 
