@@ -21,7 +21,13 @@ image::../images/maplibre_all.png[align="center",width=800]
 
 === Home Assistant and OGC SensorThings API
 
-TBA
+HomeAssistant-SensorThings was introduced during the code sprint. The sprint participants implemented an ability for HomeAssistant-SensorThings to automatically and periodically fetch observations from an instance of the OGC SensorThings API. The software was also enabled to offer automatic discovery of 'Things' as HomeAssistant devices and 'Datastreams' as HomeAssistant sensors.
+
+One of the challenges encountered was that there is some inconsistency in units of measurement between specific implementations of the OGC SensorThings API. For example, some implementations used `C`, whereas others used `degC` to represent temperature in degree celsius. This issue is explained further by <<img_homeassistant_discussion>>. 
+
+[[img_homeassistant_discussion]]
+.Screenshot of Maplibre demonstration
+image::../images/homeassistant_uom.png[align="center",width=800]
 
 === GeoXAML 3.0
 
