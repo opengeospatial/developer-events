@@ -1,4 +1,8 @@
 [[openlayers_results]]
 ==== OSGeo OpenLayers
 
-TBA
+OpenLayers used time at the sprint to discuss topics related to vector feature styling and rendering.  We are developing a new WebGL vector renderer and are working on a new internal feature representation and style encoding syntax to work with the new renderer.
+
+OpenLayers currently allows for very flexible feature style generation by allowing users to provide an arbitrary function to generate symbolizers at render time.  This limits the efficiency of vector rendering as we are unable to evaluate these style functions outside the main thread.  We made good progress at the sprint designing a new encoding for rule based styling that allows flexibility in providing expressions to generate symbolizer values while still allowing for efficient evaluation of these expressions in a worker or on the GPU.
+
+We will likely plan another dedicated sprint to continue this work and implement the new styling design in the WebGL vector renderer in addition to the existing Canvas (2D) renderer.

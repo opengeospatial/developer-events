@@ -1,0 +1,54 @@
+[[go-ogc-results]]
+==== go-ogc
+
+Work was started to add OGC API - Records support to the library.  This involved adding an extension mechanism to the existing OGC API - Features structs, in the same way that since the Records spec extends the Features spec.  The library is being used in an internal service at Planet Labs, where the OGC API - Features spec is being used to provide metadata about Planet's imagery catalog.  The records branch of the go-ogc library is being used to test an update to the internal service that adds support for OGC API - Records.
+
+===== Suggestions
+
+====== Add ``conformsTo`` property to OGC API - Features
+
+The OGC API - Records specification extends OGC API - Features by adding a ``conformsTo`` property to GeoJSON records (or features).  This would be a useful extension point for other specifications in addition to Records (e.g. STAC API or other standards that might extend Features).  Instead of being defined in the Records spec, it would be useful if the Features spec defined the ``conformsTo`` property as a common way to advertise conformance with other specifications that might extend Features.
+
+====== Weigh the pros/cons of adding top-level GeoJSON Feature members
+
+The OGC API - Records specification adds top-level members to GeoJSON Features.  For example, the ``time`` member is added at the top level of the Feature object.  By contrast, members like ``created`` and ``updated`` are added to the ``properties`` object.  The location of these members will determine how they can be accessed by existing software that works with GeoJSON.  It would be a good idea to evaluate the pros and cons of adding top-level members to GeoJSON Features and to consider whether it would be better to add these members to the ``properties`` object instead.
+
+For example, using https://fiona.readthedocs.io/en/stable/[Fiona] (which delegates to OGR/GDAL for feature access), the ``time`` member cannot be accessed when reading a feature that looks like this:
+
+[%unnumbered%]
+.GeoJSON Feature with top-level time member
+[source,json]
+----
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [0, 0]
+  },
+  "properties": {
+    "name": "Null Island"
+  },
+  "time": "2023-05-10T13:00:00Z"
+}
+----
+
+By contrast, the ``time`` member can be accessed when reading a feature that looks like this:
+
+[%unnumbered%]
+.GeoJSON Feature with time in the properties object
+[source,json]
+----
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [0, 0]
+  },
+  "properties": {
+    "name": "Null Island",
+    "time": "2023-05-10T13:00:00Z"
+  }
+}
+----
+
+The same limitation applies to mapping clients that might allow filtering or styling features based on feature properties.  In these cases, the top-level members are not useful.  While updates to these existing libraries can be made to handle this new extended type of GeoJSON, it is likely to slow adoption, and the spec may find more interoperability if it were designed to work with existing libraries.
