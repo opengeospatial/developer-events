@@ -13,4 +13,4 @@ Eventually, this means a GeoNetwork-UI application such as the https://github.co
 provide a search interface over any OGC API Records service. Some features currently provided by GeoNetwork 4.x might not be available anymore, but
 basc search functionalities should still offer a valuable user experience.
 
-Pull request: https://github.com/geonetwork/geonetwork-ui/pull/448
+Pull request: https://github.com/geonetwork/geonetwork-ui/pull/464
