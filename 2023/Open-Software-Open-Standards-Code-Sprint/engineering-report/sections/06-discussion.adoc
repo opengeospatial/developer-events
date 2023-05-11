@@ -11,34 +11,9 @@ include::discussion/geoxacml.adoc[]
 
 include::discussion/pygeoapi.adoc[]
 
-==== ERDDAP
+include::discussion/openlayers.adoc[]
 
-TBA
-
-==== AsyncAPI and MQTT for Publish/Subscribe
-
-TBA
-
-
-=== Styling in OpenLayers
-
-TBA
-
-=== New Vector Representation with GeoParquet, using Apache Arrow
-
-TBA
-
-=== OGC API support through Go
-
-TBA
-
-=== OpenLayers and CesiumJS
-
-TBA
-
-=== OLCesium in Geomapfish
-
-TBA
+include::discussion/go-ogc.adoc[]
 
 === Summary of Lessons Identified
 

@@ -34,6 +34,8 @@
 :mn-output-extensions: xml,html,doc,pdf,rxl
 :comment: ### Directory in which images are located: all local image file locations are prefixed with this directory. (Optional.)
 :imagesdir: images
+:toclevels: 3
+:htmltoclevels: 3
 :comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.org/author/ref/document-attributes/#caches, https://www.metanorma.org/author/topics/building/reference-lookup/#lookup-result-caching
 :local-cache-only:
 

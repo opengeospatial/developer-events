@@ -1,4 +1,4 @@
 [[olcesium_results]]
 ==== OL-Cesium
 
-TBA
+During the code sprint, the participants fixed support for the latest Cesium version 1.104. Several of the examples were fixed. Another fix updated the code base so that the Parcel bundler could support better reading of the code base. Support for ECMAScript 6 (ES6) exports was also fixed. The participants also worked on the descruction method to improve memory handling. The participants also worked on the migration to Typescript. Another archievement was the work done on adding polygon extrusion support. Another feature that was implemented during the code sprint was OL-Ceisum support in Geomapfish.

@@ -1,0 +1,9 @@
+=== go-ogc
+
+Participants from Planet Labs worked on an implementation of go-ogc that would support OGC API - Records in the future. Currently the software supports STAC, as illustrated by <<img_planet_catalog>>. On going work within the OGC to align OGC API - Records has therefore created an opportunity for STAC implementations to also support OGC API - Records. This is made possible, partly because both STAC and OGC API - Records extend OGC API - Features.
+
+[[img_planet_catalog]]
+.Screenshot of the Planet Catalog interface
+image::../images/planet_catalog.png[align="center",width=800]
+
+Implementation of support for OGC API - Records in go-ogc highlighted the potential for supporting other JSON-based formats specified by OGC Standards, for example GeoPose could be used to represent the position and orientation of cameras used by Earth Observation platforms. Another format that could be supported, specifically for representing imagery metadata, is GMLJP2.

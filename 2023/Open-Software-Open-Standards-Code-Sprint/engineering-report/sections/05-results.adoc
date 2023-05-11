@@ -59,8 +59,6 @@ include::results/zooproject.adoc[]
 
 include::results/teamengine.adoc[]
 
-include::results/cesiumjs.adoc[]
-
 include::results/leaflet.adoc[]
 
 include::results/camptocampogc.adoc[]

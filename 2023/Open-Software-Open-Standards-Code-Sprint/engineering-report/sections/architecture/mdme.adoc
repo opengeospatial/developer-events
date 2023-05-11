@@ -1,4 +1,5 @@
 [[mdme]]
-==== MDME
+==== OSGeo MDME
 
-TBA
+https://github.com/osgeo/mdme[MDME] (Model Driven Metadata Editor) is a web based application for populating YAML or JSON oriented metadata records. The application is built using Node/Vue.js. The application supports a variety of metadata models, for example MCF, OGC API - Records, and Data Package. The applications support extension of the internal metadata model.
+

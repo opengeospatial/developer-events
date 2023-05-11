@@ -1,4 +1,4 @@
 [[cesiumjs]]
 ==== CesiumJS
 
-TBA
+https://cesium.com/platform/cesiumjs/[CesiumJS] is an open source JavaScript library that supports visualization of 3D globes and maps on web browsers. The library supports user interaction and streaming in of 3D Tiles (an OGC Community Standard) and a variety of other formats.
