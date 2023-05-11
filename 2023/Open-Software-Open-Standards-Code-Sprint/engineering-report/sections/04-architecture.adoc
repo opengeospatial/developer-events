@@ -81,12 +81,12 @@ include::architecture/mdme.adoc[]
 
 include::architecture/olcesium.adoc[]
 
-include::architecture/planetgoogc.adoc[]
-
 include::architecture/pygeometa.adoc[]
 
 include::architecture/geomapfish.adoc[]
 
 include::architecture/smapshot.adoc[]
 
+include::architecture/go-ogc.adoc[]
 
+include::architecture/gpq.adoc[]

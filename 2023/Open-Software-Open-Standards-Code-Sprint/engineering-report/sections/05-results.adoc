@@ -73,12 +73,12 @@ include::results/mdme.adoc[]
 
 include::results/olcesium.adoc[]
 
-include::results/planetgoogc.adoc[]
-
 include::results/pygeometa.adoc[]
 
 include::results/geomapfish.adoc[]
 
 include::results/smapshot.adoc[]
 
+include::results/go-ogc.adoc[]
 
+include::results/gpq.adoc[]
