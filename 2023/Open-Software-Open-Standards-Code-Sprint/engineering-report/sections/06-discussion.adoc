@@ -9,9 +9,7 @@ include::discussion/homeassistant.adoc[]
 
 include::discussion/geoxacml.adoc[]
 
-=== pygeoapi
-
-TBA
+include::discussion/pygeoapi.adoc[]
 
 ==== ERDDAP
 
