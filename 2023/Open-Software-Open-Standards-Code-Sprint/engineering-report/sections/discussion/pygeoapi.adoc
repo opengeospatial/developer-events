@@ -1,0 +1,185 @@
+=== pygeoapi
+
+The pygeoapi work involved integration with a new data provider to expose scientific and ocean data from a specific API.Implementation of the new data provider had been done prior to the code sprint, and some final integration work had been completed during the code sprint. The data provider was enabled to access ERDDAP, a server technology by the National Oceanic and Atmospheric Administration(NOAA). ERDDAP is used by several of NOAA's partners to disseminate real time scientific data. Servers supporting ERDDAP can be accessed through an interface that support JSON messages, as well as other approaches. The sprint participants working on pygeoapi wanted to expose an ERDDAP instance through an interface that implements the OGC API - Features Standard.
+
+*REWRITE needed from here*
+
+In the OGC MetOcean ddomain working group there is an interest to have an OGC API approach to publish subcribe operations. Weather events do not happen on the clock and severe weather alerts have to be sent out instantly. In the MetOcean DWG we came up with a Discussion Paper which was presented at the OGC Member Meeting in Frascati. The way it is done is that it will be a conformance class in OGC API EDR but it will be written such that it can be used by other OGC API Standards as well.
+
+In the discussion paper we came up with approaches of how to address event driven architecture. The next step is turning that prototype into a conformance class. The basic premises behind the spec is general. It basically says use AsyncAPI to adertise an event driven. Use a well known encoding, for example JSON. Usethe endpoint of the building blocks used for OGC API when you advertise the event driven capability. 
+
+Decided to bulld a prototype in pygeoapi. There is a demo that there is an assumption there is a data provider upstream that is producing observations of alerts. From there it woulbe pushing the alreats into an OGC API server, using transactions (P4). The OGC API from there, using the pub/sub. So it is doing insetts. The OGC API from there using the PubSub standard sends a message to a broker. Not only do the features get into a collection, but somebody would  get a notification that they are subscribed to a broker. 
+
+From a technology perspective, the OGC API we use pygeoapi, for the broker we have set up a Mosquio broker which uses MQTT. From the client application, we use OWSLib. We used a python to do the MQTT pub/sub.
+
+*End of needed REWRITE*
+
+The landing page of the pygeoapi instance was modified to enable it to advertise links to both the OpenAPI definition document and the AsyncAPI definition document. <<img_pygeoapi_landing>> shows a screenshot of the landing page of a pygeoapi instance that advertises both an OpenAPI and an AsyncAPI definition document.
+
+[[img_pygeoapi_landing]]
+.Screenshot of a pygeoapi landing page
+image::../images/pygeoapi_landing.png[align="center",width=800]
+
+An extract of the JSON-encoding of the landing page is shown in the following listing. The advertisement of the OpenAPI and AsyncAPI definition documents in the same landing page highlighted the need to have a way to distinguish between the two types of links. OGC API Standards use `rel` and `type` link-params (link parameters) to describe the type of resource that is referenced by a link. Therefore there is a need for a media type that uniquely identifies an AsyncAPI document that is encoded in JSON. This issue was https://posted on the https://github.com/opengeospatial/ogcapi-common/issues/329[OGC API - Common issues board] and also on the https://github.com/asyncapi/spec/issues/936[AsyncAPI issues board]. Also related to this issue is the need to be able to uniquely distinguish between an HTML-encoded API defintion document that is based on OpenAPI and one that is based on AsyncAPI. This second issue was https://github.com/opengeospatial/ogcapi-common/issues/330[posted] on the OGC API - Common repository.
+
+[%unnumbered%]
+[source,json]
+----
+{
+    "links": [
+        {
+            "rel": "self",
+            "type": "application/json",
+            "title": "This document as JSON",
+            "href": "http://localhost:5000?f=json"
+        },
+        {
+            "rel": "alternate",
+            "type": "application/ld+json",
+            "title": "This document as RDF (JSON-LD)",
+            "href": "http://localhost:5000?f=jsonld"
+        },
+        {
+            "rel": "alternate",
+            "type": "text/html",
+            "title": "This document as HTML",
+            "href": "http://localhost:5000?f=html",
+            "hreflang": "en-US"
+        },
+        {
+            "rel": "service-desc",
+            "type": "application/vnd.oai.openapi+json;version=3.0",
+            "title": "The OpenAPI definition as JSON",
+            "href": "http://localhost:5000/openapi"
+        },
+        {
+            "rel": "service-desc",
+            "type": "application/json",
+            "title": "AsyncAPI document in JSON",
+            "href": "http://localhost:5000/asyncapi"
+        },        
+        {
+            "rel": "service-doc",
+            "type": "text/html",
+            "title": "The OpenAPI definition as HTML",
+            "href": "http://localhost:5000/openapi?f=html",
+            "hreflang": "en-US"
+        },
+        {
+            "rel": "conformance",
+            "type": "application/json",
+            "title": "Conformance",
+            "href": "http://localhost:5000/conformance"
+        },
+        {
+            "rel": "data",
+            "type": "application/json",
+            "title": "Collections",
+            "href": "http://localhost:5000/collections"
+        },
+        {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/processes",
+            "type": "application/json",
+            "title": "Processes",
+            "href": "http://localhost:5000/processes"
+        },
+        {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/job-list",
+            "type": "application/json",
+            "title": "Jobs",
+            "href": "http://localhost:5000/jobs"
+        }
+    ],
+    "title": "pygeoapi Demo instance - running latest GitHub version",
+    "description": "pygeoapi provides an API to geospatial data"
+}
+
+----
+
+Accessing the HTML-encoded AsyncAPI definition document, leads to a view such as the one shown in <<img_pygeoapi_asyncapi_html>>. Note that the document advertises an MQTT server. In addition to MQTT, AsyncAPI also supports other protocols like Kafka and AMQP.
+
+[[img_pygeoapi_asyncapi_html]]
+.Screenshot of a rendered HTML-encoded pygeoapi asyncapi document
+image::../images/pygeoapi_asyncapi_html.png[align="center",width=800]
+
+Subscription information can be obtained from the description of a feature collection that supports the event-driven mechanism. An example link for subscribing to notifcations through MQTT is shown in the following listing.
+
+[%unnumbered%]
+[source,json]
+----
+{
+    "id": "obs",
+    "title": "Observations",
+    "description": "Observations",
+    "keywords": [
+        "observations",
+        "monitoring"
+    ],
+    "links": [        
+        {
+            "type": "application/json",
+            "rel": "root",
+            "title": "The landing page of this server as JSON",
+            "href": "https://demo.pygeoapi.io/master?f=json"
+        },
+        {
+            "type": "application/json",
+            "rel": "self",
+            "title": "This document as JSON",
+            "href": "https://demo.pygeoapi.io/master/collections/obs?f=json"
+        },      
+        {
+            "type": "application/geo+json",
+            "rel": "items",
+            "title": "items as GeoJSON",
+            "href": "https://demo.pygeoapi.io/master/collections/obs/items?f=json"
+        },      
+        {
+            "type": "application/json",
+            "rel": "items",
+            "title": "Subscription information (Pub/Sub)",
+            "href": "mqtt://localhost:1883",
+            "channel": "collections/canada-surface-weather-obs"
+        }        
+    ],
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -180,
+                    -90,
+                    180,
+                    90
+                ]
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2000-10-30T18:24:39+00:00",
+                    "2007-10-30T08:57:29+00:00"
+                ]
+            ]
+        }
+    },
+    "itemType": "feature",
+    "crs": [
+        "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    ],
+    "storageCRS": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+}
+
+----
+
+The listing above highlights a need to be able to include additional parameters in links. Since https://datatracker.ietf.org/doc/rfc8288/[RFC 8288] identifies a specific set of link-params that are allowed in links, this raises the question of whether inclusion of the channel parameter would be allowable per the RFC. If the RFC does not allow additional parameters, then how might the need to advertise channel endpoints be addressed in a future Pub/Sub conformance class of OGC API Standards? These questions were https://github.com/opengeospatial/ogcapi-common/issues/331[posted] to the OGC API - Common repository for discussion by the SWG. A screenshot of MQTT Explorer receiving notifications from an OGC API - Features implementation is presentted in <<img_pygeoapi_mqtt_explorer>>. http://mqtt-explorer.com/[MQTT Explorer] is an MQTT client that displays an overview of MQTT topics and supports other tasks involving MQTT.
+
+[[img_pygeoapi_mqtt_explorer]]
+.Screenshot of MQTT Explorer receiving notifications from an OGC API - Features implementation
+image::../images/pygeoapi_mqtt_explorer.png[align="center",width=800]
+
+The experimentation is envisaged to contribute to development of the WIS2 framework by the World Meteorological Organization (WMO). A screenshot of a WIS 2.0 prototype receiving notifications through the Pub/Sub mechanism is shown in <<img_wis2>>.
+
+[[img_wis2]]
+.Screenshot of a WIS 2.0 prototype receiving notifications through a Pub/Sub mechanism
+image::../images/wis2.png[align="center",width=800]
