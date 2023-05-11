@@ -14,7 +14,7 @@
 :comment: ### Date on which the standard was published; mandatory
 :published-date: 2029-06-12
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
-:external-id: http://www.opengis.net/doc/PER/ogc-osgeo-asf-codesprint2022
+:external-id: http://www.opengis.net/doc/PER/ogc-osgeo-asf-codesprint2023
 :comment: ### Author one
 :fullname: Gobe Hobona
 :comment: ### Author two
