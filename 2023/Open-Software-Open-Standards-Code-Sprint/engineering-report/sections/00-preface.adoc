@@ -32,6 +32,14 @@ The Apache Software Foundation (ASF) is an all-volunteer community comprising 81
 
 The code sprint provided an environment for development and testing of prototype implementations of open standards, including implementations of draft and approved OGC Standards. Further, the code sprint provided a collaborative environment for developers to fix open issues in products, develop new features, improve documentation, improve interoperability with other libraries/products, and develop prototype implementations of OGC Standards. Furthermore, the code sprint also enabled the participating developers to provide feedback to the editors of OGC Standards. The code sprint therefore met all of its objectives and achieved its goal of accelerating the support of open geospatial standards within the developer community.
 
+The sprint participants made the following recommendations for future work:
+
+* Experimentation and prototyping of implementations of https://github.com/opengeospatial/styles-and-symbology[OGC Styles and Symbology].
+* Experimentation and prototyping of implementations of https://www.ogc.org/standard/geoxacml/[OGC GeoXACML].
+* To advance the development of an Executable Test Suite for https://ogcapi.ogc.org/tiles/[OGC API - Tiles].
+* To advance the development of an Executable Test Suite for https://ogcapi.ogc.org/records/[OGC API - Records].
+* To advance the development of an Executable Test Suite for https://www.ogc.org/standard/geoxacml/[OGC GeoXACML].
+
 
 
 

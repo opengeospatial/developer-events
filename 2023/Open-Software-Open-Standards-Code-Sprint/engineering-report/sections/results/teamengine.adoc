@@ -1,22 +1,20 @@
 [[teamengine_results]]
 ==== TEAM Engine
 
-The aim of the code sprint was to migrate TEAM Engine to Java 17 and to get it running with the OGC API Features test suite.
+The aim of the code sprint was to migrate TEAM Engine to Java 17 and to get it running with the  executable test suite of OGC API - Features.
 This is an important part of the upcoming TEAM Engine 6.0 release which will focus on updating Java to version 17, Tomcat to version 10 and Maven dependencies including Java libraries and Maven plugins.
 
-First, a test setup was built using a Dockerfile which contains Java 17, Tomcat 7, the latest build of TEAM Engine 6.0-SNAPSHOT and the OGC API Features tests suite compiled with Java 8.
+First, a test setup was built using a Dockerfile which contains Java 17, Tomcat 7, the latest build of TEAM Engine 6.0-SNAPSHOT and the OGC API - Features executable tests suite compiled with Java 8.
 
 Then, the code of TEAM Engine was migrated to Java 17 with the aim that the complete built is successful.
-This work could be completed and it was possible to build and compile TEAM Engine with command `mvn clean install site -DskipTests` using Java 17.
+This work was completed during the code sprint and it was possible to build and compile TEAM Engine with command `mvn clean install site -DskipTests` using Java 17.
 All results were documented in https://github.com/opengeospatial/teamengine/issues/511[issue 511].
 
-Afterward, TEAM Engine compiled with Java 17 was tested with OGC API Features tests suite using the above described test setup.
-No errors were detected during testing.
-The TEAM Engine webapp started, a login via Web Browser Interface was possible and a test run with OGC API Features test suite could be executed.
+Afterward, a TEAM Engine instance compiled with Java 17 was tested with the OGC API - Features executable test suite using the above described test setup. No errors were detected during testing. The TEAM Engine webapp started, a login via Web Browser Interface was possible and a test run with OGC API - Features executable test suite could be executed.
 The generated report was displayed as expected and test details could be viewed.
 Thus, the aim of the code sprint was reached.
 
-In the remaining time, the work concentrated on further tasks being important for the TEAM Engine 6.0 release.
+In the remaining time, the work concentrated on further tasks that are important for the TEAM Engine 6.0 release.
 
 Identified open tasks were documented in separate issues:
 
