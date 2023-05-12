@@ -1,3 +1,3 @@
 ==== OSGeo GeoServer
 
-https://geoserver.org/[GeoServer] is a Java-based software server that allows users to view and edit geospatial data. Using open standards by the OGC, GeoServer allows for great flexibility in map creation and data sharing.
+https://geoserver.org/[GeoServer] is a Java-based software server that allows users to view and edit geospatial data. Using open standards by the OGC, GeoServer allows for flexibility in map creation and data sharing.
