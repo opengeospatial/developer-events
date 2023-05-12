@@ -2,15 +2,13 @@
 
 ===== Support for OGC API Records in GeoNetwork-UI
 
-Work in progress by https://github.com/fgravin[@fgravin] and https://github.com/jahow[@jahow].
+Participants from Camptocamp worked on the following tasks related to the User Interface (UI) of GeoNetwork:
 
-This aims at :
-
-. creating an abstraction level between the search-related components of GeoNetwork-UI and the actual search backend used for metadata records
-. implement a search backend compatible with OGC API Records services
+* creating an abstraction level between the search-related components of GeoNetwork-UI and the actual search backend used for metadata records
+* implementing a search backend compatible with OGC API - Records
 
 Eventually, this means a GeoNetwork-UI application such as the https://github.com/geonetwork/geonetwork-ui/tree/main/apps/datahub[Datahub] could be able to
-provide a search interface over any OGC API Records service. Some features currently provided by GeoNetwork 4.x might not be available anymore, but
-basc search functionalities should still offer a valuable user experience.
+provide a search interface over any implementation of OGC API - Records. Some features currently provided by GeoNetwork 4.x might not be available anymore, but
+basic search functionalities should still offer a valuable user experience.
 
 Pull request: https://github.com/geonetwork/geonetwork-ui/pull/464

@@ -9,7 +9,7 @@ Edits to the candidate standard in preparation for the code sprint included:
 
 A sample of the edits made to the candidate standard during the code sprint is as follows:
 
-* https://github.com/opengeospatial/ogcapi-records/commit/7dfdb87ab9d9e787fb98d223da038062d99d4066[Addition] of a providers array to align with STAC.
+* https://github.com/opengeospatial/ogcapi-records/commit/7dfdb87ab9d9e787fb98d223da038062d99d4066[Addition] of a providers' array to align with STAC.
 * Other https://github.com/opengeospatial/ogcapi-records/commit/ea2a76690363360c5927dec1238615dd20674271[changes] to various schemas and recommendations towards closer STAC harmonization.
 * https://github.com/opengeospatial/ogcapi-records/commit/d751c6597fd4a26f9e0921ed62488b1167f05a2e[Addition] of a time member to the Record example and https://github.com/opengeospatial/ogcapi-records/commit/f24572b96561483fb20306c3704b3ab22030a930[updates] to the Contact information.
 * https://github.com/opengeospatial/ogcapi-records/issues/255[Addition] of requirements for the logo member.
@@ -17,7 +17,7 @@ A sample of the edits made to the candidate standard during the code sprint is a
 * https://github.com/opengeospatial/ogcapi-records/commit/68dbfb17f81964c5912cf7c43644226499e8806e[Updates] to the theme model.
 * https://github.com/opengeospatial/ogcapi-records/commit/3e50a41c07924bc27f47ecabae446e15c25c8ccb[Fixing] of the nullability of the time property and add resolution.
 
-The OGC API - Records team held two breakouts, during the code sprint, which focused on advancing the specification for OAB review. The discussions during the breakout sessions included:
+The OGC API - Records team held two breakouts during the code sprint, focusing on advancing the specification for review by the OGC Architecture Board (OAB). The discussions during the breakout sessions included:
 
 * extension for faceted searching
 * Record model: contacts and roles

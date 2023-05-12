@@ -56,7 +56,7 @@ All questions regarding this document should be directed to the editor or the co
 | Stéphane Lecorney	| University of Applied Sciences Western Switzerland (HEIG-VD)	|	Contributor
 | Paul van Genuchten	| ISRIC- World soil information	|	Contributor
 | Iván Sánchez Ortega	| OSGeo	|	Contributor
-| TBA	|	TBA	|	Contributor
+| Florent Gravin	|	Camptocamp	|	Contributor
 | TBA	|	TBA	|	Contributor
 | TBA	|	TBA	|	Contributor
 | TBA	|	TBA	|	Contributor
