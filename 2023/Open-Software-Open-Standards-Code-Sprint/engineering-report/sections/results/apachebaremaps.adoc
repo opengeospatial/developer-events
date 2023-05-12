@@ -1,4 +1,4 @@
 [[apachebaremaps_results]]
 ==== Apache Baremaps
 
-TBA
+Multiple issues were identified and documented in the Apache Baremaps repository. For example, one https://github.com/apache/incubator-baremaps/issues/632[issue] identified the need to implement support for OGC API - Features. https://github.com/apache/incubator-baremaps/issues/634[Another issue] identified possible use of an unknown WKB(Well-Known Binary) type. The issue occurs when using a protobuf encoded version of the http://download.geofabrik.de/europe/germany/berlin-latest.osm.pbf[Berlin data from OpenStreetMap]. Another issue, also discovered through use of the Berlin data, is that some of the polygons did not form closed rings.

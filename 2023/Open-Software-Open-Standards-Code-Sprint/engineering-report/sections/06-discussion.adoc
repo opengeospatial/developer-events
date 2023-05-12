@@ -3,8 +3,6 @@
 
 include::discussion/gigs.adoc[]
 
-include::discussion/maplibre.adoc[]
-
 include::discussion/homeassistant.adoc[]
 
 include::discussion/geoxacml.adoc[]

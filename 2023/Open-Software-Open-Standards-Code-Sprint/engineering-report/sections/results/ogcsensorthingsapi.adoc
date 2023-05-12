@@ -1,3 +1,0 @@
-==== OGC SensorThings API
-
-TBA

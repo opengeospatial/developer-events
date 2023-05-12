@@ -1,4 +1,0 @@
-[[camptocampogc_results]]
-==== Camptocamp ogc-client
-
-TBA
