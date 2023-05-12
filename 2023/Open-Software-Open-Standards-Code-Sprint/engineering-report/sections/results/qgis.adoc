@@ -1,4 +1,6 @@
 [[qgis_results]]
 ==== OSGeo QGIS
 
-TBA 
+The sprint participants identified and documented a number of issues on the QGIS GitHub repository. An https://github.com/qgis/QGIS/issues/52856[issue] was documented recommending implementation of support of the record format of the OGC API - Records candidate Standard in QGIS. Such support would enable users to read and write layer metadata using this format. One option could be to add a translator class, from the current https://qgis.org/pyqgis/3.16/core/QgsProjectMetadata.html[QgsProjectMetadata] class, which would be called when serializing/deserializing information. Another option could be to replace the current QGIS metadata internal format with OGC API - Records format.
+
+The QGIS metadata internal format is based on Dublin Core. It was developed with the goal of creating something simple (standards based), that could be extended in the future. At that time, OGC API - Records did not exist. OGC API - Records defines a record building block which shares the same goals as the QGIS metadata schema: being very simple and extensive. Unlike Dublin Core, which is a generic metadata schema, the OGC API - Records schema was designed for geospatial data and is envisaged to be at the core of the modern generation geospatial catalogs.
