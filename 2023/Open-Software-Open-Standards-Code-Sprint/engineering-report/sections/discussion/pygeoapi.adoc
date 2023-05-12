@@ -1,3 +1,4 @@
+[[pygeoapi_discussion]]
 === pygeoapi
 
 The pygeoapi work involved integration with a new data provider to expose scientific and ocean data from a specific API.Implementation of the new data provider had been done prior to the code sprint, and some final integration work had been completed during the code sprint. The data provider was enabled to access ERDDAP, a server technology by the National Oceanic and Atmospheric Administration(NOAA). ERDDAP is used by several of NOAA's partners to disseminate real time scientific data. Servers supporting ERDDAP can be accessed through an interface that support JSON messages, as well as other approaches. The sprint participants working on pygeoapi wanted to expose an ERDDAP instance through an interface that implements the OGC API - Features Standard.
@@ -9,87 +10,7 @@ The Discussion Paper describes a number approaches of how to support event-drive
 An implementation of the prototype, which has been built using pygeoapi, was demonstrated during the code sprint. The demo assumes that there is a data provider upstream that is producing observations from which the alerts are derived. From there the alerts are created and pusshed into an implementation of https://docs.ogc.org/DRAFTS/20-002.html[OGC API - Features - Part 4: Create, Replace, Update and Delete]. The OGC API - Features implementation sends a message to a broker. In addition to the features being inserted into the collection, a notificaiton would then be sent out to subscribers.
 The implementation uses a broker called Mosquito, which supports MQTT. The client application was implemented using OWSLib.
 
-The landing page of the pygeoapi instance was modified to enable it to advertise links to both the OpenAPI definition document and the AsyncAPI definition document. <<img_pygeoapi_landing>> shows a screenshot of the landing page of a pygeoapi instance that advertises both an OpenAPI and an AsyncAPI definition document.
 
-[[img_pygeoapi_landing]]
-.Screenshot of a pygeoapi landing page
-image::../images/pygeoapi_landing.png[align="center",width=800]
-
-An extract of the JSON-encoding of the landing page is shown in the following listing. The advertisement of the OpenAPI and AsyncAPI definition documents in the same landing page highlighted the need to have a way to distinguish between the two types of links. OGC API Standards use `rel` and `type` link-params (link parameters) to describe the type of resource that is referenced by a link. Therefore there is a need for a media type that uniquely identifies an AsyncAPI document that is encoded in JSON. This issue was https://posted on the https://github.com/opengeospatial/ogcapi-common/issues/329[OGC API - Common issues board] and also on the https://github.com/asyncapi/spec/issues/936[AsyncAPI issues board]. Also related to this issue is the need to be able to uniquely distinguish between an HTML-encoded API defintion document that is based on OpenAPI and one that is based on AsyncAPI. This second issue was https://github.com/opengeospatial/ogcapi-common/issues/330[posted] on the OGC API - Common repository.
-
-[%unnumbered%]
-[source,json]
-----
-{
-    "links": [
-        {
-            "rel": "self",
-            "type": "application/json",
-            "title": "This document as JSON",
-            "href": "http://localhost:5000?f=json"
-        },
-        {
-            "rel": "alternate",
-            "type": "application/ld+json",
-            "title": "This document as RDF (JSON-LD)",
-            "href": "http://localhost:5000?f=jsonld"
-        },
-        {
-            "rel": "alternate",
-            "type": "text/html",
-            "title": "This document as HTML",
-            "href": "http://localhost:5000?f=html",
-            "hreflang": "en-US"
-        },
-        {
-            "rel": "service-desc",
-            "type": "application/vnd.oai.openapi+json;version=3.0",
-            "title": "The OpenAPI definition as JSON",
-            "href": "http://localhost:5000/openapi"
-        },
-        {
-            "rel": "service-desc",
-            "type": "application/json",
-            "title": "AsyncAPI document in JSON",
-            "href": "http://localhost:5000/asyncapi"
-        },        
-        {
-            "rel": "service-doc",
-            "type": "text/html",
-            "title": "The OpenAPI definition as HTML",
-            "href": "http://localhost:5000/openapi?f=html",
-            "hreflang": "en-US"
-        },
-        {
-            "rel": "conformance",
-            "type": "application/json",
-            "title": "Conformance",
-            "href": "http://localhost:5000/conformance"
-        },
-        {
-            "rel": "data",
-            "type": "application/json",
-            "title": "Collections",
-            "href": "http://localhost:5000/collections"
-        },
-        {
-            "rel": "http://www.opengis.net/def/rel/ogc/1.0/processes",
-            "type": "application/json",
-            "title": "Processes",
-            "href": "http://localhost:5000/processes"
-        },
-        {
-            "rel": "http://www.opengis.net/def/rel/ogc/1.0/job-list",
-            "type": "application/json",
-            "title": "Jobs",
-            "href": "http://localhost:5000/jobs"
-        }
-    ],
-    "title": "pygeoapi Demo instance - running latest GitHub version",
-    "description": "pygeoapi provides an API to geospatial data"
-}
-
-----
 
 Accessing the HTML-encoded AsyncAPI definition document, leads to a view such as the one shown in <<img_pygeoapi_asyncapi_html>>. Note that the document advertises an MQTT server. In addition to MQTT, AsyncAPI also supports other protocols like Kafka and AMQP.
 

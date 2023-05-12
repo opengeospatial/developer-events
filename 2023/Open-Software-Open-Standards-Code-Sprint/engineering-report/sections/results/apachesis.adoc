@@ -1,4 +1,8 @@
 [[apachesis_results]]
 ==== Apache SIS
 
-TBA
+Maintainers of Apache SIS presented a tutorial in the Sprint's Mentor Stream on how to integrate GeoAPI, PROJ-JNI and Apache SIS into a Maven project. They showed how to setup the project in such a way that coordinate operations can be performed without exposing the implementation (PROJ-JNI in this example). They demonstrated how a project can offer to their developers a separation between public API (GeoAPI) and implementation details (PROJ-JNI). 
+
+The participants also demonstrated how to replace a PROJ-JNI implementation by Apache SIS. The tutorial included a step-by-step explanation of coordinate operations using a scenario described in https://docs.ogc.org/per/22-038r2.html[OGC Testbed 18: Reference Frame Transformation Engineering Report]. The engineering report describes how OGC Standards can be used for describing a transformation from coordinates relative to a spacecraft (e.g., Voyager 2) to coordinates relative to Earth. 
+
+The tutorial also demonstrated advanced referencing services that are well beyond classical map projections, how OGC Standards support them and how Apache SIS implements them. Finally, the tutorial demonstrated basic raster operations using data conformant to the OGC GeoTIFF and netCDF Standards. A multi-dimensional data cube was built and scalability with large files was shown. It is envisaged that demonstration of these capabilities will lead to discussion about what the coverage package of the OGC GeoAPI Standard may look like.

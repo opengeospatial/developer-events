@@ -2,4 +2,11 @@
 
 ==== OGC Styles and Symbology
 
-TBA
+During this code sprint, the sprint participants worked on was the JSON encoding for the OGC Styles & Symbology draft candidate Standard. The work included:
+
+* Presenting the standard in detail to the https://geostyler.org/[GeoStyler] team who provided the editors of the standard with valuable feedback.
+* A new example styling for polygon features
+* A new JSON Schema for the encoding,
+* Addition of some descriptive text for the section
+
+A number of GitHub Issues were created as a result of this work. This included a https://github.com/opengeospatial/styles-and-symbology/issues/41[GitHub Issue] to fix the direction of the composition arrow in Unified Modeling Language (UML) class diagrams in the draft candidate Standard. This also included an https://github.com/opengeospatial/styles-and-symbology/issues/42[issue] for updating of the naming of the enumerations of the `RelationalOperator` between the table and the UML class diagram to improve consistency. Another https://github.com/opengeospatial/styles-and-symbology/issues/45[issue] created was for addition of capabilities required for completeness. Pull requests were also created for https://github.com/opengeospatial/styles-and-symbology/pull/43[fixing editorial issues] and formatting the https://github.com/opengeospatial/styles-and-symbology/pull/44[CartoSym JSON schema].
