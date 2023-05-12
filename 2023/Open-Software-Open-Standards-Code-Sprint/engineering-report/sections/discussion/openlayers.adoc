@@ -1,7 +1,7 @@
 [[openlayers_discussion]]
 === Styling in OpenLayers
 
-OpenLayers has long had support for letting users create a style. Users can change the stroke or color of a symbol. The benefit is that it is felxible. The downside is that it needs to run on the CPU in the context of the user's client-side environment. The solution is styles that can be passed to a different context, to a worker for example. An example of the previous approach is shown below.
+OpenLayers has long had support for letting users create a style. Users can change the stroke or color of a symbol. The benefit is that it is flexible. The downside is that it needs to run on the CPU in the context of the user's client-side environment. The solution is styles that can be passed to a different context, to a worker for example. An example of the previous approach is shown below.
 
 [%unnumbered%]
 [source,js]
