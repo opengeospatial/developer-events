@@ -1,6 +1,6 @@
-= GeoNetwork
+==== GeoNetwork
 
-== Support for OGC API Records in GeoNetwork-UI
+===== Support for OGC API Records in GeoNetwork-UI
 
 Work in progress by https://github.com/fgravin[@fgravin] and https://github.com/jahow[@jahow].
 
