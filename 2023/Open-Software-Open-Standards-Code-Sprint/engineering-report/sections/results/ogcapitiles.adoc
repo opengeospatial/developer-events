@@ -1,8 +1,3 @@
 ==== OGC API - Tiles
 
 The sprint participants worked on fixing GDAL's support of https://docs.ogc.org/is/20-057/20-057.html[OGC API - Tiles - Part 1: Core]. https://gdal.org/[GDAL] is an open source translator library for raster and vector geospatial data formats. The library presents a single raster abstract data model and single vector abstract data model that enables the calling application to transform between a variety of data formats.
-
-https://docs.ogc.org/per/21-008.html#_osgeo_gdal
-
-
-discussed Processes - Part 3 with a few participants including @gfenoy who started implementing spuport for it in the ZOO project, presented overviews of OGC API - Maps, DGGS, Processes - Part 1-3, Coverages and OGC Styles and Symbology, , took part in discussions on GeoPose in the SWG and with the Smapshot team and hosted an OGC API - DGGS breakout session.

@@ -1,6 +1,8 @@
-=== GIGS 
+=== IOGP GIGS tests and the OGC GeoAPI Standard
 
-The GIGS tests can be found on the gigs.iogp.org website. The participants from Geomatys worked on https://github.com/OSGeo/PROJ-JNI[PROJ-JNI] to enable it to execute additional GIGS tests. PROJ is a coordinate transformation software package, built using C/C++ library, that transforms geospatial coordinates from one CRS to another. PROJ-JNI is a Java Native Interface for PROJ. 
+The Geospatial Integrity of Geoscience Software (GIGS) tests are an open-source digital testing framework for evaluating the capability of software in establishing and maintaining the integrity of geospatial data. The tests are developed and maintained by the International Association of Oil & Gas Producers (IOGP). The GIGS tests can be found on the https://gigs.iogp.org[gigs.iogp.org] website. 
+
+The participants from Geomatys worked on https://github.com/OSGeo/PROJ-JNI[PROJ-JNI] to enable it to execute additional GIGS tests. PROJ is a coordinate transformation software package, built using C/C++ library, that transforms geospatial coordinates from one CRS to another. PROJ-JNI is a Java Native Interface for PROJ. 
 
 [[img_gigs_discussion]]
 .Example execution of the GIGS test sofware

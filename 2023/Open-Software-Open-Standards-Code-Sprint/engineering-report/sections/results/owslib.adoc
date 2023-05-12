@@ -1,3 +1,3 @@
-=== OWSLib
+==== OWSLib
 
-The OWSLib project https://github.com/geopython/OWSLib/pull/87[updated] support for OGC API - Features - Part 4: Create, Replace, Update and Delete, as well as https://github.com/geopython/OWSLib/pull/870[upgraded] its public documentation to use https://owslib.readthedocs.io[Read the Docs] as well a continuous deploymnent workflow for automated documentation updates.
+The OWSLib project https://github.com/geopython/OWSLib/pull/87[updated] support for OGC API - Features - Part 4: Create, Replace, Update and Delete, and https://github.com/geopython/OWSLib/pull/870[upgraded] OWSLib's public documentation to use https://owslib.readthedocs.io[Read the Docs] as well as continuous deploymnent workflows for automated documentation updates.

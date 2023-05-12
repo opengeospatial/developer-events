@@ -1,13 +1,13 @@
 [[go-ogc-results]]
 ==== go-ogc
 
-Work was started to add OGC API - Records support to the library.  This involved adding an extension mechanism to the existing OGC API - Features structs, in the same way that since the Records spec extends the Features spec.  The library is being used in an internal service at Planet Labs, where the OGC API - Features spec is being used to provide metadata about Planet's imagery catalog.  The records branch of the go-ogc library is being used to test an update to the internal service that adds support for OGC API - Records.
+Work was started to add OGC API - Records support to the library.  This involved adding an extension mechanism to the existing OGC API - Features structs, in the same way that the OGC API - Records candidate Standard extends the OGC API - Features Standard.  The library is being used  at Planet Labs, where the OGC API - Features Standard is being used to provide metadata about Planet's imagery catalog.  The records branch of the go-ogc library is being used to test an update to the internal service that adds support for OGC API - Records.
 
 ===== Suggestions
 
 ====== Add ``conformsTo`` property to OGC API - Features
 
-The OGC API - Records specification extends OGC API - Features by adding a ``conformsTo`` property to GeoJSON records (or features).  This would be a useful extension point for other specifications in addition to Records (e.g. STAC API or other standards that might extend Features).  Instead of being defined in the Records spec, it would be useful if the Features spec defined the ``conformsTo`` property as a common way to advertise conformance with other specifications that might extend Features.
+The OGC API - Records specification extends OGC API - Features by adding a ``conformsTo`` property to GeoJSON records (or features).  This would be a useful extension point for other specifications in addition to OGC API - Records (e.g. STAC API or other standards that might extend Features).  Instead of being defined in the OGC API - Records candidate Standard, it would be useful if the OGC API - Features Standard defined the ``conformsTo`` property as a common way to advertise conformance with other specifications that might extend Features.
 
 ====== Weigh the pros/cons of adding top-level GeoJSON Feature members
 

@@ -13,11 +13,3 @@ include::discussion/openlayers.adoc[]
 
 include::discussion/go-ogc.adoc[]
 
-=== Summary of Lessons Identified
-
-The following are the immediate lessons identified by the sprint participants:
-
-* TBA
-* TBA
-* TBA
-* TBA

@@ -1,16 +1,16 @@
 [[geoxacml]]
 ==== OGC GeoXACML
 
-https://www.ogc.org/standard/geoxacml/[GeoXACML] defines a geo-specific extension to the XACML Policy Language, as defined by the OASIS standard “eXtensible Access Control Markup Language (XACML), that allows managing access to geographic information and services in an interoperable way across jurisdictions. Although XACML is meant to be used as a multi-purpose language, XACML does not have the capabilities to express geo-specific constraints on access rights. GeoXACML provides support for spatial data types and spatial authorization decision functions. Those data types and functions can be used to define additional spatial constraints for XACML based policies. GeoXACML defines extensions for the policy encoding schema only, and thus does not affect the XACML context schema.
+The OGC https://www.ogc.org/standard/geoxacml/[GeoXACML] Standard defines a geo-specific extension to the XACML Policy Language, as defined by the OASIS standard “eXtensible Access Control Markup Language (XACML), that allows managing access to geographic information and services in an interoperable way across jurisdictions. Although XACML is meant to be used as a multi-purpose language, XACML does not have the capabilities to express geo-specific constraints on access rights. GeoXACML provides support for spatial data types and spatial authorization decision functions. Those data types and functions can be used to define additional spatial constraints for XACML based policies. GeoXACML defines extensions for the policy encoding schema only, and thus does not affect the XACML context schema.
 
 Implementations of OGC API Standards are designed to work over HTTP(S). Securing the deployed APIs is not of concern to the OGC API Standards. However, the requirement to describe the API’s endpoint via OpenAPI introduces standard options to enable authentication. Knowing the user that accesses an API is an important aspect for many use cases. Also, user identification is often used to control access to the data, served by
-the API. But, no OGC API Standard provides guidance how to apply access
-control. This leads to an interoperability issue if access is denied,
+the API. However, OGC API Standards do not currently provide guidance on how to apply access
+control but instead delegate the responsibility of describing the security scheme to the OpenAPI definition document. This leads to an interoperability issue if access is denied,
 but there is no common (standardized) way to “tell the reason”. OGC’s
 GeoXACML 3.0 (currently still draft) Standard supports the interoperable
 exchange of access conditions as policies. GeoXACML 3.0 defines the
 geospatial extension to OASIS XACML 3.0 and thereby extends the ability
-to include Attribute Based Access Control also on geometries.
+to include Attribute Based Access Control (ABAC) also on geometries.
 
 The challenge for the GeoXACML part of the code sprint was to develop a Policy Enforcement Point (PEP) that intercepts Web Feature Service (WFS) 2.0 requests and modifies the request according to an access decision returned by a GeoXACML 3.0 policy. The access control use case was the following: “WFS GetFeature requests shall exclude the NYC Central Park for feature type poly_landmarks”.
 

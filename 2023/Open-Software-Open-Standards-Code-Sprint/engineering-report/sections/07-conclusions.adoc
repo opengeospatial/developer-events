@@ -1,16 +1,15 @@
 [[conclusions]]
 == Conclusions
 
-TBA
+The code sprint provided an environment for development and testing of prototype implementations of open standards, including implementations of draft and approved OGC Standards. Further, the code sprint enabled the participating developers to provide feedback to the editors of OGC Standards. Furthermore, the collaborative environment provided by the code sprint enabled developers to fix open issues in products, develop new features, improve documentation, improve interoperability with other libraries/products, and develop prototype implementations of OGC standards. This engineering report therefore concludes that the code sprint met all of its objectives and achieved its goal of accelerating the support of open geospatial standards within the developer community. The following subsection presents recommendations for future work.
 
 === Future Work
 
-The sprint participants made the following recommendations for future innovation work items:
+The sprint participants made the following recommendations for future work items:
 
-*	TBA
-*	TBA
-
-The sprint participants also made the following recommendations for things that the SWGs should consider:
-
-*	TBA
-*	TBA
+* Experimentation and prototyping of implementations of https://github.com/opengeospatial/styles-and-symbology[OGC Styles and Symbology].
+* Provide examples of the use of OGC Rainbow (formerly known as the OGC Definitions Server) to support the representation of units of measure, in sensor-related standards.
+* Experimentation and prototyping of implementations of https://www.ogc.org/standard/geoxacml/[OGC GeoXACML].
+* To advance the development of an Executable Test Suite for https://ogcapi.ogc.org/tiles/[OGC API - Tiles].
+* To advance the development of an Executable Test Suite for https://ogcapi.ogc.org/records/[OGC API - Records].
+* To advance the development of an Executable Test Suite for https://www.ogc.org/standard/geoxacml/[OGC GeoXACML].

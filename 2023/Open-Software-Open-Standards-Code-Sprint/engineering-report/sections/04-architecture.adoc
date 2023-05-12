@@ -1,13 +1,12 @@
 [[architecture]]
 == High-Level Architecture
 
-The focus of the sprint was on the support of implementations of open geospatial standards across various open source software projects. Implementations of approved and candidate OGC Standards were deployed in participants’ own infrastructure in order to build a solution with the architecture shown below in <<img_architecture>>.
+The focus of the sprint was on the support of implementations of open geospatial standards across various open source software projects. Implementations of approved and candidate OGC Standards were deployed in participants’ own infrastructure in order to build a solution with the architecture shown below in <<img_architecture>>. As illustrated, the sprint architecture was designed with the view of enabling client applications to connect to different servers that implement open geospatial standards. The architecture also included several different software libraries that support open geospatial standards and enable the extraction, transformation and loading of geospatial data.
 
 [[img_architecture]]
 .High Level Overview of the Sprint Architecture
 image::../images/architecture.png[align="center",width=800]
 
-As illustrated the sprint architecture was designed with the view of enabling client applications to connect to different servers that implement open geospatial standards such as the suite of OGC API standards. The architecture also included several different software libraries that support open geospatial standards and enable the extraction, transformation and loading of geospatial data.
 The rest of this section describes the software deployed and standards implemented during the code sprint.
 
 
