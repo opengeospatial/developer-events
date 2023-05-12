@@ -16,44 +16,22 @@ The subject of this Engineering Report (ER) is a code sprint that was held from 
 [.preface]
 == Executive Summary
 
-The mutually beneficial relationship between open standards and open source software has been instrumental in the update of geospatial technologies across a wide variety of industries. Whereas open source software has enabled many organizations to rapidly implement open standards, open standards have enabled open source software to support a wide variety of use cases through efficient integration and greater interoperability. An enduring challenge however, has been how and when to bring developers from the open standards and open source software communities together.
+The mutually beneficial relationship between open standards and open source software has been instrumental in the uptake of geospatial technologies across a wide variety of industries. Whereas open source software has enabled many organizations to rapidly implement open standards, open standards have enabled open source software to support a multitude of use cases through efficient integration and greater interoperability. An enduring challenge, however, has been how and when to bring developers from the open standards and open source software communities together.
 
-From the 25th to the 27th of April 2023, the Open Geospatial Consortium (OGC), the Apache Software Foundation (ASF), and the Open Source Geospatial Foundation (OSGeo) held their third joint Open Standards and Open Source Software Code Sprint. The code sprint served to accelerate the support of open geospatial standards within the developer community. 
+From the 25th to the 27th of April 2023, the Open Geospatial Consortium (OGC), the Apache Software Foundation (ASF), and the Open Source Geospatial Foundation (OSGeo) held their third joint Open Standards and Open Source Software Code Sprint. The code sprint served to accelerate the support of open geospatial standards within the software developer community.
 
-The code sprint brought together developers of Open Standards, Open Source Software and Proprietary Software into the same physical space. Such face-to-face collaboration had been made possible by the support of Ordnance Survey, the event's Gold-level Sponsor, and the support of Camptocamp, the event host, as well as co-sponsors of the catering namely HEIG-VD (School of Engineering and Management), EPFL ,University of Lausanne , State of Neuchâtel , State of Vaud and Camptocamp.
+The code sprint brought together developers of Open Standards, Open Source Software and Proprietary Software into the same physical space. Such face-to-face collaboration had been made possible by the support of Ordnance Survey, the event’s Gold-level Sponsor, and the support of Camptocamp, the event host, as well as co-sponsors of the catering namely HEIG-VD (School of Engineering and Management), EPFL, University of Lausanne, State of Neuchâtel, State of Vaud and Camptocamp.
 
-Previous code sprints had been completely virtual events. Therefore this third Open Standards and Open Source Software Code Sprint held special significance in that it was the first hybrid event (supporting both face-to-face and remote participation) that had been jointly organized by the three organizations. This Engineering Report (ER) summarizes the main achievements of the code sprint.
+Previous code sprints jointly organized by OGC, ASF, and OSGeo had been completely virtual events due to the pandemic. Therefore, this third code sprint held special significance in that it was the first hybrid event (supporting both face-to-face and remote participation) that had been jointly organized by the three organizations. This Engineering Report (ER) summarizes the main achievements of the code sprint.
 
-The OGC is an international consortium of more than 500 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR - Findable, Accessible, Interoperable, and Reusable. The consortium consists of Standards Working Groups (SWGs) that have responsibility for designing a candidate standard prior to approval as an OGC Standard and for making revisions to an existing OGC Standard. The sprint objectives for the SWGs were to:
+The OGC is an international consortium of more than 500 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR — Findable, Accessible, Interoperable, and Reusable. The consortium consists of Standards Working Groups (SWGs) that have responsibility for designing a candidate standard prior to approval as an OGC Standard and for making revisions to an existing OGC Standard. 
 
-* Develop prototype implementations of OGC standards, including implementations of draft OGC Application Programming Interface (API) standards
-* Test the prototype implementations
-* Provide feedback to the Editor about what worked and what did not
-* Provide feedback about the specification document
+The Open Source Geospatial Foundation (OSGeo) is a not-for-profit organization whose mission is to foster global adoption of open geospatial technology by being an inclusive software foundation devoted to an open philosophy and participatory community driven development. The foundation consists of projects that develop open source software products. 
 
-The Open Source Geospatial Foundation (OSGeo) is a not-for-profit organization whose mission is to foster global adoption of open geospatial technology by being an inclusive software foundation devoted to an open philosophy and participatory community driven development. The foundation consists of projects that develop open source software products. The sprint objectives for OSGeo projects were:
+The Apache Software Foundation (ASF) is an all-volunteer community comprising 815 individual Members and 8,500 Committers on six continents stewarding more than 227 million lines of code, and overseeing more than 350 Apache projects and their communities. 
 
-* TBA
-* TBA
+The code sprint provided an environment for development and testing of prototype implementations of open standards, including implementations of draft and approved OGC Standards. Further, the code sprint provided a collaborative environment for developers to fix open issues in products, develop new features, improve documentation, improve interoperability with other libraries/products, and develop prototype implementations of OGC Standards. Furthermore, the code sprint also enabled the participating developers to provide feedback to the editors of OGC Standards. The code sprint therefore met all of its objectives and achieved its goal of accelerating the support of open geospatial standards within the developer community.
 
-The Apache Software Foundation (ASF) is an all-volunteer community comprising 815 individual Members and 8,500 Committers on six continents stewarding more than 227 million lines of code, and overseeing more than 350 Apache projects and their communities. The sprint objectives for ASF projects were:
-
-* TBA
-* TBA
-
-The code sprint provided an environment for development and testing of prototype implementations of open standards, including implementations of draft and approved OGC Standards. Further, the code sprint provided a collaborative environment for developers to fix open issues in products, develop new features, improve documentation, improve interoperability with other libraries/products, and develop prototype implementations of OGC standards. Furthermore, the code sprint also enabled the participating developers to provide feedback to the editors of OGC standards. 
-
-The code sprint therefore met all of its objectives and achieved its goal of accelerating the support of open geospatial standards within the developer community.
-
-The engineering report makes the following recommendations for future innovation work items:
-
-* TBA
-* TBA
-
-The engineering report also makes the following recommendations for things that the Standards Working Groups should consider introducing support for:
-
-* TBA
-* TBA
 
 
 
@@ -70,6 +48,14 @@ All questions regarding this document should be directed to the editor or the co
 |Angelos Tzotsos | Open Source Geospatial Foundation |Editor
 |Martin Desruisseaux | Geomatys |Editor
 |Tom Kralidis | Meteorological Service of Canada |Editor
+| Andreas Matheus	|	Secure Dimensions	|	Contributor
+| Olivia Guyot	|	Camptocamp	|	Contributor
+| Tim Schaub	|	Planet	|	Contributor
+| Dirk Stenger	|	lat/lon	|	Contributor
+| Jody Garnett	|	OSGeo	|	Contributor
+| Stéphane Lecorney	| University of Applied Sciences Western Switzerland (HEIG-VD)	|	Contributor
+| Paul van Genuchten	| ISRIC- World soil information	|	Contributor
+| Iván Sánchez Ortega	| OSGeo	|	Contributor
 | TBA	|	TBA	|	Contributor
 | TBA	|	TBA	|	Contributor
 | TBA	|	TBA	|	Contributor

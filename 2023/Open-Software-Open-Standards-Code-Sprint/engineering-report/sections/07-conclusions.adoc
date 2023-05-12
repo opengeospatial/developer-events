@@ -1,7 +1,7 @@
 [[conclusions]]
 == Conclusions
 
-TBA
+The code sprint provided an environment for development and testing of prototype implementations of open standards, including implementations of draft and approved OGC Standards. Further, the code sprint enabled the participating developers to provide feedback to the editors of OGC Standards. Furthermore, the collaborative environment provided by the code sprint enabled developers to fix open issues in products, develop new features, improve documentation, improve interoperability with other libraries/products, and develop prototype implementations of OGC standards. This engineering report therefore concludes that the code sprint met all of its objectives and achieved its goal of accelerating the support of open geospatial standards within the developer community. The following subsection presents recommendations for future work.
 
 === Future Work
 
