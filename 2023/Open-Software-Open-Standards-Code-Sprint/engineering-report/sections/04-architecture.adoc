@@ -20,6 +20,8 @@ include::architecture/ogcstylessymbology.adoc[]
 
 include::architecture/geoxacml.adoc[]
 
+include::architecture/geoapi.adoc[]
+
 === Candidate OGC Standards
 
 include::architecture/geopose.adoc[]
