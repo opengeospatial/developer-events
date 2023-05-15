@@ -17,6 +17,8 @@ include::results/geoxacml.adoc[]
 
 include::results/ogcapirecords.adoc[]
 
+include::results/geoapi.adoc[]
+
 === Other Specifications
 
 include::results/asyncapi.adoc[]
