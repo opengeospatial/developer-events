@@ -12,3 +12,12 @@ provide a search interface over any implementation of OGC API - Records. Some fe
 basic search functionalities should still offer a valuable user experience.
 
 Pull request: https://github.com/geonetwork/geonetwork-ui/pull/464
+
+===== Filtering improvements to GeoNetwork-UI
+
+Participants from Astun Technology worked on the following tasks related to the GeoNetwork-UI 
+application https://github.com/geonetwork/geonetwork-ui/tree/main/apps/datahub[Datahub]:
+
+* expanding the available search filters for Datahub to include metadata standards and INSPIRE keywords
+
+Pull request: https://github.com/geonetwork/geonetwork-ui/pull/477
