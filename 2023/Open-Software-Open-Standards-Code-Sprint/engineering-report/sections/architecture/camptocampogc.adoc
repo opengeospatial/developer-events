@@ -1,0 +1,4 @@
+[[camptocampogc]]
+==== Camptocamp ogc-client
+
+Camptocamp's https://github.com/camptocamp/ogc-client[ogc-client] product is a Typescript library that implements several OGC Standards. The library supports the Web Map Service (WMS), Web Feature Service (WFS), and OGC API - Features standards. The library also supports the OGC API - Records candidate standard.

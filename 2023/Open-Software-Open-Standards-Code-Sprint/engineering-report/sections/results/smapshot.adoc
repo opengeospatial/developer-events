@@ -1,0 +1,16 @@
+[[smapshot_results]]
+==== Smapshot
+
+A screenshot of the application, shown during the code sprint, is presented in <<img_smapshot>>. As illustrated Smapshot enables users to geolocalise historical images in 3D.
+
+[[img_smapshot]]
+.A screenshot of Smapshot
+image::../images/smapshot.png[align="center",width=800]
+
+During the code sprint, the OGC GeoPose Draft Standard was tested as a way to return position and orientation data of the 3D geolocalized images from smapshot from an OGC API - Features implementation.
+Support for GeoPose-encoded data has been added to the Open Source https://github.com/MediaComem/ogc-api-features[ NodeJs server of OGC API features]: https://github.com/MediaComem/ogc-api-features/commit/2665e7c997482d3f68e24540ce6f8e85410675e3[CodeSprint PR].
+A quick data visualisation has been implemented in Cesium to display the geopose of the camera retrieved from the API with smapshot data and the geopose of the photograph. A screenshot of the application is shown in <<img_smapshot_geopose>>.
+
+[[img_smapshot_geopose]]
+.Position and orientation from a geopose represented in Smapshot
+image::../images/smapshot_geopose.png[align="center",width=800]

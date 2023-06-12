@@ -1,0 +1,4 @@
+[[apachearrow]]
+==== Apache Arrow
+
+https://arrow.apache.org/[Apache Arrow] is a software framework for developing applications that can process columnar data in data analytics solutions. The software framework offers a column-oriented memory format that can represent flat and hierarchical data for analytic operations on modern CPU and GPU hardware. Apache Arrow supports the Apache Parquet Format, which is the format on which the OGC GeoParquet candidate standard is being built to extend.

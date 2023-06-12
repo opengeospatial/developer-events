@@ -1,0 +1,5 @@
+[[apachesedona]]
+==== Apache Sedona
+
+https://sedona.apache.org/[Apache Sedona] is a high-performance cluster computing system designed specifically for processing large-scale spatial data. The system leverages
+a number of open-source libraries to execute spatial operations such as Coordinate Reference System (CRS) transformation and file reading.

@@ -1,0 +1,4 @@
+==== OGC SensorThings API
+
+The https://ogcapi.ogc.org/sensorthings/[OGC SensorThings API] provides an open and harmonized way to interconnect devices, data, and applications over the web and on the Internet of Things (IoT). At a high level the OGC SensorThings API provides two main parts, namely Part I - Sensing, and Part II - Tasking. The Sensing part provides a standard way to manage and retrieve observations and metadata from a variety of IoT sensor systems. The Tasking part provides a standard way for tasking IoT devices, such as sensors or actuators. The SensorThings API follows REST principles and uses JSON for encoding messages, as well as MQTT for publish/subscribe operations.
+

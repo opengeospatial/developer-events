@@ -1,0 +1,3 @@
+==== OGC API - Tiles
+
+The sprint participants worked on fixing GDAL's support of https://docs.ogc.org/is/20-057/20-057.html[OGC API - Tiles - Part 1: Core]. https://gdal.org/[GDAL] is an open source translator library for raster and vector geospatial data formats. The library presents a single raster abstract data model and single vector abstract data model that enables the calling application to transform between a variety of data formats.

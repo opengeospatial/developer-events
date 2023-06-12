@@ -1,0 +1,71 @@
+[[results]]
+== Results
+
+The code sprint included multiple software libraries, OWS implementations, OGC API implementations and a variety of client applications. In addition to supporting OWS and OGC API standards, various ASF and OSGeo software products involved in the code sprint also supported a variety of OGC encoding standards. This section presents the key results from the code sprint.
+
+=== Approved and Candidate OGC Standards
+
+include::results/ogcapifeatures.adoc[]
+
+include::results/ogcapitiles.adoc[]
+
+include::results/ogcstylessymbology.adoc[]
+
+include::results/geoxacml.adoc[]
+
+//include::results/geopose.adoc[]
+
+include::results/ogcapirecords.adoc[]
+
+include::results/geoapi.adoc[]
+
+=== Other Specifications
+
+include::results/asyncapi.adoc[]
+
+=== ASF Apache Projects
+
+
+include::results/apachebaremaps.adoc[]
+
+include::results/apachesedona.adoc[]
+
+include::results/apachesis.adoc[]
+
+=== OSGeo Projects
+
+include::results/geonetwork.adoc[]
+
+include::results/geoserver.adoc[]
+
+include::results/openlayers.adoc[]
+
+include::results/owslib.adoc[]
+
+include::results/pycsw.adoc[]
+
+include::results/pygeoapi.adoc[]
+
+include::results/qgis.adoc[]
+
+=== Community Open Source Projects
+
+include::results/zooproject.adoc[]
+
+include::results/teamengine.adoc[]
+
+include::results/homeassistantsensorthings.adoc[]
+
+include::results/maplibre.adoc[]
+
+include::results/mdme.adoc[]
+
+include::results/olcesium.adoc[]
+
+include::results/pygeometa.adoc[]
+
+include::results/smapshot.adoc[]
+
+include::results/go-ogc.adoc[]
+
+include::results/gpq.adoc[]

@@ -1,0 +1,15 @@
+[[discussion]]
+== Discussion
+
+include::discussion/gigs.adoc[]
+
+include::discussion/homeassistant.adoc[]
+
+include::discussion/geoxacml.adoc[]
+
+include::discussion/pygeoapi.adoc[]
+
+include::discussion/openlayers.adoc[]
+
+include::discussion/go-ogc.adoc[]
+

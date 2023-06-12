@@ -1,0 +1,4 @@
+[[stacapi]]
+==== STAC API
+
+The SpatioTemporal Asset Catalog (STAC) is a specification that offers a language for describing geospatial information, so it can be worked with, indexed, and discovered. The STAC API offers an interface that implements OGC API — Features. Although STAC has been developed outside of the OGC, in the long term it is envisaged that the https://github.com/radiantearth/stac-api-spec/[STAC API] specification will be developed into an OGC Community Standard that implements OGC API building blocks that are relevant for the STAC use cases.

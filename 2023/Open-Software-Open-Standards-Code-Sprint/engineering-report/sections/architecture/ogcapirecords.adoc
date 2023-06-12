@@ -1,0 +1,3 @@
+==== OGC API - Records
+
+https://ogcapi.ogc.org/records[OGC API - Records] provides discovery and access to metadata records about resources such as features, coverages, tiles / maps, models, assets, services or widgets. The draft specification enables the discovery of geospatial resources by standardizing the way collections of descriptive information about the resources (metadata) are exposed. The draft specification also enables the discovery and sharing of related resources that may be referenced from geospatial resources or their metadata by standardizing the way all kinds of records are exposed and managed. The draft OGC API – Records specification is part of the https://ogcapi.ogc.org[OGC API] family of standards.

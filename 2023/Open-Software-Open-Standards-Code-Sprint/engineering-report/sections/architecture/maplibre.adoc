@@ -1,0 +1,4 @@
+[[maplibre]]
+==== Maplibre
+
+https://maplibre.org/maplibre-gl-js-docs/api/[MapLibre GL JS] is an open-source library for publishing maps on websites or webview-based applications. The library uses GPU-accelerated rendering to offer client-side display of maps. The library supports client-side rendering of data, which makes it possible for an end-user to customise how a map is displayed.

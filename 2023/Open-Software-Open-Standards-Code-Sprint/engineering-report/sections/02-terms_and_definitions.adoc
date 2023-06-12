@@ -1,0 +1,41 @@
+
+== Terms and definitions
+
+=== API
+
+An Application Programming Interface (API) is a standard set of documented and supported functions and procedures that expose the capabilities or data of an operating system, application, or service to other applications (adapted from ISO/IEC TR 13066-2:2016).
+
+=== coordinate reference system
+
+A coordinate system that is related to the real world by a datum term name (source: ISO 19111)
+
+=== OpenAPI Document
+
+A document (or set of documents) that defines or describes an API. An OpenAPI definition uses and conforms to the OpenAPI Specification (https://www.openapis.org)
+
+=== Web API
+
+API using an architectural style that is founded on the technologies of the Web [source: OGC API - Features - Part 1: Core]
+
+
+=== Abbreviated terms
+
+API:: Application Programming Interface
+ASF:: Apache Software Foundation
+CITE:: Compliance Interoperability & Testing Evaluation
+CRS:: Coordinate Reference System
+CSW:: Catalogue Services for the Web
+EDR:: Environmental Data Retrieval
+GIS:: Geographic Information System
+MOU:: Memorandum of Understanding
+OGC:: Open Geospatial Consortium
+OSGeo:: Open Source Geospatial Foundation
+OWS:: OGC Web Services
+REST:: Representational State Transfer
+SDI:: Spatial Data Infrastructure
+TEAM:: Test, Evaluation, And Measurement Engine
+WCS:: Web Coverage Service
+WFS:: Web Feature Service
+WMS:: Web Map Service
+WMTS:: Web Map Tile Service
+WPS:: Web Processing Service

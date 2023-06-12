@@ -1,0 +1,73 @@
+[[openlayers_discussion]]
+=== Styling in OpenLayers
+
+OpenLayers has long had support for letting users create a style. Users can change the stroke or color of a symbol. The benefit is that it is flexible. The downside is that it needs to run on the CPU in the context of the user's client-side environment. The solution is styles that can be passed to a different context, to a worker for example. An example of the previous approach is shown below.
+
+[%unnumbered%]
+[source,js]
+----
+function style(feature) {
+    if (feature.get('type')) ≡ 'highway') {
+        return new Style({ 
+            stroke: new Stroke({ 
+                color: userColor,
+                width: 10,
+            }),
+        });
+    }
+
+    return new Style({ 
+        stroke: new Stroke({ 
+            color: userColor,
+            width: 2,
+        }),
+    });
+
+}
+
+----
+
+An example of a new approach that was prototyped during the code sprint is shown below. The style is represented as a Flat style with expressions that can be supported by a WebGL canvas. One limitation is that while it is possible to create complex styles with this syntax, it can result in a lot of redundancy as multiple symbolizer properties are applied to a single "class" of features.
+
+[%unnumbered%]
+[source,js]
+----
+{ 
+    'fill-color': 'orange',
+    'stroke-width': ['match',['get','type'],'highway', 10, 2],
+    'stroke-color': ['var','userColor']        
+}
+
+----
+
+This new approach is already supported by OpenLayers for raster rendering, as demonstrated by <<img_openlayers_a>> which shows a screenshot of an OpenLayers application that has modified the display of one of the bands of a raster image on the client-side. 
+
+[[img_openlayers_a]]
+.A screenshot of an OpenLayers application that supports client-side modification of styles
+image::../images/openlayers_a.png[align="center",width=800]
+
+Currently OpenLayers does not support expressions in the use of this new approach for representing styles. During the code sprint, OpenLayers contributors discussed support for expressions. An example of how the approach could be applied to vector styling is shown below.
+
+[%unnumbered%]
+[source,js]
+----
+[
+ {   
+    filter: ['=', ['get', 'type'],'highway'], 
+    style: { 
+        'stroke-width': 10, 
+        'stroke-color': 'orange',
+    },  
+ }, 
+ { 
+    filter: ['=', ['get', 'type'], 'dirt road'],
+    style: { 
+        'stroke-width': 2, 
+        'stroke-color': 'brown', 
+    },
+ }, 
+]
+----
+
+
+

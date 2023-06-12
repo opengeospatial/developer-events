@@ -1,0 +1,5 @@
+[[smapshot]]
+==== Smapshot
+
+https://smapshot.heig-vd.ch/[Smapshot] is a crowdsourcing platform that enables volunteers to position historical images in 3D visualizations of geographic space, a process called 'geolocalization'. More than a thousand volunteers have geolocalized up to 250,000 images.
+An OpenAPI-enabled service is available to integrate the data: https://smapshot.heig-vd.ch/development_documentation and the https://github.com/MediaComem/smapshot-api[API] and https://github.com/MediaComem/smapshot-georeferencer[georeferencer] are open source. 

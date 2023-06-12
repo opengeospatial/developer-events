@@ -1,0 +1,4 @@
+[[mdme_results]]
+==== MDME
+
+The MDME project uses https://koumoul-dev.github.io/vuetify-jsonschema-form[vjsf] internally to render a web based metadata edit form derived from json schema. A visual edit form for MCF has proven to be useful in yaml oriented metadata workflows for some user groups. Some json schema concepts such as `any-of` are not supported by vjsf. During the code sprint, MDME was updated to prevent the use of `any-of` and selector patterns having '*'. Also during the code sprint, import of metadata from ISO 19139 records (as discussed in this https://github.com/OSGeo/mdme/issues/20[GitHub Issue]) and export to ISO 19139 records was introduced, as well as export to STAC, and OGC API - Records collections (based on a transformation service provided by pygeoapi/pygeometa). 

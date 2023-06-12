@@ -1,0 +1,6 @@
+[[openlayers]]
+==== OSGeo OpenLayers
+
+https://openlayers.org/[OpenLayers] is a library for developing browser-based mapping applications.  It works with vector and raster data from a variety of sources and is able to reproject data for rendering.  The library has broad support for OGC protocols and formats, including Web Map Service (WMS), Web Map Tile Service (WMTS), Web Feature Service (WFS), Well Known Text (WKT), Well Known Binary (WKB), Geography Markup Language (GML), GeoTIFF/COG, and KML.  In addition, OpenLayers has support for community specifications such as GeoJSON, XYZ tiles, TileJSON, and more.  OpenLayers is written in JavaScript and is available under the BSD 2-Clause license.
+
+The ``ol/source/OGCMapTile`` module provides a source for map tiles from an OGC API – Tiles implementation.  The ``ol/source/OGCVectorTile`` module provides a source for tiled vector feature data from an OGC API - Tiles implementation.

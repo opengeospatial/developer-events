@@ -1,0 +1,9 @@
+[[geoapi]]
+==== OGC GeoAPI
+
+https://www.geoapi.org/[OGC GeoAPI 3.0.2] is an OGC Standard provides a set of programming interfaces for geospatial applications.
+The GeoAPI interfaces closely follow the abstract models published by OGC and ISO specifications.
+The current release covers interfaces for metadata handling and for geodetic referencing (map projections).
+The GeoAPI interfaces provide a layer which separates client code, which call the API, from library code, which implements the API.
+This follows a similar pattern to the well known JDBC or ODBC API which provides a standardized interface to databases.
+Clients can use the API without concern for the particular implementation which they will use.

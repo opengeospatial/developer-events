@@ -1,0 +1,6 @@
+[[pycsw]]
+==== OSGeo pycsw
+
+https://pycsw.org[pycsw] is an implementation of OGC API - Records and the OGC's Catalogue Service for the Web (CSW) written in Python. Started in 2010 (more formally announced in 2011), pycsw allows for the publishing and discovery of geospatial metadata via numerous APIs (CSW 2/CSW 3, OpenSearch, OAI-PMH, SRU), providing a standards-based metadata and catalogue component of spatial data infrastructures. pycsw is Open Source, released under an MIT license, and runs on all major platforms (Windows, Linux, Mac OS X). pycsw is an official OSGeo Project as well as an OGC Reference Implementation.
+
+pycsw supports numerous metadata content and API standards, including OGC API - Records - Part 1.0: Core and its associated specifications. The https://docs.pycsw.org/en/latest/introduction.html#standards-support[official documentation] provides an overview of all supported standards.
