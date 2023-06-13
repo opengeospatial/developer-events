@@ -10,14 +10,14 @@ The participants from interactive instruments GmbH updated the ldproxy implement
 * removed `tileMatrixSetDefinition` member from the tile set metadata;
 * added `tiling-scheme` links to the tile set metadata;
 * added the `Link-Template` header for the tile URI template;
-* added `operationId` to all OpenAPI operations (in addition to setting the `operationId` for all Tiles operations, `operationIds` have been added to all other API operations, too);
+* added `operationId` to all OpenAPI operations (in addition to setting the `operationId` for all Tiles operations, `operationIds` have been added to all other API operations, too); and
 * the member `tileMatrixSetURI` in a tile matrix set was changed to `uri`.
 
 Work was also started during the Code Sprint to support the optional `OATiles-hint` header, but this requires more complex changes in various layers of the software and was not finalized during the Code Sprint.
 
 In addition, several improvements to the Tiles building blocks were implemented and tested before and during the Code Sprint:
 
-* For tiles from an MBTiles provider, additional information from the MBTiles container is used for the tile set metadata, including the vector layer and bounding box information;
+* For tiles from an MBTiles provider, additional information from the MBTiles container is used for the tile set metadata, including the vector layer and bounding box information; and
 * harmonize the behavior of the map with tiles in the HTML representation of a tile set, independent of how the representation is configured (using a Mapbox Style, using feature data with a wireframe style, or using tiles from an MBTiles container).
 
 All changes are included in ldproxy v3.3.0, which was released on December 16, 2022.

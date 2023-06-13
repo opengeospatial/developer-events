@@ -1,7 +1,6 @@
 [[owslib]]
 ==== OSGeo OWSLib
 
-https://geopython.github.io/OWSLib/introduction.html[OWSLib] is a Python client for OGC Web Services (OWS) and their related content models. The project
-is an OSGeo Community project and is released under a BSD 3-Clause License.
+https://geopython.github.io/OWSLib/introduction.html[OWSLib] is a Python client for OGC Web Services (OWS) and their related content models. The project is an OSGeo Community project and is released under a BSD 3-Clause License.
 
 OWSLib supports numerous OGC Standards, including increasing support for the OGC API suite of Standards. The https://geopython.github.io/OWSLib/features.html#standards-support[official documentation] provides an overview of all supported standards.

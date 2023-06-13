@@ -7,16 +7,16 @@ The code sprint successfully facilitated the development and testing of prototyp
 
 The sprint participants made the following recommendations for future innovation work items:
 
-* Prototyping and demonstration of support for the querying of coverages in HTML Previews of coverage tiles
-* A testbed activity to implement the prototype Symbology Core v2.0 would help to evaluate support for the various use cases identified in this sprint
-* A testbed activity to evaluate options for access control across OGC API Standards (covering at least the Features, Records, Tiles, and Styles APIs)
-* A testbed activity analyzing the potential for consistent modification and harmonization of different stylesheets (e.g. SLD, Mapbox styles, ArcGIS, MapInfo)
+* Prototyping and demonstration of support for the querying of coverages in HTML Previews of coverage tiles;
+* A testbed activity to implement the prototype Symbology Core v2.0 would help to evaluate support for the various use cases identified in this sprint;
+* A testbed activity to evaluate options for access control across OGC API Standards (covering at least the Features, Records, Tiles, and Styles APIs); and
+* A testbed activity analyzing the potential for consistent modification and harmonization of different stylesheets (e.g., SLD, Mapbox styles, ArcGIS, MapInfo).
 
 The sprint participants also made the following recommendations for things that the SWGs should consider:
 
-* A code sprint focused on general security/access control issues, across OGC API and broader OGC Standards
-* Design an approach for supporting 'Cancel' requests, so that long-running jobs can be terminated as users zoom or pan across a map
-* A user guide for OGC API - Tiles would help to accelerate uptake (e.g. describing how to build static tile servers in the Cloud)
-* A future version of the OGC API - Tiles Standard could relax or remove the requirement that the tileset list URL ends with `/tiles`
+* A code sprint focused on general security/access control issues, across OGC API and broader OGC Standards;
+* Design an approach for supporting 'Cancel' requests, so that long-running jobs can be terminated as users zoom or pan across a map;
+* A user guide for OGC API - Tiles would help to accelerate uptake (e.g., describing how to build static tile servers in the Cloud); and
+* A future version of the OGC API - Tiles Standard could relax or remove the requirement that the tileset list URL ends with `/tiles`.
 
 It is envisaged that the SWGs will consider the above-listed recommendations for future work items.

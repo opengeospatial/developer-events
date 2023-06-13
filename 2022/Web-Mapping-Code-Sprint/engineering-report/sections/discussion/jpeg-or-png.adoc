@@ -6,7 +6,7 @@ This is not an issue for the "OGC API - Maps" candidate Standard and the "OGC AP
 
 However, there is a concern that many implementers of OGC API - Maps and OGC API - Tiles might not recognize the importance of this logic, and would likely write code which just chooses the first supported format in the list. There is therefore a need for awareness of this mechanism because such a mechanism is important enough to be explicitly provided as a recommendation in both https://docs.ogc.org/DRAFTS/20-058.html[OGC API - Maps - Part 1: Core] and https://docs.ogc.org/is/20-057/20-057.html[OGC API - Tiles - Part 1: Core].
 
-A Recommendation could be added to an OGC API - Maps User Guide or some other developer resource. The sprint participants suggested that the SWG considers the following text for addition to a User Guide:
+A Recommendation could be added to an OGC API - Maps User Guide or some other developer resource. The sprint participants suggested that the SWG considers the following text for addition to a User Guide.
 
 * If both "image/png" and "image/jpeg" are supported at an endpoint and are present in the HTTP "Accept" request header with the same q value, and no other supported output format is present with a higher q value, the server should return the requested image in whichever of these two formats is considered optimal (typically PNG if there's transparency and JPEG otherwise).
 

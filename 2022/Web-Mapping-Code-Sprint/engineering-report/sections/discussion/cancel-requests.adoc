@@ -4,6 +4,6 @@ When requesting tiles, and panning around, clients often leave behind requests f
 
 The sprint participants suggested the following as recommendations:
 
-* Clients should be able to send a cancel or abort request so that a server aborts a long-running operation.
-* Clients for OGC API - Maps should make a best effort to avoid making several requests in shorts periods of time (e.g. 1 second)
-* Servers for OGC API - Maps can reply with HTTP code `429 Too Many Requests` if a client is straining the server resources
+* Clients should be able to send a cancel or abort request so that a server aborts a long-running operation;
+* Clients for OGC API - Maps should make a best effort to avoid making several requests in shorts periods of time (e.g., 1 second); and
+* Servers for OGC API - Maps can reply with HTTP code `429 Too Many Requests` if a client is straining the server resources.

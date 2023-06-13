@@ -17,8 +17,8 @@ This use case is discussed in https://github.com/opengeospatial/styles-and-symbo
 
 *Describe any capability not already addressed by existing conformance classes*
 
-*  Categorized: coloring map according to a unique value e.g. coloring map according to region name (unique value)
-* Graduated: coloring map according to a range of values e.g. coloring map according to the population of a zone in a particular range (0-5000, 5000-10000)
+* Categorized: coloring map according to a unique value e.g., coloring map according to region name (unique value)
+* Graduated: coloring map according to a range of values e.g., coloring map according to the population of a zone in a particular range (0-5000, 5000-10000)
 
 Example image illustrating the portrayal use case:
 
@@ -333,7 +333,7 @@ This use case is discussed in https://github.com/opengeospatial/styles-and-symbo
 
 Example stylesheet:
 
-Below is a CSS encoding to describe a dot map. A dot map is used to create a visual impression of density by placing a dot or some other symbol in the approximate location of one or more instances of the variable being mapped. The mapped variable is the area of the LCZ geometry. The dot map can be colored according the LCZ types. e.g. : LCZ equals to 1, 2 , 3 filled in red to represent a high climatic hazards.
+Below is a CSS encoding to describe a dot map. A dot map is used to create a visual impression of density by placing a dot or some other symbol in the approximate location of one or more instances of the variable being mapped. The mapped variable is the area of the LCZ geometry. The dot map can be colored according the LCZ types. e.g., : LCZ equals to 1, 2 , 3 filled in red to represent a high climatic hazards.
 
 *Describe any capability not already addressed by existing conformance classes*
 

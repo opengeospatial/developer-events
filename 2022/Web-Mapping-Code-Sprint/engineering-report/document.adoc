@@ -10,16 +10,16 @@
 :comment: ### Date on which the standard was updated; mandatory
 :received-date: 2023-01-03
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
-:issued-date: 2028-07-10
+:issued-date: 2023-03-22
 :comment: ### Date on which the standard was published; mandatory
-:published-date: 2028-06-12
+:published-date: 2YYYY-MM-DD
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
 :external-id: http://www.opengis.net/doc/PER/web-mapping-codesprint2022
 :comment: ### Author one
 :fullname: Gobe Hobona
 :comment: ### Author two
 :fullname_2: Joana Simoes
-:comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
+:comment: ### Role of the authors; optional. Supply only if corresponding author is an editor
 :role_2: editor
 :comment: ### Comma delimited keywords; mandatory
 :keywords: hackathon, application-to-the-cloud, testbed, docker, web service

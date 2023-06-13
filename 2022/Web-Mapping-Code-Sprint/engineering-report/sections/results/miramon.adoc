@@ -1,7 +1,7 @@
 [[results_miramon]]
 === MiraMon Map Browser
 
-Sprint participants from CREAF worked mainly on improving the implementation of a web map client, called the MiraMon Map Browser, to improve support for OGC API - Tiles, OGC API -Maps (e.g. extending the MiraMon Map Browser to support the addition of layers from implementations of OGC API - Maps) and also to experiment with how to apply tessellation in an implementation of the OGC SensorThings API (STA). The analysis covered tiles generated on the server-side, as well as client-side tiled requests to implementations of the STA.
+Sprint participants from CREAF worked mainly on improving the implementation of a web map client, called the MiraMon Map Browser, to improve support for OGC API - Tiles, OGC API -Maps (e.g., extending the MiraMon Map Browser to support the addition of layers from implementations of OGC API - Maps) and also to experiment with how to apply tessellation in an implementation of the OGC SensorThings API (STA). The analysis covered tiles generated on the server-side, as well as client-side tiled requests to implementations of the STA.
 
 ==== OGC API – Maps and support for Map Tiles
 
@@ -11,7 +11,7 @@ To begin with, the source code was overhauled to update the implementation to th
 .Screenshot of the MiraMon Map Browser with a combination of several collections (or layers) in the same client using different OGC protocols and APIs, like WMS, WMTS, OGC API - Maps, OGC API - Tiles, and SensorThings API
 image::../images/miramon_maps_1.png[align="center"]
 
-After that, the work focused on having a full implementation of the OGC API - Maps candidate Standard in the MiraMon Map Browser to enable end-users to add collections from external servers. The map client is able to establish a connection with a server from the information provided by the landing page. The map client  inspects the information and then follows the links, making the necessary requests to obtain a list of available map collections and their main characteristics.
+After that, the work focused on having a full implementation of the OGC API - Maps candidate Standard in the MiraMon Map Browser to enable end-users to add collections from external servers. The map client is able to establish a connection with a server from the information provided by the landing page. The map client inspects the information and then follows the links, making the necessary requests to obtain a list of available map collections and their main characteristics.
 
 As shown in <<img_miramon_maps_2>>, the interface allows users to indicate the landing page of the service that should be explored. Once explored, it displays a list of available map collections and allows users to select the collection or collections to add as layers in the legend and the map display. The selected layers are added to the map display as demonstrated in <<img_miramon_maps_4>>.
 
@@ -24,7 +24,7 @@ image::../images/miramon_maps_2.png[align="center"]
 .Screenshot of the EuroGeographics map served by the Cubewerx API.
 image::../images/miramon_maps_4.png[align="center"]
 
-Finally, the focus of the work shifted to connecting to map collections retrieved from OGC API - Tiles implementations so that an end-user could add tiled maps to the client. The work consisted of obtaining the tiled description and the list of tiled maps available in a service from the landing page. The work was more extensive than the team had anticipated and in the process of an in-depth review of the Standard some difficulties were encountered to properly understand some aspects. A suggestion for incorporating more coding examples in some of the requirements classes was made.
+Finally, the focus of the work shifted to connecting to map collections retrieved from OGC API - Tiles implementations so that an end-user could add tiled maps to the client. The work consisted of obtaining the tiled description and the list of tiled maps available in a service from the landing page. The work was more extensive than the team had anticipated and in the process of an in-depth review of the Standard, some difficulties were encountered to properly understand some aspects. A suggestion for incorporating more coding examples in some of the requirements classes was made.
 
 ==== OGC Sensor Things API implementation
 
@@ -50,7 +50,7 @@ A client-based tessellation solution was implemented that addressed the situatio
 
 By defining a tile matrix set with several zoom levels on the client-side, parallel tiled requests based on this division can be sent to the server by specifying the bounding box of each tile without changing anything in the Standard or the server implementations. In addition, only the tiles with a number of objects below a threshold would be completely requested.
 
-MiraMon was configured to issue a request for each STA tile twice, the first request is for getting the count (i.e. number of features of interest in a tile), and then the second request is for getting the actual features of interest. The number of features of interest is requested from the STA server in a prefetch request. If the count of the features in the “tile” requested is greater than the threshold, then the number of features of interest is represented in the center of the tile with the presentation of the number of objects in each tile. Otherwise, the full description of the features of interest in the tile is requested and each feature of interested is represented in the screen. This approach  is proposed by the https://github.com/DataCoveEU/STAM[STAM library] and it has been implemented from scratch in the MiraMon Map Browser using the same principles.
+MiraMon was configured to issue a request for each STA tile twice, the first request is for getting the count (i.e., number of features of interest in a tile), and then the second request is for getting the actual features of interest. The number of features of interest is requested from the STA server in a prefetch request. If the count of the features in the “tile” requested is greater than the threshold, then the number of features of interest is represented in the center of the tile with the presentation of the number of objects in each tile. Otherwise, the full description of the features of interest in the tile is requested and each feature of interested is represented in the screen. This approach  is proposed by the https://github.com/DataCoveEU/STAM[STAM library] and it has been implemented from scratch in the MiraMon Map Browser using the same principles.
 
 [[img_miramon_sta_2]]
 .Screenshot of the MiraMon Map Browser requesting some tiles with the count of features of interest represented as big circles and others with the features of interest represented as small red dots. In addition, the information related to a particular observation is shown, including a picture.

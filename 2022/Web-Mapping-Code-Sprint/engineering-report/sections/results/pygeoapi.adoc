@@ -6,8 +6,8 @@ The pygeoapi project implemented support for the OGC API - Maps - Part 1: Core c
 
 pygeoapi's plugin architecture facilitated the implementation of two plugin backends for maps:
 
-- MapScript: using the https://mapserver.org[MapServer] web mapping engine as the map renderer, using data and styling definitions (Styled Layer Descriptor [SLD], MapServer CLASS configuration files).
-- WMSFacade: a bridge/mediator to expose existing OGC WMS 1.3 services via OGC API - Maps
+* MapScript: using the https://mapserver.org[MapServer] web mapping engine as the map renderer, using data and styling definitions (Styled Layer Descriptor [SLD], MapServer CLASS configuration files); and
+* WMSFacade: a bridge/mediator to expose existing OGC WMS 1.3 services via OGC API - Maps
 
 The https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-maps.html[official pygeoapi documentation] provides more information on how to enable the new functionality. A screenshot of the associated OpenAPI/Swagger interface from the implementation is shown in the figure below.
 
@@ -60,11 +60,11 @@ This is aligned with pygeoapi's implementation of OGC API - Features, where requ
 
 A pygeoapi mentor session was provided in support of delivering vector tiles using pygeoapi.  The session focused on:
 
-- installation
-- overview of various endpoints and creating a standard source
-- creating vector tiles
-- serving vector tiles
-- reading vector tiles from different clients
+* installation
+* overview of various endpoints and creating a standard source
+* creating vector tiles
+* serving vector tiles
+* reading vector tiles from different clients
 
 ==== Developer outreach
 

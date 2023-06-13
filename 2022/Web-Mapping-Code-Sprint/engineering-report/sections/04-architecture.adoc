@@ -1,7 +1,7 @@
 [[architecture]]
 == High-Level Architecture
 
-As illustrated in <<img_architecture>>, the sprint architecture was designed with the view of enabling client applications to connect to different servers that implement open geospatial standards that relate to web mapping, styles and symbology. Implementations of OGC API - Maps, OGC API - Tiles, and OGC API - Styles were deployed in participants' own infrastructure in order to build a solution with the architecture shown below in <<img_architecture>>.
+As illustrated in <<img_architecture>>, the sprint architecture was designed with the view of enabling client applications to connect to different servers that implement open geospatial standards that relate to web mapping, styles, and symbology. Implementations of OGC API - Maps, OGC API - Tiles and OGC API - Styles were deployed in participants' own infrastructure in order to build a solution with the architecture shown below in <<img_architecture>>.
 
 [[img_architecture]]
 .High Level Overview of the Sprint Architecture

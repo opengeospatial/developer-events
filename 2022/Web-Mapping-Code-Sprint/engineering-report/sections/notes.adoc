@@ -15,8 +15,8 @@ TS: Working on documentation and utilities that will allow the tile services to 
 
 TS: START WITH A small config file that configures the tMS, and then start running the service which reads the config file and then starts a small server that provides the OGC API metadata. The tiling scheme is also hosted here and can be put into an S3 bucket. This includes a bit more metadata than we want to show. We just need an OpenAPI conformance class but a subset of that would be sufficient.
 
-TS: If we are looking at a single tile set, you are just picking the tile URL template and then translating it into a tile URL that you want to use. What about the extents of the tile matrix set? These are all well known (i.e. the origin and cell size), everything else could be added.
+TS: If we are looking at a single tile set, you are just picking the tile URL template and then translating it into a tile URL that you want to use. What about the extents of the tile matrix set? These are all well known (i.e., the origin and cell size), everything else could be added.
 
-TC: Deployed the Hexagon Luciad RIA web client, and connected with some servers e.g. gnosis. Ran into some issues, especially with regard to CRS. The client supports OGC API - Maps and can load maps rendered as images. It works with different projections. It will, on-the-fly, reproject data. 
+TC: Deployed the Hexagon Luciad RIA web client, and connected with some servers e.g., gnosis. Ran into some issues, especially with regard to CRS. The client supports OGC API - Maps and can load maps rendered as images. It works with different projections. It will, on-the-fly, reproject data. 
 
 DS: Working on the OGC API - Tiles executable test suite.
