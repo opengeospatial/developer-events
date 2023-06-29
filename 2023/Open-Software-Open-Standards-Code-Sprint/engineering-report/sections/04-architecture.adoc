@@ -91,3 +91,5 @@ include::architecture/smapshot.adoc[]
 include::architecture/go-ogc.adoc[]
 
 include::architecture/gpq.adoc[]
+
+include::architecture/ldproxy.adoc[]

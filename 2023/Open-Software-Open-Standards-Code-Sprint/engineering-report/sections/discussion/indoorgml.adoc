@@ -1,0 +1,5 @@
+=== IndoorGML
+
+Participants from IIT Bombay reviewed the IndoorGML standard as preparation for future contribution towards development of e-learning materials. This OGC® IndoorGML Standard specifies an open data model and XML schema for indoor spatial information. IndoorGML is an application schema of the OGC Geography Markup Language (GML) Standard.
+
+The participants identified the following potential issue. When there are different sizes of walls in a room, how are cells assigned? For example, considering an office area where a hall is divided into different cubicles. The cubicles are created with the help of temporary partitions which are not of the height of the wall. Each cubicle is allocated for a designated task and needs a unique location point. Since it is not divided by walls, there is no unique distinction for that cubicle. In this case, how can the temporary walls creating the cubicles be marked and a specific location be created for the cubicle so that navigation to that cubicle is feasible? This issue requires clarification in future versions of IndoorGML.

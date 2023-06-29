@@ -1,35 +1,30 @@
-==== OGC API - Features and CQL2
+==== OGC API - Features
 
-The participants took part in discussions on OGC API - Features support of schemas. The discussions led to an issue with the CQL2-JSON encoding being identified and https://github.com/opengeospatial/ogcapi-features/issues/828[documented]. The issue is summarized below.
+Before the code sprint, a https://github.com/opengeospatial/ogcapi-features/issues/740#issuecomment-1501758135[new proposal for handling feature schemas] had been prepared for discussion in the OGC Features API Standards Working Group and at the code sprint.
 
-In the JSON encoding for CQL2, there is a need to consider whether to still use `function` instead of `op` (or `casei` / `accenti` in that particular case) for those standard functions defined by the various requirements classes of the standard. This would make the names consistent across the various functions. That is, the standard functions are likely to be routed to actual _functions_ in the implementation, just like the user-defined custom functions.
+In current drafts, a JSON Schema for the GeoJSON encoding of the features is returned by the API as the feature schema. That approach has several disadvantages:
 
-The sprint participants also noted that the `function` definition also seems overcomplicated. They suggested that instead of:
+* Not all APIs can support GeoJSON (e.g., for 3D buildings).
+* There was a need to have different schemas for different operations. For example, the server may return features with a (slightly) different schema than it expects when a new feature is created or updated.
+* Validation of content is one use case for a schema, but for other use cases an encoding-agnostic logical schema is more beneficial and easier to use. For the queryables and sortables resources such a schema is already used.
+* Another example is that of feature relationships that should be expressed as such in the schema, but that can be encoded in various ways in the data depending on the format or the use case.
 
-[%unnumbered%]
-[source,json]
-----
-{
-   "function": {
-      "name": "lowerCase",
-      "args": [ "Test" ]
-   }
-}
-----
+The proposal addresses these issues by: 
 
-an option would be to use:
+* providing an encoding-agnostic logical schema of the features in a collection (expressed in JSON Schema, using the same requirements and recommendations as in Part 3 for the Queryables resource);
+* adding an additional keyword to identify special roles that a property may have (e.g., identify the feature id, the primary geometry, etc);
+* using the JSON Schema keywords `readOnly` and `writeOnly` to identify properties that are only relevant for GET (read-only) or POST/PUT/PATCH (write-only) requests;
+* adding support for properties that are a reference to another feature in the same API or another API;
+* specifying a new query parameter `profile` to support requesting different representations of such feature references in the data.
 
-[%unnumbered%]
-[source,json]
-----
-{ "function": "lowerCase", "args": [ "Test" ] }
-----
+The proposal was discussed by sprint participants in a breakout session. The GitHub issue was updated with the https://github.com/opengeospatial/ogcapi-features/issues/740#issuecomment-1523806821[results of the discussion]. There was agreement to start work on a pull request for OGC API - Features, to test the approach in implementations and to present the approach to other OGC API working groups at the June 2023 OGC Member Meeting.
 
-as with the `op`? (or `"fn"` in the case of using a short 2 letters property like `op`).
+Participants from interactive instruments started to work on an implementation in ldproxy during the code sprint. The implementation was https://github.com/opengeospatial/ogcapi-features/issues/740#issuecomment-1577105899[completed in the weeks after the code sprint].
 
-Further detail of this issue is https://github.com/opengeospatial/ogcapi-features/issues/828[documented] on the OGC API - Features GitHub repository. Note that the SWG meeting of 2023-05-08 considered this issue and agreed on the following resolutions:
+The approach was presented and discussed in the OGC API track during the June 2023 OGC Member Meeting. The approach was supported by other OGC API working groups. As a result the Standards Working Group decided to use the approach as the starting point for a new part (Part 5: Schemas).
 
-* Change the JSON encoding of the custom functions to mimic the pattern for most standardized functions using an object with the op and args members.
-* Change `casei` and `accenti` to the same pattern with an `op` value.
-* Keep `casei` and `accenti`. If `lower` or `upper` are needed, they can be added as custom (or future standardized) functions.
-* Rename "Basic Spatial Operators", "Spatial Operators", "Temporal Operators" and "Array Operators" to use "Functions" instead of "Operators".
+Other OGC API - Features topics that were discussed with participants from open source projects:
+
+* Discussion with Smapshot developers about the relationship between GeoPose and features and how to provide GeoPose via building blocks from OGC API - Features.
+* Support for faceted search, i.e., return not only a page of selected features, but also statistical information about important values of selected properties and the number of features that have that value. This information can be used to interactively "drill down" to find features of interest. A proposal currently exists in https://github.com/opengeospatial/ogcapi-records/tree/master/proposals/aggregations[OGC API - Records].
+* For clients that interact with a Features API, it would be beneficial, if APIs would provide not only a textual GeoJSON encoding, but also a more efficient binary encoding. Currently no conformance class exists for such a feature encoding in OGC API - Features. This is a topic that should be discussed in the Standards Working Group.

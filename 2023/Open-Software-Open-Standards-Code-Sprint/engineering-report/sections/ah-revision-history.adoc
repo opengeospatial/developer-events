@@ -8,6 +8,7 @@
 [width="90%",options="header"]
 |===
 |Date |Release |Author | Primary clauses modified |Description
-|2022-03-11 |0.1 |G. Hobona |all |initial version
-|2022-04-29 |0.2 |G. Hobona |all |Updated with feedback from participants
+|2023-03-11 |0.1 |G. Hobona |all |initial version
+|2023-04-29 |0.2 |G. Hobona |all |Updated with feedback from participants
+|2023-06-29 |0.3 |G. Hobona |all |Editorial changes
 |===
