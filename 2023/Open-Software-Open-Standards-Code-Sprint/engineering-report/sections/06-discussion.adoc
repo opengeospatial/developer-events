@@ -5,6 +5,8 @@ include::discussion/gigs.adoc[]
 
 include::discussion/homeassistant.adoc[]
 
+include::discussion/indoorgml.adoc[]
+
 include::discussion/geoxacml.adoc[]
 
 include::discussion/pygeoapi.adoc[]

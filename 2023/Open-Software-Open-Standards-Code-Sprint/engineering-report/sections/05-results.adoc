@@ -5,19 +5,26 @@ The code sprint included multiple software libraries, OWS implementations, OGC A
 
 === Approved and Candidate OGC Standards
 
-include::results/ogcapifeatures.adoc[]
+include::results/cql2.adoc[]
 
 include::results/ogcapitiles.adoc[]
 
 include::results/ogcstylessymbology.adoc[]
 
+include::results/jsonfg.adoc[]
+
 include::results/geoxacml.adoc[]
 
 //include::results/geopose.adoc[]
 
+include::results/geoapi.adoc[]
+
 include::results/ogcapirecords.adoc[]
 
-include::results/geoapi.adoc[]
+include::results/ogcapifeatures.adoc[]
+
+include::results/ogcapiedr.adoc[]
+
 
 === Other Specifications
 
