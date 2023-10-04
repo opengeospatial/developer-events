@@ -25,7 +25,7 @@ A preview of the image is shown below.
 
 image::figures/preview_m_4007201_ne_18_060_20211105.png[]
 
-Note that the GMLJP2 georeference is emdedded inside the file. 
+Note that the GMLJP2 georeference is emdedded inside the file and can be seen using a Hex Editor (see screenshot below), or exported to a separate file using GDAL.
 
 image::figures/hexgmljp2.png[]
 
