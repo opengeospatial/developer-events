@@ -67,7 +67,7 @@ source ./.venv/bin/activate
 pip install --upgrade pillow-heif
 ```
 
-Then run the following script.
+Then run the following python3 script.
 
 ```python
 
