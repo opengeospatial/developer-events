@@ -10,7 +10,7 @@ after the abstract
 [.preface]
 == Abstract
 
-The subject of this Engineering Report (ER) is a code sprint that was held from the 25th to the 27th of April 2023 to advance support of open geospatial standards within the developer community, whilst also advancing the standards themselves. The code sprint was organized by the Open Geospatial Consortium (OGC), the Open Source Geospatial Foundation (OSGeo) and the Apache Software Foundation (ASF). The code sprint was sponsored by Ordnance Survey and hosted by Camptocamp.
+The subject of this Engineering Report (ER) is a code sprint that was held from the 25th to the 27th of April 2023 to advance support of open geospatial standards within the developer community, while also advancing the standards themselves. The code sprint was organized by the Open Geospatial Consortium (OGC), the Open Source Geospatial Foundation (OSGeo), and the Apache Software Foundation (ASF). The code sprint was sponsored by the Ordnance Survey and hosted by Camptocamp.
 
 
 [.preface]
@@ -20,26 +20,26 @@ The mutually beneficial relationship between open standards and open source soft
 
 From the 25th to the 27th of April 2023, the Open Geospatial Consortium (OGC), the Apache Software Foundation (ASF), and the Open Source Geospatial Foundation (OSGeo) held their third joint Open Standards and Open Source Software Code Sprint. The code sprint served to accelerate the support of open geospatial standards within the software developer community.
 
-The code sprint brought together developers of Open Standards, Open Source Software and Proprietary Software into the same physical space. Such face-to-face collaboration had been made possible by the support of Ordnance Survey, the event’s Gold-level Sponsor, and the support of Camptocamp, the event host, as well as co-sponsors of the catering namely HEIG-VD (School of Engineering and Management), EPFL, University of Lausanne, State of Neuchâtel, State of Vaud and Camptocamp.
+The code sprint brought together developers of Open Standards, Open Source Software, and Proprietary Software into the same physical space. Such face-to-face collaboration had been made possible by the support of the Ordnance Survey, the event’s Gold-level Sponsor, and the support of Camptocamp, the event host, as well as co-sponsors of the catering namely HEIG-VD (School of Engineering and Management), EPFL, University of Lausanne, State of Neuchâtel, State of Vaud, and Camptocamp.
 
 Previous code sprints jointly organized by OGC, ASF, and OSGeo had been completely virtual events due to the pandemic. Therefore, this third code sprint held special significance in that it was the first hybrid event (supporting both face-to-face and remote participation) that had been jointly organized by the three organizations. This Engineering Report (ER) summarizes the main achievements of the code sprint.
 
-The OGC is an international consortium of more than 500 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR — Findable, Accessible, Interoperable, and Reusable. The consortium consists of Standards Working Groups (SWGs) that have responsibility for designing a candidate standard prior to approval as an OGC Standard and for making revisions to an existing OGC Standard. 
+OGC is an international consortium of more than 500 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR — Findable, Accessible, Interoperable, and Reusable. The consortium consists of Standards Working Groups (SWGs) that have responsibilities for designing candidate standards prior to approval as OGC Standards and for making revisions to existing OGC Standards. 
 
 The Open Source Geospatial Foundation (OSGeo) is a not-for-profit organization whose mission is to foster global adoption of open geospatial technology by being an inclusive software foundation devoted to an open philosophy and participatory community driven development. The foundation consists of projects that develop open source software products. 
 
-The Apache Software Foundation (ASF) is an all-volunteer community comprising 815 individual Members and 8,500 Committers on six continents stewarding more than 227 million lines of code, and overseeing more than 350 Apache projects and their communities. 
+The Apache Software Foundation (ASF) is an all-volunteer community comprising 815 individual Members and 8,500 Committers on six continents stewarding more than 227 million lines of code and overseeing more than 350 Apache projects and their communities. 
 
-The code sprint provided an environment for development and testing of prototype implementations of open standards, including implementations of draft and approved OGC Standards. Further, the code sprint provided a collaborative environment for developers to fix open issues in products, develop new features, improve documentation, improve interoperability with other libraries/products, and develop prototype implementations of OGC Standards. Furthermore, the code sprint also enabled the participating developers to provide feedback to the editors of OGC Standards. The code sprint therefore met all of its objectives and achieved its goal of accelerating the support of open geospatial standards within the developer community.
+The code sprint provided an environment for development and testing of prototype implementations of open standards, including implementations of draft and approved OGC Standards. Further, the code sprint provided a collaborative environment for developers to fix open issues in products, develop new features, improve documentation, improve interoperability with other libraries/products, and develop prototype implementations of OGC Standards. In addition, the code sprint enabled the participating developers to provide feedback to the editors of OGC Standards. The code sprint therefore met all of its objectives and achieved its goal of accelerating the support of open geospatial standards within the developer community.
 
 The sprint participants made the following recommendations for future work:
 
-* Experimentation and prototyping of implementations of https://github.com/opengeospatial/styles-and-symbology[OGC Styles and Symbology].
-* Provide examples of the use of OGC Rainbow (formerly known as the OGC Definitions Server) to support the representation of units of measure, in sensor-related standards.
-* Experimentation and prototyping of implementations of https://www.ogc.org/standard/geoxacml/[OGC GeoXACML].
-* To advance the development of an Executable Test Suite for https://ogcapi.ogc.org/tiles/[OGC API - Tiles].
-* To advance the development of an Executable Test Suite for https://ogcapi.ogc.org/records/[OGC API - Records].
-* To advance the development of an Executable Test Suite for https://www.ogc.org/standard/geoxacml/[OGC GeoXACML].
+* experimentation and prototyping of implementations of https://github.com/opengeospatial/styles-and-symbology[OGC Styles and Symbology];
+* provide examples of the use of OGC Rainbow (formerly known as the OGC Definitions Server) to support the representation of units of measure in sensor-related standards;
+* experimentation and prototyping of implementations of https://www.ogc.org/standard/geoxacml/[OGC GeoXACML];
+* advance the development of an Executable Test Suite for https://ogcapi.ogc.org/tiles/[OGC API - Tiles];
+* advance the development of an Executable Test Suite for https://ogcapi.ogc.org/records/[OGC API - Records]; and
+* advance the development of an Executable Test Suite for https://www.ogc.org/standard/geoxacml/[OGC GeoXACML].
 
 
 

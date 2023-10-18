@@ -1,4 +1,4 @@
 [[gpq]]
 ==== GPQ
 
-https://github.com/planetlabs/gpq[GPQ] is a utility for working with https://geoparquet.org/[GeoParquet] files.  The command line interface can be used to validate a GeoParquet file, describe its metadata, and can convert data to and from GeoJSON.  The utility is also available as a WebAssembly binary for use in a browser.  GPQ is written in Go and is available under the Apache 2.0 license.
+https://github.com/planetlabs/gpq[GPQ] is a utility for working with https://geoparquet.org/[GeoParquet] files. The command line interface can be used to validate a GeoParquet file, describe its metadata, and can convert data to and from GeoJSON. The utility is also available as a WebAssembly binary for use in a browser. GPQ is written in Go and is available under the Apache 2.0 license.

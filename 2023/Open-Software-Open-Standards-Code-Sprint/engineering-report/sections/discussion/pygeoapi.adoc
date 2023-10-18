@@ -1,20 +1,18 @@
 [[pygeoapi_discussion]]
 === pygeoapi
 
-The pygeoapi work involved integration with a new data provider to expose scientific and ocean data from a specific API. Implementation of the new data provider had been done prior to the code sprint, and some final integration work had been completed during the code sprint. The data provider was enabled to access ERDDAP, a server technology by the National Oceanic and Atmospheric Administration(NOAA). ERDDAP is used by several of NOAA's partners to disseminate real time scientific data. Servers supporting ERDDAP can be accessed through an interface that support JSON messages, as well as other approaches. The sprint participants working on pygeoapi wanted to expose an ERDDAP instance through an interface that implements the OGC API - Features Standard.
+The pygeoapi work involved integration with a new data provider to expose scientific and ocean data from a specific API. Implementation of the new data provider had been done prior to the code sprint and some final integration work had been completed during the code sprint. The data provider was enabled to access ERDDAP, a server technology by the National Oceanic and Atmospheric Administration(NOAA). ERDDAP is used by several of NOAA's partners to disseminate real time scientific data. Servers supporting ERDDAP can be accessed through an interface that supports JSON messages, as well as other approaches. The sprint participants working on pygeoapi wanted to expose an ERDDAP instance through an interface that implements the OGC API - Features Standard.
 
-An implementation of the prototype, which has been built using pygeoapi, was demonstrated during the code sprint. The demo assumes that there is a data provider upstream that is producing observations from which the alerts are derived. From there the alerts are created and pushed into an implementation of https://docs.ogc.org/DRAFTS/20-002.html[OGC API - Features - Part 4: Create, Replace, Update and Delete]. The OGC API - Features implementation sends a message to a broker. In addition to the features being inserted into the collection, a notification would then be sent out to subscribers.
+An implementation of the prototype which has been built using pygeoapi was demonstrated during the code sprint. The demo assumes that there is a data provider upstream that is producing observations from which the alerts are derived. From there the alerts are created and pushed into an implementation of https://docs.ogc.org/DRAFTS/20-002.html[OGC API - Features - Part 4: Create, Replace, Update and Delete]. The OGC API - Features implementation sends a message to a broker. In addition to the features being inserted into the collection, a notification would then be sent out to subscribers.
 The implementation uses a broker called Mosquito, which supports MQTT. The client application was implemented using OWSLib.
 
-
-
-Accessing the HTML-encoded AsyncAPI definition document, leads to a view such as the one shown in <<img_pygeoapi_asyncapi_html>>. Note that the document advertizes an MQTT server. In addition to MQTT, AsyncAPI also supports other protocols like Kafka and AMQP.
+Accessing the HTML-encoded AsyncAPI definition document, leads to a view such as the one shown in <<img_pygeoapi_asyncapi_html>>. Note that the document advertizes an MQTT server. In addition to MQTT, AsyncAPI also supports other protocols such as Kafka and AMQP.
 
 [[img_pygeoapi_asyncapi_html]]
 .Screenshot of a rendered HTML-encoded pygeoapi asyncapi document
 image::../images/pygeoapi_asyncapi_html.png[align="center",width=800]
 
-Subscription information can be obtained from the description of a feature collection that supports the event-driven mechanism. An example link for subscribing to notifications through MQTT is shown in the following listing.
+Subscription information can be obtained from the description of a feature collection that supports the event-driven mechanism. An example link for subscribing to notifications through MQTT is shown in the following listing:
 
 [%unnumbered%]
 [source,json]

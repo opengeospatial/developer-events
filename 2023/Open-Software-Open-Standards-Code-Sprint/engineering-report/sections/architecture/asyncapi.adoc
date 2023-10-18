@@ -1,4 +1,4 @@
 [[asyncapi]]
 ==== AsyncAPI
 
-https://www.asyncapi.com/[AsyncAPI] is a specification, by the Linux Foundation, for describing and documenting message-driven APIs in a machine-readable and protocol-agnostic format. The specification defines a set of files required to describe a message-driven API. The files describing an API in accordance with the AsyncAPI Specification may be encoded in JSON or YAML.
+https://www.asyncapi.com/[AsyncAPI] is a specification by the Linux Foundation for describing and documenting message-driven APIs in a machine-readable and protocol-agnostic format. The specification defines a set of files required to describe a message-driven API. The files describing an API in accordance with the AsyncAPI Specification may be encoded in JSON or YAML.

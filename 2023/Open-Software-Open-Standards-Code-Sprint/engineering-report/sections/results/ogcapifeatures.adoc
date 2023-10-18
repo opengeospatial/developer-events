@@ -1,30 +1,30 @@
 ==== OGC API - Features
 
-Before the code sprint, a https://github.com/opengeospatial/ogcapi-features/issues/740#issuecomment-1501758135[new proposal for handling feature schemas] had been prepared for discussion in the OGC Features API Standards Working Group and at the code sprint.
+Before the code sprint a https://github.com/opengeospatial/ogcapi-features/issues/740#issuecomment-1501758135[new proposal for handling feature schemas] had been prepared for discussion in the OGC Features API Standards Working Group and at the code sprint.
 
-In current drafts, a JSON Schema for the GeoJSON encoding of the features is returned by the API as the feature schema. That approach has several disadvantages:
+In current drafts, a JSON schema for the GeoJSON encoding of the features is returned by the API as the feature schema. That approach has several disadvantages as follows.
 
 * Not all APIs can support GeoJSON (e.g., for 3D buildings).
 * There was a need to have different schemas for different operations. For example, the server may return features with a (slightly) different schema than it expects when a new feature is created or updated.
 * Validation of content is one use case for a schema, but for other use cases an encoding-agnostic logical schema is more beneficial and easier to use. For the queryables and sortables resources such a schema is already used.
-* Another example is that of feature relationships that should be expressed as such in the schema, but that can be encoded in various ways in the data depending on the format or the use case.
+* Another example is that of feature relationships that should be expressed as such in the schema but that can be encoded in various ways in the data depending on the format or the use case.
 
 The proposal addresses these issues by: 
 
 * providing an encoding-agnostic logical schema of the features in a collection (expressed in JSON Schema, using the same requirements and recommendations as in Part 3 for the Queryables resource);
 * adding an additional keyword to identify special roles that a property may have (e.g., identify the feature id, the primary geometry, etc);
 * using the JSON Schema keywords `readOnly` and `writeOnly` to identify properties that are only relevant for GET (read-only) or POST/PUT/PATCH (write-only) requests;
-* adding support for properties that are a reference to another feature in the same API or another API;
+* adding support for properties that are a reference to another feature in the same API or another API; and
 * specifying a new query parameter `profile` to support requesting different representations of such feature references in the data.
 
-The proposal was discussed by sprint participants in a breakout session. The GitHub issue was updated with the https://github.com/opengeospatial/ogcapi-features/issues/740#issuecomment-1523806821[results of the discussion]. There was agreement to start work on a pull request for OGC API - Features, to test the approach in implementations and to present the approach to other OGC API working groups at the June 2023 OGC Member Meeting.
+The proposal was discussed by sprint participants in a breakout session. The GitHub issue was updated with the https://github.com/opengeospatial/ogcapi-features/issues/740#issuecomment-1523806821[results of the discussion]. There was agreement to start work on a pull request for OGC API - Features, to test the approach in implementations, and to present the approach to other OGC API working groups at the June 2023 OGC Member Meeting.
 
 Participants from interactive instruments started to work on an implementation in ldproxy during the code sprint. The implementation was https://github.com/opengeospatial/ogcapi-features/issues/740#issuecomment-1577105899[completed in the weeks after the code sprint].
 
 The approach was presented and discussed in the OGC API track during the June 2023 OGC Member Meeting. The approach was supported by other OGC API working groups. As a result the Standards Working Group decided to use the approach as the starting point for a new part (Part 5: Schemas).
 
-Other OGC API - Features topics that were discussed with participants from open source projects:
+Other OGC API - Features topics that were discussed with participants from open source projects included the following.
 
 * Discussion with Smapshot developers about the relationship between GeoPose and features and how to provide GeoPose via building blocks from OGC API - Features.
 * Support for faceted search, i.e., return not only a page of selected features, but also statistical information about important values of selected properties and the number of features that have that value. This information can be used to interactively "drill down" to find features of interest. A proposal currently exists in https://github.com/opengeospatial/ogcapi-records/tree/master/proposals/aggregations[OGC API - Records].
-* For clients that interact with a Features API, it would be beneficial, if APIs would provide not only a textual GeoJSON encoding, but also a more efficient binary encoding. Currently no conformance class exists for such a feature encoding in OGC API - Features. This is a topic that should be discussed in the Standards Working Group.
+* For clients that interact with a Features API, it would be beneficial if APIs would provide not only a textual GeoJSON encoding, but also a more efficient binary encoding. Currently no conformance class exists for such a feature encoding in OGC API - Features. This is a topic that should be discussed in the Standards Working Group.

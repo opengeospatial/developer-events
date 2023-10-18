@@ -1,7 +1,7 @@
 [[openlayers_discussion]]
 === Styling in OpenLayers
 
-OpenLayers has long had support for letting users create a style. Users can change the stroke or color of a symbol. The benefit is that it is flexible. The downside is that it needs to run on the CPU in the context of the user's client-side environment. The solution is styles that can be passed to a different context, to a worker for example. An example of the previous approach is shown below.
+OpenLayers has long had support for letting users create a style. Users can change the stroke or color of a symbol. The benefit is that it is flexible. The downside is that it needs to run on the CPU in the context of the user's client-side environment. The solution is styles that can be passed to a different context, for example to a worker. An example of the previous approach is shown below.
 
 [%unnumbered%]
 [source,js]
@@ -46,7 +46,7 @@ This new approach is already supported by OpenLayers for raster rendering, as de
 .A screenshot of an OpenLayers application that supports client-side modification of styles
 image::../images/openlayers_a.png[align="center",width=800]
 
-Currently OpenLayers does not support expressions in the use of this new approach for representing styles. During the code sprint, OpenLayers contributors discussed support for expressions. An example of how the approach could be applied to vector styling is shown below.
+Currently OpenLayers does not support expressions in the use of this new approach for representing styles. During the code sprint OpenLayers contributors discussed support for expressions. An example of how the approach could be applied to vector styling is shown below.
 
 [%unnumbered%]
 [source,js]

@@ -1,5 +1,5 @@
 [[apachebaremaps]]
 ==== Apache Baremaps
 
-https://baremaps.apache.org/[Apache Baremaps] is an open source software toolkit and infrastructure components
-for creating, operating, and publishing maps online. The toolkit provides a data pipeline that enables developers to build maps from a variety of data sources. The toolkit enables cartographers to customize the content and the style of a map, as well as supporting services such as location search and IP to location.
+https://baremaps.apache.org/[Apache Baremaps] is an open source software toolkit and a set of infrastructure components
+for creating, operating, and publishing maps online. The toolkit provides a data pipeline that enables developers to build maps from a variety of data sources. The toolkit enables cartographers to customize the content and the style of a map as well as supporting services, such as location search and IP to location.

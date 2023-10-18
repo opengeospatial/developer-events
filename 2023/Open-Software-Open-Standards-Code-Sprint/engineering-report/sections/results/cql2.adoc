@@ -2,7 +2,7 @@
 
 Discussions during the code sprint led to an issue with the CQL2-JSON encoding being identified and https://github.com/opengeospatial/ogcapi-features/issues/828[documented]. The issue is summarized below.
 
-In the JSON encoding for CQL2, there is a need to consider whether to still use `function` instead of `op` (or `casei` / `accenti` in that particular case) for those standard functions defined by the various requirements classes of the standard. This would make the names consistent across the various functions. That is, the standard functions are likely to be routed to actual _functions_ in the implementation, just like the user-defined custom functions.
+In the JSON encoding for CQL2, there is a need to consider whether to still use `function` instead of `op` (or `casei` / `accenti` in that particular case) for those standard functions defined by the various requirements classes of the standard making the names consistent across the various functions. That is, the standard functions are likely to be routed to actual _functions_ in the implementation, just like the user-defined custom functions.
 
 The sprint participants also noted that the `function` definition also seems overcomplicated. They suggested that instead of:
 
@@ -29,7 +29,7 @@ as with the `op`? (or `"fn"` in the case of using a short 2 letters property lik
 
 Further detail of this issue is https://github.com/opengeospatial/ogcapi-features/issues/828[documented] on the OGC API - Features GitHub repository. Note that the SWG meeting of 2023-05-08 considered this issue and agreed on the following resolutions:
 
-* Change the JSON encoding of the custom functions to mimic the pattern for most standardized functions using an object with the op and args members.
-* Change `casei` and `accenti` to the same pattern with an `op` value.
-* Keep `casei` and `accenti`. If `lower` or `upper` are needed, they can be added as custom (or future standardized) functions.
-* Rename "Basic Spatial Operators", "Spatial Operators", "Temporal Operators" and "Array Operators" to use "Functions" instead of "Operators".
+* change the JSON encoding of the custom functions to mimic the pattern for most standardized functions using an object with the op and args members;
+* change `casei` and `accenti` to the same pattern with an `op` value;
+* keep `casei` and `accenti` (if `lower` or `upper` are needed, they can be added as custom (or future standardized) functions); and
+* rename "Basic Spatial Operators," "Spatial Operators," "Temporal Operators," and "Array Operators" to use "Functions" instead of "Operators."

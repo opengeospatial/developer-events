@@ -3,49 +3,37 @@
 
 ===== Purpose
 
-Secure Dimensions implemented the GeoXACML 3.0 draft specification based
-on the https://authzforce-ce-fiware.readthedocs.io/en/latest/[Authzforce CE] project which is an Open Source Community Edition project by https://www.fiware.org/[FIWARE]. The implementation is based on Java 11 and will be made available as the Open Source reference implementation for GeoXACML 3.0.
+Secure Dimensions implemented the GeoXACML 3.0 draft specification based on the https://authzforce-ce-fiware.readthedocs.io/en/latest/[Authzforce CE] project which is an Open Source Community Edition project by https://www.fiware.org/[FIWARE]. The implementation is based on Java 11 and will be made available as the Open Source reference implementation for GeoXACML 3.0.
+
+
 The implementation of a Policy Enforcement Point (PEP) during the code sprint was important for testing the GeoXACML 3.0 GeoPDP reference implementation by Secure Dimensions
 regarding request and response processing.
 
 ===== Solution
 
-With respect to implementation, a GeoServer deployment including the
-default data was used as the API to be protected. From the
-GeoServer architecture, different possibilities exist where to place the
-PEP. For the code sprint, the solution to deploy a https://tomcat.apache.org/[Apache Tomcat] Filter was
-favored. This ensured that the GeoServer installation could almost remain
-unchanged. The configuration of the “web.xml” could be adopted to
-include the “WFS Filter for GeoXACML 3.0”. Also, the filter’s JAR (Java Archive) file and
-dependencies must be added to “geoserver.war” (the web application archive that is deployed inside Apache Tomcat).
+With respect to implementation, a GeoServer deployment including the default data was used as the API to be protected. From the GeoServer architecture, different possibilities exist for PEP placement. For the code sprint the solution to deploy a https://tomcat.apache.org/[Apache Tomcat] Filter was
+favored to ensure that the GeoServer installation could almost remain unchanged. The configuration of the “web.xml” could be adopted to include the “WFS Filter for GeoXACML 3.0”. Also, the filter’s JAR (Java Archive) file and dependencies must be added to “geoserver.war” (the web application archive that is deployed inside Apache Tomcat).
 
 The implementation of the WFS Filter itself used the Authzforce
-XACML-SDK for Java that needs to be extended to allow the inclusion of
-Geometry attributes. The actual access condition to exclude all features
-of the Central Park was modelled in a GeoXACML 3.0 Policy. This was made
-possible by constructing an Obligation on Permit that returns the OGC
-Filter condition that the PEP needs to apply to the intercepted request.
+XACML-SDK for Java that needs to be extended to allow the inclusion of Geometry attributes. The actual access condition to exclude all features of the Central Park was modelled in a GeoXACML 3.0 Policy. This was made possible by constructing an Obligation on Permit that returns the OGC Filter condition that the PEP needs to apply to the intercepted request.
 
 ===== Achievement
 
-During the Code Sprint, a demonstration was implemented that follows the XACML
+During the Code Sprint a demonstration was implemented that follows the XACML
 flow diagram shown in <<img_xacml_flow_diagram>>.
 
 [[img_xacml_flow_diagram]]
 .XACML Flow Diagram
 image::../images/xacml_flow_diagram.png[image,width=601,height=515]
 
-A GeoServer 2.23 WAR-file deployment was used create the WFS 2.0 service
-endpoint.
+A GeoServer 2.23 WAR-file deployment was used create the WFS 2.0 service endpoint.
 
-The injection of the PEP was done by updating the “geoserver.war” file
-manually
+The injection of the PEP was done by updating the “geoserver.war” file manually:
 
 * zip -u geserver.war WEB-INF/web.xml
 * zip -u geoserver.war WEB-INF/lib/GeoXACMLFilter.jar
 
-The web.xml file contains the deployment for the WFS Filter for GeoXACML
-3.0.
+The web.xml file contains the deployment for the WFS Filter for GeoXACML 3.0.:
 
 [%unnumbered%]
 .Geoserver web.xml initializing the WFS Filter for GeoXACML 3.0 on path /wfs
@@ -81,14 +69,11 @@ The web.xml file contains the deployment for the WFS Filter for GeoXACML
 
 
 
-During the code sprint, one bug concerning the processing of XML
+During the code sprint one bug concerning the processing of XML
 attributes was fixed.
 
 ===== Demonstration
-The focus during the code sprint was to demonstrate the ability to
-rewrite WFS requests to reflect geospatial access control decisions. In
-order to achieve that, a simple GeoXACML 3.0 policy was crafted using
-ALFA for Visual Studio Code (ALFA plugin).
+The focus during the code sprint was to demonstrate the ability to rewrite WFS requests to reflect geospatial access control decisions. In order to achieve that, a simple GeoXACML 3.0 policy was crafted using ALFA for Visual Studio Code (ALFA plugin):
 
 [%unnumbered%]
 .GeoXACML 3.0 PolicySet described in ALFA
@@ -136,11 +121,7 @@ The GeoXACML 3.0 policy is structured in a simple way:
 * Rule (CENTRAL_PARK) matches “request == GetFeature”
 * The Rule Condition contains is geospatial “BBOX Intersects Polygon(…)”
 
-Any request that matches the condition results in the decision “Permit”
-with the Obligation “urn:secd:filter”. As specified in the XACML 3.0
-specification, a PEP must enforce the decision including all
-obligations. The processing of this filter obligation provides the
-missing information to construct the WFS Filter (disjoint Central Park).
+Any request that matches the condition results in the decision “Permit” with the Obligation “urn:secd:filter”. As specified in the XACML 3.0 specification, a PEP must enforce the decision including all obligations. The processing of this filter obligation provides the missing information to construct the WFS Filter (disjoint Central Park).
 
 The result of this processing can be visualized with QGIS (WFS Layer):
 
@@ -148,8 +129,7 @@ The result of this processing can be visualized with QGIS (WFS Layer):
 .Left: Feature type “poly_landmarks” without PEP -> Central Park feature(s) are included; Right: Feature type “poly_landmarks” with PEP -> Central Park feature(s) are excluded!
 image::../images/poly_landmarks.png[image,width=601,height=292]
 
-The implementation of the Filter obtains the information from the HTTP
-request:
+The implementation of the Filter obtains the information from the HTTP request:
 
 [%unnumbered%]
 .Sample code for obtaining information from the HTTP request
@@ -199,20 +179,14 @@ for (Response r : xacmlResponse.getResponses()) {
 
 ===== Lessons Learned
 
-The Tomcat Filter implementation was based on Java 11. The existing
-XACML-SDK for Java was available for Java 8. Due to deprecation of javax
-classes in Java 11, JAXB related functionality had to be updated. The
-use of GeoTools to create the Filter programmatically could not be
-achieved. The unresolved problem was that the XML encoder did not
-include the CRS into the GML part of the spatial filter. Examples and
-documentation was found to only cover non-spatial examples or the BBOX Filter.
-But for implementing the use case, a Disjoint filter with a GML3
-geometry had to be constructed. After removing GeoTools completely, a
-simple string template was used:
+The Tomcat Filter implementation was based on Java 11. The existing XACML-SDK for Java was available for Java 8. Due to deprecation of javax classes in Java 11, JAXB related functionality had to be updated. The use of GeoTools to create the Filter programmatically could not be achieved. The unresolved problem was that the XML encoder did not include the CRS into the GML part of the spatial filter. Examples and documentation were found to only cover non-spatial examples or the BBOX Filter.
+
+For implementing the use case, a Disjoint filter with a GML3
+geometry had to be constructed. After removing GeoTools completely, a simple string template was used:
+
+
 “<fes:OPERATION><fes:ValueReference>the_geom</fes:ValueReference>GEOMETRY</fes:
-OPERATION >” where the GEOMETRY was constructed from the response by the
-PDP (Obligation attributes urn:secd:filter:geometry and
-urn:secd:filter:operation).
+OPERATION >” where the GEOMETRY was constructed from the response by the PDP (Obligation attributes urn:secd:filter:geometry and urn:secd:filter:operation).
 
 [%unnumbered%]
 .Disjoint filter with a geometry constraint
@@ -235,11 +209,7 @@ filter = [[ the_geom within POLYGON ((40.46203574999999 -74.35610985937501, 40.4
 
 ===== Follow-Up
 
-The OGC API - Features endpoint was not used as it is not yet possible to pass a
-Filter parameter. Once the Filter capability is standardized in OGC
-API - Features - Part 3, the implementation for this demonstration could be
-adopted accordingly. The implementation would need to be adopted to
-obtain relevant information such as the feature-type, the request BBOX,
-etc. according to OGC API - Features.
+The OGC API - Features endpoint was not used as it is not yet possible to pass a Filter parameter. Once the Filter capability is standardized in OGC API - Features - Part 3, the implementation for this demonstration could be adopted accordingly. The implementation would need to be adopted to
+obtain relevant information such as the feature-type, the request BBOX, etc., according to OGC API - Features.
 
 

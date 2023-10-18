@@ -7,15 +7,15 @@ An Application Programming Interface (API) is a standard set of documented and s
 
 === coordinate reference system
 
-A coordinate system that is related to the real world by a datum term name (source: ISO 19111)
+A coordinate system that is related to the real world by a datum term name (source: ISO 19111).
 
 === OpenAPI Document
 
-A document (or set of documents) that defines or describes an API. An OpenAPI definition uses and conforms to the OpenAPI Specification (https://www.openapis.org)
+A document (or set of documents) that defines or describes an API. An OpenAPI definition uses and conforms to the OpenAPI Specification (https://www.openapis.org).
 
 === Web API
 
-API using an architectural style that is founded on the technologies of the Web [source: OGC API - Features - Part 1: Core]
+An API using an architectural style that is founded on the technologies of the Web [source: OGC API - Features - Part 1: Core].
 
 
 === Abbreviated terms
