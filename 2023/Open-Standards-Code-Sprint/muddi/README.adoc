@@ -1,0 +1,4 @@
+== Artifacts related to MUDDI
+
+An overview of various artifacts related to MUDDI is on the https://github.com/opengeospatial/developer-events/wiki/muddi%E2%80%90overview[wiki].
+
