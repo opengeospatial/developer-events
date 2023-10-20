@@ -1,0 +1,17 @@
+[[results]]
+== Results
+
+The code sprint included multiple software libraries, OWS implementations, OGC API implementations and a variety of client applications. This section presents the key results from the code sprint.
+
+=== Approved and Candidate OGC Standards
+
+include::results/example.adoc[]
+
+
+=== Other Specifications
+
+include::results/example2.adoc[]
+
+=== Software Projects and Products
+
+include::results/example3.adoc[]

@@ -1,0 +1,60 @@
+= 2023 Open Standards Code Sprint Summary Engineering Report
+:doctype: standard
+:encoding: utf-8
+:lang: en
+:status: draft
+:committee: technical
+:draft: 3.0
+:external-id: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
+:docnumber: 23-059
+:received-date: 2029-03-30
+:issued-date: 2029-03-30
+:published-date: 2029-03-30
+:fullname: Gobe Hobona
+:fullname_2: Joana Simoes
+:docsubtype: Interface
+:keywords: ogcdoc, OGC document, API, openapi, html
+:submitting-organizations: Organization One; Organization Two
+:mn-document-class: ogc
+:mn-output-extensions: xml,html,doc,pdf
+:local-cache-only:
+:data-uri-image:
+:pdf-uri: ./document.pdf
+:xml-uri: ./document.xml
+:doc-uri: ./document.doc
+:edition: 1.0
+
+////
+Make sure to complete each included document
+////
+// Clauses
+include::sections/00-preface.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-terms_and_definitions.adoc[]
+
+include::sections/03-references.adoc[]
+
+// Add clause files as needed
+
+include::sections/04-architecture.adoc[]
+
+include::sections/05-results.adoc[]
+
+include::sections/06-discussion.adoc[]
+
+include::sections/07-conclusions.adoc[]
+
+////
+add or remove annexes after "A" as necessary
+////
+
+
+////
+Revision History should be the last annex before the Bibliography
+Bibliography should be the last annex
+////
+include::sections/ah-revision-history.adoc[]
+
+include::sections/az-bibliography.adoc[]

@@ -1,0 +1,29 @@
+= Standard template in Metanorma
+
+== Content
+
+This repository contains the content for an OGC standard.
+
+* `document.adoc` - the main standard document with references to all sections
+* remaining ``adoc``s - each section of the standard document is in a separate document: follow directions in each document to populate
+* `figures` - figures go here
+* `images` - Image files for graphics go here. Image files for figures go in the `figures` directory. Only place in here images not used in figures (e.g., as parts of tables, as logos, etc.)
+* `requirements` - directory for requirements and requirement classes to be referenced in `clause_7_normative_text.adoc`
+* `code` - sample code to accompany the standard, if desired
+* `abstract_tests` - the Abstract Test Suite comprising one test for every requirement, optional
+* `UML` - UML diagrams, if applicable
+
+== Building using docker
+
+Navigate into the folder containing the file `document.adoc`, and then run the following command.
+
+```
+docker run -v "$(pwd)":/metanorma -v ${HOME}/.fontist/fonts/:/config/fonts  metanorma/metanorma  metanorma compile --agree-to-terms -t ogc -x xml,html document.adoc
+```
+
+If the build is successful, an HTML file will be generated with the name `document.html`.
+
+
+== Daily build
+
+A cron job has been set up to build this document every day. The output of the build can be accessed https://opengeospatial.github.io/ogcna-auto-review/23-059.html[here].
