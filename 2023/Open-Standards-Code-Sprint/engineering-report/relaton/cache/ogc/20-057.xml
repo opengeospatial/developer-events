@@ -1,0 +1,46 @@
+<bibdata type="standard" schema-version="v1.2.4">
+  <fetched>2023-10-20</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">OGC API</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Tiles</title>
+  <title type="title-part" format="text/plain" language="en" script="Latn">Part 1: Core</title>
+  <title type="main" format="text/plain" language="en" script="Latn">OGC API - Tiles - Part 1: Core</title>
+  <uri type="obp">https://docs.ogc.org/is/20-057/20-057.html</uri>
+  <docidentifier type="OGC" primary="true">20-057</docidentifier>
+  <date type="published">
+    <on>2022-11-10</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Joan Masó</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Jérôme Jacovella-St-Louis</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">OGC API — Tiles is a standard defining building blocks for creating Web APIs that support the retrieval of geospatial information as tiles. Different forms of geospatial information are supported, such as tiles of vector features (“vector tiles”), coverages, maps (or imagery) and other types of geospatial information. Although it can be used independently, the OGC API — Tiles building blocks can be combined with other OGC API Standards and draft specifications for additional capabilities or increasing interoperability for specific types of data. The OGC API — Tiles standard references the OGC Two Dimensional Tile Matrix Set (TMS) and Tileset Metadata standard, which defines logical models and encodings for specifying tile matrix sets and describing tile sets. A tile matrix set is a tiling scheme that enables an application to partition and index space based on a set of regular grids defined for multiple scales in a Coordinate Reference System (CRS).
+
+This specification is a successor to the OGC’s Web Map Tile Service (WMTS) standard, focusing on simple reusable REST API building blocks which can be described using the OpenAPI specification. Whereas WMTS focused on map tiles, the OGC API — Tiles standard has been designed to support any form of tiled data.</abstract>
+  <ext schema-version="v1.0.1">
+    <doctype>standard</doctype>
+    <subdoctype>implementation</subdoctype>
+    <editorialgroup>
+      <committee>technical</committee>
+    </editorialgroup>
+  </ext>
+</bibdata>

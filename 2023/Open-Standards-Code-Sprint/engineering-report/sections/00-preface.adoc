@@ -1,0 +1,55 @@
+
+////
+Preface sections must include [.preface] attribute
+in order to get them placed in the preface area (and not in the main content).
+
+Keywords specified in document preamble will display in this area
+after the abstract
+////
+
+[.preface]
+== Abstract
+
+The subject of this Engineering Report (ER) is a code sprint that was held from October 30th to November 1st, 2023 to advance the support and development of open standards within the developer community. The code sprint was organized by the Open Geospatial Consortium (OGC) and hosted by Geovation in London, England. The code sprint was sponsored by Ordnance Survey (OS), the European Union Satellite Centre (SatCen), US National Geospatial Intelligence Agency (NGA), and the UK Defence Science and Technology Laboratory (Dstl). 
+
+
+[.preface]
+== Executive Summary
+
+TBA
+
+The sprint participants made the following recommendations for future work:
+
+* TBA
+* TBA
+* TBA
+
+
+
+
+== Submitters
+
+All questions regarding this document should be directed to the editor or the contributors:
+
+[%unnumbered]
+[options="header"]
+|===
+| Name | Organization | Role
+| Gobe Hobona| Open Geospatial Consortium | Editor
+| Joana Simoes | Open Geospatial Consortium |Editor
+| Tom Kralidis | Meteorological Service of Canada |Editor
+| Andreas Matheus	|	Secure Dimensions	|	Contributor
+| Paul van Genuchten	| ISRIC- World soil information	|	Contributor
+| Iván Sánchez Ortega	| OSGeo	|	Contributor
+| Florent Gravin	|	Camptocamp	|	Contributor
+| Clemens Portele	|	interactive instruments GmbH	|	Contributor
+| Jérôme Jacovella-St-Louis	| Ecere Corporation	|	Contributor
+| TBA	| TBA	|	Contributor
+| TBA	| TBA	|	Contributor
+| TBA	| TBA	|	Contributor
+| TBA	| TBA	|	Contributor
+| TBA	| TBA	|	Contributor
+| TBA	| TBA	|	Contributor
+| TBA	| TBA	|	Contributor
+
+|=== 
