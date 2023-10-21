@@ -1,0 +1,1978 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:nuarcodelists_platform="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0" xmlns:nuarcodelists_transformation="http://portal.nuar.uk/schemas/nuarcodelists_transformation/2.1.0" elementFormDefault="qualified" targetNamespace="http://portal.nuar.uk/schemas/nuarcodelists_transformation/2.1.0" version="2.1.0">
+  <annotation>
+    <appinfo>
+      <gmlProfileSchema xmlns="http://www.opengis.net/gml/3.2">http://www.opengis.net/gml</gmlProfileSchema>
+    </appinfo>
+  </annotation>
+  <import namespace="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="AccessTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:AccessTypeValueType"/>
+  <complexType name="AccessTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AccessTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:AccessTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="AccessTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:AccessTypeValueEnumerationType nuarcodelists_transformation:AccessTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="AccessTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Access Chamber"/>
+      <enumeration value="Access Plate"/>
+      <enumeration value="Pig Trap"/>
+      <enumeration value="Other"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="AccessTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="AccessTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:AccessTypeValue_translatedType"/>
+  <complexType name="AccessTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AccessTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:AccessTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="AssetToVOV_LinkedAssetTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:AssetToVOV_LinkedAssetTableValueType"/>
+  <complexType name="AssetToVOV_LinkedAssetTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AssetToVOV_LinkedAssetTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:AssetToVOV_LinkedAssetTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="AssetToVOV_LinkedVOVTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:AssetToVOV_LinkedVOVTableValueType"/>
+  <complexType name="AssetToVOV_LinkedVOVTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AssetToVOV_LinkedVOVTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:AssetToVOV_LinkedVOVTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="ContactDetailsTypeType">
+    <union memberTypes="nuarcodelists_transformation:ContactDetailsTypeEnumerationType nuarcodelists_transformation:ContactDetailsTypeOtherType"/>
+  </simpleType>
+  <simpleType name="ContactDetailsTypeEnumerationType">
+    <restriction base="string">
+      <enumeration value="Asset Protection"/>
+      <enumeration value="Business"/>
+      <enumeration value="Emergency"/>
+      <enumeration value="Planning"/>
+      <enumeration value="Other"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="ContactDetailsTypeOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="ContactDetailsTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:ContactDetailsTypeValueType"/>
+  <complexType name="ContactDetailsTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ContactDetailsTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:ContactDetailsTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ContactDetailsTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:ContactDetailsTypeValue_translatedType"/>
+  <complexType name="ContactDetailsTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ContactDetailsTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:ContactDetailsTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="ContainerTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:ContainerTypeValueEnumerationType nuarcodelists_transformation:ContainerTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="ContainerTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Arcade"/>
+      <enumeration value="Conduit"/>
+      <enumeration value="Duct"/>
+      <enumeration value="Other"/>
+      <enumeration value="Pipe"/>
+      <enumeration value="Pit"/>
+      <enumeration value="Carrier Pipe"/>
+      <enumeration value="Subduct"/>
+      <enumeration value="Trench"/>
+      <enumeration value="Tunnel"/>
+      <enumeration value="Unknown"/>
+      <enumeration value="Utilidor"/>
+      <enumeration value="Vault"/>
+      <enumeration value="Vent"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="ContainerTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="ContainerTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:ContainerTypeValueType"/>
+  <complexType name="ContainerTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ContainerTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:ContainerTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ContainerTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:ContainerTypeValue_translatedType"/>
+  <complexType name="ContainerTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ContainerTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:ContainerTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ConveyanceCategoryValue" substitutionGroup="nuarcodelists_platform:NUARDomainCodelist" type="nuarcodelists_transformation:ConveyanceCategoryValueType"/>
+  <complexType name="ConveyanceCategoryValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ConveyanceCategoryValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:ConveyanceCategoryValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="ConveyanceCategoryValueType">
+    <union memberTypes="nuarcodelists_transformation:ConveyanceCategoryValueEnumerationType nuarcodelists_transformation:ConveyanceCategoryValueOtherType"/>
+  </simpleType>
+  <simpleType name="ConveyanceCategoryValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Auxiliary"/>
+      <enumeration value="Collection"/>
+      <enumeration value="Communication"/>
+      <enumeration value="Discharge"/>
+      <enumeration value="Distribution"/>
+      <enumeration value="Fire"/>
+      <enumeration value="Flow Line"/>
+      <enumeration value="Dual Flow and Return Line"/>
+      <enumeration value="Other"/>
+      <enumeration value="Private"/>
+      <enumeration value="Return Line"/>
+      <enumeration value="Service"/>
+      <enumeration value="Transmission"/>
+      <enumeration value="Trunk"/>
+      <enumeration value="Unknown"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="ConveyanceCategoryValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="ConveyanceCategoryValue_translated" substitutionGroup="nuarcodelists_platform:NUARDomainCodelistTranslation" type="nuarcodelists_transformation:ConveyanceCategoryValue_translatedType"/>
+  <complexType name="ConveyanceCategoryValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ConveyanceCategoryValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:ConveyanceCategoryValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="ConveyanceMethodValueType">
+    <union memberTypes="nuarcodelists_transformation:ConveyanceMethodValueEnumerationType nuarcodelists_transformation:ConveyanceMethodValueOtherType"/>
+  </simpleType>
+  <simpleType name="ConveyanceMethodValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Low Voltage"/>
+      <enumeration value="Medium Voltage"/>
+      <enumeration value="Intermediate Voltage"/>
+      <enumeration value="High Voltage"/>
+      <enumeration value="Extra High Voltage"/>
+      <enumeration value="Low Pressure"/>
+      <enumeration value="Medium Pressure"/>
+      <enumeration value="Intermediate Pressure"/>
+      <enumeration value="Regional Intermediate Pressure"/>
+      <enumeration value="High Pressure"/>
+      <enumeration value="National High Pressure"/>
+      <enumeration value="Regional High Pressure"/>
+      <enumeration value="Gravity"/>
+      <enumeration value="Pressure"/>
+      <enumeration value="Pumped"/>
+      <enumeration value="Syphon"/>
+      <enumeration value="Vacuum"/>
+      <enumeration value="Unknown"/>
+      <enumeration value="Other"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="ConveyanceMethodValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="ConveyanceMethodValue" substitutionGroup="nuarcodelists_platform:NUARDomainCodelist" type="nuarcodelists_transformation:ConveyanceMethodValueType"/>
+  <complexType name="ConveyanceMethodValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ConveyanceMethodValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:ConveyanceMethodValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ConveyanceMethodValue_translated" substitutionGroup="nuarcodelists_platform:NUARDomainCodelistTranslation" type="nuarcodelists_transformation:ConveyanceMethodValue_translatedType"/>
+  <complexType name="ConveyanceMethodValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ConveyanceMethodValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:ConveyanceMethodValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ConveyanceToAccessory_LinkedAccessoryTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:ConveyanceToAccessory_LinkedAccessoryTableValueType"/>
+  <complexType name="ConveyanceToAccessory_LinkedAccessoryTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ConveyanceToAccessory_LinkedAccessoryTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:ConveyanceToAccessory_LinkedAccessoryTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ConveyanceToAccessory_LinkedConveyanceTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:ConveyanceToAccessory_LinkedConveyanceTableValueType"/>
+  <complexType name="ConveyanceToAccessory_LinkedConveyanceTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ConveyanceToAccessory_LinkedConveyanceTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:ConveyanceToAccessory_LinkedConveyanceTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="DepthMethodValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:DepthMethodValueType"/>
+  <complexType name="DepthMethodValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DepthMethodValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:DepthMethodValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="DepthMethodValueType">
+    <union memberTypes="nuarcodelists_transformation:DepthMethodValueEnumerationType nuarcodelists_transformation:DepthMethodValueOtherType"/>
+  </simpleType>
+  <simpleType name="DepthMethodValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Assumed"/>
+      <enumeration value="Inferred"/>
+      <enumeration value="Sensed"/>
+      <enumeration value="Estimated"/>
+      <enumeration value="Standard"/>
+      <enumeration value="Surveyed"/>
+      <enumeration value="Unknown"/>
+      <enumeration value="Not Applicable"/>
+      <enumeration value="Other"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="DepthMethodValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="DepthMethodValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:DepthMethodValue_translatedType"/>
+  <complexType name="DepthMethodValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DepthMethodValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:DepthMethodValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="DesignationPurposeValueType">
+    <union memberTypes="nuarcodelists_transformation:DesignationPurposeValueEnumerationType nuarcodelists_transformation:DesignationPurposeValueOtherType"/>
+  </simpleType>
+  <simpleType name="DesignationPurposeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Protecting And Enhancing Biodiversity And Habitats"/>
+      <enumeration value="Conservation Area"/>
+      <enumeration value="Wildlife Enhancement Corridors"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="DesignationPurposeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="DesignationPurposeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:DesignationPurposeValueType"/>
+  <complexType name="DesignationPurposeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DesignationPurposeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:DesignationPurposeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="DesignationPurposeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:DesignationPurposeValue_translatedType"/>
+  <complexType name="DesignationPurposeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DesignationPurposeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:DesignationPurposeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FeatureTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:FeatureTypeValueType"/>
+  <complexType name="FeatureTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FeatureTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:FeatureTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="FeatureTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:FeatureTypeValueEnumerationType nuarcodelists_transformation:FeatureTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="FeatureTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Access Object"/>
+      <enumeration value="Container Object"/>
+      <enumeration value="Physical Protection Object"/>
+      <enumeration value="Network"/>
+      <enumeration value="Network Accessory Object"/>
+      <enumeration value="Network Area"/>
+      <enumeration value="Network Description Object"/>
+      <enumeration value="Network Link"/>
+      <enumeration value="Network Node"/>
+      <enumeration value="Network Object"/>
+      <enumeration value="Network Site"/>
+      <enumeration value="Planning Area"/>
+      <enumeration value="Support Object"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="FeatureTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="FeatureTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:FeatureTypeValue_translatedType"/>
+  <complexType name="FeatureTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FeatureTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:FeatureTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Guidance_LinkedObjectTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:Guidance_LinkedObjectTableValueType"/>
+  <complexType name="Guidance_LinkedObjectTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Guidance_LinkedObjectTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:Guidance_LinkedObjectTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="HorizontalMeasurementMethodValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:HorizontalMeasurementMethodValueType"/>
+  <complexType name="HorizontalMeasurementMethodValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HorizontalMeasurementMethodValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:HorizontalMeasurementMethodValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="HorizontalMeasurementMethodValueType">
+    <union memberTypes="nuarcodelists_transformation:HorizontalMeasurementMethodValueEnumerationType nuarcodelists_transformation:HorizontalMeasurementMethodValueOtherType"/>
+  </simpleType>
+  <simpleType name="HorizontalMeasurementMethodValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Not Applicable"/>
+      <enumeration value="Assumed"/>
+      <enumeration value="Estimated"/>
+      <enumeration value="Inferred"/>
+      <enumeration value="Measured"/>
+      <enumeration value="Sensed"/>
+      <enumeration value="Surveyed"/>
+      <enumeration value="Unknown"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="HorizontalMeasurementMethodValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="HorizontalMeasurementMethodValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:HorizontalMeasurementMethodValue_translatedType"/>
+  <complexType name="HorizontalMeasurementMethodValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HorizontalMeasurementMethodValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:HorizontalMeasurementMethodValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="InstallationMethodTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:InstallationMethodTypeValueType"/>
+  <complexType name="InstallationMethodTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="InstallationMethodTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:InstallationMethodTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="InstallationMethodTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:InstallationMethodTypeValueEnumerationType nuarcodelists_transformation:InstallationMethodTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="InstallationMethodTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Bursting"/>
+      <enumeration value="Dead Insertion"/>
+      <enumeration value="Directional Drilling"/>
+      <enumeration value="Ducted"/>
+      <enumeration value="Live Insertion"/>
+      <enumeration value="Moling"/>
+      <enumeration value="Open Cut"/>
+      <enumeration value="Trenching"/>
+      <enumeration value="Other"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="InstallationMethodTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="InstallationMethodTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:InstallationMethodTypeValue_translatedType"/>
+  <complexType name="InstallationMethodTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="InstallationMethodTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:InstallationMethodTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="IntendedPermanenceValueType">
+    <union memberTypes="nuarcodelists_transformation:IntendedPermanenceValueEnumerationType nuarcodelists_transformation:IntendedPermanenceValueOtherType"/>
+  </simpleType>
+  <simpleType name="IntendedPermanenceValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Temporary"/>
+      <enumeration value="Permanent"/>
+      <enumeration value="Unknown"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="IntendedPermanenceValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="IntendedPermanenceValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:IntendedPermanenceValueType"/>
+  <complexType name="IntendedPermanenceValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="IntendedPermanenceValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:IntendedPermanenceValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="IntendedPermanenceValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:IntendedPermanenceValue_translatedType"/>
+  <complexType name="IntendedPermanenceValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="IntendedPermanenceValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:IntendedPermanenceValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="LinkToLinkZOI_LinkedLinkTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:LinkToLinkZOI_LinkedLinkTableValueType"/>
+  <complexType name="LinkToLinkZOI_LinkedLinkTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="LinkToLinkZOI_LinkedLinkTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:LinkToLinkZOI_LinkedLinkTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="LinkToLinkZOI_LinkedLinkedZoneOfInterestTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:LinkToLinkZOI_LinkedLinkedZoneOfInterestTableValueType"/>
+  <complexType name="LinkToLinkZOI_LinkedLinkedZoneOfInterestTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="LinkToLinkZOI_LinkedLinkedZoneOfInterestTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:LinkToLinkZOI_LinkedLinkedZoneOfInterestTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="LinkedFile_LinkedObjectTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:LinkedFile_LinkedObjectTableValueType"/>
+  <complexType name="LinkedFile_LinkedObjectTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="LinkedFile_LinkedObjectTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:LinkedFile_LinkedObjectTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="LocaleReferenceTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:LocaleReferenceTypeValueType"/>
+  <complexType name="LocaleReferenceTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="LocaleReferenceTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:LocaleReferenceTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="LocaleReferenceTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:LocaleReferenceTypeValueEnumerationType nuarcodelists_transformation:LocaleReferenceTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="LocaleReferenceTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="USRN"/>
+      <enumeration value="Other"/>
+      <enumeration value="Postcode"/>
+      <enumeration value="UPRN"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="LocaleReferenceTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="LocaleReferenceTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:LocaleReferenceTypeValue_translatedType"/>
+  <complexType name="LocaleReferenceTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="LocaleReferenceTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:LocaleReferenceTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="LocationTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:LocationTypeValueType"/>
+  <complexType name="LocationTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="LocationTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:LocationTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="LocationTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:LocationTypeValueEnumerationType nuarcodelists_transformation:LocationTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="LocationTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Carriageway"/>
+      <enumeration value="Field"/>
+      <enumeration value="Other"/>
+      <enumeration value="Footpath"/>
+      <enumeration value="Verge"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="LocationTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="LocationTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:LocationTypeValue_translatedType"/>
+  <complexType name="LocationTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="LocationTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:LocationTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="MaterialGradeValueType">
+    <union memberTypes="nuarcodelists_transformation:MaterialGradeValueEnumerationType nuarcodelists_transformation:MaterialGradeValueOtherType"/>
+  </simpleType>
+  <simpleType name="MaterialGradeValueEnumerationType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="MaterialGradeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="MaterialGradeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:MaterialGradeValueType"/>
+  <complexType name="MaterialGradeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MaterialGradeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:MaterialGradeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="MaterialGradeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:MaterialGradeValue_translatedType"/>
+  <complexType name="MaterialGradeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MaterialGradeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:MaterialGradeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="MaterialValueType">
+    <union memberTypes="nuarcodelists_transformation:MaterialValueEnumerationType nuarcodelists_transformation:MaterialValueOtherType"/>
+  </simpleType>
+  <simpleType name="MaterialValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="ABS"/>
+      <enumeration value="Aluminium"/>
+      <enumeration value="Asbestos Cement"/>
+      <enumeration value="Asphalt"/>
+      <enumeration value="Brick"/>
+      <enumeration value="Cast Iron"/>
+      <enumeration value="Ceramic"/>
+      <enumeration value="Clay"/>
+      <enumeration value="Coated Steel"/>
+      <enumeration value="Composite"/>
+      <enumeration value="Concrete"/>
+      <enumeration value="Copper"/>
+      <enumeration value="Ductile Iron"/>
+      <enumeration value="Earthen"/>
+      <enumeration value="Fiberglass"/>
+      <enumeration value="Galvanised Iron"/>
+      <enumeration value="Galvanised Steel"/>
+      <enumeration value="Geotextile"/>
+      <enumeration value="Gravel"/>
+      <enumeration value="HDPE"/>
+      <enumeration value="Iron"/>
+      <enumeration value="LDPE"/>
+      <enumeration value="Lead"/>
+      <enumeration value="MDPE"/>
+      <enumeration value="MOPC"/>
+      <enumeration value="Optical Fibre"/>
+      <enumeration value="PEX"/>
+      <enumeration value="Pitch Fibre"/>
+      <enumeration value="Plastic"/>
+      <enumeration value="PVC"/>
+      <enumeration value="Spun Iron"/>
+      <enumeration value="Steel"/>
+      <enumeration value="Stone"/>
+      <enumeration value="Tile"/>
+      <enumeration value="Transite"/>
+      <enumeration value="uPVC"/>
+      <enumeration value="Wood"/>
+      <enumeration value="Other"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="MaterialValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="MaterialValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:MaterialValueType"/>
+  <complexType name="MaterialValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MaterialValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:MaterialValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="MaterialValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:MaterialValue_translatedType"/>
+  <complexType name="MaterialValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MaterialValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:MaterialValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkAccessoryTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NetworkAccessoryTypeValueType"/>
+  <complexType name="NetworkAccessoryTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkAccessoryTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkAccessoryTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="NetworkAccessoryTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:NetworkAccessoryTypeValueEnumerationType nuarcodelists_transformation:NetworkAccessoryTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="NetworkAccessoryTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Access"/>
+      <enumeration value="Container"/>
+      <enumeration value="Other"/>
+      <enumeration value="Physical Protection"/>
+      <enumeration value="Support"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="NetworkAccessoryTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="NetworkAccessoryTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:NetworkAccessoryTypeValue_translatedType"/>
+  <complexType name="NetworkAccessoryTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkAccessoryTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkAccessoryTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkDescriptionTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NetworkDescriptionTypeValueType"/>
+  <complexType name="NetworkDescriptionTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkDescriptionTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkDescriptionTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="NetworkDescriptionTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:NetworkDescriptionTypeValueEnumerationType nuarcodelists_transformation:NetworkDescriptionTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="NetworkDescriptionTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Annotation"/>
+      <enumeration value="Change of Diameter"/>
+      <enumeration value="Change of Material"/>
+      <enumeration value="Cross Section"/>
+      <enumeration value="Pressure Marker"/>
+      <enumeration value="Depth"/>
+      <enumeration value="Dimension"/>
+      <enumeration value="Multimedia Attachment"/>
+      <enumeration value="Other"/>
+      <enumeration value="Supplemental Drawing"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="NetworkDescriptionTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="NetworkDescriptionTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:NetworkDescriptionTypeValue_translatedType"/>
+  <complexType name="NetworkDescriptionTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkDescriptionTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkDescriptionTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="NetworkLinkComponentTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:NetworkLinkComponentTypeValueEnumerationType nuarcodelists_transformation:NetworkLinkComponentTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="NetworkLinkComponentTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Auxiliary Power Conductor"/>
+      <enumeration value="Bridge"/>
+      <enumeration value="Cathodic Protection Conductor"/>
+      <enumeration value="Culvert"/>
+      <enumeration value="Line"/>
+      <enumeration value="Open Channel"/>
+      <enumeration value="Optical Fibre"/>
+      <enumeration value="Other"/>
+      <enumeration value="Out of Standard Service"/>
+      <enumeration value="Permeable Asphalt"/>
+      <enumeration value="Swale"/>
+      <enumeration value="Pipe"/>
+      <enumeration value="Pipeline"/>
+      <enumeration value="Power Conductor"/>
+      <enumeration value="Rain Garden"/>
+      <enumeration value="Telecommunications Link"/>
+      <enumeration value="Telemetry Link"/>
+      <enumeration value="Tree Pit"/>
+      <enumeration value="Tunnel"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="NetworkLinkComponentTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="NetworkLinkComponentTypeValue" substitutionGroup="nuarcodelists_platform:NUARDomainCodelist" type="nuarcodelists_transformation:NetworkLinkComponentTypeValueType"/>
+  <complexType name="NetworkLinkComponentTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkLinkComponentTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkLinkComponentTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkLinkComponentTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARDomainCodelistTranslation" type="nuarcodelists_transformation:NetworkLinkComponentTypeValue_translatedType"/>
+  <complexType name="NetworkLinkComponentTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkLinkComponentTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkLinkComponentTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="NetworkNodeComponentTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:NetworkNodeComponentTypeValueEnumerationType nuarcodelists_transformation:NetworkNodeComponentTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="NetworkNodeComponentTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Anchor Point"/>
+      <enumeration value="Anode"/>
+      <enumeration value="Beacon"/>
+      <enumeration value="Bollard"/>
+      <enumeration value="Cabinet"/>
+      <enumeration value="Capped End"/>
+      <enumeration value="Cathodic Protection Node"/>
+      <enumeration value="CCTV"/>
+      <enumeration value="Chamber"/>
+      <enumeration value="Cleaning Device"/>
+      <enumeration value="Discharge Device"/>
+      <enumeration value="Drain"/>
+      <enumeration value="Earthing Equipment"/>
+      <enumeration value="EV Charging Point"/>
+      <enumeration value="Filter"/>
+      <enumeration value="Flow Control"/>
+      <enumeration value="Gas Conditioner"/>
+      <enumeration value="Gully"/>
+      <enumeration value="Housing"/>
+      <enumeration value="Hydrant"/>
+      <enumeration value="Illuminated Sign"/>
+      <enumeration value="Injection Point"/>
+      <enumeration value="Inlet"/>
+      <enumeration value="Joint"/>
+      <enumeration value="Junction"/>
+      <enumeration value="Kiosk"/>
+      <enumeration value="Link Box"/>
+      <enumeration value="Measuring Device"/>
+      <enumeration value="Metering Device"/>
+      <enumeration value="Offtake"/>
+      <enumeration value="Other"/>
+      <enumeration value="Out of Standard Service"/>
+      <enumeration value="Outlet"/>
+      <enumeration value="Overflow"/>
+      <enumeration value="Pillar"/>
+      <enumeration value="Pit"/>
+      <enumeration value="Pond"/>
+      <enumeration value="Post"/>
+      <enumeration value="Pumping Equipment"/>
+      <enumeration value="Pressure Reduction"/>
+      <enumeration value="Purge Point"/>
+      <enumeration value="Rain Garden"/>
+      <enumeration value="Refuge Beacon"/>
+      <enumeration value="Regulator"/>
+      <enumeration value="Riser"/>
+      <enumeration value="Rodding Eye"/>
+      <enumeration value="School Crossing Flasher"/>
+      <enumeration value="Shaft"/>
+      <enumeration value="Sign Light"/>
+      <enumeration value="Stand Pipe"/>
+      <enumeration value="Streetlight"/>
+      <enumeration value="Swale"/>
+      <enumeration value="Syphon"/>
+      <enumeration value="Tree Pit"/>
+      <enumeration value="Tank"/>
+      <enumeration value="Tee"/>
+      <enumeration value="Telecommunications Node"/>
+      <enumeration value="Terminator"/>
+      <enumeration value="Traffic Signal"/>
+      <enumeration value="Trap"/>
+      <enumeration value="Valve"/>
+      <enumeration value="Vent"/>
+      <enumeration value="Zebra Crossing"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="NetworkNodeComponentTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="NetworkNodeComponentTypeValue" substitutionGroup="nuarcodelists_platform:NUARDomainCodelist" type="nuarcodelists_transformation:NetworkNodeComponentTypeValueType"/>
+  <complexType name="NetworkNodeComponentTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkNodeComponentTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkNodeComponentTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkNodeComponentTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARDomainCodelistTranslation" type="nuarcodelists_transformation:NetworkNodeComponentTypeValue_translatedType"/>
+  <complexType name="NetworkNodeComponentTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkNodeComponentTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkNodeComponentTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkToConveyance_LinkedConveyanceTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NetworkToConveyance_LinkedConveyanceTableValueType"/>
+  <complexType name="NetworkToConveyance_LinkedConveyanceTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkToConveyance_LinkedConveyanceTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkToConveyance_LinkedConveyanceTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkToConveyance_LinkedNetworkTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NetworkToConveyance_LinkedNetworkTableValueType"/>
+  <complexType name="NetworkToConveyance_LinkedNetworkTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkToConveyance_LinkedNetworkTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkToConveyance_LinkedNetworkTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkToServiceArea_LinkedNetworkTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NetworkToServiceArea_LinkedNetworkTableValueType"/>
+  <complexType name="NetworkToServiceArea_LinkedNetworkTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkToServiceArea_LinkedNetworkTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkToServiceArea_LinkedNetworkTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkToServiceArea_LinkedServiceAreaTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NetworkToServiceArea_LinkedServiceAreaTableValueType"/>
+  <complexType name="NetworkToServiceArea_LinkedServiceAreaTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkToServiceArea_LinkedServiceAreaTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkToServiceArea_LinkedServiceAreaTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkToSite_LinkedNetworkTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NetworkToSite_LinkedNetworkTableValueType"/>
+  <complexType name="NetworkToSite_LinkedNetworkTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkToSite_LinkedNetworkTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkToSite_LinkedNetworkTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkToSite_LinkedSiteTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NetworkToSite_LinkedSiteTableValueType"/>
+  <complexType name="NetworkToSite_LinkedSiteTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkToSite_LinkedSiteTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkToSite_LinkedSiteTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkToSubNetwork_LinkedNetworkTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NetworkToSubNetwork_LinkedNetworkTableValueType"/>
+  <complexType name="NetworkToSubNetwork_LinkedNetworkTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkToSubNetwork_LinkedNetworkTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkToSubNetwork_LinkedNetworkTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkToSubNetwork_LinkedSubNetworkTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NetworkToSubNetwork_LinkedSubNetworkTableValueType"/>
+  <complexType name="NetworkToSubNetwork_LinkedSubNetworkTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkToSubNetwork_LinkedSubNetworkTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkToSubNetwork_LinkedSubNetworkTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkToSubordinateNetwork_LinkedNetworkTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NetworkToSubordinateNetwork_LinkedNetworkTableValueType"/>
+  <complexType name="NetworkToSubordinateNetwork_LinkedNetworkTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkToSubordinateNetwork_LinkedNetworkTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkToSubordinateNetwork_LinkedNetworkTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NetworkToSubordinateNetwork_LinkedSubordinateNetworkTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NetworkToSubordinateNetwork_LinkedSubordinateNetworkTableValueType"/>
+  <complexType name="NetworkToSubordinateNetwork_LinkedSubordinateNetworkTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkToSubordinateNetwork_LinkedSubordinateNetworkTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NetworkToSubordinateNetwork_LinkedSubordinateNetworkTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NodeToNodeZOI_LinkedNodeTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NodeToNodeZOI_LinkedNodeTableValueType"/>
+  <complexType name="NodeToNodeZOI_LinkedNodeTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NodeToNodeZOI_LinkedNodeTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NodeToNodeZOI_LinkedNodeTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NodeToNodeZOI_LinkedNodeZoneOfInterestTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NodeToNodeZOI_LinkedNodeZoneOfInterestTableValueType"/>
+  <complexType name="NodeToNodeZOI_LinkedNodeZoneOfInterestTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NodeToNodeZOI_LinkedNodeZoneOfInterestTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NodeToNodeZOI_LinkedNodeZoneOfInterestTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="NonUtilityObjectTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:NonUtilityObjectTypeValueEnumerationType nuarcodelists_transformation:NonUtilityObjectTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="NonUtilityObjectTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Barrier"/>
+      <enumeration value="Basement or Cellar"/>
+      <enumeration value="Bridge"/>
+      <enumeration value="Duct"/>
+      <enumeration value="Foundation"/>
+      <enumeration value="Passageway"/>
+      <enumeration value="Shaft"/>
+      <enumeration value="Storage Tank"/>
+      <enumeration value="Tracks"/>
+      <enumeration value="Tunnel"/>
+      <enumeration value="Vault"/>
+      <enumeration value="Wall"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="NonUtilityObjectTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="NonUtilityObjectTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:NonUtilityObjectTypeValueType"/>
+  <complexType name="NonUtilityObjectTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NonUtilityObjectTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NonUtilityObjectTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NonUtilityObjectTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:NonUtilityObjectTypeValue_translatedType"/>
+  <complexType name="NonUtilityObjectTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NonUtilityObjectTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:NonUtilityObjectTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="OperatingConveyanceLevelTypeValue" substitutionGroup="nuarcodelists_platform:NUARDomainCodelist" type="nuarcodelists_transformation:OperatingConveyanceLevelTypeValueType"/>
+  <complexType name="OperatingConveyanceLevelTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="OperatingConveyanceLevelTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:OperatingConveyanceLevelTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="OperatingConveyanceLevelTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:OperatingConveyanceLevelTypeValueEnumerationType nuarcodelists_transformation:OperatingConveyanceLevelTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="OperatingConveyanceLevelTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Other"/>
+      <enumeration value="Pressure"/>
+      <enumeration value="Voltage"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="OperatingConveyanceLevelTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="OperatingConveyanceLevelTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARDomainCodelistTranslation" type="nuarcodelists_transformation:OperatingConveyanceLevelTypeValue_translatedType"/>
+  <complexType name="OperatingConveyanceLevelTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="OperatingConveyanceLevelTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:OperatingConveyanceLevelTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="PhysicalProtectionTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:PhysicalProtectionTypeValueType"/>
+  <complexType name="PhysicalProtectionTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PhysicalProtectionTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:PhysicalProtectionTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="PhysicalProtectionTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:PhysicalProtectionTypeValueEnumerationType nuarcodelists_transformation:PhysicalProtectionTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="PhysicalProtectionTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Other"/>
+      <enumeration value="Slabbing"/>
+      <enumeration value="Sleeve"/>
+      <enumeration value="Tape"/>
+      <enumeration value="Plate"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="PhysicalProtectionTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="PhysicalProtectionTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:PhysicalProtectionTypeValue_translatedType"/>
+  <complexType name="PhysicalProtectionTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PhysicalProtectionTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:PhysicalProtectionTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="PlanningAreaTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:PlanningAreaTypeValueEnumerationType nuarcodelists_transformation:PlanningAreaTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="PlanningAreaTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Archaeological Site"/>
+      <enumeration value="Conservation Area"/>
+      <enumeration value="Coordination Zone"/>
+      <enumeration value="Former Industrial Site"/>
+      <enumeration value="Security Zone"/>
+      <enumeration value="Historical Site"/>
+      <enumeration value="Listed Building"/>
+      <enumeration value="Other"/>
+      <enumeration value="Scheduled Ancient Monument"/>
+      <enumeration value="Section 50 Site"/>
+      <enumeration value="Section 58"/>
+      <enumeration value="Site of Special Scientific Interest"/>
+      <enumeration value="Tree Preservation Order"/>
+      <enumeration value="Wetland"/>
+      <enumeration value="Wildlife Corridor"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="PlanningAreaTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="PlanningAreaTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:PlanningAreaTypeValueType"/>
+  <complexType name="PlanningAreaTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PlanningAreaTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:PlanningAreaTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="PlanningAreaTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:PlanningAreaTypeValue_translatedType"/>
+  <complexType name="PlanningAreaTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PlanningAreaTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:PlanningAreaTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ServiceAreaTypeValue" substitutionGroup="nuarcodelists_platform:NUARDomainCodelist" type="nuarcodelists_transformation:ServiceAreaTypeValueType"/>
+  <complexType name="ServiceAreaTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ServiceAreaTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:ServiceAreaTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="ServiceAreaTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:ServiceAreaTypeValueEnumerationType nuarcodelists_transformation:ServiceAreaTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="ServiceAreaTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Administrative Boundary"/>
+      <enumeration value="Coverage inferred from data"/>
+      <enumeration value="Coverage of Works"/>
+      <enumeration value="Data Supply Area"/>
+      <enumeration value="Franchise Area"/>
+      <enumeration value="Licence Area Boundary"/>
+      <enumeration value="National or Regional Coverage"/>
+      <enumeration value="Operational Patch"/>
+      <enumeration value="Other"/>
+      <enumeration value="Right of Access"/>
+      <enumeration value="Site"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="ServiceAreaTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="ServiceAreaTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARDomainCodelistTranslation" type="nuarcodelists_transformation:ServiceAreaTypeValue_translatedType"/>
+  <complexType name="ServiceAreaTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ServiceAreaTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:ServiceAreaTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SewerDepthTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:SewerDepthTypeValueType"/>
+  <complexType name="SewerDepthTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SewerDepthTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:SewerDepthTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="SewerDepthTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:SewerDepthTypeValueEnumerationType nuarcodelists_transformation:SewerDepthTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="SewerDepthTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Upstream Invert Depth"/>
+      <enumeration value="Downstream Invert Depth"/>
+      <enumeration value="Unknown"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="SewerDepthTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="SewerDepthTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:SewerDepthTypeValue_translatedType"/>
+  <complexType name="SewerDepthTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SewerDepthTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:SewerDepthTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SiteToAsset_LinkedAssetTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:SiteToAsset_LinkedAssetTableValueType"/>
+  <complexType name="SiteToAsset_LinkedAssetTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SiteToAsset_LinkedAssetTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:SiteToAsset_LinkedAssetTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SiteToAsset_LinkedSiteTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:SiteToAsset_LinkedSiteTableValueType"/>
+  <complexType name="SiteToAsset_LinkedSiteTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SiteToAsset_LinkedSiteTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:SiteToAsset_LinkedSiteTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SiteToSiteZOI_LinkedSiteTableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:SiteToSiteZOI_LinkedSiteTableValueType"/>
+  <complexType name="SiteToSiteZOI_LinkedSiteTableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SiteToSiteZOI_LinkedSiteTableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:SiteToSiteZOI_LinkedSiteTableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SiteToSiteZOI_LinkedSiteZOITableValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:SiteToSiteZOI_LinkedSiteZOITableValueType"/>
+  <complexType name="SiteToSiteZOI_LinkedSiteZOITableValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SiteToSiteZOI_LinkedSiteZOITableValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:SiteToSiteZOI_LinkedSiteZOITableValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="SiteTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:SiteTypeValueEnumerationType nuarcodelists_transformation:SiteTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="SiteTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Compressor Station"/>
+      <enumeration value="Section 50 Site"/>
+      <enumeration value="General Site"/>
+      <enumeration value="Independent/Private Network Site"/>
+      <enumeration value="Multi-purpose Site"/>
+      <enumeration value="Other"/>
+      <enumeration value="Pumping Station"/>
+      <enumeration value="Regulator Site"/>
+      <enumeration value="Storage Site"/>
+      <enumeration value="Substation"/>
+      <enumeration value="Treatment Works"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="SiteTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="SiteTypeValue" substitutionGroup="nuarcodelists_platform:NUARDomainCodelist" type="nuarcodelists_transformation:SiteTypeValueType"/>
+  <complexType name="SiteTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SiteTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:SiteTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SiteTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARDomainCodelistTranslation" type="nuarcodelists_transformation:SiteTypeValue_translatedType"/>
+  <complexType name="SiteTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SiteTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:SiteTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SupportTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:SupportTypeValueType"/>
+  <complexType name="SupportTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SupportTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:SupportTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="SupportTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:SupportTypeValueEnumerationType nuarcodelists_transformation:SupportTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="SupportTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Bed"/>
+      <enumeration value="Bridge"/>
+      <enumeration value="Footing"/>
+      <enumeration value="Foundation"/>
+      <enumeration value="Other"/>
+      <enumeration value="Pad"/>
+      <enumeration value="Pole"/>
+      <enumeration value="Thrust Plate"/>
+      <enumeration value="Thrust Block"/>
+      <enumeration value="Tower"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="SupportTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="SupportTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:SupportTypeValue_translatedType"/>
+  <complexType name="SupportTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SupportTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:SupportTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="TemperatureRangeValueType">
+    <union memberTypes="nuarcodelists_transformation:TemperatureRangeValueEnumerationType nuarcodelists_transformation:TemperatureRangeValueOtherType"/>
+  </simpleType>
+  <simpleType name="TemperatureRangeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="&lt; 50 degrees centigrade"/>
+      <enumeration value="50-80 degrees centigrade"/>
+      <enumeration value="Unheated"/>
+      <enumeration value="&gt; 80 degrees centigrade"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="TemperatureRangeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="TemperatureRangeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:TemperatureRangeValueType"/>
+  <complexType name="TemperatureRangeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TemperatureRangeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:TemperatureRangeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TemperatureRangeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:TemperatureRangeValue_translatedType"/>
+  <complexType name="TemperatureRangeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TemperatureRangeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:TemperatureRangeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="UnitOfTimeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_transformation:UnitOfTimeValueType"/>
+  <complexType name="UnitOfTimeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="UnitOfTimeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:UnitOfTimeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="UnitOfTimeValueType">
+    <union memberTypes="nuarcodelists_transformation:UnitOfTimeValueEnumerationType nuarcodelists_transformation:UnitOfTimeValueOtherType"/>
+  </simpleType>
+  <simpleType name="UnitOfTimeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Day"/>
+      <enumeration value="Week"/>
+      <enumeration value="Month"/>
+      <enumeration value="Year"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="UnitOfTimeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="UnitOfTimeValue_translated" substitutionGroup="nuarcodelists_platform:NUARStandardCodelistTranslation" type="nuarcodelists_transformation:UnitOfTimeValue_translatedType"/>
+  <complexType name="UnitOfTimeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="UnitOfTimeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:UnitOfTimeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="UtilitySubTypeValueType">
+    <union memberTypes="nuarcodelists_transformation:UtilitySubTypeValueEnumerationType nuarcodelists_transformation:UtilitySubTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="UtilitySubTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Alarm"/>
+      <enumeration value="Ammonia"/>
+      <enumeration value="Combined Sewer"/>
+      <enumeration value="Cooled Water"/>
+      <enumeration value="CSO Overflow"/>
+      <enumeration value="Drainage"/>
+      <enumeration value="Electric Power"/>
+      <enumeration value="SuDS"/>
+      <enumeration value="Foul Sewer"/>
+      <enumeration value="Glycol"/>
+      <enumeration value="Heated Water"/>
+      <enumeration value="Journey Time Apparatus"/>
+      <enumeration value="Natural Water"/>
+      <enumeration value="Non-Potable Water"/>
+      <enumeration value="Other"/>
+      <enumeration value="Raw Water"/>
+      <enumeration value="Steam"/>
+      <enumeration value="Stored Water"/>
+      <enumeration value="Street Lighting"/>
+      <enumeration value="Surface Water Sewer"/>
+      <enumeration value="Telecommunication"/>
+      <enumeration value="Trade Effluent"/>
+      <enumeration value="Treated Effluent"/>
+      <enumeration value="Treated Water"/>
+      <enumeration value="Untreated Effluent"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="UtilitySubTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="UtilitySubTypeValue" substitutionGroup="nuarcodelists_platform:NUARDomainCodelist" type="nuarcodelists_transformation:UtilitySubTypeValueType"/>
+  <complexType name="UtilitySubTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="UtilitySubTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:UtilitySubTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="UtilitySubTypeValue_translated" substitutionGroup="nuarcodelists_platform:NUARDomainCodelistTranslation" type="nuarcodelists_transformation:UtilitySubTypeValue_translatedType"/>
+  <complexType name="UtilitySubTypeValue_translatedType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARDomainCodelistTranslationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="UtilitySubTypeValue_translatedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_transformation:UtilitySubTypeValue_translated"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>

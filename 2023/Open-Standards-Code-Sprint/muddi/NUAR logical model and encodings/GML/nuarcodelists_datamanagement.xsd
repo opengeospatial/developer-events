@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:nuarcodelists_datamanagement="http://portal.nuar.uk/schemas/nuarcodelists_datamanagement/2.1.0" xmlns:nuarcodelists_platform="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0" elementFormDefault="qualified" targetNamespace="http://portal.nuar.uk/schemas/nuarcodelists_datamanagement/2.1.0" version="2.1.0">
+  <annotation>
+    <appinfo>
+      <gmlProfileSchema xmlns="http://www.opengis.net/gml/3.2">http://www.opengis.net/gml</gmlProfileSchema>
+    </appinfo>
+  </annotation>
+  <import namespace="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <simpleType name="DatasetTypeValueType">
+    <union memberTypes="nuarcodelists_datamanagement:DatasetTypeValueEnumerationType nuarcodelists_datamanagement:DatasetTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="DatasetTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="CAD"/>
+      <enumeration value="GIS Vector"/>
+      <enumeration value="Raster"/>
+      <enumeration value="Documents"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="DatasetTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="DatasetTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_datamanagement:DatasetTypeValueType"/>
+  <complexType name="DatasetTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DatasetTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_datamanagement:DatasetTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="LifecycleStatusValueType">
+    <union memberTypes="nuarcodelists_datamanagement:LifecycleStatusValueEnumerationType nuarcodelists_datamanagement:LifecycleStatusValueOtherType"/>
+  </simpleType>
+  <simpleType name="LifecycleStatusValueEnumerationType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="LifecycleStatusValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="LifecycleStatusValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_datamanagement:LifecycleStatusValueType"/>
+  <complexType name="LifecycleStatusValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="LifecycleStatusValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_datamanagement:LifecycleStatusValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="PublicationResultValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_datamanagement:PublicationResultValueType"/>
+  <complexType name="PublicationResultValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PublicationResultValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_datamanagement:PublicationResultValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="PublicationResultValueType">
+    <union memberTypes="nuarcodelists_datamanagement:PublicationResultValueEnumerationType nuarcodelists_datamanagement:PublicationResultValueOtherType"/>
+  </simpleType>
+  <simpleType name="PublicationResultValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Failure"/>
+      <enumeration value="Unknown"/>
+      <enumeration value="Success"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="PublicationResultValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="PublicationStageStatusValueType">
+    <union memberTypes="nuarcodelists_datamanagement:PublicationStageStatusValueEnumerationType nuarcodelists_datamanagement:PublicationStageStatusValueOtherType"/>
+  </simpleType>
+  <simpleType name="PublicationStageStatusValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="In Progress"/>
+      <enumeration value="Completed"/>
+      <enumeration value="Error"/>
+      <enumeration value="Duplicate"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="PublicationStageStatusValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="PublicationStageStatusValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_datamanagement:PublicationStageStatusValueType"/>
+  <complexType name="PublicationStageStatusValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PublicationStageStatusValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_datamanagement:PublicationStageStatusValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="PublicationStageValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_datamanagement:PublicationStageValueType"/>
+  <complexType name="PublicationStageValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PublicationStageValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_datamanagement:PublicationStageValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="PublicationStageValueType">
+    <union memberTypes="nuarcodelists_datamanagement:PublicationStageValueEnumerationType nuarcodelists_datamanagement:PublicationStageValueOtherType"/>
+  </simpleType>
+  <simpleType name="PublicationStageValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="dti-holding"/>
+      <enumeration value="holding-standby"/>
+      <enumeration value="live-standby-swap"/>
+      <enumeration value="live-standby"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="PublicationStageValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="PublicationStatusValueType">
+    <union memberTypes="nuarcodelists_datamanagement:PublicationStatusValueEnumerationType nuarcodelists_datamanagement:PublicationStatusValueOtherType"/>
+  </simpleType>
+  <simpleType name="PublicationStatusValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="In Progress"/>
+      <enumeration value="Completed"/>
+      <enumeration value="Pending"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="PublicationStatusValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="PublicationStatusValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_datamanagement:PublicationStatusValueType"/>
+  <complexType name="PublicationStatusValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PublicationStatusValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_datamanagement:PublicationStatusValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="SubmissionReplacementScopeValueType">
+    <union memberTypes="nuarcodelists_datamanagement:SubmissionReplacementScopeValueEnumerationType nuarcodelists_datamanagement:SubmissionReplacementScopeValueOtherType"/>
+  </simpleType>
+  <simpleType name="SubmissionReplacementScopeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="None"/>
+      <enumeration value="Organisation"/>
+      <enumeration value="Submission"/>
+      <enumeration value="Dataset"/>
+      <enumeration value="Area"/>
+      <enumeration value="Feature"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="SubmissionReplacementScopeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="SubmissionReplacementScopeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_datamanagement:SubmissionReplacementScopeValueType"/>
+  <complexType name="SubmissionReplacementScopeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SubmissionReplacementScopeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_datamanagement:SubmissionReplacementScopeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="SubmissionResultValueType">
+    <union memberTypes="nuarcodelists_datamanagement:SubmissionResultValueEnumerationType nuarcodelists_datamanagement:SubmissionResultValueOtherType"/>
+  </simpleType>
+  <simpleType name="SubmissionResultValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Success"/>
+      <enumeration value="Failure"/>
+      <enumeration value="Unknown"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="SubmissionResultValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="SubmissionResultValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_datamanagement:SubmissionResultValueType"/>
+  <complexType name="SubmissionResultValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SubmissionResultValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_datamanagement:SubmissionResultValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SubmissionStatusValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_datamanagement:SubmissionStatusValueType"/>
+  <complexType name="SubmissionStatusValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SubmissionStatusValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_datamanagement:SubmissionStatusValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="SubmissionStatusValueType">
+    <union memberTypes="nuarcodelists_datamanagement:SubmissionStatusValueEnumerationType nuarcodelists_datamanagement:SubmissionStatusValueOtherType"/>
+  </simpleType>
+  <simpleType name="SubmissionStatusValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Starting"/>
+      <enumeration value="In Progress"/>
+      <enumeration value="Paused"/>
+      <enumeration value="Finishing"/>
+      <enumeration value="Completed"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="SubmissionStatusValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="SubmissionTypeValue" substitutionGroup="nuarcodelists_platform:NUARStandardCodelist" type="nuarcodelists_datamanagement:SubmissionTypeValueType"/>
+  <complexType name="SubmissionTypeValueType">
+    <complexContent>
+      <extension base="nuarcodelists_platform:NUARStandardCodelistType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SubmissionTypeValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcodelists_datamanagement:SubmissionTypeValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="SubmissionTypeValueType">
+    <union memberTypes="nuarcodelists_datamanagement:SubmissionTypeValueEnumerationType nuarcodelists_datamanagement:SubmissionTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="SubmissionTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Asset Data"/>
+      <enumeration value="Contact Details"/>
+      <enumeration value="Service Areas"/>
+      <enumeration value="Backdrop Mapping"/>
+      <enumeration value="Supplementary Data"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="SubmissionTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+</schema>

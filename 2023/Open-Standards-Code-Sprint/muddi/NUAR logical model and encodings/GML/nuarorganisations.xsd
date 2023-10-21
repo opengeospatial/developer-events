@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:nuarcodelists_platform="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0" xmlns:nuardata="http://portal.nuar.uk/schemas/nuardata/2.1.0" xmlns:nuarorganisations="http://portal.nuar.uk/schemas/nuarorganisations/2.1.0" xmlns:nuarsubmissions="http://portal.nuar.uk/schemas/nuarsubmissions/2.1.0" elementFormDefault="qualified" targetNamespace="http://portal.nuar.uk/schemas/nuarorganisations/2.1.0" version="2.1.0">
+  <annotation>
+    <appinfo>
+      <gmlProfileSchema xmlns="http://www.opengis.net/gml/3.2">http://www.opengis.net/gml</gmlProfileSchema>
+    </appinfo>
+  </annotation>
+  <import namespace="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuardata/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuarsubmissions/2.1.0"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="NUARActivityProximityRule" substitutionGroup="nuardata:NUARRule" type="nuarorganisations:NUARActivityProximityRuleType"/>
+  <complexType name="NUARActivityProximityRuleType">
+    <complexContent>
+      <extension base="nuardata:NUARRuleType">
+        <sequence>
+          <element name="activityType" type="nuarcodelists_platform:ActivityTypeValueType"/>
+          <element name="proximity" type="nuardata:LengthTypePropertyType"/>
+          <element name="activityTypeID" type="nuarcodelists_platform:ActivityTypeValuePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARActivityProximityRulePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:NUARActivityProximityRule"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARActivityProximityRule_History" substitutionGroup="nuarorganisations:NUAROrganisationsRuleHistory" type="nuarorganisations:NUARActivityProximityRule_HistoryType"/>
+  <complexType name="NUARActivityProximityRule_HistoryType">
+    <complexContent>
+      <extension base="nuarorganisations:NUAROrganisationsRuleHistoryType">
+        <sequence>
+          <element name="activityType" type="nuarcodelists_platform:ActivityTypeValueType"/>
+          <element name="proximity" type="nuardata:LengthTypePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARActivityProximityRule_HistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:NUARActivityProximityRule_History"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARActor" substitutionGroup="nuardata:NUARObject" type="nuarorganisations:NUARActorType"/>
+  <complexType name="NUARActorType">
+    <complexContent>
+      <extension base="nuardata:NUARObjectType">
+        <sequence>
+          <element minOccurs="0" name="actorType" type="string"/>
+          <element minOccurs="0" name="name" type="string"/>
+          <element minOccurs="0" name="address" type="nuardata:NUARAddressTypePropertyType"/>
+          <element minOccurs="0" name="swaCode" type="string"/>
+          <element minOccurs="0" name="copyrightText" type="string"/>
+          <element minOccurs="0" name="corporateEmailDomains" type="string"/>
+          <element minOccurs="0" name="organisationType" type="string"/>
+          <element minOccurs="0" name="disclaimerText" type="string"/>
+          <element minOccurs="0" name="parentOrganisationName" type="string"/>
+          <element minOccurs="0" name="displayName" type="string"/>
+          <element minOccurs="0" name="reference" type="string"/>
+          <element minOccurs="0" name="websiteURL" type="string"/>
+          <element minOccurs="0" name="parentOrganisationID" type="string"/>
+          <element minOccurs="0" name="standardGuidance" type="string"/>
+          <element default="false" minOccurs="0" name="administeredByParent" type="boolean"/>
+          <element minOccurs="0" name="shortName" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARActorPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:NUARActor"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARActor_History" substitutionGroup="nuarorganisations:NUAROrganisationsHistory" type="nuarorganisations:NUARActor_HistoryType"/>
+  <complexType name="NUARActor_HistoryType">
+    <complexContent>
+      <extension base="nuarorganisations:NUAROrganisationsHistoryType">
+        <sequence>
+          <element minOccurs="0" name="actorType" type="string"/>
+          <element minOccurs="0" name="name" type="string"/>
+          <element minOccurs="0" name="address" type="nuardata:NUARAddressTypePropertyType"/>
+          <element minOccurs="0" name="swaCode" type="string"/>
+          <element minOccurs="0" name="copyrightText" type="string"/>
+          <element minOccurs="0" name="corporateEmailDomains" type="string"/>
+          <element minOccurs="0" name="organisationType" type="string"/>
+          <element minOccurs="0" name="disclaimerText" type="string"/>
+          <element minOccurs="0" name="parentOrganisationName" type="string"/>
+          <element minOccurs="0" name="displayName" type="string"/>
+          <element minOccurs="0" name="reference" type="string"/>
+          <element minOccurs="0" name="websiteURL" type="string"/>
+          <element minOccurs="0" name="parentOrganisationID" type="string"/>
+          <element minOccurs="0" name="standardGuidance" type="string"/>
+          <element default="false" minOccurs="0" name="administeredByParent" type="boolean"/>
+          <element minOccurs="0" name="shortName" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARActor_HistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:NUARActor_History"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARContactDetails" substitutionGroup="nuardata:NUARObject" type="nuarorganisations:NUARContactDetailsType"/>
+  <complexType name="NUARContactDetailsType">
+    <complexContent>
+      <extension base="nuardata:NUARObjectType">
+        <sequence>
+          <element minOccurs="0" name="organisationName" type="string"/>
+          <element minOccurs="0" name="address" type="nuardata:NUARAddressTypePropertyType"/>
+          <element minOccurs="0" name="contactDetailsType" type="string"/>
+          <element minOccurs="0" name="departmentName" type="string"/>
+          <element minOccurs="0" name="emailAddress" type="string"/>
+          <element minOccurs="0" name="telephoneNumber" type="string"/>
+          <element minOccurs="0" name="webForm" type="string"/>
+          <element name="dataProviderID" type="nuarorganisations:NUARActorPropertyType"/>
+          <element name="submissionEventID" type="nuarsubmissions:NUARSubmissionEventPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARContactDetailsPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:NUARContactDetails"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARContactDetails_History" substitutionGroup="nuarorganisations:NUAROrganisationsHistory" type="nuarorganisations:NUARContactDetails_HistoryType"/>
+  <complexType name="NUARContactDetails_HistoryType">
+    <complexContent>
+      <extension base="nuarorganisations:NUAROrganisationsHistoryType">
+        <sequence>
+          <element minOccurs="0" name="organisationName" type="string"/>
+          <element minOccurs="0" name="address" type="nuardata:NUARAddressTypePropertyType"/>
+          <element minOccurs="0" name="contactDetailsType" type="string"/>
+          <element minOccurs="0" name="departmentName" type="string"/>
+          <element minOccurs="0" name="emailAddress" type="string"/>
+          <element minOccurs="0" name="telephoneNumber" type="string"/>
+          <element minOccurs="0" name="webForm" type="string"/>
+          <element name="dataProviderID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARContactDetails_HistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:NUARContactDetails_History"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARDDA" substitutionGroup="nuardata:NUARObject" type="nuarorganisations:NUARDDAType"/>
+  <complexType name="NUARDDAType">
+    <complexContent>
+      <extension base="nuardata:NUARObjectType">
+        <sequence>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="reference" type="string"/>
+          <element minOccurs="0" name="versionDate" type="dateTime"/>
+          <element minOccurs="0" name="versionNumber" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARDDAPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:NUARDDA"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARDDA_History" substitutionGroup="nuarorganisations:NUAROrganisationsHistory" type="nuarorganisations:NUARDDA_HistoryType"/>
+  <complexType name="NUARDDA_HistoryType">
+    <complexContent>
+      <extension base="nuarorganisations:NUAROrganisationsHistoryType">
+        <sequence>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="reference" type="string"/>
+          <element minOccurs="0" name="versionDate" type="dateTime"/>
+          <element minOccurs="0" name="versionNumber" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARDDA_HistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:NUARDDA_History"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARDIS" substitutionGroup="nuardata:NUARObject" type="nuarorganisations:NUARDISType"/>
+  <complexType name="NUARDISType">
+    <complexContent>
+      <extension base="nuardata:NUARObjectType">
+        <sequence>
+          <element minOccurs="0" name="datasetNames" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="reference" type="string"/>
+          <element minOccurs="0" name="versionDate" type="dateTime"/>
+          <element minOccurs="0" name="versionNumber" type="string"/>
+          <element minOccurs="0" name="dataModelVersion" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARDISPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:NUARDIS"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARDIS_History" substitutionGroup="nuarorganisations:NUAROrganisationsHistory" type="nuarorganisations:NUARDIS_HistoryType"/>
+  <complexType name="NUARDIS_HistoryType">
+    <complexContent>
+      <extension base="nuarorganisations:NUAROrganisationsHistoryType">
+        <sequence>
+          <element minOccurs="0" name="datasetNames" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="reference" type="string"/>
+          <element minOccurs="0" name="versionDate" type="dateTime"/>
+          <element minOccurs="0" name="versionNumber" type="string"/>
+          <element minOccurs="0" name="dataModelVersion" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARDIS_HistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:NUARDIS_History"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="NUAROrganisationsHistory" substitutionGroup="nuardata:NUARObject" type="nuarorganisations:NUAROrganisationsHistoryType"/>
+  <complexType abstract="true" name="NUAROrganisationsHistoryType">
+    <complexContent>
+      <extension base="nuardata:NUARObjectType">
+        <sequence>
+          <element name="originalSystemID" type="string"/>
+          <element name="changeUserID" type="string"/>
+          <element name="dateAndTimeOfChange" type="dateTime"/>
+          <element name="fieldsChanged" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUAROrganisationsHistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:NUAROrganisationsHistory"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="NUAROrganisationsRelationshipsHistory" substitutionGroup="nuardata:NUARRelationship" type="nuarorganisations:NUAROrganisationsRelationshipsHistoryType"/>
+  <complexType abstract="true" name="NUAROrganisationsRelationshipsHistoryType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="originalSystemID" type="string"/>
+          <element name="changeUserID" type="string"/>
+          <element name="dateAndTimeOfChange" type="dateTime"/>
+          <element name="fieldsChanged" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUAROrganisationsRelationshipsHistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:NUAROrganisationsRelationshipsHistory"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="NUAROrganisationsRuleHistory" substitutionGroup="nuardata:NUARRule" type="nuarorganisations:NUAROrganisationsRuleHistoryType"/>
+  <complexType abstract="true" name="NUAROrganisationsRuleHistoryType">
+    <complexContent>
+      <extension base="nuardata:NUARRuleType">
+        <sequence>
+          <element name="originalSystemID" type="string"/>
+          <element name="changeUserID" type="string"/>
+          <element name="dateAndTimeOfChange" type="dateTime"/>
+          <element name="fieldsChanged" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUAROrganisationsRuleHistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:NUAROrganisationsRuleHistory"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_ActorToContactDetails" substitutionGroup="nuardata:NUARRelationship" type="nuarorganisations:Relationship_ActorToContactDetailsType"/>
+  <complexType name="Relationship_ActorToContactDetailsType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedActorID" type="string"/>
+          <element name="linkedContactDetailsID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_ActorToContactDetailsPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:Relationship_ActorToContactDetails"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_ActorToContactDetails_History" substitutionGroup="nuarorganisations:NUAROrganisationsRelationshipsHistory" type="nuarorganisations:Relationship_ActorToContactDetails_HistoryType"/>
+  <complexType name="Relationship_ActorToContactDetails_HistoryType">
+    <complexContent>
+      <extension base="nuarorganisations:NUAROrganisationsRelationshipsHistoryType">
+        <sequence>
+          <element name="linkedActorID" type="string"/>
+          <element name="linkedContactDetailsID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_ActorToContactDetails_HistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:Relationship_ActorToContactDetails_History"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_ActorToDDA" substitutionGroup="nuardata:NUARRelationship" type="nuarorganisations:Relationship_ActorToDDAType"/>
+  <complexType name="Relationship_ActorToDDAType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="dateDDASigned" type="dateTime"/>
+          <element minOccurs="0" name="signatoryOrganisationID" type="string"/>
+          <element name="nuarDDAID" type="string"/>
+          <element minOccurs="0" name="validUntilDate" type="dateTime"/>
+          <element minOccurs="0" name="nuarActorID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_ActorToDDAPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:Relationship_ActorToDDA"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_ActorToDDA_History" substitutionGroup="nuarorganisations:NUAROrganisationsRelationshipsHistory" type="nuarorganisations:Relationship_ActorToDDA_HistoryType"/>
+  <complexType name="Relationship_ActorToDDA_HistoryType">
+    <complexContent>
+      <extension base="nuarorganisations:NUAROrganisationsRelationshipsHistoryType">
+        <sequence>
+          <element name="dateDDASigned" type="dateTime"/>
+          <element minOccurs="0" name="signatoryOrganisationID" type="string"/>
+          <element name="nuarDDAID" type="string"/>
+          <element minOccurs="0" name="validUntilDate" type="dateTime"/>
+          <element minOccurs="0" name="nuarActorID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_ActorToDDA_HistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:Relationship_ActorToDDA_History"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_ActorToDIS" substitutionGroup="nuardata:NUARRelationship" type="nuarorganisations:Relationship_ActorToDISType"/>
+  <complexType name="Relationship_ActorToDISType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="nuarDISID" type="string"/>
+          <element name="nuarActorID" type="string"/>
+          <element minOccurs="0" name="dateDISAgreed" type="dateTime"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_ActorToDISPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:Relationship_ActorToDIS"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_ActorToDIS_History" substitutionGroup="nuarorganisations:NUAROrganisationsRelationshipsHistory" type="nuarorganisations:Relationship_ActorToDIS_HistoryType"/>
+  <complexType name="Relationship_ActorToDIS_HistoryType">
+    <complexContent>
+      <extension base="nuarorganisations:NUAROrganisationsRelationshipsHistoryType">
+        <sequence>
+          <element name="nuarDISID" type="string"/>
+          <element name="nuarActorID" type="string"/>
+          <element minOccurs="0" name="dateDISAgreed" type="dateTime"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_ActorToDIS_HistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:Relationship_ActorToDIS_History"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_ActorToRule" substitutionGroup="nuardata:NUARRelationship" type="nuarorganisations:Relationship_ActorToRuleType"/>
+  <complexType name="Relationship_ActorToRuleType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="actorID" type="string"/>
+          <element name="ruleTableName" type="string"/>
+          <element name="ruleID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_ActorToRulePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:Relationship_ActorToRule"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_ActorToRule_History" substitutionGroup="nuarorganisations:NUAROrganisationsRelationshipsHistory" type="nuarorganisations:Relationship_ActorToRule_HistoryType"/>
+  <complexType name="Relationship_ActorToRule_HistoryType">
+    <complexContent>
+      <extension base="nuarorganisations:NUAROrganisationsRelationshipsHistoryType">
+        <sequence>
+          <element name="actorID" type="string"/>
+          <element name="ruleTableName" type="string"/>
+          <element name="ruleID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_ActorToRule_HistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:Relationship_ActorToRule_History"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_ActorToServiceArea" substitutionGroup="nuardata:NUARRelationship" type="nuarorganisations:Relationship_ActorToServiceAreaType"/>
+  <complexType name="Relationship_ActorToServiceAreaType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="actorID" type="string"/>
+          <element name="serviceAreaID" type="string"/>
+          <element name="serviceAreaPurpose" type="nuarcodelists_platform:ServiceAreaPurposeValueType"/>
+          <element minOccurs="0" name="serviceAreaName" type="string"/>
+          <element minOccurs="0" name="utilityType" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_ActorToServiceAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:Relationship_ActorToServiceArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_ActorToServiceArea_History" substitutionGroup="nuarorganisations:NUAROrganisationsRelationshipsHistory" type="nuarorganisations:Relationship_ActorToServiceArea_HistoryType"/>
+  <complexType name="Relationship_ActorToServiceArea_HistoryType">
+    <complexContent>
+      <extension base="nuarorganisations:NUAROrganisationsRelationshipsHistoryType">
+        <sequence>
+          <element name="actorID" type="string"/>
+          <element name="serviceAreaID" type="string"/>
+          <element name="serviceAreaPurpose" type="nuarcodelists_platform:ServiceAreaPurposeValueType"/>
+          <element minOccurs="0" name="serviceAreaName" type="string"/>
+          <element minOccurs="0" name="utilityType" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_ActorToServiceArea_HistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarorganisations:Relationship_ActorToServiceArea_History"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>

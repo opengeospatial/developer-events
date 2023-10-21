@@ -1,0 +1,1672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://portal.nuar.uk/schemas/nuarcodelists_transformation/2.1.0" targetNamespace="http://portal.nuar.uk/schemas/nuarcodelists_transformation/2.1.0" elementFormDefault="qualified">
+<xs:element name="xml-tables" type="xml-tablesType"/>
+<xs:element name="nuarcodelists_transformation.networklinkcomponenttypevalue-table" type="nuarcodelists_transformation.networklinkcomponenttypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networklinkcomponenttypevalue" type="nuarcodelists_transformation.networklinkcomponenttypevalueType"/>
+<xs:element name="nuarcodelists_transformation.sitetoasset_linkedassettablevalue-table" type="nuarcodelists_transformation.sitetoasset_linkedassettablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.sitetoasset_linkedassettablevalue" type="nuarcodelists_transformation.sitetoasset_linkedassettablevalueType"/>
+<xs:element name="nuarcodelists_transformation.depthmethodvalue-table" type="nuarcodelists_transformation.depthmethodvalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.depthmethodvalue" type="nuarcodelists_transformation.depthmethodvalueType"/>
+<xs:element name="nuarcodelists_transformation.networktoservicearea_linkednetworktablevalue-table" type="nuarcodelists_transformation.networktoservicearea_linkednetworktablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networktoservicearea_linkednetworktablevalue" type="nuarcodelists_transformation.networktoservicearea_linkednetworktablevalueType"/>
+<xs:element name="nuarcodelists_transformation.networktosubnetwork_linkednetworktablevalue-table" type="nuarcodelists_transformation.networktosubnetwork_linkednetworktablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networktosubnetwork_linkednetworktablevalue" type="nuarcodelists_transformation.networktosubnetwork_linkednetworktablevalueType"/>
+<xs:element name="nuarcodelists_transformation.featuretypevalue-table" type="nuarcodelists_transformation.featuretypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.featuretypevalue" type="nuarcodelists_transformation.featuretypevalueType"/>
+<xs:element name="nuarcodelists_transformation.nonutilityobjecttypevalue-table" type="nuarcodelists_transformation.nonutilityobjecttypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.nonutilityobjecttypevalue" type="nuarcodelists_transformation.nonutilityobjecttypevalueType"/>
+<xs:element name="nuarcodelists_transformation.supporttypevalue_translated-table" type="nuarcodelists_transformation.supporttypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.supporttypevalue_translated" type="nuarcodelists_transformation.supporttypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.supporttypevalue-table" type="nuarcodelists_transformation.supporttypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.supporttypevalue" type="nuarcodelists_transformation.supporttypevalueType"/>
+<xs:element name="nuarcodelists_transformation.contactdetailstypevalue-table" type="nuarcodelists_transformation.contactdetailstypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.contactdetailstypevalue" type="nuarcodelists_transformation.contactdetailstypevalueType"/>
+<xs:element name="nuarcodelists_transformation.featuretypevalue_translated-table" type="nuarcodelists_transformation.featuretypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.featuretypevalue_translated" type="nuarcodelists_transformation.featuretypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.installationmethodtypevalue_translated-table" type="nuarcodelists_transformation.installationmethodtypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.installationmethodtypevalue_translated" type="nuarcodelists_transformation.installationmethodtypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.unitoftimevalue_translated-table" type="nuarcodelists_transformation.unitoftimevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.unitoftimevalue_translated" type="nuarcodelists_transformation.unitoftimevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.designationpurposevalue_translated-table" type="nuarcodelists_transformation.designationpurposevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.designationpurposevalue_translated" type="nuarcodelists_transformation.designationpurposevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.networknodecomponenttypevalue_translated-table" type="nuarcodelists_transformation.networknodecomponenttypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.networknodecomponenttypevalue_translated" type="nuarcodelists_transformation.networknodecomponenttypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.assettovov_linkedassettablevalue-table" type="nuarcodelists_transformation.assettovov_linkedassettablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.assettovov_linkedassettablevalue" type="nuarcodelists_transformation.assettovov_linkedassettablevalueType"/>
+<xs:element name="nuarcodelists_transformation.linktolinkzoi_linkedlinkedzoneofinteresttablevalue-table" type="nuarcodelists_transformation.linktolinkzoi_linkedlinkedzoneofinteresttablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.linktolinkzoi_linkedlinkedzoneofinteresttablevalue" type="nuarcodelists_transformation.linktolinkzoi_linkedlinkedzoneofinteresttablevalueType"/>
+<xs:element name="nuarcodelists_transformation.utilitysubtypevalue_translated-table" type="nuarcodelists_transformation.utilitysubtypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.utilitysubtypevalue_translated" type="nuarcodelists_transformation.utilitysubtypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.networktosubordinatenetwork_linkedsubordinatenetworktablevalue-table" type="nuarcodelists_transformation.networktosubordinatenetwork_linkedsubordinatenetworktablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networktosubordinatenetwork_linkedsubordinatenetworktablevalue" type="nuarcodelists_transformation.networktosubordinatenetwork_linkedsubordinatenetworktablevalueType"/>
+<xs:element name="nuarcodelists_transformation.assettovov_linkedvovtablevalue-table" type="nuarcodelists_transformation.assettovov_linkedvovtablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.assettovov_linkedvovtablevalue" type="nuarcodelists_transformation.assettovov_linkedvovtablevalueType"/>
+<xs:element name="nuarcodelists_transformation.locationtypevalue-table" type="nuarcodelists_transformation.locationtypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.locationtypevalue" type="nuarcodelists_transformation.locationtypevalueType"/>
+<xs:element name="nuarcodelists_transformation.sitetypevalue_translated-table" type="nuarcodelists_transformation.sitetypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.sitetypevalue_translated" type="nuarcodelists_transformation.sitetypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.accesstypevalue-table" type="nuarcodelists_transformation.accesstypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.accesstypevalue" type="nuarcodelists_transformation.accesstypevalueType"/>
+<xs:element name="nuarcodelists_transformation.unitoftimevalue-table" type="nuarcodelists_transformation.unitoftimevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.unitoftimevalue" type="nuarcodelists_transformation.unitoftimevalueType"/>
+<xs:element name="nuarcodelists_transformation.serviceareatypevalue-table" type="nuarcodelists_transformation.serviceareatypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.serviceareatypevalue" type="nuarcodelists_transformation.serviceareatypevalueType"/>
+<xs:element name="nuarcodelists_transformation.sitetoasset_linkedsitetablevalue-table" type="nuarcodelists_transformation.sitetoasset_linkedsitetablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.sitetoasset_linkedsitetablevalue" type="nuarcodelists_transformation.sitetoasset_linkedsitetablevalueType"/>
+<xs:element name="nuarcodelists_transformation.sewerdepthtypevalue_translated-table" type="nuarcodelists_transformation.sewerdepthtypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.sewerdepthtypevalue_translated" type="nuarcodelists_transformation.sewerdepthtypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.guidance_linkedobjecttablevalue-table" type="nuarcodelists_transformation.guidance_linkedobjecttablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.guidance_linkedobjecttablevalue" type="nuarcodelists_transformation.guidance_linkedobjecttablevalueType"/>
+<xs:element name="nuarcodelists_transformation.temperaturerangevalue_translated-table" type="nuarcodelists_transformation.temperaturerangevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.temperaturerangevalue_translated" type="nuarcodelists_transformation.temperaturerangevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.networktosubnetwork_linkedsubnetworktablevalue-table" type="nuarcodelists_transformation.networktosubnetwork_linkedsubnetworktablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networktosubnetwork_linkedsubnetworktablevalue" type="nuarcodelists_transformation.networktosubnetwork_linkedsubnetworktablevalueType"/>
+<xs:element name="nuarcodelists_transformation.materialvalue-table" type="nuarcodelists_transformation.materialvalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.materialvalue" type="nuarcodelists_transformation.materialvalueType"/>
+<xs:element name="nuarcodelists_transformation.sitetypevalue-table" type="nuarcodelists_transformation.sitetypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.sitetypevalue" type="nuarcodelists_transformation.sitetypevalueType"/>
+<xs:element name="nuarcodelists_transformation.networkdescriptiontypevalue-table" type="nuarcodelists_transformation.networkdescriptiontypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networkdescriptiontypevalue" type="nuarcodelists_transformation.networkdescriptiontypevalueType"/>
+<xs:element name="nuarcodelists_transformation.locationtypevalue_translated-table" type="nuarcodelists_transformation.locationtypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.locationtypevalue_translated" type="nuarcodelists_transformation.locationtypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.networknodecomponenttypevalue-table" type="nuarcodelists_transformation.networknodecomponenttypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networknodecomponenttypevalue" type="nuarcodelists_transformation.networknodecomponenttypevalueType"/>
+<xs:element name="nuarcodelists_transformation.networklinkcomponenttypevalue_translated-table" type="nuarcodelists_transformation.networklinkcomponenttypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.networklinkcomponenttypevalue_translated" type="nuarcodelists_transformation.networklinkcomponenttypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.contactdetailstypevalue_translated-table" type="nuarcodelists_transformation.contactdetailstypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.contactdetailstypevalue_translated" type="nuarcodelists_transformation.contactdetailstypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.accesstypevalue_translated-table" type="nuarcodelists_transformation.accesstypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.accesstypevalue_translated" type="nuarcodelists_transformation.accesstypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.physicalprotectiontypevalue-table" type="nuarcodelists_transformation.physicalprotectiontypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.physicalprotectiontypevalue" type="nuarcodelists_transformation.physicalprotectiontypevalueType"/>
+<xs:element name="nuarcodelists_transformation.linkedfile_linkedobjecttablevalue-table" type="nuarcodelists_transformation.linkedfile_linkedobjecttablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.linkedfile_linkedobjecttablevalue" type="nuarcodelists_transformation.linkedfile_linkedobjecttablevalueType"/>
+<xs:element name="nuarcodelists_transformation.conveyancecategoryvalue-table" type="nuarcodelists_transformation.conveyancecategoryvalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.conveyancecategoryvalue" type="nuarcodelists_transformation.conveyancecategoryvalueType"/>
+<xs:element name="nuarcodelists_transformation.networktoconveyance_linkednetworktablevalue-table" type="nuarcodelists_transformation.networktoconveyance_linkednetworktablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networktoconveyance_linkednetworktablevalue" type="nuarcodelists_transformation.networktoconveyance_linkednetworktablevalueType"/>
+<xs:element name="nuarcodelists_transformation.networkaccessorytypevalue-table" type="nuarcodelists_transformation.networkaccessorytypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networkaccessorytypevalue" type="nuarcodelists_transformation.networkaccessorytypevalueType"/>
+<xs:element name="nuarcodelists_transformation.utilitysubtypevalue-table" type="nuarcodelists_transformation.utilitysubtypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.utilitysubtypevalue" type="nuarcodelists_transformation.utilitysubtypevalueType"/>
+<xs:element name="nuarcodelists_transformation.linktolinkzoi_linkedlinktablevalue-table" type="nuarcodelists_transformation.linktolinkzoi_linkedlinktablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.linktolinkzoi_linkedlinktablevalue" type="nuarcodelists_transformation.linktolinkzoi_linkedlinktablevalueType"/>
+<xs:element name="nuarcodelists_transformation.conveyancemethodvalue_translated-table" type="nuarcodelists_transformation.conveyancemethodvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.conveyancemethodvalue_translated" type="nuarcodelists_transformation.conveyancemethodvalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.planningareatypevalue-table" type="nuarcodelists_transformation.planningareatypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.planningareatypevalue" type="nuarcodelists_transformation.planningareatypevalueType"/>
+<xs:element name="nuarcodelists_transformation.networkaccessorytypevalue_translated-table" type="nuarcodelists_transformation.networkaccessorytypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.networkaccessorytypevalue_translated" type="nuarcodelists_transformation.networkaccessorytypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.sewerdepthtypevalue-table" type="nuarcodelists_transformation.sewerdepthtypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.sewerdepthtypevalue" type="nuarcodelists_transformation.sewerdepthtypevalueType"/>
+<xs:element name="nuarcodelists_transformation.planningareatypevalue_translated-table" type="nuarcodelists_transformation.planningareatypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.planningareatypevalue_translated" type="nuarcodelists_transformation.planningareatypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.materialvalue_translated-table" type="nuarcodelists_transformation.materialvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.materialvalue_translated" type="nuarcodelists_transformation.materialvalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.networkdescriptiontypevalue_translated-table" type="nuarcodelists_transformation.networkdescriptiontypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.networkdescriptiontypevalue_translated" type="nuarcodelists_transformation.networkdescriptiontypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.temperaturerangevalue-table" type="nuarcodelists_transformation.temperaturerangevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.temperaturerangevalue" type="nuarcodelists_transformation.temperaturerangevalueType"/>
+<xs:element name="nuarcodelists_transformation.operatingconveyanceleveltypevalue-table" type="nuarcodelists_transformation.operatingconveyanceleveltypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.operatingconveyanceleveltypevalue" type="nuarcodelists_transformation.operatingconveyanceleveltypevalueType"/>
+<xs:element name="nuarcodelists_transformation.conveyancetoaccessory_linkedconveyancetablevalue-table" type="nuarcodelists_transformation.conveyancetoaccessory_linkedconveyancetablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.conveyancetoaccessory_linkedconveyancetablevalue" type="nuarcodelists_transformation.conveyancetoaccessory_linkedconveyancetablevalueType"/>
+<xs:element name="nuarcodelists_transformation.horizontalmeasurementmethodvalue-table" type="nuarcodelists_transformation.horizontalmeasurementmethodvalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.horizontalmeasurementmethodvalue" type="nuarcodelists_transformation.horizontalmeasurementmethodvalueType"/>
+<xs:element name="nuarcodelists_transformation.nodetonodezoi_linkednodezoneofinteresttablevalue-table" type="nuarcodelists_transformation.nodetonodezoi_linkednodezoneofinteresttablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.nodetonodezoi_linkednodezoneofinteresttablevalue" type="nuarcodelists_transformation.nodetonodezoi_linkednodezoneofinteresttablevalueType"/>
+<xs:element name="nuarcodelists_transformation.conveyancemethodvalue-table" type="nuarcodelists_transformation.conveyancemethodvalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.conveyancemethodvalue" type="nuarcodelists_transformation.conveyancemethodvalueType"/>
+<xs:element name="nuarcodelists_transformation.horizontalmeasurementmethodvalue_translated-table" type="nuarcodelists_transformation.horizontalmeasurementmethodvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.horizontalmeasurementmethodvalue_translated" type="nuarcodelists_transformation.horizontalmeasurementmethodvalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.nodetonodezoi_linkednodetablevalue-table" type="nuarcodelists_transformation.nodetonodezoi_linkednodetablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.nodetonodezoi_linkednodetablevalue" type="nuarcodelists_transformation.nodetonodezoi_linkednodetablevalueType"/>
+<xs:element name="nuarcodelists_transformation.installationmethodtypevalue-table" type="nuarcodelists_transformation.installationmethodtypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.installationmethodtypevalue" type="nuarcodelists_transformation.installationmethodtypevalueType"/>
+<xs:element name="nuarcodelists_transformation.depthmethodvalue_translated-table" type="nuarcodelists_transformation.depthmethodvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.depthmethodvalue_translated" type="nuarcodelists_transformation.depthmethodvalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.networktosubordinatenetwork_linkednetworktablevalue-table" type="nuarcodelists_transformation.networktosubordinatenetwork_linkednetworktablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networktosubordinatenetwork_linkednetworktablevalue" type="nuarcodelists_transformation.networktosubordinatenetwork_linkednetworktablevalueType"/>
+<xs:element name="nuarcodelists_transformation.intendedpermanencevalue_translated-table" type="nuarcodelists_transformation.intendedpermanencevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.intendedpermanencevalue_translated" type="nuarcodelists_transformation.intendedpermanencevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.networktosite_linkedsitetablevalue-table" type="nuarcodelists_transformation.networktosite_linkedsitetablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networktosite_linkedsitetablevalue" type="nuarcodelists_transformation.networktosite_linkedsitetablevalueType"/>
+<xs:element name="nuarcodelists_transformation.materialgradevalue_translated-table" type="nuarcodelists_transformation.materialgradevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.materialgradevalue_translated" type="nuarcodelists_transformation.materialgradevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.sitetositezoi_linkedsitetablevalue-table" type="nuarcodelists_transformation.sitetositezoi_linkedsitetablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.sitetositezoi_linkedsitetablevalue" type="nuarcodelists_transformation.sitetositezoi_linkedsitetablevalueType"/>
+<xs:element name="nuarcodelists_transformation.localereferencetypevalue-table" type="nuarcodelists_transformation.localereferencetypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.localereferencetypevalue" type="nuarcodelists_transformation.localereferencetypevalueType"/>
+<xs:element name="nuarcodelists_transformation.conveyancecategoryvalue_translated-table" type="nuarcodelists_transformation.conveyancecategoryvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.conveyancecategoryvalue_translated" type="nuarcodelists_transformation.conveyancecategoryvalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.networktoconveyance_linkedconveyancetablevalue-table" type="nuarcodelists_transformation.networktoconveyance_linkedconveyancetablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networktoconveyance_linkedconveyancetablevalue" type="nuarcodelists_transformation.networktoconveyance_linkedconveyancetablevalueType"/>
+<xs:element name="nuarcodelists_transformation.serviceareatypevalue_translated-table" type="nuarcodelists_transformation.serviceareatypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.serviceareatypevalue_translated" type="nuarcodelists_transformation.serviceareatypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.operatingconveyanceleveltypevalue_translated-table" type="nuarcodelists_transformation.operatingconveyanceleveltypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.operatingconveyanceleveltypevalue_translated" type="nuarcodelists_transformation.operatingconveyanceleveltypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.materialgradevalue-table" type="nuarcodelists_transformation.materialgradevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.materialgradevalue" type="nuarcodelists_transformation.materialgradevalueType"/>
+<xs:element name="nuarcodelists_transformation.localereferencetypevalue_translated-table" type="nuarcodelists_transformation.localereferencetypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.localereferencetypevalue_translated" type="nuarcodelists_transformation.localereferencetypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.networktosite_linkednetworktablevalue-table" type="nuarcodelists_transformation.networktosite_linkednetworktablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networktosite_linkednetworktablevalue" type="nuarcodelists_transformation.networktosite_linkednetworktablevalueType"/>
+<xs:element name="nuarcodelists_transformation.networktoservicearea_linkedserviceareatablevalue-table" type="nuarcodelists_transformation.networktoservicearea_linkedserviceareatablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.networktoservicearea_linkedserviceareatablevalue" type="nuarcodelists_transformation.networktoservicearea_linkedserviceareatablevalueType"/>
+<xs:element name="nuarcodelists_transformation.containertypevalue-table" type="nuarcodelists_transformation.containertypevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.containertypevalue" type="nuarcodelists_transformation.containertypevalueType"/>
+<xs:element name="nuarcodelists_transformation.physicalprotectiontypevalue_translated-table" type="nuarcodelists_transformation.physicalprotectiontypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.physicalprotectiontypevalue_translated" type="nuarcodelists_transformation.physicalprotectiontypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.nonutilityobjecttypevalue_translated-table" type="nuarcodelists_transformation.nonutilityobjecttypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.nonutilityobjecttypevalue_translated" type="nuarcodelists_transformation.nonutilityobjecttypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.containertypevalue_translated-table" type="nuarcodelists_transformation.containertypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_transformation.containertypevalue_translated" type="nuarcodelists_transformation.containertypevalue_translatedType"/>
+<xs:element name="nuarcodelists_transformation.conveyancetoaccessory_linkedaccessorytablevalue-table" type="nuarcodelists_transformation.conveyancetoaccessory_linkedaccessorytablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.conveyancetoaccessory_linkedaccessorytablevalue" type="nuarcodelists_transformation.conveyancetoaccessory_linkedaccessorytablevalueType"/>
+<xs:element name="nuarcodelists_transformation.intendedpermanencevalue-table" type="nuarcodelists_transformation.intendedpermanencevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.intendedpermanencevalue" type="nuarcodelists_transformation.intendedpermanencevalueType"/>
+<xs:element name="nuarcodelists_transformation.designationpurposevalue-table" type="nuarcodelists_transformation.designationpurposevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.designationpurposevalue" type="nuarcodelists_transformation.designationpurposevalueType"/>
+<xs:element name="nuarcodelists_transformation.sitetositezoi_linkedsitezoitablevalue-table" type="nuarcodelists_transformation.sitetositezoi_linkedsitezoitablevalue-tableType"/>
+<xs:element name="nuarcodelists_transformation.sitetositezoi_linkedsitezoitablevalue" type="nuarcodelists_transformation.sitetositezoi_linkedsitezoitablevalueType"/>
+<xs:complexType name="xml-tablesType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networklinkcomponenttypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.sitetoasset_linkedassettablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.depthmethodvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networktoservicearea_linkednetworktablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networktosubnetwork_linkednetworktablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.featuretypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.nonutilityobjecttypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.supporttypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.supporttypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.contactdetailstypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.featuretypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.installationmethodtypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.unitoftimevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.designationpurposevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networknodecomponenttypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.assettovov_linkedassettablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.linktolinkzoi_linkedlinkedzoneofinteresttablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.utilitysubtypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networktosubordinatenetwork_linkedsubordinatenetworktablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.assettovov_linkedvovtablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.locationtypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.sitetypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.accesstypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.unitoftimevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.serviceareatypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.sitetoasset_linkedsitetablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.sewerdepthtypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.guidance_linkedobjecttablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.temperaturerangevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networktosubnetwork_linkedsubnetworktablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.materialvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.sitetypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networkdescriptiontypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.locationtypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networknodecomponenttypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networklinkcomponenttypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.contactdetailstypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.accesstypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.physicalprotectiontypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.linkedfile_linkedobjecttablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.conveyancecategoryvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networktoconveyance_linkednetworktablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networkaccessorytypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.utilitysubtypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.linktolinkzoi_linkedlinktablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.conveyancemethodvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.planningareatypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networkaccessorytypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.sewerdepthtypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.planningareatypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.materialvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networkdescriptiontypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.temperaturerangevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.operatingconveyanceleveltypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.conveyancetoaccessory_linkedconveyancetablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.horizontalmeasurementmethodvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.nodetonodezoi_linkednodezoneofinteresttablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.conveyancemethodvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.horizontalmeasurementmethodvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.nodetonodezoi_linkednodetablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.installationmethodtypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.depthmethodvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networktosubordinatenetwork_linkednetworktablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.intendedpermanencevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networktosite_linkedsitetablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.materialgradevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.sitetositezoi_linkedsitetablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.localereferencetypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.conveyancecategoryvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networktoconveyance_linkedconveyancetablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.serviceareatypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.operatingconveyanceleveltypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.materialgradevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.localereferencetypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networktosite_linkednetworktablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.networktoservicearea_linkedserviceareatablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.containertypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.physicalprotectiontypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.nonutilityobjecttypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.containertypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.conveyancetoaccessory_linkedaccessorytablevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.intendedpermanencevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.designationpurposevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_transformation.sitetositezoi_linkedsitezoitablevalue-table" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networklinkcomponenttypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networklinkcomponenttypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networklinkcomponenttypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+<xs:element name="applicabledomains" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sitetoasset_linkedassettablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.sitetoasset_linkedassettablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sitetoasset_linkedassettablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.depthmethodvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.depthmethodvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.depthmethodvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktoservicearea_linkednetworktablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networktoservicearea_linkednetworktablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktoservicearea_linkednetworktablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktosubnetwork_linkednetworktablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networktosubnetwork_linkednetworktablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktosubnetwork_linkednetworktablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.featuretypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.featuretypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.featuretypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.nonutilityobjecttypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.nonutilityobjecttypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.nonutilityobjecttypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.supporttypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.supporttypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.supporttypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.supporttypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.supporttypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.supporttypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.contactdetailstypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.contactdetailstypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.contactdetailstypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.featuretypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.featuretypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.featuretypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.installationmethodtypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.installationmethodtypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.installationmethodtypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.unitoftimevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.unitoftimevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.unitoftimevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.designationpurposevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.designationpurposevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.designationpurposevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networknodecomponenttypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networknodecomponenttypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networknodecomponenttypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.assettovov_linkedassettablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.assettovov_linkedassettablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.assettovov_linkedassettablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.linktolinkzoi_linkedlinkedzoneofinteresttablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.linktolinkzoi_linkedlinkedzoneofinteresttablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.linktolinkzoi_linkedlinkedzoneofinteresttablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.utilitysubtypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.utilitysubtypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.utilitysubtypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktosubordinatenetwork_linkedsubordinatenetworktablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networktosubordinatenetwork_linkedsubordinatenetworktablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktosubordinatenetwork_linkedsubordinatenetworktablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.assettovov_linkedvovtablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.assettovov_linkedvovtablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.assettovov_linkedvovtablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.locationtypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.locationtypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.locationtypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sitetypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.sitetypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sitetypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.accesstypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.accesstypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.accesstypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.unitoftimevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.unitoftimevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.unitoftimevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.serviceareatypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.serviceareatypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.serviceareatypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+<xs:element name="applicabledomains" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sitetoasset_linkedsitetablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.sitetoasset_linkedsitetablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sitetoasset_linkedsitetablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sewerdepthtypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.sewerdepthtypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sewerdepthtypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.guidance_linkedobjecttablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.guidance_linkedobjecttablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.guidance_linkedobjecttablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.temperaturerangevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.temperaturerangevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.temperaturerangevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktosubnetwork_linkedsubnetworktablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networktosubnetwork_linkedsubnetworktablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktosubnetwork_linkedsubnetworktablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.materialvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.materialvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.materialvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sitetypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.sitetypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sitetypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+<xs:element name="applicabledomains" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networkdescriptiontypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networkdescriptiontypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networkdescriptiontypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.locationtypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.locationtypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.locationtypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networknodecomponenttypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networknodecomponenttypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networknodecomponenttypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+<xs:element name="applicabledomains" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networklinkcomponenttypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networklinkcomponenttypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networklinkcomponenttypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.contactdetailstypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.contactdetailstypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.contactdetailstypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.accesstypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.accesstypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.accesstypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.physicalprotectiontypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.physicalprotectiontypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.physicalprotectiontypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.linkedfile_linkedobjecttablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.linkedfile_linkedobjecttablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.linkedfile_linkedobjecttablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.conveyancecategoryvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.conveyancecategoryvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.conveyancecategoryvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+<xs:element name="applicabledomains" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktoconveyance_linkednetworktablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networktoconveyance_linkednetworktablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktoconveyance_linkednetworktablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networkaccessorytypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networkaccessorytypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networkaccessorytypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.utilitysubtypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.utilitysubtypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.utilitysubtypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+<xs:element name="applicabledomains" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.linktolinkzoi_linkedlinktablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.linktolinkzoi_linkedlinktablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.linktolinkzoi_linkedlinktablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.conveyancemethodvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.conveyancemethodvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.conveyancemethodvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.planningareatypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.planningareatypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.planningareatypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networkaccessorytypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networkaccessorytypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networkaccessorytypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sewerdepthtypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.sewerdepthtypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sewerdepthtypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.planningareatypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.planningareatypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.planningareatypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.materialvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.materialvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.materialvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networkdescriptiontypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networkdescriptiontypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networkdescriptiontypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.temperaturerangevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.temperaturerangevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.temperaturerangevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.operatingconveyanceleveltypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.operatingconveyanceleveltypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.operatingconveyanceleveltypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+<xs:element name="applicabledomains" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.conveyancetoaccessory_linkedconveyancetablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.conveyancetoaccessory_linkedconveyancetablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.conveyancetoaccessory_linkedconveyancetablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.horizontalmeasurementmethodvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.horizontalmeasurementmethodvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.horizontalmeasurementmethodvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.nodetonodezoi_linkednodezoneofinteresttablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.nodetonodezoi_linkednodezoneofinteresttablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.nodetonodezoi_linkednodezoneofinteresttablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.conveyancemethodvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.conveyancemethodvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.conveyancemethodvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+<xs:element name="applicabledomains" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.horizontalmeasurementmethodvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.horizontalmeasurementmethodvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.horizontalmeasurementmethodvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.nodetonodezoi_linkednodetablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.nodetonodezoi_linkednodetablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.nodetonodezoi_linkednodetablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.installationmethodtypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.installationmethodtypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.installationmethodtypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.depthmethodvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.depthmethodvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.depthmethodvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktosubordinatenetwork_linkednetworktablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networktosubordinatenetwork_linkednetworktablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktosubordinatenetwork_linkednetworktablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.intendedpermanencevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.intendedpermanencevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.intendedpermanencevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktosite_linkedsitetablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networktosite_linkedsitetablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktosite_linkedsitetablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.materialgradevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.materialgradevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.materialgradevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sitetositezoi_linkedsitetablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.sitetositezoi_linkedsitetablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sitetositezoi_linkedsitetablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.localereferencetypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.localereferencetypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.localereferencetypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.conveyancecategoryvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.conveyancecategoryvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.conveyancecategoryvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktoconveyance_linkedconveyancetablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networktoconveyance_linkedconveyancetablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktoconveyance_linkedconveyancetablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.serviceareatypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.serviceareatypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.serviceareatypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.operatingconveyanceleveltypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.operatingconveyanceleveltypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.operatingconveyanceleveltypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.materialgradevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.materialgradevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.materialgradevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.localereferencetypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.localereferencetypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.localereferencetypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktosite_linkednetworktablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networktosite_linkednetworktablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktosite_linkednetworktablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktoservicearea_linkedserviceareatablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.networktoservicearea_linkedserviceareatablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.networktoservicearea_linkedserviceareatablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.containertypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.containertypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.containertypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.physicalprotectiontypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.physicalprotectiontypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.physicalprotectiontypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.nonutilityobjecttypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.nonutilityobjecttypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.nonutilityobjecttypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.containertypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.containertypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.containertypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.conveyancetoaccessory_linkedaccessorytablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.conveyancetoaccessory_linkedaccessorytablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.conveyancetoaccessory_linkedaccessorytablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.intendedpermanencevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.intendedpermanencevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.intendedpermanencevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.designationpurposevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.designationpurposevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.designationpurposevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sitetositezoi_linkedsitezoitablevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_transformation.sitetositezoi_linkedsitezoitablevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_transformation.sitetositezoi_linkedsitezoitablevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

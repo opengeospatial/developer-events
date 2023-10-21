@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-tables xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0" xsi:schemaLocation="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0 Codelist_Register_Platform.xsd">
+<nuarcodelists_platform.utilitytypevalue-table>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>85028d29-0d8d-472f-a81c-58ee4a75d78b</systemid>
+<value>Drainage</value>
+<applicabledomains>Drainage,Sewer</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>092314a7-450d-4e53-80ee-8e988aa0b637</systemid>
+<value>Electric</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>bdcf7c91-4f55-46eb-a3c9-2e8a921dd6f9</systemid>
+<value>Gas</value>
+<applicabledomains>Gas</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>495cdfa5-adac-4187-88bd-a38d6c76b868</systemid>
+<value>HVAC</value>
+<applicabledomains>Electricity,Fuel And Chemicals,Gas,Thermal</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>bdffc282-2353-4bd7-9e75-bd08583802cd</systemid>
+<value>Oil</value>
+<applicabledomains>Fuel And Chemicals</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>8a9b37cf-0635-4ef6-92f9-c64903d87210</systemid>
+<value>Other</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>3ca72864-9533-426d-b1f7-2d62b62a4bed</systemid>
+<value>Petroleum</value>
+<applicabledomains>Fuel And Chemicals</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>20a011bf-3778-4b7b-b49f-bdb7216f8646</systemid>
+<value>Sewer</value>
+<applicabledomains>Drainage,Sewer</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>43b226b8-6c04-4964-94d6-2eccaf17ddff</systemid>
+<value>Slurry</value>
+<applicabledomains>Fuel And Chemicals</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>97cc03b2-5bbd-4c72-a8a1-a93f43f0d0b7</systemid>
+<value>Telecommunication</value>
+<applicabledomains>Telco,Transport Signalling</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>6cb4c359-a9f8-44c8-95d1-eccdbcbcf2b6</systemid>
+<value>Transportation</value>
+<applicabledomains>Electricity,Telco,Transport Signalling</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>5542c39a-a8f1-4bb0-b82c-8be266ea07c2</systemid>
+<value>Water</value>
+<applicabledomains>Drainage,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>142e189b-df99-48dc-80e0-7eb9e5dcae12</systemid>
+<value>Beer</value>
+<applicabledomains>Fuel And Chemicals</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>1b307fc9-4d26-4087-a081-9c008961c325</systemid>
+<value>Chemicals</value>
+<applicabledomains>Fuel And Chemicals</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+<nuarcodelists_platform.utilitytypevalue>
+<systemid>4168368c-9963-4061-88e6-f29f0cf2a0b6</systemid>
+<value>District Heating</value>
+<applicabledomains>Electricity,Fuel And Chemicals,Gas,Thermal,Water</applicabledomains>
+</nuarcodelists_platform.utilitytypevalue>
+</nuarcodelists_platform.utilitytypevalue-table>
+<nuarcodelists_platform.enhancedmeasurestypevalue-table>
+<nuarcodelists_platform.enhancedmeasurestypevalue>
+<systemid>9700649d-33a8-402a-84bc-aac5750c1518</systemid>
+<value>Proceed with caution</value>
+</nuarcodelists_platform.enhancedmeasurestypevalue>
+<nuarcodelists_platform.enhancedmeasurestypevalue>
+<systemid>9a0f1024-80c6-49ac-be64-12f17d56c133</systemid>
+<value>Special guidance required</value>
+</nuarcodelists_platform.enhancedmeasurestypevalue>
+<nuarcodelists_platform.enhancedmeasurestypevalue>
+<systemid>b4335aab-f816-4d56-8508-602bfeee7522</systemid>
+<value>Further consultation required</value>
+</nuarcodelists_platform.enhancedmeasurestypevalue>
+<nuarcodelists_platform.enhancedmeasurestypevalue>
+<systemid>59cf18b6-2957-4a8b-934f-273da0542df8</systemid>
+<value>Permission required</value>
+</nuarcodelists_platform.enhancedmeasurestypevalue>
+<nuarcodelists_platform.enhancedmeasurestypevalue>
+<systemid>308ff580-ee8c-4e38-8077-9045419b055a</systemid>
+<value>Active monitoring of searches</value>
+</nuarcodelists_platform.enhancedmeasurestypevalue>
+</nuarcodelists_platform.enhancedmeasurestypevalue-table>
+<nuarcodelists_platform.observationsharingscopesecondaryvalue-table>
+<nuarcodelists_platform.observationsharingscopesecondaryvalue>
+<systemid>a9d7f7d5-43df-46c4-8cd1-cc3c25729db2</systemid>
+<value>Private</value>
+</nuarcodelists_platform.observationsharingscopesecondaryvalue>
+<nuarcodelists_platform.observationsharingscopesecondaryvalue>
+<systemid>6c06e469-93f5-48f9-9ba0-acab3b22c2a8</systemid>
+<value>Organisation Only</value>
+</nuarcodelists_platform.observationsharingscopesecondaryvalue>
+<nuarcodelists_platform.observationsharingscopesecondaryvalue>
+<systemid>91abf034-3a24-46cc-bf69-a4295ec994c4</systemid>
+<value>Supply Chain</value>
+</nuarcodelists_platform.observationsharingscopesecondaryvalue>
+</nuarcodelists_platform.observationsharingscopesecondaryvalue-table>
+<nuarcodelists_platform.undergroundstatusvalue-table>
+<nuarcodelists_platform.undergroundstatusvalue>
+<systemid>d140e73f-d85e-435f-883a-f8ca9ad03f2b</systemid>
+<value>Overhead</value>
+</nuarcodelists_platform.undergroundstatusvalue>
+<nuarcodelists_platform.undergroundstatusvalue>
+<systemid>13c2271f-d243-400c-8c82-6e4370162ef7</systemid>
+<value>Aboveground</value>
+</nuarcodelists_platform.undergroundstatusvalue>
+<nuarcodelists_platform.undergroundstatusvalue>
+<systemid>602ef6b1-40b2-4c71-8473-ccd07edf16a1</systemid>
+<value>Surface</value>
+</nuarcodelists_platform.undergroundstatusvalue>
+<nuarcodelists_platform.undergroundstatusvalue>
+<systemid>11a15421-fdfb-4100-b24d-ad2cce30c5a6</systemid>
+<value>Underground</value>
+</nuarcodelists_platform.undergroundstatusvalue>
+<nuarcodelists_platform.undergroundstatusvalue>
+<systemid>2f4835fc-0c5b-4fc4-853d-2287c3e475a1</systemid>
+<value>Submerged</value>
+</nuarcodelists_platform.undergroundstatusvalue>
+<nuarcodelists_platform.undergroundstatusvalue>
+<systemid>b30e09c4-6037-4564-87b3-b5f780cb22c1</systemid>
+<value>Mixed</value>
+</nuarcodelists_platform.undergroundstatusvalue>
+</nuarcodelists_platform.undergroundstatusvalue-table>
+<nuarcodelists_platform.serviceareapurposevalue-table>
+<nuarcodelists_platform.serviceareapurposevalue>
+<systemid>a247c901-6447-422f-85d8-f63df954ca57</systemid>
+<value>Regulatory Area</value>
+</nuarcodelists_platform.serviceareapurposevalue>
+<nuarcodelists_platform.serviceareapurposevalue>
+<systemid>0c2e7d83-137d-4416-9620-81e55a209d49</systemid>
+<value>Asset Network Coverage</value>
+</nuarcodelists_platform.serviceareapurposevalue>
+<nuarcodelists_platform.serviceareapurposevalue>
+<systemid>0d6070fd-039f-42bd-a7af-2bc35aa509a2</systemid>
+<value>Operations Coverage</value>
+</nuarcodelists_platform.serviceareapurposevalue>
+<nuarcodelists_platform.serviceareapurposevalue>
+<systemid>0d3ca25f-45a8-430f-b600-aac0c5caade4</systemid>
+<value>Other</value>
+</nuarcodelists_platform.serviceareapurposevalue>
+</nuarcodelists_platform.serviceareapurposevalue-table>
+<nuarcodelists_platform.datasensitivitylevelvalue-table>
+</nuarcodelists_platform.datasensitivitylevelvalue-table>
+<nuarcodelists_platform.observationimpactvalue-table>
+<nuarcodelists_platform.observationimpactvalue>
+<systemid>e4e2cbdd-aee2-49e1-9e0c-de1cad14acce</systemid>
+<value>Minimal</value>
+</nuarcodelists_platform.observationimpactvalue>
+<nuarcodelists_platform.observationimpactvalue>
+<systemid>ef3db960-631d-4749-a2c6-4d3349b50f92</systemid>
+<value>Moderate</value>
+</nuarcodelists_platform.observationimpactvalue>
+<nuarcodelists_platform.observationimpactvalue>
+<systemid>120dabbc-6f59-4f0b-a444-fb9f531175de</systemid>
+<value>Other</value>
+</nuarcodelists_platform.observationimpactvalue>
+<nuarcodelists_platform.observationimpactvalue>
+<systemid>1f978945-32a5-4648-934d-410b8b18a022</systemid>
+<value>No Impact</value>
+</nuarcodelists_platform.observationimpactvalue>
+<nuarcodelists_platform.observationimpactvalue>
+<systemid>315af681-3cee-496f-bf28-404907c22cd4</systemid>
+<value>Significant</value>
+</nuarcodelists_platform.observationimpactvalue>
+<nuarcodelists_platform.observationimpactvalue>
+<systemid>94f74939-a78a-4b79-a669-613ab5c584df</systemid>
+<value>Works Suspended</value>
+</nuarcodelists_platform.observationimpactvalue>
+</nuarcodelists_platform.observationimpactvalue-table>
+<nuarcodelists_platform.annotationverticalalignmentvalue-table>
+<nuarcodelists_platform.annotationverticalalignmentvalue>
+<systemid>8616c268-6f3b-494b-a7a6-71ccf8e968eb</systemid>
+<value>Baseline</value>
+</nuarcodelists_platform.annotationverticalalignmentvalue>
+<nuarcodelists_platform.annotationverticalalignmentvalue>
+<systemid>4110a676-4bee-4b41-82d1-04071c04dd44</systemid>
+<value>Top</value>
+</nuarcodelists_platform.annotationverticalalignmentvalue>
+<nuarcodelists_platform.annotationverticalalignmentvalue>
+<systemid>dd827ad8-5f7d-4e21-bc4b-8a29a183bfb7</systemid>
+<value>Bottom</value>
+</nuarcodelists_platform.annotationverticalalignmentvalue>
+<nuarcodelists_platform.annotationverticalalignmentvalue>
+<systemid>53959d1b-f633-40c4-9b63-b9499621b601</systemid>
+<value>Centre</value>
+</nuarcodelists_platform.annotationverticalalignmentvalue>
+</nuarcodelists_platform.annotationverticalalignmentvalue-table>
+<nuarcodelists_platform.qualitylevelvalue-table>
+<nuarcodelists_platform.qualitylevelvalue>
+<systemid>2cca5560-73bb-4206-9d7d-913fb7a53044</systemid>
+<value>QL-A</value>
+</nuarcodelists_platform.qualitylevelvalue>
+<nuarcodelists_platform.qualitylevelvalue>
+<systemid>313418cb-8424-4b34-b27c-e28e07643220</systemid>
+<value>QL-B1</value>
+</nuarcodelists_platform.qualitylevelvalue>
+<nuarcodelists_platform.qualitylevelvalue>
+<systemid>c04911d4-bb7f-4587-bb96-59ef004869e5</systemid>
+<value>QL-B1P</value>
+</nuarcodelists_platform.qualitylevelvalue>
+<nuarcodelists_platform.qualitylevelvalue>
+<systemid>6abc7cfa-ce30-4d62-926d-339e6e0da043</systemid>
+<value>QL-B2</value>
+</nuarcodelists_platform.qualitylevelvalue>
+<nuarcodelists_platform.qualitylevelvalue>
+<systemid>becc6da1-29ac-46e9-8f80-ffafc1dfa78d</systemid>
+<value>QL-B2P</value>
+</nuarcodelists_platform.qualitylevelvalue>
+<nuarcodelists_platform.qualitylevelvalue>
+<systemid>e84dd7e6-cbb0-4a3b-8d1d-b5f049cffbc9</systemid>
+<value>QL-B3</value>
+</nuarcodelists_platform.qualitylevelvalue>
+<nuarcodelists_platform.qualitylevelvalue>
+<systemid>cef5640b-2519-44bb-9920-e4b53cf84790</systemid>
+<value>QL-B3P</value>
+</nuarcodelists_platform.qualitylevelvalue>
+<nuarcodelists_platform.qualitylevelvalue>
+<systemid>338fb9f1-5c80-4b95-ac32-d5d9ccbd8ac7</systemid>
+<value>QL-B4</value>
+</nuarcodelists_platform.qualitylevelvalue>
+<nuarcodelists_platform.qualitylevelvalue>
+<systemid>1e81a0a0-482e-44ca-a567-345a399b7fc9</systemid>
+<value>QL-B4P</value>
+</nuarcodelists_platform.qualitylevelvalue>
+<nuarcodelists_platform.qualitylevelvalue>
+<systemid>f3164baa-95a7-4fe1-87b6-d231aa4ef51c</systemid>
+<value>QL-C</value>
+</nuarcodelists_platform.qualitylevelvalue>
+<nuarcodelists_platform.qualitylevelvalue>
+<systemid>3f796663-743f-488d-a4cb-739c431e3c8d</systemid>
+<value>QL-D</value>
+</nuarcodelists_platform.qualitylevelvalue>
+</nuarcodelists_platform.qualitylevelvalue-table>
+<nuarcodelists_platform.measurementunitsvalue-table>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>de0d9e58-c35c-443c-873a-cf4d97432228</systemid>
+<value>bar</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>f4c08ea9-fc48-43bc-87b9-c42ce7a36a0a</systemid>
+<value>Centimetres</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>e6f78290-f4d3-45e7-b50d-bb821aaffb59</systemid>
+<value>Degrees</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>07a1a402-3bf5-4332-9487-81c656ca32a7</systemid>
+<value>Degrees Centigrade</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>ad86542a-bad0-4359-a8e8-bdd39749887b</systemid>
+<value>Degrees Fahrenheit</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>0aa63273-476b-4c67-8ab4-88786700ab88</systemid>
+<value>Feet</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>41f04fa3-f201-4ff6-a597-62e95c6c722f</systemid>
+<value>Inches</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>5ba51e91-53b5-422d-a0ed-4c81465f9bc3</systemid>
+<value>kV</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>e49447d8-8589-4ea1-9308-f456822f9d57</systemid>
+<value>mBar</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>82e11013-4a61-457c-94cd-2c55eef6c7d5</systemid>
+<value>Megahertz</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>d9574b45-ab5d-419a-87e1-548624f53263</systemid>
+<value>Metres</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>ea7d0154-83d0-4f9b-ac1d-9019ec685fa3</systemid>
+<value>Millimetres</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>81b7f05e-2f53-4de1-b3e0-7776b212fe3c</systemid>
+<value>Radians</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>a11ede04-69ee-4683-a12c-c16ec89df3c4</systemid>
+<value>Revolutions</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>f48d39d3-769b-45a5-ba63-75d5539eac26</systemid>
+<value>Unknown</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>db0e0c5e-a1fe-462d-b6cc-bcc94f8dd71c</systemid>
+<value>V</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>bc2d5f1e-cb6b-4cd3-bac7-394e38b8d133</systemid>
+<value>Yards</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>3d087cc9-4310-416b-b5d5-317bd80eebb4</systemid>
+<value>Kilometres</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>5f55c587-9bb6-401f-95c1-200b6385dd2d</systemid>
+<value>Miles</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>5e21517d-6399-47c2-8b9f-9d64f4889b88</systemid>
+<value>Square Centimetres</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>84c8ddd2-47e2-4b42-82d4-bfbfaa70992d</systemid>
+<value>Square Feet</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>88ccd78d-2979-46c7-af77-36c6b0fd9a3a</systemid>
+<value>Square Inches</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>59fce6a3-028e-438c-88d0-787db3f30257</systemid>
+<value>Square Kilometres</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>0ead4efb-d76c-43de-8e1c-7ebe371f1038</systemid>
+<value>Square Metres</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>642cdfb0-e65e-499d-a8ea-ed5c6306505b</systemid>
+<value>Square Miles</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>ff7dbdcc-8f83-4fe4-a509-1bc2cbd60592</systemid>
+<value>Square Millimetres</value>
+</nuarcodelists_platform.measurementunitsvalue>
+<nuarcodelists_platform.measurementunitsvalue>
+<systemid>6e682ea7-4eae-4247-b690-73135eaf739f</systemid>
+<value>Square Yards</value>
+</nuarcodelists_platform.measurementunitsvalue>
+</nuarcodelists_platform.measurementunitsvalue-table>
+<nuarcodelists_platform.coveragetypevalue-table>
+<nuarcodelists_platform.coveragetypevalue>
+<systemid>1ba029be-f073-4d3a-8e0e-24b0e05f0b3b</systemid>
+<value>Custom Backdrop</value>
+</nuarcodelists_platform.coveragetypevalue>
+<nuarcodelists_platform.coveragetypevalue>
+<systemid>34438c77-3766-4ab9-ad52-1bbbfee111d9</systemid>
+<value>GeoReferenced Layer</value>
+</nuarcodelists_platform.coveragetypevalue>
+<nuarcodelists_platform.coveragetypevalue>
+<systemid>50f3b699-4a04-40e3-809a-5f95e64cef7e</systemid>
+<value>Supplemental Data Area</value>
+</nuarcodelists_platform.coveragetypevalue>
+<nuarcodelists_platform.coveragetypevalue>
+<systemid>30ed6a18-141b-4ecc-8efd-facc3d29b236</systemid>
+<value>Other</value>
+</nuarcodelists_platform.coveragetypevalue>
+</nuarcodelists_platform.coveragetypevalue-table>
+<nuarcodelists_platform.dataservicetypevalue-table>
+<nuarcodelists_platform.dataservicetypevalue>
+<systemid>db1282a5-1801-4dc0-a761-8263e7156f59</systemid>
+<value>OGC API Features</value>
+</nuarcodelists_platform.dataservicetypevalue>
+<nuarcodelists_platform.dataservicetypevalue>
+<systemid>b54ca1e3-ba37-49bc-acc3-cf37ab8053f5</systemid>
+<value>OGC API Tiles</value>
+</nuarcodelists_platform.dataservicetypevalue>
+<nuarcodelists_platform.dataservicetypevalue>
+<systemid>b99d3259-6648-4180-8844-1d5346f8a767</systemid>
+<value>VTS</value>
+</nuarcodelists_platform.dataservicetypevalue>
+<nuarcodelists_platform.dataservicetypevalue>
+<systemid>4803a99c-52b7-43c1-9d1e-995c48e0fb03</systemid>
+<value>WFS</value>
+</nuarcodelists_platform.dataservicetypevalue>
+<nuarcodelists_platform.dataservicetypevalue>
+<systemid>61240616-181a-4d0e-b0ad-d31e67692b41</systemid>
+<value>WMS</value>
+</nuarcodelists_platform.dataservicetypevalue>
+<nuarcodelists_platform.dataservicetypevalue>
+<systemid>7c0ec256-d695-4371-8ff2-8e1525952e83</systemid>
+<value>WMTS</value>
+</nuarcodelists_platform.dataservicetypevalue>
+<nuarcodelists_platform.dataservicetypevalue>
+<systemid>b89740a9-92b0-4fd1-896b-eed37ca462f6</systemid>
+<value>Custom</value>
+</nuarcodelists_platform.dataservicetypevalue>
+<nuarcodelists_platform.dataservicetypevalue>
+<systemid>87b7d592-a1ff-4273-8b08-b097e666187e</systemid>
+<value>Other</value>
+</nuarcodelists_platform.dataservicetypevalue>
+</nuarcodelists_platform.dataservicetypevalue-table>
+<nuarcodelists_platform.organisationtypevalue-table>
+<nuarcodelists_platform.organisationtypevalue>
+<systemid>a278cbce-fa9f-4e7b-b99a-41802e05516d</systemid>
+<value>Asset Owner</value>
+</nuarcodelists_platform.organisationtypevalue>
+<nuarcodelists_platform.organisationtypevalue>
+<systemid>a3059ddd-2b27-4551-8ff5-2d6506d061ee</systemid>
+<value>Asset Owner Subsidiary</value>
+</nuarcodelists_platform.organisationtypevalue>
+<nuarcodelists_platform.organisationtypevalue>
+<systemid>7d0f8cb7-9a71-46c5-ab2e-f7899a443e7b</systemid>
+<value>Tier 1 Contractor</value>
+</nuarcodelists_platform.organisationtypevalue>
+<nuarcodelists_platform.organisationtypevalue>
+<systemid>481ca89b-8e29-4eae-acda-129dc8a000f2</systemid>
+<value>Tier 2 Contractor</value>
+</nuarcodelists_platform.organisationtypevalue>
+<nuarcodelists_platform.organisationtypevalue>
+<systemid>661020c5-f911-4ff4-abb4-34e0ff854184</systemid>
+<value>Subcontractor</value>
+</nuarcodelists_platform.organisationtypevalue>
+<nuarcodelists_platform.organisationtypevalue>
+<systemid>b07c7391-f9a9-4e0d-9992-d8a4ca2977a3</systemid>
+<value>Other</value>
+</nuarcodelists_platform.organisationtypevalue>
+</nuarcodelists_platform.organisationtypevalue-table>
+<nuarcodelists_platform.annotationhorizontalalignmentvalue-table>
+<nuarcodelists_platform.annotationhorizontalalignmentvalue>
+<systemid>e82695f2-ad74-4091-bd6f-638d3a0045d7</systemid>
+<value>Left</value>
+</nuarcodelists_platform.annotationhorizontalalignmentvalue>
+<nuarcodelists_platform.annotationhorizontalalignmentvalue>
+<systemid>09101d72-6b43-4e92-ab11-e91f4ee78481</systemid>
+<value>Full</value>
+</nuarcodelists_platform.annotationhorizontalalignmentvalue>
+<nuarcodelists_platform.annotationhorizontalalignmentvalue>
+<systemid>2964b5e7-166d-439f-b58f-320196c8f800</systemid>
+<value>Right</value>
+</nuarcodelists_platform.annotationhorizontalalignmentvalue>
+<nuarcodelists_platform.annotationhorizontalalignmentvalue>
+<systemid>6d024c7a-5e54-4284-ac6d-a0a67aa2e5ed</systemid>
+<value>Centre</value>
+</nuarcodelists_platform.annotationhorizontalalignmentvalue>
+</nuarcodelists_platform.annotationhorizontalalignmentvalue-table>
+<nuarcodelists_platform.observationfeedbackratingvalue-table>
+<nuarcodelists_platform.observationfeedbackratingvalue>
+<systemid>eb7d6ff0-af88-4dcf-8775-2103cbcdd822</systemid>
+<value>Positive</value>
+</nuarcodelists_platform.observationfeedbackratingvalue>
+<nuarcodelists_platform.observationfeedbackratingvalue>
+<systemid>f25a356a-cffe-45fc-aa24-3586322ce460</systemid>
+<value>Negative</value>
+</nuarcodelists_platform.observationfeedbackratingvalue>
+<nuarcodelists_platform.observationfeedbackratingvalue>
+<systemid>ee972fd9-7381-4a6f-8429-e67f127a7170</systemid>
+<value>Neutral</value>
+</nuarcodelists_platform.observationfeedbackratingvalue>
+</nuarcodelists_platform.observationfeedbackratingvalue-table>
+<nuarcodelists_platform.observationvisibilitystatusvalue-table>
+<nuarcodelists_platform.observationvisibilitystatusvalue>
+<systemid>ad934b2e-b4f2-47f9-9589-69879a148d6e</systemid>
+<value>Visible</value>
+</nuarcodelists_platform.observationvisibilitystatusvalue>
+<nuarcodelists_platform.observationvisibilitystatusvalue>
+<systemid>ac45f6ec-69f2-41b4-b55a-110bfe092566</systemid>
+<value>Hidden</value>
+</nuarcodelists_platform.observationvisibilitystatusvalue>
+<nuarcodelists_platform.observationvisibilitystatusvalue>
+<systemid>ad30b2d9-ce6f-4181-b4cc-91a8515e6dc2</systemid>
+<value>Deleted</value>
+</nuarcodelists_platform.observationvisibilitystatusvalue>
+</nuarcodelists_platform.observationvisibilitystatusvalue-table>
+<nuarcodelists_platform.nationalorregionalcoveragevalue-table>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>055f8fcd-a6da-4d1f-95bc-b72866fa03e9</systemid>
+<value>N/A</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>61fe5dfc-74cf-4afc-bc2a-cafc8c510b3b</systemid>
+<value>UK</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>7aae1dad-b709-41ba-bb86-548671879bf4</systemid>
+<value>Great Britain</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>624b5e96-d3cb-413f-b655-a4e0b279aed1</systemid>
+<value>England Wales and Northern Ireland</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>9ae4e78c-c213-44ee-b46e-398f51d4b0a3</systemid>
+<value>England and Wales</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>23d38f62-3982-48ee-81ce-3f7c69af58aa</systemid>
+<value>England</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>6b65f536-50f4-4e2f-9503-93ec94b7f380</systemid>
+<value>Northern Ireland</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>e2944efb-1dab-4fdd-9c5c-2e9d1fe2f0b2</systemid>
+<value>Scotland</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>93206a45-d58c-4f21-ae61-91c3534700a7</systemid>
+<value>Wales</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>4c66256c-8426-4f6a-8e10-41ed75812455</systemid>
+<value>East Midlands (England)</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>d3daf9ea-98e6-4c21-82bd-b0c83e583560</systemid>
+<value>East of England</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>4368b76a-5bc9-4185-92e2-6afda776af24</systemid>
+<value>London</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>98510987-d49e-45c1-9948-9abe86fa2358</systemid>
+<value>North East (England)</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>9a7eb2c0-523b-408e-9805-6c8bdb03187a</systemid>
+<value>North West (England)</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>4d6d5858-86fc-4665-9d1f-905d56528217</systemid>
+<value>South East (England)</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>f494f25e-b9f0-4884-8f86-a4ba8335347b</systemid>
+<value>South West (England)</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>9c6322ec-dab5-4769-8d47-c9b392770943</systemid>
+<value>West Midlands (England)</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+<nuarcodelists_platform.nationalorregionalcoveragevalue>
+<systemid>4c5a90d6-facf-423c-b509-43878b6bb862</systemid>
+<value>Yorkshire and the Humber</value>
+</nuarcodelists_platform.nationalorregionalcoveragevalue>
+</nuarcodelists_platform.nationalorregionalcoveragevalue-table>
+<nuarcodelists_platform.actortypevalue-table>
+<nuarcodelists_platform.actortypevalue>
+<systemid>3a2298c1-a939-4b3c-9ba4-8e5bc441cff8</systemid>
+<value>Data Owner</value>
+</nuarcodelists_platform.actortypevalue>
+<nuarcodelists_platform.actortypevalue>
+<systemid>27c2d68b-32cd-43c9-b67c-d156b339883e</systemid>
+<value>Object Owner</value>
+</nuarcodelists_platform.actortypevalue>
+<nuarcodelists_platform.actortypevalue>
+<systemid>441d8081-5743-4dcb-9eb9-b0b091dfc250</systemid>
+<value>Data Provider</value>
+</nuarcodelists_platform.actortypevalue>
+<nuarcodelists_platform.actortypevalue>
+<systemid>bc35f67a-8610-4a11-8123-dd9a9d604756</systemid>
+<value>Object Operator</value>
+</nuarcodelists_platform.actortypevalue>
+</nuarcodelists_platform.actortypevalue-table>
+<nuarcodelists_platform.observationcategoryvalue-table>
+<nuarcodelists_platform.observationcategoryvalue>
+<systemid>f2b29f02-a2ae-4722-8099-40a5f120799d</systemid>
+<value>Contaminated Land</value>
+</nuarcodelists_platform.observationcategoryvalue>
+<nuarcodelists_platform.observationcategoryvalue>
+<systemid>91cf744c-188f-429e-a7e2-3e00c5a60975</systemid>
+<value>Hazardous Materials</value>
+</nuarcodelists_platform.observationcategoryvalue>
+<nuarcodelists_platform.observationcategoryvalue>
+<systemid>6e6be4f9-f516-446b-9dc3-8a4b73692292</systemid>
+<value>Security Report</value>
+</nuarcodelists_platform.observationcategoryvalue>
+<nuarcodelists_platform.observationcategoryvalue>
+<systemid>24dd6013-df5d-4786-b6c5-aa396a8708b0</systemid>
+<value>Subsurface Conditions</value>
+</nuarcodelists_platform.observationcategoryvalue>
+<nuarcodelists_platform.observationcategoryvalue>
+<systemid>3ab87571-187e-44d1-bac4-c985e099670c</systemid>
+<value>Subsurface Structures</value>
+</nuarcodelists_platform.observationcategoryvalue>
+<nuarcodelists_platform.observationcategoryvalue>
+<systemid>001545ce-a18c-43bc-85b0-c4ee6a9f1623</systemid>
+<value>Surface or Ground Conditions</value>
+</nuarcodelists_platform.observationcategoryvalue>
+<nuarcodelists_platform.observationcategoryvalue>
+<systemid>32ceb6ce-5454-452d-9a25-fb330f0d244b</systemid>
+<value>Surface Structures</value>
+</nuarcodelists_platform.observationcategoryvalue>
+<nuarcodelists_platform.observationcategoryvalue>
+<systemid>7fa3cdde-35e2-4f1e-a40c-359758e235c9</systemid>
+<value>Unknown or Unidentified Object</value>
+</nuarcodelists_platform.observationcategoryvalue>
+<nuarcodelists_platform.observationcategoryvalue>
+<systemid>96fdfa39-08ca-4905-acd2-163426819b64</systemid>
+<value>Voids, Cellars, Basements</value>
+</nuarcodelists_platform.observationcategoryvalue>
+<nuarcodelists_platform.observationcategoryvalue>
+<systemid>a0326152-d414-4371-a46a-21c5dc96ff26</systemid>
+<value>Other</value>
+</nuarcodelists_platform.observationcategoryvalue>
+</nuarcodelists_platform.observationcategoryvalue-table>
+<nuarcodelists_platform.activitytypevalue-table>
+</nuarcodelists_platform.activitytypevalue-table>
+<nuarcodelists_platform.operationalstatusvalue-table>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>71e14ddf-99f7-4e7f-9c44-b670e225546d</systemid>
+<value>Under Construction</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>19f6be66-fa0a-4f96-a7bb-717573270e4a</systemid>
+<value>Unfit For Service</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>2b5bda12-eb91-445d-a349-f6bb2ffcbc47</systemid>
+<value>Unknown</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>222572df-699a-4096-a248-064abd4ee17a</systemid>
+<value>Abandoned</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>72d0d707-251d-4795-a46c-4c84e9ec99ae</systemid>
+<value>Commissioned</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>d24985f6-f8c7-42a5-8507-ef8574623e62</systemid>
+<value>Decommissioned</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>73a215dd-96cc-4fed-8341-59a00816e08a</systemid>
+<value>Delete Before Installation</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>8b9d4f47-61fa-4328-8b58-57047dd768cd</systemid>
+<value>In Service</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>9267c926-10b2-4696-bc0d-a5095bf194c5</systemid>
+<value>Installed</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>bb827b19-4fc6-4688-96ea-9a7e109ee365</systemid>
+<value>Other</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>55edc682-beb2-4258-ab5f-69ccca5b0200</systemid>
+<value>Out Of Commission</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>33b0a7c0-87cf-4e26-9d54-ae12d1c95a0d</systemid>
+<value>Pending Abandonment</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>02dbaebc-f921-4112-b91e-29b6545d5f6f</systemid>
+<value>Proposed</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>4ff85978-253d-4e95-97f6-ef9149962f5b</systemid>
+<value>Pending Removal</value>
+</nuarcodelists_platform.operationalstatusvalue>
+<nuarcodelists_platform.operationalstatusvalue>
+<systemid>ba0488ba-703b-46d3-ae6c-046737af760a</systemid>
+<value>Removed</value>
+</nuarcodelists_platform.operationalstatusvalue>
+</nuarcodelists_platform.operationalstatusvalue-table>
+<nuarcodelists_platform.observationsharingscopeprimaryvalue-table>
+<nuarcodelists_platform.observationsharingscopeprimaryvalue>
+<systemid>a8855035-3573-49ed-bbb8-8c5f5a04ced7</systemid>
+<value>Private</value>
+</nuarcodelists_platform.observationsharingscopeprimaryvalue>
+<nuarcodelists_platform.observationsharingscopeprimaryvalue>
+<systemid>eacbfd80-c0ea-4e00-b4fe-eb3f3997f838</systemid>
+<value>Organisation Only</value>
+</nuarcodelists_platform.observationsharingscopeprimaryvalue>
+<nuarcodelists_platform.observationsharingscopeprimaryvalue>
+<systemid>2ab2ce64-9ce6-439f-bf32-43969e714a5f</systemid>
+<value>Organisation Extended</value>
+</nuarcodelists_platform.observationsharingscopeprimaryvalue>
+<nuarcodelists_platform.observationsharingscopeprimaryvalue>
+<systemid>90ecfc17-f262-4a6e-a8eb-e9a5b5d9f46f</systemid>
+<value>Supply Chain</value>
+</nuarcodelists_platform.observationsharingscopeprimaryvalue>
+<nuarcodelists_platform.observationsharingscopeprimaryvalue>
+<systemid>046b4b35-a24f-4d35-b577-a8c74b1dd836</systemid>
+<value>Named Organisations</value>
+</nuarcodelists_platform.observationsharingscopeprimaryvalue>
+<nuarcodelists_platform.observationsharingscopeprimaryvalue>
+<systemid>0ab999cb-1fa1-445e-ad95-3d1d1cbceae0</systemid>
+<value>Public</value>
+</nuarcodelists_platform.observationsharingscopeprimaryvalue>
+</nuarcodelists_platform.observationsharingscopeprimaryvalue-table>
+</xml-tables>

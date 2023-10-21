@@ -1,0 +1,1654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-tables xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://portal.nuar.uk/schemas/nuarcodelists_transformation/2.1.0" xsi:schemaLocation="http://portal.nuar.uk/schemas/nuarcodelists_transformation/2.1.0 Codelist_Register_Transformation.xsd">
+<nuarcodelists_transformation.networklinkcomponenttypevalue-table>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>72bbb492-841f-46fc-acb0-c1953a1bb402</systemid>
+<value>Auxiliary Power Conductor</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>5f9635ad-2845-4892-974f-cc1a2ba604bb</systemid>
+<value>Bridge</value>
+<applicabledomains>Water</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>f213aa23-5791-43a7-8ded-1b726179ef8f</systemid>
+<value>Cathodic Protection Conductor</value>
+<applicabledomains>Electricity,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>8de2cf1f-36be-44a8-85be-d77f220b1780</systemid>
+<value>Line</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>4ca3b4b5-7d39-4f78-9971-918799e68e68</systemid>
+<value>Open Channel</value>
+<applicabledomains>Drainage,Sewer,Water</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>6809dd84-f933-4719-8d20-ea1093f69792</systemid>
+<value>Optical Fibre</value>
+<applicabledomains>Telco,Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>9dd918ce-c396-40f1-a377-a4ea16c822fe</systemid>
+<value>Other</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>869c6024-c135-479d-9a9e-3e1f5faa10c0</systemid>
+<value>Permeable Asphalt</value>
+<applicabledomains>Drainage</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>7c336186-894a-476d-9160-882766314568</systemid>
+<value>Swale</value>
+<applicabledomains>Drainage</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>f22bf925-1ce7-469f-be96-579c8bf5098a</systemid>
+<value>Pipe</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>431f3ae3-d1e9-42f5-b149-2d35b2482965</systemid>
+<value>Pipeline</value>
+<applicabledomains>Fuel And Chemicals,Gas,Sewer,Water</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>9b6e4316-0e8a-4855-8a53-62bb829b221e</systemid>
+<value>Power Conductor</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>47106ce9-0380-42a2-a5f1-c224aa734c99</systemid>
+<value>Telecommunications Link</value>
+<applicabledomains>Telco,Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>8929866a-7104-43f5-a6ea-52add99e54ea</systemid>
+<value>Telemetry Link</value>
+<applicabledomains>Telco,Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>b11f7789-65bf-4d5b-9eb8-3e414d3b54e0</systemid>
+<value>Rain Garden</value>
+<applicabledomains>Drainage</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>853821eb-bcab-477b-abf1-d1076b3a26bc</systemid>
+<value>Tree Pit</value>
+<applicabledomains>Drainage</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>6077815d-6b85-44fe-933f-20e11b3dbb44</systemid>
+<value>Out of Standard Service</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>4688b99e-8af5-4c49-b17d-4f8dafbcfad7</systemid>
+<value>Tunnel</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+<nuarcodelists_transformation.networklinkcomponenttypevalue>
+<systemid>19ab815c-2b45-4cfb-a9a3-f8bdcff5ee24</systemid>
+<value>Culvert</value>
+<applicabledomains>Drainage, Sewer, Water</applicabledomains>
+</nuarcodelists_transformation.networklinkcomponenttypevalue>
+</nuarcodelists_transformation.networklinkcomponenttypevalue-table>
+<nuarcodelists_transformation.depthmethodvalue-table>
+<nuarcodelists_transformation.depthmethodvalue>
+<systemid>71638285-70ec-46c3-ab1b-f1f6d7b3a4bf</systemid>
+<value>Sensed</value>
+</nuarcodelists_transformation.depthmethodvalue>
+<nuarcodelists_transformation.depthmethodvalue>
+<systemid>67026689-cb3d-4cb6-a480-f1a44281bc39</systemid>
+<value>Estimated</value>
+</nuarcodelists_transformation.depthmethodvalue>
+<nuarcodelists_transformation.depthmethodvalue>
+<systemid>ad0b78e8-66b7-4f1c-a6bf-75ea6477a97e</systemid>
+<value>Standard</value>
+</nuarcodelists_transformation.depthmethodvalue>
+<nuarcodelists_transformation.depthmethodvalue>
+<systemid>33c0e718-4762-4ac5-b7e5-a03661a704e2</systemid>
+<value>Surveyed</value>
+</nuarcodelists_transformation.depthmethodvalue>
+<nuarcodelists_transformation.depthmethodvalue>
+<systemid>dcb34002-d8d7-4919-b513-7b3a3a19ff62</systemid>
+<value>Unknown</value>
+</nuarcodelists_transformation.depthmethodvalue>
+<nuarcodelists_transformation.depthmethodvalue>
+<systemid>0c856e46-5600-48ae-9ecd-380af86c7b94</systemid>
+<value>Not Applicable</value>
+</nuarcodelists_transformation.depthmethodvalue>
+<nuarcodelists_transformation.depthmethodvalue>
+<systemid>93fd13e7-aea6-4d76-a5bc-88d1fec3a48b</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.depthmethodvalue>
+<nuarcodelists_transformation.depthmethodvalue>
+<systemid>419b536b-78f7-405b-b392-2813e8a4c42d</systemid>
+<value>Assumed</value>
+</nuarcodelists_transformation.depthmethodvalue>
+</nuarcodelists_transformation.depthmethodvalue-table>
+<nuarcodelists_transformation.featuretypevalue-table>
+<nuarcodelists_transformation.featuretypevalue>
+<systemid>3afdd171-3387-4ed3-8ef5-6279aa777f5c</systemid>
+<value>Access Object</value>
+</nuarcodelists_transformation.featuretypevalue>
+<nuarcodelists_transformation.featuretypevalue>
+<systemid>e9c023b0-922f-4912-bb26-23cf02119f72</systemid>
+<value>Container Object</value>
+</nuarcodelists_transformation.featuretypevalue>
+<nuarcodelists_transformation.featuretypevalue>
+<systemid>4562ff9b-b45c-4995-a74d-34726687ca67</systemid>
+<value>Physical Protection Object</value>
+</nuarcodelists_transformation.featuretypevalue>
+<nuarcodelists_transformation.featuretypevalue>
+<systemid>0abda027-43d6-44a0-af4d-f31a2172a6c4</systemid>
+<value>Network</value>
+</nuarcodelists_transformation.featuretypevalue>
+<nuarcodelists_transformation.featuretypevalue>
+<systemid>ab0044af-7c34-48d7-a638-dfcf6dec472c</systemid>
+<value>Network Accessory Object</value>
+</nuarcodelists_transformation.featuretypevalue>
+<nuarcodelists_transformation.featuretypevalue>
+<systemid>5e797460-06b7-4476-a203-6adadc0358ca</systemid>
+<value>Network Area</value>
+</nuarcodelists_transformation.featuretypevalue>
+<nuarcodelists_transformation.featuretypevalue>
+<systemid>faa23f17-8762-4b1c-9b82-019706010cff</systemid>
+<value>Network Description Object</value>
+</nuarcodelists_transformation.featuretypevalue>
+<nuarcodelists_transformation.featuretypevalue>
+<systemid>56ceb897-cd37-49b4-ac10-0eed1c2837d4</systemid>
+<value>Network Link</value>
+</nuarcodelists_transformation.featuretypevalue>
+<nuarcodelists_transformation.featuretypevalue>
+<systemid>f06759f9-2c4f-4626-b180-063518421ce1</systemid>
+<value>Network Node</value>
+</nuarcodelists_transformation.featuretypevalue>
+<nuarcodelists_transformation.featuretypevalue>
+<systemid>95c75e88-c1ce-4364-8d83-b8b9d38d0f2e</systemid>
+<value>Network Object</value>
+</nuarcodelists_transformation.featuretypevalue>
+<nuarcodelists_transformation.featuretypevalue>
+<systemid>4ce72c64-1627-4470-a310-473d501bb859</systemid>
+<value>Network Site</value>
+</nuarcodelists_transformation.featuretypevalue>
+<nuarcodelists_transformation.featuretypevalue>
+<systemid>44688307-6abb-4a66-a80f-7df116c42b2a</systemid>
+<value>Planning Area</value>
+</nuarcodelists_transformation.featuretypevalue>
+<nuarcodelists_transformation.featuretypevalue>
+<systemid>ee9eb252-b1b8-4f58-b284-286b0aaf0126</systemid>
+<value>Support Object</value>
+</nuarcodelists_transformation.featuretypevalue>
+</nuarcodelists_transformation.featuretypevalue-table>
+<nuarcodelists_transformation.nonutilityobjecttypevalue-table>
+<nuarcodelists_transformation.nonutilityobjecttypevalue>
+<systemid>5a3a4a54-8eab-4324-88c0-1d6ae5b1a65b</systemid>
+<value>Basement or Cellar</value>
+</nuarcodelists_transformation.nonutilityobjecttypevalue>
+<nuarcodelists_transformation.nonutilityobjecttypevalue>
+<systemid>85192353-68a4-44b8-84b9-687f72b55bae</systemid>
+<value>Foundation</value>
+</nuarcodelists_transformation.nonutilityobjecttypevalue>
+<nuarcodelists_transformation.nonutilityobjecttypevalue>
+<systemid>4f4f416f-d532-4518-9c98-95351dd64826</systemid>
+<value>Passageway</value>
+</nuarcodelists_transformation.nonutilityobjecttypevalue>
+<nuarcodelists_transformation.nonutilityobjecttypevalue>
+<systemid>6e68c3f7-bab7-4e85-9700-5039ee32c7a6</systemid>
+<value>Shaft</value>
+</nuarcodelists_transformation.nonutilityobjecttypevalue>
+<nuarcodelists_transformation.nonutilityobjecttypevalue>
+<systemid>f3ef6157-42a1-4860-b1d7-ac1f8202b3c6</systemid>
+<value>Storage Tank</value>
+</nuarcodelists_transformation.nonutilityobjecttypevalue>
+<nuarcodelists_transformation.nonutilityobjecttypevalue>
+<systemid>42a1201c-8765-463a-8386-6b6856937408</systemid>
+<value>Tracks</value>
+</nuarcodelists_transformation.nonutilityobjecttypevalue>
+<nuarcodelists_transformation.nonutilityobjecttypevalue>
+<systemid>110b1dfa-57eb-411e-9e76-4e414d04c181</systemid>
+<value>Tunnel</value>
+</nuarcodelists_transformation.nonutilityobjecttypevalue>
+<nuarcodelists_transformation.nonutilityobjecttypevalue>
+<systemid>042c3b63-b95b-48f8-9167-20e7969621d7</systemid>
+<value>Vault</value>
+</nuarcodelists_transformation.nonutilityobjecttypevalue>
+<nuarcodelists_transformation.nonutilityobjecttypevalue>
+<systemid>f68fabde-dbe6-401d-88d7-c46292aa34f9</systemid>
+<value>Duct</value>
+</nuarcodelists_transformation.nonutilityobjecttypevalue>
+<nuarcodelists_transformation.nonutilityobjecttypevalue>
+<systemid>d5423198-3502-4887-9d52-e143db2ccb80</systemid>
+<value>Barrier</value>
+</nuarcodelists_transformation.nonutilityobjecttypevalue>
+<nuarcodelists_transformation.nonutilityobjecttypevalue>
+<systemid>d4497a68-e73e-476d-a297-156cee5f6047</systemid>
+<value>Bridge</value>
+</nuarcodelists_transformation.nonutilityobjecttypevalue>
+<nuarcodelists_transformation.nonutilityobjecttypevalue>
+<systemid>49a57d51-528d-4ee7-80ec-99ca9ab1df7f</systemid>
+<value>Wall</value>
+</nuarcodelists_transformation.nonutilityobjecttypevalue>
+<nuarcodelists_transformation.nonutilityobjecttypevalue>
+<systemid>607cc25c-4cd6-42e1-a7bc-42f553f3871e</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.nonutilityobjecttypevalue>
+</nuarcodelists_transformation.nonutilityobjecttypevalue-table>
+<nuarcodelists_transformation.supporttypevalue-table>
+<nuarcodelists_transformation.supporttypevalue>
+<systemid>a99ebfc2-c06f-4a90-a2df-dc65e1644033</systemid>
+<value>Bed</value>
+</nuarcodelists_transformation.supporttypevalue>
+<nuarcodelists_transformation.supporttypevalue>
+<systemid>af3f764b-bab3-47a8-ad9a-7cf6d37ed67c</systemid>
+<value>Footing</value>
+</nuarcodelists_transformation.supporttypevalue>
+<nuarcodelists_transformation.supporttypevalue>
+<systemid>c9df15c9-dd70-446d-aa8b-f13537e79a90</systemid>
+<value>Foundation</value>
+</nuarcodelists_transformation.supporttypevalue>
+<nuarcodelists_transformation.supporttypevalue>
+<systemid>f84f92af-6c94-4535-83f6-2f4bd64c2d9b</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.supporttypevalue>
+<nuarcodelists_transformation.supporttypevalue>
+<systemid>befb7720-0ab5-43f7-a103-dc9103f75887</systemid>
+<value>Pad</value>
+</nuarcodelists_transformation.supporttypevalue>
+<nuarcodelists_transformation.supporttypevalue>
+<systemid>d9862b3a-52a1-4035-bcc5-bcca06de3ca6</systemid>
+<value>Pole</value>
+</nuarcodelists_transformation.supporttypevalue>
+<nuarcodelists_transformation.supporttypevalue>
+<systemid>aea8732d-63e4-436b-8ef2-ba0957cbf911</systemid>
+<value>Thrust Plate</value>
+</nuarcodelists_transformation.supporttypevalue>
+<nuarcodelists_transformation.supporttypevalue>
+<systemid>6cc35382-1535-44b4-8d2b-5b563f64ac71</systemid>
+<value>Thrust Block</value>
+</nuarcodelists_transformation.supporttypevalue>
+<nuarcodelists_transformation.supporttypevalue>
+<systemid>7014778d-30b2-4c3f-b9cd-4569de9da848</systemid>
+<value>Tower</value>
+</nuarcodelists_transformation.supporttypevalue>
+<nuarcodelists_transformation.supporttypevalue>
+<systemid>218f5803-161a-40cb-b806-345bcf2b03b6</systemid>
+<value>Bridge</value>
+</nuarcodelists_transformation.supporttypevalue>
+</nuarcodelists_transformation.supporttypevalue-table>
+<nuarcodelists_transformation.contactdetailstypevalue-table>
+<nuarcodelists_transformation.contactdetailstypevalue>
+<systemid>844703c9-8779-4d81-bda6-74e1b0f9a313</systemid>
+<value>Asset Protection</value>
+</nuarcodelists_transformation.contactdetailstypevalue>
+<nuarcodelists_transformation.contactdetailstypevalue>
+<systemid>78ad2afb-675f-43ae-bdb2-2097070ba191</systemid>
+<value>Business</value>
+</nuarcodelists_transformation.contactdetailstypevalue>
+<nuarcodelists_transformation.contactdetailstypevalue>
+<systemid>0db3d25c-9136-4e50-8e0f-3569cc1921d3</systemid>
+<value>Emergency</value>
+</nuarcodelists_transformation.contactdetailstypevalue>
+<nuarcodelists_transformation.contactdetailstypevalue>
+<systemid>eb1f38b8-20a6-4f1b-9921-ad8a6492b424</systemid>
+<value>Planning</value>
+</nuarcodelists_transformation.contactdetailstypevalue>
+<nuarcodelists_transformation.contactdetailstypevalue>
+<systemid>e920c6f6-0067-4cfe-b89b-f20973d5f2c7</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.contactdetailstypevalue>
+</nuarcodelists_transformation.contactdetailstypevalue-table>
+<nuarcodelists_transformation.locationtypevalue-table>
+<nuarcodelists_transformation.locationtypevalue>
+<systemid>9c8b8ddf-640b-4480-91b9-a91723b12c2a</systemid>
+<value>Carriageway</value>
+</nuarcodelists_transformation.locationtypevalue>
+<nuarcodelists_transformation.locationtypevalue>
+<systemid>5fc79417-7653-411f-8a6c-e7c6de6fb340</systemid>
+<value>Field</value>
+</nuarcodelists_transformation.locationtypevalue>
+<nuarcodelists_transformation.locationtypevalue>
+<systemid>149f9cc0-3e3c-43fc-9624-8e664f056cc8</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.locationtypevalue>
+<nuarcodelists_transformation.locationtypevalue>
+<systemid>4964d9f5-edae-4ca3-87a9-721e3b5d95df</systemid>
+<value>Footpath</value>
+</nuarcodelists_transformation.locationtypevalue>
+<nuarcodelists_transformation.locationtypevalue>
+<systemid>7668c0f5-8749-4bc7-af4c-111bced80cd7</systemid>
+<value>Verge</value>
+</nuarcodelists_transformation.locationtypevalue>
+</nuarcodelists_transformation.locationtypevalue-table>
+<nuarcodelists_transformation.accesstypevalue-table>
+<nuarcodelists_transformation.accesstypevalue>
+<systemid>408ce4aa-2bf0-4842-a150-97817d3a932f</systemid>
+<value>Access Chamber</value>
+</nuarcodelists_transformation.accesstypevalue>
+<nuarcodelists_transformation.accesstypevalue>
+<systemid>04ab9640-2aab-4df5-9b13-1a1e54e2a98d</systemid>
+<value>Access Plate</value>
+</nuarcodelists_transformation.accesstypevalue>
+<nuarcodelists_transformation.accesstypevalue>
+<systemid>28af667c-4d24-4273-b493-6e820ae56bc6</systemid>
+<value>Pig Trap</value>
+</nuarcodelists_transformation.accesstypevalue>
+<nuarcodelists_transformation.accesstypevalue>
+<systemid>72b7644b-7513-40c1-b627-c062e42cf825</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.accesstypevalue>
+</nuarcodelists_transformation.accesstypevalue-table>
+<nuarcodelists_transformation.unitoftimevalue-table>
+<nuarcodelists_transformation.unitoftimevalue>
+<systemid>182a3a7f-8e9d-481d-8392-95a81232537f</systemid>
+<value>Day</value>
+</nuarcodelists_transformation.unitoftimevalue>
+<nuarcodelists_transformation.unitoftimevalue>
+<systemid>755cb433-e517-4fbc-a21a-6e43d0ec62da</systemid>
+<value>Week</value>
+</nuarcodelists_transformation.unitoftimevalue>
+<nuarcodelists_transformation.unitoftimevalue>
+<systemid>f32c1714-ea3f-43b8-b2c2-4079a95e9159</systemid>
+<value>Month</value>
+</nuarcodelists_transformation.unitoftimevalue>
+<nuarcodelists_transformation.unitoftimevalue>
+<systemid>2a8c8adb-13b8-43a2-b01a-b6d5ee51dc6e</systemid>
+<value>Year</value>
+</nuarcodelists_transformation.unitoftimevalue>
+</nuarcodelists_transformation.unitoftimevalue-table>
+<nuarcodelists_transformation.serviceareatypevalue-table>
+<nuarcodelists_transformation.serviceareatypevalue>
+<systemid>58b23d3b-e7b7-4d6f-91f9-95276107d879</systemid>
+<value>Franchise Area</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.serviceareatypevalue>
+<nuarcodelists_transformation.serviceareatypevalue>
+<systemid>5ba3edde-51f1-468e-a2f4-d4b1e3481a6b</systemid>
+<value>Operational Patch</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.serviceareatypevalue>
+<nuarcodelists_transformation.serviceareatypevalue>
+<systemid>87fe4027-6807-4806-aac2-4e64803d3c8c</systemid>
+<value>Other</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.serviceareatypevalue>
+<nuarcodelists_transformation.serviceareatypevalue>
+<systemid>ac2f7598-8b4b-4baf-b6a9-7d42ba0d2ae2</systemid>
+<value>Right of Access</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.serviceareatypevalue>
+<nuarcodelists_transformation.serviceareatypevalue>
+<systemid>7b39b950-5c24-4cbc-910f-758f581c48af</systemid>
+<value>Data Supply Area</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.serviceareatypevalue>
+<nuarcodelists_transformation.serviceareatypevalue>
+<systemid>e3b5e705-fa5c-4b44-a13d-d369cc8d6fef</systemid>
+<value>Site</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.serviceareatypevalue>
+<nuarcodelists_transformation.serviceareatypevalue>
+<systemid>0ffb5932-eb85-41c0-9faa-651fb5558bdd</systemid>
+<value>Coverage of Works</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.serviceareatypevalue>
+<nuarcodelists_transformation.serviceareatypevalue>
+<systemid>4be1e931-5401-4471-b8f7-1ddbbc422954</systemid>
+<value>Administrative Boundary</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.serviceareatypevalue>
+<nuarcodelists_transformation.serviceareatypevalue>
+<systemid>198e2b12-5a40-401d-9074-63b026f09708</systemid>
+<value>Coverage inferred from data</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.serviceareatypevalue>
+<nuarcodelists_transformation.serviceareatypevalue>
+<systemid>527bef06-ab31-4579-9a5d-37ba4b418767</systemid>
+<value>Licence Area Boundary</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.serviceareatypevalue>
+<nuarcodelists_transformation.serviceareatypevalue>
+<systemid>8e3fdb73-d7b5-42de-9443-42309c8e2196</systemid>
+<value>National or Regional Coverage</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.serviceareatypevalue>
+</nuarcodelists_transformation.serviceareatypevalue-table>
+<nuarcodelists_transformation.materialvalue-table>
+<nuarcodelists_transformation.materialvalue>
+<systemid>c648ecce-2aed-41f4-8d82-46e19a68be7c</systemid>
+<value>ABS</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>05efe990-b947-4899-8862-e1b8f9ebaede</systemid>
+<value>Aluminium</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>cf84f65e-93b4-4656-81a9-7ba7240e19ec</systemid>
+<value>Asbestos Cement</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>6f86fe89-ee04-4cf7-b225-b4f65f9291ac</systemid>
+<value>Asphalt</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>a4b046b4-3b95-4dfe-b90a-607f0f81e39d</systemid>
+<value>Brick</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>4196ad6e-0ea4-46d8-8e5d-2e162f718c5a</systemid>
+<value>Cast Iron</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>805bf588-2096-497b-b3cd-eeb9e5aa011b</systemid>
+<value>Ceramic</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>d6c0e554-55d5-4542-9832-671268070d0f</systemid>
+<value>Clay</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>bd7af744-d802-4d6c-8ac0-c5d596f1988a</systemid>
+<value>Coated Steel</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>5f376964-49d6-4a22-80d7-5aa9261d6184</systemid>
+<value>Composite</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>8f7062b5-eb7d-4111-80af-2a39ceae648a</systemid>
+<value>Concrete</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>15c00b68-f648-4542-ba1b-4203cd1f2262</systemid>
+<value>Copper</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>2c7e1c35-c1db-42ae-82af-d093d165b54a</systemid>
+<value>Ductile Iron</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>36db2b47-e6ee-48fc-b465-9412f86b3c6b</systemid>
+<value>Earthen</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>cd9e78a3-df73-43e4-8033-b53edb5684c1</systemid>
+<value>Fiberglass</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>b6d3aa49-a507-46c6-9ebc-3184082ad4fc</systemid>
+<value>Galvanised Iron</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>996cbcf5-0664-4fb3-a642-422b7534e5c6</systemid>
+<value>Galvanised Steel</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>77185849-6b36-414f-a7c0-b201e2502714</systemid>
+<value>Geotextile</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>c2242994-14e8-4a21-af64-a9b6c9d42811</systemid>
+<value>Gravel</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>fe116c94-e511-4239-9b92-f142856e17c9</systemid>
+<value>HDPE</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>ff761702-a5a9-4436-81c0-419fd5af3851</systemid>
+<value>Iron</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>068e93ea-7bb2-4ece-abce-63b297deb2d6</systemid>
+<value>LDPE</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>95a33635-e5fe-4f3e-a1a6-45bff7d950b8</systemid>
+<value>MDPE</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>795332c5-030e-4d7a-b02e-7085d3e8ed49</systemid>
+<value>MOPC</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>1265866c-eb03-4218-be4b-f43b4fb0e1fe</systemid>
+<value>Optical Fibre</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>5e7ae119-218f-4be7-8f45-b97024b2835b</systemid>
+<value>PEX</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>66610d37-f950-456c-90fc-3d3e0a89712a</systemid>
+<value>Plastic</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>d849e0ce-ef14-4432-bcfd-223a501fcab4</systemid>
+<value>PVC</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>ca93fbdb-6115-49e6-9ead-7a8edf65f3f7</systemid>
+<value>Spun Iron</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>5edbbdd3-2ca3-47fb-a03d-3d7df818b3f1</systemid>
+<value>Steel</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>14e27c76-f5ae-4d31-97eb-39ca2d061f87</systemid>
+<value>Stone</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>f4cd7f49-9356-4bf3-ab25-aa7794e939eb</systemid>
+<value>Tile</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>d079c202-951d-49b2-8e54-04fb54963c3a</systemid>
+<value>Transite</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>8b4faf13-e2bc-4ba0-b928-b8e3b70c171a</systemid>
+<value>uPVC</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>9f1c0888-7fea-4232-954e-2d55bb5da5dc</systemid>
+<value>Wood</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>80507d8c-2450-4b86-82b2-10ee6e5aa3fe</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>ae7e6b70-507f-4a5a-bf5e-cc2dd9d3f9c6</systemid>
+<value>Lead</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>e120b69f-accf-493d-89a0-456a8da417f5</systemid>
+<value>Unknown</value>
+</nuarcodelists_transformation.materialvalue>
+<nuarcodelists_transformation.materialvalue>
+<systemid>3748d214-d400-42bd-88db-116fe9d60252</systemid>
+<value>Pitch Fibre</value>
+</nuarcodelists_transformation.materialvalue>
+</nuarcodelists_transformation.materialvalue-table>
+<nuarcodelists_transformation.sitetypevalue-table>
+<nuarcodelists_transformation.sitetypevalue>
+<systemid>dbf34115-de5c-4513-a418-b3133196844f</systemid>
+<value>Compressor Station</value>
+<applicabledomains>Fuel And Chemicals,Gas</applicabledomains>
+</nuarcodelists_transformation.sitetypevalue>
+<nuarcodelists_transformation.sitetypevalue>
+<systemid>49af4a30-0af6-42af-a8a6-9ba20d451ce1</systemid>
+<value>Section 50 Site</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.sitetypevalue>
+<nuarcodelists_transformation.sitetypevalue>
+<systemid>ea860aef-880b-4039-8f76-69002d6ab57c</systemid>
+<value>General Site</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.sitetypevalue>
+<nuarcodelists_transformation.sitetypevalue>
+<systemid>a6609cef-d849-4661-93ec-42e1e37dfe3f</systemid>
+<value>Independent/Private Network Site</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.sitetypevalue>
+<nuarcodelists_transformation.sitetypevalue>
+<systemid>ee6b29d2-b056-49d5-8d7d-f402c3ae7687</systemid>
+<value>Multi-purpose Site</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.sitetypevalue>
+<nuarcodelists_transformation.sitetypevalue>
+<systemid>d4853d64-432a-432b-93e1-aab91f416899</systemid>
+<value>Other</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.sitetypevalue>
+<nuarcodelists_transformation.sitetypevalue>
+<systemid>cdb269e9-7c12-49be-a98c-efff4678fc27</systemid>
+<value>Pumping Station</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.sitetypevalue>
+<nuarcodelists_transformation.sitetypevalue>
+<systemid>8ae57bbf-ed1a-4a54-9dc0-9617c43ae612</systemid>
+<value>Regulator Site</value>
+<applicabledomains>Fuel And Chemicals,Gas</applicabledomains>
+</nuarcodelists_transformation.sitetypevalue>
+<nuarcodelists_transformation.sitetypevalue>
+<systemid>4ec70f66-2b0c-413a-a3c6-cfa8b2e23f1d</systemid>
+<value>Storage Site</value>
+<applicabledomains>Electricity,Fuel And Chemicals,Gas,Water</applicabledomains>
+</nuarcodelists_transformation.sitetypevalue>
+<nuarcodelists_transformation.sitetypevalue>
+<systemid>01181d7d-1789-4771-9855-f6173a9c287e</systemid>
+<value>Substation</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.sitetypevalue>
+<nuarcodelists_transformation.sitetypevalue>
+<systemid>2881e69a-f0ba-4cfb-bf19-a18c397f1b69</systemid>
+<value>Treatment Works</value>
+<applicabledomains>Drainage,Sewer,Water</applicabledomains>
+</nuarcodelists_transformation.sitetypevalue>
+<nuarcodelists_transformation.sitetypevalue>
+<systemid>f811af2d-f03f-4b97-a89c-9757527683da</systemid>
+<value>Reservoir</value>
+<applicabledomains>Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.sitetypevalue>
+</nuarcodelists_transformation.sitetypevalue-table>
+<nuarcodelists_transformation.networkdescriptiontypevalue-table>
+<nuarcodelists_transformation.networkdescriptiontypevalue>
+<systemid>b025d129-2ed9-4d40-bba2-b189bc767478</systemid>
+<value>Annotation</value>
+</nuarcodelists_transformation.networkdescriptiontypevalue>
+<nuarcodelists_transformation.networkdescriptiontypevalue>
+<systemid>48be2bd6-10e4-4c2b-9b9c-a804ad041a7a</systemid>
+<value>Change of Diameter</value>
+</nuarcodelists_transformation.networkdescriptiontypevalue>
+<nuarcodelists_transformation.networkdescriptiontypevalue>
+<systemid>e9d28070-745d-49a6-b6a4-1e984953a7a6</systemid>
+<value>Change of Material</value>
+</nuarcodelists_transformation.networkdescriptiontypevalue>
+<nuarcodelists_transformation.networkdescriptiontypevalue>
+<systemid>6a432ff1-3fe6-47d3-9aad-d820f9084747</systemid>
+<value>Cross Section</value>
+</nuarcodelists_transformation.networkdescriptiontypevalue>
+<nuarcodelists_transformation.networkdescriptiontypevalue>
+<systemid>4c8ba324-e7cb-4c3e-a95c-aa443fef2701</systemid>
+<value>Pressure Marker</value>
+</nuarcodelists_transformation.networkdescriptiontypevalue>
+<nuarcodelists_transformation.networkdescriptiontypevalue>
+<systemid>5ca0b7a4-eea3-4780-8c05-2cc28dbd8f77</systemid>
+<value>Depth</value>
+</nuarcodelists_transformation.networkdescriptiontypevalue>
+<nuarcodelists_transformation.networkdescriptiontypevalue>
+<systemid>f094432a-b6af-4fd4-8c75-a1444e113fc6</systemid>
+<value>Dimension</value>
+</nuarcodelists_transformation.networkdescriptiontypevalue>
+<nuarcodelists_transformation.networkdescriptiontypevalue>
+<systemid>810891ed-634a-4fd3-8da9-0ebc5fcfd14f</systemid>
+<value>Multimedia Attachment</value>
+</nuarcodelists_transformation.networkdescriptiontypevalue>
+<nuarcodelists_transformation.networkdescriptiontypevalue>
+<systemid>98dda945-8026-4496-8b39-5310f6d4cd39</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.networkdescriptiontypevalue>
+<nuarcodelists_transformation.networkdescriptiontypevalue>
+<systemid>d965da9f-504b-4ae3-844c-aed8227ecfac</systemid>
+<value>Supplemental Drawing</value>
+</nuarcodelists_transformation.networkdescriptiontypevalue>
+</nuarcodelists_transformation.networkdescriptiontypevalue-table>
+<nuarcodelists_transformation.networknodecomponenttypevalue-table>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>932c6fb2-99e1-4cb5-aa31-fc4ceb7ff6d4</systemid>
+<value>Beacon</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>8ade0f4d-5c38-4bc8-bc55-ca1ebaaf9496</systemid>
+<value>Cabinet</value>
+<applicabledomains>Electricity,Telco,Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>8ac5456a-eec9-4fa9-b1f0-1316a597f8cf</systemid>
+<value>Capped End</value>
+<applicabledomains>Drainage,Electricity,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>0452b85c-7e6e-4f15-a69b-1901fc993657</systemid>
+<value>Cathodic Protection Node</value>
+<applicabledomains>Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>e4ae06d1-e4da-4200-b9af-9de2a9410621</systemid>
+<value>Earthing Equipment</value>
+<applicabledomains>Electricity,Fuel And Chemicals,Gas,Telco,Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>819dcbdb-ce6e-4f9c-93b8-b3f682562c9a</systemid>
+<value>Filter</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>eb9b0663-50b7-41ed-a4fc-6d52459ff42f</systemid>
+<value>Flow Control</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>70de365d-06a0-4cb6-840a-fae9ac1386b8</systemid>
+<value>Gas Conditioner</value>
+<applicabledomains>Gas,Fuel And Chemicals</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>d11100f2-3cd5-4ccb-8085-9b90a08fece3</systemid>
+<value>Gully</value>
+<applicabledomains>Drainage</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>e9a7243f-1901-44d6-8de2-80fdaef3a38f</systemid>
+<value>Housing</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>87d30ff0-7fb6-403a-87bd-e634b08836e9</systemid>
+<value>Hydrant</value>
+<applicabledomains>Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>a6e2845a-17b4-4970-8aae-b051d171c6f5</systemid>
+<value>Illuminated Sign</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>09d5f586-e634-4fbf-bce3-3b850729b790</systemid>
+<value>Injection Point</value>
+<applicabledomains>Fuel And Chemicals,Gas,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>8b6d4c6c-9a4f-4dd1-a9c8-7e35247cf802</systemid>
+<value>Inlet</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>d6ac58c9-2371-4c7e-b8af-b2b373d59279</systemid>
+<value>Joint</value>
+<applicabledomains>Drainage,Electricity,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>34896b63-6edd-4b5d-9774-c52c55e3b361</systemid>
+<value>Junction</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>5eb5a24f-7545-477e-b92e-f76707646867</systemid>
+<value>Link Box</value>
+<applicabledomains>Electricity,Telco,Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>862ee208-8574-4741-83bd-75b2a3c6cf42</systemid>
+<value>Measuring Device</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>7181a751-c8c1-445e-bb12-6f0b83d362ca</systemid>
+<value>Metering Device</value>
+<applicabledomains>Electricity,Fuel And Chemicals,Gas,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>6ee90b79-d18a-43d5-9aba-486eeaf6e315</systemid>
+<value>Offtake</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>cea5a1ba-e038-403c-8d3e-26da55609c0f</systemid>
+<value>Other</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>501b3c32-a601-42d0-8391-e8ed8ff8a49e</systemid>
+<value>Outlet</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>f670af1b-e88e-465f-8730-acd296910928</systemid>
+<value>Overflow</value>
+<applicabledomains>Drainage,Sewer,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>1de40d78-0bc3-4c31-9152-f7d36cd40db9</systemid>
+<value>Pit</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>6d983bcb-602e-4adb-8399-96a9dc7935bf</systemid>
+<value>Pond</value>
+<applicabledomains>Drainage,Sewer,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>2b418bc8-53eb-4dae-995c-51efc7ac1c42</systemid>
+<value>Post</value>
+<applicabledomains>Electricity,Fuel And Chemicals,Gas,Telco,Transport Signalling,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>2680147d-8298-4c12-8075-05210ec8a1fb</systemid>
+<value>Pumping Equipment</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>fe5a3727-c58f-4afb-b65d-21aab1fd9776</systemid>
+<value>Pressure Reduction</value>
+<applicabledomains>Fuel And Chemicals,Gas</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>eab106f4-324f-4144-bc90-7ea89f308948</systemid>
+<value>Purge Point</value>
+<applicabledomains>Fuel And Chemicals,Gas</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>60828b75-ab69-49c1-8cf8-c42742dcfee5</systemid>
+<value>Rain Garden</value>
+<applicabledomains>Drainage</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>8a8954ad-16c7-4e8d-ac25-c3c0001cf582</systemid>
+<value>Regulator</value>
+<applicabledomains>Fuel And Chemicals,Gas</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>e42cba4b-33b7-4067-8f9a-14f185e53e06</systemid>
+<value>Riser</value>
+<applicabledomains>Fuel And Chemicals,Gas,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>57d2e154-399c-46b3-a6f5-4d831ad71e65</systemid>
+<value>Rodding Eye</value>
+<applicabledomains>Drainage,Sewer</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>16f65fba-5451-4c3b-bd45-6f297539771f</systemid>
+<value>Shaft</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>014bd62a-da7b-40ca-a1cd-4c84147314d4</systemid>
+<value>Stand Pipe</value>
+<applicabledomains>Fuel And Chemicals,Gas,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>3b5775d6-b020-4467-baf4-f4057e41d0b7</systemid>
+<value>Streetlight</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>d53fbdd6-0ff1-4ceb-8f26-c7eeb19d9456</systemid>
+<value>Syphon</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>c64baa61-f101-4672-a90d-ff972dfba0f5</systemid>
+<value>Tree Pit</value>
+<applicabledomains>Drainage</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>bbff5f20-443d-482c-a7b8-ed4dba1625e0</systemid>
+<value>Tank</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>52e7efb9-8398-4b93-a3d3-3ba1a4b7799d</systemid>
+<value>Tee</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>eb38d03d-53ad-460b-a38f-9b790b6f397c</systemid>
+<value>Terminator</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>08bb0169-2ba1-4ac5-b99b-ec4719778dad</systemid>
+<value>Trap</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>864c28d7-5dfe-4fa7-9773-67d904d0433e</systemid>
+<value>Valve</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>9e1aa817-55cc-408d-941d-3873bfc2f46c</systemid>
+<value>Vent</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>497ec4c7-bdcf-4a44-ade5-ae0af7cf710d</systemid>
+<value>Kiosk</value>
+<applicabledomains>Telco,Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>9dbe5407-cf06-4815-a492-5331897f155c</systemid>
+<value>EV Charging Point</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>367d8424-2f58-49aa-b48f-10f4583fe303</systemid>
+<value>Swale</value>
+<applicabledomains>Drainage</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>ac2cff84-8fa3-4117-83c2-13e9ca3c7682</systemid>
+<value>Traffic Signal</value>
+<applicabledomains>Electricity, Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>a46b4a0b-a062-446b-af46-2a7856e44b63</systemid>
+<value>Out of Standard Service</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>c7b35aee-14c9-40f4-bd76-31961fbffe0c</systemid>
+<value>Bollard</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>c36372fb-0b10-48b6-8667-dfb19c61386b</systemid>
+<value>Pillar</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>df14e21d-9418-477d-9e6e-7c4769cdfd6b</systemid>
+<value>Refuge Beacon</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>f9975334-3946-430a-9f9c-6751f1e5fb35</systemid>
+<value>School Crossing Flasher</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>4b6b16c4-6db1-415d-bb2b-1fae58123a2d</systemid>
+<value>Sign Light</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>733f9e42-affa-42db-9de7-952076ee56bd</systemid>
+<value>Zebra Crossing</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>7e1243c7-65ae-4faa-bbef-2d69471d1d6c</systemid>
+<value>CCTV</value>
+<applicabledomains>Electricity,Telco,Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>1a2bf8ea-42f5-4ade-835d-eff03efe5ed4</systemid>
+<value>Anchor Point</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>8cd32512-2f5d-4047-9648-26c4df2c438a</systemid>
+<value>Anode</value>
+<applicabledomains>Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>d3f1a9d3-edef-49f4-83d7-ccb63d2997c8</systemid>
+<value>Chamber</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>2eee5d88-9d07-4e78-a3fd-d18769cf3379</systemid>
+<value>Cleaning Device</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>50fe8845-2e0f-4972-9baf-3fbe3e44c35c</systemid>
+<value>Discharge Device</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>e7d0cac6-a41d-46c0-ae6a-81c3ca95e178</systemid>
+<value>Drain</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>ef83ed26-fada-4fa8-a13a-aa59e243fe62</systemid>
+<value>Telecommunications Node</value>
+<applicabledomains>Telco, Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>aab7cd1b-f325-4b42-9bb7-8c4c31130b5f</systemid>
+<value>Parking Meter</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>72f73d33-b617-47bd-8038-b428d53d73af</systemid>
+<value>Culvert</value>
+<applicabledomains>Drainage,Sewer,Water</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+<nuarcodelists_transformation.networknodecomponenttypevalue>
+<systemid>9d789634-ac2a-4804-9f00-a88b2bdf21c5</systemid>
+<value>Telemetry Node</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.networknodecomponenttypevalue>
+</nuarcodelists_transformation.networknodecomponenttypevalue-table>
+<nuarcodelists_transformation.physicalprotectiontypevalue-table>
+<nuarcodelists_transformation.physicalprotectiontypevalue>
+<systemid>73652d11-54c1-4283-bbe6-84a33fc4f064</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.physicalprotectiontypevalue>
+<nuarcodelists_transformation.physicalprotectiontypevalue>
+<systemid>8a2bbf81-0c0c-4546-8203-1ddbbacf8c13</systemid>
+<value>Slabbing</value>
+</nuarcodelists_transformation.physicalprotectiontypevalue>
+<nuarcodelists_transformation.physicalprotectiontypevalue>
+<systemid>0da809d3-04aa-4145-9672-83bf716df3eb</systemid>
+<value>Sleeve</value>
+</nuarcodelists_transformation.physicalprotectiontypevalue>
+<nuarcodelists_transformation.physicalprotectiontypevalue>
+<systemid>07a87dde-5989-4d61-af0a-00dd83d889ca</systemid>
+<value>Tape</value>
+</nuarcodelists_transformation.physicalprotectiontypevalue>
+<nuarcodelists_transformation.physicalprotectiontypevalue>
+<systemid>0f79bfb8-157b-4620-a116-09f6700a2117</systemid>
+<value>Plate</value>
+</nuarcodelists_transformation.physicalprotectiontypevalue>
+</nuarcodelists_transformation.physicalprotectiontypevalue-table>
+<nuarcodelists_transformation.conveyancecategoryvalue-table>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>d2e29566-a48e-4d72-af56-60de99cc8dd6</systemid>
+<value>Auxiliary</value>
+<applicabledomains>Electricity,Telco,Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>72492f19-b485-4f37-9b88-55723d28ed3b</systemid>
+<value>Collection</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>4cd61d18-fac9-4f87-9233-b5c4bf86b146</systemid>
+<value>Communication</value>
+<applicabledomains>Telco,Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>b9834908-11f2-4c11-8aeb-648ab72848b8</systemid>
+<value>Discharge</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Sewer,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>e76f9477-1fa2-488c-b1fd-68324ee01abe</systemid>
+<value>Distribution</value>
+<applicabledomains>Electricity,Fuel And Chemicals,Gas,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>82c350eb-4a16-47ee-85b4-0b1f14bf76bc</systemid>
+<value>Fire</value>
+<applicabledomains>Water</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>9f3b92a2-0949-47bb-b208-7f5faf4f577e</systemid>
+<value>Flow Line</value>
+<applicabledomains>Thermal</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>8591c482-ddfa-4204-9152-801ef6ce7e61</systemid>
+<value>Dual Flow and Return Line</value>
+<applicabledomains>Thermal</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>833e2267-e5cd-4a6c-8171-6284079ab465</systemid>
+<value>Other</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>1565db05-ab14-4aa5-afcf-258f873058c7</systemid>
+<value>Private</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>5739b0ca-15bf-4833-ada0-46edd22a1db2</systemid>
+<value>Return Line</value>
+<applicabledomains>Thermal</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>888c861b-6733-487b-9a4e-af72293fddc0</systemid>
+<value>Service</value>
+<applicabledomains>Drainage,Electricity,Gas,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>8257841f-2899-4df5-ac81-da168450a0da</systemid>
+<value>Transmission</value>
+<applicabledomains>Electricity,Fuel And Chemicals,Gas</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>0589aa64-39e5-4644-98e9-969b04249b26</systemid>
+<value>Trunk</value>
+<applicabledomains>Sewer,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+<nuarcodelists_transformation.conveyancecategoryvalue>
+<systemid>97767222-ab40-420d-aa44-40229e1842c3</systemid>
+<value>Unknown</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.conveyancecategoryvalue>
+</nuarcodelists_transformation.conveyancecategoryvalue-table>
+<nuarcodelists_transformation.networkaccessorytypevalue-table>
+<nuarcodelists_transformation.networkaccessorytypevalue>
+<systemid>ba5b51ae-0a71-4381-acf7-b9416643a939</systemid>
+<value>Access</value>
+</nuarcodelists_transformation.networkaccessorytypevalue>
+<nuarcodelists_transformation.networkaccessorytypevalue>
+<systemid>625ba560-b2fd-4aef-93e5-b114849fe68e</systemid>
+<value>Container</value>
+</nuarcodelists_transformation.networkaccessorytypevalue>
+<nuarcodelists_transformation.networkaccessorytypevalue>
+<systemid>93376835-272e-4d25-a0b0-5dd5f1543b6f</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.networkaccessorytypevalue>
+<nuarcodelists_transformation.networkaccessorytypevalue>
+<systemid>a7d553f2-ae77-4c37-8d83-30f6daefe4a5</systemid>
+<value>Physical Protection</value>
+</nuarcodelists_transformation.networkaccessorytypevalue>
+<nuarcodelists_transformation.networkaccessorytypevalue>
+<systemid>69d3499d-089d-4eb4-bd22-673b983e710d</systemid>
+<value>Support</value>
+</nuarcodelists_transformation.networkaccessorytypevalue>
+</nuarcodelists_transformation.networkaccessorytypevalue-table>
+<nuarcodelists_transformation.utilitysubtypevalue-table>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>52b74f9b-b5fb-45bf-92e8-f0467216aab6</systemid>
+<value>Alarm</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>3c676ae4-4a58-4acb-8338-b34e1fb48a03</systemid>
+<value>Ammonia</value>
+<applicabledomains>Fuel And Chemicals</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>ce2d0271-7c3d-43a8-a174-2652edaacc03</systemid>
+<value>Combined Sewer</value>
+<applicabledomains>Sewer</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>90349411-0cf5-453e-83ea-576582b2a53f</systemid>
+<value>Cooled Water</value>
+<applicabledomains>Thermal</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>1b3efafb-036f-462e-8900-56a0a09ffe8d</systemid>
+<value>CSO Overflow</value>
+<applicabledomains>Drainage,Sewer</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>e027c299-b130-4c63-bcb1-a3de32ea7bbe</systemid>
+<value>Drainage</value>
+<applicabledomains>Drainage</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>34b65a44-1ab5-44bc-b5a7-d433dc88cf91</systemid>
+<value>Electric Power</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>9d0141be-8f5a-48be-978a-706535964c19</systemid>
+<value>Foul Sewer</value>
+<applicabledomains>Sewer</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>877857b7-1f2f-4c8b-ae82-49e5d4c73c48</systemid>
+<value>Glycol</value>
+<applicabledomains>Fuel And Chemicals</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>c005a8e5-2634-4f4f-8f55-2c88e24fe601</systemid>
+<value>Heated Water</value>
+<applicabledomains>Thermal</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>a8f8274f-9552-45be-9c3d-40dded47ddf3</systemid>
+<value>Journey Time Apparatus</value>
+<applicabledomains>Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>b50d29cd-ffc2-49d7-93f3-66c02ddf739e</systemid>
+<value>Natural Water</value>
+<applicabledomains>Drainage,Sewer,Water</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>4c266fca-52b8-41b5-986f-4c659113376f</systemid>
+<value>Non-Potable Water</value>
+<applicabledomains>Drainage,Sewer,Water</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>6a942ad0-c0c4-4d98-ad70-d33f050d47ce</systemid>
+<value>Other</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>f4f71f25-29a6-4238-abbb-c9f5a3715430</systemid>
+<value>Raw Water</value>
+<applicabledomains>Drainage,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>2527cef6-52a5-4569-8f26-7d5094dd6909</systemid>
+<value>Steam</value>
+<applicabledomains>Thermal</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>dbc31aca-e018-49a7-b1a7-4451213db570</systemid>
+<value>Stored Water</value>
+<applicabledomains>Drainage,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>a5a8c9bb-d140-44ba-a25b-30566ae4b5ad</systemid>
+<value>Street Lighting</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>11cff54b-cc21-42e8-98db-8d25e8b33438</systemid>
+<value>Surface Water Sewer</value>
+<applicabledomains>Drainage,Sewer</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>fe922440-5759-403c-9970-4495e407ce4c</systemid>
+<value>Telecommunication</value>
+<applicabledomains>Telco,Transport Signalling</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>52f6d59e-083e-46e3-b909-f828b2430bcf</systemid>
+<value>Trade Effluent</value>
+<applicabledomains>Drainage,Sewer</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>66cbb0af-ae65-48b4-8c60-ad60c238f368</systemid>
+<value>Treated Effluent</value>
+<applicabledomains>Drainage,Sewer</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>68196064-3856-4b3b-ae65-79a60b815cd0</systemid>
+<value>Treated Water</value>
+<applicabledomains>Drainage,Sewer,Water</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>cdc225ed-feea-4a3b-b319-74a37af267f0</systemid>
+<value>Untreated Effluent</value>
+<applicabledomains>Drainage,Sewer</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>11c1b7a3-b14a-492b-9953-bc1890e72e23</systemid>
+<value>SuDS</value>
+<applicabledomains>Drainage</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+<nuarcodelists_transformation.utilitysubtypevalue>
+<systemid>1cc580eb-9886-44c2-b382-3ec6e9bcf8fe</systemid>
+<value>Potable Water</value>
+<applicabledomains>Water</applicabledomains>
+</nuarcodelists_transformation.utilitysubtypevalue>
+</nuarcodelists_transformation.utilitysubtypevalue-table>
+<nuarcodelists_transformation.planningareatypevalue-table>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>edb6b68e-1f65-40f2-ab8f-a762284b1159</systemid>
+<value>Archaeological Site</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>24e04fa0-0b74-4ef8-b509-51054c6fec0b</systemid>
+<value>Conservation Area</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>8a58c9cd-84bb-4903-8be2-4c67ca83a937</systemid>
+<value>Coordination Zone</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>76088c41-a8c8-4de1-aaa7-404d2dcb0f0b</systemid>
+<value>Former Industrial Site</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>914381d0-1487-41b5-88d2-e563f96d5e00</systemid>
+<value>Security Zone</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>c7741094-1a65-4cbd-862a-0c79a4e0bbfc</systemid>
+<value>Historical Site</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>b88645e1-c17d-4fd5-8384-23c14ef486fa</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>e1987ec1-5bc3-47e6-b7c7-7e158579bf56</systemid>
+<value>Scheduled Ancient Monument</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>5d1885f0-d8f8-4ae8-8de9-21ee122a4607</systemid>
+<value>Section 58</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>81c85073-bb30-4ff0-930e-b53b2d86ce61</systemid>
+<value>Site of Special Scientific Interest</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>9d1ca575-8264-4210-a7e9-e18f9bbd5779</systemid>
+<value>Tree Preservation Order</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>42a5e6f0-62b4-4252-b92b-4637d3a8db09</systemid>
+<value>Wetland</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>13de0c16-449f-493c-a6bd-76102a4df77a</systemid>
+<value>Wildlife Corridor</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>1df7c010-a379-4cd2-bed8-24a221981b21</systemid>
+<value>Section 50 Site</value>
+</nuarcodelists_transformation.planningareatypevalue>
+<nuarcodelists_transformation.planningareatypevalue>
+<systemid>f4fcab78-0794-40dc-a0e5-38fff81bc4a9</systemid>
+<value>Listed Building</value>
+</nuarcodelists_transformation.planningareatypevalue>
+</nuarcodelists_transformation.planningareatypevalue-table>
+<nuarcodelists_transformation.sewerdepthtypevalue-table>
+<nuarcodelists_transformation.sewerdepthtypevalue>
+<systemid>069bc8fa-90eb-41f8-9ad2-78937cbf2bd3</systemid>
+<value>Upstream Invert Depth</value>
+</nuarcodelists_transformation.sewerdepthtypevalue>
+<nuarcodelists_transformation.sewerdepthtypevalue>
+<systemid>afe193a5-ad74-41b3-9ba4-335ebb0a96d3</systemid>
+<value>Downstream Invert Depth</value>
+</nuarcodelists_transformation.sewerdepthtypevalue>
+<nuarcodelists_transformation.sewerdepthtypevalue>
+<systemid>aa3c4c40-80a7-4d6e-abc9-50a0b5b32a47</systemid>
+<value>Unknown</value>
+</nuarcodelists_transformation.sewerdepthtypevalue>
+</nuarcodelists_transformation.sewerdepthtypevalue-table>
+<nuarcodelists_transformation.temperaturerangevalue-table>
+<nuarcodelists_transformation.temperaturerangevalue>
+<systemid>5fc789af-9842-4fde-a71b-4940c5eae1bd</systemid>
+<value>&lt; 50 degrees centigrade</value>
+</nuarcodelists_transformation.temperaturerangevalue>
+<nuarcodelists_transformation.temperaturerangevalue>
+<systemid>e7a36489-5eef-40c9-ad17-bc4c75a66ec5</systemid>
+<value>50-80 degrees centigrade</value>
+</nuarcodelists_transformation.temperaturerangevalue>
+<nuarcodelists_transformation.temperaturerangevalue>
+<systemid>7e76c5ed-fc82-4f42-9e6b-fc279034a47e</systemid>
+<value>Unheated</value>
+</nuarcodelists_transformation.temperaturerangevalue>
+<nuarcodelists_transformation.temperaturerangevalue>
+<systemid>f01e22ab-26ef-4520-8a91-65d2b757a4af</systemid>
+<value>&gt; 80 degrees centigrade</value>
+</nuarcodelists_transformation.temperaturerangevalue>
+</nuarcodelists_transformation.temperaturerangevalue-table>
+<nuarcodelists_transformation.operatingconveyanceleveltypevalue-table>
+<nuarcodelists_transformation.operatingconveyanceleveltypevalue>
+<systemid>6ce20b21-dc5b-44e3-8a18-7d0148e8003b</systemid>
+<value>Other</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.operatingconveyanceleveltypevalue>
+<nuarcodelists_transformation.operatingconveyanceleveltypevalue>
+<systemid>a53d9320-7c6b-4682-967f-4dd672cea7ce</systemid>
+<value>Pressure</value>
+<applicabledomains>Fuel And Chemicals,Gas,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.operatingconveyanceleveltypevalue>
+<nuarcodelists_transformation.operatingconveyanceleveltypevalue>
+<systemid>ef114eff-39f8-4086-99d7-111483b9e624</systemid>
+<value>Voltage</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.operatingconveyanceleveltypevalue>
+</nuarcodelists_transformation.operatingconveyanceleveltypevalue-table>
+<nuarcodelists_transformation.horizontalmeasurementmethodvalue-table>
+<nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+<systemid>415f472b-3b17-4e5d-ad95-c846336f0725</systemid>
+<value>Not Applicable</value>
+</nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+<nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+<systemid>0c2e1e8d-cd2e-4a94-9080-617aeae45df9</systemid>
+<value>Estimated</value>
+</nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+<nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+<systemid>d734c787-9e6f-4c6e-8840-613b75e96a16</systemid>
+<value>Sensed</value>
+</nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+<nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+<systemid>d8163cbc-e7d2-427b-a3e0-1e0f8c200bb1</systemid>
+<value>Measured</value>
+</nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+<nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+<systemid>27f63add-52fe-4006-b500-d3fb9abac439</systemid>
+<value>Surveyed</value>
+</nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+<nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+<systemid>e155ef47-bb79-43a7-8883-2a0034266743</systemid>
+<value>Unknown</value>
+</nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+<nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+<systemid>51a1240b-4884-4ee5-b775-d3ef2aef017b</systemid>
+<value>Assumed</value>
+</nuarcodelists_transformation.horizontalmeasurementmethodvalue>
+</nuarcodelists_transformation.horizontalmeasurementmethodvalue-table>
+<nuarcodelists_transformation.conveyancemethodvalue-table>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>7700c3b3-d88e-4d83-af04-18efcb8200d6</systemid>
+<value>Low Pressure</value>
+<applicabledomains>Fuel And Chemicals,Gas,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>ee0855fa-5789-407a-9878-80e78c130f1e</systemid>
+<value>Low Voltage</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>f254ee4a-e725-4f79-a16a-ea83d25f7bd3</systemid>
+<value>Pressure</value>
+<applicabledomains>Fuel And Chemicals,Gas,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>6de84f2a-2185-4609-9196-2c1346c41622</systemid>
+<value>Gravity</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>03a67ee2-da7c-44c6-a219-df7c4aba9975</systemid>
+<value>High Pressure</value>
+<applicabledomains>Fuel And Chemicals,Gas,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>69b71299-bf00-4cba-8f7e-ed96fcb35b5c</systemid>
+<value>High Voltage</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>cc5152ca-2e8e-4937-957d-931896a05f41</systemid>
+<value>Unknown</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>bc95a8e6-58a2-4e8c-9d28-62f9ed7129ed</systemid>
+<value>Other</value>
+<applicabledomains>All</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>a82ada33-aaaa-488a-84e1-d75b7a274297</systemid>
+<value>Syphon</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>3babefc3-df44-4d47-b818-909b48d2fc14</systemid>
+<value>Vacuum</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>56109136-8dac-40b1-96cb-b044e1e3d34e</systemid>
+<value>Intermediate Voltage</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>8241dbc5-e864-4839-bd3d-8f55c7098d18</systemid>
+<value>Medium Voltage</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>477aa639-0473-47a2-8ef6-ad9a5fd61d01</systemid>
+<value>Intermediate Pressure</value>
+<applicabledomains>Fuel And Chemicals,Gas,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>a54c0afc-91a7-4756-8df9-8f5d1a911953</systemid>
+<value>Medium Pressure</value>
+<applicabledomains>Fuel And Chemicals,Gas</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>899f39d5-3cfd-4dea-9914-4ecec0ed8d34</systemid>
+<value>Pumped</value>
+<applicabledomains>Drainage,Fuel And Chemicals,Sewer,Thermal,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>ae34e335-66ae-4b40-8a8f-cd47b1a9442c</systemid>
+<value>Regional Intermediate Pressure</value>
+<applicabledomains>Fuel And Chemicals,Gas</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>171701d5-afe2-4017-86d2-878736c73cbd</systemid>
+<value>Regional High Pressure</value>
+<applicabledomains>Fuel And Chemicals,Gas</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>12d259be-ba05-498d-85a1-2c76b0a00d50</systemid>
+<value>Extra High Voltage</value>
+<applicabledomains>Electricity</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+<nuarcodelists_transformation.conveyancemethodvalue>
+<systemid>1b9b3712-4063-4aee-a2c3-113b92f3d546</systemid>
+<value>National High Pressure</value>
+<applicabledomains>Fuel And Chemicals,Gas,Water</applicabledomains>
+</nuarcodelists_transformation.conveyancemethodvalue>
+</nuarcodelists_transformation.conveyancemethodvalue-table>
+<nuarcodelists_transformation.installationmethodtypevalue-table>
+<nuarcodelists_transformation.installationmethodtypevalue>
+<systemid>e7d70067-cc49-4db5-b815-61bd92da6682</systemid>
+<value>Bursting</value>
+</nuarcodelists_transformation.installationmethodtypevalue>
+<nuarcodelists_transformation.installationmethodtypevalue>
+<systemid>155cafa1-afae-4900-942d-c5f77c580c43</systemid>
+<value>Dead Insertion</value>
+</nuarcodelists_transformation.installationmethodtypevalue>
+<nuarcodelists_transformation.installationmethodtypevalue>
+<systemid>c285742c-464b-4887-84f3-e234a14feae9</systemid>
+<value>Directional Drilling</value>
+</nuarcodelists_transformation.installationmethodtypevalue>
+<nuarcodelists_transformation.installationmethodtypevalue>
+<systemid>1861264c-70e6-45cf-9b28-a5c32304cc5d</systemid>
+<value>Ducted</value>
+</nuarcodelists_transformation.installationmethodtypevalue>
+<nuarcodelists_transformation.installationmethodtypevalue>
+<systemid>cef13174-7ed1-49c4-a609-b9a24c918e26</systemid>
+<value>Live Insertion </value>
+</nuarcodelists_transformation.installationmethodtypevalue>
+<nuarcodelists_transformation.installationmethodtypevalue>
+<systemid>007d6f88-2ec3-40a7-92cb-af71a6acb2df</systemid>
+<value>Moling</value>
+</nuarcodelists_transformation.installationmethodtypevalue>
+<nuarcodelists_transformation.installationmethodtypevalue>
+<systemid>2496953e-a130-4e1a-9dba-3d3d30034214</systemid>
+<value>Open Cut</value>
+</nuarcodelists_transformation.installationmethodtypevalue>
+<nuarcodelists_transformation.installationmethodtypevalue>
+<systemid>cc09fa3e-fe58-4d81-9359-25b306850ac3</systemid>
+<value>Trenching</value>
+</nuarcodelists_transformation.installationmethodtypevalue>
+<nuarcodelists_transformation.installationmethodtypevalue>
+<systemid>fcfb2b7e-69a5-41a9-9003-628eebcd68d8</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.installationmethodtypevalue>
+</nuarcodelists_transformation.installationmethodtypevalue-table>
+<nuarcodelists_transformation.localereferencetypevalue-table>
+<nuarcodelists_transformation.localereferencetypevalue>
+<systemid>b30bf0f4-020c-45df-9f81-0736b2a87b2c</systemid>
+<value>USRN</value>
+</nuarcodelists_transformation.localereferencetypevalue>
+<nuarcodelists_transformation.localereferencetypevalue>
+<systemid>2be27555-00e9-4ffb-a9ba-89d941edcb00</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.localereferencetypevalue>
+<nuarcodelists_transformation.localereferencetypevalue>
+<systemid>e54338e6-8e9e-48b9-958b-debc17188916</systemid>
+<value>Postcode</value>
+</nuarcodelists_transformation.localereferencetypevalue>
+<nuarcodelists_transformation.localereferencetypevalue>
+<systemid>1cb3bc17-9909-45a1-8fe2-d48243865fd6</systemid>
+<value>UPRN</value>
+</nuarcodelists_transformation.localereferencetypevalue>
+</nuarcodelists_transformation.localereferencetypevalue-table>
+<nuarcodelists_transformation.materialgradevalue-table>
+<nuarcodelists_transformation.materialgradevalue>
+<systemid>5b77ec33-d950-45e0-8f0a-cea3db6c2a28</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.materialgradevalue>
+</nuarcodelists_transformation.materialgradevalue-table>
+<nuarcodelists_transformation.containertypevalue-table>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>3c25cc76-f928-4ab1-9b73-894e6df96e99</systemid>
+<value>Arcade</value>
+</nuarcodelists_transformation.containertypevalue>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>1659ad2d-35b1-4bb8-99d5-b795dd22aa00</systemid>
+<value>Conduit</value>
+</nuarcodelists_transformation.containertypevalue>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>923d54d2-f6bd-4ba8-9f88-5c443daa06e6</systemid>
+<value>Duct</value>
+</nuarcodelists_transformation.containertypevalue>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>84022cec-ee5b-4773-9a0b-4921cb4b6002</systemid>
+<value>Other</value>
+</nuarcodelists_transformation.containertypevalue>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>0db8c752-92f6-4d97-ae6e-56826e2fcaea</systemid>
+<value>Pipe</value>
+</nuarcodelists_transformation.containertypevalue>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>22bd74c5-675f-4f3b-8c25-18c21a9c2ba9</systemid>
+<value>Pit</value>
+</nuarcodelists_transformation.containertypevalue>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>1bd66ef2-888f-4d33-9eba-36d6876bf398</systemid>
+<value>Carrier Pipe</value>
+</nuarcodelists_transformation.containertypevalue>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>05ef02ea-37cd-4fd6-b3b0-cf843bfc14cb</systemid>
+<value>Subduct</value>
+</nuarcodelists_transformation.containertypevalue>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>bb6d09e2-e116-41db-9fc2-98e310051be0</systemid>
+<value>Trench</value>
+</nuarcodelists_transformation.containertypevalue>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>91ff165d-ab68-4349-8b32-229ca5401040</systemid>
+<value>Tunnel</value>
+</nuarcodelists_transformation.containertypevalue>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>b848cc5e-5d04-41fc-a588-0678a14c3ca6</systemid>
+<value>Unknown</value>
+</nuarcodelists_transformation.containertypevalue>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>3e220fdc-f7f2-4eed-8c84-1715ece10e56</systemid>
+<value>Utilidor</value>
+</nuarcodelists_transformation.containertypevalue>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>539eb8ad-6f06-4b37-a933-321ab6af95ab</systemid>
+<value>Vault</value>
+</nuarcodelists_transformation.containertypevalue>
+<nuarcodelists_transformation.containertypevalue>
+<systemid>7bc7d105-8ba1-438b-945c-985741abc488</systemid>
+<value>Vent</value>
+</nuarcodelists_transformation.containertypevalue>
+</nuarcodelists_transformation.containertypevalue-table>
+<nuarcodelists_transformation.intendedpermanencevalue-table>
+<nuarcodelists_transformation.intendedpermanencevalue>
+<systemid>06c18ed9-33db-47e0-9173-cd224f36d419</systemid>
+<value>Temporary</value>
+</nuarcodelists_transformation.intendedpermanencevalue>
+<nuarcodelists_transformation.intendedpermanencevalue>
+<systemid>7a850b71-a8f9-463b-80a3-f1eaf4da06f9</systemid>
+<value>Permanent</value>
+</nuarcodelists_transformation.intendedpermanencevalue>
+<nuarcodelists_transformation.intendedpermanencevalue>
+<systemid>8fe7981c-9260-40e7-94e3-20e2d6336c35</systemid>
+<value>Unknown</value>
+</nuarcodelists_transformation.intendedpermanencevalue>
+</nuarcodelists_transformation.intendedpermanencevalue-table>
+<nuarcodelists_transformation.designationpurposevalue-table>
+<nuarcodelists_transformation.designationpurposevalue>
+<systemid>ee91a4c9-1085-4e24-a35d-3ab03679e1e6</systemid>
+<value>Protecting And Enhancing Biodiversity And Habitats</value>
+</nuarcodelists_transformation.designationpurposevalue>
+<nuarcodelists_transformation.designationpurposevalue>
+<systemid>a9fc1a0b-bcd7-4319-9bd2-2490a55d5cd3</systemid>
+<value>Conservation Area</value>
+</nuarcodelists_transformation.designationpurposevalue>
+<nuarcodelists_transformation.designationpurposevalue>
+<systemid>65ab357a-5273-4d35-9538-cca4d45685dc</systemid>
+<value>Wildlife Enhancement Corridors</value>
+</nuarcodelists_transformation.designationpurposevalue>
+</nuarcodelists_transformation.designationpurposevalue-table>
+</xml-tables>

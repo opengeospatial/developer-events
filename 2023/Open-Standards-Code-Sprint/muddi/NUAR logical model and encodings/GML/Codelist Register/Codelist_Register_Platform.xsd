@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0" targetNamespace="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0" elementFormDefault="qualified">
+<xs:element name="xml-tables" type="xml-tablesType"/>
+<xs:element name="nuarcodelists_platform.measurementunitsvalue_translated-table" type="nuarcodelists_platform.measurementunitsvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.measurementunitsvalue_translated" type="nuarcodelists_platform.measurementunitsvalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.activitytypevalue_translated-table" type="nuarcodelists_platform.activitytypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.activitytypevalue_translated" type="nuarcodelists_platform.activitytypevalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.organisationtypevalue_translated-table" type="nuarcodelists_platform.organisationtypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.organisationtypevalue_translated" type="nuarcodelists_platform.organisationtypevalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.utilitytypevalue_translated-table" type="nuarcodelists_platform.utilitytypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.utilitytypevalue_translated" type="nuarcodelists_platform.utilitytypevalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.serviceareapurposevalue_translated-table" type="nuarcodelists_platform.serviceareapurposevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.serviceareapurposevalue_translated" type="nuarcodelists_platform.serviceareapurposevalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.datasensitivitylevelvalue_translated-table" type="nuarcodelists_platform.datasensitivitylevelvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.datasensitivitylevelvalue_translated" type="nuarcodelists_platform.datasensitivitylevelvalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.enhancedmeasurestypevalue_translated-table" type="nuarcodelists_platform.enhancedmeasurestypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.enhancedmeasurestypevalue_translated" type="nuarcodelists_platform.enhancedmeasurestypevalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.utilitytypevalue-table" type="nuarcodelists_platform.utilitytypevalue-tableType"/>
+<xs:element name="nuarcodelists_platform.utilitytypevalue" type="nuarcodelists_platform.utilitytypevalueType"/>
+<xs:element name="nuarcodelists_platform.enhancedmeasurestypevalue-table" type="nuarcodelists_platform.enhancedmeasurestypevalue-tableType"/>
+<xs:element name="nuarcodelists_platform.enhancedmeasurestypevalue" type="nuarcodelists_platform.enhancedmeasurestypevalueType"/>
+<xs:element name="nuarcodelists_platform.operationalstatusvalue_translated-table" type="nuarcodelists_platform.operationalstatusvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.operationalstatusvalue_translated" type="nuarcodelists_platform.operationalstatusvalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.observationsharingscopesecondaryvalue-table" type="nuarcodelists_platform.observationsharingscopesecondaryvalue-tableType"/>
+<xs:element name="nuarcodelists_platform.observationsharingscopesecondaryvalue" type="nuarcodelists_platform.observationsharingscopesecondaryvalueType"/>
+<xs:element name="nuarcodelists_platform.undergroundstatusvalue-table" type="nuarcodelists_platform.undergroundstatusvalue-tableType"/>
+<xs:element name="nuarcodelists_platform.undergroundstatusvalue" type="nuarcodelists_platform.undergroundstatusvalueType"/>
+<xs:element name="nuarcodelists_platform.serviceareapurposevalue-table" type="nuarcodelists_platform.serviceareapurposevalue-tableType"/>
+<xs:element name="nuarcodelists_platform.serviceareapurposevalue" type="nuarcodelists_platform.serviceareapurposevalueType"/>
+<xs:element name="nuarcodelists_platform.datasensitivitylevelvalue-table" type="nuarcodelists_platform.datasensitivitylevelvalue-tableType"/>
+<xs:element name="nuarcodelists_platform.datasensitivitylevelvalue" type="nuarcodelists_platform.datasensitivitylevelvalueType"/>
+<xs:element name="nuarcodelists_platform.observationimpactvalue-table" type="nuarcodelists_platform.observationimpactvalue-tableType"/>
+<xs:element name="nuarcodelists_platform.observationimpactvalue" type="nuarcodelists_platform.observationimpactvalueType"/>
+<xs:element name="nuarcodelists_platform.annotationverticalalignmentvalue-table" type="nuarcodelists_platform.annotationverticalalignmentvalue-tableType"/>
+<xs:element name="nuarcodelists_platform.annotationverticalalignmentvalue" type="nuarcodelists_platform.annotationverticalalignmentvalueType"/>
+<xs:element name="nuarcodelists_platform.coveragetypevalue_translated-table" type="nuarcodelists_platform.coveragetypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.coveragetypevalue_translated" type="nuarcodelists_platform.coveragetypevalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.undergroundstatusvalue_translated-table" type="nuarcodelists_platform.undergroundstatusvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.undergroundstatusvalue_translated" type="nuarcodelists_platform.undergroundstatusvalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.qualitylevelvalue-table" type="nuarcodelists_platform.qualitylevelvalue-tableType"/>
+<xs:element name="nuarcodelists_platform.qualitylevelvalue" type="nuarcodelists_platform.qualitylevelvalueType"/>
+<xs:element name="nuarcodelists_platform.dataservicetypevalue_translated-table" type="nuarcodelists_platform.dataservicetypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.dataservicetypevalue_translated" type="nuarcodelists_platform.dataservicetypevalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.measurementunitsvalue-table" type="nuarcodelists_platform.measurementunitsvalue-tableType"/>
+<xs:element name="nuarcodelists_platform.measurementunitsvalue" type="nuarcodelists_platform.measurementunitsvalueType"/>
+<xs:element name="nuarcodelists_platform.coveragetypevalue-table" type="nuarcodelists_platform.coveragetypevalue-tableType"/>
+<xs:element name="nuarcodelists_platform.coveragetypevalue" type="nuarcodelists_platform.coveragetypevalueType"/>
+<xs:element name="nuarcodelists_platform.dataservicetypevalue-table" type="nuarcodelists_platform.dataservicetypevalue-tableType"/>
+<xs:element name="nuarcodelists_platform.dataservicetypevalue" type="nuarcodelists_platform.dataservicetypevalueType"/>
+<xs:element name="nuarcodelists_platform.annotationverticalalignmentvalue_translated-table" type="nuarcodelists_platform.annotationverticalalignmentvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.annotationverticalalignmentvalue_translated" type="nuarcodelists_platform.annotationverticalalignmentvalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.observationfeedbackratingvalue_translated-table" type="nuarcodelists_platform.observationfeedbackratingvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.observationfeedbackratingvalue_translated" type="nuarcodelists_platform.observationfeedbackratingvalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.qualitylevelvalue_translated-table" type="nuarcodelists_platform.qualitylevelvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.qualitylevelvalue_translated" type="nuarcodelists_platform.qualitylevelvalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.annotationhorizontalalignmentvalue_translated-table" type="nuarcodelists_platform.annotationhorizontalalignmentvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.annotationhorizontalalignmentvalue_translated" type="nuarcodelists_platform.annotationhorizontalalignmentvalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.organisationtypevalue-table" type="nuarcodelists_platform.organisationtypevalue-tableType"/>
+<xs:element name="nuarcodelists_platform.organisationtypevalue" type="nuarcodelists_platform.organisationtypevalueType"/>
+<xs:element name="nuarcodelists_platform.annotationhorizontalalignmentvalue-table" type="nuarcodelists_platform.annotationhorizontalalignmentvalue-tableType"/>
+<xs:element name="nuarcodelists_platform.annotationhorizontalalignmentvalue" type="nuarcodelists_platform.annotationhorizontalalignmentvalueType"/>
+<xs:element name="nuarcodelists_platform.observationsharingscopeprimaryvalue_translated-table" type="nuarcodelists_platform.observationsharingscopeprimaryvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.observationsharingscopeprimaryvalue_translated" type="nuarcodelists_platform.observationsharingscopeprimaryvalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.observationfeedbackratingvalue-table" type="nuarcodelists_platform.observationfeedbackratingvalue-tableType"/>
+<xs:element name="nuarcodelists_platform.observationfeedbackratingvalue" type="nuarcodelists_platform.observationfeedbackratingvalueType"/>
+<xs:element name="nuarcodelists_platform.observationsharingscopesecondaryvalue_translated-table" type="nuarcodelists_platform.observationsharingscopesecondaryvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.observationsharingscopesecondaryvalue_translated" type="nuarcodelists_platform.observationsharingscopesecondaryvalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.observationvisibilitystatusvalue-table" type="nuarcodelists_platform.observationvisibilitystatusvalue-tableType"/>
+<xs:element name="nuarcodelists_platform.observationvisibilitystatusvalue" type="nuarcodelists_platform.observationvisibilitystatusvalueType"/>
+<xs:element name="nuarcodelists_platform.nationalorregionalcoveragevalue-table" type="nuarcodelists_platform.nationalorregionalcoveragevalue-tableType"/>
+<xs:element name="nuarcodelists_platform.nationalorregionalcoveragevalue" type="nuarcodelists_platform.nationalorregionalcoveragevalueType"/>
+<xs:element name="nuarcodelists_platform.nationalorregionalcoveragevalue_translated-table" type="nuarcodelists_platform.nationalorregionalcoveragevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.nationalorregionalcoveragevalue_translated" type="nuarcodelists_platform.nationalorregionalcoveragevalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.actortypevalue-table" type="nuarcodelists_platform.actortypevalue-tableType"/>
+<xs:element name="nuarcodelists_platform.actortypevalue" type="nuarcodelists_platform.actortypevalueType"/>
+<xs:element name="nuarcodelists_platform.observationvisibilitystatusvalue_translated-table" type="nuarcodelists_platform.observationvisibilitystatusvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.observationvisibilitystatusvalue_translated" type="nuarcodelists_platform.observationvisibilitystatusvalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.observationcategoryvalue-table" type="nuarcodelists_platform.observationcategoryvalue-tableType"/>
+<xs:element name="nuarcodelists_platform.observationcategoryvalue" type="nuarcodelists_platform.observationcategoryvalueType"/>
+<xs:element name="nuarcodelists_platform.observationcategoryvalue_translated-table" type="nuarcodelists_platform.observationcategoryvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.observationcategoryvalue_translated" type="nuarcodelists_platform.observationcategoryvalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.activitytypevalue-table" type="nuarcodelists_platform.activitytypevalue-tableType"/>
+<xs:element name="nuarcodelists_platform.activitytypevalue" type="nuarcodelists_platform.activitytypevalueType"/>
+<xs:element name="nuarcodelists_platform.observationimpactvalue_translated-table" type="nuarcodelists_platform.observationimpactvalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.observationimpactvalue_translated" type="nuarcodelists_platform.observationimpactvalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.actortypevalue_translated-table" type="nuarcodelists_platform.actortypevalue_translated-tableType"/>
+<xs:element name="nuarcodelists_platform.actortypevalue_translated" type="nuarcodelists_platform.actortypevalue_translatedType"/>
+<xs:element name="nuarcodelists_platform.operationalstatusvalue-table" type="nuarcodelists_platform.operationalstatusvalue-tableType"/>
+<xs:element name="nuarcodelists_platform.operationalstatusvalue" type="nuarcodelists_platform.operationalstatusvalueType"/>
+<xs:element name="nuarcodelists_platform.observationsharingscopeprimaryvalue-table" type="nuarcodelists_platform.observationsharingscopeprimaryvalue-tableType"/>
+<xs:element name="nuarcodelists_platform.observationsharingscopeprimaryvalue" type="nuarcodelists_platform.observationsharingscopeprimaryvalueType"/>
+<xs:complexType name="xml-tablesType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.measurementunitsvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.activitytypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.organisationtypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.utilitytypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.serviceareapurposevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.datasensitivitylevelvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.enhancedmeasurestypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.utilitytypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.enhancedmeasurestypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.operationalstatusvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.observationsharingscopesecondaryvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.undergroundstatusvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.serviceareapurposevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.datasensitivitylevelvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.observationimpactvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.annotationverticalalignmentvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.coveragetypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.undergroundstatusvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.qualitylevelvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.dataservicetypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.measurementunitsvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.coveragetypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.dataservicetypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.annotationverticalalignmentvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.observationfeedbackratingvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.qualitylevelvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.annotationhorizontalalignmentvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.organisationtypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.annotationhorizontalalignmentvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.observationsharingscopeprimaryvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.observationfeedbackratingvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.observationsharingscopesecondaryvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.observationvisibilitystatusvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.nationalorregionalcoveragevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.nationalorregionalcoveragevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.actortypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.observationvisibilitystatusvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.observationcategoryvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.observationcategoryvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.activitytypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.observationimpactvalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.actortypevalue_translated-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.operationalstatusvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_platform.observationsharingscopeprimaryvalue-table" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.measurementunitsvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.measurementunitsvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.measurementunitsvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.activitytypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.activitytypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.activitytypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+<xs:element name="activitytypecategory_original" minOccurs="0" type="xs:string"/>
+<xs:element name="activitytypecategory_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.organisationtypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.organisationtypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.organisationtypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.utilitytypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.utilitytypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.utilitytypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.serviceareapurposevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.serviceareapurposevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.serviceareapurposevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.datasensitivitylevelvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.datasensitivitylevelvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.datasensitivitylevelvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.enhancedmeasurestypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.enhancedmeasurestypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.enhancedmeasurestypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.utilitytypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.utilitytypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.utilitytypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+<xs:element name="applicabledomains" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.enhancedmeasurestypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.enhancedmeasurestypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.enhancedmeasurestypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.operationalstatusvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.operationalstatusvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.operationalstatusvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationsharingscopesecondaryvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.observationsharingscopesecondaryvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationsharingscopesecondaryvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.undergroundstatusvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.undergroundstatusvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.undergroundstatusvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.serviceareapurposevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.serviceareapurposevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.serviceareapurposevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.datasensitivitylevelvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.datasensitivitylevelvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.datasensitivitylevelvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationimpactvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.observationimpactvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationimpactvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.annotationverticalalignmentvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.annotationverticalalignmentvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.annotationverticalalignmentvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.coveragetypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.coveragetypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.coveragetypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.undergroundstatusvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.undergroundstatusvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.undergroundstatusvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.qualitylevelvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.qualitylevelvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.qualitylevelvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.dataservicetypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.dataservicetypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.dataservicetypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.measurementunitsvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.measurementunitsvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.measurementunitsvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.coveragetypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.coveragetypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.coveragetypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.dataservicetypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.dataservicetypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.dataservicetypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.annotationverticalalignmentvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.annotationverticalalignmentvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.annotationverticalalignmentvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationfeedbackratingvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.observationfeedbackratingvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationfeedbackratingvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.qualitylevelvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.qualitylevelvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.qualitylevelvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.annotationhorizontalalignmentvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.annotationhorizontalalignmentvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.annotationhorizontalalignmentvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.organisationtypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.organisationtypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.organisationtypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.annotationhorizontalalignmentvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.annotationhorizontalalignmentvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.annotationhorizontalalignmentvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationsharingscopeprimaryvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.observationsharingscopeprimaryvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationsharingscopeprimaryvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationfeedbackratingvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.observationfeedbackratingvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationfeedbackratingvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationsharingscopesecondaryvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.observationsharingscopesecondaryvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationsharingscopesecondaryvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationvisibilitystatusvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.observationvisibilitystatusvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationvisibilitystatusvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.nationalorregionalcoveragevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.nationalorregionalcoveragevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.nationalorregionalcoveragevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.nationalorregionalcoveragevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.nationalorregionalcoveragevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.nationalorregionalcoveragevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.actortypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.actortypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.actortypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationvisibilitystatusvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.observationvisibilitystatusvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationvisibilitystatusvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationcategoryvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.observationcategoryvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationcategoryvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationcategoryvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.observationcategoryvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationcategoryvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.activitytypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.activitytypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.activitytypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+<xs:element name="activitytypecategory" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationimpactvalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.observationimpactvalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationimpactvalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.actortypevalue_translated-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.actortypevalue_translated" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.actortypevalue_translatedType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value_original" minOccurs="0" type="xs:string"/>
+<xs:element name="languagecode" minOccurs="0" type="xs:string"/>
+<xs:element name="value_translated" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.operationalstatusvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.operationalstatusvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.operationalstatusvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationsharingscopeprimaryvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_platform.observationsharingscopeprimaryvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_platform.observationsharingscopeprimaryvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

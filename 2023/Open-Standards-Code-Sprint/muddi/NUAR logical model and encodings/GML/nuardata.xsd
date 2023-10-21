@@ -1,0 +1,3490 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:nuarcodelists_datamanagement="http://portal.nuar.uk/schemas/nuarcodelists_datamanagement/2.1.0" xmlns:nuarcodelists_platform="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0" xmlns:nuarcodelists_transformation="http://portal.nuar.uk/schemas/nuarcodelists_transformation/2.1.0" xmlns:nuardata="http://portal.nuar.uk/schemas/nuardata/2.1.0" xmlns:nuarorganisations="http://portal.nuar.uk/schemas/nuarorganisations/2.1.0" xmlns:nuarsubmissions="http://portal.nuar.uk/schemas/nuarsubmissions/2.1.0" elementFormDefault="qualified" targetNamespace="http://portal.nuar.uk/schemas/nuardata/2.1.0" version="2.1.0" xmlns:="">
+  <annotation>
+    <appinfo>
+      <gmlProfileSchema xmlns="http://www.opengis.net/gml/3.2">http://www.opengis.net/gml</gmlProfileSchema>
+    </appinfo>
+  </annotation>
+  <import namespace=""/>
+  <import namespace="http://portal.nuar.uk/schemas/nuarcodelists_datamanagement/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuarcodelists_transformation/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuarorganisations/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuarsubmissions/2.1.0"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element abstract="true" name="Access" substitutionGroup="nuardata:NetworkAccessory" type="nuardata:AccessType"/>
+  <complexType abstract="true" name="AccessType">
+    <complexContent>
+      <extension base="nuardata:NetworkAccessoryType">
+        <sequence>
+          <element minOccurs="0" name="accessType" type="nuarcodelists_transformation:AccessTypeValueType"/>
+          <element minOccurs="0" name="accessSubType" type="string"/>
+          <element minOccurs="0" name="numberOfCovers" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="ArchaeologicalSite" substitutionGroup="nuardata:PlanningArea" type="nuardata:ArchaeologicalSiteType"/>
+  <complexType name="ArchaeologicalSiteType">
+    <complexContent>
+      <extension base="nuardata:PlanningAreaType">
+        <sequence>
+          <element minOccurs="0" name="grade">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="25"/>
+              </restriction>
+            </simpleType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="AreasOfSpecialScientificInterestNorthernIreland" substitutionGroup="nuardata:PlanningArea" type="nuardata:AreasOfSpecialScientificInterestNorthernIrelandType"/>
+  <complexType name="AreasOfSpecialScientificInterestNorthernIrelandType">
+    <complexContent>
+      <extension base="nuardata:PlanningAreaType">
+        <sequence>
+          <element minOccurs="0" name="reference">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="10"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element name="name">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="60"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="county">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="70"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="mapscale">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="40"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="speciespt1">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="254"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="speciespt2">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="254"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="habitat">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="254"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="earthsci">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="254"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="parties" type="double"/>
+          <element minOccurs="0" name="declareday" type="date"/>
+          <element minOccurs="0" name="declareha" type="double"/>
+          <element minOccurs="0" name="confirmday" type="date"/>
+          <element minOccurs="0" name="confirmha" type="double"/>
+          <element minOccurs="0" name="hyperlink">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="150"/>
+              </restriction>
+            </simpleType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="CharacterStringArray" substitutionGroup="gml:AbstractGML" type="nuardata:CharacterStringArrayType"/>
+  <complexType name="CharacterStringArrayType">
+    <complexContent>
+      <extension base="gml:AbstractGMLType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="CharacterStringArrayPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:CharacterStringArray"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ConservationArea" substitutionGroup="nuardata:PlanningArea" type="nuardata:ConservationAreaType"/>
+  <complexType name="ConservationAreaType">
+    <complexContent>
+      <extension base="nuardata:PlanningAreaType">
+        <sequence>
+          <element minOccurs="0" name="designationPurpose" type="nuarcodelists_transformation:DesignationPurposeValueType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element abstract="true" name="Container" substitutionGroup="nuardata:NetworkAccessory" type="nuardata:ContainerType"/>
+  <complexType abstract="true" name="ContainerType">
+    <complexContent>
+      <extension base="nuardata:NetworkAccessoryType">
+        <sequence>
+          <element minOccurs="0" name="containerType" type="nuarcodelists_transformation:ContainerTypeValueType"/>
+          <element minOccurs="0" name="containerSubType" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="Denotation" substitutionGroup="nuardata:MUDDIEvent" type="nuardata:DenotationType"/>
+  <complexType name="DenotationType">
+    <complexContent>
+      <extension base="nuardata:MUDDIEventType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DenotationPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Denotation"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Depth" substitutionGroup="nuardata:VariableObjectValue" type="nuardata:DepthType"/>
+  <complexType name="DepthType">
+    <complexContent>
+      <extension base="nuardata:VariableObjectValueType">
+        <sequence>
+          <element minOccurs="0" name="depth" type="nuardata:DepthTypePropertyType"/>
+          <element minOccurs="0" name="depthMethod" type="nuarcodelists_transformation:DepthMethodValueType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DepthPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Depth"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="DepthType" substitutionGroup="gml:AbstractObject" type="nuardata:DepthTypeType"/>
+  <complexType name="DepthTypeType">
+    <sequence>
+      <element minOccurs="0" name="depth" type="double"/>
+      <element minOccurs="0" name="unitOfMeasure" type="nuarcodelists_platform:MeasurementUnitsValueType"/>
+    </sequence>
+  </complexType>
+  <complexType name="DepthTypePropertyType">
+    <sequence>
+      <element ref="nuardata:DepthType"/>
+    </sequence>
+  </complexType>
+  <element name="DrainageAccessObject" substitutionGroup="nuardata:Access" type="nuardata:DrainageAccessObjectType"/>
+  <complexType name="DrainageAccessObjectType">
+    <complexContent>
+      <extension base="nuardata:AccessType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="DrainageContainerObject" substitutionGroup="nuardata:Container" type="nuardata:DrainageContainerObjectType"/>
+  <complexType name="DrainageContainerObjectType">
+    <complexContent>
+      <extension base="nuardata:ContainerType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="DrainageNetwork" substitutionGroup="nuardata:Network" type="nuardata:DrainageNetworkType"/>
+  <complexType name="DrainageNetworkType">
+    <complexContent>
+      <extension base="nuardata:NetworkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DrainageNetworkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:DrainageNetwork"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="DrainageNetworkAnnotation" substitutionGroup="nuardata:NetworkAnnotation" type="nuardata:DrainageNetworkAnnotationType"/>
+  <complexType name="DrainageNetworkAnnotationType">
+    <complexContent>
+      <extension base="nuardata:NetworkAnnotationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DrainageNetworkAnnotationPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:DrainageNetworkAnnotation"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="DrainageNetworkDescriptionObject" substitutionGroup="nuardata:NetworkDescriptionObject" type="nuardata:DrainageNetworkDescriptionObjectType"/>
+  <complexType name="DrainageNetworkDescriptionObjectType">
+    <complexContent>
+      <extension base="nuardata:NetworkDescriptionObjectType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DrainageNetworkDescriptionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:DrainageNetworkDescriptionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="DrainageNetworkDimension" substitutionGroup="nuardata:NetworkDimension" type="nuardata:DrainageNetworkDimensionType"/>
+  <complexType name="DrainageNetworkDimensionType">
+    <complexContent>
+      <extension base="nuardata:NetworkDimensionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DrainageNetworkDimensionPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:DrainageNetworkDimension"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="DrainageNetworkLink" substitutionGroup="nuardata:NetworkConveyanceLink" type="nuardata:DrainageNetworkLinkType"/>
+  <complexType name="DrainageNetworkLinkType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceLinkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="DrainageNetworkLinkZoneOfInterest" substitutionGroup="nuardata:DrainageNetworkLink" type="nuardata:DrainageNetworkLinkZoneOfInterestType"/>
+  <complexType name="DrainageNetworkLinkZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:DrainageNetworkLinkType">
+        <sequence>
+          <group ref="nuardata:NetworkLinkZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DrainageNetworkLinkZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:DrainageNetworkLinkZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="DrainageNetworkNode" substitutionGroup="nuardata:NetworkConveyanceNode" type="nuardata:DrainageNetworkNodeType"/>
+  <complexType name="DrainageNetworkNodeType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceNodeType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="DrainageNetworkNodeZoneOfInterest" substitutionGroup="nuardata:DrainageNetworkNode" type="nuardata:DrainageNetworkNodeZoneOfInterestType"/>
+  <complexType name="DrainageNetworkNodeZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:DrainageNetworkNodeType">
+        <sequence>
+          <group ref="nuardata:NetworkNodeZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DrainageNetworkNodeZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:DrainageNetworkNodeZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="DrainagePhysicalProtectionObject" substitutionGroup="nuardata:PhysicalProtection" type="nuardata:DrainagePhysicalProtectionObjectType"/>
+  <complexType name="DrainagePhysicalProtectionObjectType">
+    <complexContent>
+      <extension base="nuardata:PhysicalProtectionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DrainagePhysicalProtectionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:DrainagePhysicalProtectionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="DrainageServiceArea" substitutionGroup="nuardata:ServiceArea" type="nuardata:DrainageServiceAreaType"/>
+  <complexType name="DrainageServiceAreaType">
+    <complexContent>
+      <extension base="nuardata:ServiceAreaType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DrainageServiceAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:DrainageServiceArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="DrainageSite" substitutionGroup="nuardata:Site" type="nuardata:DrainageSiteType"/>
+  <complexType name="DrainageSiteType">
+    <complexContent>
+      <extension base="nuardata:SiteType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="DrainageSiteZoneOfInterest" substitutionGroup="nuardata:DrainageSite" type="nuardata:DrainageSiteZoneOfInterestType"/>
+  <complexType name="DrainageSiteZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:DrainageSiteType">
+        <sequence>
+          <group ref="nuardata:SiteZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DrainageSiteZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:DrainageSiteZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="DrainageSupportObject" substitutionGroup="nuardata:Support" type="nuardata:DrainageSupportObjectType"/>
+  <complexType name="DrainageSupportObjectType">
+    <complexContent>
+      <extension base="nuardata:SupportType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DrainageSupportObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:DrainageSupportObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ElectricityAccessObject" substitutionGroup="nuardata:Access" type="nuardata:ElectricityAccessObjectType"/>
+  <complexType name="ElectricityAccessObjectType">
+    <complexContent>
+      <extension base="nuardata:AccessType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElectricityAccessObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ElectricityAccessObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ElectricityContainerObject" substitutionGroup="nuardata:Container" type="nuardata:ElectricityContainerObjectType"/>
+  <complexType name="ElectricityContainerObjectType">
+    <complexContent>
+      <extension base="nuardata:ContainerType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElectricityContainerObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ElectricityContainerObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="ElectricityLinkTypeValueType">
+    <union memberTypes="nuardata:ElectricityLinkTypeValueEnumerationType nuardata:ElectricityLinkTypeValueOtherType"/>
+  </simpleType>
+  <simpleType name="ElectricityLinkTypeValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="Power Conductor"/>
+      <enumeration value="Auxiliary Power Conductor"/>
+      <enumeration value="Cathodic Protection Conductor"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="ElectricityLinkTypeValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="ElectricityNetwork" substitutionGroup="nuardata:Network" type="nuardata:ElectricityNetworkType"/>
+  <complexType name="ElectricityNetworkType">
+    <complexContent>
+      <extension base="nuardata:NetworkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElectricityNetworkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ElectricityNetwork"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ElectricityNetworkAnnotation" substitutionGroup="nuardata:NetworkAnnotation" type="nuardata:ElectricityNetworkAnnotationType"/>
+  <complexType name="ElectricityNetworkAnnotationType">
+    <complexContent>
+      <extension base="nuardata:NetworkAnnotationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElectricityNetworkAnnotationPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ElectricityNetworkAnnotation"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ElectricityNetworkDescriptionObject" substitutionGroup="nuardata:NetworkDescriptionObject" type="nuardata:ElectricityNetworkDescriptionObjectType"/>
+  <complexType name="ElectricityNetworkDescriptionObjectType">
+    <complexContent>
+      <extension base="nuardata:NetworkDescriptionObjectType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElectricityNetworkDescriptionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ElectricityNetworkDescriptionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ElectricityNetworkDimension" substitutionGroup="nuardata:NetworkDimension" type="nuardata:ElectricityNetworkDimensionType"/>
+  <complexType name="ElectricityNetworkDimensionType">
+    <complexContent>
+      <extension base="nuardata:NetworkDimensionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElectricityNetworkDimensionPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ElectricityNetworkDimension"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ElectricityNetworkLink" substitutionGroup="nuardata:NetworkConveyanceLink" type="nuardata:ElectricityNetworkLinkType"/>
+  <complexType name="ElectricityNetworkLinkType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceLinkType">
+        <sequence>
+          <element minOccurs="0" name="operatingVoltage" type="nuardata:OperatingVoltageTypePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="ElectricityNetworkLinkZoneOfInterest" substitutionGroup="nuardata:ElectricityNetworkLink" type="nuardata:ElectricityNetworkLinkZoneOfInterestType"/>
+  <complexType name="ElectricityNetworkLinkZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:ElectricityNetworkLinkType">
+        <sequence>
+          <group ref="nuardata:NetworkLinkZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElectricityNetworkLinkZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ElectricityNetworkLinkZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ElectricityNetworkNode" substitutionGroup="nuardata:NetworkConveyanceNode" type="nuardata:ElectricityNetworkNodeType"/>
+  <complexType name="ElectricityNetworkNodeType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceNodeType">
+        <sequence>
+          <element minOccurs="0" name="operatingVoltage" type="nuardata:OperatingVoltageTypePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="ElectricityNetworkNodeZoneOfInterest" substitutionGroup="nuardata:ElectricityNetworkNode" type="nuardata:ElectricityNetworkNodeZoneOfInterestType"/>
+  <complexType name="ElectricityNetworkNodeZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:ElectricityNetworkNodeType">
+        <sequence>
+          <group ref="nuardata:NetworkNodeZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElectricityNetworkNodeZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ElectricityNetworkNodeZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ElectricityPhysicalProtectionObject" substitutionGroup="nuardata:PhysicalProtection" type="nuardata:ElectricityPhysicalProtectionObjectType"/>
+  <complexType name="ElectricityPhysicalProtectionObjectType">
+    <complexContent>
+      <extension base="nuardata:PhysicalProtectionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElectricityPhysicalProtectionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ElectricityPhysicalProtectionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ElectricityServiceArea" substitutionGroup="nuardata:ServiceArea" type="nuardata:ElectricityServiceAreaType"/>
+  <complexType name="ElectricityServiceAreaType">
+    <complexContent>
+      <extension base="nuardata:ServiceAreaType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElectricityServiceAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ElectricityServiceArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ElectricitySite" substitutionGroup="nuardata:Site" type="nuardata:ElectricitySiteType"/>
+  <complexType name="ElectricitySiteType">
+    <complexContent>
+      <extension base="nuardata:SiteType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="ElectricitySiteZoneOfInterest" substitutionGroup="nuardata:ElectricitySite" type="nuardata:ElectricitySiteZoneOfInterestType"/>
+  <complexType name="ElectricitySiteZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:ElectricitySiteType">
+        <sequence>
+          <group ref="nuardata:SiteZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElectricitySiteZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ElectricitySiteZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ElectricitySupportObject" substitutionGroup="nuardata:Support" type="nuardata:ElectricitySupportObjectType"/>
+  <complexType name="ElectricitySupportObjectType">
+    <complexContent>
+      <extension base="nuardata:SupportType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElectricitySupportObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ElectricitySupportObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="EnhancedMeasuresRule" substitutionGroup="gml:AbstractGML" type="nuardata:EnhancedMeasuresRuleType"/>
+  <complexType name="EnhancedMeasuresRuleType">
+    <complexContent>
+      <extension base="gml:AbstractGMLType">
+        <sequence>
+          <element name="enhancedMeasures" type="nuarcodelists_platform:EnhancedMeasuresTypeValueType"/>
+          <element default="0" minOccurs="0" name="enhancedMeasuresProximity" type="double"/>
+          <element name="id" type="string"/>
+          <element name="subordinateNetwork">
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractFeatureMemberType">
+                  <sequence minOccurs="0">
+                    <element ref="nuardata:Network"/>
+                  </sequence>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="guidance"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="EnhancedMeasuresRulePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:EnhancedMeasuresRule"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="EnquirerRule" substitutionGroup="gml:AbstractGML" type="nuardata:EnquirerRuleType"/>
+  <complexType name="EnquirerRuleType">
+    <complexContent>
+      <extension base="gml:AbstractGMLType">
+        <sequence>
+          <element minOccurs="0" name="enhancedMeasures" type="nuarcodelists_platform:EnhancedMeasuresTypeValueType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="guidance"/>
+          <element name="id" type="string"/>
+          <element minOccurs="0" name="networkTier">
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractFeatureMemberType">
+                  <sequence minOccurs="0">
+                    <element ref="nuardata:Network"/>
+                  </sequence>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+          <element minOccurs="0" name="enquirerRole" type="string"/>
+          <element minOccurs="0" name="enquirerOrganisation" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="EnquirerRulePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:EnquirerRule"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FuelAndChemicalsAccessObject" substitutionGroup="nuardata:Access" type="nuardata:FuelAndChemicalsAccessObjectType"/>
+  <complexType name="FuelAndChemicalsAccessObjectType">
+    <complexContent>
+      <extension base="nuardata:AccessType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FuelAndChemicalsAccessObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:FuelAndChemicalsAccessObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FuelAndChemicalsContainerObject" substitutionGroup="nuardata:Container" type="nuardata:FuelAndChemicalsContainerObjectType"/>
+  <complexType name="FuelAndChemicalsContainerObjectType">
+    <complexContent>
+      <extension base="nuardata:ContainerType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FuelAndChemicalsContainerObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:FuelAndChemicalsContainerObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FuelAndChemicalsNetwork" substitutionGroup="nuardata:Network" type="nuardata:FuelAndChemicalsNetworkType"/>
+  <complexType name="FuelAndChemicalsNetworkType">
+    <complexContent>
+      <extension base="nuardata:NetworkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FuelAndChemicalsNetworkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:FuelAndChemicalsNetwork"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FuelAndChemicalsNetworkAnnotation" substitutionGroup="nuardata:NetworkAnnotation" type="nuardata:FuelAndChemicalsNetworkAnnotationType"/>
+  <complexType name="FuelAndChemicalsNetworkAnnotationType">
+    <complexContent>
+      <extension base="nuardata:NetworkAnnotationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FuelAndChemicalsNetworkAnnotationPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:FuelAndChemicalsNetworkAnnotation"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FuelAndChemicalsNetworkDescriptionObject" substitutionGroup="nuardata:NetworkDescriptionObject" type="nuardata:FuelAndChemicalsNetworkDescriptionObjectType"/>
+  <complexType name="FuelAndChemicalsNetworkDescriptionObjectType">
+    <complexContent>
+      <extension base="nuardata:NetworkDescriptionObjectType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FuelAndChemicalsNetworkDescriptionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:FuelAndChemicalsNetworkDescriptionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FuelAndChemicalsNetworkDimension" substitutionGroup="nuardata:NetworkDimension" type="nuardata:FuelAndChemicalsNetworkDimensionType"/>
+  <complexType name="FuelAndChemicalsNetworkDimensionType">
+    <complexContent>
+      <extension base="nuardata:NetworkDimensionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FuelAndChemicalsNetworkDimensionPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:FuelAndChemicalsNetworkDimension"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FuelAndChemicalsNetworkLink" substitutionGroup="nuardata:NetworkConveyanceLink" type="nuardata:FuelAndChemicalsNetworkLinkType"/>
+  <complexType name="FuelAndChemicalsNetworkLinkType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceLinkType">
+        <sequence>
+          <element minOccurs="0" name="materialGrade" type="nuarcodelists_transformation:MaterialGradeValueType"/>
+          <element default="false" minOccurs="0" name="slabbing" type="boolean"/>
+          <element default="false" minOccurs="0" name="tape" type="boolean"/>
+          <element default="true" minOccurs="0" name="mahp" type="boolean"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="FuelAndChemicalsNetworkLinkZoneOfInterest" substitutionGroup="nuardata:FuelAndChemicalsNetworkLink" type="nuardata:FuelAndChemicalsNetworkLinkZoneOfInterestType"/>
+  <complexType name="FuelAndChemicalsNetworkLinkZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:FuelAndChemicalsNetworkLinkType">
+        <sequence>
+          <group ref="nuardata:NetworkLinkZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FuelAndChemicalsNetworkLinkZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:FuelAndChemicalsNetworkLinkZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FuelAndChemicalsNetworkNode" substitutionGroup="nuardata:NetworkConveyanceNode" type="nuardata:FuelAndChemicalsNetworkNodeType"/>
+  <complexType name="FuelAndChemicalsNetworkNodeType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceNodeType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="FuelAndChemicalsNetworkNodeZoneOfInterest" substitutionGroup="nuardata:FuelAndChemicalsNetworkNode" type="nuardata:FuelAndChemicalsNetworkNodeZoneOfInterestType"/>
+  <complexType name="FuelAndChemicalsNetworkNodeZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:FuelAndChemicalsNetworkNodeType">
+        <sequence>
+          <group ref="nuardata:NetworkNodeZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FuelAndChemicalsNetworkNodeZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:FuelAndChemicalsNetworkNodeZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FuelAndChemicalsPhysicalProtectionObject" substitutionGroup="nuardata:PhysicalProtection" type="nuardata:FuelAndChemicalsPhysicalProtectionObjectType"/>
+  <complexType name="FuelAndChemicalsPhysicalProtectionObjectType">
+    <complexContent>
+      <extension base="nuardata:PhysicalProtectionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FuelAndChemicalsPhysicalProtectionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:FuelAndChemicalsPhysicalProtectionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FuelAndChemicalsServiceArea" substitutionGroup="nuardata:ServiceArea" type="nuardata:FuelAndChemicalsServiceAreaType"/>
+  <complexType name="FuelAndChemicalsServiceAreaType">
+    <complexContent>
+      <extension base="nuardata:ServiceAreaType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FuelAndChemicalsServiceAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:FuelAndChemicalsServiceArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FuelAndChemicalsSite" substitutionGroup="nuardata:Site" type="nuardata:FuelAndChemicalsSiteType"/>
+  <complexType name="FuelAndChemicalsSiteType">
+    <complexContent>
+      <extension base="nuardata:SiteType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="FuelAndChemicalsSiteZoneOfInterest" substitutionGroup="nuardata:FuelAndChemicalsSite" type="nuardata:FuelAndChemicalsSiteZoneOfInterestType"/>
+  <complexType name="FuelAndChemicalsSiteZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:FuelAndChemicalsSiteType">
+        <sequence>
+          <group ref="nuardata:SiteZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FuelAndChemicalsSiteZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:FuelAndChemicalsSiteZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FuelAndChemicalsSupportObject" substitutionGroup="nuardata:Support" type="nuardata:FuelAndChemicalsSupportObjectType"/>
+  <complexType name="FuelAndChemicalsSupportObjectType">
+    <complexContent>
+      <extension base="nuardata:SupportType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FuelAndChemicalsSupportObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:FuelAndChemicalsSupportObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GasAccessObject" substitutionGroup="nuardata:Access" type="nuardata:GasAccessObjectType"/>
+  <complexType name="GasAccessObjectType">
+    <complexContent>
+      <extension base="nuardata:AccessType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GasAccessObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:GasAccessObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GasContainerObject" substitutionGroup="nuardata:Container" type="nuardata:GasContainerObjectType"/>
+  <complexType name="GasContainerObjectType">
+    <complexContent>
+      <extension base="nuardata:ContainerType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GasContainerObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:GasContainerObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GasNetwork" substitutionGroup="nuardata:Network" type="nuardata:GasNetworkType"/>
+  <complexType name="GasNetworkType">
+    <complexContent>
+      <extension base="nuardata:NetworkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GasNetworkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:GasNetwork"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GasNetworkAnnotation" substitutionGroup="nuardata:NetworkAnnotation" type="nuardata:GasNetworkAnnotationType"/>
+  <complexType name="GasNetworkAnnotationType">
+    <complexContent>
+      <extension base="nuardata:NetworkAnnotationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GasNetworkAnnotationPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:GasNetworkAnnotation"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GasNetworkDescriptionObject" substitutionGroup="nuardata:NetworkDescriptionObject" type="nuardata:GasNetworkDescriptionObjectType"/>
+  <complexType name="GasNetworkDescriptionObjectType">
+    <complexContent>
+      <extension base="nuardata:NetworkDescriptionObjectType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GasNetworkDescriptionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:GasNetworkDescriptionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GasNetworkDimension" substitutionGroup="nuardata:NetworkDimension" type="nuardata:GasNetworkDimensionType"/>
+  <complexType name="GasNetworkDimensionType">
+    <complexContent>
+      <extension base="nuardata:NetworkDimensionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GasNetworkDimensionPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:GasNetworkDimension"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GasNetworkLink" substitutionGroup="nuardata:NetworkConveyanceLink" type="nuardata:GasNetworkLinkType"/>
+  <complexType name="GasNetworkLinkType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceLinkType">
+        <sequence>
+          <element minOccurs="0" name="materialGrade" type="nuarcodelists_transformation:MaterialGradeValueType"/>
+          <element default="false" minOccurs="0" name="slabbing" type="boolean"/>
+          <element default="false" minOccurs="0" name="tape" type="boolean"/>
+          <element default="false" minOccurs="0" name="mahp" type="boolean"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="GasNetworkLinkZoneOfInterest" substitutionGroup="nuardata:GasNetworkLink" type="nuardata:GasNetworkLinkZoneOfInterestType"/>
+  <complexType name="GasNetworkLinkZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:GasNetworkLinkType">
+        <sequence>
+          <group ref="nuardata:NetworkLinkZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GasNetworkLinkZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:GasNetworkLinkZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GasNetworkNode" substitutionGroup="nuardata:NetworkConveyanceNode" type="nuardata:GasNetworkNodeType"/>
+  <complexType name="GasNetworkNodeType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceNodeType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="GasNetworkNodeZoneOfInterest" substitutionGroup="nuardata:GasNetworkNode" type="nuardata:GasNetworkNodeZoneOfInterestType"/>
+  <complexType name="GasNetworkNodeZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:GasNetworkNodeType">
+        <sequence>
+          <group ref="nuardata:NetworkNodeZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GasNetworkNodeZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:GasNetworkNodeZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GasPhysicalProtectionObject" substitutionGroup="nuardata:PhysicalProtection" type="nuardata:GasPhysicalProtectionObjectType"/>
+  <complexType name="GasPhysicalProtectionObjectType">
+    <complexContent>
+      <extension base="nuardata:PhysicalProtectionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GasPhysicalProtectionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:GasPhysicalProtectionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GasServiceArea" substitutionGroup="nuardata:ServiceArea" type="nuardata:GasServiceAreaType"/>
+  <complexType name="GasServiceAreaType">
+    <complexContent>
+      <extension base="nuardata:ServiceAreaType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GasServiceAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:GasServiceArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GasSite" substitutionGroup="nuardata:Site" type="nuardata:GasSiteType"/>
+  <complexType name="GasSiteType">
+    <complexContent>
+      <extension base="nuardata:SiteType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="GasSiteZoneOfInterest" substitutionGroup="nuardata:GasSite" type="nuardata:GasSiteZoneOfInterestType"/>
+  <complexType name="GasSiteZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:GasSiteType">
+        <sequence>
+          <group ref="nuardata:SiteZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GasSiteZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:GasSiteZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GasSupportObject" substitutionGroup="nuardata:Support" type="nuardata:GasSupportObjectType"/>
+  <complexType name="GasSupportObjectType">
+    <complexContent>
+      <extension base="nuardata:SupportType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GasSupportObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:GasSupportObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GeneralPlanningArea" substitutionGroup="nuardata:PlanningArea" type="nuardata:GeneralPlanningAreaType"/>
+  <complexType name="GeneralPlanningAreaType">
+    <complexContent>
+      <extension base="nuardata:PlanningAreaType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GeneralPlanningAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:GeneralPlanningArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="HeightType" substitutionGroup="gml:AbstractObject" type="nuardata:HeightTypeType"/>
+  <complexType name="HeightTypeType">
+    <sequence>
+      <element minOccurs="0" name="height" type="double"/>
+      <element minOccurs="0" name="unitOfMeasure" type="nuarcodelists_platform:MeasurementUnitsValueType"/>
+    </sequence>
+  </complexType>
+  <complexType name="HeightTypePropertyType">
+    <sequence>
+      <element ref="nuardata:HeightType"/>
+    </sequence>
+  </complexType>
+  <element name="HorizontalMeasurementMethod" substitutionGroup="nuardata:VariableObjectValue" type="nuardata:HorizontalMeasurementMethodType"/>
+  <complexType name="HorizontalMeasurementMethodType">
+    <complexContent>
+      <extension base="nuardata:VariableObjectValueType">
+        <sequence>
+          <element minOccurs="0" name="horizontalMeasurementMethod" type="nuarcodelists_transformation:HorizontalMeasurementMethodValueType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HorizontalMeasurementMethodPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:HorizontalMeasurementMethod"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="LengthType" substitutionGroup="gml:AbstractObject" type="nuardata:LengthTypeType"/>
+  <complexType name="LengthTypeType">
+    <sequence>
+      <element minOccurs="0" name="length" type="double"/>
+      <element minOccurs="0" name="unitOfMeasure" type="nuarcodelists_platform:MeasurementUnitsValueType"/>
+    </sequence>
+  </complexType>
+  <complexType name="LengthTypePropertyType">
+    <sequence>
+      <element ref="nuardata:LengthType"/>
+    </sequence>
+  </complexType>
+  <element abstract="true" name="MUDDIAsset" substitutionGroup="nuardata:MUDDIObject" type="nuardata:MUDDIAssetType"/>
+  <complexType abstract="true" name="MUDDIAssetType">
+    <complexContent>
+      <extension base="nuardata:MUDDIObjectType">
+        <sequence>
+          <element minOccurs="0" name="azimuth" type="double"/>
+          <element minOccurs="0" name="centroidXYZ">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="255"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="azimuthMeasurementUnits" type="nuarcodelists_platform:MeasurementUnitsValueType"/>
+          <element minOccurs="0" name="colour" type="string"/>
+          <element minOccurs="0" name="depth" type="nuardata:DepthTypePropertyType"/>
+          <element minOccurs="0" name="depthMethod" type="nuarcodelists_transformation:DepthMethodValueType"/>
+          <element minOccurs="0" name="horizontalAccuracy" type="nuardata:LengthTypePropertyType"/>
+          <element minOccurs="0" name="horizontalMeasurementMethod" type="nuarcodelists_transformation:HorizontalMeasurementMethodValueType"/>
+          <element minOccurs="0" name="installationMethod" type="nuarcodelists_transformation:InstallationMethodTypeValueType"/>
+          <element minOccurs="0" name="installationMethodSubType" type="string"/>
+          <element minOccurs="0" name="intendedPermanence" type="nuarcodelists_transformation:IntendedPermanenceValueType"/>
+          <element minOccurs="0" name="materialSubType" type="string"/>
+          <element minOccurs="0" name="locationType" type="nuarcodelists_transformation:LocationTypeValueType"/>
+          <element minOccurs="0" name="material" type="nuarcodelists_transformation:MaterialValueType"/>
+          <element minOccurs="0" name="qualityLevel" type="nuarcodelists_platform:QualityLevelValueType"/>
+          <element minOccurs="0" name="undergroundStatus" type="nuarcodelists_platform:UndergroundStatusValueType"/>
+          <element minOccurs="0" name="verticalAccuracy" type="nuardata:LengthTypePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="MUDDIEnvironmentalUnit" substitutionGroup="nuardata:MUDDIObject" type="nuardata:MUDDIEnvironmentalUnitType"/>
+  <complexType name="MUDDIEnvironmentalUnitType">
+    <complexContent>
+      <extension base="nuardata:MUDDIObjectType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MUDDIEnvironmentalUnitPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:MUDDIEnvironmentalUnit"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="MUDDIEvent" substitutionGroup="nuardata:MUDDIObject" type="nuardata:MUDDIEventType"/>
+  <complexType abstract="true" name="MUDDIEventType">
+    <complexContent>
+      <extension base="nuardata:MUDDIObjectType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MUDDIEventPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:MUDDIEvent"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="MUDDIObject" substitutionGroup="nuardata:NUARObject" type="nuardata:MUDDIObjectType"/>
+  <complexType abstract="true" name="MUDDIObjectType">
+    <complexContent>
+      <extension base="nuardata:NUARObjectType">
+        <sequence>
+          <element minOccurs="0" name="certification">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="255"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="dataProviderAssignedUniqueID" type="string"/>
+          <element default="true" name="dataProviderAssignedUniqueIDAutoAssigned" type="boolean"/>
+          <element minOccurs="0" name="dataOwner" type="string"/>
+          <element minOccurs="0" name="dataOwnerAssignedUniqueID" type="string"/>
+          <element default="Requires Redaction" minOccurs="0" name="dataSensitivityLevel">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="255"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="dateDataCollected" type="date"/>
+          <element minOccurs="0" name="dateOfLastStatusChange" type="date"/>
+          <element minOccurs="0" name="description" type="string"/>
+          <element minOccurs="0" name="featureType" type="nuarcodelists_transformation:FeatureTypeValueType"/>
+          <element minOccurs="0" name="horizontalCRS">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="10"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="operationalStatus" type="nuarcodelists_platform:OperationalStatusValueType"/>
+          <element minOccurs="0" name="originalDateDataCollected" type="date"/>
+          <element minOccurs="0" name="version">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="255"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="enhancedMeasures" type="nuarcodelists_platform:EnhancedMeasuresTypeValueType"/>
+          <element minOccurs="0" name="enhancedMeasuresProximity" type="nuardata:LengthTypePropertyType"/>
+          <element minOccurs="0" name="expectedRefreshPeriod" type="nuardata:TimePeriodTypePropertyType"/>
+          <element minOccurs="0" name="verticalCRS">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="10"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="geometry" type="gml:GeometryPropertyType"/>
+          <element minOccurs="0" name="sourceFeatureClass" type="string"/>
+          <element minOccurs="0" name="localeReference" type="string"/>
+          <element minOccurs="0" name="localeReferenceType" type="nuarcodelists_transformation:LocaleReferenceTypeValueType"/>
+          <element minOccurs="0" name="objectName" type="string"/>
+          <element minOccurs="0" name="objectOwner" type="string"/>
+          <element minOccurs="0" name="operator" type="string"/>
+          <element minOccurs="0" name="objectOwnerAssignedUniqueID" type="string"/>
+          <element minOccurs="0" name="operatorAssignedUniqueID" type="string"/>
+          <element minOccurs="0" name="additionalInformation" type="string"/>
+          <element name="dataProviderID" type="nuarorganisations:NUARActorPropertyType"/>
+          <element name="submissionEventID" type="nuarsubmissions:NUARSubmissionEventPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element abstract="true" name="MUDDISpace" substitutionGroup="nuardata:MUDDIObject" type="nuardata:MUDDISpaceType"/>
+  <complexType abstract="true" name="MUDDISpaceType">
+    <complexContent>
+      <extension base="nuardata:MUDDIObjectType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MUDDISpacePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:MUDDISpace"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARAddressType" substitutionGroup="gml:AbstractObject" type="nuardata:NUARAddressTypeType"/>
+  <complexType name="NUARAddressTypeType">
+    <sequence>
+      <element name="singleLineAddress" type="string"/>
+      <element name="subBuilding" type="string"/>
+      <element name="buildingName" type="string"/>
+      <element name="buildingNumber" type="string"/>
+      <element name="streetName" type="string"/>
+      <element name="locality" type="string"/>
+      <element name="townName" type="string"/>
+      <element name="postcode" type="string"/>
+      <element name="uprn" type="string"/>
+    </sequence>
+  </complexType>
+  <complexType name="NUARAddressTypePropertyType">
+    <sequence>
+      <element ref="nuardata:NUARAddressType"/>
+    </sequence>
+  </complexType>
+  <element name="NUARDataFeatureLifecycle_history" substitutionGroup="gml:AbstractFeature" type="nuardata:NUARDataFeatureLifecycle_historyType"/>
+  <complexType name="NUARDataFeatureLifecycle_historyType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="systemID" type="string"/>
+          <element name="featureSystemID" type="string"/>
+          <element name="featureType" type="string"/>
+          <element minOccurs="0" name="originalLifecycleStatus" type="nuarcodelists_datamanagement:LifecycleStatusValueType"/>
+          <element name="newLifecycleStatus" type="nuarcodelists_datamanagement:LifecycleStatusValueType"/>
+          <element minOccurs="0" name="originalVersion" type="string"/>
+          <element minOccurs="0" name="newVersion" type="string"/>
+          <element minOccurs="0" name="dateOfChange" type="dateTime"/>
+          <element minOccurs="0" name="supersededByID" type="string"/>
+          <element minOccurs="0" name="supersededByFeatureType" type="string"/>
+          <element minOccurs="0" name="description" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARDataFeatureLifecycle_historyPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:NUARDataFeatureLifecycle_history"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARGuidance" substitutionGroup="nuardata:MUDDIObject" type="nuardata:NUARGuidanceType"/>
+  <complexType name="NUARGuidanceType">
+    <complexContent>
+      <extension base="nuardata:MUDDIObjectType">
+        <sequence>
+          <element minOccurs="0" name="name" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARGuidancePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:NUARGuidance"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARLinkedFile" substitutionGroup="nuardata:MUDDIObject" type="nuardata:NUARLinkedFileType"/>
+  <complexType name="NUARLinkedFileType">
+    <complexContent>
+      <extension base="nuardata:MUDDIObjectType">
+        <sequence>
+          <element minOccurs="0" name="fullPath" type="string"/>
+          <element minOccurs="0" name="mimeType" type="string"/>
+          <element minOccurs="0" name="name" type="string"/>
+          <element minOccurs="0" name="typeDescription" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARLinkedFilePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:NUARLinkedFile"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="NUARObject" substitutionGroup="gml:AbstractFeature" type="nuardata:NUARObjectType"/>
+  <complexType abstract="true" name="NUARObjectType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="systemID" type="string"/>
+          <element default="Submitted" name="lifecycleStatus" type="nuarcodelists_datamanagement:LifecycleStatusValueType"/>
+          <element name="dateLastUpdated" type="dateTime"/>
+          <element minOccurs="0" name="dateOfLastLifecycleStatusChange" type="dateTime"/>
+          <element minOccurs="0" name="nuarVersion" type="string"/>
+          <element name="systemLoadDate" type="dateTime"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:NUARObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="NUARRelationship" substitutionGroup="nuardata:NUARObject" type="nuardata:NUARRelationshipType"/>
+  <complexType abstract="true" name="NUARRelationshipType">
+    <complexContent>
+      <extension base="nuardata:NUARObjectType">
+        <sequence>
+          <element name="dataProviderID" type="nuarorganisations:NUARActorPropertyType"/>
+          <element name="submissionEventID" type="nuarsubmissions:NUARSubmissionEventPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARRelationshipPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:NUARRelationship"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="NUARRule" substitutionGroup="nuardata:NUARObject" type="nuardata:NUARRuleType"/>
+  <complexType abstract="true" name="NUARRuleType">
+    <complexContent>
+      <extension base="nuardata:NUARObjectType">
+        <sequence>
+          <element name="name" type="string"/>
+          <element minOccurs="0" name="description" type="string"/>
+          <element minOccurs="0" name="enhancedMeasures" type="nuarcodelists_platform:EnhancedMeasuresTypeValueType"/>
+          <element name="submissionEventID" type="nuarsubmissions:NUARSubmissionEventPropertyType"/>
+          <element name="dataProviderID" type="nuarorganisations:NUARActorPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARRulePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:NUARRule"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="Network" substitutionGroup="nuardata:NetworkConveyance" type="nuardata:NetworkType"/>
+  <complexType abstract="true" name="NetworkType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element abstract="true" name="NetworkAccessory" substitutionGroup="nuardata:NetworkAsset" type="nuardata:NetworkAccessoryType"/>
+  <complexType abstract="true" name="NetworkAccessoryType">
+    <complexContent>
+      <extension base="nuardata:NetworkAssetType">
+        <sequence>
+          <element minOccurs="0" name="accessoryType" type="nuarcodelists_transformation:NetworkAccessoryTypeValueType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element abstract="true" name="NetworkAnnotation" substitutionGroup="nuardata:NetworkDescriptionObject" type="nuardata:NetworkAnnotationType"/>
+  <complexType abstract="true" name="NetworkAnnotationType">
+    <complexContent>
+      <extension base="nuardata:NetworkDescriptionObjectType">
+        <sequence>
+          <element default="false" minOccurs="0" name="bold" type="boolean"/>
+          <element minOccurs="0" name="characterSpacing" type="double"/>
+          <element minOccurs="0" name="characterWidth" type="double"/>
+          <element minOccurs="0" name="fontLeading" type="double"/>
+          <element default="false" minOccurs="0" name="geometryVisible" type="boolean"/>
+          <element minOccurs="0" name="fontName" type="string"/>
+          <element minOccurs="0" name="fontSize" type="double"/>
+          <element minOccurs="0" name="fontStyle" type="string"/>
+          <element minOccurs="0" name="horizontalAlignment" type="nuarcodelists_platform:AnnotationHorizontalAlignmentValueType"/>
+          <element default="false" minOccurs="0" name="italic" type="boolean"/>
+          <element default="false" minOccurs="0" name="underline" type="boolean"/>
+          <element minOccurs="0" name="verticalAlignment" type="nuarcodelists_platform:AnnotationVerticalAlignmentValueType"/>
+          <element minOccurs="0" name="wordSpacing" type="double"/>
+          <element default="0" minOccurs="0" name="xOffset" type="double"/>
+          <element default="0" minOccurs="0" name="yOffset" type="double"/>
+          <element minOccurs="0" name="flipAngle" type="double"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element abstract="true" name="NetworkAsset" substitutionGroup="nuardata:MUDDIAsset" type="nuardata:NetworkAssetType"/>
+  <complexType abstract="true" name="NetworkAssetType">
+    <complexContent>
+      <extension base="nuardata:MUDDIAssetType">
+        <sequence>
+          <element minOccurs="0" name="container" type="string"/>
+          <element minOccurs="0" name="dateOfInstallation" type="date"/>
+          <element minOccurs="0" name="insideHeight" type="nuardata:HeightTypePropertyType"/>
+          <element minOccurs="0" name="insideLength" type="nuardata:LengthTypePropertyType"/>
+          <element minOccurs="0" name="insideWidth" type="nuardata:WidthTypePropertyType"/>
+          <element minOccurs="0" name="isAuxiliary" type="boolean"/>
+          <element minOccurs="0" name="isCathodicProtected" type="boolean"/>
+          <element minOccurs="0" name="isEncased" type="boolean"/>
+          <element minOccurs="0" name="isNPS">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="40"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="outsideHeight" type="nuardata:HeightTypePropertyType"/>
+          <element minOccurs="0" name="outsideLength" type="nuardata:LengthTypePropertyType"/>
+          <element minOccurs="0" name="outsideWidth" type="nuardata:WidthTypePropertyType"/>
+          <element minOccurs="0" name="protectiveMaterial">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="255"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="protectiveMaterialSubType" type="string"/>
+          <element minOccurs="0" name="utilitySubType" type="nuarcodelists_transformation:UtilitySubTypeValueType"/>
+          <element minOccurs="0" name="utilityType" type="nuarcodelists_platform:UtilityTypeValueType"/>
+          <element minOccurs="0" name="wallThickness" type="nuardata:WidthTypePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element abstract="true" name="NetworkConveyance" substitutionGroup="nuardata:NetworkAsset" type="nuardata:NetworkConveyanceType"/>
+  <complexType abstract="true" name="NetworkConveyanceType">
+    <complexContent>
+      <extension base="nuardata:NetworkAssetType">
+        <sequence>
+          <element minOccurs="0" name="conveyanceCategory" type="nuarcodelists_transformation:ConveyanceCategoryValueType"/>
+          <element minOccurs="0" name="conveyanceMethod" type="nuarcodelists_transformation:ConveyanceMethodValueType"/>
+          <element minOccurs="0" name="fillMaterial">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="255"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="operatingConveyanceLevel" type="double"/>
+          <element minOccurs="0" name="operatingConveyanceLevelType" type="nuarcodelists_transformation:OperatingConveyanceLevelTypeValueType"/>
+          <element minOccurs="0" name="operatingConveyanceLevelUnits" type="nuarcodelists_platform:MeasurementUnitsValueType"/>
+          <element minOccurs="0" name="operatingTemperature" type="double"/>
+          <element minOccurs="0" name="operatingTemperatureRange" type="nuarcodelists_transformation:TemperatureRangeValueType"/>
+          <element minOccurs="0" name="operatingTemperatureUnits" type="nuarcodelists_platform:MeasurementUnitsValueType"/>
+          <element minOccurs="0" name="isFilled" type="boolean"/>
+          <element minOccurs="0" name="outerMaterial">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="255"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="outerMaterialSubType" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element abstract="true" name="NetworkConveyanceLink" substitutionGroup="nuardata:NetworkConveyance" type="nuardata:NetworkConveyanceLinkType"/>
+  <complexType abstract="true" name="NetworkConveyanceLinkType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceType">
+        <sequence>
+          <element minOccurs="0" name="downstreamDepth" type="nuardata:DepthTypePropertyType"/>
+          <element minOccurs="0" name="componentType" type="nuarcodelists_transformation:NetworkLinkComponentTypeValueType"/>
+          <element minOccurs="0" name="componentSubType" type="string"/>
+          <element minOccurs="0" name="startNodeID" type="string"/>
+          <element minOccurs="0" name="endNodeID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element abstract="true" name="NetworkConveyanceNode" substitutionGroup="nuardata:NetworkConveyance" type="nuardata:NetworkConveyanceNodeType"/>
+  <complexType abstract="true" name="NetworkConveyanceNodeType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceType">
+        <sequence>
+          <element minOccurs="0" name="componentType" type="nuarcodelists_transformation:NetworkNodeComponentTypeValueType"/>
+          <element minOccurs="0" name="componentSubType" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element abstract="true" name="NetworkDescriptionObject" substitutionGroup="nuardata:MUDDIObject" type="nuardata:NetworkDescriptionObjectType"/>
+  <complexType abstract="true" name="NetworkDescriptionObjectType">
+    <complexContent>
+      <extension base="nuardata:MUDDIObjectType">
+        <sequence>
+          <element minOccurs="0" name="associatedAssets" type="string"/>
+          <element minOccurs="0" name="associatedText" type="string"/>
+          <element minOccurs="0" name="descriptionType" type="nuarcodelists_transformation:NetworkDescriptionTypeValueType"/>
+          <element minOccurs="0" name="isQueryable" type="boolean"/>
+          <element minOccurs="0" name="orientation" type="double"/>
+          <element minOccurs="0" name="orientationMeasurementUnits" type="nuarcodelists_platform:MeasurementUnitsValueType"/>
+          <element minOccurs="0" name="utilitySubType" type="nuarcodelists_transformation:UtilitySubTypeValueType"/>
+          <element minOccurs="0" name="referenceScale" type="double"/>
+          <element minOccurs="0" name="utilityType" type="nuarcodelists_platform:UtilityTypeValueType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element abstract="true" name="NetworkDimension" substitutionGroup="nuardata:NetworkDescriptionObject" type="nuardata:NetworkDimensionType"/>
+  <complexType abstract="true" name="NetworkDimensionType">
+    <complexContent>
+      <extension base="nuardata:NetworkDescriptionObjectType">
+        <sequence>
+          <element minOccurs="0" name="dimensionLine" type="gml:CurvePropertyType"/>
+          <element minOccurs="0" name="dimensionValue" type="nuardata:LengthTypePropertyType"/>
+          <element minOccurs="0" name="endDimensionLineExtension" type="gml:CurvePropertyType"/>
+          <element minOccurs="0" name="endDimensionPoint" type="gml:PointPropertyType"/>
+          <element minOccurs="0" name="endExtensionLine" type="gml:CurvePropertyType"/>
+          <element minOccurs="0" name="propertyIndicator" type="string"/>
+          <element minOccurs="0" name="startDimensionLineExtension" type="gml:CurvePropertyType"/>
+          <element minOccurs="0" name="startExtensionLine" type="gml:CurvePropertyType"/>
+          <element minOccurs="0" name="startDimensionPoint" type="gml:PointPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NetworkLinkZoneOfInterestPropertyType">
+    <choice minOccurs="0">
+      <element ref="nuardata:DrainageNetworkLinkZoneOfInterest"/>
+      <element ref="nuardata:ElectricityNetworkLinkZoneOfInterest"/>
+      <element ref="nuardata:FuelAndChemicalsNetworkLinkZoneOfInterest"/>
+      <element ref="nuardata:GasNetworkLinkZoneOfInterest"/>
+      <element ref=":NetworkLinkZoneOfInterest"/>
+      <element ref="nuardata:SewerNetworkLinkZoneOfInterest"/>
+      <element ref="nuardata:TelcoNetworkLinkZoneOfInterest"/>
+      <element ref="nuardata:ThermalNetworkLinkZoneOfInterest"/>
+      <element ref="nuardata:TransportSignalNetworkLinkZoneOfInterest"/>
+      <element ref="nuardata:WaterNetworkLinkZoneOfInterest"/>
+    </choice>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <group name="NetworkLinkZoneOfInterestGroup">
+    <sequence>
+      <element minOccurs="0" name="parentFeatureID" type="string"/>
+      <element minOccurs="0" name="displayParentFeature" type="boolean"/>
+      <element minOccurs="0" name="displayZoneOfInterest" type="boolean"/>
+    </sequence>
+  </group>
+  <complexType name="NetworkNodeZoneOfInterestPropertyType">
+    <choice minOccurs="0">
+      <element ref="nuardata:DrainageNetworkNodeZoneOfInterest"/>
+      <element ref="nuardata:ElectricityNetworkNodeZoneOfInterest"/>
+      <element ref="nuardata:FuelAndChemicalsNetworkNodeZoneOfInterest"/>
+      <element ref="nuardata:GasNetworkNodeZoneOfInterest"/>
+      <element ref=":NetworkNodeZoneOfInterest"/>
+      <element ref="nuardata:SewerNetworkNodeZoneOfInterest"/>
+      <element ref="nuardata:TelcoNetworkNodeZoneOfInterest"/>
+      <element ref="nuardata:ThermalNetworkNodeZoneOfInterest"/>
+      <element ref="nuardata:TransportSignalNetworkNodeZoneOfInterest"/>
+      <element ref="nuardata:WaterNetworkNodeZoneOfInterest"/>
+    </choice>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <group name="NetworkNodeZoneOfInterestGroup">
+    <sequence>
+      <element minOccurs="0" name="parentFeatureID" type="string"/>
+      <element minOccurs="0" name="displayParentFeature" type="boolean"/>
+      <element minOccurs="0" name="displayZoneOfInterest" type="boolean"/>
+    </sequence>
+  </group>
+  <element name="NonUtilityObject" substitutionGroup="nuardata:Structure" type="nuardata:NonUtilityObjectType"/>
+  <complexType name="NonUtilityObjectType">
+    <complexContent>
+      <extension base="nuardata:StructureType">
+        <sequence>
+          <element minOccurs="0" name="type" type="nuarcodelists_transformation:NonUtilityObjectTypeValueType"/>
+          <element minOccurs="0" name="subtype" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NonUtilityObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:NonUtilityObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="OperatingVoltageType" substitutionGroup="gml:AbstractObject" type="nuardata:OperatingVoltageTypeType"/>
+  <complexType name="OperatingVoltageTypeType">
+    <sequence>
+      <element minOccurs="0" name="operatingVoltage" type="double"/>
+      <element minOccurs="0" name="unitOfMeasure" type="nuarcodelists_platform:MeasurementUnitsValueType"/>
+    </sequence>
+  </complexType>
+  <complexType name="OperatingVoltageTypePropertyType">
+    <sequence>
+      <element ref="nuardata:OperatingVoltageType"/>
+    </sequence>
+  </complexType>
+  <element abstract="true" name="PhysicalProtection" substitutionGroup="nuardata:NetworkAccessory" type="nuardata:PhysicalProtectionType"/>
+  <complexType abstract="true" name="PhysicalProtectionType">
+    <complexContent>
+      <extension base="nuardata:NetworkAccessoryType">
+        <sequence>
+          <element minOccurs="0" name="physicalProtectionType" type="nuarcodelists_transformation:PhysicalProtectionTypeValueType"/>
+          <element minOccurs="0" name="physicalProtectionSubType" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element abstract="true" name="PlanningArea" substitutionGroup="nuardata:MUDDISpace" type="nuardata:PlanningAreaType"/>
+  <complexType abstract="true" name="PlanningAreaType">
+    <complexContent>
+      <extension base="nuardata:MUDDISpaceType">
+        <sequence>
+          <element minOccurs="0" name="directive" type="string"/>
+          <element minOccurs="0" name="planningAreaType" type="nuarcodelists_transformation:PlanningAreaTypeValueType"/>
+          <element minOccurs="0" name="policyDocumentation" type="string"/>
+          <element minOccurs="0" name="policyName">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="255"/>
+              </restriction>
+            </simpleType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="QualityLevel" substitutionGroup="nuardata:VariableObjectValue" type="nuardata:QualityLevelType"/>
+  <complexType name="QualityLevelType">
+    <complexContent>
+      <extension base="nuardata:VariableObjectValueType">
+        <sequence>
+          <element minOccurs="0" name="qualityLevel" type="nuarcodelists_platform:QualityLevelValueType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="QualityLevelPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:QualityLevel"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_CoverageToBackdropObject" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_CoverageToBackdropObjectType"/>
+  <complexType name="Relationship_CoverageToBackdropObjectType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="coverageID" type="string"/>
+          <element name="backdropObjectTable" type="string"/>
+          <element name="backdropObjectID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_CoverageToBackdropObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_CoverageToBackdropObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_Guidance" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_GuidanceType"/>
+  <complexType name="Relationship_GuidanceType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedGuidanceID" type="string"/>
+          <element name="linkedObjectID" type="string"/>
+          <element name="linkedObjectTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_GuidancePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_Guidance"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_LinkToLinkZoneOfInterest" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_LinkToLinkZoneOfInterestType"/>
+  <complexType name="Relationship_LinkToLinkZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedLinkID" type="string"/>
+          <element name="linkedLinkTable" type="string"/>
+          <element name="linkedLinkZoneOfInterestID" type="string"/>
+          <element name="linkedLinkZoneOfInterestTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_LinkToLinkZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_LinkToLinkZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_LinkedFile" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_LinkedFileType"/>
+  <complexType name="Relationship_LinkedFileType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedFileID" type="string"/>
+          <element name="linkedObjectID" type="string"/>
+          <element name="linkedObjectTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_LinkedFilePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_LinkedFile"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_NetworkConveyanceToNetworkAccessory" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_NetworkConveyanceToNetworkAccessoryType"/>
+  <complexType name="Relationship_NetworkConveyanceToNetworkAccessoryType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedConveyanceID" type="string"/>
+          <element name="linkedConveyanceTable" type="string"/>
+          <element name="linkedAccessoryID" type="string"/>
+          <element name="linkedAccessoryTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_NetworkConveyanceToNetworkAccessoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_NetworkConveyanceToNetworkAccessory"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_NetworkToNetworkConveyance" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_NetworkToNetworkConveyanceType"/>
+  <complexType name="Relationship_NetworkToNetworkConveyanceType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedNetworkID" type="string"/>
+          <element name="linkedNetworkTable" type="string"/>
+          <element name="linkedConveyanceID" type="string"/>
+          <element name="linkedConveyanceTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_NetworkToNetworkConveyancePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_NetworkToNetworkConveyance"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_NetworkToServiceArea" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_NetworkToServiceAreaType"/>
+  <complexType name="Relationship_NetworkToServiceAreaType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedNetworkID" type="string"/>
+          <element name="linkedNetworkTable" type="string"/>
+          <element name="linkedServiceAreaID" type="string"/>
+          <element name="linkedServiceAreaTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_NetworkToServiceAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_NetworkToServiceArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_NetworkToSite" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_NetworkToSiteType"/>
+  <complexType name="Relationship_NetworkToSiteType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedNetworkID" type="string"/>
+          <element name="linkedNetworkTable" type="string"/>
+          <element name="linkedSiteID" type="string"/>
+          <element name="linkedSiteTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_NetworkToSitePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_NetworkToSite"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_NetworkToSubNetwork" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_NetworkToSubNetworkType"/>
+  <complexType name="Relationship_NetworkToSubNetworkType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedNetworkID" type="string"/>
+          <element name="linkedNetworkTable" type="string"/>
+          <element name="linkedSubNetworkID" type="string"/>
+          <element name="linkedSubNetworkTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_NetworkToSubNetworkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_NetworkToSubNetwork"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_NetworkToSubordinateNetwork" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_NetworkToSubordinateNetworkType"/>
+  <complexType name="Relationship_NetworkToSubordinateNetworkType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedNetworkID" type="string"/>
+          <element name="linkedNetworkTable" type="string"/>
+          <element name="linkedSubordinateNetworkID" type="string"/>
+          <element name="linkedSubordinateNetworkTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_NetworkToSubordinateNetworkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_NetworkToSubordinateNetwork"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_NodeToNodeZoneOfInterest" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_NodeToNodeZoneOfInterestType"/>
+  <complexType name="Relationship_NodeToNodeZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedNodeID" type="string"/>
+          <element name="linkedNodeTable" type="string"/>
+          <element name="linkedNodeZoneOfInterestID" type="string"/>
+          <element name="linkedNodeZoneOfInterestTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_NodeToNodeZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_NodeToNodeZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_ObjectToContactDetails" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_ObjectToContactDetailsType"/>
+  <complexType name="Relationship_ObjectToContactDetailsType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedObjectID" type="string"/>
+          <element name="linkedObjectTable" type="string"/>
+          <element name="linkedContactDetailsID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_ObjectToContactDetailsPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_ObjectToContactDetails"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_SiteToAsset" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_SiteToAssetType"/>
+  <complexType name="Relationship_SiteToAssetType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedSiteID" type="string"/>
+          <element name="linkedSiteTable" type="string"/>
+          <element name="linkedAssetID" type="string"/>
+          <element name="linkedAssetTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_SiteToAssetPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_SiteToAsset"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_SiteToSiteZoneOfInterest" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_SiteToSiteZoneOfInterestType"/>
+  <complexType name="Relationship_SiteToSiteZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedSiteID" type="string"/>
+          <element name="linkedSiteTable" type="string"/>
+          <element name="linkedSiteZoneID" type="string"/>
+          <element name="linkedSiteZoneTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_SiteToSiteZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_SiteToSiteZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_SubordinateNetworkToRule" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_SubordinateNetworkToRuleType"/>
+  <complexType name="Relationship_SubordinateNetworkToRuleType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="networkID" type="string"/>
+          <element name="networkTableID" type="string"/>
+          <element name="ruleID" type="string"/>
+          <element name="ruleTableName" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_SubordinateNetworkToRulePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_SubordinateNetworkToRule"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_SupplementalDataCoverageToObject" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_SupplementalDataCoverageToObjectType"/>
+  <complexType name="Relationship_SupplementalDataCoverageToObjectType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedSupplementalDataCoverageID" type="string"/>
+          <element name="linkedObjectID" type="string"/>
+          <element name="linkedObjectTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_SupplementalDataCoverageToObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_SupplementalDataCoverageToObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_VariableObjectValueToAsset" substitutionGroup="nuardata:NUARRelationship" type="nuardata:Relationship_VariableObjectValueToAssetType"/>
+  <complexType name="Relationship_VariableObjectValueToAssetType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedVariableObjectValueID" type="string"/>
+          <element name="linkedVariableObjectValueTable" type="string"/>
+          <element name="linkedAssetID" type="string"/>
+          <element name="linkedAssetTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_VariableObjectValueToAssetPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:Relationship_VariableObjectValueToAsset"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="RestrictedPlanningArea" substitutionGroup="nuardata:PlanningArea" type="nuardata:RestrictedPlanningAreaType"/>
+  <complexType name="RestrictedPlanningAreaType">
+    <complexContent>
+      <extension base="nuardata:PlanningAreaType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RestrictedPlanningAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:RestrictedPlanningArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ServiceArea" substitutionGroup="nuardata:MUDDISpace" type="nuardata:ServiceAreaType"/>
+  <complexType name="ServiceAreaType">
+    <complexContent>
+      <extension base="nuardata:MUDDISpaceType">
+        <sequence>
+          <element minOccurs="0" name="serviceAreaType" type="nuarcodelists_transformation:ServiceAreaTypeValueType"/>
+          <element minOccurs="0" name="serviceAreaSubType" type="string"/>
+          <element default="N/A" name="nationalOrRegionalCoverage" type="string"/>
+          <element default="false" name="buffered" type="boolean"/>
+          <element minOccurs="0" name="bufferSize" type="nuardata:WidthTypePropertyType"/>
+          <element minOccurs="0" name="originalServiceAreaID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="SewerAccessObject" substitutionGroup="nuardata:Access" type="nuardata:SewerAccessObjectType"/>
+  <complexType name="SewerAccessObjectType">
+    <complexContent>
+      <extension base="nuardata:AccessType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="SewerContainerObject" substitutionGroup="nuardata:Container" type="nuardata:SewerContainerObjectType"/>
+  <complexType name="SewerContainerObjectType">
+    <complexContent>
+      <extension base="nuardata:ContainerType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SewerContainerObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:SewerContainerObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SewerNetwork" substitutionGroup="nuardata:Network" type="nuardata:SewerNetworkType"/>
+  <complexType name="SewerNetworkType">
+    <complexContent>
+      <extension base="nuardata:NetworkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SewerNetworkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:SewerNetwork"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SewerNetworkAnnotation" substitutionGroup="nuardata:NetworkAnnotation" type="nuardata:SewerNetworkAnnotationType"/>
+  <complexType name="SewerNetworkAnnotationType">
+    <complexContent>
+      <extension base="nuardata:NetworkAnnotationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SewerNetworkAnnotationPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:SewerNetworkAnnotation"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SewerNetworkDescriptionObject" substitutionGroup="nuardata:NetworkDescriptionObject" type="nuardata:SewerNetworkDescriptionObjectType"/>
+  <complexType name="SewerNetworkDescriptionObjectType">
+    <complexContent>
+      <extension base="nuardata:NetworkDescriptionObjectType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SewerNetworkDescriptionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:SewerNetworkDescriptionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SewerNetworkDimension" substitutionGroup="nuardata:NetworkDimension" type="nuardata:SewerNetworkDimensionType"/>
+  <complexType name="SewerNetworkDimensionType">
+    <complexContent>
+      <extension base="nuardata:NetworkDimensionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SewerNetworkDimensionPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:SewerNetworkDimension"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SewerNetworkLink" substitutionGroup="nuardata:NetworkConveyanceLink" type="nuardata:SewerNetworkLinkType"/>
+  <complexType name="SewerNetworkLinkType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceLinkType">
+        <sequence>
+          <element minOccurs="0" name="backdrop" type="boolean"/>
+          <element minOccurs="0" name="startingDepthType" type="nuarcodelists_transformation:SewerDepthTypeValueType"/>
+          <element minOccurs="0" name="endingDepthType" type="nuarcodelists_transformation:SewerDepthTypeValueType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="SewerNetworkLinkZoneOfInterest" substitutionGroup="nuardata:SewerNetworkLink" type="nuardata:SewerNetworkLinkZoneOfInterestType"/>
+  <complexType name="SewerNetworkLinkZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:SewerNetworkLinkType">
+        <sequence>
+          <group ref="nuardata:NetworkLinkZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SewerNetworkLinkZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:SewerNetworkLinkZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SewerNetworkNode" substitutionGroup="nuardata:NetworkConveyanceNode" type="nuardata:SewerNetworkNodeType"/>
+  <complexType name="SewerNetworkNodeType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceNodeType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="SewerNetworkNodeZoneOfInterest" substitutionGroup="nuardata:SewerNetworkNode" type="nuardata:SewerNetworkNodeZoneOfInterestType"/>
+  <complexType name="SewerNetworkNodeZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:SewerNetworkNodeType">
+        <sequence>
+          <group ref="nuardata:NetworkNodeZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SewerNetworkNodeZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:SewerNetworkNodeZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SewerPhysicalProtectionObject" substitutionGroup="nuardata:PhysicalProtection" type="nuardata:SewerPhysicalProtectionObjectType"/>
+  <complexType name="SewerPhysicalProtectionObjectType">
+    <complexContent>
+      <extension base="nuardata:PhysicalProtectionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SewerPhysicalProtectionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:SewerPhysicalProtectionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SewerServiceArea" substitutionGroup="nuardata:ServiceArea" type="nuardata:SewerServiceAreaType"/>
+  <complexType name="SewerServiceAreaType">
+    <complexContent>
+      <extension base="nuardata:ServiceAreaType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SewerServiceAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:SewerServiceArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SewerSite" substitutionGroup="nuardata:Site" type="nuardata:SewerSiteType"/>
+  <complexType name="SewerSiteType">
+    <complexContent>
+      <extension base="nuardata:SiteType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="SewerSiteZoneOfInterest" substitutionGroup="nuardata:SewerSite" type="nuardata:SewerSiteZoneOfInterestType"/>
+  <complexType name="SewerSiteZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:SewerSiteType">
+        <sequence>
+          <group ref="nuardata:SiteZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SewerSiteZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:SewerSiteZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SewerSupportObject" substitutionGroup="nuardata:Support" type="nuardata:SewerSupportObjectType"/>
+  <complexType name="SewerSupportObjectType">
+    <complexContent>
+      <extension base="nuardata:SupportType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SewerSupportObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:SewerSupportObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="Site" substitutionGroup="nuardata:MUDDISpace" type="nuardata:SiteType"/>
+  <complexType abstract="true" name="SiteType">
+    <complexContent>
+      <extension base="nuardata:MUDDISpaceType">
+        <sequence>
+          <element minOccurs="0" name="siteType" type="nuarcodelists_transformation:SiteTypeValueType"/>
+          <element minOccurs="0" name="siteSubType" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="SiteOfPreviousIndustrialUse" substitutionGroup="nuardata:PlanningArea" type="nuardata:SiteOfPreviousIndustrialUseType"/>
+  <complexType name="SiteOfPreviousIndustrialUseType">
+    <complexContent>
+      <extension base="nuardata:PlanningAreaType">
+        <sequence>
+          <element minOccurs="0" name="previousUse">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="255"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="endDate" type="date"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SiteZoneOfInterestPropertyType">
+    <choice minOccurs="0">
+      <element ref="nuardata:DrainageSiteZoneOfInterest"/>
+      <element ref="nuardata:ElectricitySiteZoneOfInterest"/>
+      <element ref="nuardata:FuelAndChemicalsSiteZoneOfInterest"/>
+      <element ref="nuardata:GasSiteZoneOfInterest"/>
+      <element ref="nuardata:SewerSiteZoneOfInterest"/>
+      <element ref=":SiteZoneOfInterest"/>
+      <element ref="nuardata:TelcoSiteZoneOfInterest"/>
+      <element ref="nuardata:ThermalSiteZoneOfInterest"/>
+      <element ref="nuardata:TransportSignalSiteZoneOfInterest"/>
+      <element ref="nuardata:WaterSiteZoneOfInterest"/>
+    </choice>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <group name="SiteZoneOfInterestGroup">
+    <sequence>
+      <element minOccurs="0" name="parentFeatureID" type="string"/>
+      <element minOccurs="0" name="displayParentFeature" type="boolean"/>
+      <element minOccurs="0" name="displayZoneOfInterest" type="boolean"/>
+    </sequence>
+  </group>
+  <element name="SitesOfSpecialScientificInterestEngland" substitutionGroup="nuardata:PlanningArea" type="nuardata:SitesOfSpecialScientificInterestEnglandType"/>
+  <complexType name="SitesOfSpecialScientificInterestEnglandType">
+    <complexContent>
+      <extension base="nuardata:PlanningAreaType">
+        <sequence>
+          <element name="ensisid" type="double"/>
+          <element name="gid" type="double"/>
+          <element name="name">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="60"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="status">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="8"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="gisdate">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="8"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="gisfile">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="1"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="area" type="double"/>
+          <element minOccurs="0" name="sssiarea" type="double"/>
+          <element minOccurs="0" name="reference">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="8"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="easting" type="double"/>
+          <element minOccurs="0" name="northing" type="double"/>
+          <element minOccurs="0" name="easting0" type="double"/>
+          <element minOccurs="0" name="northing0" type="double"/>
+          <element minOccurs="0" name="latitude">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="9"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="longitude">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="9"/>
+              </restriction>
+            </simpleType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="SitesOfSpecialScientificInterestScotland" substitutionGroup="nuardata:PlanningArea" type="nuardata:SitesOfSpecialScientificInterestScotlandType"/>
+  <complexType name="SitesOfSpecialScientificInterestScotlandType">
+    <complexContent>
+      <extension base="nuardata:PlanningAreaType">
+        <sequence>
+          <element minOccurs="0" name="pacode" type="double"/>
+          <element name="name">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="255"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="status">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="200"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="type">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="45"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="geoloc">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="15"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="siteha" type="double"/>
+          <element minOccurs="0" name="mpanet">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="1"/>
+              </restriction>
+            </simpleType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="SitesOfSpecialScientificInterestWales" substitutionGroup="nuardata:PlanningArea" type="nuardata:SitesOfSpecialScientificInterestWalesType"/>
+  <complexType name="SitesOfSpecialScientificInterestWalesType">
+    <complexContent>
+      <extension base="nuardata:PlanningAreaType">
+        <sequence>
+          <element minOccurs="0" name="sssiid" type="double"/>
+          <element name="name">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="120"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="status">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="20"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="type">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="12"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="sssicode">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="10"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="firstnotified" type="date"/>
+          <element minOccurs="0" name="lastnotified" type="date"/>
+          <element minOccurs="0" name="confirmed" type="date"/>
+          <element minOccurs="0" name="lastedited" type="date"/>
+          <element minOccurs="0" name="osmmdate" type="date"/>
+          <element minOccurs="0" name="centrex" type="double"/>
+          <element minOccurs="0" name="centrey" type="double"/>
+          <element minOccurs="0" name="registered">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="10"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element minOccurs="0" name="cartesian" type="double"/>
+          <element minOccurs="0" name="spherical" type="double"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element abstract="true" name="Structure" substitutionGroup="nuardata:MUDDIAsset" type="nuardata:StructureType"/>
+  <complexType abstract="true" name="StructureType">
+    <complexContent>
+      <extension base="nuardata:MUDDIAssetType">
+        <sequence>
+          <element minOccurs="0" name="container" type="string"/>
+          <element minOccurs="0" name="dateOfInstallation" type="date"/>
+          <element minOccurs="0" name="insideHeight" type="nuardata:HeightTypePropertyType"/>
+          <element minOccurs="0" name="insideLength" type="nuardata:LengthTypePropertyType"/>
+          <element minOccurs="0" name="insideWidth" type="nuardata:WidthTypePropertyType"/>
+          <element minOccurs="0" name="isEncased" type="boolean"/>
+          <element minOccurs="0" name="outsideHeight" type="nuardata:HeightTypePropertyType"/>
+          <element minOccurs="0" name="outsideLength" type="nuardata:LengthTypePropertyType"/>
+          <element minOccurs="0" name="outsideWidth" type="nuardata:WidthTypePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="SupplementalDataCoverage" substitutionGroup="nuardata:MUDDISpace" type="nuardata:SupplementalDataCoverageType"/>
+  <complexType name="SupplementalDataCoverageType">
+    <complexContent>
+      <extension base="nuardata:MUDDISpaceType">
+        <sequence>
+          <element default="Other" name="coverageType" type="string"/>
+          <element minOccurs="0" name="coverageDataServiceType" type="nuarcodelists_platform:DataServiceTypeValueType"/>
+          <element minOccurs="0" name="coverageDataServiceURI" type="string"/>
+          <element default="0" minOccurs="0" name="drawingPriority" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SupplementalDataCoveragePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:SupplementalDataCoverage"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="Support" substitutionGroup="nuardata:NetworkAccessory" type="nuardata:SupportType"/>
+  <complexType abstract="true" name="SupportType">
+    <complexContent>
+      <extension base="nuardata:NetworkAccessoryType">
+        <sequence>
+          <element minOccurs="0" name="supportType" type="nuarcodelists_transformation:SupportTypeValueType"/>
+          <element minOccurs="0" name="supportSubType" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="TelcoAccessObject" substitutionGroup="nuardata:Access" type="nuardata:TelcoAccessObjectType"/>
+  <complexType name="TelcoAccessObjectType">
+    <complexContent>
+      <extension base="nuardata:AccessType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="TelcoContainerObject" substitutionGroup="nuardata:Container" type="nuardata:TelcoContainerObjectType"/>
+  <complexType name="TelcoContainerObjectType">
+    <complexContent>
+      <extension base="nuardata:ContainerType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="TelcoNetwork" substitutionGroup="nuardata:Network" type="nuardata:TelcoNetworkType"/>
+  <complexType name="TelcoNetworkType">
+    <complexContent>
+      <extension base="nuardata:NetworkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TelcoNetworkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TelcoNetwork"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TelcoNetworkAnnotation" substitutionGroup="nuardata:NetworkAnnotation" type="nuardata:TelcoNetworkAnnotationType"/>
+  <complexType name="TelcoNetworkAnnotationType">
+    <complexContent>
+      <extension base="nuardata:NetworkAnnotationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TelcoNetworkAnnotationPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TelcoNetworkAnnotation"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TelcoNetworkDescriptionObject" substitutionGroup="nuardata:NetworkDescriptionObject" type="nuardata:TelcoNetworkDescriptionObjectType"/>
+  <complexType name="TelcoNetworkDescriptionObjectType">
+    <complexContent>
+      <extension base="nuardata:NetworkDescriptionObjectType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TelcoNetworkDescriptionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TelcoNetworkDescriptionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TelcoNetworkDimension" substitutionGroup="nuardata:NetworkDimension" type="nuardata:TelcoNetworkDimensionType"/>
+  <complexType name="TelcoNetworkDimensionType">
+    <complexContent>
+      <extension base="nuardata:NetworkDimensionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TelcoNetworkDimensionPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TelcoNetworkDimension"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TelcoNetworkLink" substitutionGroup="nuardata:NetworkConveyanceLink" type="nuardata:TelcoNetworkLinkType"/>
+  <complexType name="TelcoNetworkLinkType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceLinkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="TelcoNetworkLinkZoneOfInterest" substitutionGroup="nuardata:TelcoNetworkLink" type="nuardata:TelcoNetworkLinkZoneOfInterestType"/>
+  <complexType name="TelcoNetworkLinkZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:TelcoNetworkLinkType">
+        <sequence>
+          <group ref="nuardata:NetworkLinkZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TelcoNetworkLinkZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TelcoNetworkLinkZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TelcoNetworkNode" substitutionGroup="nuardata:NetworkConveyanceNode" type="nuardata:TelcoNetworkNodeType"/>
+  <complexType name="TelcoNetworkNodeType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceNodeType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="TelcoNetworkNodeZoneOfInterest" substitutionGroup="nuardata:TelcoNetworkNode" type="nuardata:TelcoNetworkNodeZoneOfInterestType"/>
+  <complexType name="TelcoNetworkNodeZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:TelcoNetworkNodeType">
+        <sequence>
+          <group ref="nuardata:NetworkNodeZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TelcoNetworkNodeZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TelcoNetworkNodeZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TelcoPhysicalProtectionObject" substitutionGroup="nuardata:PhysicalProtection" type="nuardata:TelcoPhysicalProtectionObjectType"/>
+  <complexType name="TelcoPhysicalProtectionObjectType">
+    <complexContent>
+      <extension base="nuardata:PhysicalProtectionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TelcoPhysicalProtectionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TelcoPhysicalProtectionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TelcoServiceArea" substitutionGroup="nuardata:ServiceArea" type="nuardata:TelcoServiceAreaType"/>
+  <complexType name="TelcoServiceAreaType">
+    <complexContent>
+      <extension base="nuardata:ServiceAreaType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TelcoServiceAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TelcoServiceArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TelcoSite" substitutionGroup="nuardata:Site" type="nuardata:TelcoSiteType"/>
+  <complexType name="TelcoSiteType">
+    <complexContent>
+      <extension base="nuardata:SiteType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TelcoSitePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TelcoSite"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TelcoSiteZoneOfInterest" substitutionGroup="nuardata:TelcoSite" type="nuardata:TelcoSiteZoneOfInterestType"/>
+  <complexType name="TelcoSiteZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:TelcoSiteType">
+        <sequence>
+          <group ref="nuardata:SiteZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TelcoSiteZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TelcoSiteZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TelcoSupportObject" substitutionGroup="nuardata:Support" type="nuardata:TelcoSupportObjectType"/>
+  <complexType name="TelcoSupportObjectType">
+    <complexContent>
+      <extension base="nuardata:SupportType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TelcoSupportObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TelcoSupportObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ThermalAccessObject" substitutionGroup="nuardata:Access" type="nuardata:ThermalAccessObjectType"/>
+  <complexType name="ThermalAccessObjectType">
+    <complexContent>
+      <extension base="nuardata:AccessType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="ThermalContainerObject" substitutionGroup="nuardata:Container" type="nuardata:ThermalContainerObjectType"/>
+  <complexType name="ThermalContainerObjectType">
+    <complexContent>
+      <extension base="nuardata:ContainerType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="ThermalNetwork" substitutionGroup="nuardata:Network" type="nuardata:ThermalNetworkType"/>
+  <complexType name="ThermalNetworkType">
+    <complexContent>
+      <extension base="nuardata:NetworkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ThermalNetworkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ThermalNetwork"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ThermalNetworkAnnotation" substitutionGroup="nuardata:NetworkAnnotation" type="nuardata:ThermalNetworkAnnotationType"/>
+  <complexType name="ThermalNetworkAnnotationType">
+    <complexContent>
+      <extension base="nuardata:NetworkAnnotationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ThermalNetworkAnnotationPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ThermalNetworkAnnotation"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ThermalNetworkDescriptionObject" substitutionGroup="nuardata:NetworkDescriptionObject" type="nuardata:ThermalNetworkDescriptionObjectType"/>
+  <complexType name="ThermalNetworkDescriptionObjectType">
+    <complexContent>
+      <extension base="nuardata:NetworkDescriptionObjectType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ThermalNetworkDescriptionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ThermalNetworkDescriptionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ThermalNetworkDimension" substitutionGroup="nuardata:NetworkDimension" type="nuardata:ThermalNetworkDimensionType"/>
+  <complexType name="ThermalNetworkDimensionType">
+    <complexContent>
+      <extension base="nuardata:NetworkDimensionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ThermalNetworkDimensionPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ThermalNetworkDimension"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ThermalNetworkLink" substitutionGroup="nuardata:NetworkConveyanceLink" type="nuardata:ThermalNetworkLinkType"/>
+  <complexType name="ThermalNetworkLinkType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceLinkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="ThermalNetworkLinkZoneOfInterest" substitutionGroup="nuardata:ThermalNetworkLink" type="nuardata:ThermalNetworkLinkZoneOfInterestType"/>
+  <complexType name="ThermalNetworkLinkZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:ThermalNetworkLinkType">
+        <sequence>
+          <group ref="nuardata:NetworkLinkZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ThermalNetworkLinkZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ThermalNetworkLinkZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ThermalNetworkNode" substitutionGroup="nuardata:NetworkConveyanceNode" type="nuardata:ThermalNetworkNodeType"/>
+  <complexType name="ThermalNetworkNodeType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceNodeType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="ThermalNetworkNodeZoneOfInterest" substitutionGroup="nuardata:ThermalNetworkNode" type="nuardata:ThermalNetworkNodeZoneOfInterestType"/>
+  <complexType name="ThermalNetworkNodeZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:ThermalNetworkNodeType">
+        <sequence>
+          <group ref="nuardata:NetworkNodeZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ThermalNetworkNodeZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ThermalNetworkNodeZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ThermalPhysicalProtectionObject" substitutionGroup="nuardata:PhysicalProtection" type="nuardata:ThermalPhysicalProtectionObjectType"/>
+  <complexType name="ThermalPhysicalProtectionObjectType">
+    <complexContent>
+      <extension base="nuardata:PhysicalProtectionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ThermalPhysicalProtectionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ThermalPhysicalProtectionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ThermalServiceArea" substitutionGroup="nuardata:ServiceArea" type="nuardata:ThermalServiceAreaType"/>
+  <complexType name="ThermalServiceAreaType">
+    <complexContent>
+      <extension base="nuardata:ServiceAreaType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ThermalServiceAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ThermalServiceArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ThermalSite" substitutionGroup="nuardata:Site" type="nuardata:ThermalSiteType"/>
+  <complexType name="ThermalSiteType">
+    <complexContent>
+      <extension base="nuardata:SiteType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="ThermalSiteZoneOfInterest" substitutionGroup="nuardata:ThermalSite" type="nuardata:ThermalSiteZoneOfInterestType"/>
+  <complexType name="ThermalSiteZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:ThermalSiteType">
+        <sequence>
+          <group ref="nuardata:SiteZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ThermalSiteZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ThermalSiteZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ThermalSupportObject" substitutionGroup="nuardata:Support" type="nuardata:ThermalSupportObjectType"/>
+  <complexType name="ThermalSupportObjectType">
+    <complexContent>
+      <extension base="nuardata:SupportType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ThermalSupportObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:ThermalSupportObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TimePeriodType" substitutionGroup="gml:AbstractObject" type="nuardata:TimePeriodTypeType"/>
+  <complexType name="TimePeriodTypeType">
+    <sequence>
+      <element minOccurs="0" name="period" type="double"/>
+      <element minOccurs="0" name="unitOfTime" type="nuarcodelists_transformation:UnitOfTimeValueType"/>
+    </sequence>
+  </complexType>
+  <complexType name="TimePeriodTypePropertyType">
+    <sequence>
+      <element ref="nuardata:TimePeriodType"/>
+    </sequence>
+  </complexType>
+  <element name="TransportSignalAccessObject" substitutionGroup="nuardata:Access" type="nuardata:TransportSignalAccessObjectType"/>
+  <complexType name="TransportSignalAccessObjectType">
+    <complexContent>
+      <extension base="nuardata:AccessType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TransportSignalAccessObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TransportSignalAccessObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TransportSignalContainerObject" substitutionGroup="nuardata:Container" type="nuardata:TransportSignalContainerObjectType"/>
+  <complexType name="TransportSignalContainerObjectType">
+    <complexContent>
+      <extension base="nuardata:ContainerType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TransportSignalContainerObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TransportSignalContainerObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TransportSignalNetwork" substitutionGroup="nuardata:Network" type="nuardata:TransportSignalNetworkType"/>
+  <complexType name="TransportSignalNetworkType">
+    <complexContent>
+      <extension base="nuardata:NetworkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TransportSignalNetworkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TransportSignalNetwork"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TransportSignalNetworkAnnotation" substitutionGroup="nuardata:NetworkAnnotation" type="nuardata:TransportSignalNetworkAnnotationType"/>
+  <complexType name="TransportSignalNetworkAnnotationType">
+    <complexContent>
+      <extension base="nuardata:NetworkAnnotationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TransportSignalNetworkAnnotationPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TransportSignalNetworkAnnotation"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TransportSignalNetworkDescriptionObject" substitutionGroup="nuardata:NetworkDescriptionObject" type="nuardata:TransportSignalNetworkDescriptionObjectType"/>
+  <complexType name="TransportSignalNetworkDescriptionObjectType">
+    <complexContent>
+      <extension base="nuardata:NetworkDescriptionObjectType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TransportSignalNetworkDescriptionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TransportSignalNetworkDescriptionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TransportSignalNetworkDimension" substitutionGroup="nuardata:NetworkDimension" type="nuardata:TransportSignalNetworkDimensionType"/>
+  <complexType name="TransportSignalNetworkDimensionType">
+    <complexContent>
+      <extension base="nuardata:NetworkDimensionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TransportSignalNetworkDimensionPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TransportSignalNetworkDimension"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TransportSignalNetworkLink" substitutionGroup="nuardata:NetworkConveyanceLink" type="nuardata:TransportSignalNetworkLinkType"/>
+  <complexType name="TransportSignalNetworkLinkType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceLinkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="TransportSignalNetworkLinkZoneOfInterest" substitutionGroup="nuardata:TransportSignalNetworkLink" type="nuardata:TransportSignalNetworkLinkZoneOfInterestType"/>
+  <complexType name="TransportSignalNetworkLinkZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:TransportSignalNetworkLinkType">
+        <sequence>
+          <group ref="nuardata:NetworkLinkZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TransportSignalNetworkLinkZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TransportSignalNetworkLinkZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TransportSignalNetworkNode" substitutionGroup="nuardata:NetworkConveyanceNode" type="nuardata:TransportSignalNetworkNodeType"/>
+  <complexType name="TransportSignalNetworkNodeType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceNodeType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="TransportSignalNetworkNodeZoneOfInterest" substitutionGroup="nuardata:TransportSignalNetworkNode" type="nuardata:TransportSignalNetworkNodeZoneOfInterestType"/>
+  <complexType name="TransportSignalNetworkNodeZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:TransportSignalNetworkNodeType">
+        <sequence>
+          <group ref="nuardata:NetworkNodeZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TransportSignalNetworkNodeZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TransportSignalNetworkNodeZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TransportSignalProtectionObject" substitutionGroup="nuardata:PhysicalProtection" type="nuardata:TransportSignalProtectionObjectType"/>
+  <complexType name="TransportSignalProtectionObjectType">
+    <complexContent>
+      <extension base="nuardata:PhysicalProtectionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TransportSignalProtectionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TransportSignalProtectionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TransportSignalServiceArea" substitutionGroup="nuardata:ServiceArea" type="nuardata:TransportSignalServiceAreaType"/>
+  <complexType name="TransportSignalServiceAreaType">
+    <complexContent>
+      <extension base="nuardata:ServiceAreaType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TransportSignalServiceAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TransportSignalServiceArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TransportSignalSite" substitutionGroup="nuardata:Site" type="nuardata:TransportSignalSiteType"/>
+  <complexType name="TransportSignalSiteType">
+    <complexContent>
+      <extension base="nuardata:SiteType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="TransportSignalSiteZoneOfInterest" substitutionGroup="nuardata:TransportSignalSite" type="nuardata:TransportSignalSiteZoneOfInterestType"/>
+  <complexType name="TransportSignalSiteZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:TransportSignalSiteType">
+        <sequence>
+          <group ref="nuardata:SiteZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TransportSignalSiteZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TransportSignalSiteZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TransportSignalSupportObject" substitutionGroup="nuardata:Support" type="nuardata:TransportSignalSupportObjectType"/>
+  <complexType name="TransportSignalSupportObjectType">
+    <complexContent>
+      <extension base="nuardata:SupportType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TransportSignalSupportObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:TransportSignalSupportObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TreeLocation" substitutionGroup="nuardata:PlanningArea" type="nuardata:TreeLocationType"/>
+  <complexType name="TreeLocationType">
+    <complexContent>
+      <extension base="nuardata:PlanningAreaType">
+        <sequence>
+          <element minOccurs="0" name="species">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="100"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element default="true" name="treePreservationOrder" type="boolean"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="UUID" substitutionGroup="gml:AbstractGML" type="nuardata:UUIDType"/>
+  <complexType name="UUIDType">
+    <complexContent>
+      <extension base="gml:AbstractGMLType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="UUIDPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:UUID"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="VariableObjectValue" substitutionGroup="nuardata:MUDDIObject" type="nuardata:VariableObjectValueType"/>
+  <complexType abstract="true" name="VariableObjectValueType">
+    <complexContent>
+      <extension base="nuardata:MUDDIObjectType">
+        <sequence>
+          <element minOccurs="0" name="fromMeasure" type="gml:MeasureType"/>
+          <element minOccurs="0" name="toMeasure" type="gml:MeasureType"/>
+          <element minOccurs="0" name="dateOfCapture" type="date"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="VariableObjectValuePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:VariableObjectValue"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="WaterAccessObject" substitutionGroup="nuardata:Access" type="nuardata:WaterAccessObjectType"/>
+  <complexType name="WaterAccessObjectType">
+    <complexContent>
+      <extension base="nuardata:AccessType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="WaterContainerObject" substitutionGroup="nuardata:Container" type="nuardata:WaterContainerObjectType"/>
+  <complexType name="WaterContainerObjectType">
+    <complexContent>
+      <extension base="nuardata:ContainerType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="WaterNetwork" substitutionGroup="nuardata:Network" type="nuardata:WaterNetworkType"/>
+  <complexType name="WaterNetworkType">
+    <complexContent>
+      <extension base="nuardata:NetworkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="WaterNetworkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:WaterNetwork"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="WaterNetworkAnnotation" substitutionGroup="nuardata:NetworkAnnotation" type="nuardata:WaterNetworkAnnotationType"/>
+  <complexType name="WaterNetworkAnnotationType">
+    <complexContent>
+      <extension base="nuardata:NetworkAnnotationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="WaterNetworkAnnotationPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:WaterNetworkAnnotation"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="WaterNetworkDescriptionObject" substitutionGroup="nuardata:NetworkDescriptionObject" type="nuardata:WaterNetworkDescriptionObjectType"/>
+  <complexType name="WaterNetworkDescriptionObjectType">
+    <complexContent>
+      <extension base="nuardata:NetworkDescriptionObjectType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="WaterNetworkDescriptionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:WaterNetworkDescriptionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="WaterNetworkDimension" substitutionGroup="nuardata:NetworkDimension" type="nuardata:WaterNetworkDimensionType"/>
+  <complexType name="WaterNetworkDimensionType">
+    <complexContent>
+      <extension base="nuardata:NetworkDimensionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="WaterNetworkDimensionPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:WaterNetworkDimension"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="WaterNetworkLink" substitutionGroup="nuardata:NetworkConveyanceLink" type="nuardata:WaterNetworkLinkType"/>
+  <complexType name="WaterNetworkLinkType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceLinkType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="WaterNetworkLinkZoneOfInterest" substitutionGroup="nuardata:WaterNetworkLink" type="nuardata:WaterNetworkLinkZoneOfInterestType"/>
+  <complexType name="WaterNetworkLinkZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:WaterNetworkLinkType">
+        <sequence>
+          <group ref="nuardata:NetworkLinkZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="WaterNetworkLinkZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:WaterNetworkLinkZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="WaterNetworkNode" substitutionGroup="nuardata:NetworkConveyanceNode" type="nuardata:WaterNetworkNodeType"/>
+  <complexType name="WaterNetworkNodeType">
+    <complexContent>
+      <extension base="nuardata:NetworkConveyanceNodeType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="WaterNetworkNodeZoneOfInterest" substitutionGroup="nuardata:WaterNetworkNode" type="nuardata:WaterNetworkNodeZoneOfInterestType"/>
+  <complexType name="WaterNetworkNodeZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:WaterNetworkNodeType">
+        <sequence>
+          <group ref="nuardata:NetworkNodeZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="WaterNetworkNodeZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:WaterNetworkNodeZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="WaterPhysicalProtectionObject" substitutionGroup="nuardata:PhysicalProtection" type="nuardata:WaterPhysicalProtectionObjectType"/>
+  <complexType name="WaterPhysicalProtectionObjectType">
+    <complexContent>
+      <extension base="nuardata:PhysicalProtectionType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="WaterPhysicalProtectionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:WaterPhysicalProtectionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="WaterServiceArea" substitutionGroup="nuardata:ServiceArea" type="nuardata:WaterServiceAreaType"/>
+  <complexType name="WaterServiceAreaType">
+    <complexContent>
+      <extension base="nuardata:ServiceAreaType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="WaterServiceAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:WaterServiceArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="WaterSite" substitutionGroup="nuardata:Site" type="nuardata:WaterSiteType"/>
+  <complexType name="WaterSiteType">
+    <complexContent>
+      <extension base="nuardata:SiteType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="WaterSitePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:WaterSite"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="WaterSiteZoneOfInterest" substitutionGroup="nuardata:WaterSite" type="nuardata:WaterSiteZoneOfInterestType"/>
+  <complexType name="WaterSiteZoneOfInterestType">
+    <complexContent>
+      <extension base="nuardata:WaterSiteType">
+        <sequence>
+          <group ref="nuardata:SiteZoneOfInterestGroup"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="WaterSiteZoneOfInterestPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:WaterSiteZoneOfInterest"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="WaterSupportObject" substitutionGroup="nuardata:Support" type="nuardata:WaterSupportObjectType"/>
+  <complexType name="WaterSupportObjectType">
+    <complexContent>
+      <extension base="nuardata:SupportType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="WaterSupportObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuardata:WaterSupportObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="WidthType" substitutionGroup="gml:AbstractObject" type="nuardata:WidthTypeType"/>
+  <complexType name="WidthTypeType">
+    <sequence>
+      <element minOccurs="0" name="width" type="double"/>
+      <element minOccurs="0" name="unitOfMeasure" type="nuarcodelists_platform:MeasurementUnitsValueType"/>
+    </sequence>
+  </complexType>
+  <complexType name="WidthTypePropertyType">
+    <sequence>
+      <element ref="nuardata:WidthType"/>
+    </sequence>
+  </complexType>
+</schema>

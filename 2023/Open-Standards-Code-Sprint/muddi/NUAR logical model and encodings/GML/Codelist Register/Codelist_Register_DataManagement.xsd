@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://portal.nuar.uk/schemas/nuarcodelists_datamanagement/2.1.0" targetNamespace="http://portal.nuar.uk/schemas/nuarcodelists_datamanagement/2.1.0" elementFormDefault="qualified">
+<xs:element name="xml-tables" type="xml-tablesType"/>
+<xs:element name="nuarcodelists_datamanagement.submissionresultvalue-table" type="nuarcodelists_datamanagement.submissionresultvalue-tableType"/>
+<xs:element name="nuarcodelists_datamanagement.submissionresultvalue" type="nuarcodelists_datamanagement.submissionresultvalueType"/>
+<xs:element name="nuarcodelists_datamanagement.submissionstatusvalue-table" type="nuarcodelists_datamanagement.submissionstatusvalue-tableType"/>
+<xs:element name="nuarcodelists_datamanagement.submissionstatusvalue" type="nuarcodelists_datamanagement.submissionstatusvalueType"/>
+<xs:element name="nuarcodelists_datamanagement.submissionreplacementscopevalue-table" type="nuarcodelists_datamanagement.submissionreplacementscopevalue-tableType"/>
+<xs:element name="nuarcodelists_datamanagement.submissionreplacementscopevalue" type="nuarcodelists_datamanagement.submissionreplacementscopevalueType"/>
+<xs:element name="nuarcodelists_datamanagement.lifecyclestatusvalue-table" type="nuarcodelists_datamanagement.lifecyclestatusvalue-tableType"/>
+<xs:element name="nuarcodelists_datamanagement.lifecyclestatusvalue" type="nuarcodelists_datamanagement.lifecyclestatusvalueType"/>
+<xs:element name="nuarcodelists_datamanagement.submissiontypevalue-table" type="nuarcodelists_datamanagement.submissiontypevalue-tableType"/>
+<xs:element name="nuarcodelists_datamanagement.submissiontypevalue" type="nuarcodelists_datamanagement.submissiontypevalueType"/>
+<xs:element name="nuarcodelists_datamanagement.publicationstagestatusvalue-table" type="nuarcodelists_datamanagement.publicationstagestatusvalue-tableType"/>
+<xs:element name="nuarcodelists_datamanagement.publicationstagestatusvalue" type="nuarcodelists_datamanagement.publicationstagestatusvalueType"/>
+<xs:element name="nuarcodelists_datamanagement.publicationresultvalue-table" type="nuarcodelists_datamanagement.publicationresultvalue-tableType"/>
+<xs:element name="nuarcodelists_datamanagement.publicationresultvalue" type="nuarcodelists_datamanagement.publicationresultvalueType"/>
+<xs:element name="nuarcodelists_datamanagement.publicationstatusvalue-table" type="nuarcodelists_datamanagement.publicationstatusvalue-tableType"/>
+<xs:element name="nuarcodelists_datamanagement.publicationstatusvalue" type="nuarcodelists_datamanagement.publicationstatusvalueType"/>
+<xs:element name="nuarcodelists_datamanagement.datasettypevalue-table" type="nuarcodelists_datamanagement.datasettypevalue-tableType"/>
+<xs:element name="nuarcodelists_datamanagement.datasettypevalue" type="nuarcodelists_datamanagement.datasettypevalueType"/>
+<xs:element name="nuarcodelists_datamanagement.publicationstagevalue-table" type="nuarcodelists_datamanagement.publicationstagevalue-tableType"/>
+<xs:element name="nuarcodelists_datamanagement.publicationstagevalue" type="nuarcodelists_datamanagement.publicationstagevalueType"/>
+<xs:complexType name="xml-tablesType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_datamanagement.submissionresultvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_datamanagement.submissionstatusvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_datamanagement.submissionreplacementscopevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_datamanagement.lifecyclestatusvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_datamanagement.submissiontypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_datamanagement.publicationstagestatusvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_datamanagement.publicationresultvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_datamanagement.publicationstatusvalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_datamanagement.datasettypevalue-table" minOccurs="0"/>
+<xs:element ref="nuarcodelists_datamanagement.publicationstagevalue-table" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.submissionresultvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_datamanagement.submissionresultvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.submissionresultvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.submissionstatusvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_datamanagement.submissionstatusvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.submissionstatusvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.submissionreplacementscopevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_datamanagement.submissionreplacementscopevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.submissionreplacementscopevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.lifecyclestatusvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_datamanagement.lifecyclestatusvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.lifecyclestatusvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.submissiontypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_datamanagement.submissiontypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.submissiontypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.publicationstagestatusvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_datamanagement.publicationstagestatusvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.publicationstagestatusvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.publicationresultvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_datamanagement.publicationresultvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.publicationresultvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.publicationstatusvalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_datamanagement.publicationstatusvalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.publicationstatusvalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.datasettypevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_datamanagement.datasettypevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.datasettypevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.publicationstagevalue-tableType">
+<xs:sequence>
+<xs:element ref="nuarcodelists_datamanagement.publicationstagevalue" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nuarcodelists_datamanagement.publicationstagevalueType">
+<xs:sequence>
+<xs:element name="systemid" minOccurs="0">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="38"/>
+</xs:restriction>
+</xs:simpleType></xs:element>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
