@@ -1,0 +1,1774 @@
+{
+  "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://muddi.example.org/core.json",
+  "description": "This pattern provides a starting point for modeling a GML Application Schema which is a specialized xml schema that uses the Geographic Markup Language to model Features to provide the basis for interoperability within a community of interest.",
+  "$defs": {
+    "Access": {
+      "$anchor": "Access",
+      "description": "NetworkObject:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nAsset that has a role in the conveyance of a commodity in a utility network.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/NetworkAccessory"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geometry": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Point"
+                }
+              ]
+            },
+            "place": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Point"
+                }
+              ]
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "accessType": {
+                  "description": "utilitySubType:\r\nOptional\r\nType of utility service at a finer level of classification than utility type. The values for utilitySubType are defined in the \u003cUtilitySubTypeValue\u003e codelist.",
+                  "$ref": "#/$defs/AccessTypeValue"
+                },
+                "numberOfCovers": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "AccessTypeValue": {
+      "$anchor": "AccessTypeValue",
+      "description": "Network Node Component Type Codelist\r\nCodelist of specific types of NetworkNodes. These may be redundant with derived network node feature types and supplemented by more specific component type codelists. It allows new NetworkNode feature types to be added without changing the model.",
+      "type": "string",
+      "format": "uri"
+    },
+    "ActivityTypeValue": {
+      "$anchor": "ActivityTypeValue",
+      "description": "Enhanced Measures Type Codelist\r\nAbstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.",
+      "type": "string",
+      "format": "uri"
+    },
+    "AnnotationHorizontalAlignment": {
+      "$anchor": "AnnotationHorizontalAlignment",
+      "description": "Measurement Units Codelist\r\nCodelist of attribute value measurement units",
+      "type": "string",
+      "format": "uri"
+    },
+    "AnnotationVerticalAlignment": {
+      "$anchor": "AnnotationVerticalAlignment",
+      "description": "Measurement Units Codelist\r\nCodelist of attribute value measurement units",
+      "type": "string",
+      "format": "uri"
+    },
+    "Container": {
+      "$anchor": "Container",
+      "description": "ContainerObject:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nAsset that has a role in the conveyance of a commodity in a utility network.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/NetworkAccessory"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geometry": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/LineString"
+                }
+              ]
+            },
+            "place": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/LineString"
+                }
+              ]
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "containerType": {
+                  "description": "containerType\r\nOptional\r\nType of utility service at a finer level of classification than utility type. The values for utilitySubType are defined in the \u003cUtilitySubTypeValue\u003e codelist.",
+                  "$ref": "#/$defs/ContainerTypeValue"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ContainerTypeValue": {
+      "$anchor": "ContainerTypeValue",
+      "description": "Container Type Codelist\r\nCodelist of container types",
+      "type": "string",
+      "format": "uri"
+    },
+    "ConveyanceCategoryValue": {
+      "$anchor": "ConveyanceCategoryValue",
+      "description": "Conveyance Category Codelist\r\nCodelist of roles that particular network segments play in overall network conveyance, e.g. Trunk vs Distribution.",
+      "type": "string",
+      "format": "uri"
+    },
+    "ConveyanceMethodValue": {
+      "$anchor": "ConveyanceMethodValue",
+      "description": "Conveyance Method Codelist\r\nCodelist of methods by which utility commodities are conveyed through a network asset, e.g. gravity vs pumped.",
+      "type": "string",
+      "format": "uri"
+    },
+    "DepthMethodValue": {
+      "$anchor": "DepthMethodValue",
+      "description": "Depth Method Codelist\r\nCodelist of methods by which the stated depth of a utility asset has been detemined.",
+      "type": "string",
+      "format": "uri"
+    },
+    "EnhancedMeasuresTypeValue": {
+      "$anchor": "EnhancedMeasuresTypeValue",
+      "description": "Enhanced Measures Type Codelist\r\nAbstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.",
+      "type": "string",
+      "format": "uri"
+    },
+    "FeatureTypeValue": {
+      "$anchor": "FeatureTypeValue",
+      "description": "Feature Type Codelist:\r\nCodelist of feature types for MUDDIObjects. This may be redundant with the name of a derived feature, but allows generic utility information to be typed and also allows new feature types to be added without changing the model.",
+      "type": "string",
+      "format": "uri"
+    },
+    "GuidanceType": {
+      "$anchor": "GuidanceType",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "linkedFile": {
+              "type": [
+                "string",
+                "integer"
+              ],
+              "x-ogc-collectionId": "linkedfiletype",
+              "x-ogc-role": "reference"
+            },
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "linkedFile",
+            "name"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HeightType": {
+      "$anchor": "HeightType",
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "number"
+        },
+        "unitOfMeasure": {
+          "$ref": "#/$defs/MeasurementUnitsValue"
+        }
+      },
+      "required": [
+        "height",
+        "unitOfMeasure"
+      ]
+    },
+    "HorizontalMeasurementMethodValue": {
+      "$anchor": "HorizontalMeasurementMethodValue",
+      "description": "Horizontal Measurement Method Codelist\r\nCodelist of values for methods of horizontal measurement used while surveying the asset.",
+      "type": "string",
+      "format": "uri"
+    },
+    "IntendedPermanenceValue": {
+      "$anchor": "IntendedPermanenceValue",
+      "description": "Intended Permanence Codelist\r\nCodelist of values for intended permanence",
+      "type": "string",
+      "format": "uri"
+    },
+    "LengthType": {
+      "$anchor": "LengthType",
+      "type": "object",
+      "properties": {
+        "length": {
+          "type": "number"
+        },
+        "unitOfMeasure": {
+          "$ref": "#/$defs/MeasurementUnitsValue"
+        }
+      },
+      "required": [
+        "length",
+        "unitOfMeasure"
+      ]
+    },
+    "LinkedFileType": {
+      "$anchor": "LinkedFileType",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "fullPath": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "mimeType": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "typeDescription": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "fullPath",
+            "id",
+            "name"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "LocationTypeValue": {
+      "$anchor": "LocationTypeValue",
+      "description": "Enhanced Measures Type Codelist\r\nAbstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.",
+      "type": "string",
+      "format": "uri"
+    },
+    "MUDDIAsset": {
+      "$anchor": "MUDDIAsset",
+      "description": "MUDDIAsset:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nThe parent class of built environment infrastructure that can be located, owned, operated, oriented, and material. Its mandatory and optional attributes are inherited by all more specialized classes in the MUDDI core model and derived NUAR Harmonized Model.\r\n\r\nMandatory attributes:\r\nassetID\r\nassetOwner\r\nbusinessContact\r\nemergencyContact\r\nhorizontalCRS\r\nsystemID\r\nsystemLoadDate",
+      "allOf": [
+        {
+          "$ref": "#/$defs/MUDDIObject"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "centroidXYZ": {
+                  "description": "centroidXYZ:\r\nOptional\r\nX-Y-Z coordinates representing the center of the utility feature for data exchange purposes. For non-linear structures, XYZ represents an anchor point used for 3D representations, which may or not coincide with the feature’s centroid. In many cases, XYZ coincides with the observed location in the field (e.g., center of manhole lid). For proper orientation in a 3D space, the Azimuth attribute is also necessary. (ASCE_AsBuilt)",
+                  "type": "string"
+                },
+                "depth": {
+                  "description": "depth:\r\nOptional\r\nNumerical value in measurementUnits of the depth from grade at time of survey to the top of the asset. This attribute should be used for a single approximation of asset depth according to depthMethod. More detailed / precise vertical positioning information should be represented in a geometry attribute.",
+                  "type": "number"
+                },
+                "depthMethod": {
+                  "description": "depthMethod:\r\nOptional\r\nThe method by which the value for depth was determined. Values for this attribute are defined in the \u003cDepthMethodValue\u003e codelist",
+                  "$ref": "#/$defs/DepthMethodValue"
+                },
+                "enhancedMeasures": {
+                  "description": "enhancedMeasures (NEW):\r\nOptional\r\nAn indication of enhanced measures which may need to be taken when using data for this feature. This may include following specific guidance, or a requirement to contact the asset owner before proceeding.\r\nThis value may also influence how the feature is symbolised in a given implementation.",
+                  "$ref": "#/$defs/EnhancedMeasuresTypeValue"
+                },
+                "enhancedMeasuresProximity": {
+                  "description": "enhancedMeasuresProximity (NEW):\r\nOptional\r\nAn indication of proximity to the feature which would trigger any enhanced measures.\r\nThis could be used to dynamically include a \"buffer\" when symbolising the feature for a given implementation.",
+                  "type": "number"
+                },
+                "horizontalAccuracy": {
+                  "description": "horizontalAccuracy:\r\nOptional\r\nIf the last survey of the feature was carried out according to PAS128, this field should represent the horizontal ‘Location accuracy’ associated with the Quality Level assigned to this feature, expressed in metres. If the last survey was not carried out according to PAS128, this field should represent the worst-case ‘margin of error’ reported by the surveying equipment used at the time, expressed in metres. This field should only be populated if objective data about horizontal accuracy is available.",
+                  "type": "number"
+                },
+                "horizontalMeasurementMethod": {
+                  "description": "horizontalMeasurementMethod:\r\nOptional\r\n\r\nThe method by which the horizontal position of the feature was captured.",
+                  "$ref": "#/$defs/HorizontalMeasurementMethodValue"
+                },
+                "intendedPermanence": {
+                  "description": "intendedPermanence:\r\nOptional\r\nIntended longevity of the utility feature. Depending on the implementation, most databases would probably only handle permanent features under the assumption that temporary features occupy the right-of- way for a limited period, after which the permit requires the removal of those features. However, if the temporary accommodation is via a lease (e.g., a temporary water line to support oil or gas shale developments), tracking the status of the temporary feature at any time may be important. (ASCE As-built) Values for intendedPermanence are defined in the \u003cIntendedPermanenceValue\u003e codelist",
+                  "$ref": "#/$defs/IntendedPermanenceValue"
+                },
+                "emergencyContact": {
+                  "type": "string"
+                },
+                "localeReference": {
+                  "description": "localeReference\r\nOptional\r\nAn identifier for the general locale of the object - e.g. a street reference or land parcel id",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "uniqueItems": true
+                },
+                "locationType": {
+                  "description": "locationType\r\nOptional\r\nAn indication of the location of the object (e.g. carriageway, verge etc). Values for locationType are defined in the \u003cLocationTypeValue\u003e codelist.",
+                  "$ref": "#/$defs/LocationTypeValue"
+                },
+                "measurementUnits": {
+                  "description": "measurementUnits:\r\nOptional\r\nUnits used to express height, width, length, and wall thickness. For data exchange purposes, the units of measurement are the same for all dimensions. (ASCE). Values for measurementUnits are defined in the \u003cMeasurementUnitsValue\u003e codelist",
+                  "$ref": "#/$defs/MeasurementUnitsValue"
+                },
+                "assetName": {
+                  "description": "assetName\r\nOptional\r\nAny name assigned to the asset by the asset owner",
+                  "type": "string"
+                },
+                "assetOwner": {
+                  "description": "assetOwner:\r\nMandatory\r\nName / identity of the asset owner. Discrete contact details are stored in \u003cContactDetails\u003e objects with \"assetOwner\" \u003d \"businessName\"",
+                  "type": "string"
+                },
+                "assetOwnerID": {
+                  "description": "assetOwnerID: {id} \r\nmandatory\r\nThis an identifier assigned uniquely to an asset owner. It should be as stable and persistent as possible relative to that particular physical asset or defined region.",
+                  "type": "string"
+                },
+                "operator": {
+                  "description": "assetOperator:\r\nOptional\r\nName / identity of the asset operator if distinct from the asset owner",
+                  "type": "string"
+                },
+                "qualityLevel": {
+                  "description": "qualityLevel:\r\nOptional\r\nQuality level in accordance with PAS128:2014/2020. This field should only be populated if the dateDataCollected is populated with the data of a PAS128-compliant utility survey, and dataQuality should reflect the Quality Level assigned during that survey. Values for qualityLevel are defined in the \u003cQualityLevelValue\u003e codelist.",
+                  "$ref": "#/$defs/QualityLevelValue"
+                },
+                "undergroundStatus": {
+                  "description": "undergroundStatus:\r\nOptional\r\nIndicator of whether the feature is partially or completely underground. (ASCE) The values for undergroundStatus are defined in the \u003cUndergroundStatusValue\u003e codelist.",
+                  "$ref": "#/$defs/UndergroundStatusValue"
+                },
+                "material": {
+                  "$ref": "#/$defs/MaterialTypeValue"
+                },
+                "verticalAccuracy": {
+                  "description": "verticalAccuracy:\r\nOptional\r\nIf the last survey of the feature was carried out according to PAS128, this field should represent the vertical ‘Location accuracy’ associated with the Quality Level assigned to this feature, expressed in metres. If the last survey was not carried out according to PAS128, this field should represent the worst-case ‘margin of error’ reported by the surveying equipment used at the time, expressed in metres. This field should only be populated if objective data about vertical accuracy is available.",
+                  "type": "number"
+                },
+                "colour": {
+                  "type": "string"
+                },
+                "azimuth": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "azimuth",
+                "emergencyContact"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "MUDDIEnvironmentUnit": {
+      "$anchor": "MUDDIEnvironmentUnit",
+      "allOf": [
+        {
+          "$ref": "#/$defs/MUDDIObject"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geometry": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Polygon"
+                }
+              ]
+            },
+            "place": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Polygon"
+                }
+              ]
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "upperDepth": {
+                  "type": "number"
+                },
+                "lowerDepth": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "MUDDIEvent": {
+      "$anchor": "MUDDIEvent",
+      "allOf": [
+        {
+          "$ref": "#/$defs/MUDDIObject"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "MUDDIObject": {
+      "$anchor": "MUDDIObject",
+      "description": "MUDDIObject:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nThe parent class of underground infrastructure, space, event, environmental unit, or other underground +/- surface features that are identified, located, typed, and about which data is maintained. Its mandatory and optional attributes are inherited by all more specialized classes in the MUDDI core model and derived NUAR Harmonized Model.\r\n\r\nMandatory attributes:\r\ndataProvider\r\nbusinessContact\r\nhorizontalCRS\r\nsystemID\r\nsystemLoadDate",
+      "allOf": [
+        {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/feature.json"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "businessContact": {
+                  "description": "businessContact:\r\nMandatory\r\nContact information for the asset responsible party",
+                  "type": "string"
+                },
+                "certification": {
+                  "description": "certification:\r\nOptional\r\nName and credentials of the party (if any) that certified the data as meeting Positional Accuracy requirements as described in Table 1 and attribute data requirements as agreed for data exchange purposes. (ASCE_AsBuilt).",
+                  "type": "string"
+                },
+                "dataOwner": {
+                  "description": "NEW",
+                  "type": "string"
+                },
+                "dataOwnerUniqueID": {
+                  "type": "string"
+                },
+                "dataProviderUniqueID": {
+                  "description": "dataAgentAssetID:\r\nOptional\r\n\r\nThis an identifier assigned uniquely by a data agent acting as an intermediary between the asset owner and the platform.",
+                  "type": "string"
+                },
+                "dataProvider": {
+                  "type": "string"
+                },
+                "dataSensitivityLevel": {
+                  "description": "dataSensitivityLevel:\r\nOptional\r\nIndicator of the sensitivity level of the data recorded for a utility feature. If the data are considered sensitive security information (SSI), the data must be labeled on any output produced and handled appropriately (ASCE As-built).",
+                  "type": "string"
+                },
+                "dateDataCollected": {
+                  "description": "dateDataCollected:\r\nOptional\r\nDate when a utility feature was last surveyed in the field. If this survey was carried out according to the PAS128 standard, the Quality Level assigned to the feature should be recorded in the qualityLevel field. If the survey on this date was not carried out according to PAS128, the qualityLevel field must be left unpopulated.",
+                  "type": "string",
+                  "format": "date"
+                },
+                "dateOfLastStatusChange": {
+                  "description": "NEW",
+                  "type": "string",
+                  "format": "date"
+                },
+                "description": {
+                  "description": "description (NEW)\r\n\r\nOptional\r\n\r\nDescriptive text for the feature.",
+                  "type": "string"
+                },
+                "featureType": {
+                  "description": "featureType:\r\nOptional\r\nCategory of utility feature based on feature function and configuration. Function refers to the main purpose of the utility feature. Configuration refers to geometric and structural characteristics of the utility feature. Depending on the implementation, feature differentiation may be at the feature class level (e.g., separate feature classes for devices, access points, support structures, and so on) or by attribute. Because of the small number of potential feature types, feature differentiation at the feature class level is common. Values for featureType are defined in the \u003cFeatureTypeValue\u003e codelist",
+                  "$ref": "#/$defs/FeatureTypeValue"
+                },
+                "guidance": {
+                  "type": "array",
+                  "items": {
+                    "type": [
+                      "string",
+                      "integer"
+                    ],
+                    "x-ogc-collectionId": "guidancetype",
+                    "x-ogc-role": "reference"
+                  },
+                  "uniqueItems": true
+                },
+                "horizontalCRS": {
+                  "description": "horizontalCRS:\r\nMandatory\r\nCoordinate system, datum, and epoch date (if applicable) associated with the X and Y coordinates. (ASCE As-built)",
+                  "type": "string"
+                },
+                "measurementUnits": {
+                  "description": "measurementUnits:\r\nOptional\r\nUnits used to express height, width, length, and wall thickness. For data exchange purposes, the units of measurement are the same for all dimensions. (ASCE). Values for measurementUnits are defined in the \u003cMeasurementUnitsValue\u003e codelist",
+                  "$ref": "#/$defs/MeasurementUnitsValue"
+                },
+                "operationalStatus": {
+                  "description": "operationalStatus:\r\nOptional\r\nOperational status of the utility feature. Values for operationalStatus are defined in the \u003cOperationalStatusValue\u003e codelist",
+                  "$ref": "#/$defs/OperationalStatusValue"
+                },
+                "originalDateDataCollected": {
+                  "description": "originalDateDataCollected:\r\nOptional\r\nThe date upon which this utility feature was originally captured in the source asset owner system.",
+                  "type": "string",
+                  "format": "date"
+                },
+                "systemID": {
+                  "description": "systemID:\r\nMandatory\r\nIdentifier for this data record defined by and globally unique within the system that stores the data record",
+                  "type": "string"
+                },
+                "systemLoadDate": {
+                  "description": "systemLoadDate:\r\nMandatory\r\nDate at which the data record for this entity was last loaded into the datastore system.",
+                  "type": "string",
+                  "format": "date"
+                },
+                "version": {
+                  "description": "version:\r\nOptional\r\nThe version specifier for the present data record.",
+                  "type": "string"
+                },
+                "objectID": {
+                  "type": "string"
+                },
+                "verticalCRS": {
+                  "description": "verticalCRS:\r\nOptional\r\nDatum, etc. for the Z coordinate. (ASCE) This is the absolute Z coordinate, not the depth from grade",
+                  "type": "string"
+                },
+                "recordID": {
+                  "type": "string"
+                },
+                "encloses": {
+                  "properties": {
+                    "collectionId": {
+                      "type": "string",
+                      "enum": [
+                        "access",
+                        "container",
+                        "muddiasset",
+                        "muddienvironmentunit",
+                        "muddievent",
+                        "muddiobject",
+                        "muddispace",
+                        "network",
+                        "networkasset",
+                        "networkconveyance",
+                        "networkconveyancelink",
+                        "networkconveyancenode",
+                        "nonutilityobject",
+                        "observation",
+                        "physicalprotection",
+                        "planningarea",
+                        "sensor",
+                        "servicearea",
+                        "site",
+                        "structure",
+                        "support",
+                        "unidentifiedburiedobject"
+                      ]
+                    },
+                    "featureId": {
+                      "type": [
+                        "string",
+                        "integer"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "collectionId",
+                    "featureId"
+                  ],
+                  "type": "object",
+                  "x-ogc-role": "reference"
+                },
+                "enclosedBy": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "collectionId": {
+                        "type": "string",
+                        "enum": [
+                          "access",
+                          "container",
+                          "muddiasset",
+                          "muddienvironmentunit",
+                          "muddievent",
+                          "muddiobject",
+                          "muddispace",
+                          "network",
+                          "networkasset",
+                          "networkconveyance",
+                          "networkconveyancelink",
+                          "networkconveyancenode",
+                          "nonutilityobject",
+                          "observation",
+                          "physicalprotection",
+                          "planningarea",
+                          "sensor",
+                          "servicearea",
+                          "site",
+                          "structure",
+                          "support",
+                          "unidentifiedburiedobject"
+                        ]
+                      },
+                      "featureId": {
+                        "type": [
+                          "string",
+                          "integer"
+                        ]
+                      },
+                      "title": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "collectionId",
+                      "featureId"
+                    ],
+                    "type": "object",
+                    "x-ogc-role": "reference"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "businessContact",
+                "dataProvider",
+                "horizontalCRS",
+                "objectID",
+                "recordID",
+                "systemID",
+                "systemLoadDate"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        {
+          "required": [
+            "id"
+          ]
+        }
+      ]
+    },
+    "MUDDISpace": {
+      "$anchor": "MUDDISpace",
+      "allOf": [
+        {
+          "$ref": "#/$defs/MUDDIObject"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geometry": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Polygon"
+                }
+              ]
+            },
+            "place": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Polygon"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MaterialTypeValue": {
+      "$anchor": "MaterialTypeValue",
+      "description": "Material Type Codelist\r\nCodelist of utility asset constituent materials.",
+      "type": "string",
+      "format": "uri"
+    },
+    "MeasurementUnitsValue": {
+      "$anchor": "MeasurementUnitsValue",
+      "description": "Measurement Units Codelist\r\nCodelist of attribute value measurement units",
+      "type": "string",
+      "format": "uri"
+    },
+    "Network": {
+      "$anchor": "Network",
+      "description": "Network:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nMUDDIObject that represents a whole or partial infrastructure network",
+      "allOf": [
+        {
+          "$ref": "#/$defs/MUDDIAsset"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "networkType": {
+                  "type": "string"
+                },
+                "utilityType": {
+                  "$ref": "#/$defs/UtilityTypeValue"
+                },
+                "utilitySubType": {
+                  "$ref": "#/$defs/UtilitySubTypeValue"
+                },
+                "servedBy": {
+                  "type": "array",
+                  "items": {
+                    "type": [
+                      "string",
+                      "integer"
+                    ],
+                    "x-ogc-collectionId": "servicearea",
+                    "x-ogc-role": "reference"
+                  },
+                  "uniqueItems": true
+                },
+                "isContainedBy": {
+                  "type": "array",
+                  "items": {
+                    "type": [
+                      "string",
+                      "integer"
+                    ],
+                    "x-ogc-collectionId": "network",
+                    "x-ogc-role": "reference"
+                  },
+                  "uniqueItems": true
+                },
+                "isSegment": {
+                  "type": "array",
+                  "items": {
+                    "type": [
+                      "string",
+                      "integer"
+                    ],
+                    "x-ogc-collectionId": "network",
+                    "x-ogc-role": "reference"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "utilitySubType",
+                "utilityType"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "NetworkAccessory": {
+      "$anchor": "NetworkAccessory",
+      "description": "NetworkAccessoryObject:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nAsset that has a role in the support, containment, access or physical protection for a conveyance object in a utility network.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/NetworkAsset"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "accessoryType": {
+                  "description": "accessoryType\r\nMandatory\r\nThe type of the NetworkAccessoryObject. The values for accessoryType are defined in the \u003cNetworkAccessoryTypeValue\u003e codelist.",
+                  "$ref": "#/$defs/NetworkAccessoryTypeValue"
+                },
+                "associatedAssets": {
+                  "description": "associatedAssets\r\nOptional\r\nIds of any assets supported, contained, accessed or protected by this NetworkAccessoryObject.",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "uniqueItems": true
+                },
+                "hasAccessory": {
+                  "description": "hasAccessory",
+                  "properties": {
+                    "collectionId": {
+                      "type": "string",
+                      "enum": [
+                        "networkconveyance",
+                        "networkconveyancelink",
+                        "networkconveyancenode"
+                      ]
+                    },
+                    "featureId": {
+                      "type": [
+                        "string",
+                        "integer"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "collectionId",
+                    "featureId"
+                  ],
+                  "type": "object",
+                  "x-ogc-role": "reference"
+                }
+              },
+              "required": [
+                "accessoryType"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "NetworkAccessoryTypeValue": {
+      "$anchor": "NetworkAccessoryTypeValue",
+      "description": "Network Area Type Codelist\r\nCodelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.",
+      "type": "string",
+      "format": "uri"
+    },
+    "NetworkAreaTypeValue": {
+      "$anchor": "NetworkAreaTypeValue",
+      "description": "Network Area Type Codelist\r\nCodelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.",
+      "type": "string",
+      "format": "uri"
+    },
+    "NetworkAsset": {
+      "$anchor": "NetworkAsset",
+      "description": "NetworkObject:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nAsset that has a role in a utility network.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/MUDDIAsset"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "container": {
+                  "description": "container\r\nOptional\r\nThe name or ID of any container object for this NetworkObject",
+                  "type": "string"
+                },
+                "dateOfInstallation": {
+                  "description": "dateOfInstallation\r\nOptional\r\nThe date upon which the NetworkObject was installed.",
+                  "type": "string",
+                  "format": "date"
+                },
+                "insideHeight": {
+                  "description": "insideHeight\r\nOptional\r\nFor circular shaped segments, not applicable. For non-circular shaped segments, maximum inside height of cross-sectional shape. For features other than segments, maximum inside height of feature.(ASCE). Units are always defined by \u003c\u003cmeasurementUnits\u003e\u003e",
+                  "$ref": "#/$defs/HeightType"
+                },
+                "insideLength": {
+                  "description": "insideLength\r\nOptional\r\nFor segments, not applicable. For features other than segments, maximum inside length of feature (measured in the horizontal plane, perpendicular to the width). Units are always defined by \u003c\u003cmeasurementUnits\u003e\u003e",
+                  "$ref": "#/$defs/LengthType"
+                },
+                "insideWidth": {
+                  "description": "insideWidth\r\nOptional\r\nFor circular shaped segments, inside diameter of the utility feature cross section. For non-circular shaped segments, maximum inside width of cross-sectional shape. For features other than segments, maximum inside width of feature. Units are always defined by \u003c\u003cmeasurementUnits\u003e\u003e",
+                  "$ref": "#/$defs/WidthType"
+                },
+                "isAuxiliary": {
+                  "description": "isAuxiliary\r\nOptional\r\nIndication that this NetworkObject is part of an auxiliary network providing supporting services for the main network.",
+                  "type": "boolean"
+                },
+                "isCathodicProtected": {
+                  "description": "isCathodicProtected\r\nOptional\r\nIndicator of the presence of a cathodic protection.(ASCE)",
+                  "type": "boolean"
+                },
+                "isEncased": {
+                  "description": "isEncased:\r\nOptional\r\nIndicator of the presence of encasement to insulate or protect the utility feature.(ASCE)",
+                  "type": "boolean"
+                },
+                "isNPS": {
+                  "description": "isNPS:\r\nOptional\r\nIndicator that the provided outside Width is a \"Nominal Pipe Size\" rather than a true measure. This may correspond to knwn inside and outside dimensions for well-known types of pipes or other network elements. If isNPS is true and both outside and inside width are set to the same value, then it is not known what dimension the value applies to.",
+                  "type": "boolean"
+                },
+                "outsideHeight": {
+                  "description": "outsideHeight:\r\nOptional\r\nUnits are always defined by \u003c\u003cmeasurementUnits\u003e\u003e",
+                  "$ref": "#/$defs/HeightType"
+                },
+                "outsideLength": {
+                  "description": "outsideLength:\r\nOptional\r\nUnits are always defined by \u003c\u003cmeasurementUnits\u003e\u003e",
+                  "$ref": "#/$defs/LengthType"
+                },
+                "outsideWidth": {
+                  "description": "outsideWidth:\r\nOptional\r\nFor circular shaped segments, outside diameter of the utility feature cross section. For non-circular shaped segments, maximum outside width of cross-sectional shape. For features other than segments, maximum outside width of feature. Units are always defined by \u003c\u003cmeasurementUnits\u003e\u003e",
+                  "$ref": "#/$defs/WidthType"
+                },
+                "protectiveMaterial": {
+                  "description": "protectiveMaterial:\r\nOptional\r\nMaterial from which protective layers or elements of the object are constructed. This is presently a CharacterString but values can be drawn from the \u003cMaterialTypeValue\u003e codelist",
+                  "$ref": "#/$defs/WidthType"
+                },
+                "utilitySubType": {
+                  "description": "utilitySubType:\r\nOptional\r\nType of utility service at a finer level of classification than utility type. The values for utilitySubType are defined in the \u003cUtilitySubTypeValue\u003e codelist.",
+                  "$ref": "#/$defs/UtilitySubTypeValue"
+                },
+                "utilityType": {
+                  "description": "utilityType:\r\nOptional\r\nType of utility service that a utility feature carries (ASCE). The values for utilityType are defined in the \u003cUtilityTypeValue\u003e codelist.",
+                  "$ref": "#/$defs/UtilityTypeValue"
+                },
+                "wallThickness": {
+                  "description": "wallThickness:\r\nOptional\r\nMaximum wall thickness.(ASCE) Units are always defined by \u003c\u003cmeasurementUnits\u003e\u003e",
+                  "type": "number"
+                },
+                "siteOf": {
+                  "type": [
+                    "string",
+                    "integer"
+                  ],
+                  "x-ogc-collectionId": "site",
+                  "x-ogc-role": "reference"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "NetworkConveyance": {
+      "$anchor": "NetworkConveyance",
+      "description": "NetworkConveyanceObject:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nAsset that has a role in the conveyance of a commodity in a utility network.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/NetworkAsset"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "conveyanceCategory": {
+                  "description": "conveyanceCategory:\r\nOptional\r\nPrimary category or purpose of service of the utility feature. Included in each category is the supporting infrastructure, such as alarm and ventilation, needed to provide the corresponding utility service. Values for conveyanceCategory are defined in the \u003cConveyanceCategoryValue\u003e codelist.",
+                  "$ref": "#/$defs/ConveyanceCategoryValue"
+                },
+                "conveyanceMethod": {
+                  "description": "conveyanceMethod:\r\nOptional\r\nMethod to move or convey matter (the utility commodity) through the utility feature. (ASCE). Values for conveyanceMethod are defined in the \u003cConveyanceMethodValue\u003e codelist, including both pressure and voltage ranges.",
+                  "$ref": "#/$defs/ConveyanceMethodValue"
+                },
+                "fillMaterial": {
+                  "description": "fillMaterial:\r\nOptional\r\nMaterial used to fill the space between a utility feature and its encasement or an out-of- service feature. (ASCE \"interstitialMaterial\"). This is presently a CharacterString but values can be drawn from the \u003cMaterialTypeValue\u003e codelist",
+                  "type": "string"
+                },
+                "isFilled": {
+                  "description": "isFilled:\r\nOptional\r\nIndicator of the presence of interstitial material inside the infrastructure encasement.(ASCE)",
+                  "type": "boolean"
+                },
+                "operatingConveyanceLevel": {
+                  "description": "operatingConveyanceLevel\r\nOptional\r\nThe level at which the commodity is conveyed in this network object",
+                  "type": "number"
+                },
+                "operatingConveyanceLevelType": {
+                  "description": "operatingConveyanceLevelType\r\nOptional\r\nThe type of the conveyance level for this network object (e.g. pressure, voltage level)",
+                  "$ref": "#/$defs/OperatingConveyanceLevelTypeValue"
+                },
+                "operatingConveyanceLevelUnits": {
+                  "description": "operatingConveyanceLevelUnits\r\nOptional\r\nThe units of the conveyance level",
+                  "$ref": "#/$defs/MeasurementUnitsValue"
+                },
+                "operatingTemperature": {
+                  "description": "operatingTemperature\r\nOptional\r\nA value representing the temperature of the commodity conveyed by this network object if applicable.",
+                  "type": "number"
+                },
+                "operatingTemperatureRange": {
+                  "description": "operatingTemperatureRange\r\nOptional\r\nAn indication of the range of temperatures of the commodity conveyed by this network object if applicable.",
+                  "$ref": "#/$defs/TemperatureRangeValue"
+                },
+                "operatingTemperatureUnits": {
+                  "description": "operatingTemperatureUnits\r\nOptional\r\nThe units of the temperature value.",
+                  "$ref": "#/$defs/MeasurementUnitsValue"
+                },
+                "outerMaterial": {
+                  "description": "outerMaterial:\r\nOptional\r\nMaterial from which the outer covering, carrier pipe, insulation, etc. is constructed, This is presently a CharacterString but values can be drawn from the \u003cMaterialTypeValue\u003e codelist",
+                  "type": "string"
+                },
+                "hasConveyance": {
+                  "type": [
+                    "string",
+                    "integer"
+                  ],
+                  "x-ogc-collectionId": "network",
+                  "x-ogc-role": "reference"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "NetworkConveyanceLink": {
+      "$anchor": "NetworkConveyanceLink",
+      "description": "NetworkConveyanceLink:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nLinear utility feature that serves as a link or edge in a network graph. (ASCE \"Segment\")",
+      "allOf": [
+        {
+          "$ref": "#/$defs/NetworkConveyance"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geometry": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/LineString"
+                }
+              ]
+            },
+            "place": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/LineString"
+                }
+              ]
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "downstreamDepth": {
+                  "description": "downstreamDepth:\r\nOptional\r\nNumerical value in measurementUnits of the depth from grade at time of survey or other determination method to the top of the downstream end of the asset. IF this attribute is provided for a NetworkLink feature, then the depth attribute should be understood as upstreamDepth. \r\nThis attribute should be used for a single approximation of asset depth according to depthMethod. More detailed / precise vertical positioning information should be represented in a geometry attribute.",
+                  "type": "number"
+                },
+                "componentType": {
+                  "$ref": "#/$defs/NetworkLinkComponentTypeValue"
+                },
+                "hasInlet": {
+                  "type": [
+                    "string",
+                    "integer"
+                  ],
+                  "x-ogc-collectionId": "networkconveyancenode",
+                  "x-ogc-role": "reference"
+                }
+              },
+              "required": [
+                "componentType"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "NetworkConveyanceNode": {
+      "$anchor": "NetworkConveyanceNode",
+      "description": "NetworkLink:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nLinear utility feature that serves as a link or edge in a network graph. (ASCE \"Segment\")",
+      "allOf": [
+        {
+          "$ref": "#/$defs/NetworkConveyance"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "componentType": {
+                  "$ref": "#/$defs/NetworkNodeComponentTypeValue"
+                },
+                "conveysFrom": {
+                  "type": "array",
+                  "items": {
+                    "type": [
+                      "string",
+                      "integer"
+                    ],
+                    "x-ogc-collectionId": "networkconveyancelink",
+                    "x-ogc-role": "reference"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "componentType"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "NetworkDescriptionTypeValue": {
+      "$anchor": "NetworkDescriptionTypeValue",
+      "description": "Network Area Type Codelist\r\nCodelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.",
+      "type": "string",
+      "format": "uri"
+    },
+    "NetworkLinkComponentTypeValue": {
+      "$anchor": "NetworkLinkComponentTypeValue",
+      "description": "Network Link Component Type Codelist\r\nCodelist of specific types of NetworkLinks. These may be redundant with derived network link feature types and supplemented by more specific component type codelists. It allows new Network Link feature types to be added without changing the model.",
+      "type": "string",
+      "format": "uri"
+    },
+    "NetworkNodeComponentTypeValue": {
+      "$anchor": "NetworkNodeComponentTypeValue",
+      "description": "Network Node Component Type Codelist\r\nCodelist of specific types of NetworkNodes. These may be redundant with derived network node feature types and supplemented by more specific component type codelists. It allows new NetworkNode feature types to be added without changing the model.",
+      "type": "string",
+      "format": "uri"
+    },
+    "NetworkObjectComponentTypeValue": {
+      "$anchor": "NetworkObjectComponentTypeValue",
+      "type": "string",
+      "format": "uri"
+    },
+    "NetworkSiteTypeValue": {
+      "$anchor": "NetworkSiteTypeValue",
+      "description": "Network Area Type Codelist\r\nCodelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.",
+      "type": "string",
+      "format": "uri"
+    },
+    "NetworkTierType": {
+      "$anchor": "NetworkTierType",
+      "description": "NetworkTier:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nAn object that represents a subnetwork or tier whose membership is dictated not by spatial proximity or extent, but by common attribution (e.g. a subnetwork representing the High Voltage cables within an electricity network)",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "assetOwner": {
+              "type": "string"
+            },
+            "conveyanceCategory": {
+              "$ref": "#/$defs/ConveyanceCategoryValue"
+            },
+            "conveyanceMethod": {
+              "$ref": "#/$defs/ConveyanceMethodValue"
+            },
+            "id": {
+              "type": "string"
+            },
+            "material": {
+              "$ref": "#/$defs/MaterialTypeValue"
+            },
+            "name": {
+              "type": "string"
+            },
+            "utilitySubType": {
+              "description": "utilitySubType:\r\nOptional\r\nType of utility service at a finer level of disaggregation than utility type. The values for utilitySubType are defined in the \u003cUtilitySubTypeValue\u003e codelist.",
+              "$ref": "#/$defs/UtilitySubTypeValue"
+            },
+            "utilityType": {
+              "description": "utilityType:\r\nOptional\r\nType of utility service that a utility feature carries (ASCE). The values for utilityType are defined in the \u003cUtilityTypeValue\u003e codelist.",
+              "$ref": "#/$defs/UtilityTypeValue"
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "assetOwner",
+            "id",
+            "name"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "NonUtilityObject": {
+      "$anchor": "NonUtilityObject",
+      "description": "NonUtilityObject\r\n\u003c\u003cFeatureType\u003e\u003e\r\nAn underground object which is not part of a utility network, but which may have an impact on planning or excavation activities.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/Structure"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "$ref": "#/$defs/NonUtilityObjectType"
+                }
+              },
+              "required": [
+                "type"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "NonUtilityObjectType": {
+      "$anchor": "NonUtilityObjectType",
+      "type": "string",
+      "format": "uri"
+    },
+    "Observation": {
+      "$anchor": "Observation",
+      "allOf": [
+        {
+          "$ref": "#/$defs/MUDDIEvent"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geometry": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Point"
+                }
+              ]
+            },
+            "place": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Point"
+                }
+              ]
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "estimatedBackfillDate": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "impactOnWorks": {
+                  "$ref": "#/$defs/ObservationImpactValue"
+                },
+                "linkedFiles": {
+                  "type": "array",
+                  "items": {
+                    "type": [
+                      "string",
+                      "integer"
+                    ],
+                    "x-ogc-collectionId": "linkedfiletype",
+                    "x-ogc-role": "reference"
+                  },
+                  "uniqueItems": true
+                },
+                "notes": {
+                  "type": "string"
+                },
+                "resultTime": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "phenomenonTime": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "procedure": {
+                  "type": "string"
+                },
+                "validTime": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "sensorUsed": {
+                  "type": [
+                    "string",
+                    "integer"
+                  ],
+                  "x-ogc-collectionId": "sensor",
+                  "x-ogc-role": "reference"
+                }
+              },
+              "required": [
+                "impactOnWorks",
+                "phenomenonTime",
+                "procedure",
+                "resultTime",
+                "validTime"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "ObservationImpactValue": {
+      "$anchor": "ObservationImpactValue",
+      "type": "string",
+      "format": "uri"
+    },
+    "OperatingConveyanceLevelTypeValue": {
+      "$anchor": "OperatingConveyanceLevelTypeValue",
+      "description": "Network Area Type Codelist\r\nCodelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.",
+      "type": "string",
+      "format": "uri"
+    },
+    "OperationalStatusValue": {
+      "$anchor": "OperationalStatusValue",
+      "description": "Operational Status Codelist\r\nCodelist of operational status values for MUDDIObjects",
+      "type": "string",
+      "format": "uri"
+    },
+    "PhysicalProtection": {
+      "$anchor": "PhysicalProtection",
+      "description": "NetworkObject:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nAsset that has a role in the conveyance of a commodity in a utility network.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/NetworkAccessory"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geometry": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/LineString"
+                }
+              ]
+            },
+            "place": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/LineString"
+                }
+              ]
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "physicalProtectionType": {
+                  "description": "utilitySubType:\r\nOptional\r\nType of utility service at a finer level of classification than utility type. The values for utilitySubType are defined in the \u003cUtilitySubTypeValue\u003e codelist.",
+                  "$ref": "#/$defs/PhysicalProtectionTypeValue"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "PhysicalProtectionTypeValue": {
+      "$anchor": "PhysicalProtectionTypeValue",
+      "description": "Network Area Type Codelist\r\nCodelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.",
+      "type": "string",
+      "format": "uri"
+    },
+    "PlanningArea": {
+      "$anchor": "PlanningArea",
+      "description": "PlanningArea\r\n\u003c\u003cFeatureType\u003e\u003e\r\nDefined area with characteristics relevant to excavation planning.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/MUDDISpace"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "directive": {
+                  "type": "string"
+                },
+                "planningAreaType": {
+                  "description": "planningAreaType:\r\nOptional\r\nType of Planning Area. The values for PlanningArea are defined in the \u003cPlanningAreaValue\u003e codelist.",
+                  "$ref": "#/$defs/PlanningAreaTypeValue"
+                },
+                "policyDocumentation": {
+                  "type": "string"
+                },
+                "policyName": {
+                  "description": "policyName:\r\nOptional\r\nThe policy with which this PlanningRegion is associated, such as permission to dig or notification of activity.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "planningAreaType"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "PlanningAreaTypeValue": {
+      "$anchor": "PlanningAreaTypeValue",
+      "description": "Planning Region Codelist\r\nCodelist of planning region types. Redundant with derived planning region feature types but allows new region types to be defined without changing the model.",
+      "type": "string",
+      "format": "uri"
+    },
+    "QualityLevelValue": {
+      "$anchor": "QualityLevelValue",
+      "description": "Enhanced Measures Type Codelist\r\nAbstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.",
+      "type": "string",
+      "format": "uri"
+    },
+    "Sensor": {
+      "$anchor": "Sensor",
+      "description": "NetworkObject:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nAsset that has a role in the conveyance of a commodity in a utility network.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/NetworkAccessory"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geometry": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Point"
+                }
+              ]
+            },
+            "place": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Point"
+                }
+              ]
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "SensorType": {
+                  "description": "utilitySubType:\r\nOptional\r\nType of utility service at a finer level of classification than utility type. The values for utilitySubType are defined in the \u003cUtilitySubTypeValue\u003e codelist.",
+                  "$ref": "#/$defs/SensorTypeValue"
+                },
+                "Phenomenon": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "uniqueItems": true
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "SensorTypeValue": {
+      "$anchor": "SensorTypeValue",
+      "description": "Network Node Component Type Codelist\r\nCodelist of specific types of NetworkNodes. These may be redundant with derived network node feature types and supplemented by more specific component type codelists. It allows new NetworkNode feature types to be added without changing the model.",
+      "type": "string",
+      "format": "uri"
+    },
+    "ServiceArea": {
+      "$anchor": "ServiceArea",
+      "description": "NetworkArea:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nMUDDIObject that represents a whole or partial infrastructure network",
+      "allOf": [
+        {
+          "$ref": "#/$defs/MUDDISpace"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "networkAreaType": {
+                  "$ref": "#/$defs/NetworkAreaTypeValue"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Site": {
+      "$anchor": "Site",
+      "description": "NetworkSite:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nMUDDIObject that represents a whole or partial infrastructure network",
+      "allOf": [
+        {
+          "$ref": "#/$defs/MUDDISpace"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "networkSiteType": {
+                  "$ref": "#/$defs/NetworkSiteTypeValue"
+                },
+                "linkedFile": {
+                  "description": "NEW\r\n\r\nLink to supplemental files. E.g. a site schematic or an as-laid drawing of the site network.",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "uniqueItems": true
+                },
+                "hasSite": {
+                  "type": "array",
+                  "items": {
+                    "type": [
+                      "string",
+                      "integer"
+                    ],
+                    "x-ogc-collectionId": "network",
+                    "x-ogc-role": "reference"
+                  },
+                  "uniqueItems": true
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Structure": {
+      "$anchor": "Structure",
+      "description": "NetworkObject:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nAsset that has a role in a utility network.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/MUDDIAsset"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geometry": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Point"
+                }
+              ]
+            },
+            "place": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Point"
+                }
+              ]
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "container": {
+                  "description": "container\r\nOptional\r\nThe name or ID of any container object for this NetworkObject",
+                  "type": "string"
+                },
+                "dateOfInstallation": {
+                  "description": "dateOfInstallation\r\nOptional\r\nThe date upon which the NetworkObject was installed.",
+                  "type": "string",
+                  "format": "date"
+                },
+                "insideHeight": {
+                  "description": "insideHeight\r\nOptional\r\nFor circular shaped segments, not applicable. For non-circular shaped segments, maximum inside height of cross-sectional shape. For features other than segments, maximum inside height of feature.(ASCE). Units are always defined by \u003c\u003cmeasurementUnits\u003e\u003e",
+                  "$ref": "#/$defs/HeightType"
+                },
+                "insideLength": {
+                  "description": "insideLength\r\nOptional\r\nFor segments, not applicable. For features other than segments, maximum inside length of feature (measured in the horizontal plane, perpendicular to the width). Units are always defined by \u003c\u003cmeasurementUnits\u003e\u003e",
+                  "$ref": "#/$defs/LengthType"
+                },
+                "insideWidth": {
+                  "description": "insideWidth\r\nOptional\r\nFor circular shaped segments, inside diameter of the utility feature cross section. For non-circular shaped segments, maximum inside width of cross-sectional shape. For features other than segments, maximum inside width of feature. Units are always defined by \u003c\u003cmeasurementUnits\u003e\u003e",
+                  "$ref": "#/$defs/WidthType"
+                },
+                "isEncased": {
+                  "description": "isEncased:\r\nOptional\r\nIndicator of the presence of encasement to insulate or protect the utility feature.(ASCE)",
+                  "type": "boolean"
+                },
+                "outsideHeight": {
+                  "description": "outsideHeight:\r\nOptional\r\nUnits are always defined by \u003c\u003cmeasurementUnits\u003e\u003e",
+                  "$ref": "#/$defs/HeightType"
+                },
+                "outsideLength": {
+                  "description": "outsideLength:\r\nOptional\r\nUnits are always defined by \u003c\u003cmeasurementUnits\u003e\u003e",
+                  "$ref": "#/$defs/LengthType"
+                },
+                "outsideWidth": {
+                  "description": "outsideWidth:\r\nOptional\r\nFor circular shaped segments, outside diameter of the utility feature cross section. For non-circular shaped segments, maximum outside width of cross-sectional shape. For features other than segments, maximum outside width of feature. Units are always defined by \u003c\u003cmeasurementUnits\u003e\u003e",
+                  "$ref": "#/$defs/WidthType"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Support": {
+      "$anchor": "Support",
+      "description": "NetworkObject:\r\n\u003c\u003cFeatureType\u003e\u003e\r\nAsset that has a role in the conveyance of a commodity in a utility network.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/NetworkAccessory"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geometry": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Point"
+                }
+              ]
+            },
+            "place": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Point"
+                }
+              ]
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "supportType": {
+                  "description": "utilitySubType:\r\nOptional\r\nType of utility service at a finer level of classification than utility type. The values for utilitySubType are defined in the \u003cUtilitySubTypeValue\u003e codelist.",
+                  "$ref": "#/$defs/SupportTypeValue"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "SupportTypeValue": {
+      "$anchor": "SupportTypeValue",
+      "description": "Support Type Codelist\r\nCodelist of types of utility asset supports, e.g. Footing vs Tower.",
+      "type": "string",
+      "format": "uri"
+    },
+    "TemperatureRangeValue": {
+      "$anchor": "TemperatureRangeValue",
+      "description": "Enhanced Measures Type Codelist\r\nAbstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.",
+      "type": "string",
+      "format": "uri"
+    },
+    "TermMapping": {
+      "$anchor": "TermMapping",
+      "description": "Required table to map from the MUDDI Logical Model standard terms to custom entity names in a given logical model or physical schema.",
+      "type": "object"
+    },
+    "UndergroundStatusValue": {
+      "$anchor": "UndergroundStatusValue",
+      "description": "Underground Status Codelist\r\nCodelist of underground status, e.g. Underground vs. Surface, Utility assets which are not fully buried may still be represented in this model so as to provide important information and constraints on underground utility infrastructure.",
+      "type": "string",
+      "format": "uri"
+    },
+    "UnidentifiedBuriedObject": {
+      "$anchor": "UnidentifiedBuriedObject",
+      "allOf": [
+        {
+          "$ref": "#/$defs/Structure"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "colourDescription": {
+                  "type": "string"
+                },
+                "componentTypeDescription": {
+                  "type": "string"
+                },
+                "estimatedDepth": {
+                  "type": "number"
+                },
+                "estimatedUtilityType": {
+                  "$ref": "#/$defs/UtilityTypeValue"
+                },
+                "materialDescription": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "UtilitySubTypeValue": {
+      "$anchor": "UtilitySubTypeValue",
+      "description": "Utility Subtype Codelist\r\nCodelist of utility subtypes that classify utilities at a secondary level, such as surface water vs combined sewer.",
+      "type": "string",
+      "format": "uri"
+    },
+    "UtilityTypeValue": {
+      "$anchor": "UtilityTypeValue",
+      "description": "Utility Type Codelist\r\nCodelist of utility types for MUDDIObjects. Redundant with utility-specific derived feature types, but allows generic or hybrid asset information to be represented, or new utility types to be added without changing the model.",
+      "type": "string",
+      "format": "uri"
+    },
+    "WidthType": {
+      "$anchor": "WidthType",
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "number"
+        },
+        "unitOfMeasure": {
+          "$ref": "#/$defs/MeasurementUnitsValue"
+        }
+      },
+      "required": [
+        "unitOfMeasure",
+        "width"
+      ]
+    }
+  }
+}

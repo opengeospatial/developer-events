@@ -1,0 +1,601 @@
+<!DOCTYPE HTML><html xmlns:r="http://www.interactive-instruments.de/ShapeChange/Result">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ShapeChange result</title>
+      <style type="text/css">
+body
+{
+background-color:#f4f6fe;
+}
+h1
+{
+font-family:Arial, Helvetica, sans-serif;
+font-size:24px;
+color:#151B8D;
+text-align:center;
+}
+h2, h3, h4
+{
+font-family:Arial, Helvetica, sans-serif;
+color:#151B8D;
+text-align:center;
+}
+a:link 
+{
+color:#325595;
+text-decoration:none;
+border-bottom:1px dotted; 
+outline: none;
+}
+a:hover
+{
+border-bottom:1px solid;
+color:#325595;
+}
+p, li
+{
+font-family:Arial, Helvetica, sans-serif;
+font-size:14px;
+margin-top: 0px;
+margin-bottom: 4px;
+}
+.small
+{
+font-size:10px;
+}
+table
+{
+font-family:Arial, Helvetica, sans-serif;
+border-style:none;
+border-collapse:collapse;
+border:0px;
+padding:0px;
+margin-left: auto;
+margin-right: auto;
+}
+tr
+{
+vertical-align:top;
+}
+td
+{
+border:1px solid #98bf21;
+padding:5px 20px 5px 20px;
+}
+</style><script type="text/javascript" language="JavaScript">
+function toggleMe(a)
+{
+var list = document.getElementsByClassName(a);
+
+if(!list)return true;
+
+for (var i=0; i<list.length;i++) {
+  if(list[i].style.display=="none")
+  {
+  list[i].style.display="table-row"
+  }
+  else
+  {
+  list[i].style.display="none"
+  }
+}
+
+return true;
+}
+</script></head>
+   <body>
+      <h1>ShapeChange result</h1>
+      <table>
+         <tr>
+            <td>
+               <p>Result:</p>
+            </td>
+            <td>
+               <p>Conversion Completed</p>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>Start time:</p>
+            </td>
+            <td>
+               <p>Wed Oct 25 07:54:26 CEST 2023</p>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>End time:</p>
+            </td>
+            <td>
+               <p>Wed Oct 25 07:55:08 CEST 2023</p>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>Configuration file:</p>
+            </td>
+            <td>
+               <p>sc_config.xml</p>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>ShapeChange version:</p>
+            </td>
+            <td>
+               <p>2.13.1-SNAPSHOT</p>
+            </td>
+         </tr>
+      </table><a name="messages">
+         <h2>Messages</h2></a><div id="menu">
+         <p align="center">Click on the following buttons to toggle log messages of the according category.</p>
+         <table>
+            <tbody>
+               <tr>
+                  <th>Process Flow</th>
+                  <th>Process Execution</th>
+               </tr>
+               <tr>
+                  <td><a onclick="return toggleMe('ProcessFlowDebug')" href="javascript:void(0)"><img src="http://shapechange.net/resources/images/open.gif" width="10" height="10" border="0" alt=""> Debug</a></td>
+                  <td><a onclick="return toggleMe('Debug')" href="javascript:void(0)"><img src="http://shapechange.net/resources/images/open.gif" width="10" height="10" border="0" alt=""> Debug</a></td>
+               </tr>
+               <tr>
+                  <td><a onclick="return toggleMe('ProcessFlowInfo')" href="javascript:void(0)"><img src="http://shapechange.net/resources/images/open.gif" width="10" height="10" border="0" alt=""> Info</a></td>
+                  <td><a onclick="return toggleMe('Info')" href="javascript:void(0)"><img src="http://shapechange.net/resources/images/open.gif" width="10" height="10" border="0" alt=""> Info</a></td>
+               </tr>
+               <tr>
+                  <td><a onclick="return toggleMe('ProcessFlowWarning')" href="javascript:void(0)"><img src="http://shapechange.net/resources/images/open.gif" width="10" height="10" border="0" alt=""> Warning</a></td>
+                  <td><a onclick="return toggleMe('Warning')" href="javascript:void(0)"><img src="http://shapechange.net/resources/images/open.gif" width="10" height="10" border="0" alt=""> Warning</a></td>
+               </tr>
+               <tr>
+                  <td><a onclick="return toggleMe('ProcessFlowError')" href="javascript:void(0)"><img src="http://shapechange.net/resources/images/open.gif" width="10" height="10" border="0" alt=""> Error</a></td>
+                  <td><a onclick="return toggleMe('Error')" href="javascript:void(0)"><img src="http://shapechange.net/resources/images/open.gif" width="10" height="10" border="0" alt=""> Error</a></td>
+               </tr>
+               <tr>
+                  <td><a onclick="return toggleMe('ProcessFlowFatalError')" href="javascript:void(0)"><img src="http://shapechange.net/resources/images/open.gif" width="10" height="10" border="0" alt=""> Fatal Error</a></td>
+                  <td><a onclick="return toggleMe('FatalError')" href="javascript:void(0)"><img src="http://shapechange.net/resources/images/open.gif" width="10" height="10" border="0" alt=""> Fatal Error</a></td>
+               </tr>
+            </tbody>
+         </table><br></div>
+      <table border="0">
+         <tr>
+            <th>
+               <p>Severity</p>
+            </th>
+            <th>
+               <p>Message</p>
+            </th>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>---------- Semantic validation of ShapeChange configuration: START ----------</p>
+            </td>
+         </tr>
+         <tr class="Info" style="display:table-row">
+            <td>
+               <p>Info</p>
+            </td>
+            <td>
+               <p>Validating input parameters.</p>
+            </td>
+         </tr>
+         <tr class="Info" style="display:table-row">
+            <td>
+               <p>Info</p>
+            </td>
+            <td>
+               <p>Validation of input parameters completed.</p>
+            </td>
+         </tr>
+         <tr class="Info" style="display:table-row">
+            <td>
+               <p>Info</p>
+            </td>
+            <td>
+               <p>Validating log parameters.</p>
+            </td>
+         </tr>
+         <tr class="Info" style="display:table-row">
+            <td>
+               <p>Info</p>
+            </td>
+            <td>
+               <p>Validation of log parameters completed.</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>--- Validating transformer with @id 'IDENTITY' ...</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>--- Validating transformer with @id 'TAGGED_VALUES' ...</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>--- Validating target with @class 'de.interactive_instruments.ShapeChange.Target.XmlSchema.XmlSchema'
+                  and @inputs 'TAGGED_VALUES' ...</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>--- Validating target with @class 'de.interactive_instruments.ShapeChange.Target.JSON.JsonSchemaTarget'
+                  and @inputs 'TAGGED_VALUES' ...</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>--- Validating target with @class 'de.interactive_instruments.ShapeChange.Target.FeatureCatalogue.FeatureCatalogue'
+                  and @inputs 'IDENTITY' ...</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>--- Validating target with @class 'de.interactive_instruments.ShapeChange.Target.ModelExport.ModelExport'
+                  and @inputs 'IDENTITY TAGGED_VALUES' ...</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>---------- Semantic validation of ShapeChange configuration: COMPLETE ----------</p>
+            </td>
+         </tr>
+         <tr class="Info" style="display:table-row">
+            <td>
+               <p>Info</p>
+            </td>
+            <td>
+               <p>Connecting to C:\REPOSITORIES\OGC\GitLab\muddi-swg\shapechange\..\logical_model\MUDDI_LM_ii.eap</p>
+            </td>
+         </tr>
+         <tr class="Info" style="display:table-row">
+            <td>
+               <p>Info</p>
+            </td>
+            <td>
+               <p>Connected to C:\REPOSITORIES\OGC\GitLab\muddi-swg\shapechange\..\logical_model\MUDDI_LM_ii.eap</p>
+            </td>
+         </tr>
+         <tr class="Info" style="display:table-row">
+            <td>
+               <p>Info</p>
+            </td>
+            <td>
+               <p>Starting reading C:\REPOSITORIES\OGC\GitLab\muddi-swg\shapechange\..\logical_model\MUDDI_LM_ii.eap</p>
+            </td>
+         </tr>
+         <tr class="Info" style="display:table-row">
+            <td>
+               <p>Info</p>
+            </td>
+            <td>
+               <p>Finished reading C:\REPOSITORIES\OGC\GitLab\muddi-swg\shapechange\..\logical_model\MUDDI_LM_ii.eap</p>
+            </td>
+         </tr>
+         <tr class="Warning" style="display:table-row">
+            <td>
+               <p>Warning</p>
+            </td>
+            <td>
+               <p>Restriction of property 'measurementUnits' in class 'MUDDIAsset' from supertype 'MUDDIObject'.</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Now processing transformation 'IDENTITY' for input ID: 'INPUT'.</p>
+            </td>
+         </tr>
+         <tr class="Warning" style="display:table-row">
+            <td>
+               <p>Warning</p>
+            </td>
+            <td>
+               <p>The multiplicity value of 'dimension' is neither a number nor a known string. '*'
+                  is used instead.</p>
+               <p><small>Context: Class 'Model::ISO 19107 Spatial schema::ISO 19107 Edition 2::Coordinates::Coordinate
+                     Data Types::Projection'</small></p>
+            </td>
+         </tr>
+         <tr class="Warning" style="display:table-row">
+            <td>
+               <p>Warning</p>
+            </td>
+            <td>
+               <p>The multiplicity value of 'coordinateDimension' is neither a number nor a known string.
+                  '*' is used instead.</p>
+               <p><small>Context: Class 'Model::ISO 19107 Spatial schema::ISO 19107 Edition 2::Curves::Polynomials::PolynomialArcData'</small></p>
+            </td>
+         </tr>
+         <tr class="Warning" style="display:table-row">
+            <td>
+               <p>Warning</p>
+            </td>
+            <td>
+               <p>The multiplicity value of 'degree-2' is neither a number nor a known string. '*' is
+                  used instead.</p>
+               <p><small>Context: Class 'Model::ISO 19107 Spatial schema::ISO 19107 Edition 2::Curves::Splines::PolynomialSpline'</small></p>
+            </td>
+         </tr>
+         <tr class="Warning" style="display:table-row">
+            <td>
+               <p>Warning</p>
+            </td>
+            <td>
+               <p>The multiplicity value of 'rows*columns*files' is neither a number nor a known string.
+                  '*' is used instead.</p>
+               <p><small>Context: Class 'Model::ISO 19107 Spatial schema::ISO 19107 Edition 2::Solids::Gridded
+                     Solid::ParametricCurveSolid'</small></p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>---------- TransformationManager postprocessing: validating constraints ----------</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Performed transformation for transformer ID 'IDENTITY' for input ID: 'INPUT'.
+                  -------------------------------------------------</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Application schema found, package name: 'Core Logical Model', target namespace: 'http://SomeNameSpace.com'</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Now processing target 'Feature Catalogue' for input 'IDENTITY'.</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Executed target class 'de.interactive_instruments.ShapeChange.Target.FeatureCatalogue.FeatureCatalogue'
+                  for input ID: 'IDENTITY'.
+                  -------------------------------------------------</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Application schema found, package name: 'Core Logical Model', target namespace: 'http://SomeNameSpace.com'</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Now processing target 'Model Export' for input 'IDENTITY'.</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Executed target class 'de.interactive_instruments.ShapeChange.Target.ModelExport.ModelExport'
+                  for input ID: 'IDENTITY'.
+                  -------------------------------------------------</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Now processing transformation 'TAGGED_VALUES' for input ID: 'IDENTITY'.</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>---------- TransformationManager postprocessing: validating constraints ----------</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Performed transformation for transformer ID 'TAGGED_VALUES' for input ID: 'IDENTITY'.
+                  -------------------------------------------------</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Application schema found, package name: 'Core Logical Model', target namespace: 'http://SomeNameSpace.com'</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Now processing target 'XML Schema' for input 'TAGGED_VALUES'.</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Executed target class 'de.interactive_instruments.ShapeChange.Target.XmlSchema.XmlSchema'
+                  for input ID: 'TAGGED_VALUES'.
+                  -------------------------------------------------</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Application schema found, package name: 'Core Logical Model', target namespace: 'http://SomeNameSpace.com'</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Now processing target 'JSON Schema' for input 'TAGGED_VALUES'.</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Executed target class 'de.interactive_instruments.ShapeChange.Target.JSON.JsonSchemaTarget'
+                  for input ID: 'TAGGED_VALUES'.
+                  -------------------------------------------------</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Application schema found, package name: 'Core Logical Model', target namespace: 'http://SomeNameSpace.com'</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Now processing target 'Model Export' for input 'TAGGED_VALUES'.</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Executed target class 'de.interactive_instruments.ShapeChange.Target.ModelExport.ModelExport'
+                  for input ID: 'TAGGED_VALUES'.
+                  -------------------------------------------------</p>
+            </td>
+         </tr>
+         <tr class="ProcessFlowInfo" style="display:table-row">
+            <td>
+               <p>ProcessFlowInfo</p>
+            </td>
+            <td>
+               <p>Executed deferred output write for target class 'de.interactive_instruments.ShapeChange.Target.FeatureCatalogue.FeatureCatalogue'
+                  for input ID: 'IDENTITY'.</p>
+            </td>
+         </tr>
+      </table><a name="results">
+         <h2>Results</h2></a><table border="0">
+         <tr>
+            <th>
+               <p>Target</p>
+            </th>
+            <th>
+               <p>Scope</p>
+            </th>
+            <th>
+               <p>File</p>
+            </th>
+         </tr>
+         <tr>
+            <td>
+               <p>Feature Catalogue</p>
+            </td>
+            <td>
+               <p></p>
+            </td>
+            <td>
+               <p><a href="file:/C:/REPOSITORIES/OGC/GitLab/muddi-swg/shapechange/./results/featureCatalogue/IDENTITY/muddi/index.html">index.html</a></p>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>JSON Schema</p>
+            </td>
+            <td>
+               <p></p>
+            </td>
+            <td>
+               <p><a href="file:/C:/REPOSITORIES/OGC/GitLab/muddi-swg/shapechange/./results/jsonfg_schema/TAGGED_VALUES/abc/core.json">core.json</a></p>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>JSON Schema</p>
+            </td>
+            <td>
+               <p></p>
+            </td>
+            <td>
+               <p><a href="file:/C:/REPOSITORIES/OGC/GitLab/muddi-swg/shapechange/./results/jsonfg_schema/TAGGED_VALUES/abc/featurecollection.json">featurecollection.json</a></p>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>XML Schema</p>
+            </td>
+            <td>
+               <p>http://SomeNameSpace.com</p>
+            </td>
+            <td>
+               <p><a href="file:/C:/REPOSITORIES/OGC/GitLab/muddi-swg/shapechange/./results/xsd/TAGGED_VALUES/ApplicationSchemaName.xsd">ApplicationSchemaName.xsd</a></p>
+            </td>
+         </tr>
+      </table>
+      <hr>
+      <p align="center"><small>This report was generated by <a href="http://shapechange.net">ShapeChange</a></small></p>
+   </body>
+</html>

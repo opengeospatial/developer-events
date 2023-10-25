@@ -1,0 +1,5 @@
+== MUDDI feature catalogue and schemas
+
+The contents of this folder were created using ShapeChange.
+
+version-date: 2023-10-25

@@ -1,0 +1,1007 @@
+{
+  "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://muddi.example.org/featurecollection.json",
+  "$defs": {
+    "FeatureCollection": {
+      "$anchor": "FeatureCollection",
+      "allOf": [
+        {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/featurecollection.json"
+        },
+        {
+          "if": {
+            "required": [
+              "featureType"
+            ]
+          },
+          "then": {
+            "allOf": [
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "Access"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Access"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "Container"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Container"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "MUDDIAsset"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/MUDDIAsset"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "MUDDIEnvironmentUnit"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/MUDDIEnvironmentUnit"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "MUDDIEvent"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/MUDDIEvent"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "MUDDIObject"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/MUDDIObject"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "MUDDISpace"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/MUDDISpace"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "Network"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Network"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "NetworkAsset"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/NetworkAsset"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "NetworkConveyance"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/NetworkConveyance"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "NetworkConveyanceLink"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/NetworkConveyanceLink"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "NetworkConveyanceNode"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/NetworkConveyanceNode"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "NonUtilityObject"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/NonUtilityObject"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "Observation"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Observation"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "PhysicalProtection"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/PhysicalProtection"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "PlanningArea"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/PlanningArea"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "Sensor"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Sensor"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "ServiceArea"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/ServiceArea"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "Site"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Site"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "Structure"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Structure"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "Support"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Support"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "featureType"
+                  ],
+                  "properties": {
+                    "featureType": {
+                      "const": "UnidentifiedBuriedObject"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/UnidentifiedBuriedObject"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "not": {
+                    "required": [
+                      "featureType"
+                    ],
+                    "properties": {
+                      "featureType": {
+                        "enum": [
+                          "Access",
+                          "Container",
+                          "MUDDIAsset",
+                          "MUDDIEnvironmentUnit",
+                          "MUDDIEvent",
+                          "MUDDIObject",
+                          "MUDDISpace",
+                          "Network",
+                          "NetworkAsset",
+                          "NetworkConveyance",
+                          "NetworkConveyanceLink",
+                          "NetworkConveyanceNode",
+                          "NonUtilityObject",
+                          "Observation",
+                          "PhysicalProtection",
+                          "PlanningArea",
+                          "Sensor",
+                          "ServiceArea",
+                          "Site",
+                          "Structure",
+                          "Support",
+                          "UnidentifiedBuriedObject"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "features"
+                  ],
+                  "properties": {
+                    "features": {
+                      "type": "array",
+                      "items": false
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "else": {
+            "required": [
+              "features"
+            ],
+            "properties": {
+              "features": {
+                "type": "array",
+                "items": {
+                  "allOf": [
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "Access"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Access"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "Container"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Container"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "MUDDIAsset"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/MUDDIAsset"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "MUDDIEnvironmentUnit"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/MUDDIEnvironmentUnit"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "MUDDIEvent"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/MUDDIEvent"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "MUDDIObject"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/MUDDIObject"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "MUDDISpace"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/MUDDISpace"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "Network"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Network"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "NetworkAsset"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/NetworkAsset"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "NetworkConveyance"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/NetworkConveyance"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "NetworkConveyanceLink"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/NetworkConveyanceLink"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "NetworkConveyanceNode"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/NetworkConveyanceNode"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "NonUtilityObject"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/NonUtilityObject"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "Observation"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Observation"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "PhysicalProtection"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/PhysicalProtection"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "PlanningArea"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/PlanningArea"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "Sensor"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Sensor"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "ServiceArea"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/ServiceArea"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "Site"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Site"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "Structure"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Structure"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "Support"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/Support"
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "featureType"
+                        ],
+                        "properties": {
+                          "featureType": {
+                            "const": "UnidentifiedBuriedObject"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "https://muddi.example.org/core.json#/$defs/UnidentifiedBuriedObject"
+                      }
+                    },
+                    {
+                      "if": {
+                        "not": {
+                          "required": [
+                            "featureType"
+                          ],
+                          "properties": {
+                            "featureType": {
+                              "enum": [
+                                "Access",
+                                "Container",
+                                "MUDDIAsset",
+                                "MUDDIEnvironmentUnit",
+                                "MUDDIEvent",
+                                "MUDDIObject",
+                                "MUDDISpace",
+                                "Network",
+                                "NetworkAsset",
+                                "NetworkConveyance",
+                                "NetworkConveyanceLink",
+                                "NetworkConveyanceNode",
+                                "NonUtilityObject",
+                                "Observation",
+                                "PhysicalProtection",
+                                "PlanningArea",
+                                "Sensor",
+                                "ServiceArea",
+                                "Site",
+                                "Structure",
+                                "Support",
+                                "UnidentifiedBuriedObject"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "then": false
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "$ref": "#/$defs/FeatureCollection"
+}

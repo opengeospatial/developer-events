@@ -1,0 +1,189 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><!--Created by ShapeChange on 2023-10-25T07:55:07.200063+02:00-->
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title> (MUDDI Logical Model)</title>
+      <link href="../stylesheet.css" rel="stylesheet" title="Style" type="text/css">
+   </head>
+   <body>
+      <div id="header"></div>
+      <div id="main">
+         <p>
+            <h1>Application schema: Core Logical Model</h1>
+         </p>
+         <p>
+            <table>
+               <tr>
+                  <td>
+                     <p>
+                        <h2>Definition:</h2>
+                     </p>
+                     <p class="indent">This pattern provides a starting point for modeling a GML Application Schema which is a specialized xml schema that uses the Geographic Markup Language to model Features to provide the basis for interoperability within a community of interest.</p>
+                  </td>
+               </tr>
+            </table>
+         </p>
+         <p class="indent">Sub-package: <a href="../Core Logical Model/Codelist Register - MUDDI Core/package-summary.html">Codelist Register - MUDDI Core</a></p>
+         <tr>
+            <p>
+               <h2>Relevant types:</h2>
+            </p>
+            <table class="colored">
+               <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Definition</th>
+                  <th>Description</th>
+               </tr>
+               <tr class="odd">
+                  <td><a href="../Core Logical Model/Access.html">Access</a></td>
+                  <td>Feature Type</td>
+                  <td>NetworkObject: <<FeatureType>> Asset that has a role in the conveyance of a commodity in a utility network.</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="even">
+                  <td><a href="../Core Logical Model/Container.html">Container</a></td>
+                  <td>Feature Type</td>
+                  <td>ContainerObject: <<FeatureType>> Asset that has a role in the conveyance of a commodity in a utility network.</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="odd">
+                  <td><a href="../Core Logical Model/MUDDIAsset.html">MUDDIAsset</a></td>
+                  <td>Feature Type</td>
+                  <td>MUDDIAsset: <<FeatureType>> The parent class of built environment infrastructure that can be located, owned, operated, oriented, and material. Its mandatory and optional attributes are inherited by all more specialized classes in the MUDDI core model and derived NUAR Harmonized Model.  Mandatory attributes: assetID assetOwner businessContact emergencyContact horizontalCRS systemID systemLoadDate</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="even">
+                  <td><a href="../Core Logical Model/MUDDIEnvironmentUnit.html">MUDDIEnvironmentUnit</a></td>
+                  <td>Feature Type</td>
+                  <td align="center">-</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="odd">
+                  <td><a href="../Core Logical Model/MUDDIEvent.html">MUDDIEvent</a></td>
+                  <td>Feature Type</td>
+                  <td align="center">-</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="even">
+                  <td><a href="../Core Logical Model/MUDDIObject.html">MUDDIObject</a></td>
+                  <td>Feature Type</td>
+                  <td>MUDDIObject: <<FeatureType>> The parent class of underground infrastructure, space, event, environmental unit, or other underground +/- surface features that are identified, located, typed, and about which data is maintained. Its mandatory and optional attributes are inherited by all more specialized classes in the MUDDI core model and derived NUAR Harmonized Model.  Mandatory attributes: dataProvider businessContact horizontalCRS systemID systemLoadDate</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="odd">
+                  <td><a href="../Core Logical Model/MUDDISpace.html">MUDDISpace</a></td>
+                  <td>Feature Type</td>
+                  <td align="center">-</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="even">
+                  <td><a href="../Core Logical Model/Network.html">Network</a></td>
+                  <td>Feature Type</td>
+                  <td>Network: <<FeatureType>> MUDDIObject that represents a whole or partial infrastructure network</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="odd">
+                  <td><a href="../Core Logical Model/NetworkAccessory.html"><i>NetworkAccessory</i></a></td>
+                  <td>Feature Type</td>
+                  <td>NetworkAccessoryObject: <<FeatureType>> Asset that has a role in the support, containment, access or physical protection for a conveyance object in a utility network.</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="even">
+                  <td><a href="../Core Logical Model/NetworkAsset.html">NetworkAsset</a></td>
+                  <td>Feature Type</td>
+                  <td>NetworkObject: <<FeatureType>> Asset that has a role in a utility network.</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="odd">
+                  <td><a href="../Core Logical Model/NetworkConveyance.html">NetworkConveyance</a></td>
+                  <td>Feature Type</td>
+                  <td>NetworkConveyanceObject: <<FeatureType>> Asset that has a role in the conveyance of a commodity in a utility network.</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="even">
+                  <td><a href="../Core Logical Model/NetworkConveyanceLink.html">NetworkConveyanceLink</a></td>
+                  <td>Feature Type</td>
+                  <td>NetworkConveyanceLink: <<FeatureType>> Linear utility feature that serves as a link or edge in a network graph. (ASCE "Segment")</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="odd">
+                  <td><a href="../Core Logical Model/NetworkConveyanceNode.html">NetworkConveyanceNode</a></td>
+                  <td>Feature Type</td>
+                  <td>NetworkLink: <<FeatureType>> Linear utility feature that serves as a link or edge in a network graph. (ASCE "Segment")</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="even">
+                  <td><a href="../Core Logical Model/NonUtilityObject.html">NonUtilityObject</a></td>
+                  <td>Feature Type</td>
+                  <td>NonUtilityObject <<FeatureType>> An underground object which is not part of a utility network, but which may have an impact on planning or excavation activities.</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="odd">
+                  <td><a href="../Core Logical Model/Observation.html">Observation</a></td>
+                  <td>Feature Type</td>
+                  <td align="center">-</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="even">
+                  <td><a href="../Core Logical Model/PhysicalProtection.html">PhysicalProtection</a></td>
+                  <td>Feature Type</td>
+                  <td>NetworkObject: <<FeatureType>> Asset that has a role in the conveyance of a commodity in a utility network.</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="odd">
+                  <td><a href="../Core Logical Model/PlanningArea.html">PlanningArea</a></td>
+                  <td>Feature Type</td>
+                  <td>PlanningArea <<FeatureType>> Defined area with characteristics relevant to excavation planning.</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="even">
+                  <td><a href="../Core Logical Model/Sensor.html">Sensor</a></td>
+                  <td>Feature Type</td>
+                  <td>NetworkObject: <<FeatureType>> Asset that has a role in the conveyance of a commodity in a utility network.</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="odd">
+                  <td><a href="../Core Logical Model/ServiceArea.html">ServiceArea</a></td>
+                  <td>Feature Type</td>
+                  <td>NetworkArea: <<FeatureType>> MUDDIObject that represents a whole or partial infrastructure network</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="even">
+                  <td><a href="../Core Logical Model/Site.html">Site</a></td>
+                  <td>Feature Type</td>
+                  <td>NetworkSite: <<FeatureType>> MUDDIObject that represents a whole or partial infrastructure network</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="odd">
+                  <td><a href="../Core Logical Model/Structure.html">Structure</a></td>
+                  <td>Feature Type</td>
+                  <td>NetworkObject: <<FeatureType>> Asset that has a role in a utility network.</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="even">
+                  <td><a href="../Core Logical Model/Support.html">Support</a></td>
+                  <td>Feature Type</td>
+                  <td>NetworkObject: <<FeatureType>> Asset that has a role in the conveyance of a commodity in a utility network.</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="odd">
+                  <td><a href="../Core Logical Model/UnidentifiedBuriedObject.html">UnidentifiedBuriedObject</a></td>
+                  <td>Feature Type</td>
+                  <td align="center">-</td>
+                  <td align="center">-</td>
+               </tr>
+               <tr class="even">
+                  <td><a href="../Core Logical Model/TermMapping.html">TermMapping</a></td>
+                  <td>Object Type</td>
+                  <td>Required table to map from the MUDDI Logical Model standard terms to custom entity names in a given logical model or physical schema.</td>
+                  <td align="center">-</td>
+               </tr>
+            </table>
+         </tr>
+      </div>
+      <div></div>
+      <div id="footer"></div>
+   </body>
+</html>
