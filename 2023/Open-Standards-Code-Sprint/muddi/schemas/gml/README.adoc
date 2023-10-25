@@ -1,1 +1,0 @@
-The GML Schema goes into this folder.
