@@ -1,0 +1,1539 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><!--Created by ShapeChange on 2023-10-25T07:55:07.200063+02:00-->
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title> (MUDDI Logical Model)</title>
+      <link href="../stylesheet.css" rel="stylesheet" title="Style" type="text/css"><script language="javascript" type="text/javascript">function toggle(elementToShowHideById, elementToSwitchTextIn) {
+                            var ele = document.getElementById(elementToShowHideById);
+                            var text = document.getElementById(elementToSwitchTextIn);
+                            if(ele.style.display == "block") {
+                                ele.style.display = "none";
+                                text.innerHTML = "See listed values";
+                            }
+                            else {
+                                ele.style.display = "block";
+                                text.innerHTML = "Hide listed values";
+                            }
+                       }</script><noscript>
+         <div>JavaScript is disabled on your browser.</div></noscript></head>
+   <body>
+      <h1 id="top">Feature type: MUDDISpace</h1>
+      <table>
+         <tr>
+            <td>
+               <table>
+                  <tr>
+                     <td>
+                        <p>
+                           <h2>Package:</h2>
+                        </p>
+                        <p class="indent"><a href="../Core Logical Model/package-summary.html">Core Logical Model</a></p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p>
+                           <h2>Subtype of:</h2>
+                        </p>
+                        <p class="indent"><a href="../Core Logical Model/MUDDIObject.html">MUDDIObject</a></p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p>
+                           <h2>Supertype of:</h2>
+                        </p>
+                        <p class="indent"><a href="../Core Logical Model/PlanningArea.html">PlanningArea</a></p>
+                        <p class="indent"><a href="../Core Logical Model/ServiceArea.html">ServiceArea</a></p>
+                        <p class="indent"><a href="../Core Logical Model/Site.html">Site</a></p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p>
+                           <h2>Type:</h2>
+                        </p>
+                        <p class="indent">Feature type</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <div>
+                  <p>
+                     <h2>Overview of characteristics:</h2>
+                  </p>
+               </div><br><div class="indent">
+                  <table class="colored">
+                     <caption>Attributes and association roles</caption>
+                     <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Multiplicity</th>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_97">businessContact</a></td>
+                        <td>CharacterString</td>
+                        <td>1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_79">certification</a></td>
+                        <td>CharacterString</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_95">dataOwner</a></td>
+                        <td>CharacterString</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_92">dataOwnerUniqueID</a></td>
+                        <td>CharacterString</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_80">dataProviderUniqueID</a></td>
+                        <td>CharacterString</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_93">dataProvider</a></td>
+                        <td>CharacterString</td>
+                        <td>1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_81">dataSensitivityLevel</a></td>
+                        <td>CharacterString</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_82">dateDataCollected</a></td>
+                        <td>Date</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_94">dateOfLastStatusChange</a></td>
+                        <td>Date</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_98">description</a></td>
+                        <td>CharacterString</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_83">featureType</a></td>
+                        <td>FeatureTypeValue</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_96">guidance</a></td>
+                        <td><a href="../Core Logical Model/Codelist Register - MUDDI Core/GuidanceType.html">GuidanceType</a></td>
+                        <td>0..*</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_84">horizontalCRS</a></td>
+                        <td>CharacterString</td>
+                        <td>1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_85">measurementUnits</a></td>
+                        <td>MeasurementUnitsValue</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_86">operationalStatus</a></td>
+                        <td>OperationalStatusValue</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_87">originalDateDataCollected</a></td>
+                        <td>Date</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_88">systemID</a></td>
+                        <td>CharacterString</td>
+                        <td>1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_89">systemLoadDate</a></td>
+                        <td>Date</td>
+                        <td>1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_90">version</a></td>
+                        <td>CharacterString</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_100">objectID</a></td>
+                        <td>CharacterString</td>
+                        <td>1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_91">verticalCRS</a></td>
+                        <td>CharacterString</td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A9_101">recordID</a></td>
+                        <td>CharacterString</td>
+                        <td>1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_ASas22">encloses</a></td>
+                        <td><a href="../Core Logical Model/MUDDIObject.html">MUDDIObject</a></td>
+                        <td>0..1</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_ATas22">enclosedBy</a></td>
+                        <td><a href="../Core Logical Model/MUDDIObject.html">MUDDIObject</a></td>
+                        <td>0..*</td>
+                     </tr>
+                     <tr class="odd">
+                        <td><a href="../Core Logical Model/MUDDISpace.html#_A22_436">geometry</a></td>
+                        <td>GM_Surface</td>
+                        <td>1</td>
+                     </tr>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_97">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>businessContact</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>businessContact:</p>
+                        <p>Mandatory</p>
+                        <p>Contact information for the asset responsible party</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_79">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>certification</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>certification:</p>
+                        <p>Optional</p>
+                        <p>Name and credentials of the party (if any) that certified the data as meeting Positional Accuracy requirements as described in Table 1 and attribute data requirements as agreed for data exchange purposes. (ASCE_AsBuilt).</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_95">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>dataOwner</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>NEW</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_92">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>dataOwnerUniqueID</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_80">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>dataProviderUniqueID</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>dataAgentAssetID:</p>
+                        <p>Optional</p>
+                        <p></p>
+                        <p>This an identifier assigned uniquely by a data agent acting as an intermediary between the asset owner and the platform.</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_93">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>dataProvider</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_81">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>dataSensitivityLevel</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>dataSensitivityLevel:</p>
+                        <p>Optional</p>
+                        <p>Indicator of the sensitivity level of the data recorded for a utility feature. If the data are considered sensitive security information (SSI), the data must be labeled on any output produced and handled appropriately (ASCE As-built).</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_82">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>dateDataCollected</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>dateDataCollected:</p>
+                        <p>Optional</p>
+                        <p>Date when a utility feature was last surveyed in the field. If this survey was carried out according to the PAS128 standard, the Quality Level assigned to the feature should be recorded in the qualityLevel field. If the survey on this date was not carried out according to PAS128, the qualityLevel field must be left unpopulated.</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>Date</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_94">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>dateOfLastStatusChange</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>NEW</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>Date</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_98">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>description</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>description (NEW)</p>
+                        <p></p>
+                        <p>Optional</p>
+                        <p></p>
+                        <p>Descriptive text for the feature.</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_83">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>featureType</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>featureType:</p>
+                        <p>Optional</p>
+                        <p>Category of utility feature based on feature function and configuration. Function refers to the main purpose of the utility feature. Configuration refers to geometric and structural characteristics of the utility feature. Depending on the implementation, feature differentiation may be at the feature class level (e.g., separate feature classes for devices, access points, support structures, and so on) or by attribute. Because of the small number of potential feature types, feature differentiation at the feature class level is common. Values for featureType are defined in the <FeatureTypeValue> codelist</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>FeatureTypeValue (code list)</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Values: </p>
+                     </td>
+                     <td border="0"><a id="_A9_83_listedValueLink" href="javascript:toggle('_A9_83_listedValueContent','_A9_83_listedValueLink');">See listed values</a><div id="_A9_83_listedValueContent" style="display: none">
+                           <table class="colored">
+                              <tr>
+                                 <th>Value Name</th>
+                                 <th>Documentation</th>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Access Object</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Container Object</p>
+                                 </td>
+                                 <td>
+                                    <p><b>ContainintStructure</b></p>
+                                 </td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Physical Protection Object</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Network</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Network Accessory Object</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Network Area</p>
+                                 </td>
+                                 <td>
+                                    <p><b>Secured Area</b></p>
+                                 </td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Network Description Object</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Network Link</p>
+                                 </td>
+                                 <td>
+                                    <p><b>Segment</b></p>
+                                 </td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Network Node</p>
+                                 </td>
+                                 <td>
+                                    <p><b>Device / AccessPoint</b></p>
+                                 </td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Network Object</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Network Site</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Planning Area</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Support Object</p>
+                                 </td>
+                                 <td>
+                                    <p><b>Support Structure</b></p>
+                                 </td>
+                              </tr>
+                           </table>
+                        </div>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_96">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>guidance</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..*</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p><a href="../Core Logical Model/Codelist Register - MUDDI Core/GuidanceType.html">GuidanceType</a></p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_84">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>horizontalCRS</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>horizontalCRS:</p>
+                        <p>Mandatory</p>
+                        <p>Coordinate system, datum, and epoch date (if applicable) associated with the X and Y coordinates. (ASCE As-built)</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_85">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>measurementUnits</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>measurementUnits:</p>
+                        <p>Optional</p>
+                        <p>Units used to express height, width, length, and wall thickness. For data exchange purposes, the units of measurement are the same for all dimensions. (ASCE). Values for measurementUnits are defined in the <MeasurementUnitsValue> codelist</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>MeasurementUnitsValue (code list)</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Values: </p>
+                     </td>
+                     <td border="0"><a id="_A9_85_listedValueLink" href="javascript:toggle('_A9_85_listedValueContent','_A9_85_listedValueLink');">See listed values</a><div id="_A9_85_listedValueContent" style="display: none">
+                           <table class="colored">
+                              <tr>
+                                 <th>Value Name</th>
+                                 <th>Documentation</th>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>bar</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Centimetres</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Degrees Centigrade</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Degrees Fahrenheit</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Feet</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Inches</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>kV</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>mBar</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Metres</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Millimetres</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Unknown</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>V</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Yards</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Megahertz</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>DateTime_8601</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                           </table>
+                        </div>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_86">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>operationalStatus</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>operationalStatus:</p>
+                        <p>Optional</p>
+                        <p>Operational status of the utility feature. Values for operationalStatus are defined in the <OperationalStatusValue> codelist</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>OperationalStatusValue (code list)</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Values: </p>
+                     </td>
+                     <td border="0"><a id="_A9_86_listedValueLink" href="javascript:toggle('_A9_86_listedValueContent','_A9_86_listedValueLink');">See listed values</a><div id="_A9_86_listedValueContent" style="display: none">
+                           <table class="colored">
+                              <tr>
+                                 <th>Value Name</th>
+                                 <th>Documentation</th>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Abandoned</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Commissioned</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Decommissioned</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Delete Before Installation</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>In Service</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Installed</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Other</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Out Of Commission</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Pending Abandonment</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Proposed</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Pending Removal</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Removed</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Under Construction</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="even">
+                                 <td>
+                                    <p>Unfit For Service</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                              <tr class="odd">
+                                 <td>
+                                    <p>Unknown</p>
+                                 </td>
+                                 <td></td>
+                              </tr>
+                           </table>
+                        </div>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_87">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>originalDateDataCollected</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>originalDateDataCollected:</p>
+                        <p>Optional</p>
+                        <p>The date upon which this utility feature was originally captured in the source asset owner system.</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>Date</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_88">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>systemID</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>systemID:</p>
+                        <p>Mandatory</p>
+                        <p>Identifier for this data record defined by and globally unique within the system that stores the data record</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_89">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>systemLoadDate</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>systemLoadDate:</p>
+                        <p>Mandatory</p>
+                        <p>Date at which the data record for this entity was last loaded into the datastore system.</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>Date</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_90">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>version</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>version:</p>
+                        <p>Optional</p>
+                        <p>The version specifier for the present data record.</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_100">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>objectID</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_91">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>verticalCRS</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Definition: </p>
+                     </td>
+                     <td>
+                        <p>verticalCRS:</p>
+                        <p>Optional</p>
+                        <p>Datum, etc. for the Z coordinate. (ASCE) This is the absolute Z coordinate, not the depth from grade</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A9_101">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>recordID</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>CharacterString</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_ASas22">Association role: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>encloses</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p><a href="../Core Logical Model/MUDDIObject.html">MUDDIObject</a> (feature type)</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_ATas22">Association role: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>enclosedBy</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>0..*</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p><a href="../Core Logical Model/MUDDIObject.html">MUDDIObject</a> (feature type)</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p>
+                  <h2><a name="_A22_436">Attribute: </a></h2>
+               </p>
+               <p class="small"><a href="#top">back to top</a></p>
+               <table>
+                  <tr>
+                     <td>
+                        <p class="indent title">Name: </p>
+                     </td>
+                     <td>
+                        <p>geometry</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Multiplicity: </p>
+                     </td>
+                     <td>
+                        <p>1</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <p class="indent title">Value type: </p>
+                     </td>
+                     <td>
+                        <p>GM_Surface</p>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+      </table>
+      <div class="clearing"></div>
+      <div id="footer"></div>
+   </body>
+</html>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShapeChangeResult xmlns="http://www.interactive-instruments.de/ShapeChange/Result"
+                   xmlns:r="http://www.interactive-instruments.de/ShapeChange/Result"
+                   config="sc_config.xml"
+                   end="Wed Oct 25 07:55:08 CEST 2023"
+                   resultCode="0"
+                   start="Wed Oct 25 07:54:26 CEST 2023"
+                   version="2.13.1-SNAPSHOT">
+   <Messages>
+      <ProcessFlowInfo message="---------- Semantic validation of ShapeChange configuration: START ----------"/>
+      <Info message="Validating input parameters."/>
+      <Info message="Validation of input parameters completed."/>
+      <Info message="Validating log parameters."/>
+      <Info message="Validation of log parameters completed."/>
+      <ProcessFlowInfo message="--- Validating transformer with @id 'IDENTITY' ..."/>
+      <ProcessFlowInfo message="--- Validating transformer with @id 'TAGGED_VALUES' ..."/>
+      <ProcessFlowInfo message="--- Validating target with @class 'de.interactive_instruments.ShapeChange.Target.XmlSchema.XmlSchema' and @inputs 'TAGGED_VALUES' ..."/>
+      <ProcessFlowInfo message="--- Validating target with @class 'de.interactive_instruments.ShapeChange.Target.JSON.JsonSchemaTarget' and @inputs 'TAGGED_VALUES' ..."/>
+      <ProcessFlowInfo message="--- Validating target with @class 'de.interactive_instruments.ShapeChange.Target.FeatureCatalogue.FeatureCatalogue' and @inputs 'IDENTITY' ..."/>
+      <ProcessFlowInfo message="--- Validating target with @class 'de.interactive_instruments.ShapeChange.Target.ModelExport.ModelExport' and @inputs 'IDENTITY TAGGED_VALUES' ..."/>
+      <ProcessFlowInfo message="---------- Semantic validation of ShapeChange configuration: COMPLETE ----------"/>
+      <Info message="Connecting to C:\REPOSITORIES\OGC\GitLab\muddi-swg\shapechange\..\logical_model\MUDDI_LM_ii.eap"/>
+      <Info message="Connected to C:\REPOSITORIES\OGC\GitLab\muddi-swg\shapechange\..\logical_model\MUDDI_LM_ii.eap"/>
+      <Info message="Starting reading C:\REPOSITORIES\OGC\GitLab\muddi-swg\shapechange\..\logical_model\MUDDI_LM_ii.eap"/>
+      <Info message="Finished reading C:\REPOSITORIES\OGC\GitLab\muddi-swg\shapechange\..\logical_model\MUDDI_LM_ii.eap"/>
+      <Warning message="Restriction of property 'measurementUnits' in class 'MUDDIAsset' from supertype 'MUDDIObject'."/>
+      <ProcessFlowInfo message="Now processing transformation 'IDENTITY' for input ID: 'INPUT'."/>
+      <Warning message="The multiplicity value of 'dimension' is neither a number nor a known string. '*' is used instead.">
+         <Detail xmlns=""
+                 message="Context: Class 'Model::ISO 19107 Spatial schema::ISO 19107 Edition 2::Coordinates::Coordinate Data Types::Projection'"/>
+      </Warning>
+      <Warning message="The multiplicity value of 'coordinateDimension' is neither a number nor a known string. '*' is used instead.">
+         <Detail xmlns=""
+                 message="Context: Class 'Model::ISO 19107 Spatial schema::ISO 19107 Edition 2::Curves::Polynomials::PolynomialArcData'"/>
+      </Warning>
+      <Warning message="The multiplicity value of 'degree-2' is neither a number nor a known string. '*' is used instead.">
+         <Detail xmlns=""
+                 message="Context: Class 'Model::ISO 19107 Spatial schema::ISO 19107 Edition 2::Curves::Splines::PolynomialSpline'"/>
+      </Warning>
+      <Warning message="The multiplicity value of 'rows*columns*files' is neither a number nor a known string. '*' is used instead.">
+         <Detail xmlns=""
+                 message="Context: Class 'Model::ISO 19107 Spatial schema::ISO 19107 Edition 2::Solids::Gridded Solid::ParametricCurveSolid'"/>
+      </Warning>
+      <ProcessFlowInfo message="---------- TransformationManager postprocessing: validating constraints ----------"/>
+      <ProcessFlowInfo message="Performed transformation for transformer ID 'IDENTITY' for input ID: 'INPUT'.&#xA;-------------------------------------------------"/>
+      <ProcessFlowInfo message="Application schema found, package name: 'Core Logical Model', target namespace: 'http://SomeNameSpace.com'"/>
+      <ProcessFlowInfo message="Now processing target 'Feature Catalogue' for input 'IDENTITY'."/>
+      <ProcessFlowInfo message="Executed target class 'de.interactive_instruments.ShapeChange.Target.FeatureCatalogue.FeatureCatalogue' for input ID: 'IDENTITY'.&#xA;-------------------------------------------------"/>
+      <ProcessFlowInfo message="Application schema found, package name: 'Core Logical Model', target namespace: 'http://SomeNameSpace.com'"/>
+      <ProcessFlowInfo message="Now processing target 'Model Export' for input 'IDENTITY'."/>
+      <ProcessFlowInfo message="Executed target class 'de.interactive_instruments.ShapeChange.Target.ModelExport.ModelExport' for input ID: 'IDENTITY'.&#xA;-------------------------------------------------"/>
+      <ProcessFlowInfo message="Now processing transformation 'TAGGED_VALUES' for input ID: 'IDENTITY'."/>
+      <ProcessFlowInfo message="---------- TransformationManager postprocessing: validating constraints ----------"/>
+      <ProcessFlowInfo message="Performed transformation for transformer ID 'TAGGED_VALUES' for input ID: 'IDENTITY'.&#xA;-------------------------------------------------"/>
+      <ProcessFlowInfo message="Application schema found, package name: 'Core Logical Model', target namespace: 'http://SomeNameSpace.com'"/>
+      <ProcessFlowInfo message="Now processing target 'XML Schema' for input 'TAGGED_VALUES'."/>
+      <ProcessFlowInfo message="Executed target class 'de.interactive_instruments.ShapeChange.Target.XmlSchema.XmlSchema' for input ID: 'TAGGED_VALUES'.&#xA;-------------------------------------------------"/>
+      <ProcessFlowInfo message="Application schema found, package name: 'Core Logical Model', target namespace: 'http://SomeNameSpace.com'"/>
+      <ProcessFlowInfo message="Now processing target 'JSON Schema' for input 'TAGGED_VALUES'."/>
+      <ProcessFlowInfo message="Executed target class 'de.interactive_instruments.ShapeChange.Target.JSON.JsonSchemaTarget' for input ID: 'TAGGED_VALUES'.&#xA;-------------------------------------------------"/>
+      <ProcessFlowInfo message="Application schema found, package name: 'Core Logical Model', target namespace: 'http://SomeNameSpace.com'"/>
+      <ProcessFlowInfo message="Now processing target 'Model Export' for input 'TAGGED_VALUES'."/>
+      <ProcessFlowInfo message="Executed target class 'de.interactive_instruments.ShapeChange.Target.ModelExport.ModelExport' for input ID: 'TAGGED_VALUES'.&#xA;-------------------------------------------------"/>
+      <ProcessFlowInfo message="Executed deferred output write for target class 'de.interactive_instruments.ShapeChange.Target.FeatureCatalogue.FeatureCatalogue' for input ID: 'IDENTITY'."/>
+   </Messages>
+   <Results>
+      <Result href="file:/C:/REPOSITORIES/OGC/GitLab/muddi-swg/shapechange/./results/xsd/TAGGED_VALUES/ApplicationSchemaName.xsd"
+              scope="http://SomeNameSpace.com"
+              target="XML Schema">ApplicationSchemaName.xsd</Result>
+      <Result href="file:/C:/REPOSITORIES/OGC/GitLab/muddi-swg/shapechange/./results/jsonfg_schema/TAGGED_VALUES/abc/core.json"
+              target="JSON Schema">core.json</Result>
+      <Result href="file:/C:/REPOSITORIES/OGC/GitLab/muddi-swg/shapechange/./results/jsonfg_schema/TAGGED_VALUES/abc/featurecollection.json"
+              target="JSON Schema">featurecollection.json</Result>
+      <Result href="file:/C:/REPOSITORIES/OGC/GitLab/muddi-swg/shapechange/./results/featureCatalogue/IDENTITY/muddi/index.html"
+              target="Feature Catalogue">index.html</Result>
+   </Results>
+</ShapeChangeResult>
