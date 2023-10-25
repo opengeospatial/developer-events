@@ -1,1 +1,0 @@
-The JSON-FG schema goes into this folder.
