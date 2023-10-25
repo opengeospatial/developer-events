@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:nuarcodelists_datamanagement="http://portal.nuar.uk/schemas/nuarcodelists_datamanagement/2.1.0" xmlns:nuarcodelists_platform="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0" xmlns:nuardata="http://portal.nuar.uk/schemas/nuardata/2.1.0" xmlns:nuarorganisations="http://portal.nuar.uk/schemas/nuarorganisations/2.1.0" xmlns:nuarusercreateddata="http://portal.nuar.uk/schemas/nuarusercreateddata/2.1.0" elementFormDefault="qualified" targetNamespace="http://portal.nuar.uk/schemas/nuarusercreateddata/2.1.0" version="2.1.0">
+  <annotation>
+    <appinfo>
+      <gmlProfileSchema xmlns="http://www.opengis.net/gml/3.2">http://www.opengis.net/gml</gmlProfileSchema>
+    </appinfo>
+  </annotation>
+  <import namespace="http://portal.nuar.uk/schemas/nuarcodelists_datamanagement/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuarcodelists_platform/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuardata/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuarorganisations/2.1.0"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element abstract="true" name="NUARUserCreatedDataObject" substitutionGroup="gml:AbstractFeature" type="nuarusercreateddata:NUARUserCreatedDataObjectType"/>
+  <complexType abstract="true" name="NUARUserCreatedDataObjectType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="systemID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARUserCreatedDataObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarusercreateddata:NUARUserCreatedDataObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Observation" substitutionGroup="nuardata:MUDDIEvent" type="nuarusercreateddata:ObservationType"/>
+  <complexType name="ObservationType">
+    <complexContent>
+      <extension base="nuardata:MUDDIEventType">
+        <sequence>
+          <element minOccurs="0" name="estimatedBackfillDate" type="date"/>
+          <element minOccurs="0" name="impactOnWorks" type="nuarcodelists_platform:ObservationImpactValueType"/>
+          <element name="userID" type="string"/>
+          <element minOccurs="0" name="notes" type="string"/>
+          <element minOccurs="0" name="observationCategory" type="nuarcodelists_platform:ObservationCategoryValueType"/>
+          <element name="visibilityStatus" type="nuarcodelists_platform:ObservationVisibilityStatusValueType"/>
+          <element name="scopeOfSharing" type="nuarcodelists_platform:ObservationSharingScopePrimaryValueType"/>
+          <element minOccurs="0" name="dateOfLastVisibilityScopeChange" type="dateTime"/>
+          <element default="false" name="potentialSensitivity" type="boolean"/>
+          <element minOccurs="0" name="onBehalfOfOrganisationID" type="nuarorganisations:NUARActorPropertyType"/>
+          <element name="originatingOrganisationID" type="nuarorganisations:NUARActorPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ObservationPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarusercreateddata:Observation"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ObservationFeedback" substitutionGroup="nuarusercreateddata:NUARUserCreatedDataObject" type="nuarusercreateddata:ObservationFeedbackType"/>
+  <complexType name="ObservationFeedbackType">
+    <complexContent>
+      <extension base="nuarusercreateddata:NUARUserCreatedDataObjectType">
+        <sequence>
+          <element name="feedbackUserID" type="string"/>
+          <element minOccurs="0" name="feedbackRating" type="nuarcodelists_platform:ObservationFeedbackRatingValueType"/>
+          <element name="feedbackPercentage" type="double"/>
+          <element default="false" name="observationReported" type="boolean"/>
+          <element name="notes" type="string"/>
+          <element name="observationID" type="nuarusercreateddata:ObservationPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ObservationFeedbackPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarusercreateddata:ObservationFeedback"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ObservationOrganisationVisibilityScope" substitutionGroup="nuarusercreateddata:NUARUserCreatedDataObject" type="nuarusercreateddata:ObservationOrganisationVisibilityScopeType"/>
+  <complexType name="ObservationOrganisationVisibilityScopeType">
+    <complexContent>
+      <extension base="nuarusercreateddata:NUARUserCreatedDataObjectType">
+        <sequence>
+          <element name="scopeOfSharing" type="nuarcodelists_platform:ObservationSharingScopeSecondaryValueType"/>
+          <element default="false" name="potentialSensitivity" type="boolean"/>
+          <element name="observationID" type="nuarusercreateddata:ObservationPropertyType"/>
+          <element name="nuarActorID" type="nuarorganisations:NUARActorPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ObservationOrganisationVisibilityScopePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarusercreateddata:ObservationOrganisationVisibilityScope"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Relationship_WronglyRecordedObject" substitutionGroup="nuardata:NUARRelationship" type="nuarusercreateddata:Relationship_WronglyRecordedObjectType"/>
+  <complexType name="Relationship_WronglyRecordedObjectType">
+    <complexContent>
+      <extension base="nuardata:NUARRelationshipType">
+        <sequence>
+          <element name="linkedWROID" type="string"/>
+          <element name="linkedObjectID" type="string"/>
+          <element name="linkedObjectTable" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Relationship_WronglyRecordedObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarusercreateddata:Relationship_WronglyRecordedObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="UnidentifiedBuriedObject" substitutionGroup="nuardata:Structure" type="nuarusercreateddata:UnidentifiedBuriedObjectType"/>
+  <complexType name="UnidentifiedBuriedObjectType">
+    <complexContent>
+      <extension base="nuardata:StructureType">
+        <sequence>
+          <element minOccurs="0" name="colourDescription" type="string"/>
+          <element minOccurs="0" name="componentTypeDescription" type="string"/>
+          <element minOccurs="0" name="estimatedDepth" type="nuardata:DepthTypePropertyType"/>
+          <element minOccurs="0" name="estimatedUtilityType" type="nuarcodelists_platform:UtilityTypeValueType"/>
+          <element minOccurs="0" name="materialDescription" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="UnidentifiedBuriedObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarusercreateddata:UnidentifiedBuriedObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="UserCreatedFeatureLifecycle_history" substitutionGroup="nuarusercreateddata:NUARUserCreatedDataObject" type="nuarusercreateddata:UserCreatedFeatureLifecycle_historyType"/>
+  <complexType name="UserCreatedFeatureLifecycle_historyType">
+    <complexContent>
+      <extension base="nuarusercreateddata:NUARUserCreatedDataObjectType">
+        <sequence>
+          <element name="featureSystemID" type="string"/>
+          <element name="featureType" type="string"/>
+          <element minOccurs="0" name="originalLifecycleStatus" type="nuarcodelists_datamanagement:LifecycleStatusValueType"/>
+          <element name="newLifecycleStatus" type="nuarcodelists_datamanagement:LifecycleStatusValueType"/>
+          <element minOccurs="0" name="originalVersion" type="string"/>
+          <element minOccurs="0" name="newVersion" type="string"/>
+          <element minOccurs="0" name="dateOfChange" type="dateTime"/>
+          <element minOccurs="0" name="supersededByID" type="string"/>
+          <element minOccurs="0" name="supersededByFeatureType" type="string"/>
+          <element minOccurs="0" name="description" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="UserCreatedFeatureLifecycle_historyPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarusercreateddata:UserCreatedFeatureLifecycle_history"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="WronglyRecordedObject" substitutionGroup="nuarusercreateddata:Observation" type="nuarusercreateddata:WronglyRecordedObjectType"/>
+  <complexType name="WronglyRecordedObjectType">
+    <complexContent>
+      <extension base="nuarusercreateddata:ObservationType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="WronglyRecordedObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarusercreateddata:WronglyRecordedObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>

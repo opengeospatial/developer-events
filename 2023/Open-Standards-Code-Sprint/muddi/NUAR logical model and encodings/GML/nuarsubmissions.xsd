@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:nuarcodelists_datamanagement="http://portal.nuar.uk/schemas/nuarcodelists_datamanagement/2.1.0" xmlns:nuardata="http://portal.nuar.uk/schemas/nuardata/2.1.0" xmlns:nuarorganisations="http://portal.nuar.uk/schemas/nuarorganisations/2.1.0" xmlns:nuarsubmissions="http://portal.nuar.uk/schemas/nuarsubmissions/2.1.0" elementFormDefault="qualified" targetNamespace="http://portal.nuar.uk/schemas/nuarsubmissions/2.1.0" version="2.1.0">
+  <annotation>
+    <appinfo>
+      <gmlProfileSchema xmlns="http://www.opengis.net/gml/3.2">http://www.opengis.net/gml</gmlProfileSchema>
+    </appinfo>
+  </annotation>
+  <import namespace="http://portal.nuar.uk/schemas/nuarcodelists_datamanagement/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuardata/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuarorganisations/2.1.0"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="NUARSourceDataset" substitutionGroup="nuarsubmissions:NUARSubmissionObject" type="nuarsubmissions:NUARSourceDatasetType"/>
+  <complexType name="NUARSourceDatasetType">
+    <complexContent>
+      <extension base="nuarsubmissions:NUARSubmissionObjectType">
+        <sequence>
+          <element minOccurs="0" name="expectedRefreshPeriod" type="nuardata:TimePeriodTypePropertyType"/>
+          <element name="sourceFeatureClassValue" type="string"/>
+          <element minOccurs="0" name="type" type="nuarcodelists_datamanagement:DatasetTypeValueType"/>
+          <element minOccurs="0" name="externalReference" type="string"/>
+          <element name="nuarActorID" type="nuarorganisations:NUARActorPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARSourceDatasetPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarsubmissions:NUARSourceDataset"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARSubmissionAreaReplacement" substitutionGroup="nuarsubmissions:NUARSubmissionObject" type="nuarsubmissions:NUARSubmissionAreaReplacementType"/>
+  <complexType name="NUARSubmissionAreaReplacementType">
+    <complexContent>
+      <extension base="nuarsubmissions:NUARSubmissionObjectType">
+        <sequence>
+          <element name="areaRelationshipTableName" type="string"/>
+          <element name="areaID" type="string"/>
+          <element name="areaIDFieldName" type="string"/>
+          <element name="objectTableFieldName" type="string"/>
+          <element name="objectIDFIeldName" type="string"/>
+          <element name="submissionEventID" type="nuarsubmissions:NUARSubmissionEventPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARSubmissionAreaReplacementPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarsubmissions:NUARSubmissionAreaReplacement"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARSubmissionDatasetReplacement" substitutionGroup="nuarsubmissions:NUARSubmissionObject" type="nuarsubmissions:NUARSubmissionDatasetReplacementType"/>
+  <complexType name="NUARSubmissionDatasetReplacementType">
+    <complexContent>
+      <extension base="nuarsubmissions:NUARSubmissionObjectType">
+        <sequence>
+          <element name="submissionEventID" type="nuarsubmissions:NUARSubmissionEventPropertyType"/>
+          <element name="nuarSourceDatasetID" type="nuarsubmissions:NUARSourceDatasetPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARSubmissionDatasetReplacementPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarsubmissions:NUARSubmissionDatasetReplacement"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARSubmissionEvent" substitutionGroup="nuardata:NUARObject" type="nuarsubmissions:NUARSubmissionEventType"/>
+  <complexType name="NUARSubmissionEventType">
+    <complexContent>
+      <extension base="nuardata:NUARObjectType">
+        <sequence>
+          <element minOccurs="0" name="eventName" type="string"/>
+          <element minOccurs="0" name="dateOfSubmission" type="dateTime"/>
+          <element minOccurs="0" name="status" type="nuarcodelists_datamanagement:SubmissionStatusValueType"/>
+          <element minOccurs="0" name="result" type="nuarcodelists_datamanagement:SubmissionResultValueType"/>
+          <element minOccurs="0" name="dateOfCompletion" type="dateTime"/>
+          <element minOccurs="0" name="dataModelVersion" type="string"/>
+          <element minOccurs="0" name="submissionID" type="string"/>
+          <element default="Organisation" name="replacementScope" type="nuarcodelists_datamanagement:SubmissionReplacementScopeValueType"/>
+          <element default="false" name="noChange" type="boolean"/>
+          <element minOccurs="0" name="noChangeToSubmissionID" type="string"/>
+          <element default="Asset Data" name="submissionType" type="nuarcodelists_datamanagement:SubmissionTypeValueType"/>
+          <element name="dataProviderID" type="nuarorganisations:NUARActorPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARSubmissionEventPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarsubmissions:NUARSubmissionEvent"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARSubmissionFeatureReplacement" substitutionGroup="nuarsubmissions:NUARSubmissionObject" type="nuarsubmissions:NUARSubmissionFeatureReplacementType"/>
+  <complexType name="NUARSubmissionFeatureReplacementType">
+    <complexContent>
+      <extension base="nuarsubmissions:NUARSubmissionObjectType">
+        <sequence>
+          <element name="featureTableName" type="string"/>
+          <element name="featureID" type="string"/>
+          <element name="submissionEventID" type="nuarsubmissions:NUARSubmissionEventPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARSubmissionFeatureReplacementPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarsubmissions:NUARSubmissionFeatureReplacement"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="NUARSubmissionObject" substitutionGroup="gml:AbstractFeature" type="nuarsubmissions:NUARSubmissionObjectType"/>
+  <complexType abstract="true" name="NUARSubmissionObjectType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="systemID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARSubmissionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarsubmissions:NUARSubmissionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARSubmissionSourceDataset" substitutionGroup="nuarsubmissions:NUARSubmissionObject" type="nuarsubmissions:NUARSubmissionSourceDatasetType"/>
+  <complexType name="NUARSubmissionSourceDatasetType">
+    <complexContent>
+      <extension base="nuarsubmissions:NUARSubmissionObjectType">
+        <sequence>
+          <element minOccurs="0" name="dateOfExtract" type="dateTime"/>
+          <element minOccurs="0" name="name" type="string"/>
+          <element name="submissionEventID" type="nuarsubmissions:NUARSubmissionEventPropertyType"/>
+          <element name="nuarSourceDatasetID" type="nuarsubmissions:NUARSourceDatasetPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARSubmissionSourceDatasetPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarsubmissions:NUARSubmissionSourceDataset"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARSubmissionSubmissionReplacement" substitutionGroup="nuarsubmissions:NUARSubmissionObject" type="nuarsubmissions:NUARSubmissionSubmissionReplacementType"/>
+  <complexType name="NUARSubmissionSubmissionReplacementType">
+    <complexContent>
+      <extension base="nuarsubmissions:NUARSubmissionObjectType">
+        <sequence>
+          <element name="newSubmissionEventID" type="nuarsubmissions:NUARSubmissionEventPropertyType"/>
+          <element name="oldSubmissionEventID" type="nuarsubmissions:NUARSubmissionEventPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARSubmissionSubmissionReplacementPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarsubmissions:NUARSubmissionSubmissionReplacement"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARSubmissionTargetTable" substitutionGroup="nuarsubmissions:NUARSubmissionObject" type="nuarsubmissions:NUARSubmissionTargetTableType"/>
+  <complexType name="NUARSubmissionTargetTableType">
+    <complexContent>
+      <extension base="nuarsubmissions:NUARSubmissionObjectType">
+        <sequence>
+          <element name="targetTableName" type="string"/>
+          <element name="submissionEventID" type="nuarsubmissions:NUARSubmissionEventPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARSubmissionTargetTablePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarsubmissions:NUARSubmissionTargetTable"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>
