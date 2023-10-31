@@ -1,5 +1,5 @@
 [[geomapfish]]
 ==== Geomapfish
 
-GeoMapFish is web application that enables developers to build extensible web-based GIS application. It supports functionality such as webmapping, editing, responsive templates, and customisation. The software supports a variety of OGC Standards, as well as the MapFish protocol for communication between client-side and server-side applications. The software is built using OpenLayers, AngularJS, ngeo, Papyrus, and other toolkits.
+GeoMapFish is web application that enables developers to build extensible web-based GIS applications. It supports functionality such as webmapping, editing, responsive templates, and customization. The software supports a variety of OGC Standards as well as the MapFish protocol for communication between client-side and server-side applications. The software is built using OpenLayers, AngularJS, ngeo, Papyrus, and other toolkits.
 

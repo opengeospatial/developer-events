@@ -2,15 +2,15 @@
 :comment: ### Document type; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
 :doctype: engineering-report
 :comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
-:status: draft
+:status: approved
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: technical
 :comment: ### Internal reference number; mandatory
 :docnumber: 23-025
 :comment: ### Date on which the standard was updated; mandatory
-:received-date: 2028-12-20
+:received-date: 2023-05-12
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
-:issued-date: 2028-07-10
+:issued-date: 2023-06-08
 :comment: ### Date on which the standard was published; mandatory
 :published-date: 2029-06-12
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"

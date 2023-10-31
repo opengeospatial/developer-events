@@ -2,8 +2,7 @@
 ==== Apache Sedona
 
 Apache Sedona leverages a number of open-source libraries, including GeoTools, to execute some spatial operations. However, as an Apache project, Sedona is striving to reduce
-its reliance on GeoTools due to licensing issues. In order to address this
-challenge, Sedona is migrating affected functions to Apache SIS.
+its reliance on GeoTools due to licensing issues. In order to address this challenge, Sedona is migrating affected functions to Apache SIS.
 
-In this code sprint, sedona maintainers concentrated on replacing GeoTools' usage in
+In this code sprint, Sedona maintainers concentrated on replacing GeoTools' usage in
 two key functions within Sedona: ST_Transform and the GeoTiff reader. Their focus was on demonstrating how to migrate these functions to Apache SIS, providing a comprehensive tutorial on the necessary steps involved.

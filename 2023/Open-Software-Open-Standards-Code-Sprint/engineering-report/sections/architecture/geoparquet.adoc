@@ -1,4 +1,4 @@
 [[geoparquet]]
 ==== OGC GeoParquet
 
-The https://github.com/opengeospatial/geoparquet[OGC GeoParquet] candidate Standard defines how geospatial data should be stored in https://parquet.apache.org/[Apache Parquet] format, including the representation of geometries and the required additional metadata. The https://parquet.apache.org/[Apache Parquet] project provides an open source, columnar file format that supports both data storage and retrieval.
+The https://github.com/opengeospatial/geoparquet[OGC GeoParquet] candidate Standard defines how geospatial data should be stored in https://parquet.apache.org/[Apache Parquet] format including the representation of geometries and the required additional metadata. The https://parquet.apache.org/[Apache Parquet] project provides an open source columnar file format that supports both data storage and retrieval.

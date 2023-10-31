@@ -1,11 +1,11 @@
 ==== OSGeo GeoServer
 
-The GeoServer team focused on separating their implementation into individually downloadable modules. This work is required in anticpation of CQL2 being finalized and enabling the first public release of a GeoServer ogcapi module that supports OGC API Standards.
+The GeoServer team focused on separating the implementation into individually downloadable modules. This work is required in anticipation of CQL2 being finalized and enabling the first public release of a GeoServer ogcapi module that supports OGC API Standards.
 
 Some of the outputs included:
 
-* A https://github.com/geoserver/geoserver/pull/6801[pull reqeust] splitting ogcapi module implementation into individual downloads
-* A pull request of a nightly build docker image allowing public testing of ogcapi modules above
-* A https://github.com/geoserver/geoserver/pull/6802[pull request] providing fixes to the OGC API - Tiles implementation, based on the draft CITE tests for it
+* a https://github.com/geoserver/geoserver/pull/6801[pull reqeust] splitting ogcapi module implementation into individual downloads;
+* a pull request of a nightly build docker image allowing public testing of ogcapi modules above; and
+* a https://github.com/geoserver/geoserver/pull/6802[pull request] providing fixes to the OGC API - Tiles implementation, based on the draft CITE tests for it.
 
-The GeoServer maintainers also checked in with the status of CQL2 which remains under active development. They are waiting on this activity before publishing the ogcapi-features module (supporting OGC API - Features) for the general public.
+The GeoServer maintainers also checked in with the status of CQL2 which remains under active development and are waiting on this activity before publishing the ogcapi-features module (supporting OGC API - Features) for the general public.

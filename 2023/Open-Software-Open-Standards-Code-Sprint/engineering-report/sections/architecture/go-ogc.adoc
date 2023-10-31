@@ -1,4 +1,4 @@
 [[go-ogc]]
 ==== go-ogc
 
-https://github.com/planetlabs/go-ogc[go-ogc] is a Go library for working with OGC API services.  The library includes support for OGC API - Common, OGC API - Tiles, and OGC API - Features including support for the CQL2 JSON encoding.  The library is available under the Apache 2.0 license.
+https://github.com/planetlabs/go-ogc[go-ogc] is a Go library for working with OGC API services. The library includes support for OGC API - Common, OGC API - Tiles, and OGC API - Features including support for the CQL2 JSON encoding. The library is available under the Apache 2.0 license.

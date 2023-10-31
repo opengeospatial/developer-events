@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:nuarcodelists_datamanagement="http://portal.nuar.uk/schemas/nuarcodelists_datamanagement/2.1.0" xmlns:nuarcustombackdrop="http://portal.nuar.uk/schemas/nuarcustombackdrop/2.1.0" xmlns:nuardata="http://portal.nuar.uk/schemas/nuardata/2.1.0" xmlns:nuarorganisations="http://portal.nuar.uk/schemas/nuarorganisations/2.1.0" xmlns:nuarsubmissions="http://portal.nuar.uk/schemas/nuarsubmissions/2.1.0" elementFormDefault="qualified" targetNamespace="http://portal.nuar.uk/schemas/nuarcustombackdrop/2.1.0" version="2.1.0">
+  <annotation>
+    <appinfo>
+      <gmlProfileSchema xmlns="http://www.opengis.net/gml/3.2">http://www.opengis.net/gml</gmlProfileSchema>
+    </appinfo>
+  </annotation>
+  <import namespace="http://portal.nuar.uk/schemas/nuarcodelists_datamanagement/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuardata/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuarorganisations/2.1.0"/>
+  <import namespace="http://portal.nuar.uk/schemas/nuarsubmissions/2.1.0"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="BackdropFeatureLifecycle_history" substitutionGroup="gml:AbstractFeature" type="nuarcustombackdrop:BackdropFeatureLifecycle_historyType"/>
+  <complexType name="BackdropFeatureLifecycle_historyType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="systemID" type="string"/>
+          <element name="featureSystemID" type="string"/>
+          <element name="featureType" type="string"/>
+          <element minOccurs="0" name="originalLifecycleStatus" type="nuarcodelists_datamanagement:LifecycleStatusValueType"/>
+          <element name="newLifecycleStatus" type="nuarcodelists_datamanagement:LifecycleStatusValueType"/>
+          <element minOccurs="0" name="originalVersion" type="string"/>
+          <element minOccurs="0" name="newVersion" type="string"/>
+          <element minOccurs="0" name="dateOfChange" type="dateTime"/>
+          <element minOccurs="0" name="supersededByID" type="string"/>
+          <element minOccurs="0" name="supersededByFeatureType" type="string"/>
+          <element minOccurs="0" name="description" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="BackdropFeatureLifecycle_historyPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcustombackdrop:BackdropFeatureLifecycle_history"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARBackdropArea" substitutionGroup="nuarcustombackdrop:NUARBackdropObject" type="nuarcustombackdrop:NUARBackdropAreaType"/>
+  <complexType name="NUARBackdropAreaType">
+    <complexContent>
+      <extension base="nuarcustombackdrop:NUARBackdropObjectType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARBackdropAreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcustombackdrop:NUARBackdropArea"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARBackdropLine" substitutionGroup="nuarcustombackdrop:NUARBackdropObject" type="nuarcustombackdrop:NUARBackdropLineType"/>
+  <complexType name="NUARBackdropLineType">
+    <complexContent>
+      <extension base="nuarcustombackdrop:NUARBackdropObjectType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARBackdropLinePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcustombackdrop:NUARBackdropLine"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="NUARBackdropObject" substitutionGroup="nuardata:NUARObject" type="nuarcustombackdrop:NUARBackdropObjectType"/>
+  <complexType abstract="true" name="NUARBackdropObjectType">
+    <complexContent>
+      <extension base="nuardata:NUARObjectType">
+        <sequence>
+          <element minOccurs="0" name="name" type="string"/>
+          <element minOccurs="0" name="description" type="string"/>
+          <element name="dataProviderID" type="nuarorganisations:NUARActorPropertyType"/>
+          <element name="submissionEventID" type="nuarsubmissions:NUARSubmissionEventPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARBackdropObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcustombackdrop:NUARBackdropObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARBackdropPoint" substitutionGroup="nuarcustombackdrop:NUARBackdropObject" type="nuarcustombackdrop:NUARBackdropPointType"/>
+  <complexType name="NUARBackdropPointType">
+    <complexContent>
+      <extension base="nuarcustombackdrop:NUARBackdropObjectType">
+        <sequence>
+          <element name="geometry" type="gml:PointPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARBackdropPointPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcustombackdrop:NUARBackdropPoint"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARBackdropRaster" substitutionGroup="nuarcustombackdrop:NUARBackdropObject" type="nuarcustombackdrop:NUARBackdropRasterType"/>
+  <complexType name="NUARBackdropRasterType">
+    <complexContent>
+      <extension base="nuarcustombackdrop:NUARBackdropObjectType">
+        <sequence>
+          <element name="mimeType" type="string"/>
+          <element name="fullPath" type="string"/>
+          <element name="extent" type="gml:SurfacePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARBackdropRasterPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcustombackdrop:NUARBackdropRaster"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARBackdropText" substitutionGroup="nuarcustombackdrop:NUARBackdropObject" type="nuarcustombackdrop:NUARBackdropTextType"/>
+  <complexType name="NUARBackdropTextType">
+    <complexContent>
+      <extension base="nuarcustombackdrop:NUARBackdropObjectType">
+        <sequence>
+          <element name="orientation" type="double"/>
+          <element name="orientationMeasurementUnits" type="string"/>
+          <element name="textString" type="string"/>
+          <element name="geometry" type="gml:PointPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARBackdropTextPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarcustombackdrop:NUARBackdropText"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>

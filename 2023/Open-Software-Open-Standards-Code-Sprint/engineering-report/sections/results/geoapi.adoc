@@ -1,14 +1,14 @@
 [[geoapi_results]]
 ==== OGC GeoAPI
 
-The work done during this code sprint was not on GeoAPI itself, but on an usage of it.
+The work done during this code sprint was not on GeoAPI itself, but on a usage of it.
 GeoAPI is the interface between the https://github.com/IOGP-GIGS/GIGSGeoAPI[Java runner of GIGS tests]
 (Geospatial Integrity of Geoscience Software) and https://github.com/OSGeo/PROJ-JNI[PROJ-JNI].
 Both projects have been updated for enabling the execution of a greater range of GIGS tests on PROJ.
 The changes consisted in upgrading the way that client codes discover GeoAPI implementations.
 That discovery is done through the Java _Service Providers_ mechanism.
-However that mechanism changed significantly between Java 8 and Java 9.
-The new mechanism in Java 9, in addition of being more secure,
+However, that mechanism changed significantly between Java 8 and Java 9.
+The new mechanism in Java 9, in addition to being more secure,
 also provides more flexibility in the way to discover services.
 This flexibility has been exploited during this code sprint for filling some holes in the GIGS test coverage.
 

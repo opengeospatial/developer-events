@@ -1,6 +1,6 @@
 [[jsonfg_results]]
 ==== OGC Features and Geometries JSON (JSON-FG)
 
-In the OGC API - Records discussions, an issue was raised about the fact that some GeoJSON clients can only access information from the standard GeoJSON feature members ("id", "geometry", and "properties"). 
+In the OGC API - Records discussions an issue was raised about the fact that some GeoJSON clients can only access information from the standard GeoJSON feature members ("id", "geometry", and "properties"). 
 
-Like https://ogcapi.ogc.org/features/[OGC API - Features], https://ogcapi.ogc.org/records/[OGC API - Records] and https://stacspec.org[STAC], https://github.com/opengeospatial/ogc-feat-geo-json[JSON-FG] also adds additional JSON members to a GeoJSON feature. While this is a valid extension of GeoJSON, the fact that such extensions may not be accessible in widely used tools and libraries is a concern. As a result of the discussions, an https://github.com/opengeospatial/ogc-feat-geo-json/issues/82[issue] was opened in the JSON-FG GitHub respository after a disucssion in the JSON-FG Standards Working Group.
+Like https://ogcapi.ogc.org/features/[OGC API - Features], https://ogcapi.ogc.org/records/[OGC API - Records] and https://stacspec.org[STAC], https://github.com/opengeospatial/ogc-feat-geo-json[JSON-FG] also adds additional JSON members to a GeoJSON feature. While this is a valid extension of GeoJSON, the fact that such extensions may not be accessible in widely used tools and libraries is a concern. As a result of the discussions an https://github.com/opengeospatial/ogc-feat-geo-json/issues/82[issue] was opened in the JSON-FG GitHub repository after a discussion in the JSON-FG Standards Working Group.

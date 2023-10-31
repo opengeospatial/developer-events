@@ -1,6 +1,6 @@
 [[pygeometa_results]]
 ==== OSGeo pygeometa
 
-The pygeometa project https://github.com/geopython/pygeometa/pull/224[added] support for detailed schema capability reporting, so that a client can be aware of which schemas are supported, and whether those schemas have read and/or write support. This was also implemented as a pygeoapi plugin, and https://github.com/geopython/demo.pygeoapi.io/commit/9493c5627bbd78351613ecd6b5078936246003d6[made available] as part of the pygeoapi https://demo.pygeoapi.io/master[public demo]. "pygeometa as a service" is used by the https://osgeo.github.io/mdme[live demo] of the MDME project. The schema capability integration was added by MDME as part of the code sprint.
+The pygeometa project https://github.com/geopython/pygeometa/pull/224[added] support for detailed schema capability reporting so that a client can be aware of which schemas are supported, and whether those schemas have read and/or write support. This was also implemented as a pygeoapi plugin and https://github.com/geopython/demo.pygeoapi.io/commit/9493c5627bbd78351613ecd6b5078936246003d6[made available] as part of the pygeoapi https://demo.pygeoapi.io/master[public demo]. "pygeometa as a service" is used by the https://osgeo.github.io/mdme[live demo] of the MDME project. The schema capability integration was added by MDME as part of the code sprint.
 
 

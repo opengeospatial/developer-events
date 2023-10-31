@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:nuarversion="http://portal.nuar.uk/schemas/nuarversion/2.1.0" elementFormDefault="qualified" targetNamespace="http://portal.nuar.uk/schemas/nuarversion/2.1.0" version="2.1.0">
+  <annotation>
+    <appinfo>
+      <gmlProfileSchema xmlns="http://www.opengis.net/gml/3.2">http://www.opengis.net/gml</gmlProfileSchema>
+    </appinfo>
+  </annotation>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="NUARDataModelChangelog" substitutionGroup="nuarversion:NUARVersionObject" type="nuarversion:NUARDataModelChangelogType"/>
+  <complexType name="NUARDataModelChangelogType">
+    <complexContent>
+      <extension base="nuarversion:NUARVersionObjectType">
+        <sequence>
+          <element name="versionNumber" type="string"/>
+          <element name="proposalReference" type="string"/>
+          <element name="changeDescription" type="string"/>
+          <element default="nuardata" name="schemaName" type="string"/>
+          <element default="versionnumber" name="schemaVersion" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARDataModelChangelogPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarversion:NUARDataModelChangelog"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARDataModelMigrationHistory" substitutionGroup="nuarversion:NUARVersionObject" type="nuarversion:NUARDataModelMigrationHistoryType"/>
+  <complexType name="NUARDataModelMigrationHistoryType">
+    <complexContent>
+      <extension base="nuarversion:NUARVersionObjectType">
+        <sequence>
+          <element name="dateOfMigration" type="date"/>
+          <element name="fromVersionNumber" type="string"/>
+          <element name="toVersionNumber" type="string"/>
+          <element minOccurs="0" name="appliedBy" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARDataModelMigrationHistoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarversion:NUARDataModelMigrationHistory"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARDataModelSchemaVersions" substitutionGroup="nuarversion:NUARVersionObject" type="nuarversion:NUARDataModelSchemaVersionsType"/>
+  <complexType name="NUARDataModelSchemaVersionsType">
+    <complexContent>
+      <extension base="nuarversion:NUARVersionObjectType">
+        <sequence>
+          <element name="dataModelVersion" type="string"/>
+          <element name="schemaName" type="string"/>
+          <element name="schemaVersion" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARDataModelSchemaVersionsPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarversion:NUARDataModelSchemaVersions"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARDataModelVersion" substitutionGroup="nuarversion:NUARVersionObject" type="nuarversion:NUARDataModelVersionType"/>
+  <complexType name="NUARDataModelVersionType">
+    <complexContent>
+      <extension base="nuarversion:NUARVersionObjectType">
+        <sequence>
+          <element name="versionNumber">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="10"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element name="versionDate" type="date"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARDataModelVersionPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarversion:NUARDataModelVersion"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NUARSchemaVersion" substitutionGroup="nuarversion:NUARVersionObject" type="nuarversion:NUARSchemaVersionType"/>
+  <complexType name="NUARSchemaVersionType">
+    <complexContent>
+      <extension base="nuarversion:NUARVersionObjectType">
+        <sequence>
+          <element name="schemaName" type="string"/>
+          <element name="versionDate" type="date"/>
+          <element name="versionNumber" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARSchemaVersionPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarversion:NUARSchemaVersion"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="NUARVersionObject" substitutionGroup="gml:AbstractFeature" type="nuarversion:NUARVersionObjectType"/>
+  <complexType abstract="true" name="NUARVersionObjectType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="systemID" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NUARVersionObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="nuarversion:NUARVersionObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>
