@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShapeChangeConfiguration xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1"
+	xmlns:sc="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1 ./schema/ShapeChangeConfiguration.xsd">
+	<input id="INPUT">
+		<parameter name="inputModelType" value="EA7"/>
+		<parameter name="inputFile" value="../logical_model/MUDDI_LM_ii.eap"/>
+<!--		<parameter name="appSchemaNameRegex" value="Core Logical Model|Codelist Register - MUDDI Core"/>-->
+		<parameter name="appSchemaNameRegex" value="Core Logical Model"/>
+		<parameter name="checkingConstraints" value="disabled"/>
+		<parameter name="addTaggedValues" value="*"/>
+		<xi:include href="./config/StandardAliases.xml"/>
+	</input>
+	<log>
+		<parameter name="reportLevel" value="INFO"/>
+		<parameter name="logFile" value="./results/sc_log.xml"/>
+	</log>
+	<transformers>
+		<Transformer class="de.interactive_instruments.ShapeChange.Transformation.Identity.IdentityTransform" id="IDENTITY" input="INPUT" mode="enabled"/>
+		<Transformer class="de.interactive_instruments.ShapeChange.Transformation.Identity.IdentityTransform" id="TAGGED_VALUES" input="IDENTITY" mode="enabled">
+			<taggedValues>
+				<TaggedValue name="json" value="1.0" modelElementName="Core Logical Model"/>
+				<TaggedValue name="jsonDocument" value="core.json" modelElementName="Core Logical Model"/>
+				<TaggedValue name="jsonId" value="https://muddi.example.org/core.json" modelElementName="Core Logical Model"/>
+				<!--<TaggedValue name="json" value="1.0" modelElementName="Codelist Register - MUDDI Core"/>
+				<TaggedValue name="jsonDocument" value="codelist_register.json" modelElementName="Codelist Register - MUDDI Core"/>
+				<TaggedValue name="jsonId" value="https://muddi.example.org/codelist_register.json" modelElementName="Codelist Register - MUDDI Core"/>-->
+				<TaggedValue name="jsonPrimaryGeometry" value="true" modelElementName="geometry"/>
+				<!-- <TaggedValue name="inlineOrByReference" value="byReference" modelElementName=".*" /> -->
+				<!--<TaggedValue name="asDictionary" value="true" modelElementStereotype="(?i)CodeList" applicationSchemaName="Codelist Register - MUDDI Core"/>-->
+				<!-- Uncomment this in order to achieve GML 3.3 encoding for code lists and code list valued properties: -->
+<!--				<TaggedValue name="asDictionary" value="true" modelElementStereotype="(?i)CodeList" applicationSchemaName="Core Logical Model"/>-->
+			</taggedValues>
+		</Transformer>
+	</transformers>
+	<targets>
+		
+		<TargetXmlSchema class="de.interactive_instruments.ShapeChange.Target.XmlSchema.XmlSchema" inputs="TAGGED_VALUES" mode="enabled">
+			<targetParameter name="outputDirectory" value="./results/xsd"/>
+			<targetParameter name="sortedOutput" value="true"/>
+			<targetParameter name="defaultEncodingRule" value="XSDEncRule"/>
+			<xi:include href="./config/StandardRules.xml"/>
+			<xi:include href="./config/StandardNamespaces.xml"/>
+			<rules>
+				<EncodingRule name="XSDEncRule" extends="gml33">
+					<rule name="rule-xsd-cls-codelist-asDictionaryGml33"/>
+					<!--					<rule name="rule-xsd-cls-mixin-classes"/>-->
+				</EncodingRule>
+			</rules>
+			<xsdMapEntries>
+				<XsdMapEntry type="URI" xsdEncodingRules="iso19136_2007" xmlPropertyType="anyURI" xmlType="anyURI" xmlTypeType="simple" xmlTypeContent="simple"/>
+				<xi:include href="./config/StandardMapEntries_iso19136_2007.xml"/>
+				<xi:include href="./config/StandardMapEntries_iso19107.xml"/>
+				<xi:include href="./config/StandardMapEntries_iso19108.xml"/>
+				<!-- ... more to be added as required -->
+				<!--<xsdMapEntries xmlns="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1">
+					<XsdMapEntry type="Geometry" xsdEncodingRules="iso19136_2007 gml33" xmlType="gml:AbstractGeometryType" xmlElement="gml:AbstractGeometry" xmlPropertyType="gml:GeometryPropertyType"/>
+					<XsdMapEntry type="Polygon" xsdEncodingRules="iso19136_2007 gml33" xmlElement="gml:Polygon" xmlType="gml:PolygonType" xmlPropertyType="_P_"/>
+				</xsdMapEntries>-->
+			</xsdMapEntries>
+			<!--<xmlNamespaces>
+				<XmlNamespace nsabr="reg" ns="http://SomeNameSpace.com/register" location="./ApplicationSchemaName_register.xsd"/>
+			</xmlNamespaces>-->
+		</TargetXmlSchema>
+		<Target class="de.interactive_instruments.ShapeChange.Target.JSON.JsonSchemaTarget" mode="enabled" inputs="TAGGED_VALUES">
+			<advancedProcessConfigurations>
+				<JsonSchemaAnnotations>
+					<annotations>
+						<SimpleAnnotation annotation="description" descriptorOrTaggedValue="definition" noValueBehavior="ignore"/>
+					</annotations>
+				</JsonSchemaAnnotations>
+			</advancedProcessConfigurations>
+			<targetParameter name="outputDirectory" value="./results/jsonfg_schema/"/>
+			<targetParameter name="collectionSchemaFileName" value="featurecollection.json"/>
+			<targetParameter name="featureCollectionOnly" value="true"/>
+			<targetParameter name="jsonSchemaVersion" value="2020-12"/>
+			<targetParameter name="inlineOrByReferenceDefault" value="byReference"/>
+			<targetParameter name="featureRefProfiles" value="rel-as-key"/>
+			<targetParameter name="featureRefIdTypes" value="string,integer"/>
+			<targetParameter name="linkObjectUri" value="https://beta.schemas.opengis.net/json-fg/link.json"/>
+			<targetParameter name="sortedOutput" value="true"/>
+			<targetParameter name="baseJsonSchemaDefinitionForCollections" value="https://beta.schemas.opengis.net/json-fg/featurecollection.json"/>
+			<targetParameter name="preventUnknownTypesInFeatureCollection" value="true"/>
+			<targetParameter name="baseJsonSchemaDefinitionForFeatureTypes" value="https://beta.schemas.opengis.net/json-fg/feature.json"/>
+			<targetParameter name="baseJsonSchemaDefinitionForFeatureTypes_encodingInfos"
+				value="entityTypeMemberPath=featureType;entityTypeMemberRequired=false;idMemberPath=id;idMemberTypes=string,number;idMemberRequired=false"/>
+			<targetParameter name="idMemberEncodingRestrictions" value="memberRequired"/>
+			<!-- <targetParameter name="entityTypeName" value="@type"/> -->
+			<targetParameter name="defaultEncodingRule" value="myJsonFG"/>
+			<targetParameter name="useAnchorsInLinksToGeneratedSchemaDefinitions" value="false"/>
+			<targetParameter name="geoJsonCompatibleGeometryTypes" value="GM_Point, GM_Curve, GM_Surface, GM_MultiPoint, GM_MultiCurve, GM_MultiSurface, Polygon"/>
+			<rules>
+				<EncodingRule name="myJsonFG">
+					
+					<rule name="rule-json-cls-ignoreIdentifier"/>
+					<rule name="rule-json-cls-name-as-anchor"/>
+					<rule name="rule-json-cls-nestedProperties"/>
+					<rule name="rule-json-cls-virtualGeneralization"/>
+					<rule name="rule-json-prop-derivedAsReadOnly"/>
+					<rule name="rule-json-prop-initialValueAsDefault"/>
+					<rule name="rule-json-prop-readOnly"/>
+					<rule name="rule-json-prop-voidable"/>
+					
+					<rule name="rule-json-cls-jsonFgGeometry"/>
+					<rule name="rule-json-all-documentation"/>
+					<rule name="rule-json-all-featureRefs"/>
+					<rule name="rule-json-cls-documentation-enumDescription"/>
+					<rule name="rule-json-cls-codelist-uri-format"/>
+					<!-- <rule name="rule-json-cls-codelist-link"/> -->
+					<rule name="rule-json-cls-collectionsBasedOnEntityType"/>
+					<rule name="rule-json-cls-collectionsWithTopLevelEntityType"/>
+					<!-- <rule name="rule-json-cls-name-as-entityType"/>   -->
+					<rule name="rule-json-cls-restrictExternalIdentifierMember"/>
+					<rule name="rule-json-cls-primaryGeometry"/>
+				</EncodingRule>
+			</rules>
+			<xi:include href="./config/StandardMapEntries_JSON.xml"/>
+			<xi:include href="./config/StandardMapEntries_JSON_geometry_JsonFG.xml"/>
+			<!--<mapEntries xmlns="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1">
+				<!-\- ISO 19107 - Edition 2 -\->
+				<MapEntry type="Geometry" rule="*" targetType="https://beta.schemas.opengis.net/json-fg/geometry.json" param="geometry"/>
+				<MapEntry type="Polygon" rule="*" targetType="https://beta.schemas.opengis.net/json-fg/geometry-objects.json#/$defs/Polygon" param="geometry"/>
+			</mapEntries>-->
+		</Target>
+		
+		<Target class="de.interactive_instruments.ShapeChange.Target.FeatureCatalogue.FeatureCatalogue" inputs="IDENTITY" mode="enabled">
+			<targetParameter name="outputDirectory" value="./results/featureCatalogue"/>
+			<targetParameter name="outputFilename" value="muddi"/>
+			<targetParameter name="outputFormat" value="FRAMEHTML"/>
+			<targetParameter name="xsltPath" value="./xslt"/>
+			<targetParameter name="includeVoidable" value="false"/>
+			<targetParameter name="noAlphabeticSortingForProperties" value="true"/>
+			<targetParameter name="xslTransformerFactory" value="net.sf.saxon.TransformerFactoryImpl"/>
+			<targetParameter name="inheritedProperties" value="true"/>
+			<targetParameter name="name" value="MUDDI Logical Model"/>
+			<targetParameter name="versionNumber" value="1.0"/>
+			<targetParameter name="versionDate" value="now"/>
+			<targetParameter name="producer" value="MUDDI SWG"/>
+		</Target>
+		
+		<Target class="de.interactive_instruments.ShapeChange.Target.ModelExport.ModelExport" mode="enabled" inputs="IDENTITY TAGGED_VALUES">
+			<targetParameter name="outputDirectory" value="./results/scxml"/>
+			<targetParameter name="outputFilename" value="muddi_model"/>
+			<targetParameter name="sortedOutput" value="true"/>
+			<targetParameter name="defaultEncodingRule" value="export"/>
+			<rules>
+				<EncodingRule name="export">
+					<rule name="rule-exp-all-omitExistingProfiles"/>
+					<rule name="rule-exp-pkg-allPackagesAreEditable"/>
+				</EncodingRule>
+			</rules>
+		</Target>
+	</targets>
+</ShapeChangeConfiguration>
