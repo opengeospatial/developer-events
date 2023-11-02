@@ -1,0 +1,51 @@
+==== OGC API - Environmental Data Retrieval
+
+===== Part 1: Core
+
+TBD
+
+===== Part 2: Publish-Subscribe workflow
+
+The OGC API - Environmental Data Retrieval team and Pub/Sub enthusiasts provided two 5 minute pitch presentations, a mentor session one breakout which focused on Publish-Subscibe workflows for EDR and other OGC API specifications.
+
+The 5 minute pitch presentations focused on Part 1: Core and Part 2: Publish-Subscribe capabilities to help position the subsequent mentor and breakout sessions.
+
+The EDR Pub/Sub mentor session included demonstrations from the joint Open Software and Open Standards Code Sprint between OGC/OSGeo/ASF at Lausanne during April 2023, as well as a demo from NOAA demonstrating Pub/Sub integration with EDR.
+
+A breakout session was also held, focusing on technical details of EDR Part 2.
+
+An ldproxy Pub/Sub demo was given connecting to the WMO WIS2 Global Broker, triggering notification observations into an OGC API Feature collection as well as an additional ldproxy broker.  Observations were made available using the OGC API endpoint structure with a prefix for a given server and suffix for a specific observed property.  Security was also demonstrated by way of using Open ID Connect.
+
+Discussions included:
+
+* Links requirements (https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/451#issuecomment-1787420407)
+  * adding a `channel` property to a link object is valuable for efficient binding capabilities for Pub/Sub aware clients
+  * non-aware clients would simply be presented a link to a Pub/Sub broker without further context
+    * this is what the AsyncAPI document is there for (at the landing page, etc.)
+  * we should add the ability to cross-reference collection ids from an AsyncAPI document
+    * `channels.*.x-ogc-api-collection.url`, for example
+  * update link requirement to be a permission to facilitate Pub/Sub aware client interoperability
+    * done in https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/pull/464
+
+* Channels requirements (https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/452#issuecomment-1787419817)
+  * is the OGC API endpoint topic structure enough?
+    * TB19 ldproxy demo prefixed topics with tokens to help make unique, which is valuable in the context of broker message aggregation
+    * we could also consider filters as part of a topic
+      * could be advanced functionality
+  * turn channels requirement into separate conformance class
+    * done in https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/pull/465
+
+* Message payload:
+  * should make clear that if the message payload is an item, then `id` property should persist.  Else, if a notificationm, the `id` would be a GUID.
+
+* Cross SWG engagement and longer term Pub/Sub SWG activities
+  * Pub/Sub is a valuable capability for numerous OGC APIs
+    * Connected Systems
+    * Features: feature transactions
+    * Processes: subscribing to async jobs channels, new processes
+    * Records: aggregation/metadata ingest/publication
+    * Common: collections publishing data updaetes (e.g. publication of new NWP model run for EDR or Maps
+
+  * engage with SWGs to determine Pub/Sub approach to notify workflow/patterns on changes to resources
+
+A live demo was given which exemplified the capabilities of Pub/Sub as a workflow for metadata catalogue management.

@@ -5,6 +5,9 @@ The code sprint included multiple software libraries, OWS implementations, OGC A
 
 === Approved and Candidate OGC Standards
 
+include::results/ogcapirecords.adoc[]
+include::results/ogcapiedr.adoc[]
+include::results/ogcjsonfg.adoc[]
 include::results/example.adoc[]
 
 
@@ -14,4 +17,6 @@ include::results/example2.adoc[]
 
 === Software Projects and Products
 
+include::results/pycsw.adoc[]
+include::results/pygeoapi.adoc[]
 include::results/example3.adoc[]
