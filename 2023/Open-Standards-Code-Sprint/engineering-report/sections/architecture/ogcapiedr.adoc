@@ -1,3 +1,5 @@
 ==== OGC API - Environmental Data Retrieval
 
-TBA
+The https://ogcapi.ogc.org/edr[OGC API - Environmental Data Retrieval (EDR)] Standard API provides a family of lightweight interfaces to access Environmental Data resources. Each resource addressed by an EDR API maps to a defined query pattern. This specification identifies resources, captures compliance classes, and specifies requirements which are applicable to OGC Environmental Data Retrieval API’s. This specification addresses two fundamental operations; discovery and query. Discovery operations allow the API to be interrogated to determine its capabilities and retrieve information (metadata) about this distribution of a resource. This includes the API definition of the server as well as metadata about the Environmental Data resources provided by the server. Query operations allow Environmental Data resources to be retrieved from the underlying data store based upon simple selection criteria, defined by this standard and selected by the client.
+
+Recently, the EDR SWG has commenced work on EDR Part 2: Publish-Subscribe workflow.

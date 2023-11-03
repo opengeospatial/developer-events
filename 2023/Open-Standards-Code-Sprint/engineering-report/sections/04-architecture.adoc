@@ -41,4 +41,6 @@ include::architecture/geonetwork.adoc[]
 
 include::architecture/pygeoapi.adoc[]
 
+include::architecture/pycsw.adoc[]
+
 include::architecture/ldproxy.adoc[]
