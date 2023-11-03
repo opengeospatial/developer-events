@@ -17,6 +17,8 @@
 :submitting-organizations: Organization One; Organization Two
 :mn-document-class: ogc
 :mn-output-extensions: xml,html,doc,pdf
+:toclevels: 3
+:htmltoclevels: 3
 :local-cache-only:
 :data-uri-image:
 :pdf-uri: ./document.pdf

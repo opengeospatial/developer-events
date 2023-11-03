@@ -1,4 +1,6 @@
 [[muddi]]
-==== MUDDI
+==== Model for Underground Data Definition and Integration (MUDDI)
 
-TBA
+The MUDDI candidate standard serves as a framework to make datasets that utilize different information for underground objects interoperable, exchangeable, and more easily manageable.
+
+The MUDDI Conceptual Model represents real-world objects found underground. It was designed as a common basis to create implementations that make different types of subsurface data - such as those relating to utilities, transport infrastructure, soils, ground water, or environmental parameters - interoperable in support of a variety of use cases and in different jurisdictions and user communities. 
