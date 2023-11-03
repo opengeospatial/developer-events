@@ -14,6 +14,8 @@ The rest of this section describes the software deployed and standards implement
 
 include::architecture/ogcsensorthingsapi.adoc[]
 
+include::architecture/ogcstaplus.adoc[]
+
 include::architecture/ogcapifeatures.adoc[]
 
 include::architecture/ogcapitiles.adoc[]
@@ -31,7 +33,9 @@ include::architecture/muddi.adoc[]
 
 include::architecture/ogcapirecords.adoc[]
 
-=== Other Specifications
+include::architecture/ogcpubsub.adoc[]
+
+=== Specifications from the Community
 
 include::architecture/gimi.adoc[]
 
@@ -39,8 +43,14 @@ include::architecture/gimi.adoc[]
 
 include::architecture/geonetwork.adoc[]
 
+include::architecture/geo_heif_viewer.adoc[]
+
 include::architecture/pygeoapi.adoc[]
 
 include::architecture/pycsw.adoc[]
 
 include::architecture/ldproxy.adoc[]
+
+include::architecture/cubeserv.adoc[]
+
+include::architecture/gnosis.adoc[]
