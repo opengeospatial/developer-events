@@ -11,6 +11,8 @@ include::results/ogcapiedr.adoc[]
 
 include::results/ogcjsonfg.adoc[]
 
+include::results/geonovum.adoc[]
+
 include::results/example.adoc[]
 
 
