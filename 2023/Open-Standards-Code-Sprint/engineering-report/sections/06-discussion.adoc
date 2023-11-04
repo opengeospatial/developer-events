@@ -7,3 +7,8 @@ include::discussion/example2.adoc[]
 
 include::discussion/example3.adoc[]
 
+
+//OGC API - Features - Part 5, Addition of units in schema (see ldproxy demo 00:29:00 on recording)
+
+
+
