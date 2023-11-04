@@ -7,4 +7,4 @@ to test JSON FG documents against the ETS requirements.  The initial implementat
 The tool is implemented in Python and contributions are welcome and encouraged.
 
 .Screenshot of the json-fg-validator tool providing an ETS report.
-image::../images/json-fg-validator-ets-report.png[align="center"]
+image::images/json-fg-validator-ets-report.png[align="center"]
