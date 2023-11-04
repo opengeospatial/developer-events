@@ -1,7 +1,7 @@
 [[pygeoapi_results]]
 ==== OSGeo pygeoapi
 
-The pygeoapi project implemented an OGC API - Rexords  https://github.com/geopython/pygeoapi/pull/1386[CSW Facade] plugin
+The pygeoapi project implemented an OGC API - Records  https://github.com/geopython/pygeoapi/pull/1386[CSW Facade] plugin
 as a means to bridge CSW implementations.  Note that support is bound to CSW 2/3 and the CSW Record core model (ISO 19115/19139
 support can be implemented as future work).  This work was merged to the core pygeoapi codebase.
 
