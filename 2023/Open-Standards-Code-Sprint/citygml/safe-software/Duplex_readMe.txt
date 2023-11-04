@@ -1,0 +1,1 @@
+https://github.com/andyward/XBimDemo/blob/master/Xbim.TestApp/Duplex_A_20110907.ifc
