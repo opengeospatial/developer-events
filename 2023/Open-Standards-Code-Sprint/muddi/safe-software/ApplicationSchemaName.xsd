@@ -1,0 +1,2411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:abc="http://SomeNameSpace.com"
+        xmlns:gml="http://www.opengis.net/gml/3.2"
+        elementFormDefault="qualified"
+        targetNamespace="http://SomeNameSpace.com"
+        version="1.0">
+   <annotation>
+      <documentation>This pattern provides a starting point for modeling a GML Application Schema which is a specialized xml schema that uses the Geographic Markup Language to model Features to provide the basis for interoperability within a community of interest.</documentation>
+      <appinfo>
+         <gmlProfileSchema xmlns="http://www.opengis.net/gml/3.2">http://www.opengis.net/gml</gmlProfileSchema>
+      </appinfo>
+   </annotation>
+   <import namespace="http://www.opengis.net/gml/3.2"
+           schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+   <element name="Access"
+            substitutionGroup="abc:NetworkAccessory"
+            type="abc:AccessType">
+      <annotation>
+         <documentation>NetworkObject:
+&lt;&lt;FeatureType&gt;&gt;
+Asset that has a role in the conveyance of a commodity in a utility network.</documentation>
+      </annotation>
+   </element>
+   <complexType name="AccessType">
+      <complexContent>
+         <extension base="abc:NetworkAccessoryType">
+            <sequence>
+               <element minOccurs="0" name="accessType" type="abc:AccessTypeValueType">
+                  <annotation>
+                     <documentation>utilitySubType:
+Optional
+Type of utility service at a finer level of classification than utility type. The values for utilitySubType are defined in the &lt;UtilitySubTypeValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="numberOfCovers" type="integer"/>
+               <element name="geometry" type="gml:PointPropertyType"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <simpleType name="AccessTypeValueType">
+      <annotation>
+         <documentation>Network Node Component Type Codelist
+Codelist of specific types of NetworkNodes. These may be redundant with derived network node feature types and supplemented by more specific component type codelists. It allows new NetworkNode feature types to be added without changing the model.</documentation>
+      </annotation>
+      <union memberTypes="abc:AccessTypeValueEnumerationType abc:AccessTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="AccessTypeValueEnumerationType">
+      <annotation>
+         <documentation>Network Node Component Type Codelist
+Codelist of specific types of NetworkNodes. These may be redundant with derived network node feature types and supplemented by more specific component type codelists. It allows new NetworkNode feature types to be added without changing the model.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Access Chamber"/>
+         <enumeration value="Access Plate"/>
+         <enumeration value="Other"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="AccessTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="ActivityTypeValueType">
+      <annotation>
+         <documentation>Enhanced Measures Type Codelist
+Abstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.</documentation>
+      </annotation>
+      <union memberTypes="abc:ActivityTypeValueEnumerationType abc:ActivityTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="ActivityTypeValueEnumerationType">
+      <annotation>
+         <documentation>Enhanced Measures Type Codelist
+Abstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.</documentation>
+      </annotation>
+      <restriction base="string"/>
+   </simpleType>
+   <simpleType name="ActivityTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="AnnotationHorizontalAlignmentType">
+      <annotation>
+         <documentation>Measurement Units Codelist
+Codelist of attribute value measurement units</documentation>
+      </annotation>
+      <union memberTypes="abc:AnnotationHorizontalAlignmentEnumerationType abc:AnnotationHorizontalAlignmentOtherType"/>
+   </simpleType>
+   <simpleType name="AnnotationHorizontalAlignmentEnumerationType">
+      <annotation>
+         <documentation>Measurement Units Codelist
+Codelist of attribute value measurement units</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Left"/>
+         <enumeration value="Full"/>
+         <enumeration value="Right"/>
+         <enumeration value="Centre"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="AnnotationHorizontalAlignmentOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="AnnotationVerticalAlignmentType">
+      <annotation>
+         <documentation>Measurement Units Codelist
+Codelist of attribute value measurement units</documentation>
+      </annotation>
+      <union memberTypes="abc:AnnotationVerticalAlignmentEnumerationType abc:AnnotationVerticalAlignmentOtherType"/>
+   </simpleType>
+   <simpleType name="AnnotationVerticalAlignmentEnumerationType">
+      <annotation>
+         <documentation>Measurement Units Codelist
+Codelist of attribute value measurement units</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Baseline"/>
+         <enumeration value="Top"/>
+         <enumeration value="Bottom"/>
+         <enumeration value="Centre"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="AnnotationVerticalAlignmentOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="Container"
+            substitutionGroup="abc:NetworkAccessory"
+            type="abc:ContainerType">
+      <annotation>
+         <documentation>ContainerObject:
+&lt;&lt;FeatureType&gt;&gt;
+Asset that has a role in the conveyance of a commodity in a utility network.</documentation>
+      </annotation>
+   </element>
+   <complexType name="ContainerType">
+      <complexContent>
+         <extension base="abc:NetworkAccessoryType">
+            <sequence>
+               <element minOccurs="0"
+                        name="containerType"
+                        type="abc:ContainerTypeValueType">
+                  <annotation>
+                     <documentation>containerType
+Optional
+Type of utility service at a finer level of classification than utility type. The values for utilitySubType are defined in the &lt;UtilitySubTypeValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+               <element name="geometry" type="gml:CurvePropertyType"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <simpleType name="ContainerTypeValueType">
+      <annotation>
+         <documentation>Container Type Codelist
+Codelist of container types</documentation>
+      </annotation>
+      <union memberTypes="abc:ContainerTypeValueEnumerationType abc:ContainerTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="ContainerTypeValueEnumerationType">
+      <annotation>
+         <documentation>Container Type Codelist
+Codelist of container types</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Arcade"/>
+         <enumeration value="Conduit"/>
+         <enumeration value="Duct"/>
+         <enumeration value="Other"/>
+         <enumeration value="Pipe"/>
+         <enumeration value="Pit"/>
+         <enumeration value="Subduct"/>
+         <enumeration value="Trench"/>
+         <enumeration value="Tunnel"/>
+         <enumeration value="Unknown"/>
+         <enumeration value="Utilidor"/>
+         <enumeration value="Vault"/>
+         <enumeration value="Carrier Pipe"/>
+         <enumeration value="Vent"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="ContainerTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="ConveyanceCategoryValueType">
+      <annotation>
+         <documentation>Conveyance Category Codelist
+Codelist of roles that particular network segments play in overall network conveyance, e.g. Trunk vs Distribution.</documentation>
+      </annotation>
+      <union memberTypes="abc:ConveyanceCategoryValueEnumerationType abc:ConveyanceCategoryValueOtherType"/>
+   </simpleType>
+   <simpleType name="ConveyanceCategoryValueEnumerationType">
+      <annotation>
+         <documentation>Conveyance Category Codelist
+Codelist of roles that particular network segments play in overall network conveyance, e.g. Trunk vs Distribution.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Auxiliary"/>
+         <enumeration value="Collection"/>
+         <enumeration value="Communication"/>
+         <enumeration value="Discharge"/>
+         <enumeration value="Distribution"/>
+         <enumeration value="Fire"/>
+         <enumeration value="Flow Line"/>
+         <enumeration value="Dual Flow and Return Line"/>
+         <enumeration value="Other"/>
+         <enumeration value="Private"/>
+         <enumeration value="Return Line"/>
+         <enumeration value="Service"/>
+         <enumeration value="Transmission"/>
+         <enumeration value="Trunk"/>
+         <enumeration value="Unknown"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="ConveyanceCategoryValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="ConveyanceMethodValueType">
+      <annotation>
+         <documentation>Conveyance Method Codelist
+Codelist of methods by which utility commodities are conveyed through a network asset, e.g. gravity vs pumped.</documentation>
+      </annotation>
+      <union memberTypes="abc:ConveyanceMethodValueEnumerationType abc:ConveyanceMethodValueOtherType"/>
+   </simpleType>
+   <simpleType name="ConveyanceMethodValueEnumerationType">
+      <annotation>
+         <documentation>Conveyance Method Codelist
+Codelist of methods by which utility commodities are conveyed through a network asset, e.g. gravity vs pumped.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Low Pressure"/>
+         <enumeration value="Low Voltage"/>
+         <enumeration value="Pressure"/>
+         <enumeration value="Gravity"/>
+         <enumeration value="High Pressure"/>
+         <enumeration value="High Voltage"/>
+         <enumeration value="Unknown"/>
+         <enumeration value="Other"/>
+         <enumeration value="Syphon"/>
+         <enumeration value="Vacuum"/>
+         <enumeration value="Intermediate Voltage"/>
+         <enumeration value="Medium Voltage"/>
+         <enumeration value="Intermediate Pressure"/>
+         <enumeration value="Medium Pressure"/>
+         <enumeration value="Pumped"/>
+         <enumeration value="Regional Intermediate Pressure"/>
+         <enumeration value="Regional High Pressure"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="ConveyanceMethodValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="DepthMethodValueType">
+      <annotation>
+         <documentation>Depth Method Codelist
+Codelist of methods by which the stated depth of a utility asset has been detemined.</documentation>
+      </annotation>
+      <union memberTypes="abc:DepthMethodValueEnumerationType abc:DepthMethodValueOtherType"/>
+   </simpleType>
+   <simpleType name="DepthMethodValueEnumerationType">
+      <annotation>
+         <documentation>Depth Method Codelist
+Codelist of methods by which the stated depth of a utility asset has been detemined.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Inferred"/>
+         <enumeration value="Sensed"/>
+         <enumeration value="Estimated"/>
+         <enumeration value="Standard"/>
+         <enumeration value="Surveyed"/>
+         <enumeration value="Unknown"/>
+         <enumeration value="Not Applicable"/>
+         <enumeration value="Other"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="DepthMethodValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="EnhancedMeasuresTypeValueType">
+      <annotation>
+         <documentation>Enhanced Measures Type Codelist
+Abstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.</documentation>
+      </annotation>
+      <union memberTypes="abc:EnhancedMeasuresTypeValueEnumerationType abc:EnhancedMeasuresTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="EnhancedMeasuresTypeValueEnumerationType">
+      <annotation>
+         <documentation>Enhanced Measures Type Codelist
+Abstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.</documentation>
+      </annotation>
+      <restriction base="string"/>
+   </simpleType>
+   <simpleType name="EnhancedMeasuresTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="FeatureTypeValueType">
+      <annotation>
+         <documentation>Feature Type Codelist:
+Codelist of feature types for MUDDIObjects. This may be redundant with the name of a derived feature, but allows generic utility information to be typed and also allows new feature types to be added without changing the model.</documentation>
+      </annotation>
+      <union memberTypes="abc:FeatureTypeValueEnumerationType abc:FeatureTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="FeatureTypeValueEnumerationType">
+      <annotation>
+         <documentation>Feature Type Codelist:
+Codelist of feature types for MUDDIObjects. This may be redundant with the name of a derived feature, but allows generic utility information to be typed and also allows new feature types to be added without changing the model.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Access Object"/>
+         <enumeration value="Container Object"/>
+         <enumeration value="Physical Protection Object"/>
+         <enumeration value="Network"/>
+         <enumeration value="Network Accessory Object"/>
+         <enumeration value="Network Area"/>
+         <enumeration value="Network Description Object"/>
+         <enumeration value="Network Link"/>
+         <enumeration value="Network Node"/>
+         <enumeration value="Network Object"/>
+         <enumeration value="Network Site"/>
+         <enumeration value="Planning Area"/>
+         <enumeration value="Support Object"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="FeatureTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="GuidanceType"
+            substitutionGroup="gml:AbstractGML"
+            type="abc:GuidanceTypeType"/>
+   <complexType name="GuidanceTypeType">
+      <complexContent>
+         <extension base="gml:AbstractGMLType">
+            <sequence>
+               <element minOccurs="0" name="description" type="string"/>
+               <element name="linkedFile">
+                  <complexType>
+                     <complexContent>
+                        <extension base="gml:AbstractMemberType">
+                           <sequence minOccurs="0">
+                              <element ref="abc:LinkedFileType"/>
+                           </sequence>
+                           <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                        </extension>
+                     </complexContent>
+                  </complexType>
+               </element>
+               <element name="id" type="string"/>
+               <element name="name" type="string"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="GuidanceTypePropertyType">
+      <sequence minOccurs="0">
+         <element ref="abc:GuidanceType"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <element name="HeightType"
+            substitutionGroup="gml:AbstractObject"
+            type="abc:HeightTypeType"/>
+   <complexType name="HeightTypeType">
+      <sequence>
+         <element name="height" type="double"/>
+         <element name="unitOfMeasure" type="abc:MeasurementUnitsValueType"/>
+      </sequence>
+   </complexType>
+   <complexType name="HeightTypePropertyType">
+      <sequence>
+         <element ref="abc:HeightType"/>
+      </sequence>
+   </complexType>
+   <simpleType name="HorizontalMeasurementMethodValueType">
+      <annotation>
+         <documentation>Horizontal Measurement Method Codelist
+Codelist of values for methods of horizontal measurement used while surveying the asset.</documentation>
+      </annotation>
+      <union memberTypes="abc:HorizontalMeasurementMethodValueEnumerationType abc:HorizontalMeasurementMethodValueOtherType"/>
+   </simpleType>
+   <simpleType name="HorizontalMeasurementMethodValueEnumerationType">
+      <annotation>
+         <documentation>Horizontal Measurement Method Codelist
+Codelist of values for methods of horizontal measurement used while surveying the asset.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Not Applicable"/>
+         <enumeration value="Estimated"/>
+         <enumeration value="Sensed"/>
+         <enumeration value="Inferred"/>
+         <enumeration value="Measured"/>
+         <enumeration value="Surveyed"/>
+         <enumeration value="Unknown"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="HorizontalMeasurementMethodValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="IntendedPermanenceValueType">
+      <annotation>
+         <documentation>Intended Permanence Codelist
+Codelist of values for intended permanence</documentation>
+      </annotation>
+      <union memberTypes="abc:IntendedPermanenceValueEnumerationType abc:IntendedPermanenceValueOtherType"/>
+   </simpleType>
+   <simpleType name="IntendedPermanenceValueEnumerationType">
+      <annotation>
+         <documentation>Intended Permanence Codelist
+Codelist of values for intended permanence</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Temporary"/>
+         <enumeration value="Permanent"/>
+         <enumeration value="Unknown"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="IntendedPermanenceValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="LengthType"
+            substitutionGroup="gml:AbstractObject"
+            type="abc:LengthTypeType"/>
+   <complexType name="LengthTypeType">
+      <sequence>
+         <element name="length" type="double"/>
+         <element name="unitOfMeasure" type="abc:MeasurementUnitsValueType"/>
+      </sequence>
+   </complexType>
+   <complexType name="LengthTypePropertyType">
+      <sequence>
+         <element ref="abc:LengthType"/>
+      </sequence>
+   </complexType>
+   <element name="LinkedFileType"
+            substitutionGroup="gml:AbstractGML"
+            type="abc:LinkedFileTypeType"/>
+   <complexType name="LinkedFileTypeType">
+      <complexContent>
+         <extension base="gml:AbstractGMLType">
+            <sequence>
+               <element name="fullPath" type="string"/>
+               <element name="id" type="string"/>
+               <element minOccurs="0" name="mimeType" type="string"/>
+               <element name="name" type="string"/>
+               <element minOccurs="0" name="typeDescription" type="string"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="LinkedFileTypePropertyType">
+      <sequence minOccurs="0">
+         <element ref="abc:LinkedFileType"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <simpleType name="LocationTypeValueType">
+      <annotation>
+         <documentation>Enhanced Measures Type Codelist
+Abstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.</documentation>
+      </annotation>
+      <union memberTypes="abc:LocationTypeValueEnumerationType abc:LocationTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="LocationTypeValueEnumerationType">
+      <annotation>
+         <documentation>Enhanced Measures Type Codelist
+Abstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Carriageway"/>
+         <enumeration value="Field"/>
+         <enumeration value="Other"/>
+         <enumeration value="Footpath"/>
+         <enumeration value="Verge"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="LocationTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="MUDDIAsset"
+            substitutionGroup="abc:MUDDIObject"
+            type="abc:MUDDIAssetType">
+      <annotation>
+         <documentation>MUDDIAsset:
+&lt;&lt;FeatureType&gt;&gt;
+The parent class of built environment infrastructure that can be located, owned, operated, oriented, and material. Its mandatory and optional attributes are inherited by all more specialized classes in the MUDDI core model and derived NUAR Harmonized Model.
+
+Mandatory attributes:
+assetID
+assetOwner
+businessContact
+emergencyContact
+horizontalCRS
+systemID
+systemLoadDate</documentation>
+      </annotation>
+   </element>
+   <complexType name="MUDDIAssetType">
+      <complexContent>
+         <extension base="abc:MUDDIObjectType">
+            <sequence>
+               <element minOccurs="0" name="centroidXYZ" type="string">
+                  <annotation>
+                     <documentation>centroidXYZ:
+Optional
+X-Y-Z coordinates representing the center of the utility feature for data exchange purposes. For non-linear structures, XYZ represents an anchor point used for 3D representations, which may or not coincide with the feature’s centroid. In many cases, XYZ coincides with the observed location in the field (e.g., center of manhole lid). For proper orientation in a 3D space, the Azimuth attribute is also necessary. (ASCE_AsBuilt)</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="depth" type="double">
+                  <annotation>
+                     <documentation>depth:
+Optional
+Numerical value in measurementUnits of the depth from grade at time of survey to the top of the asset. This attribute should be used for a single approximation of asset depth according to depthMethod. More detailed / precise vertical positioning information should be represented in a geometry attribute.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="depthMethod" type="abc:DepthMethodValueType">
+                  <annotation>
+                     <documentation>depthMethod:
+Optional
+The method by which the value for depth was determined. Values for this attribute are defined in the &lt;DepthMethodValue&gt; codelist</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="enhancedMeasures"
+                        type="abc:EnhancedMeasuresTypeValueType">
+                  <annotation>
+                     <documentation>enhancedMeasures (NEW):
+Optional
+An indication of enhanced measures which may need to be taken when using data for this feature. This may include following specific guidance, or a requirement to contact the asset owner before proceeding.
+This value may also influence how the feature is symbolised in a given implementation.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="enhancedMeasuresProximity" type="double">
+                  <annotation>
+                     <documentation>enhancedMeasuresProximity (NEW):
+Optional
+An indication of proximity to the feature which would trigger any enhanced measures.
+This could be used to dynamically include a "buffer" when symbolising the feature for a given implementation.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="horizontalAccuracy" type="double">
+                  <annotation>
+                     <documentation>horizontalAccuracy:
+Optional
+If the last survey of the feature was carried out according to PAS128, this field should represent the horizontal ‘Location accuracy’ associated with the Quality Level assigned to this feature, expressed in metres. If the last survey was not carried out according to PAS128, this field should represent the worst-case ‘margin of error’ reported by the surveying equipment used at the time, expressed in metres. This field should only be populated if objective data about horizontal accuracy is available.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="horizontalMeasurementMethod"
+                        type="abc:HorizontalMeasurementMethodValueType">
+                  <annotation>
+                     <documentation>horizontalMeasurementMethod:
+Optional
+
+The method by which the horizontal position of the feature was captured.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="intendedPermanence"
+                        type="abc:IntendedPermanenceValueType">
+                  <annotation>
+                     <documentation>intendedPermanence:
+Optional
+Intended longevity of the utility feature. Depending on the implementation, most databases would probably only handle permanent features under the assumption that temporary features occupy the right-of- way for a limited period, after which the permit requires the removal of those features. However, if the temporary accommodation is via a lease (e.g., a temporary water line to support oil or gas shale developments), tracking the status of the temporary feature at any time may be important. (ASCE As-built) Values for intendedPermanence are defined in the &lt;IntendedPermanenceValue&gt; codelist</documentation>
+                  </annotation>
+               </element>
+               <element name="emergencyContact" type="string"/>
+               <element maxOccurs="unbounded"
+                        minOccurs="0"
+                        name="localeReference"
+                        type="string">
+                  <annotation>
+                     <documentation>localeReference
+Optional
+An identifier for the general locale of the object - e.g. a street reference or land parcel id</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="locationType" type="abc:LocationTypeValueType">
+                  <annotation>
+                     <documentation>locationType
+Optional
+An indication of the location of the object (e.g. carriageway, verge etc). Values for locationType are defined in the &lt;LocationTypeValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="assetName" type="string">
+                  <annotation>
+                     <documentation>assetName
+Optional
+Any name assigned to the asset by the asset owner</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="assetOwner" type="string">
+                  <annotation>
+                     <documentation>assetOwner:
+Mandatory
+Name / identity of the asset owner. Discrete contact details are stored in &lt;ContactDetails&gt; objects with "assetOwner" = "businessName"</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="assetOwnerID" type="string">
+                  <annotation>
+                     <documentation>assetOwnerID: {id} 
+mandatory
+This an identifier assigned uniquely to an asset owner. It should be as stable and persistent as possible relative to that particular physical asset or defined region.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="operator" type="string">
+                  <annotation>
+                     <documentation>assetOperator:
+Optional
+Name / identity of the asset operator if distinct from the asset owner</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="qualityLevel" type="abc:QualityLevelValueType">
+                  <annotation>
+                     <documentation>qualityLevel:
+Optional
+Quality level in accordance with PAS128:2014/2020. This field should only be populated if the dateDataCollected is populated with the data of a PAS128-compliant utility survey, and dataQuality should reflect the Quality Level assigned during that survey. Values for qualityLevel are defined in the &lt;QualityLevelValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="undergroundStatus"
+                        type="abc:UndergroundStatusValueType">
+                  <annotation>
+                     <documentation>undergroundStatus:
+Optional
+Indicator of whether the feature is partially or completely underground. (ASCE) The values for undergroundStatus are defined in the &lt;UndergroundStatusValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="material" type="abc:MaterialTypeValueType"/>
+               <element minOccurs="0" name="verticalAccuracy" type="double">
+                  <annotation>
+                     <documentation>verticalAccuracy:
+Optional
+If the last survey of the feature was carried out according to PAS128, this field should represent the vertical ‘Location accuracy’ associated with the Quality Level assigned to this feature, expressed in metres. If the last survey was not carried out according to PAS128, this field should represent the worst-case ‘margin of error’ reported by the surveying equipment used at the time, expressed in metres. This field should only be populated if objective data about vertical accuracy is available.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="colour" type="string"/>
+               <element name="azimuth" type="double"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <element name="MUDDIEnvironmentUnit"
+            substitutionGroup="abc:MUDDIObject"
+            type="abc:MUDDIEnvironmentUnitType"/>
+   <complexType name="MUDDIEnvironmentUnitType">
+      <complexContent>
+         <extension base="abc:MUDDIObjectType">
+            <sequence>
+               <element name="geometry" type="gml:SurfacePropertyType"/>
+               <element minOccurs="0" name="upperDepth" type="double"/>
+               <element minOccurs="0" name="lowerDepth" type="double"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="MUDDIEnvironmentUnitPropertyType">
+      <sequence minOccurs="0">
+         <element ref="abc:MUDDIEnvironmentUnit"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <element name="MUDDIEvent"
+            substitutionGroup="abc:MUDDIObject"
+            type="abc:MUDDIEventType"/>
+   <complexType name="MUDDIEventType">
+      <complexContent>
+         <extension base="abc:MUDDIObjectType">
+            <sequence/>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="MUDDIEventPropertyType">
+      <sequence minOccurs="0">
+         <element ref="abc:MUDDIEvent"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <element name="MUDDIObject"
+            substitutionGroup="gml:AbstractFeature"
+            type="abc:MUDDIObjectType">
+      <annotation>
+         <documentation>MUDDIObject:
+&lt;&lt;FeatureType&gt;&gt;
+The parent class of underground infrastructure, space, event, environmental unit, or other underground +/- surface features that are identified, located, typed, and about which data is maintained. Its mandatory and optional attributes are inherited by all more specialized classes in the MUDDI core model and derived NUAR Harmonized Model.
+
+Mandatory attributes:
+dataProvider
+businessContact
+horizontalCRS
+systemID
+systemLoadDate</documentation>
+      </annotation>
+   </element>
+   <complexType name="MUDDIObjectType">
+      <complexContent>
+         <extension base="gml:AbstractFeatureType">
+            <sequence>
+               <element name="businessContact" type="string">
+                  <annotation>
+                     <documentation>businessContact:
+Mandatory
+Contact information for the asset responsible party</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="certification" type="string">
+                  <annotation>
+                     <documentation>certification:
+Optional
+Name and credentials of the party (if any) that certified the data as meeting Positional Accuracy requirements as described in Table 1 and attribute data requirements as agreed for data exchange purposes. (ASCE_AsBuilt).</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="dataOwner" type="string">
+                  <annotation>
+                     <documentation>NEW</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="dataOwnerUniqueID" type="string"/>
+               <element minOccurs="0" name="dataProviderUniqueID" type="string">
+                  <annotation>
+                     <documentation>dataAgentAssetID:
+Optional
+
+This an identifier assigned uniquely by a data agent acting as an intermediary between the asset owner and the platform.</documentation>
+                  </annotation>
+               </element>
+               <element name="dataProvider" type="string"/>
+               <element minOccurs="0" name="dataSensitivityLevel" type="string">
+                  <annotation>
+                     <documentation>dataSensitivityLevel:
+Optional
+Indicator of the sensitivity level of the data recorded for a utility feature. If the data are considered sensitive security information (SSI), the data must be labeled on any output produced and handled appropriately (ASCE As-built).</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="dateDataCollected" type="date">
+                  <annotation>
+                     <documentation>dateDataCollected:
+Optional
+Date when a utility feature was last surveyed in the field. If this survey was carried out according to the PAS128 standard, the Quality Level assigned to the feature should be recorded in the qualityLevel field. If the survey on this date was not carried out according to PAS128, the qualityLevel field must be left unpopulated.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="dateOfLastStatusChange" type="date">
+                  <annotation>
+                     <documentation>NEW</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="description" type="string">
+                  <annotation>
+                     <documentation>description (NEW)
+
+Optional
+
+Descriptive text for the feature.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="featureType" type="abc:FeatureTypeValueType">
+                  <annotation>
+                     <documentation>featureType:
+Optional
+Category of utility feature based on feature function and configuration. Function refers to the main purpose of the utility feature. Configuration refers to geometric and structural characteristics of the utility feature. Depending on the implementation, feature differentiation may be at the feature class level (e.g., separate feature classes for devices, access points, support structures, and so on) or by attribute. Because of the small number of potential feature types, feature differentiation at the feature class level is common. Values for featureType are defined in the &lt;FeatureTypeValue&gt; codelist</documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="unbounded" minOccurs="0" name="guidance">
+                  <complexType>
+                     <complexContent>
+                        <extension base="gml:AbstractMemberType">
+                           <sequence minOccurs="0">
+                              <element ref="abc:GuidanceType"/>
+                           </sequence>
+                           <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                        </extension>
+                     </complexContent>
+                  </complexType>
+               </element>
+               <element name="horizontalCRS" type="string">
+                  <annotation>
+                     <documentation>horizontalCRS:
+Mandatory
+Coordinate system, datum, and epoch date (if applicable) associated with the X and Y coordinates. (ASCE As-built)</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="measurementUnits"
+                        type="abc:MeasurementUnitsValueType">
+                  <annotation>
+                     <documentation>measurementUnits:
+Optional
+Units used to express height, width, length, and wall thickness. For data exchange purposes, the units of measurement are the same for all dimensions. (ASCE). Values for measurementUnits are defined in the &lt;MeasurementUnitsValue&gt; codelist</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="operationalStatus"
+                        type="abc:OperationalStatusValueType">
+                  <annotation>
+                     <documentation>operationalStatus:
+Optional
+Operational status of the utility feature. Values for operationalStatus are defined in the &lt;OperationalStatusValue&gt; codelist</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="originalDateDataCollected" type="date">
+                  <annotation>
+                     <documentation>originalDateDataCollected:
+Optional
+The date upon which this utility feature was originally captured in the source asset owner system.</documentation>
+                  </annotation>
+               </element>
+               <element name="systemID" type="string">
+                  <annotation>
+                     <documentation>systemID:
+Mandatory
+Identifier for this data record defined by and globally unique within the system that stores the data record</documentation>
+                  </annotation>
+               </element>
+               <element name="systemLoadDate" type="date">
+                  <annotation>
+                     <documentation>systemLoadDate:
+Mandatory
+Date at which the data record for this entity was last loaded into the datastore system.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="version" type="string">
+                  <annotation>
+                     <documentation>version:
+Optional
+The version specifier for the present data record.</documentation>
+                  </annotation>
+               </element>
+               <element name="objectID" type="string"/>
+               <element minOccurs="0" name="verticalCRS" type="string">
+                  <annotation>
+                     <documentation>verticalCRS:
+Optional
+Datum, etc. for the Z coordinate. (ASCE) This is the absolute Z coordinate, not the depth from grade</documentation>
+                  </annotation>
+               </element>
+               <element name="recordID" type="string"/>
+               <element minOccurs="0" name="encloses">
+                  <annotation>
+                     <appinfo>
+                        <reversePropertyName xmlns="http://www.opengis.net/gml/3.2">abc:enclosedBy</reversePropertyName>
+                     </appinfo>
+                  </annotation>
+                  <complexType>
+                     <sequence minOccurs="0">
+                        <element ref="abc:MUDDIObject"/>
+                     </sequence>
+                     <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+                  </complexType>
+               </element>
+               <element maxOccurs="unbounded" minOccurs="0" name="enclosedBy">
+                  <annotation>
+                     <appinfo>
+                        <reversePropertyName xmlns="http://www.opengis.net/gml/3.2">abc:encloses</reversePropertyName>
+                     </appinfo>
+                  </annotation>
+                  <complexType>
+                     <sequence minOccurs="0">
+                        <element ref="abc:MUDDIObject"/>
+                     </sequence>
+                     <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+                  </complexType>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <element name="MUDDISpace"
+            substitutionGroup="abc:MUDDIObject"
+            type="abc:MUDDISpaceType"/>
+   <complexType name="MUDDISpaceType">
+      <complexContent>
+         <extension base="abc:MUDDIObjectType">
+            <sequence>
+               <element name="geometry" type="gml:SurfacePropertyType"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="MUDDISpacePropertyType">
+      <sequence minOccurs="0">
+         <element ref="abc:MUDDISpace"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <simpleType name="MaterialTypeValueType">
+      <annotation>
+         <documentation>Material Type Codelist
+Codelist of utility asset constituent materials.</documentation>
+      </annotation>
+      <union memberTypes="abc:MaterialTypeValueEnumerationType abc:MaterialTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="MaterialTypeValueEnumerationType">
+      <annotation>
+         <documentation>Material Type Codelist
+Codelist of utility asset constituent materials.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="ABS"/>
+         <enumeration value="Aluminium"/>
+         <enumeration value="Asbestos Cement"/>
+         <enumeration value="Asphalt"/>
+         <enumeration value="Brick"/>
+         <enumeration value="Cast Iron"/>
+         <enumeration value="Ceramic"/>
+         <enumeration value="Clay"/>
+         <enumeration value="Coated Steel"/>
+         <enumeration value="Composite"/>
+         <enumeration value="Concrete"/>
+         <enumeration value="Copper"/>
+         <enumeration value="Ductile Iron"/>
+         <enumeration value="Earthen"/>
+         <enumeration value="Fiberglass"/>
+         <enumeration value="Galvanised Iron"/>
+         <enumeration value="Galvanised Steel"/>
+         <enumeration value="Geotextile"/>
+         <enumeration value="Gravel"/>
+         <enumeration value="HDPE"/>
+         <enumeration value="Iron"/>
+         <enumeration value="LDPE"/>
+         <enumeration value="MDPE"/>
+         <enumeration value="MOPC"/>
+         <enumeration value="Optical Fibre"/>
+         <enumeration value="PEX"/>
+         <enumeration value="PitchFiber"/>
+         <enumeration value="Plastic"/>
+         <enumeration value="PVC"/>
+         <enumeration value="Spun Iron"/>
+         <enumeration value="Steel"/>
+         <enumeration value="Stone"/>
+         <enumeration value="Tile"/>
+         <enumeration value="Transite"/>
+         <enumeration value="uPVC"/>
+         <enumeration value="Wood"/>
+         <enumeration value="Other"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="MaterialTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="MeasurementUnitsValueType">
+      <annotation>
+         <documentation>Measurement Units Codelist
+Codelist of attribute value measurement units</documentation>
+      </annotation>
+      <union memberTypes="abc:MeasurementUnitsValueEnumerationType abc:MeasurementUnitsValueOtherType"/>
+   </simpleType>
+   <simpleType name="MeasurementUnitsValueEnumerationType">
+      <annotation>
+         <documentation>Measurement Units Codelist
+Codelist of attribute value measurement units</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="bar"/>
+         <enumeration value="Centimetres"/>
+         <enumeration value="Degrees Centigrade"/>
+         <enumeration value="Degrees Fahrenheit"/>
+         <enumeration value="Feet"/>
+         <enumeration value="Inches"/>
+         <enumeration value="kV"/>
+         <enumeration value="mBar"/>
+         <enumeration value="Metres"/>
+         <enumeration value="Millimetres"/>
+         <enumeration value="Unknown"/>
+         <enumeration value="V"/>
+         <enumeration value="Yards"/>
+         <enumeration value="Megahertz"/>
+         <enumeration value="DateTime_8601"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="MeasurementUnitsValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="Network"
+            substitutionGroup="abc:MUDDIAsset"
+            type="abc:NetworkType">
+      <annotation>
+         <documentation>Network:
+&lt;&lt;FeatureType&gt;&gt;
+MUDDIObject that represents a whole or partial infrastructure network</documentation>
+      </annotation>
+   </element>
+   <complexType name="NetworkType">
+      <complexContent>
+         <extension base="abc:MUDDIAssetType">
+            <sequence>
+               <element minOccurs="0" name="networkType" type="string"/>
+               <element name="utilityType" type="abc:UtilityTypeValueType"/>
+               <element name="utilitySubType" type="abc:UtilitySubTypeValueType"/>
+               <element maxOccurs="unbounded" minOccurs="0" name="servedBy">
+                  <complexType>
+                     <sequence minOccurs="0">
+                        <element ref="abc:ServiceArea"/>
+                     </sequence>
+                     <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+                  </complexType>
+               </element>
+               <element maxOccurs="unbounded" minOccurs="0" name="isContainedBy">
+                  <complexType>
+                     <sequence minOccurs="0">
+                        <element ref="abc:Network"/>
+                     </sequence>
+                     <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+                  </complexType>
+               </element>
+               <element maxOccurs="unbounded" minOccurs="0" name="isSegment">
+                  <complexType>
+                     <sequence minOccurs="0">
+                        <element ref="abc:Network"/>
+                     </sequence>
+                     <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+                  </complexType>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <element abstract="true"
+            name="NetworkAccessory"
+            substitutionGroup="abc:NetworkAsset"
+            type="abc:NetworkAccessoryType">
+      <annotation>
+         <documentation>NetworkAccessoryObject:
+&lt;&lt;FeatureType&gt;&gt;
+Asset that has a role in the support, containment, access or physical protection for a conveyance object in a utility network.</documentation>
+      </annotation>
+   </element>
+   <complexType abstract="true" name="NetworkAccessoryType">
+      <complexContent>
+         <extension base="abc:NetworkAssetType">
+            <sequence>
+               <element name="accessoryType" type="abc:NetworkAccessoryTypeValueType">
+                  <annotation>
+                     <documentation>accessoryType
+Mandatory
+The type of the NetworkAccessoryObject. The values for accessoryType are defined in the &lt;NetworkAccessoryTypeValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="unbounded"
+                        minOccurs="0"
+                        name="associatedAssets"
+                        type="string">
+                  <annotation>
+                     <documentation>associatedAssets
+Optional
+Ids of any assets supported, contained, accessed or protected by this NetworkAccessoryObject.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="hasAccessory">
+                  <annotation>
+                     <documentation>hasAccessory</documentation>
+                  </annotation>
+                  <complexType>
+                     <sequence minOccurs="0">
+                        <element ref="abc:NetworkConveyance"/>
+                     </sequence>
+                     <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+                  </complexType>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <simpleType name="NetworkAccessoryTypeValueType">
+      <annotation>
+         <documentation>Network Area Type Codelist
+Codelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.</documentation>
+      </annotation>
+      <union memberTypes="abc:NetworkAccessoryTypeValueEnumerationType abc:NetworkAccessoryTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="NetworkAccessoryTypeValueEnumerationType">
+      <annotation>
+         <documentation>Network Area Type Codelist
+Codelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Access"/>
+         <enumeration value="Container"/>
+         <enumeration value="Other"/>
+         <enumeration value="Physical Protection"/>
+         <enumeration value="Support"/>
+         <enumeration value="Sensor"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="NetworkAccessoryTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="NetworkAreaTypeValueType">
+      <annotation>
+         <documentation>Network Area Type Codelist
+Codelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.</documentation>
+      </annotation>
+      <union memberTypes="abc:NetworkAreaTypeValueEnumerationType abc:NetworkAreaTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="NetworkAreaTypeValueEnumerationType">
+      <annotation>
+         <documentation>Network Area Type Codelist
+Codelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Site"/>
+         <enumeration value="Franchise Area"/>
+         <enumeration value="Right of Access"/>
+         <enumeration value="Other"/>
+         <enumeration value="Operational Patch"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="NetworkAreaTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="NetworkAsset"
+            substitutionGroup="abc:MUDDIAsset"
+            type="abc:NetworkAssetType">
+      <annotation>
+         <documentation>NetworkObject:
+&lt;&lt;FeatureType&gt;&gt;
+Asset that has a role in a utility network.</documentation>
+      </annotation>
+   </element>
+   <complexType name="NetworkAssetType">
+      <complexContent>
+         <extension base="abc:MUDDIAssetType">
+            <sequence>
+               <element minOccurs="0" name="container" type="string">
+                  <annotation>
+                     <documentation>container
+Optional
+The name or ID of any container object for this NetworkObject</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="dateOfInstallation" type="date">
+                  <annotation>
+                     <documentation>dateOfInstallation
+Optional
+The date upon which the NetworkObject was installed.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="insideHeight" type="abc:HeightTypePropertyType">
+                  <annotation>
+                     <documentation>insideHeight
+Optional
+For circular shaped segments, not applicable. For non-circular shaped segments, maximum inside height of cross-sectional shape. For features other than segments, maximum inside height of feature.(ASCE). Units are always defined by &lt;&lt;measurementUnits&gt;&gt;</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="insideLength" type="abc:LengthTypePropertyType">
+                  <annotation>
+                     <documentation>insideLength
+Optional
+For segments, not applicable. For features other than segments, maximum inside length of feature (measured in the horizontal plane, perpendicular to the width). Units are always defined by &lt;&lt;measurementUnits&gt;&gt;</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="insideWidth" type="abc:WidthTypePropertyType">
+                  <annotation>
+                     <documentation>insideWidth
+Optional
+For circular shaped segments, inside diameter of the utility feature cross section. For non-circular shaped segments, maximum inside width of cross-sectional shape. For features other than segments, maximum inside width of feature. Units are always defined by &lt;&lt;measurementUnits&gt;&gt;</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="isAuxiliary" type="boolean">
+                  <annotation>
+                     <documentation>isAuxiliary
+Optional
+Indication that this NetworkObject is part of an auxiliary network providing supporting services for the main network.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="isCathodicProtected" type="boolean">
+                  <annotation>
+                     <documentation>isCathodicProtected
+Optional
+Indicator of the presence of a cathodic protection.(ASCE)</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="isEncased" type="boolean">
+                  <annotation>
+                     <documentation>isEncased:
+Optional
+Indicator of the presence of encasement to insulate or protect the utility feature.(ASCE)</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="isNPS" type="boolean">
+                  <annotation>
+                     <documentation>isNPS:
+Optional
+Indicator that the provided outside Width is a "Nominal Pipe Size" rather than a true measure. This may correspond to knwn inside and outside dimensions for well-known types of pipes or other network elements. If isNPS is true and both outside and inside width are set to the same value, then it is not known what dimension the value applies to.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="outsideHeight"
+                        type="abc:HeightTypePropertyType">
+                  <annotation>
+                     <documentation>outsideHeight:
+Optional
+Units are always defined by &lt;&lt;measurementUnits&gt;&gt;</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="outsideLength"
+                        type="abc:LengthTypePropertyType">
+                  <annotation>
+                     <documentation>outsideLength:
+Optional
+Units are always defined by &lt;&lt;measurementUnits&gt;&gt;</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="outsideWidth" type="abc:WidthTypePropertyType">
+                  <annotation>
+                     <documentation>outsideWidth:
+Optional
+For circular shaped segments, outside diameter of the utility feature cross section. For non-circular shaped segments, maximum outside width of cross-sectional shape. For features other than segments, maximum outside width of feature. Units are always defined by &lt;&lt;measurementUnits&gt;&gt;</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="protectiveMaterial"
+                        type="abc:WidthTypePropertyType">
+                  <annotation>
+                     <documentation>protectiveMaterial:
+Optional
+Material from which protective layers or elements of the object are constructed. This is presently a CharacterString but values can be drawn from the &lt;MaterialTypeValue&gt; codelist</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="utilitySubType"
+                        type="abc:UtilitySubTypeValueType">
+                  <annotation>
+                     <documentation>utilitySubType:
+Optional
+Type of utility service at a finer level of classification than utility type. The values for utilitySubType are defined in the &lt;UtilitySubTypeValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="utilityType" type="abc:UtilityTypeValueType">
+                  <annotation>
+                     <documentation>utilityType:
+Optional
+Type of utility service that a utility feature carries (ASCE). The values for utilityType are defined in the &lt;UtilityTypeValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="wallThickness" type="double">
+                  <annotation>
+                     <documentation>wallThickness:
+Optional
+Maximum wall thickness.(ASCE) Units are always defined by &lt;&lt;measurementUnits&gt;&gt;</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="siteOf">
+                  <complexType>
+                     <sequence minOccurs="0">
+                        <element ref="abc:Site"/>
+                     </sequence>
+                     <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+                  </complexType>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <element name="NetworkConveyance"
+            substitutionGroup="abc:NetworkAsset"
+            type="abc:NetworkConveyanceType">
+      <annotation>
+         <documentation>NetworkConveyanceObject:
+&lt;&lt;FeatureType&gt;&gt;
+Asset that has a role in the conveyance of a commodity in a utility network.</documentation>
+      </annotation>
+   </element>
+   <complexType name="NetworkConveyanceType">
+      <complexContent>
+         <extension base="abc:NetworkAssetType">
+            <sequence>
+               <element minOccurs="0"
+                        name="conveyanceCategory"
+                        type="abc:ConveyanceCategoryValueType">
+                  <annotation>
+                     <documentation>conveyanceCategory:
+Optional
+Primary category or purpose of service of the utility feature. Included in each category is the supporting infrastructure, such as alarm and ventilation, needed to provide the corresponding utility service. Values for conveyanceCategory are defined in the &lt;ConveyanceCategoryValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="conveyanceMethod"
+                        type="abc:ConveyanceMethodValueType">
+                  <annotation>
+                     <documentation>conveyanceMethod:
+Optional
+Method to move or convey matter (the utility commodity) through the utility feature. (ASCE). Values for conveyanceMethod are defined in the &lt;ConveyanceMethodValue&gt; codelist, including both pressure and voltage ranges.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="fillMaterial" type="string">
+                  <annotation>
+                     <documentation>fillMaterial:
+Optional
+Material used to fill the space between a utility feature and its encasement or an out-of- service feature. (ASCE "interstitialMaterial"). This is presently a CharacterString but values can be drawn from the &lt;MaterialTypeValue&gt; codelist</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="isFilled" type="boolean">
+                  <annotation>
+                     <documentation>isFilled:
+Optional
+Indicator of the presence of interstitial material inside the infrastructure encasement.(ASCE)</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="operatingConveyanceLevel" type="double">
+                  <annotation>
+                     <documentation>operatingConveyanceLevel
+Optional
+The level at which the commodity is conveyed in this network object</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="operatingConveyanceLevelType"
+                        type="abc:OperatingConveyanceLevelTypeValueType">
+                  <annotation>
+                     <documentation>operatingConveyanceLevelType
+Optional
+The type of the conveyance level for this network object (e.g. pressure, voltage level)</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="operatingConveyanceLevelUnits"
+                        type="abc:MeasurementUnitsValueType">
+                  <annotation>
+                     <documentation>operatingConveyanceLevelUnits
+Optional
+The units of the conveyance level</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="operatingTemperature" type="double">
+                  <annotation>
+                     <documentation>operatingTemperature
+Optional
+A value representing the temperature of the commodity conveyed by this network object if applicable.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="operatingTemperatureRange"
+                        type="abc:TemperatureRangeValueType">
+                  <annotation>
+                     <documentation>operatingTemperatureRange
+Optional
+An indication of the range of temperatures of the commodity conveyed by this network object if applicable.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="operatingTemperatureUnits"
+                        type="abc:MeasurementUnitsValueType">
+                  <annotation>
+                     <documentation>operatingTemperatureUnits
+Optional
+The units of the temperature value.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="outerMaterial" type="string">
+                  <annotation>
+                     <documentation>outerMaterial:
+Optional
+Material from which the outer covering, carrier pipe, insulation, etc. is constructed, This is presently a CharacterString but values can be drawn from the &lt;MaterialTypeValue&gt; codelist</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="hasConveyance">
+                  <complexType>
+                     <sequence minOccurs="0">
+                        <element ref="abc:Network"/>
+                     </sequence>
+                     <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+                  </complexType>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <element name="NetworkConveyanceLink"
+            substitutionGroup="abc:NetworkConveyance"
+            type="abc:NetworkConveyanceLinkType">
+      <annotation>
+         <documentation>NetworkConveyanceLink:
+&lt;&lt;FeatureType&gt;&gt;
+Linear utility feature that serves as a link or edge in a network graph. (ASCE "Segment")</documentation>
+      </annotation>
+   </element>
+   <complexType name="NetworkConveyanceLinkType">
+      <complexContent>
+         <extension base="abc:NetworkConveyanceType">
+            <sequence>
+               <element minOccurs="0" name="downstreamDepth" type="double">
+                  <annotation>
+                     <documentation>downstreamDepth:
+Optional
+Numerical value in measurementUnits of the depth from grade at time of survey or other determination method to the top of the downstream end of the asset. IF this attribute is provided for a NetworkLink feature, then the depth attribute should be understood as upstreamDepth. 
+This attribute should be used for a single approximation of asset depth according to depthMethod. More detailed / precise vertical positioning information should be represented in a geometry attribute.</documentation>
+                  </annotation>
+               </element>
+               <element name="componentType" type="abc:NetworkLinkComponentTypeValueType"/>
+               <element name="geometry" type="gml:CurvePropertyType"/>
+               <element minOccurs="0" name="hasInlet">
+                  <complexType>
+                     <sequence minOccurs="0">
+                        <element ref="abc:NetworkConveyanceNode"/>
+                     </sequence>
+                     <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+                  </complexType>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <element name="NetworkConveyanceNode"
+            substitutionGroup="abc:NetworkConveyance"
+            type="abc:NetworkConveyanceNodeType">
+      <annotation>
+         <documentation>NetworkLink:
+&lt;&lt;FeatureType&gt;&gt;
+Linear utility feature that serves as a link or edge in a network graph. (ASCE "Segment")</documentation>
+      </annotation>
+   </element>
+   <complexType name="NetworkConveyanceNodeType">
+      <complexContent>
+         <extension base="abc:NetworkConveyanceType">
+            <sequence>
+               <element name="componentType" type="abc:NetworkNodeComponentTypeValueType"/>
+               <element maxOccurs="unbounded" minOccurs="0" name="conveysFrom">
+                  <complexType>
+                     <sequence minOccurs="0">
+                        <element ref="abc:NetworkConveyanceLink"/>
+                     </sequence>
+                     <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+                  </complexType>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <simpleType name="NetworkDescriptionTypeValueType">
+      <annotation>
+         <documentation>Network Area Type Codelist
+Codelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.</documentation>
+      </annotation>
+      <union memberTypes="abc:NetworkDescriptionTypeValueEnumerationType abc:NetworkDescriptionTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="NetworkDescriptionTypeValueEnumerationType">
+      <annotation>
+         <documentation>Network Area Type Codelist
+Codelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Annotation"/>
+         <enumeration value="Dimension"/>
+         <enumeration value="Change of Diameter"/>
+         <enumeration value="Change of Material"/>
+         <enumeration value="Cross Section"/>
+         <enumeration value="Depth"/>
+         <enumeration value="Multimedia Attachment"/>
+         <enumeration value="Other"/>
+         <enumeration value="Supplemental Drawing"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="NetworkDescriptionTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="NetworkLinkComponentTypeValueType">
+      <annotation>
+         <documentation>Network Link Component Type Codelist
+Codelist of specific types of NetworkLinks. These may be redundant with derived network link feature types and supplemented by more specific component type codelists. It allows new Network Link feature types to be added without changing the model.</documentation>
+      </annotation>
+      <union memberTypes="abc:NetworkLinkComponentTypeValueEnumerationType abc:NetworkLinkComponentTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="NetworkLinkComponentTypeValueEnumerationType">
+      <annotation>
+         <documentation>Network Link Component Type Codelist
+Codelist of specific types of NetworkLinks. These may be redundant with derived network link feature types and supplemented by more specific component type codelists. It allows new Network Link feature types to be added without changing the model.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Auxiliary Cable"/>
+         <enumeration value="Cathodic Protection Cable"/>
+         <enumeration value="Bridge"/>
+         <enumeration value="Line"/>
+         <enumeration value="Open Channel"/>
+         <enumeration value="Optical Fibre"/>
+         <enumeration value="Other"/>
+         <enumeration value="Pipe"/>
+         <enumeration value="Pipeline"/>
+         <enumeration value="Power Cable"/>
+         <enumeration value="Telecommunications Cable"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="NetworkLinkComponentTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="NetworkNodeComponentTypeValueType">
+      <annotation>
+         <documentation>Network Node Component Type Codelist
+Codelist of specific types of NetworkNodes. These may be redundant with derived network node feature types and supplemented by more specific component type codelists. It allows new NetworkNode feature types to be added without changing the model.</documentation>
+      </annotation>
+      <union memberTypes="abc:NetworkNodeComponentTypeValueEnumerationType abc:NetworkNodeComponentTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="NetworkNodeComponentTypeValueEnumerationType">
+      <annotation>
+         <documentation>Network Node Component Type Codelist
+Codelist of specific types of NetworkNodes. These may be redundant with derived network node feature types and supplemented by more specific component type codelists. It allows new NetworkNode feature types to be added without changing the model.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Anchor Point"/>
+         <enumeration value="Anode"/>
+         <enumeration value="Beacon"/>
+         <enumeration value="Cabinet"/>
+         <enumeration value="Capped End"/>
+         <enumeration value="Cleaning Device"/>
+         <enumeration value="Discharge Device"/>
+         <enumeration value="Drain"/>
+         <enumeration value="Earthing Equipment"/>
+         <enumeration value="Filter"/>
+         <enumeration value="Housing"/>
+         <enumeration value="Hydrant"/>
+         <enumeration value="Illuminated Sign"/>
+         <enumeration value="Gully"/>
+         <enumeration value="Injection Point"/>
+         <enumeration value="Inlet"/>
+         <enumeration value="Joint"/>
+         <enumeration value="Junction"/>
+         <enumeration value="Link Box"/>
+         <enumeration value="Measuring Device"/>
+         <enumeration value="Metering Device"/>
+         <enumeration value="Offtake"/>
+         <enumeration value="Other"/>
+         <enumeration value="Outlet"/>
+         <enumeration value="Pit"/>
+         <enumeration value="Post"/>
+         <enumeration value="Pumping Equipment"/>
+         <enumeration value="Regulator"/>
+         <enumeration value="Riser"/>
+         <enumeration value="Shaft"/>
+         <enumeration value="Streetlight"/>
+         <enumeration value="Terminator"/>
+         <enumeration value="Traffic Signal"/>
+         <enumeration value="Trap"/>
+         <enumeration value="Valve"/>
+         <enumeration value="Vent"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="NetworkNodeComponentTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="NetworkObjectComponentTypeValueType">
+      <union memberTypes="abc:NetworkObjectComponentTypeValueEnumerationType abc:NetworkObjectComponentTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="NetworkObjectComponentTypeValueEnumerationType">
+      <restriction base="string"/>
+   </simpleType>
+   <simpleType name="NetworkObjectComponentTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="NetworkSiteTypeValueType">
+      <annotation>
+         <documentation>Network Area Type Codelist
+Codelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.</documentation>
+      </annotation>
+      <union memberTypes="abc:NetworkSiteTypeValueEnumerationType abc:NetworkSiteTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="NetworkSiteTypeValueEnumerationType">
+      <annotation>
+         <documentation>Network Area Type Codelist
+Codelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Compressor Station"/>
+         <enumeration value="General Site"/>
+         <enumeration value="Independent/Private Network Site"/>
+         <enumeration value="Multi-purpose Site"/>
+         <enumeration value="Other"/>
+         <enumeration value="Pumping Station"/>
+         <enumeration value="Regulator Site"/>
+         <enumeration value="Storage Site"/>
+         <enumeration value="Substation"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="NetworkSiteTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="NetworkTierType"
+            substitutionGroup="gml:AbstractGML"
+            type="abc:NetworkTierTypeType">
+      <annotation>
+         <documentation>NetworkTier:
+&lt;&lt;FeatureType&gt;&gt;
+An object that represents a subnetwork or tier whose membership is dictated not by spatial proximity or extent, but by common attribution (e.g. a subnetwork representing the High Voltage cables within an electricity network)</documentation>
+      </annotation>
+   </element>
+   <complexType name="NetworkTierTypeType">
+      <complexContent>
+         <extension base="gml:AbstractGMLType">
+            <sequence>
+               <element name="assetOwner" type="string"/>
+               <element minOccurs="0"
+                        name="conveyanceCategory"
+                        type="abc:ConveyanceCategoryValueType"/>
+               <element minOccurs="0"
+                        name="conveyanceMethod"
+                        type="abc:ConveyanceMethodValueType"/>
+               <element name="id" type="string"/>
+               <element minOccurs="0" name="material" type="abc:MaterialTypeValueType"/>
+               <element name="name" type="string"/>
+               <element minOccurs="0"
+                        name="utilitySubType"
+                        type="abc:UtilitySubTypeValueType">
+                  <annotation>
+                     <documentation>utilitySubType:
+Optional
+Type of utility service at a finer level of disaggregation than utility type. The values for utilitySubType are defined in the &lt;UtilitySubTypeValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="utilityType" type="abc:UtilityTypeValueType">
+                  <annotation>
+                     <documentation>utilityType:
+Optional
+Type of utility service that a utility feature carries (ASCE). The values for utilityType are defined in the &lt;UtilityTypeValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="description" type="string"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="NetworkTierTypePropertyType">
+      <sequence minOccurs="0">
+         <element ref="abc:NetworkTierType"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <element name="NonUtilityObject"
+            substitutionGroup="abc:Structure"
+            type="abc:NonUtilityObjectType">
+      <annotation>
+         <documentation>NonUtilityObject
+&lt;&lt;FeatureType&gt;&gt;
+An underground object which is not part of a utility network, but which may have an impact on planning or excavation activities.</documentation>
+      </annotation>
+   </element>
+   <complexType name="NonUtilityObjectType">
+      <complexContent>
+         <extension base="abc:StructureType">
+            <sequence>
+               <element name="type" type="abc:NonUtilityObjectTypeType"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="NonUtilityObjectPropertyType">
+      <sequence minOccurs="0">
+         <element ref="abc:NonUtilityObject"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <simpleType name="NonUtilityObjectTypeType">
+      <union memberTypes="abc:NonUtilityObjectTypeEnumerationType abc:NonUtilityObjectTypeOtherType"/>
+   </simpleType>
+   <simpleType name="NonUtilityObjectTypeEnumerationType">
+      <restriction base="string">
+         <enumeration value="Basement or Cellar"/>
+         <enumeration value="Foundation"/>
+         <enumeration value="Passageway"/>
+         <enumeration value="Shaft"/>
+         <enumeration value="Storage Tank"/>
+         <enumeration value="Tracks"/>
+         <enumeration value="Tunnel"/>
+         <enumeration value="Vault"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="NonUtilityObjectTypeOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="Observation"
+            substitutionGroup="abc:MUDDIEvent"
+            type="abc:ObservationType"/>
+   <complexType name="ObservationType">
+      <complexContent>
+         <extension base="abc:MUDDIEventType">
+            <sequence>
+               <element minOccurs="0" name="estimatedBackfillDate" type="date"/>
+               <element name="geometry" type="gml:PointPropertyType"/>
+               <element name="impactOnWorks" type="abc:ObservationImpactValueType"/>
+               <element maxOccurs="unbounded" minOccurs="0" name="linkedFiles">
+                  <complexType>
+                     <complexContent>
+                        <extension base="gml:AbstractMemberType">
+                           <sequence minOccurs="0">
+                              <element ref="abc:LinkedFileType"/>
+                           </sequence>
+                           <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                        </extension>
+                     </complexContent>
+                  </complexType>
+               </element>
+               <element minOccurs="0" name="notes" type="string"/>
+               <element name="resultTime" type="dateTime"/>
+               <element name="phenomenonTime" type="dateTime"/>
+               <element name="procedure" type="string"/>
+               <element name="validTime" type="dateTime"/>
+               <element minOccurs="0" name="sensorUsed">
+                  <complexType>
+                     <sequence minOccurs="0">
+                        <element ref="abc:Sensor"/>
+                     </sequence>
+                     <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+                  </complexType>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="ObservationPropertyType">
+      <sequence minOccurs="0">
+         <element ref="abc:Observation"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <simpleType name="ObservationImpactValueType">
+      <union memberTypes="abc:ObservationImpactValueEnumerationType abc:ObservationImpactValueOtherType"/>
+   </simpleType>
+   <simpleType name="ObservationImpactValueEnumerationType">
+      <restriction base="string">
+         <enumeration value="Minimal"/>
+         <enumeration value="Moderate"/>
+         <enumeration value="Other"/>
+         <enumeration value="No Impact"/>
+         <enumeration value="Significant"/>
+         <enumeration value="Works Suspended"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="ObservationImpactValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="OperatingConveyanceLevelTypeValueType">
+      <annotation>
+         <documentation>Network Area Type Codelist
+Codelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.</documentation>
+      </annotation>
+      <union memberTypes="abc:OperatingConveyanceLevelTypeValueEnumerationType abc:OperatingConveyanceLevelTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="OperatingConveyanceLevelTypeValueEnumerationType">
+      <annotation>
+         <documentation>Network Area Type Codelist
+Codelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Other"/>
+         <enumeration value="Pressure"/>
+         <enumeration value="Voltage"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="OperatingConveyanceLevelTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="OperationalStatusValueType">
+      <annotation>
+         <documentation>Operational Status Codelist
+Codelist of operational status values for MUDDIObjects</documentation>
+      </annotation>
+      <union memberTypes="abc:OperationalStatusValueEnumerationType abc:OperationalStatusValueOtherType"/>
+   </simpleType>
+   <simpleType name="OperationalStatusValueEnumerationType">
+      <annotation>
+         <documentation>Operational Status Codelist
+Codelist of operational status values for MUDDIObjects</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Abandoned"/>
+         <enumeration value="Commissioned"/>
+         <enumeration value="Decommissioned"/>
+         <enumeration value="Delete Before Installation"/>
+         <enumeration value="In Service"/>
+         <enumeration value="Installed"/>
+         <enumeration value="Other"/>
+         <enumeration value="Out Of Commission"/>
+         <enumeration value="Pending Abandonment"/>
+         <enumeration value="Proposed"/>
+         <enumeration value="Pending Removal"/>
+         <enumeration value="Removed"/>
+         <enumeration value="Under Construction"/>
+         <enumeration value="Unfit For Service"/>
+         <enumeration value="Unknown"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="OperationalStatusValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="PhysicalProtection"
+            substitutionGroup="abc:NetworkAccessory"
+            type="abc:PhysicalProtectionType">
+      <annotation>
+         <documentation>NetworkObject:
+&lt;&lt;FeatureType&gt;&gt;
+Asset that has a role in the conveyance of a commodity in a utility network.</documentation>
+      </annotation>
+   </element>
+   <complexType name="PhysicalProtectionType">
+      <complexContent>
+         <extension base="abc:NetworkAccessoryType">
+            <sequence>
+               <element name="geometry" type="gml:CurvePropertyType"/>
+               <element minOccurs="0"
+                        name="physicalProtectionType"
+                        type="abc:PhysicalProtectionTypeValueType">
+                  <annotation>
+                     <documentation>utilitySubType:
+Optional
+Type of utility service at a finer level of classification than utility type. The values for utilitySubType are defined in the &lt;UtilitySubTypeValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <simpleType name="PhysicalProtectionTypeValueType">
+      <annotation>
+         <documentation>Network Area Type Codelist
+Codelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.</documentation>
+      </annotation>
+      <union memberTypes="abc:PhysicalProtectionTypeValueEnumerationType abc:PhysicalProtectionTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="PhysicalProtectionTypeValueEnumerationType">
+      <annotation>
+         <documentation>Network Area Type Codelist
+Codelist of specific types of Network Areas. Areas may relate to full coverage for a given network, more granular operational patches, individual sites or indications of rights of access.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Other"/>
+         <enumeration value="Slabbing"/>
+         <enumeration value="Sleeve"/>
+         <enumeration value="Tape"/>
+         <enumeration value="Plate"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="PhysicalProtectionTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="PlanningArea"
+            substitutionGroup="abc:MUDDISpace"
+            type="abc:PlanningAreaType">
+      <annotation>
+         <documentation>PlanningArea
+&lt;&lt;FeatureType&gt;&gt;
+Defined area with characteristics relevant to excavation planning.</documentation>
+      </annotation>
+   </element>
+   <complexType name="PlanningAreaType">
+      <complexContent>
+         <extension base="abc:MUDDISpaceType">
+            <sequence>
+               <element minOccurs="0" name="directive" type="string"/>
+               <element name="planningAreaType" type="abc:PlanningAreaTypeValueType">
+                  <annotation>
+                     <documentation>planningAreaType:
+Optional
+Type of Planning Area. The values for PlanningArea are defined in the &lt;PlanningAreaValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="policyDocumentation" type="string"/>
+               <element minOccurs="0" name="policyName" type="string">
+                  <annotation>
+                     <documentation>policyName:
+Optional
+The policy with which this PlanningRegion is associated, such as permission to dig or notification of activity.</documentation>
+                  </annotation>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <simpleType name="PlanningAreaTypeValueType">
+      <annotation>
+         <documentation>Planning Region Codelist
+Codelist of planning region types. Redundant with derived planning region feature types but allows new region types to be defined without changing the model.</documentation>
+      </annotation>
+      <union memberTypes="abc:PlanningAreaTypeValueEnumerationType abc:PlanningAreaTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="PlanningAreaTypeValueEnumerationType">
+      <annotation>
+         <documentation>Planning Region Codelist
+Codelist of planning region types. Redundant with derived planning region feature types but allows new region types to be defined without changing the model.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Conservation Site"/>
+         <enumeration value="Coordination Zone"/>
+         <enumeration value="Former Industrial Site"/>
+         <enumeration value="Historical Site"/>
+         <enumeration value="Other"/>
+         <enumeration value="Security Zone"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="PlanningAreaTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="QualityLevelValueType">
+      <annotation>
+         <documentation>Enhanced Measures Type Codelist
+Abstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.</documentation>
+      </annotation>
+      <union memberTypes="abc:QualityLevelValueEnumerationType abc:QualityLevelValueOtherType"/>
+   </simpleType>
+   <simpleType name="QualityLevelValueEnumerationType">
+      <annotation>
+         <documentation>Enhanced Measures Type Codelist
+Abstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.</documentation>
+      </annotation>
+      <restriction base="string"/>
+   </simpleType>
+   <simpleType name="QualityLevelValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="Sensor"
+            substitutionGroup="abc:NetworkAccessory"
+            type="abc:SensorType">
+      <annotation>
+         <documentation>NetworkObject:
+&lt;&lt;FeatureType&gt;&gt;
+Asset that has a role in the conveyance of a commodity in a utility network.</documentation>
+      </annotation>
+   </element>
+   <complexType name="SensorType">
+      <complexContent>
+         <extension base="abc:NetworkAccessoryType">
+            <sequence>
+               <element minOccurs="0" name="SensorType" type="abc:SensorTypeValueType">
+                  <annotation>
+                     <documentation>utilitySubType:
+Optional
+Type of utility service at a finer level of classification than utility type. The values for utilitySubType are defined in the &lt;UtilitySubTypeValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="unbounded"
+                        minOccurs="0"
+                        name="Phenomenon"
+                        type="string"/>
+               <element name="geometry" type="gml:PointPropertyType"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <simpleType name="SensorTypeValueType">
+      <annotation>
+         <documentation>Network Node Component Type Codelist
+Codelist of specific types of NetworkNodes. These may be redundant with derived network node feature types and supplemented by more specific component type codelists. It allows new NetworkNode feature types to be added without changing the model.</documentation>
+      </annotation>
+      <union memberTypes="abc:SensorTypeValueEnumerationType abc:SensorTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="SensorTypeValueEnumerationType">
+      <annotation>
+         <documentation>Network Node Component Type Codelist
+Codelist of specific types of NetworkNodes. These may be redundant with derived network node feature types and supplemented by more specific component type codelists. It allows new NetworkNode feature types to be added without changing the model.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Pressure Sensor"/>
+         <enumeration value="Flow Sensor"/>
+         <enumeration value="Other"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="SensorTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="ServiceArea"
+            substitutionGroup="abc:MUDDISpace"
+            type="abc:ServiceAreaType">
+      <annotation>
+         <documentation>NetworkArea:
+&lt;&lt;FeatureType&gt;&gt;
+MUDDIObject that represents a whole or partial infrastructure network</documentation>
+      </annotation>
+   </element>
+   <complexType name="ServiceAreaType">
+      <complexContent>
+         <extension base="abc:MUDDISpaceType">
+            <sequence>
+               <element minOccurs="0"
+                        name="networkAreaType"
+                        type="abc:NetworkAreaTypeValueType"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <element name="Site" substitutionGroup="abc:MUDDISpace" type="abc:SiteType">
+      <annotation>
+         <documentation>NetworkSite:
+&lt;&lt;FeatureType&gt;&gt;
+MUDDIObject that represents a whole or partial infrastructure network</documentation>
+      </annotation>
+   </element>
+   <complexType name="SiteType">
+      <complexContent>
+         <extension base="abc:MUDDISpaceType">
+            <sequence>
+               <element minOccurs="0"
+                        name="networkSiteType"
+                        type="abc:NetworkSiteTypeValueType"/>
+               <element maxOccurs="unbounded"
+                        minOccurs="0"
+                        name="linkedFile"
+                        type="string">
+                  <annotation>
+                     <documentation>NEW
+
+Link to supplemental files. E.g. a site schematic or an as-laid drawing of the site network.</documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="unbounded" minOccurs="0" name="hasSite">
+                  <complexType>
+                     <sequence minOccurs="0">
+                        <element ref="abc:Network"/>
+                     </sequence>
+                     <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+                  </complexType>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <element name="Structure"
+            substitutionGroup="abc:MUDDIAsset"
+            type="abc:StructureType">
+      <annotation>
+         <documentation>NetworkObject:
+&lt;&lt;FeatureType&gt;&gt;
+Asset that has a role in a utility network.</documentation>
+      </annotation>
+   </element>
+   <complexType name="StructureType">
+      <complexContent>
+         <extension base="abc:MUDDIAssetType">
+            <sequence>
+               <element minOccurs="0" name="container" type="string">
+                  <annotation>
+                     <documentation>container
+Optional
+The name or ID of any container object for this NetworkObject</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="dateOfInstallation" type="date">
+                  <annotation>
+                     <documentation>dateOfInstallation
+Optional
+The date upon which the NetworkObject was installed.</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="insideHeight" type="abc:HeightTypePropertyType">
+                  <annotation>
+                     <documentation>insideHeight
+Optional
+For circular shaped segments, not applicable. For non-circular shaped segments, maximum inside height of cross-sectional shape. For features other than segments, maximum inside height of feature.(ASCE). Units are always defined by &lt;&lt;measurementUnits&gt;&gt;</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="insideLength" type="abc:LengthTypePropertyType">
+                  <annotation>
+                     <documentation>insideLength
+Optional
+For segments, not applicable. For features other than segments, maximum inside length of feature (measured in the horizontal plane, perpendicular to the width). Units are always defined by &lt;&lt;measurementUnits&gt;&gt;</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="insideWidth" type="abc:WidthTypePropertyType">
+                  <annotation>
+                     <documentation>insideWidth
+Optional
+For circular shaped segments, inside diameter of the utility feature cross section. For non-circular shaped segments, maximum inside width of cross-sectional shape. For features other than segments, maximum inside width of feature. Units are always defined by &lt;&lt;measurementUnits&gt;&gt;</documentation>
+                  </annotation>
+               </element>
+               <element name="geometry" type="gml:PointPropertyType"/>
+               <element minOccurs="0" name="isEncased" type="boolean">
+                  <annotation>
+                     <documentation>isEncased:
+Optional
+Indicator of the presence of encasement to insulate or protect the utility feature.(ASCE)</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="outsideHeight"
+                        type="abc:HeightTypePropertyType">
+                  <annotation>
+                     <documentation>outsideHeight:
+Optional
+Units are always defined by &lt;&lt;measurementUnits&gt;&gt;</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0"
+                        name="outsideLength"
+                        type="abc:LengthTypePropertyType">
+                  <annotation>
+                     <documentation>outsideLength:
+Optional
+Units are always defined by &lt;&lt;measurementUnits&gt;&gt;</documentation>
+                  </annotation>
+               </element>
+               <element minOccurs="0" name="outsideWidth" type="abc:WidthTypePropertyType">
+                  <annotation>
+                     <documentation>outsideWidth:
+Optional
+For circular shaped segments, outside diameter of the utility feature cross section. For non-circular shaped segments, maximum outside width of cross-sectional shape. For features other than segments, maximum outside width of feature. Units are always defined by &lt;&lt;measurementUnits&gt;&gt;</documentation>
+                  </annotation>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <element name="Support"
+            substitutionGroup="abc:NetworkAccessory"
+            type="abc:SupportType">
+      <annotation>
+         <documentation>NetworkObject:
+&lt;&lt;FeatureType&gt;&gt;
+Asset that has a role in the conveyance of a commodity in a utility network.</documentation>
+      </annotation>
+   </element>
+   <complexType name="SupportType">
+      <complexContent>
+         <extension base="abc:NetworkAccessoryType">
+            <sequence>
+               <element name="geometry" type="gml:PointPropertyType"/>
+               <element minOccurs="0" name="supportType" type="abc:SupportTypeValueType">
+                  <annotation>
+                     <documentation>utilitySubType:
+Optional
+Type of utility service at a finer level of classification than utility type. The values for utilitySubType are defined in the &lt;UtilitySubTypeValue&gt; codelist.</documentation>
+                  </annotation>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <simpleType name="SupportTypeValueType">
+      <annotation>
+         <documentation>Support Type Codelist
+Codelist of types of utility asset supports, e.g. Footing vs Tower.</documentation>
+      </annotation>
+      <union memberTypes="abc:SupportTypeValueEnumerationType abc:SupportTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="SupportTypeValueEnumerationType">
+      <annotation>
+         <documentation>Support Type Codelist
+Codelist of types of utility asset supports, e.g. Footing vs Tower.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Bed"/>
+         <enumeration value="Footing"/>
+         <enumeration value="Foundation"/>
+         <enumeration value="Other"/>
+         <enumeration value="Pad"/>
+         <enumeration value="Pole"/>
+         <enumeration value="Thrust Plate"/>
+         <enumeration value="Thrust Block"/>
+         <enumeration value="Tower"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="SupportTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="TemperatureRangeValueType">
+      <annotation>
+         <documentation>Enhanced Measures Type Codelist
+Abstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.</documentation>
+      </annotation>
+      <union memberTypes="abc:TemperatureRangeValueEnumerationType abc:TemperatureRangeValueOtherType"/>
+   </simpleType>
+   <simpleType name="TemperatureRangeValueEnumerationType">
+      <annotation>
+         <documentation>Enhanced Measures Type Codelist
+Abstract Codelist which will be implemented in a Codelist register for a given jurisdiction and use case. Contains values representing enhanced measures to be undertaken when using data stored in the platform, due to hazards or sensitivities associated with a feature or type of feature.</documentation>
+      </annotation>
+      <restriction base="string"/>
+   </simpleType>
+   <simpleType name="TemperatureRangeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="TermMapping"
+            substitutionGroup="gml:AbstractGML"
+            type="abc:TermMappingType">
+      <annotation>
+         <documentation>Required table to map from the MUDDI Logical Model standard terms to custom entity names in a given logical model or physical schema.</documentation>
+      </annotation>
+   </element>
+   <complexType name="TermMappingType">
+      <complexContent>
+         <extension base="gml:AbstractGMLType">
+            <sequence/>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="TermMappingPropertyType">
+      <sequence minOccurs="0">
+         <element ref="abc:TermMapping"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <simpleType name="UndergroundStatusValueType">
+      <annotation>
+         <documentation>Underground Status Codelist
+Codelist of underground status, e.g. Underground vs. Surface, Utility assets which are not fully buried may still be represented in this model so as to provide important information and constraints on underground utility infrastructure.</documentation>
+      </annotation>
+      <union memberTypes="abc:UndergroundStatusValueEnumerationType abc:UndergroundStatusValueOtherType"/>
+   </simpleType>
+   <simpleType name="UndergroundStatusValueEnumerationType">
+      <annotation>
+         <documentation>Underground Status Codelist
+Codelist of underground status, e.g. Underground vs. Surface, Utility assets which are not fully buried may still be represented in this model so as to provide important information and constraints on underground utility infrastructure.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Overhead"/>
+         <enumeration value="Aboveground"/>
+         <enumeration value="Surface"/>
+         <enumeration value="Underground"/>
+         <enumeration value="Submerged"/>
+         <enumeration value="Mixed"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="UndergroundStatusValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="UnidentifiedBuriedObject"
+            substitutionGroup="abc:Structure"
+            type="abc:UnidentifiedBuriedObjectType"/>
+   <complexType name="UnidentifiedBuriedObjectType">
+      <complexContent>
+         <extension base="abc:StructureType">
+            <sequence>
+               <element minOccurs="0" name="colourDescription" type="string"/>
+               <element minOccurs="0" name="componentTypeDescription" type="string"/>
+               <element minOccurs="0" name="estimatedDepth" type="double"/>
+               <element minOccurs="0"
+                        name="estimatedUtilityType"
+                        type="abc:UtilityTypeValueType"/>
+               <element minOccurs="0" name="materialDescription" type="string"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="UnidentifiedBuriedObjectPropertyType">
+      <sequence minOccurs="0">
+         <element ref="abc:UnidentifiedBuriedObject"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <simpleType name="UtilitySubTypeValueType">
+      <annotation>
+         <documentation>Utility Subtype Codelist
+Codelist of utility subtypes that classify utilities at a secondary level, such as surface water vs combined sewer.</documentation>
+      </annotation>
+      <union memberTypes="abc:UtilitySubTypeValueEnumerationType abc:UtilitySubTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="UtilitySubTypeValueEnumerationType">
+      <annotation>
+         <documentation>Utility Subtype Codelist
+Codelist of utility subtypes that classify utilities at a secondary level, such as surface water vs combined sewer.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Alarm"/>
+         <enumeration value="Ammonia"/>
+         <enumeration value="Combined Sewer"/>
+         <enumeration value="Cooled Water"/>
+         <enumeration value="CSO Overflow"/>
+         <enumeration value="Drainage"/>
+         <enumeration value="Electric Power"/>
+         <enumeration value="Glycol"/>
+         <enumeration value="Foul Sewer"/>
+         <enumeration value="Heated Water"/>
+         <enumeration value="Journey Time Apparatus"/>
+         <enumeration value="Natural Water"/>
+         <enumeration value="Non-Potable Water"/>
+         <enumeration value="Other"/>
+         <enumeration value="Raw Water"/>
+         <enumeration value="Steam"/>
+         <enumeration value="Stored Water"/>
+         <enumeration value="Street Lighting"/>
+         <enumeration value="Surface Water Sewer"/>
+         <enumeration value="Telecommunication"/>
+         <enumeration value="Trade Effluent"/>
+         <enumeration value="Treated Effluent"/>
+         <enumeration value="Treated Water"/>
+         <enumeration value="Untreated Effluent"/>
+         <enumeration value="..."/>
+      </restriction>
+   </simpleType>
+   <simpleType name="UtilitySubTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="UtilityTypeValueType">
+      <annotation>
+         <documentation>Utility Type Codelist
+Codelist of utility types for MUDDIObjects. Redundant with utility-specific derived feature types, but allows generic or hybrid asset information to be represented, or new utility types to be added without changing the model.</documentation>
+      </annotation>
+      <union memberTypes="abc:UtilityTypeValueEnumerationType abc:UtilityTypeValueOtherType"/>
+   </simpleType>
+   <simpleType name="UtilityTypeValueEnumerationType">
+      <annotation>
+         <documentation>Utility Type Codelist
+Codelist of utility types for MUDDIObjects. Redundant with utility-specific derived feature types, but allows generic or hybrid asset information to be represented, or new utility types to be added without changing the model.</documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="Beer"/>
+         <enumeration value="District Heating"/>
+         <enumeration value="Electric"/>
+         <enumeration value="Gas"/>
+         <enumeration value="HVAC"/>
+         <enumeration value="Other"/>
+         <enumeration value="Petroleum"/>
+         <enumeration value="Sewer"/>
+         <enumeration value="Telecommunication"/>
+         <enumeration value="Transportation"/>
+         <enumeration value="Water"/>
+         <enumeration value="..."/>
+      </restriction>
+   </simpleType>
+   <simpleType name="UtilityTypeValueOtherType">
+      <restriction base="string">
+         <pattern value="other: \w{2,}"/>
+      </restriction>
+   </simpleType>
+   <element name="WidthType"
+            substitutionGroup="gml:AbstractObject"
+            type="abc:WidthTypeType"/>
+   <complexType name="WidthTypeType">
+      <sequence>
+         <element name="width" type="double"/>
+         <element name="unitOfMeasure" type="abc:MeasurementUnitsValueType"/>
+      </sequence>
+   </complexType>
+   <complexType name="WidthTypePropertyType">
+      <sequence>
+         <element ref="abc:WidthType"/>
+      </sequence>
+   </complexType>
+</schema>
