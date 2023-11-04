@@ -22,6 +22,8 @@ include::results/example2.adoc[]
 
 === Software Projects and Products
 
+include::results/ldproxy.adoc[]
+
 include::results/pycsw.adoc[]
 
 include::results/pygeoapi.adoc[]
