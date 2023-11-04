@@ -39,6 +39,8 @@ include::architecture/ogcpubsub.adoc[]
 
 include::architecture/gimi.adoc[]
 
+include::architecture/asyncapi.adoc[]
+
 === Software Projects and Products
 
 include::architecture/geonetwork.adoc[]
