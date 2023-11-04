@@ -7,3 +7,5 @@
 * [[[ogc21-008,1]]], OGC: OGC 21-008: Joint OGC OSGeo ASF Code Sprint 2021 Summary Engineering Report, 2021
 
 * [[[ogc21-019,2]]], Aleksandar Balaban: OGC 21-019, OGC Testbed-17: Attracting Developers: Lowering the entry barrier for implementing OGC Web APIs. Open Geospatial Consortium (2022). https://docs.ogc.org/per/21-019.html
+
+* [[[geonovum_report,3]]], Linda van den Brink, Arnoud de Boer: Testing OGC JSON-FG Draft Specification and its GDAL-DEV Implementation. Geonovum (2023). https://geonovum-labs.github.io/test-ogc-json-fg
