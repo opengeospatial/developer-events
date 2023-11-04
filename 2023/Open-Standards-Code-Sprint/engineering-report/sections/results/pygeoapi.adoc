@@ -1,6 +1,8 @@
 [[pygeoapi_results]]
 ==== OSGeo pygeoapi
 
+===== Implementation of a CSW Facade
+
 The pygeoapi project implemented an OGC API - Records  https://github.com/geopython/pygeoapi/pull/1386[CSW Facade] plugin
 as a means to bridge CSW implementations.  Note that support is bound to CSW 2/3 and the CSW Record core model (ISO 19115/19139
 support can be implemented as future work).  This work was merged to the core pygeoapi codebase.
@@ -13,6 +15,8 @@ A live demonstration was provide using the https://woudc.org[WMO World Ozone and
 .Screenshot of the pygeoapi OGC API - Records provider for the CSW Facade.
 image::images/pygeoapi-csw-facade-demo.png[align="center"]
 
+===== Support for Publish/Subscribe operations
+
 A live demo was given which exemplified the capabilities of Pub/Sub as a workflow for metadata catalogue management, using the WMO
 https://github.com/wmo-im/wis2-gdc[WIS2 Global Discovery Catalogue Reference Implementation] (powered by pygeoapi).  In this demo,
 the catalogue is subscribed to an MQTT broker which is publishing messages of new discovery metadata records.  On notification of
@@ -24,3 +28,7 @@ image::images/pygeoapi-wis2-gdc-mqtt-explorer.png[align="center"]
 
 .Screenshot of metadata published to OGC API - Records using pygeoapi.
 image::images/pygeoapi-wis2-gdc-records.png[align="center"]
+
+===== Support for the draft GIMI profile
+
+TBA
