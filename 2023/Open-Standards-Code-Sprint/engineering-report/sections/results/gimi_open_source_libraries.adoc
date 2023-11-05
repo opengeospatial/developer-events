@@ -1,0 +1,26 @@
+[[results_gimi_open_source_libraries]]
+==== Towards open source libraries for GIMI
+
+This section presents findings of the prototyping GIMI support in a selection of open source libraries. The prototyping and assessment was carried out by Brad Hards.
+
+As a community we have an ecosystem that has some key dependencies that include GDAL + libheif, mp4box.js, rasterio, rio-tiler, pygeoapi etc. There are also some commercial libraries that sit alongside these open source libraries. GDAL is used by several applications such as GDAL. Rasterio is a very import tool. So the combination of tools and libraries presents a big stack is illustrated in Figure TBA. The sprint participants sought to show how this stack could be used to support GIMI.
+
+image::images/ecosystem.png[]
+
+Figure TBA shows a screenshot of an unmodified version of QGIS displaying two GIMI test files, overlayed on top of OpenStreetMap.
+
+image::images/gimi_qgis_1.png[]
+
+The sprint participants created a Jupyter Notebook, shown in Figure TBA, that used many of the aforementioned libraries to perform some data science analysis on GIMI imagery files.
+
+image::images/gimi_jupyter_1.png[]
+
+Further work on pygeoapi involved importing a GIMI file into pygeoapi for serving through an interface conforming to OGC API – Coverages. This exposed coverage metadata as illustrated in Figure TBA.
+
+image::images/gimi_pygeoapi_coverage.png[]
+
+Using the open source TiTiler toolkit, the sprint participants were able to partition GIMI test files into a tileset and to provision a pygeoapi instance with the tileset. This made it possible for the imagery to be accessible through an interface conforming to OGC API – Tiles and thus be displayed on an instance of OpenLayers.
+
+image::images/gimi_openlayers.png[]
+
+In conclusion, the sprint participants found that there are a number of base libraries that are needed to improve the migration path for several applications. Amongst those base libraries are GDAL and libheif. Also needed are more tools, more examples of test data, and validators to facilitate the evaluation of test files.
