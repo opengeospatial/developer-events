@@ -30,4 +30,6 @@ include::results/pycsw.adoc[]
 
 include::results/pygeoapi.adoc[]
 
+include::results/fme.adoc[]
+
 include::results/example3.adoc[]

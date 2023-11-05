@@ -1,4 +1,62 @@
-[[example_template]]
-==== Example
+[[fme_results]]
+==== Safe Software FME
 
-TBA
+===== MUDDI
+
+The sprint participants from Safe Software obtained Sanitary system from the City of Burnaby in Canada for use as input data in the code sprint. The data is available from the City as open data  (https://data.burnaby.ca/datasets/burnaby::sanitary-main-/explore).  The data includes information about the Sanitary system and connectors, as well as some manhole covers. Using the FME software product, the team sought to try out the MUDDI application schema that had been provided by interactive instruments in support of the code sprint. FME Desktop is a geospatial extract, transformation and load software platform. The 2021 version of FME Desktop is Certified OGC Compliant to GML 3.2.1, GeoPackage 1.2 and KML 2.2 (https://www.ogc.org/resources/product-details/?pid=1681).
+
+The workflow for converting from plain GeoJSON to MUDDI GML is illustrated in <<img_fme_workflow>>. The workflow takes source data and copies attributes across to output feature types. Excess attribution that is not required in the output feature type can be thrown away. A Network feature acts as a parent to all of the other associated features. Therefore, the mains and service lines are associated with a network. This includes fittings, mains and service lines to which some date fields are added. The workflow also creates a service area which represents the bounding box around the features.
+
+[[img_fme_workflow]]
+.Screenshot of workflow for converting from plain GeoJSON to MUDDI GML
+image::images/fme_workflow.png[]
+
+A summary of the workflow is below:
+
+. Read GeoJSON
+. Generate and convert timestampts to ISO format
+. Map attributes from source to MUDDI schema
+. Create missing attributes, including all required attributes
+. Create parent network features
+. Generate gml_ids from UUIDs and gml_parent_ids to associate network elements with parent networkds
+. Set geometry property
+. Write MUDDI GML using ApplicationSchema.xsd from Interactive Instruments.
+
+The workflow invokes the GML writer capability of FME. An overview of the GML writer’s schema capability is available on the Safe Software website (https://community.safe.com/s/article/gml-writing-with-application-schemas). 
+
+The sprint participants reported that they encountered an issue whereby some of the required attribution was not available from the source dataset. Fortunately, in such situations, the software logged an error message that listed the required attributes that had not been field.
+
+The FME Desktop application was able to write to MUDDI GML and then to read it back, as illustrated in <<img_fme_output_muddi_gml>>. From the screenshot it can be seen on the top left that there were 11,000 fittings. The screenshot also shows the two networks. Those networks are associated with service lines. One of the service lines is associated with names. The Network covariance link is the actual line. The Service Area is represented by a bounding box.
+
+[[img_fme_output_muddi_gml]]
+.Screenshot of MUDDI GML data displayed in FME
+image::images/fme_output_muddi_gml.png[]
+
+On the right-hand side of <<img_fme_output_muddi_gml>> is shown the attribution from the data. Most of the attribution is carried through from the source data, however for illustrative purposes in this Code Sprint some attribution is synthetic. The workflow also added an elevation dimension to the geometries, which was taken from another feature which had up and down elevation feature properties. 
+
+
+===== CityGML
+
+Sprint participants from Safe Software also worked on a demonstration of 
+CityGML2 to CityGML3 conversion of Montreal data. All attribution (apart from appearances) was pulled across. An illustration of the workflow for converting from CityGML2 to CityGML3 is shown in <<img_fme_citygml_workbench>>.
+
+[[img_fme_citygml_workbench]]
+.Screenshot of workflow for converting from CityGML2 to CityGML3
+image::images/fme_citygml_workbench.png[]
+
+A separate workflow was created for converting from IFC to CityGML3. An illustration of the workflow is shown in <<img_fme_ifc_workbench>>.
+
+[[img_fme_ifc_workbench]]
+.Screenshot of workflow for converting from IFC to CityGML3
+image::images/fme_ifc_workbench.png[]
+
+
+The output CityGML is presented in <<img_fme_output_citygml>>. The figure shows rooms in a building, with one of the rooms selected. The attributes of the selected room, which are presented on the right-hand side, report that the room is a Living Room.
+
+[[img_fme_output_citygml]]
+.Screenshot of the output CityGML data displayed in FME
+image::images/fme_output_citygml.png[]
+
+In summary, sprint participants from Safe Software were able to write to MUDDI GML using the application schemas provided by interactive instruments. The workflows for writing to MUDDI GML captured multiple two-dimensional (2D) and three-dimensional (3D) geometry types (points, lines, polygons). Topology was also populated with xlink_hrefs. 
+
+The sprint participants from Safe Software also started experimenting with the CityGML3 Dynamizer to explore how it might work in future versions of the workflow. They successfully converted CityGML2 data to CityGML3 data, as well as IFC data to CityGML3 data. They were able to store IFC spaces as rooms and support a range of other new CityGML3 feature types and properties. They also confirmed that they could read the output back with the new CityGML3 reader.
