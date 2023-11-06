@@ -1,10 +1,10 @@
 = 2023 Open Standards Code Sprint Summary Engineering Report
-:doctype: standard
+:doctype: engineering-report
 :encoding: utf-8
 :lang: en
 :status: draft
 :committee: technical
-:draft: 3.0
+:draft: 1.0
 :external-id: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
 :docnumber: 23-059
 :received-date: 2029-03-30
@@ -12,7 +12,7 @@
 :published-date: 2029-03-30
 :fullname: Gobe Hobona
 :fullname_2: Joana Simoes
-:docsubtype: Interface
+:docsubtype: implementation
 :keywords: ogcdoc, OGC document, API, openapi, html
 :submitting-organizations: Organization One; Organization Two
 :mn-document-class: ogc

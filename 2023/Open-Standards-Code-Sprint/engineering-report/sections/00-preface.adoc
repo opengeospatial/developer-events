@@ -44,7 +44,7 @@ All questions regarding this document should be directed to the editor or the co
 | Florent Gravin	|	Camptocamp	|	Contributor
 | Clemens Portele	|	interactive instruments GmbH	|	Contributor
 | Jérôme Jacovella-St-Louis	| Ecere Corporation	|	Contributor
-| TBA	| TBA	|	Contributor
+| Brad Hards	| 	|	Contributor
 | TBA	| TBA	|	Contributor
 | TBA	| TBA	|	Contributor
 | TBA	| TBA	|	Contributor
