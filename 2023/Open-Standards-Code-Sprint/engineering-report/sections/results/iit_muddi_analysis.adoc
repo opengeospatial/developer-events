@@ -1,0 +1,30 @@
+[[iit_muddi]]
+==== Analysis of MUDDI by ITT Bombay
+
+Sprint participants from IIT Bombay conducted an analysis of the MUDDI model, in relation to the physical data that had been supplied for the code sprint. They sought to determine the potential use of the logical model (represented in the schemas) to support harmonization of physical data which had been synthesized to represent data from different utility providers.
+
+Several datasets had been provided, therefore half of the first day of the code sprint was spent reviewing the datasets and developing an understanding of the content that had been provided. One of the observations made during the review of the datasets was that some of the data was in different languages (e.g. English, German, etc.). A screenshot of the data displayed on FME Data Inspector is shown in <<img_fme_iit_muddi>>.
+
+[[img_fme_iit_muddi]]
+.Screenshot of MUDDI data displayed in FME Data Inspector
+image::images/fme_iit_muddi.png[]
+
+Another observation made during the review of the datasets was that some of the data was three-dimensional (3D). Part of the challenge therefore was whether the sprint participants could identify commonality between the MUDDI schemas and those of the synthetic datasets that had been supplied to represent data from gas and electricity providers.
+
+Once the data has been converted to JSON, a similarity comparison was conducted. <<img_iit_muddi_gas>> shows such a similarity comparison across synthetic data representing data from gas providers.
+
+[[img_iit_muddi_gas]]
+.Comparison of a sample of feature properties from gas provider data
+image::images/iit_muddi_gas.png[]
+
+A similar comparison was conducted between feature properties of synthetic data representing data from electricity providers. This comparison is illustrated in <<img_iit_muddi_electric>>.
+
+[[img_iit_muddi_electric]]
+.Comparison of a sample of feature properties from electricity provider data
+image::images/iit_muddi_electric.png[]
+
+Sprint participants from IIT Bombay then went on to review anonymised and synthetic NUAR datasets, and during that review they noticed that across the datasets there were three electric provider datasets that had some level of commonality. The sprint participants then proceeded to use that insight to import the data into a PostgreSQL/PostGIS database and then to display it in QGIS, as illistrated in <<img_iit_muddi_qgis>>.
+
+[[img_iit_muddi_qgis]]
+.A sample of MUDDI-harmonised data uploaded to a PostGIS database and displayed on QGIS
+image::images/iit_muddi_qgis.png[]

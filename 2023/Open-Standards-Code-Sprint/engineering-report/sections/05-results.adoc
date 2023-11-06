@@ -13,6 +13,8 @@ include::results/ogcjsonfg.adoc[]
 
 include::results/geonovum.adoc[]
 
+include::results/iit_muddi_analysis.adoc[]
+
 include::results/example.adoc[]
 
 
