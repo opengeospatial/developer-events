@@ -38,4 +38,6 @@ include::results/pygeoapi.adoc[]
 
 include::results/fme.adoc[]
 
+include::results/hexagon.adoc[]
+
 include::results/example3.adoc[]
