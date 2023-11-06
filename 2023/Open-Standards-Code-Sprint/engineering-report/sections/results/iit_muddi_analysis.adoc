@@ -1,5 +1,5 @@
 [[iit_muddi]]
-==== Analysis of MUDDI by ITT Bombay
+==== Analysis of MUDDI by IIT Bombay
 
 Sprint participants from IIT Bombay conducted an analysis of the MUDDI model, in relation to the physical data that had been supplied for the code sprint. They sought to determine the potential use of the logical model (represented in the schemas) to support harmonization of physical data which had been synthesized to represent data from different utility providers.
 
