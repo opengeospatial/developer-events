@@ -17,6 +17,8 @@ include::results/iit_muddi_analysis.adoc[]
 
 include::results/staplus.adoc[]
 
+include::results/nuar_muddi.adoc[]
+
 include::results/example.adoc[]
 
 
