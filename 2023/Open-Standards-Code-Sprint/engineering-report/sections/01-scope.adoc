@@ -1,4 +1,4 @@
 
-== Scope
+== Introduction
 
 This Engineering Report (ER) presents the high level architecture of the code sprint and describes each of the standards and software packages that were deployed in support of the code sprint. The ER also discusses the results and presents a set of conclusions and recommendations.

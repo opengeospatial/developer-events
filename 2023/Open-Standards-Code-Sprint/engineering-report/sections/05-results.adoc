@@ -40,4 +40,6 @@ include::results/fme.adoc[]
 
 include::results/hexagon.adoc[]
 
+include::results/geo_heif_viewer_results.adoc[]
+
 include::results/example3.adoc[]

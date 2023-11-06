@@ -1,6 +1,6 @@
 ==== geo-heif-viewer
 
-Then geo-heif-viewer is a proof-of-concept viewer for HEIF files containing geographical data (according to the GIMI profile), e.g. satellite imagery.
+The geo-heif-viewer is a proof-of-concept viewer for HEIF files containing geographical data (according to the GIMI profile), e.g. satellite imagery.
 
 This viewer uses custom-built versions of:
 
