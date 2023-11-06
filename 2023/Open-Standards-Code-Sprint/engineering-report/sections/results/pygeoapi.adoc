@@ -31,7 +31,7 @@ image::images/pygeoapi-wis2-gdc-records.png[align="center"]
 
 ===== Support for the draft GIMI profile
 
-Sprint participants from Geobeyond worked on the GIMI thread of the code sprint. Their goal was to implement the ability to serve files using OGC API – Coverages and OGC API – Tiles capabilities offered by pygeoapi. An additional goal was to enable a worfkflow that supports modification of the files. The libraries that they modified or implemented for this work are available on the https://github.com/ricardogsilva/gimirrai[gimirrai repository on GitHub].
+Sprint participants from Geobeyond worked on the GIMI thread of the code sprint. Their goal was to implement the ability to serve files using OGC API – Coverages and OGC API – Tiles capabilities offered by pygeoapi. An additional goal was to enable a workflow that supports modification of the files. The libraries that they modified or implemented for this work are available on the https://github.com/ricardogsilva/gimirrai[gimirrai repository on GitHub].
 
 As an initial objective, they set out to see whether the libheif library could be enabled to support reading and writing of GIMI files through GDAL. Their expectation was that they could use a library such as rasterio to further support this capability. Upon testing libheif, they found that libheif does not support some of the needed capabilities. Popular raster-handling tools such as GDAL are not by default able to support GIMI files. Some modification is required to enable such tools to support for the format.
 
