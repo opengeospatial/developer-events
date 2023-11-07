@@ -1,0 +1,58 @@
+[[geo_heif_viewer_results]]
+==== GIMI web-map client
+
+Some of the processing needed to display GIMI imagery in a web browser can be performed on either the server or the client. In the former case, a (web) server has to parse the metadata and decode the image, sending separate pieces of information to the web browser.
+
+[[img_gimi_processing_client]]
+.Schematic data flow of server-side GIMI processing for display
+image::images/gimi_processing_server.png[]
+
+In the later case, the web browser receives the entire ISOBMFF container file, parses the metadata, and extracts and decodes the image.
+
+[[img_gimi_processing_server]]
+.Schematic data flow of client-side GIMI processing for display
+image::images/gimi_processing_client.png[]
+
+There is a need to compare both approaches (in terms of flexibility, performance, integrity, etc), as well as considering hybrid approaches; but no client-only GIMI implementation existed. Therefore, sprint participants prototyped a client application, called https://gitlab.com/IvanSanchez/web-gimi-viewer[web-gimi-viewer], for displaying GIMI imagery. Development of web-gimi-viewer helped to identify a number of issues relating to GIMI.
+
+
+One of those issues was that there are records of metadata in various parts of a GIMI file, and each record of metadata uses a different encoding. This is illustrated in <<img_gimi_metadata_encodings>>. The four kinds of (meta)data in different encodings therefore require four different tools to be parsed, and thus four different blocks of code (which duplicates effort, cost and possible software defects).
+
+[[img_gimi_metadata_encodings]]
+.Metadata encodings found in a GIMI file
+image::images/gimi_metadata_encodings.png[]
+
+The ISOBMFF structure of the file is handled with the https://github.com/gpac/mp4box.js/[mp4box] library. A few technical issues within this library were discovered and fixed during the codesprint.
+
+Geographical information is currently encoded in KLV+ST0601, which is a standard for transmitting the attitude and status of an unmanned aerial vehicle via radio link, in real time, to a ground station. This encoded is handled with https://github.com/vidterra/misb.js/[vidterra's misb.js] library, which needed subtantial adaptations to work in a web browser.
+
+Instead of KLV+ST0601, it might be preferable to store geographical information directly in the ISOBMFF metadata fields using a WKB (Well-Known Binary) encoding. The non-domain-specific https://geopose.org/[GeoPose] OGC standard should also be considered. Further research would be needed to explore the technical viability of WKB and/or GeoPose when a GIMI file contains video instead of a single still image.
+
+Security markings are encoded in a small XML document. While parsing XML in a web browser is trivialized due to built-in functionality, this is not the case in server implementations. International OGC member entities will make little use of this kind of metadata, so it will be beneficial to consider ways of implementing Dublin Core metadata alongside.
+
+Atomic time metadata is stored in ISOBMFF metadata fields, and is decoded with no need of an external library since its structure is relatively simple.
+
+The simplest version of web-gimi-viewer offers a text dump of all the aforementioned metadata, as shown in <<img_gimi_viewer_text>>.
+
+[[img_gimi_viewer_text]]
+.Screenshot of the prototype web-gimi-viewer displaying metadata from a GIMI file in text form
+image::images/gimi_viewer_text.png[]
+
+A slightly more advanced version of web-gimi-viewer displays the same metadata on a map interface, as shown in <<img_gimi_security_metadata>>.
+
+The sprint participants noted that from a web browser perspective the tools and libraries needed included an ISOBMFF parser (e.g. mp4box.js), KLV+ST0601 parser (e.g. misb.js), XML decoder (built-in), TAI decoder, and image codecs (e.g. heif2any). The prototype web-gimi-viewer was implemented using the aforementioned libraries. A screenshot of the viewer is shown in <<img_gimi_viewer_1>>.
+
+[[img_gimi_security_metadata]]
+.Screenshot of the prototype web-gimi-viewer displaying security and TAI metadata from a GIMI file
+image::images/gimi_security_metadata.png[]
+
+Web browsers have native support for a very limited number of image formats/codecs, and supporting additional codecs requires explicit effort in the web application. Support for the HVC1 codec could not be implemented (due to time constraints), this being the reason why <<img_gimi_security_metadata>> displays an empty rectangle instead of the imagery.
+
+By constrast, the file in <<img_gimi_viewer_1>> uses the HEIF codec, which can be decodec with the aid of the https://github.com/alexcorvi/heic2any[heic2any] library.
+
+[[img_gimi_viewer_1]]
+.Screenshot of the prototype web-gimi-viewer displaying a GIMI file with HEIF imagery. Contains Sentinel-2 data.
+image::images/gimi_viewer_1.png[]
+
+
+
