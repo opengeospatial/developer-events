@@ -1,0 +1,47 @@
+[[gnosis_results]]
+==== Ecere GNOSIS Map Server
+
+
+The Sprint participants from Ecere collaborated with those from UAB-CREAF to compare results of the GNOSIS Map Server vs. the CREAF MiraMon server. They also drafted examples, using GNOSIS and MiraMon as example implementations.
+
+They integrating support for the HEIF output format in GNOSIS Map Server using the https://github.com/strukturag/libheif[libheif] library, including support for uncompressed RGB(A) images, as well as JPEG 2000 and JPEG encoding inside the HEIF file.
+
+This enabled GNOSIS Map Server to offer GIMI-conformant images through interfaces that conform to OGC API - Maps candidate standard and tiled images through an interface conforming to the OGC API - Tiles standard.
+
+Work on implementing support for GIMI through an interface conforming to OGC API - Coverages on GNOSIS Map Server was still in progress by the end of the code sprint. This was due to additional work required to support raw floating point or integer data values, and varying number of bands.
+
+Other work accomplished on support for GIMI on GNOSIS Map Server included enabling HEIF content negotiation through the `f` query parameter or `Accept` header used in implementations of OGC API Standards. Content negotiation is a process that enables a client and server to determine the encoding that the server should return a response in. A table of the supported encodings is provided in <<tbl_gnosis_heif_encodings>>.
+
+[#tbl_gnosis_heif_encodings]
+.Mapping of HEIF media types to OGC API content negotiation
+[cols="1,1,1"]
+|===
+|Encoding
+|Accept:
+|?f=
+
+|JPEG2000
+|image/hej2k
+|hej2
+
+|JPEG
+|image/hejpg
+|hejp
+
+|Uncompressed
+|image/heif
+|heif
+
+|=== 
+
+Implementation of support for GIMI in GNOSIS made it possible to identify a number of bugs / limitations in libheif that were quickly fixed by Dirk Farin (a contributor to libheif). The bugs/limitation were:
+
+* Invalid output encoding as JPEG with alpha channel
+* Color conversion issues encoding as JPEG2000
+* Lack of support for encoding as JPEG2000 with alpha channel
+* Lack of support to set URI type on URI metadata items
+* Lack of support for various low-level metadata modification capabilities
+
+The team from Ecere carried out an initial investigation and had some success in encoding ST0601 KLV metadata in HEIF file (using example hardcoded KLV metadata for imagery in the UK). They determined that additional work would be required to encode complete geospatial referencing in the the KLV metadata based on the request.
+
+They collaborated with other GIMI participants to provide an OGC API - Maps endpoint for the CREAF MiraMon client demonstration, and sample images from Sentinel-2 data produced by the GNOSIS Map Server for the web-gimi-viewer demonstration (including the KLV metadata).

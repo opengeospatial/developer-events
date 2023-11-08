@@ -1,0 +1,5 @@
+==== OGC API - Maps
+
+Sprint participants from UAB-CREAF and Ecere that serve on the OGC API - Maps SWG as editors of the OGC API - Maps - Part 1: Core candidate standard worked on claryfing the candidate standard. They also added an informative annex for examples. They provided example requests for London area using Ordnance Survey OpenMapLocal and Copernicus Sentinel-2 data to include in the OGC API - Maps https://docs.ogc.org/DRAFTS/20-058.html#annex_examples[Example annex].
+
+The Sprint participants  also compared results of the GNOSIS Map Server vs. the CREAF MiraMon server. This included assessing recent changes for Subsetting and Scaling requirements classes, including support for the scale-denominator, center and mm-per-pixel query parameters.

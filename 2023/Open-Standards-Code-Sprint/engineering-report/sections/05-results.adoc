@@ -9,7 +9,11 @@ include::results/ogcapirecords.adoc[]
 
 include::results/ogcapiedr.adoc[]
 
+include::results/ogcapimaps.adoc[]
+
 include::results/ogcjsonfg.adoc[]
+
+include::results/cdb.adoc[]
 
 include::results/geonovum.adoc[]
 
@@ -34,6 +38,8 @@ include::results/web_gimi_viewer_results.adoc[]
 include::results/ldproxy.adoc[]
 
 include::results/pycsw.adoc[]
+
+include::results/gnosis.adoc[]
 
 include::results/pygeoapi.adoc[]
 
