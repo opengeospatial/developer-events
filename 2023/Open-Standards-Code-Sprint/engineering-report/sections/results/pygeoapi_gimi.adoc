@@ -1,0 +1,22 @@
+[[pygeoapi_results]]
+==== pygeoapi support for the draft GIMI profile
+
+Sprint participants from Geobeyond worked on the GIMI thread of the code sprint. Their goal was to implement the ability to serve files using OGC API – Coverages and OGC API – Tiles capabilities offered by pygeoapi. An additional goal was to enable a workflow that supports modification of the files. The libraries that they modified or implemented for this work are available on the https://github.com/ricardogsilva/gimirrai[gimirrai repository on GitHub].
+
+As an initial objective, they set out to see whether the libheif library could be enabled to support reading and writing of GIMI files through GDAL. Their expectation was that they could use a library such as rasterio to further support this capability. Upon testing libheif, they found that libheif does not support some of the needed capabilities. Popular raster-handling tools such as GDAL are not by default able to support GIMI files. Some modification is required to enable such tools to support for the format.
+
+With help from Brad Hards, they compiled a version of libheif that could read GIMI files. They then compiled GDAL, pillow-heif and rasterio to enable the reading of GIMI files through Python.
+
+They were also able to decode and parse the GIMI KLV bytestream through pillow-heif. This enabled them to review the geographic bounds declared in the metadata of the GIMI files. Figure TBA shows the geographic bounds of a sample GIMI file displayed on a pygeoapi interface. Afterwards, they sought to enable pygeoapi to support the reading of GIMI files. Enabling pygeoapi to support the reading of GIMI files, would make it possible to serve the imagery files through interfaces conforming to OGC API Standards.
+
+image::images/gimi_geo_bounds.png[]
+
+For OGC API – Coverages, they were able to write a custom provider on top of an existing pygeoapi provider. All that was needed was to modify the parts related to providing metadata.
+
+For the OGC API Tiles implementation, it was a bit more involved because while for OGC API - Coverages they were working with single GIMI files, for OGC API - Tiles it involved having to partition an image into multiple tiles and then to georeference each tile. For this they needed to check whether the GDAL VRT (https://gdal.org/drivers/raster/vrt.html) capability could support this. They were able to leverage the GDAL VRT provider which supports Ground Control Points (GCPs). Figure TBA shows a screenshot of a GIMI file displayed on a web map served by pygeoapi.
+
+image::images/gimi_on_map.png[]
+
+However, within the duration of the code sprint, it was not possible to fully implement transaction support in pygeoapi. This was partly because of limitations of pillow-heif in the modification of pre-existing GIMI files.
+
+In conclusion, it is currently not very easy to work with GIMI files at the Python level. Ideally proper support would be implemented in lower-level libraries first namely libheif and GDAL. With lower-level support in place, usage in Python would become transparent. These lower-level libraries could then be combined with applications and libraries such as pygeoapi, rasterio, and rio-tiler. 

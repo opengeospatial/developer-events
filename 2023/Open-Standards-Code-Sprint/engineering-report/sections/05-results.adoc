@@ -27,6 +27,7 @@ include::results/gimi_open_source_libraries.adoc[]
 
 include::results/pixalytics-gimi.adoc[]
 
+include::results/web_gimi_viewer_results.adoc[]
 
 === Software Projects and Products
 
@@ -39,8 +40,6 @@ include::results/pygeoapi.adoc[]
 include::results/fme.adoc[]
 
 include::results/hexagon.adoc[]
-
-include::results/web_gimi_viewer_results.adoc[]
 
 include::results/mariadb.adoc[]
 
