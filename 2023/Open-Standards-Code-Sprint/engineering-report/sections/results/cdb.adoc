@@ -1,5 +1,5 @@
 [[cdb_results]]
-==== CDB
+==== OGC CDB
 
 The Sprint participants from Ecere Corporation and FlightSafety International Visual Systems collaborated on work to advance the development of CDB 2.0. They set up a new https://github.com/opengeospatial/CDBV2-2023-Summer-Workshop/tree/main/cdb2-gkpg-dstore[draft CDB 2.0 GeoPackage Data Store candidate standard] with initial content. The candidate standard defines a data store implementing the CDB 2.0 Core Conceptual Model based on the OGC GeoPackage data container and GeoPackage extensions for storing different data types.
 
