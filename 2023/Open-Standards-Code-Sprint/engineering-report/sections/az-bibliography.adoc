@@ -9,4 +9,6 @@
 * [[[OGC18-062r2,OGC 18-062r2]]]
 * [[[OGC20-057,OGC 20-057]]]
 * [[[OGC19-072,OGC 19-072]]]
+* [[[OGC23-025,OGC 23-025]]]
+* [[[OGC22-043r1,OGC 22-043r1]]]
 * [[[geonovum_report,6]]], Linda van den Brink, Arnoud de Boer: Testing OGC JSON-FG Draft Specification and its GDAL-DEV Implementation. Geonovum (2023). https://geonovum-labs.github.io/test-ogc-json-fg
