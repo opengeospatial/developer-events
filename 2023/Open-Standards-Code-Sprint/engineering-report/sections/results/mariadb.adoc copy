@@ -1569,20 +1569,29 @@ The https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html[OGC API Pro
 
 During the code sprint, changes were made to the MariaDB OGC API Processes server to align with editor's drafts of https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html[Part 1] and https://docs.ogc.org/DRAFTS/20-044.html[Part 2].  The following images illustrate the MariaDB thematic exploitation test harness using the MariaDB OGC API Records and OGC API Processes servers updated during the code sprint.
 
-A series of screenshots illustrating interaction with the system are shown in the following figures. <<img_mariadb_tep_records_access>> shows the TEP accessing a catalog to locate images of interest.
+* The TEP accessing the catalog to locate images of interest:
 
-[[img_mariadb_tep_records_access]]
-.Screenshots of the TEP accessing the catalog to locate images of interest
-image::images/mariadb_tep_records_access.jpg[]
+image::images/mariadb_tep_records_access.png[]
 
-<<img_mariadb_tep_find_related_processes>> illustrates how the user selects one of the images and how the catalog is accessed to find compatible process (the Ship Detection Process in this case).
+* The user selects one of the images and the catalog is accessed to find compatible process (the Ship Detection Process in this case):
 
-[[img_mariadb_tep_find_related_processes]]
-.Selection of an image and compatible process
-image::images/mariadb_tep_find_related_processes.jpg[]
+image::images/mariadb_tep_find_related_processes.png[]
 
-<<img_mariadb_tep>> illustrates process execution (top-left), job acceptance (top-right), job status with an executed process completed successfully (lower-left), and display of result (lower-right).
+* The selected process is then executed by the processes server (top-left of <<img_mariadb_tep>>)
 
+//image::images/mariadb_tep_execute_process.png[]
+
+* The selected process is accepted (top-right of <<img_mariadb_tep>>)
+
+//image::images/mariadb_tep_process_accepted.png[]
+
+* The executed process completes successfully (lower-left of <<img_mariadb_tep>>)
+
+//image::images/mariadb_tep_job_status_success.png[]
+
+* View the processing results (lower-right of <<img_mariadb_tep>>)
+
+//image::images/mariadb_tep_job_view_results.png[]
 [[img_mariadb_tep]]
 .Screenshots of process execution (top-left), job acceptance (top-right), job status (lower-left), and display of result (lower-right)
 image::images/mariadb_tep.png[]
