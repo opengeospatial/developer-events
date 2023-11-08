@@ -3,7 +3,15 @@
 
 This section presents findings of prototyping GIMI support in a selection of open source libraries. The prototyping and assessment was carried out by Brad Hards.
 
-Prior to the code sprint, a selection of GIMI files were produced using a custom application. These files were read back in using modified versions of libheif and GDAL,
+Prior to the code sprint, a selection of GIMI files were produced using a custom application. The application used open data provided by the Australian Capital
+Territory (ACT) Government under a CC-BY license. The source format was GeoTIFF, and the resulting GIMI files used HEVC (H.265), JPEG 2000 and uncompressed
+encodings. Non-standard JPEG and AV1 (AVIF) files were also produced, along with a sample that did not include security metadata and a sample that did not
+include corner points.
+
+Additional files were produced during the sprint from Synthetic Aperture Radar (SAR) data in NITF-formatted Sensor Independent Derived Data (SIDD) format, sourced
+from Capella Space via the AWS Open Data Program, also under a CC-BY license.
+
+These GIMI files were read back in using modified versions of libheif and GDAL,
 where GDAL already used libheif for image content, but required an external "sidecar" PAM file to provide any geopositioning or associated metadata.
 
 The changes to libheif were to support metadata that is not attached to an image item. This occurs in GIMI files for the security metadata, which is scoped to the entire
@@ -91,26 +99,41 @@ Band 3 Block=2048x1 Type=Byte, ColorInterp=Blue
 ....
 
 GDAL serves as a key component within the geospatial software ecosystem, with broad direct and indirect use by a wide range of open source and proprietary software.
-
+One view of the ecosystem is shown below, with components higher in the stack reliant on capabilities provided by components lower in the stack.
 
 image::images/ecosystem.png[]
 
-Figure TBA shows a screenshot of an unmodified version of QGIS displaying two GIMI test files, overlaid on top of OpenStreetMap.
+As noted above, libheif and GDAL were modified to expose GIMI features within existing GDAL interfaces. This allows use of these features by existing software, often without change.
+An example is shown in Figure TBA, which is a screenshot of an unmodified version of QGIS displaying two GIMI test files (using different compression methods), overlaid on top of OpenStreetMap.
+A small script is running in the QGIS Python console to extract the XML-encoded security metadata and provide an on-screen, human-readable, colour-coded representation of the key aspects of the
+security data.
 
 image::images/gimi_qgis_1.png[]
 
-The sprint participants created a Jupyter Notebook, shown in Figure TBA, that used many of the aforementioned libraries to perform some data science analysis on GIMI imagery files.
+Similarly, rebuilding rasterio against the modified GDAL library makes the GIMI features available within a Python context.
+The sprint participants created a Jupyter Notebook, shown in Figure TBA and Figure TBA, that used rasterio to perform basic analysis / data science on GIMI imagery files. Note that
+this required development of the notebook, but there were no changes to rasterio or to the general design of the Juypter notebook specific to GIMI or HEIF. Instead, the abstraction provided
+by GDAL meant that the notebook could basically follow the rasterio introductory tutorial.
 
 image::images/gimi_jupyter_1.png[]
 
-Further work on pygeoapi involved importing a GIMI file into pygeoapi for serving through an interface conforming to OGC API – Coverages. This exposed coverage metadata as illustrated in Figure TBA.
+image::images/gimi_jupyter_2.png[]
+
+In addition to custom development, there are a wide range of open source geospatial tools written in Python that make heavy use of rasterio for raster processing. An example of this is
+pygeoapi. Installing pygeoapi with the local copy of rasterio was required to ensure that a second copy of the rasterio stack (including GDAL) was not used. Configuring pygeoapi with
+a GIMI file as a dataset was the only other activity required to serve the GIMI file in a range of formats, including as an OGC API - Coverages endpoint.
 
 image::images/gimi_pygeoapi_coverage.png[]
 
-Using the open source TiTiler toolkit, the sprint participants were able to partition GIMI test files into a tileset and to provision a pygeoapi instance with the tileset. This made it possible for the imagery to be accessible through an interface conforming to OGC API – Tiles and thus be displayed on an instance of OpenLayers.
 
 image::images/gimi_openlayers.png[]
 
-As a community we have an ecosystem that has some key dependencies that include GDAL + libheif, mp4box.js, rasterio, rio-tiler, pygeoapi etc. There are also some commercial libraries that sit alongside these open source libraries. GDAL is used by several applications such as GDAL. Rasterio is a very import tool. So the combination of tools and libraries presents a big stack is illustrated in Figure TBA. The sprint participants sought to show how this stack could be used to support GIMI.
+In conclusion, the sprint participants found that with some changes to libheif and GDAL, a wide range of software can quickly and simply make use of GIMI capabilities. However to fully 
+unlock those capabilities, the base libraries will need to ship with the required functionality "out of the box", including:
 
-In conclusion, the sprint participants found that there are a number of base libraries that are needed to improve the migration path for several applications. Amongst those base libraries are GDAL and libheif. Also needed are more tools, more examples of test data, and validators to facilitate the evaluation of test files.
+ - a finalised version of the geolocation metadata
+ - support for overviews, grid representation and byte range requests (equivalent to Cloud Optimised GeoTIFF)
+ - GIMI writing support within GDAL
+ - unit testing and integration testing with a wider range of sample data
+ - a GIMI validator
+
