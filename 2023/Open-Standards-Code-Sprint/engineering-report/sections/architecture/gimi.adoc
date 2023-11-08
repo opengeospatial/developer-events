@@ -11,3 +11,18 @@ Next Generation ISR Imagery Standards (NGIIS) is a program of work to modernise 
  - Support to disadvantaged and remote users
 
 NGA Standard 0076 (NGA.STND.0076) "GEOINT Imagery Media for ISR" (GIMI), currently in draft, defines a profile of the International Standards Organization/ International Electrotechnical Commission (ISO/IEC) 14496-12 ISO Base Media File Format (ISOBMFF) video/audio standard and the ISO/IEC 23008-12 High Efficiently Image File Format (HEIF) Still Imagery standard. The GIMI Profile is a central element of the NGIIS program. GIMI is expected to replace the National Imagery Transmission Format (NITF) that is widely used within the US Department of Defense for ISR. It is also the likely replacement for STANAG 4545 NATO Secondary Imagery Format (NSIF) with NATO, given the close ties between NITF and NSIF.
+
+GIMI builds on top of the HEIF and ISOBMFF standards. Key additions include security metadata, geopositioning and other per-image metadata, and a globally-unique content identifier.
+
+The security metadata provides a way to label the file with overall security classification, security caveats, countries to which the data may be released, and declassification information.
+This would typically be in the form of a US Intelligence Community marking standard known as Information Security Marking (ISM), which makes use of XML. NATO marking may use STANAG
+4774 and STANAG 4778. Other countries may choose a different data model and encoding, depending on national policies. For the purpose of the sprint, an indicative but imaginary format
+was used. Use of fake markings avoided any possible perception that test files were actually security classified data.
+
+The final general purpose metadata for GIMI is still in development, but is likely to be a form of Resource Description Format (RDF), likely encoded in SMTPE ST 336 Key-Length-Value (KLV) for
+efficiency. For the purpose of the sprint, MISB ST 0601 UAS KLV was used to provide this metadata. The primary metadata was the geospatial location of each image corner points. There is no expectation
+that ST 0601 will form part of the final GIMI metadata solution, but ST 0601 KLV is possibly the best known and most widely implemented KLV encoding, and provided enough information to 
+support image geopositioning.
+
+The Content ID was provided as a UUID encoded as a URN.
+
