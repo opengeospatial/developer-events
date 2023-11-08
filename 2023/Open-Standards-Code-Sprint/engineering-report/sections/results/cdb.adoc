@@ -1,0 +1,6 @@
+[[cdb_results]]
+==== OGC CDB
+
+The Sprint participants from Ecere Corporation and FlightSafety International Visual Systems collaborated on work to advance the development of CDB 2.0. They set up a new https://github.com/opengeospatial/CDBV2-2023-Summer-Workshop/tree/main/cdb2-gkpg-dstore[draft CDB 2.0 GeoPackage Data Store candidate standard] with initial content. The candidate standard defines a data store implementing the CDB 2.0 Core Conceptual Model based on the OGC GeoPackage data container and GeoPackage extensions for storing different data types.
+
+The candidate standard defines a conceptual model and data stores for encoding different types of data, including detailed 3D environments, according to that conceptual model with a focus on deterministic performance and scalability. This version of CDB is envisaged to enable a variety of use cases ranging from mobile computing at the edge to large scale data repositories, including training, simulation, digital twins and acting as an efficient backing data store for OGC API implementations.
