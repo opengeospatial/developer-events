@@ -1,12 +1,7 @@
 ==== OGC API - Environmental Data Retrieval
 
-===== Part 1: Core
 
-TBD
-
-===== Part 2: Publish-Subscribe workflow
-
-The OGC API - Environmental Data Retrieval team and Pub/Sub enthusiasts provided two 5 minute pitch presentations, a mentor session one breakout which focused on Publish-Subscibe workflows for EDR and other OGC API specifications.
+The OGC API - Environmental Data Retrieval team and Pub/Sub enthusiasts provided two 5-minute pitch presentations, a mentor session one breakout which focused on Publish-Subscibe workflows for EDR and other OGC API specifications.
 
 The 5 minute pitch presentations focused on Part 1: Core and Part 2: Publish-Subscribe capabilities to help position the subsequent mentor and breakout sessions.
 
@@ -44,7 +39,7 @@ Discussions included:
     * Features: feature transactions
     * Processes: subscribing to async jobs channels, new processes
     * Records: aggregation/metadata ingest/publication
-    * Common: collections publishing data updaetes (e.g. publication of new NWP model run for EDR or Maps
+    * Common: collections publishing data updaetes (e.g. publication of new NWP model run for EDR or Maps)
 
   * engage with SWGs to determine Pub/Sub approach to notify workflow/patterns on changes to resources
 
