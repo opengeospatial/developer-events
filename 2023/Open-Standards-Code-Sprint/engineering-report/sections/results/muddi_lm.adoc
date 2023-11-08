@@ -1,0 +1,26 @@
+[[muddi_lm_results]]
+==== GML and JSON-FG schemas for the MUDDI Core Logical Model
+
+To support sprint participants with encoding MUDDI data, interactive instruments derived GML and JSON-FG application schemas from the Core Logical Model of MUDDI.
+
+https://shapechange.github.io/ShapeChange/[ShapeChange] is a free and open source tool written in Java that takes application schemas constructed according to ISO 19109 from a UML model and derives implementation representations. Implementation representations include GML application schemas, JSON Schemas, SQL DDL, feature catalogues, etc.
+
+For the sprint, a https://github.com/opengeospatial/developer-events/blob/master/2023/Open-Standards-Code-Sprint/muddi/schemas/sc_config.xml[ShapeChange configuration for the Core Logical Model] was created that derives a GML application schema, a JSON-FG schema, and a HTML feature catalogue.
+
+The results were made available in a https://github.com/opengeospatial/developer-events/tree/master/2023/Open-Standards-Code-Sprint/muddi/schemas[folder] of the GitHub repository used for the sprint. In particular:
+
+* https://github.com/opengeospatial/developer-events/blob/master/2023/Open-Standards-Code-Sprint/muddi/schemas/xsd/TAGGED_VALUES/ApplicationSchemaName.xsd[GML application schema]
+* https://github.com/opengeospatial/developer-events/blob/master/2023/Open-Standards-Code-Sprint/muddi/schemas/jsonfg_schema/TAGGED_VALUES/abc/core.json[JSON-FG Schema]
+
+Participants from the MUDDI working group and interactive instruments discussed several modelling aspects of the Core Logical Model before deriving the results. For the sprint, the following decisions/changes were made to the Core Logical Model:
+
+* Some errors in the model were fixed (e.g., undefined data types like "int" instead of "Integer" or duplicate model elements with the same name).
+* Geometry types from ISO 19107:2003 are used; geometry properties have a maximum multiplicity of "1".
+* The application schema Codelist Register - MUDDI Core should be parallel to the Core Logical Model, not nested into it.
+
+Remarks on the generated schemas:
+
+* The GML application schema was generated using the GML encoding rule from ISO 19136:2020. For simplicity, codelist values are represented as plain strings, with additional values having prefix "other: ". The target namespace, the namespace prefix, and xsd file name are placeholders.
+* In the JSON-FG application schema, "$id" value is a placeholder. Schema references use JSON Pointers, not the anchors, because validator support for JSON Pointers is better, compared to anchor references.
+
+The schemas were used, for example, by participants from Safe Software, see <<fme_results>> for details.

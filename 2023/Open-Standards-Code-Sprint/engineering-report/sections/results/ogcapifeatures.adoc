@@ -1,0 +1,68 @@
+==== OGC API - Features
+
+The OGC API - Features team held a breakout to review the https://docs.ogc.org/DRAFTS/23-058.html[initial version of the new Part 5: Schemas].
+
+The general approach taken by the new part was supported. Several proposals for changes were indeitified during the review:
+
+* Change `/req/schemas/logical-model` into informative text (the requirement is not testable).
+* Add a "x-ogc-property-index" keyword in "Schemas" to express the sequence of the properties (in a coverage or for a feature encoding that is ordered, e.g. GML).
+* Only reference JSON Schema 2020-12 (latest version of JSON Schema).
+* In `/rec/schemas/properties` clarify that no other keywords should be used.
+* Add "x-ogc-unit" as a keyword in "Schemas" to declare the unit of measure of a numeric property.
+* Add "x-ogc-unit" in examples.
+* Additional ones, like the URI of a definition should be added in an extension, if needed.
+* Do not use "id" as the property name of an "id" property in the examples.
+* Improve the wording in some normative statements.
+* Consider to add a "primary-interval" role with a proper interval representation (array of two instants).
+* Fix a typo ("roadSegement" instead of "roadSegment").
+* Remove broken dependency in Clause 13.
+* The data types of queryables should not be restricted. What is supported will depend on the filter language. Add a note that filter languages may not support data types.
+
+A https://github.com/opengeospatial/ogcapi-features/pull/867[pull request] was created during the sprint.
+
+The pull request was discussed, approved and merged in the Features API SWG meeting after the sprint with the following changes:
+
+* Changed "x-ogc-property-index" to "x-ogc-property-seq".
+* For the languages to specify units of measurement, a keyword "x-ogc-unit-lang" was added with the only value "UCUM" (the default). A note was added to clarify that communities or other standards can add more languages.
+
+During the code sprint, ldproxy was updated to support the changes, notably the new "x-ogc-unit" keyword:
+
+[%unnumbered%]
+[source,json]
+----
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://demo.ldproxy.net/strassen/collections/abschnitteaeste/schema",
+  "title": "Abschnitte und Äste",
+  "description": "Als Abschnitt wird ein gerichteter Teil des Straßennetzes bezeichnet, der zwischen zwei aufeinander folgenden Netzknoten liegt. Er wird durch die in den Netzknoten festgelegten Nullpunkte begrenzt.<br>Als Ast wird der Teil des Straßennetzes bezeichnet, der die Abschnitte untereinander verkehrlich verknüpft und deshalb Teil des Netzknotens ist. Er wird durch die im Netzknoten festgelegten Nullpunkte begrenzt. Eine Festlegung von Ästen erfolgt nur, wenn sie Bestandteil des aufzunehmenden Straßennetzes sind.",
+  "type": "object",
+  "properties": {
+    "kennung": {
+      "title": "Kennung",
+      "description": "16-stellige Kennung des Abschnittes oder Astes",
+      "x-ogc-role": "id",
+      "pattern": "^[0-9]{7}[A-Z][0-9]{7}[A-Z]$",
+      "type": "string"
+    },
+    ...,
+    "laenge_m": {
+      "title": "Länge [m]",
+      "description": "Länge des Abschnittes oder Astes (m)",
+      "minimum": 0,
+      "x-ogc-unit": "m",
+      "type": "integer"
+    },
+    ...,
+    "netzstand": {
+      "title": "Datum des Netzstichtages",
+      "x-ogc-role": "primary-instant",
+      "format": "date-time",
+      "type": "string"
+    },
+    "geometry": {
+      "x-ogc-role": "primary-geometry",
+      "format": "geometry-linestring"
+    }
+  }
+}
+----
