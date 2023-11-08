@@ -26,6 +26,10 @@ include::architecture/ogcapiedr.adoc[]
 
 include::architecture/geopose.adoc[]
 
+include::architecture/cdb.adoc[]
+
+include::architecture/geopackage.adoc[]
+
 
 === Candidate OGC Standards
 
