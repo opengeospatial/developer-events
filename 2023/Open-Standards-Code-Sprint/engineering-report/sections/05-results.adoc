@@ -26,6 +26,8 @@ include::results/example.adoc[]
 
 include::results/gimi_open_source_libraries.adoc[]
 
+include::results/pixalytics-gimi.adoc[]
+
 include::results/example2.adoc[]
 
 === Software Projects and Products
