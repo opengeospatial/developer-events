@@ -1,0 +1,1594 @@
+[[mariadb_results]]
+==== MariaDB
+
+===== Summary of code sprint activities
+
+Sprint participatns from MariaDB worked on the following items:
+
+* Attended and participated in the following breakout sessions:
+** MUDDI Breakout Sessions
+** JSON-FG Breakout session
+** OGC API Records Breakout session
+** OGC API Processes Breakout session
+** OGC API Features Breakout session
+* Loading London MUDDI data into MariaDB
+* Updated the MariaDB OGC API Records implementation to align with the
+  current state of the Part 1 editor's draft.
+* Updated the MariDB OGC API Processes implementation to align with the 
+  current state of the Part 1 & 2 editor's drafts.
+
+===== Code sprint results
+
+====== MUDDI
+
+The goal of MariaDB's MUDDI work as to load MUDDI data into MariaDB and then be able to serve it out through OGC APIs.  MUDDI data was loaded into MariaDB and can be accessed through OGC APIs at the following landing page:
+
+* https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv?instance=London_2023
+
+The following image of MariaDB's Geospatial GeoPortlet illustrates the MUDDI data layers loaded into MariaDB.
+
+image::images/mariadb_muddi_layers.png[]
+
+The following image illustrate several of these layers, "Distribution Main", "Hydrant" and "Manhole", being accessed through the Maps API:
+
+
+image::images/mariadb_muddi_mapsapi.png[]
+
+The following images illustrates one of these layers, "Manhole", being accessed using the Features API:
+
+image::images/mariadb_muddi_featuresapi.png[]
+
+The following code fragment shows the "Manhole" data being accessed from the MariadDB feature server as GeoJSON using the EPSG:27700 CRS:
+
+[%unnumbered%collapsible]
+[source,json]
+----
+{
+  "type": "FeatureCollection",
+  "timeStamp": "2023-11-07T14:44:44-05:00",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "links": [
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=json&limit=10&offset=10",
+      "rel": "next",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=json",
+      "rel": "self",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/schemas/collection",
+      "rel": "describedby",
+      "type": "application/xml"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Fgml%2Bxml",
+      "rel": "alternate",
+      "type": "application/gml+xml"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Fx-bxfs%2Bxml%3B%20version%3D1.0.0",
+      "rel": "alternate",
+      "type": "application/x-bxfs+xml; version=1.0.0"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Fgml%2Bxml%3B%20version%3D2.1",
+      "rel": "alternate",
+      "type": "application/gml+xml; version=2.1"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Fgml%2Bxml%3B%20version%3D3.1",
+      "rel": "alternate",
+      "type": "application/gml+xml; version=3.1"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=text%2Fxml%3B%20subType%3Dgml%2F3.1.1%2Fprofiles%2Fgmlsf%2F1.0.0%2F0",
+      "rel": "alternate",
+      "type": "text/xml; subType=gml/3.1.1/profiles/gmlsf/1.0.0/0"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=text%2Fxml%3B%20subType%3Dgml%2F3.1.1%2Fprofiles%2Fgmlsf%2F1.0.0%2F1",
+      "rel": "alternate",
+      "type": "text/xml; subType=gml/3.1.1/profiles/gmlsf/1.0.0/1"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Fgml%2Bxml%3B%20version%3D3.2",
+      "rel": "alternate",
+      "type": "application/gml+xml; version=3.2"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Fgml%2Bxml%3B%20version%3D3.2%3B%20profile%3Dhttp%3A%2F%2Fwww.opengis.net%2Fdef%2Fprofile%2Fogc%2F2.0%2Fgml-sf0",
+      "rel": "alternate",
+      "type": "application/gml+xml; version=3.2; profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf0"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Fgml%2Bxml%3B%20version%3D3.2%3B%20profile%3Dhttp%3A%2F%2Fwww.opengis.net%2Fdef%2Fprofile%2Fogc%2F2.0%2Fgml-sf1",
+      "rel": "alternate",
+      "type": "application/gml+xml; version=3.2; profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf1"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Frss%2Bxml",
+      "rel": "alternate",
+      "type": "application/rss+xml"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Fatom%2Bxml",
+      "rel": "alternate",
+      "type": "application/atom+xml"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Fvnd.google-earth.kml%2Bxml",
+      "rel": "alternate",
+      "type": "application/vnd.google-earth.kml+xml"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Fvnd.google-earth.kmz",
+      "rel": "alternate",
+      "type": "application/vnd.google-earth.kmz"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=text%2Fhtml",
+      "rel": "alternate",
+      "type": "text/html"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Fvnd.ogc.fg%2Bjson",
+      "rel": "alternate",
+      "type": "application/vnd.ogc.fg+json"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Fvnd.ogc.fg%2Bjson%3B%20conformance%3Dgeojson",
+      "rel": "alternate",
+      "type": "application/vnd.ogc.fg+json; conformance=geojson"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=application%2Fvnd.shp%2Boctet-stream",
+      "rel": "alternate",
+      "type": "application/vnd.shp+octet-stream"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=applcation%2Fjson",
+      "rel": "alternate",
+      "type": "applcation/json"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items?f=text%2Fxml",
+      "rel": "alternate",
+      "type": "text/xml"
+    }
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "id": "CWFID.Manhole.0.1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1048996567,
+          51.51406059
+        ]
+      },
+      "properties": {
+        "ANCILLARYR": 0,
+        "ENABLED": 1,
+        "DATECREATE": "2017-03-16T00:00:00",
+        "DATEMODIFI": "2017-03-16T00:00:00",
+        "GISID": 9580013,
+        "WATERTRACE": 0,
+        "MAINTAINER": "Sample Sewer Network",
+        "YEARBUILTC": "Z",
+        "SYMBOLROTA": 0,
+        "TRUNK": "N",
+        "LOCATIONCH": "EI",
+        "SUBTYPECD": 4,
+        "PURPOSE": "F",
+        "LIFECYCLES": "L",
+        "COVERLEVEL": 0,
+        "INVERTLEVE": 0,
+        "DEPTHINM": 0,
+        "METHODOFAB": "N",
+        "SIDEENTRY": "N",
+        "COVERVENTE": "N",
+        "SUMMIT": "N",
+        "HSCLASSIFI": "N",
+        "CONSTRUCTI": "Z",
+        "STEPSORLAD": "Z",
+        "COVERSHAPE": "Z",
+        "COVERDUTY": "Z",
+        "OPENINGDIA": 0,
+        "OPENINGWID": 0,
+        "SHAFTDIAME": 0,
+        "SHAFTWIDTH": 0,
+        "SHAFTDEPTH": 0,
+        "CHAMBERDIA": 0,
+        "CHAMBERWID": 0,
+        "GALLERYDIA": 0,
+        "GALLERYWID": 0,
+        "BIFURCATIO": "N",
+        "DEMARCATIO": "N",
+        "CATCHPIT": "N",
+        "CATCHPITDE": 0,
+        "GPSX": 0,
+        "GPSY": 0,
+        "GPSZ": 0,
+        "DEEPBORESO": "N",
+        "SYMBOLCODE": 15,
+        "FLUSHINGPO": "N",
+        "SHAPEX": 531596.966932,
+        "SHAPEY": 181161.447554,
+        "LEGISLATIO": "N",
+        "DATEPOSTED": "2017-03-17T00:00:00",
+        "TWTRACEWEI": 14803,
+        "MANHOLECOV": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CWFID.Manhole.0.2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1049322282,
+          51.51408668
+        ]
+      },
+      "properties": {
+        "ANCILLARYR": 0,
+        "ENABLED": 1,
+        "DATECREATE": "2017-03-16T00:00:00",
+        "DATEMODIFI": "2017-03-16T00:00:00",
+        "GISID": 9580023,
+        "WATERTRACE": 0,
+        "MAINTAINER": "Sample Sewer Network",
+        "YEARBUILTC": "Z",
+        "SYMBOLROTA": 0,
+        "TRUNK": "N",
+        "LOCATIONCH": "EI",
+        "SUBTYPECD": 4,
+        "PURPOSE": "F",
+        "LIFECYCLES": "L",
+        "COVERLEVEL": 0,
+        "INVERTLEVE": 0,
+        "DEPTHINM": 0,
+        "METHODOFAB": "N",
+        "SIDEENTRY": "N",
+        "COVERVENTE": "N",
+        "SUMMIT": "N",
+        "HSCLASSIFI": "N",
+        "CONSTRUCTI": "Z",
+        "STEPSORLAD": "Z",
+        "COVERSHAPE": "Z",
+        "COVERDUTY": "Z",
+        "OPENINGDIA": 0,
+        "OPENINGWID": 0,
+        "SHAFTDIAME": 0,
+        "SHAFTWIDTH": 0,
+        "SHAFTDEPTH": 0,
+        "CHAMBERDIA": 0,
+        "CHAMBERWID": 0,
+        "GALLERYDIA": 0,
+        "GALLERYWID": 0,
+        "BIFURCATIO": "N",
+        "DEMARCATIO": "N",
+        "CATCHPIT": "N",
+        "CATCHPITDE": 0,
+        "GPSX": 0,
+        "GPSY": 0,
+        "GPSZ": 0,
+        "DEEPBORESO": "N",
+        "SYMBOLCODE": 15,
+        "FLUSHINGPO": "N",
+        "SHAPEX": 531594.631761,
+        "SHAPEY": 181164.29037,
+        "LEGISLATIO": "N",
+        "DATEPOSTED": "2017-03-17T00:00:00",
+        "TWTRACEWEI": 14803,
+        "MANHOLECOV": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CWFID.Manhole.0.3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1041095606,
+          51.51318858
+        ]
+      },
+      "properties": {
+        "ANCILLARYR": 0,
+        "ENABLED": 1,
+        "DATECREATE": "2008-08-23T00:00:00",
+        "DATEMODIFI": "2008-08-23T00:00:00",
+        "GISID": 6236612,
+        "WATERTRACE": 0,
+        "REFERENCE": "TQ31816007",
+        "ALTERNATER": 3181,
+        "MAINTAINER": "Sample Sewer Network",
+        "YEARBUILTC": "Z",
+        "SYMBOLROTA": 195,
+        "TRUNK": "Y",
+        "LOCATIONCH": "UC",
+        "SUBTYPECD": 1,
+        "PURPOSE": "SO",
+        "LIFECYCLES": "L",
+        "COVERLEVEL": 0,
+        "INVERTLEVE": 0,
+        "DEPTHINM": 0,
+        "METHODOFAB": "N",
+        "SIDEENTRY": "Y",
+        "COVERVENTE": "N",
+        "SUMMIT": "N",
+        "HSCLASSIFI": "N",
+        "CONSTRUCTI": "Z",
+        "STEPSORLAD": "N",
+        "COVERSHAPE": "Z",
+        "COVERDUTY": "Z",
+        "OPENINGDIA": 0,
+        "OPENINGWID": 0,
+        "SHAFTDIAME": 0,
+        "SHAFTWIDTH": 0,
+        "SHAFTDEPTH": 0,
+        "CHAMBERDIA": 0,
+        "CHAMBERWID": 0,
+        "GALLERYDIA": 0,
+        "GALLERYWID": 0,
+        "BIFURCATIO": "N",
+        "DEMARCATIO": "N",
+        "CATCHPIT": "N",
+        "CATCHPITDE": 0,
+        "GPSX": 0,
+        "GPSY": 0,
+        "GPSZ": 0,
+        "DEEPBORESO": "N",
+        "SYMBOLCODE": 8,
+        "FLUSHINGPO": "N",
+        "SHAPEX": 531654.3,
+        "SHAPEY": 181065.9,
+        "LEGISLATIO": "Z",
+        "DATEPOSTED": "2016-08-12T00:00:00",
+        "TWTRACEWEI": 13493,
+        "MANHOLECOV": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CWFID.Manhole.0.4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1040584795,
+          51.51320394
+        ]
+      },
+      "properties": {
+        "ANCILLARYR": 0,
+        "ENABLED": 1,
+        "DATECREATE": "2008-08-23T00:00:00",
+        "DATEMODIFI": "2008-08-23T00:00:00",
+        "GISID": 6236623,
+        "WATERTRACE": 0,
+        "REFERENCE": "TQ31816009",
+        "MAINTAINER": "Sample Sewer Network",
+        "YEARBUILTC": "Z",
+        "SYMBOLROTA": 195,
+        "TRUNK": "Y",
+        "LOCATIONCH": "UC",
+        "SUBTYPECD": 1,
+        "PURPOSE": "SO",
+        "LIFECYCLES": "L",
+        "COVERLEVEL": 0,
+        "INVERTLEVE": 0,
+        "DEPTHINM": 0,
+        "METHODOFAB": "N",
+        "SIDEENTRY": "Y",
+        "COVERVENTE": "N",
+        "SUMMIT": "N",
+        "HSCLASSIFI": "N",
+        "CONSTRUCTI": "Z",
+        "STEPSORLAD": "N",
+        "COVERSHAPE": "Z",
+        "COVERDUTY": "Z",
+        "OPENINGDIA": 0,
+        "OPENINGWID": 0,
+        "SHAFTDIAME": 0,
+        "SHAFTWIDTH": 0,
+        "SHAFTDEPTH": 0,
+        "CHAMBERDIA": 0,
+        "CHAMBERWID": 0,
+        "GALLERYDIA": 0,
+        "GALLERYWID": 0,
+        "BIFURCATIO": "N",
+        "DEMARCATIO": "N",
+        "CATCHPIT": "N",
+        "CATCHPITDE": 0,
+        "GPSX": 0,
+        "GPSY": 0,
+        "GPSZ": 0,
+        "DEEPBORESO": "N",
+        "SYMBOLCODE": 8,
+        "FLUSHINGPO": "N",
+        "SHAPEX": 531657.8,
+        "SHAPEY": 181067.7,
+        "LEGISLATIO": "Z",
+        "DATEPOSTED": "2016-08-12T00:00:00",
+        "TWTRACEWEI": 13493,
+        "MANHOLECOV": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CWFID.Manhole.0.5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1044895631,
+          51.51601126
+        ]
+      },
+      "properties": {
+        "ANCILLARYR": 0,
+        "ENABLED": 1,
+        "DATECREATE": "2008-08-23T00:00:00",
+        "DATEMODIFI": "2017-08-31T00:00:00",
+        "GISID": 6237017,
+        "WATERTRACE": 0,
+        "REFERENCE": "TQ31816303",
+        "ALTERNATER": 6303,
+        "MAINTAINER": "Sample Sewer Network",
+        "YEARBUILTC": "Z",
+        "SYMBOLROTA": 192,
+        "TRUNK": "N",
+        "LOCATIONCH": "EI",
+        "SUBTYPECD": 1,
+        "PURPOSE": "C",
+        "LIFECYCLES": "L",
+        "COVERLEVEL": 6.26,
+        "INVERTLEVE": 2.5,
+        "DEPTHINM": 3.76,
+        "METHODOFAB": "N",
+        "SIDEENTRY": "N",
+        "COVERVENTE": "N",
+        "SUMMIT": "N",
+        "HSCLASSIFI": "N",
+        "CONSTRUCTI": "Z",
+        "STEPSORLAD": "N",
+        "COVERSHAPE": "Z",
+        "COVERDUTY": "Z",
+        "OPENINGDIA": 0,
+        "OPENINGWID": 0,
+        "SHAFTDIAME": 0,
+        "SHAFTWIDTH": 0,
+        "SHAFTDEPTH": 0,
+        "CHAMBERDIA": 0,
+        "CHAMBERWID": 0,
+        "GALLERYDIA": 0,
+        "GALLERYWID": 0,
+        "BIFURCATIO": "N",
+        "DEMARCATIO": "N",
+        "CATCHPIT": "N",
+        "CATCHPITDE": 0,
+        "GPSX": 0,
+        "GPSY": 0,
+        "GPSZ": 0,
+        "DEEPBORESO": "N",
+        "SYMBOLCODE": 1,
+        "FLUSHINGPO": "N",
+        "SHAPEX": 531619.8,
+        "SHAPEY": 181379.1,
+        "LEGISLATIO": "T105A",
+        "DATEPOSTED": "2017-09-05T00:00:00",
+        "TWTRACEWEI": 13493,
+        "MANHOLECOV": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CWFID.Manhole.0.6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1041303778,
+          51.51605312
+        ]
+      },
+      "properties": {
+        "ANCILLARYR": 0,
+        "ENABLED": 1,
+        "DATECREATE": "2008-08-23T00:00:00",
+        "DATEMODIFI": "2017-08-31T00:00:00",
+        "GISID": 6240284,
+        "WATERTRACE": 0,
+        "REFERENCE": "TQ31816302",
+        "ALTERNATER": 6302,
+        "MAINTAINER": "Sample Sewer Network",
+        "YEARBUILTC": "Z",
+        "SYMBOLROTA": 191,
+        "TRUNK": "N",
+        "LOCATIONCH": "UC",
+        "SUBTYPECD": 1,
+        "PURPOSE": "C",
+        "LIFECYCLES": "L",
+        "COVERLEVEL": 7.24,
+        "INVERTLEVE": 3.43,
+        "DEPTHINM": 3.81,
+        "METHODOFAB": "N",
+        "SIDEENTRY": "N",
+        "COVERVENTE": "N",
+        "SUMMIT": "N",
+        "HSCLASSIFI": "N",
+        "CONSTRUCTI": "Z",
+        "STEPSORLAD": "N",
+        "COVERSHAPE": "Z",
+        "COVERDUTY": "Z",
+        "OPENINGDIA": 0,
+        "OPENINGWID": 0,
+        "SHAFTDIAME": 0,
+        "SHAFTWIDTH": 0,
+        "SHAFTDEPTH": 0,
+        "CHAMBERDIA": 0,
+        "CHAMBERWID": 0,
+        "GALLERYDIA": 0,
+        "GALLERYWID": 0,
+        "BIFURCATIO": "N",
+        "DEMARCATIO": "N",
+        "CATCHPIT": "N",
+        "CATCHPITDE": 0,
+        "GPSX": 0,
+        "GPSY": 0,
+        "GPSZ": 0,
+        "DEEPBORESO": "N",
+        "SYMBOLCODE": 1,
+        "FLUSHINGPO": "N",
+        "SHAPEX": 531644.6,
+        "SHAPEY": 181384.4,
+        "LEGISLATIO": "T105A",
+        "DATEPOSTED": "2017-09-05T00:00:00",
+        "TWTRACEWEI": 13493,
+        "MANHOLECOV": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CWFID.Manhole.0.7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1001826388,
+          51.51344357
+        ]
+      },
+      "properties": {
+        "ANCILLARYR": 0,
+        "ENABLED": 1,
+        "DATECREATE": "2015-01-22T00:00:00",
+        "DATEMODIFI": "2015-01-22T00:00:00",
+        "GISID": 8796230,
+        "WATERTRACE": 0,
+        "REFERENCE": "TQ3181911A",
+        "MAINTAINER": "Sample Sewer Network",
+        "YEARBUILTC": "Z",
+        "SYMBOLROTA": 0,
+        "TRUNK": "N",
+        "LOCATIONCH": "EI",
+        "SUBTYPECD": 4,
+        "PURPOSE": "F",
+        "LIFECYCLES": "L",
+        "COVERLEVEL": 0,
+        "INVERTLEVE": 0,
+        "DEPTHINM": 0,
+        "METHODOFAB": "N",
+        "SIDEENTRY": "N",
+        "COVERVENTE": "N",
+        "SUMMIT": "N",
+        "HSCLASSIFI": "N",
+        "CONSTRUCTI": "Z",
+        "STEPSORLAD": "Z",
+        "COVERSHAPE": "Z",
+        "COVERDUTY": "Z",
+        "OPENINGDIA": 0,
+        "OPENINGWID": 0,
+        "SHAFTDIAME": 0,
+        "SHAFTWIDTH": 0,
+        "SHAFTDEPTH": 0,
+        "CHAMBERDIA": 0,
+        "CHAMBERWID": 0,
+        "GALLERYDIA": 0,
+        "GALLERYWID": 0,
+        "BIFURCATIO": "N",
+        "DEMARCATIO": "N",
+        "CATCHPIT": "N",
+        "CATCHPITDE": 0,
+        "GPSX": 0,
+        "GPSY": 0,
+        "GPSZ": 0,
+        "DEEPBORESO": "N",
+        "SYMBOLCODE": 15,
+        "FLUSHINGPO": "N",
+        "SHAPEX": 531926.033793,
+        "SHAPEY": 181101.320665,
+        "LEGISLATIO": "N",
+        "DATEPOSTED": "2015-01-27T00:00:00",
+        "TWTRACEWEI": 14803,
+        "MANHOLECOV": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CWFID.Manhole.0.8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.105375955,
+          51.51330347
+        ]
+      },
+      "properties": {
+        "ANCILLARYR": 0,
+        "ENABLED": 1,
+        "DATECREATE": "2008-08-23T00:00:00",
+        "DATEMODIFI": "2008-08-23T00:00:00",
+        "GISID": 6236188,
+        "WATERTRACE": 0,
+        "REFERENCE": "TQ31815006",
+        "ALTERNATER": 5006,
+        "MAINTAINER": "Sample Sewer Network",
+        "YEARBUILTC": "Z",
+        "SYMBOLROTA": 189,
+        "TRUNK": "N",
+        "LOCATIONCH": "UC",
+        "SUBTYPECD": 1,
+        "PURPOSE": "C",
+        "LIFECYCLES": "L",
+        "COVERLEVEL": 10.13,
+        "INVERTLEVE": 6.6,
+        "DEPTHINM": 3.53,
+        "METHODOFAB": "N",
+        "SIDEENTRY": "N",
+        "COVERVENTE": "N",
+        "SUMMIT": "N",
+        "HSCLASSIFI": "N",
+        "CONSTRUCTI": "Z",
+        "STEPSORLAD": "N",
+        "COVERSHAPE": "Z",
+        "COVERDUTY": "Z",
+        "OPENINGDIA": 0,
+        "OPENINGWID": 0,
+        "SHAFTDIAME": 0,
+        "SHAFTWIDTH": 0,
+        "SHAFTDEPTH": 0,
+        "CHAMBERDIA": 0,
+        "CHAMBERWID": 0,
+        "GALLERYDIA": 0,
+        "GALLERYWID": 0,
+        "BIFURCATIO": "N",
+        "DEMARCATIO": "N",
+        "CATCHPIT": "N",
+        "CATCHPITDE": 0,
+        "GPSX": 0,
+        "GPSY": 0,
+        "GPSZ": 0,
+        "DEEPBORESO": "N",
+        "SYMBOLCODE": 1,
+        "FLUSHINGPO": "N",
+        "SHAPEX": 531566.1,
+        "SHAPEY": 181076.4,
+        "LEGISLATIO": "Z",
+        "DATEPOSTED": "2013-09-25T00:00:00",
+        "TWTRACEWEI": 13493,
+        "MANHOLECOV": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CWFID.Manhole.0.9",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1073535056,
+          51.51395949
+        ]
+      },
+      "properties": {
+        "ANCILLARYR": 0,
+        "ENABLED": 1,
+        "DATECREATE": "2008-08-23T00:00:00",
+        "DATEMODIFI": "2007-04-12T00:00:00",
+        "GISID": 6242448,
+        "WATERTRACE": 0,
+        "REFERENCE": "TQ31814102",
+        "MAINTAINER": "Sample Sewer Network",
+        "YEARBUILTC": "Z",
+        "SYMBOLROTA": 191,
+        "TRUNK": "N",
+        "LOCATIONCH": "UC",
+        "SUBTYPECD": 1,
+        "PURPOSE": "A",
+        "LIFECYCLES": "L",
+        "COVERLEVEL": 0,
+        "INVERTLEVE": 0,
+        "DEPTHINM": 0,
+        "METHODOFAB": "N",
+        "SIDEENTRY": "N",
+        "COVERVENTE": "N",
+        "SUMMIT": "N",
+        "HSCLASSIFI": "N",
+        "CONSTRUCTI": "Z",
+        "STEPSORLAD": "N",
+        "COVERSHAPE": "Z",
+        "COVERDUTY": "Z",
+        "OPENINGDIA": 0,
+        "OPENINGWID": 0,
+        "SHAFTDIAME": 0,
+        "SHAFTWIDTH": 0,
+        "SHAFTDEPTH": 0,
+        "CHAMBERDIA": 0,
+        "CHAMBERWID": 0,
+        "GALLERYDIA": 0,
+        "GALLERYWID": 0,
+        "BIFURCATIO": "N",
+        "DEMARCATIO": "N",
+        "CATCHPIT": "N",
+        "CATCHPITDE": 0,
+        "GPSX": 0,
+        "GPSY": 0,
+        "GPSZ": 0,
+        "DEEPBORESO": "N",
+        "SYMBOLCODE": 10,
+        "FLUSHINGPO": "N",
+        "SHAPEX": 531427,
+        "SHAPEY": 181145.8,
+        "LEGISLATIO": "Z",
+        "TWTRACEWEI": 13493,
+        "MANHOLECOV": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CWFID.Manhole.0.10",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1110143471,
+          51.51099782
+        ]
+      },
+      "properties": {
+        "ANCILLARYR": 0,
+        "ENABLED": 1,
+        "DATECREATE": "2008-08-23T00:00:00",
+        "DATEMODIFI": "2008-08-23T00:00:00",
+        "GISID": 6243485,
+        "WATERTRACE": 0,
+        "REFERENCE": "TQ31801802",
+        "ALTERNATER": 1802,
+        "MAINTAINER": "Sample Sewer Network",
+        "YEARBUILTC": "Z",
+        "SYMBOLROTA": 272,
+        "TRUNK": "N",
+        "LOCATIONCH": "UC",
+        "SUBTYPECD": 1,
+        "PURPOSE": "C",
+        "LIFECYCLES": "L",
+        "COVERLEVEL": 4.49,
+        "INVERTLEVE": 0,
+        "DEPTHINM": 0,
+        "METHODOFAB": "N",
+        "SIDEENTRY": "N",
+        "COVERVENTE": "N",
+        "SUMMIT": "N",
+        "HSCLASSIFI": "N",
+        "CONSTRUCTI": "Z",
+        "STEPSORLAD": "N",
+        "COVERSHAPE": "Z",
+        "COVERDUTY": "Z",
+        "OPENINGDIA": 0,
+        "OPENINGWID": 0,
+        "SHAFTDIAME": 0,
+        "SHAFTWIDTH": 0,
+        "SHAFTDEPTH": 0,
+        "CHAMBERDIA": 0,
+        "CHAMBERWID": 0,
+        "GALLERYDIA": 0,
+        "GALLERYWID": 0,
+        "BIFURCATIO": "N",
+        "DEMARCATIO": "N",
+        "CATCHPIT": "N",
+        "CATCHPITDE": 0,
+        "GPSX": 0,
+        "GPSY": 0,
+        "GPSZ": 0,
+        "DEEPBORESO": "N",
+        "SYMBOLCODE": 1,
+        "FLUSHINGPO": "N",
+        "SHAPEX": 531181.5,
+        "SHAPEY": 180809.9,
+        "LEGISLATIO": "Z",
+        "TWTRACEWEI": 13493,
+        "MANHOLECOV": "N"
+      }
+    }
+  ]
+}
+----
+
+The following fragment shows one instance of a "Manhole" feature being presented as JSON-FG using CRS EPSG-27700 from the MariaDB feature server.
+
+[[jsonfg-example]]
+[%unnumbered%collapsible]
+[source,json]
+----
+{
+  "type": "Feature",
+  "conformsTo" : [ "[ogc-json-fg-1-0.2:core]",
+                   "[ogc-json-fg-1-0.2:types-schemas]" ],
+  "featureType": "Manhole",
+  "featureSchema": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/schema",
+  "id": "CWFID.Manhole.0.10",
+  "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/27700",
+  "geometry": null,
+  "place": {
+    "type": "Point",
+    "coordinates": [
+      531181.5,
+      180809.9
+    ]
+  },
+  "time": { "timestamp": "2008-08-23T00:00:00Z" },
+  "properties": {
+    "ANCILLARYR": 0,
+    "ENABLED": 1,
+    "DATECREATE": "2008-08-23T00:00:00",
+    "DATEMODIFI": "2008-08-23T00:00:00",
+    "GISID": 6243485,
+    "WATERTRACE": 0,
+    "REFERENCE": "TQ31801802",
+    "ALTERNATER": 1802,
+    "MAINTAINER": "Sample Sewer Network",
+    "YEARBUILTC": "Z",
+    "SYMBOLROTA": 272,
+    "TRUNK": "N",
+    "LOCATIONCH": "UC",
+    "SUBTYPECD": 1,
+    "PURPOSE": "C",
+    "LIFECYCLES": "L",
+    "COVERLEVEL": 4.49,
+    "INVERTLEVE": 0,
+    "DEPTHINM": 0,
+    "METHODOFAB": "N",
+    "SIDEENTRY": "N",
+    "COVERVENTE": "N",
+    "SUMMIT": "N",
+    "HSCLASSIFI": "N",
+    "CONSTRUCTI": "Z",
+    "STEPSORLAD": "N",
+    "COVERSHAPE": "Z",
+    "COVERDUTY": "Z",
+    "OPENINGDIA": 0,
+    "OPENINGWID": 0,
+    "SHAFTDIAME": 0,
+    "SHAFTWIDTH": 0,
+    "SHAFTDEPTH": 0,
+    "CHAMBERDIA": 0,
+    "CHAMBERWID": 0,
+    "GALLERYDIA": 0,
+    "GALLERYWID": 0,
+    "BIFURCATIO": "N",
+    "DEMARCATIO": "N",
+    "CATCHPIT": "N",
+    "CATCHPITDE": 0,
+    "GPSX": 0,
+    "GPSY": 0,
+    "GPSZ": 0,
+    "DEEPBORESO": "N",
+    "SYMBOLCODE": 1,
+    "FLUSHINGPO": "N",
+    "SHAPEX": 531181.5,
+    "SHAPEY": 180809.9,
+    "LEGISLATIO": "Z",
+    "TWTRACEWEI": 13493,
+    "MANHOLECOV": "N"
+  },
+  "links": [
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4",
+      "rel": "service,"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole?f=application%2Fjson",
+      "rel": "collection",
+      "type": "application/json"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole?f=application%2Fxml",
+      "rel": "collection",
+      "type": "application/xml"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/schemas/collection",
+      "rel": "describedby",
+      "type": "application/xml"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Fvnd.ogc.fg%2Bjson",
+      "rel": "self",
+      "type": "application/vnd.ogc.fg+json"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Fgml%2Bxml",
+      "rel": "alternate",
+      "type": "application/gml+xml"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Fx-bxfs%2Bxml%3B%20version%3D1.0.0",
+      "rel": "alternate",
+      "type": "application/x-bxfs+xml; version=1.0.0"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Fgml%2Bxml%3B%20version%3D2.1",
+      "rel": "alternate",
+      "type": "application/gml+xml; version=2.1"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Fgml%2Bxml%3B%20version%3D3.1",
+      "rel": "alternate",
+      "type": "application/gml+xml; version=3.1"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=text%2Fxml%3B%20subType%3Dgml%2F3.1.1%2Fprofiles%2Fgmlsf%2F1.0.0%2F0",
+      "rel": "alternate",
+      "type": "text/xml; subType=gml/3.1.1/profiles/gmlsf/1.0.0/0"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=text%2Fxml%3B%20subType%3Dgml%2F3.1.1%2Fprofiles%2Fgmlsf%2F1.0.0%2F1",
+      "rel": "alternate",
+      "type": "text/xml; subType=gml/3.1.1/profiles/gmlsf/1.0.0/1"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Fgml%2Bxml%3B%20version%3D3.2",
+      "rel": "alternate",
+      "type": "application/gml+xml; version=3.2"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Fgml%2Bxml%3B%20version%3D3.2%3B%20profile%3Dhttp%3A%2F%2Fwww.opengis.net%2Fdef%2Fprofile%2Fogc%2F2.0%2Fgml-sf0",
+      "rel": "alternate",
+      "type": "application/gml+xml; version=3.2; profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf0"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Fgml%2Bxml%3B%20version%3D3.2%3B%20profile%3Dhttp%3A%2F%2Fwww.opengis.net%2Fdef%2Fprofile%2Fogc%2F2.0%2Fgml-sf1",
+      "rel": "alternate",
+      "type": "application/gml+xml; version=3.2; profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf1"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Frss%2Bxml",
+      "rel": "alternate",
+      "type": "application/rss+xml"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Fatom%2Bxml",
+      "rel": "alternate",
+      "type": "application/atom+xml"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Fvnd.google-earth.kml%2Bxml",
+      "rel": "alternate",
+      "type": "application/vnd.google-earth.kml+xml"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Fvnd.google-earth.kmz",
+      "rel": "alternate",
+      "type": "application/vnd.google-earth.kmz"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=text%2Fhtml",
+      "rel": "alternate",
+      "type": "text/html"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Fgeo%2Bjson",
+      "rel": "alternate",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=application%2Fvnd.shp%2Boctet-stream",
+      "rel": "alternate",
+      "type": "application/vnd.shp+octet-stream"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=applcation%2Fjson",
+      "rel": "alternate",
+      "type": "applcation/json"
+    },
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023/ogcapi/Store_4/collections/Manhole/items/CWFID.Manhole.0.10?f=text%2Fxml",
+      "rel": "alternate",
+      "type": "text/xml"
+    }
+  ]
+}
+----
+
+The MUDDI data was loaded from SHAPE files provided by Ordnance Survey and as such does not comform to the MUDDI schema.  The MariaDB feature server has the ability to transform the internal schema to an external schema on the fly and work was begun at the code sprint to create the mapping files to transform the stored collections into conformant MUDDI GML and GeoJSON responses.  However, time contraints prevented to the work from being completed during the code sprint.  
+
+====== JSON-FG
+
+There were several aspects of MariaDB's Feature server JSON-FG output that did not conform to the https://docs.ogc.org/DRAFTS/21-045.html#types-schemas_feature-type[latest editor's draft of the JSON-FG specification] and these issues we addressed during the code sprint.  Specifically, the MariaDB server did not previously generate the "conformsTo", "featureType" and "featureSchema" members.  These members can now be seen in the <<jsonfg-example,JSON-FG example above>>.
+
+====== OGC API Records
+
+**Discussion topics**
+
+Two main topics were discusses in the OGC API Records breakout session.  
+
+* The first concerned "faceted" searching (aka Aggregations) which resulted in a https://github.com/opengeospatial/ogcapi-records/pull/320[pull request being created for the proposal].  It was decided that this capability would not be part of Part 1 - Core but would be in its own part.  
+
+* The second topic of discussion was federated searching.  The conclusion of the discussion was that no special changes are required to Part 1 - Core to support federated searching.  A federated search capability can be easily implemented on either the client side or the server side by simply querying N catalogues (perhaps simultaneously) and then aggregating the results.
+
+**Implementation**
+
+https://github.com/opengeospatial/ogcapi-records/issues/275[Issue 275] from the OGC API Records SWG discusses templated links and how unaware clients, trying to resolve a templated link, would encounter errors because the unaware client would not know to replace the substitution variables in the template.  This issue presented several approaches to resolving the problem which were discussed in a subsequent OGC Architecture DWG meeting conveened to agree on an OGC-wide approach to handing templated links.  At that meeting it was agreed that the approach described in https://github.com/opengeospatial/ogcapi-records/pull/290[Pull request 290] was most consistent current practices on the Web.
+
+During the code sprint the MariaDB OGC API Records implementation was updated to handle templated links as described in https://github.com/opengeospatial/ogcapi-records/pull/290[Pull request 290].  Below is a sample record containing a templated links section:
+
+[%unnumbered%collapsible]
+[source,json]
+----
+{
+  "id": "urn:uuid:9c953c1e-7dd8-11ee-907c-6b42beb7f5d4",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [ [ -0.1154702047, 51.50711155 ],
+        [ -0.09681305432, 51.50711155 ],
+        [ -0.09681305432, 51.51830892 ],
+        [ -0.1154702047, 51.51830892 ],
+        [ -0.1154702047, 51.50711155 ] ] ]
+  },
+  "properties": {
+    "type": "urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Service",
+    "title": "London 2023 MariaDB Geospatial WMS",
+    "description": "OGC-compliant cascading web map server (WMS) by MariaDB.",
+    "baseUrl": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023",
+    "urn:cw:def:ebRIM-SlotName:cubeVersion": "9.5.30",
+    "layerLimit": "-1",
+    "maxHeight": "3000",
+    "maxWidth": "4000",
+    "onlineResource": "https://mariadb.com/products/skysql/geospatial/",
+    "resourceType": "http://www.opengis.net/wms"
+  },
+  "linkTemplates": [
+    {
+      "href": "https://dev.cubewerx.com/~mgalluch/mariadbgeo/cubeserv/London_2023?SERVICE=WMS&REQUEST=GetMap&layer={layerName}&bbox={minX},{minY},{maxX},{maxY}&crs={crs}&width={width}&height={height}",
+      "rel": "describes",
+      "title": "London 2023 MariaDB Geospatial WMS"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues",
+      "rel": "service",
+      "title": "service offering this record"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest",
+      "rel": "collection",
+      "title": "collection containing this record"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9c953c1e-7dd8-11ee-907c-6b42beb7f5d4?f=json&s=ogcapirecord",
+      "rel": "self",
+      "type": "application/geo+json",
+      "title": "this record"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/ogcApiForRecord/urn%3Auuid%3A9c953c1e-7dd8-11ee-907c-6b42beb7f5d4",
+      "rel": "ogcApiForRecord",
+      "title": "dynamic OGC API langing page"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9c953c1e-7dd8-11ee-907c-6b42beb7f5d4?f=xml&s=ogcapirecord",
+      "rel": "alternate",
+      "type": "application/xml",
+      "title": "this record using the \"OGC API Record\" schema encoded as xml"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9c953c1e-7dd8-11ee-907c-6b42beb7f5d4?f=html&s=ogcapirecord",
+      "rel": "alternate",
+      "type": "text/html",
+      "title": "this record using the \"OGC API Record\" schema encoded as html"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9c953c1e-7dd8-11ee-907c-6b42beb7f5d4?f=xml&s=cswrecord30",
+      "rel": "alternate",
+      "type": "application/csw30+xml",
+      "title": "this record using the \"CSW Record v3.0\" schema encoded as xml"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9c953c1e-7dd8-11ee-907c-6b42beb7f5d4?f=xml&s=cswrecord20",
+      "rel": "alternate",
+      "type": "application/csw20+xml",
+      "title": "this record using the \"CSW Record v2.X\" schema encoded as xml"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9c953c1e-7dd8-11ee-907c-6b42beb7f5d4?f=xml&s=ebrim",
+      "rel": "alternate",
+      "type": "application/ebrim+xml",
+      "title": "this record using the \"ebRIM\" schema encoded as xml"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9c953c1e-7dd8-11ee-907c-6b42beb7f5d4?f=xml&s=atom",
+      "rel": "alternate",
+      "type": "application/atom+xml",
+      "title": "this record using the \"ATOM\" schema encoded as xml"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9c953c1e-7dd8-11ee-907c-6b42beb7f5d4?f=xml&s=rss",
+      "rel": "alternate",
+      "type": "application/rss+xml",
+      "title": "this record using the \"RSS\" schema encoded as xml"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9da91a9e-7dd8-11ee-8622-4fd1cb3998dc?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "End Item"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9daa2b96-7dd8-11ee-9739-2becf9c93847?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Fitting"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9dab2dca-7dd8-11ee-89ec-53b042fc578f?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Hydrant"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9dac8c88-7dd8-11ee-8070-a37d1bf0c23b?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Network Meter"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9dad9ad8-7dd8-11ee-8012-2fbe67e88d7f?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Network Opt Valve"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9daeadf6-7dd8-11ee-8066-1ffca5339551?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Pressure Cont Valve"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9dafb052-7dd8-11ee-960f-57d7e523dc01?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Trunk Main"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d7e40a8-7dd8-11ee-acbf-6f5fdd053539?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Non Flow Equipment"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d7f4e26-7dd8-11ee-a50e-234b32530474?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Pipe"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d809678-7dd8-11ee-bd80-071461ba6f4a?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "IDNO"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d813ec0-7dd8-11ee-be07-3b6b398204e4?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Electric Cable Line"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d81b8c8-7dd8-11ee-a6fe-f322135c7733?f=json",
+      "type": "application/geo+json",
+      "title": "IDNO"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d827d44-7dd8-11ee-881c-9737ccd6b355?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Electric Demand Point"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d83cab4-7dd8-11ee-84e9-6ff4debe02df?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Site Polygon"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d8517fc-7dd8-11ee-872a-0733383085f9?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Substation Point"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d866652-7dd8-11ee-b77d-a3196972ffcc?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Local Authority"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d870e2c-7dd8-11ee-81d4-af98f059b7b2?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Bollards"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d8798b0-7dd8-11ee-b1a7-93a783613103?f=json",
+      "type": "application/geo+json",
+      "title": "LocalAuthority"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d8873e8-7dd8-11ee-9f81-736ce96b9dc0?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Drains"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d89c27a-7dd8-11ee-8507-534bf09a4a39?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Street Lights"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d8b179c-7dd8-11ee-b6e6-577d4ef8dfca?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Subway Lighting"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d8c6534-7dd8-11ee-b6cb-2fe8446cd655?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Sewer"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d8d0818-7dd8-11ee-8388-237dac12edb7?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Abandoned Point"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d8d828e-7dd8-11ee-87a5-97dde6796383?f=json",
+      "type": "application/geo+json",
+      "title": "Sewer"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d8e457a-7dd8-11ee-a7cf-1b9af63148f3?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Abandoned Sewer"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d8fac4e-7dd8-11ee-b5bc-cba7512a8434?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Ancillary"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d9107e2-7dd8-11ee-8815-f3e020018ef9?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Chamber"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d9252a0-7dd8-11ee-8d43-334e768efe4f?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Control Valve"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d935c7c-7dd8-11ee-ae63-5fb06c3abc1e?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Drain"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d94aece-7dd8-11ee-8dab-7fe7fe7c3cac?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Duct or Crossing"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d95fffe-7dd8-11ee-be43-9b3fd957c948?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "End Sewer Item"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d97615a-7dd8-11ee-8558-1329ebca4654?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Fitting"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d98aae2-7dd8-11ee-8374-afa41f426eae?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Gravity Sewer"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d99f1ea-7dd8-11ee-8b32-97c352f2e781?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Invert Level Point"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d9b50da-7dd8-11ee-a9b1-df9ffd263109?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Lateral"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d9c4dbe-7dd8-11ee-ac47-df2fbfafa62e?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Manhole"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d9d99a8-7dd8-11ee-8650-330f1e821069?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Meter"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d9ee970-7dd8-11ee-a706-e31bbb18d5f0?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Operational Site"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9da04770-7dd8-11ee-a36d-ebe680b57c48?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Water"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9da0f440-7dd8-11ee-bb4c-131fba7f39c3?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Abandoned Water Device"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9da20416-7dd8-11ee-908f-f3228e168f63?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Abandoned Water Main"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9da27ebe-7dd8-11ee-b8a8-9b7786b75552?f=json",
+      "type": "application/geo+json",
+      "title": "Water"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9da346fa-7dd8-11ee-af0d-6bd5b47cd648?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Chamber"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9da448ac-7dd8-11ee-91d5-4386a1d007cd?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Connection Main"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9da59d38-7dd8-11ee-ade9-672cc04f5409?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Control Pillar"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9da6a156-7dd8-11ee-90de-07054a3b15c0?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Distribution Main"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9da7f808-7dd8-11ee-a609-c788d0aee706?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Duct"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9ccb2860-7dd8-11ee-9e88-d7a3e25b7bd0?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "CubeSERV WMS layers"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d6166f4-7dd8-11ee-aade-b794a356708b?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Electricity"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d63363c-7dd8-11ee-89e7-af9e397b43a0?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Cross Section"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d63fe78-7dd8-11ee-a7b4-f30a06ab116e?f=json",
+      "type": "application/geo+json",
+      "title": "Basic style"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d65882e-7dd8-11ee-b0dd-e3dbf2e31bc7?f=json",
+      "type": "application/geo+json",
+      "title": "Electricity"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d66e7b4-7dd8-11ee-aad7-db1fb54aba79?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Cross Section Arrow"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d706d52-7dd8-11ee-bbd0-7ffa6ee86150?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "LV Link Box"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d71772e-7dd8-11ee-9523-3389c1e88f82?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Pit"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d72e7ee-7dd8-11ee-9d0c-775756b48335?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Primary Substation Building D"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d745926-7dd8-11ee-a9ed-dfb31b2b4b58?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Service Cable"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d75a47a-7dd8-11ee-bbd9-772c85f6d250?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Substation"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d77004a-7dd8-11ee-bb45-b7db6c416fbd?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Supply Point"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d78738a-7dd8-11ee-b50e-db6a7bc93333?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Gas"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d791d1c-7dd8-11ee-ad2e-d34e158bb8cc?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Abandoned Pipe"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d79985a-7dd8-11ee-87b8-37e490c862c6?f=json",
+      "type": "application/geo+json",
+      "title": "Gas"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d7a6262-7dd8-11ee-ab82-b3272dabe4dd?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Depth of Cover"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d7babd6-7dd8-11ee-a184-9b6abd3f47b3?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "End Closure"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d7cf284-7dd8-11ee-8301-9bbcbe2ce4c9?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Flow Equipment"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d68d894-7dd8-11ee-bf49-bbe7acc7f0a0?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "Duct"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d69d596-7dd8-11ee-b19b-23881c04eb74?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "EHV Cable"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d6b29b4-7dd8-11ee-b533-d7d9e4f2c138?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "HV Cable"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d6c7396-7dd8-11ee-acc6-0b71b22e270a?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "HV Joint"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d6dc002-7dd8-11ee-8007-6fbba4a4737a?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "LV Cable"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/wrstest/items/urn%3Auuid%3A9d6f1420-7dd8-11ee-ac16-d7aabcec602c?f=json",
+      "rel": "operatesOn",
+      "type": "application/geo+json",
+      "title": "LV Joint"
+    }
+  ]
+}
+----
+
+====== OGC API Processes
+
+**Discussion topics**
+
+The https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html[OGC API Processes - Part 1: Core] specification defines two ways that an OAProc server can notify a client that an asynchronously executed process has completed excution.  The first method involves polling using the https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html#_d93504cb-971a-4587-be84-d2c0d3c5c6ad[GetStatus] operation.  The second method involves https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html#_7731df77-078f-409f-b1fe-f0028e562419[OpenAPI callbacks].  This discussed on the breakout session, however, involved applying the https://docs.ogc.org/dp/23-013.html[Publish-Subscribe workflow] used by OGC API - EDR.  If was agreed, during the breakout session, that https://www.asyncapi.com/docs/reference/specification/v2.6.0[AsyncAPI] and the PubSub workflow should be offers as a notification option in addition the current polling and callback mechanisms (which should be preserved for backward compatability).
+
+**Implemenation**
+
+During the code sprint, changes were made to the MariaDB OGC API Processes server to align with editor's drafts of https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html[Part 1] and https://docs.ogc.org/DRAFTS/20-044.html[Part 2].  The following images illustrate the MariaDB thematic exploitation test harness using the MariaDB OGC API Records and OGC API Processes servers updated during the code sprint.
+
+* The TEP accessing the catalog to locate images of interest:
+
+image::images/mariadb_tep_records_access.png[]
+
+* The user selects one of the images and the catalog is accessed to find compatible process (the Ship Detection Process in this case):
+
+image::images/mariadb_tep_find_related_processes.png[]
+
+* The selected process is then executed by the processes server:
+
+image::images/mariadb_tep_execute_process.png[]
+
+* The selected process is accepted:
+
+image::images/mariadb_tep_process_accepted.png[]
+
+* The executed process completes successfully:
+
+image::images/mariadb_tep_job_status_success.png[]
+
+* View the processing results:
+
+image::images/mariadb_tep_job_view_results.png[]
