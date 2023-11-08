@@ -19,7 +19,6 @@ include::results/staplus.adoc[]
 
 include::results/nuar_muddi.adoc[]
 
-include::results/example.adoc[]
 
 
 === Specifications from the Community
@@ -28,7 +27,6 @@ include::results/gimi_open_source_libraries.adoc[]
 
 include::results/pixalytics-gimi.adoc[]
 
-include::results/example2.adoc[]
 
 === Software Projects and Products
 
@@ -46,4 +44,3 @@ include::results/web_gimi_viewer_results.adoc[]
 
 include::results/mariadb.adoc[]
 
-include::results/example3.adoc[]
