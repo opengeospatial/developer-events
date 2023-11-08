@@ -14,7 +14,7 @@ Other work accomplished on support for GIMI on GNOSIS Map Server included enabli
 
 [#tbl_gnosis_heif_encodings]
 .Mapping of HEIF media types to OGC API content negotiation
-[cols="1,1,1"]
+[cols="1,1,1",header]
 |===
 |Encoding
 |Accept:
