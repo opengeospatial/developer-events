@@ -23,9 +23,7 @@ include::results/staplus.adoc[]
 
 include::results/nuar_muddi.adoc[]
 
-
-
-=== Specifications from the Community
+=== Software Projects and Products
 
 include::results/gimi_open_source_libraries.adoc[]
 
@@ -33,13 +31,11 @@ include::results/pixalytics-gimi.adoc[]
 
 include::results/web_gimi_viewer_results.adoc[]
 
-=== Software Projects and Products
+include::results/gnosis.adoc[]
 
 include::results/ldproxy.adoc[]
 
 include::results/pycsw.adoc[]
-
-include::results/gnosis.adoc[]
 
 include::results/pygeoapi.adoc[]
 
