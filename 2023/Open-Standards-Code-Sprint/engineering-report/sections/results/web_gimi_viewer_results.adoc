@@ -24,7 +24,7 @@ image::images/gimi_metadata_encodings.png[]
 
 The ISOBMFF structure of the file is handled with the https://github.com/gpac/mp4box.js/[mp4box] library. A few technical issues within this library were discovered and fixed during the codesprint.
 
-Geographical information is currently encoded in KLV+ST0601, which is a standard for transmitting the attitude and status of an unmanned aerial vehicle via radio link, in real time, to a ground station. This encoded is handled with https://github.com/vidterra/misb.js/[vidterra's misb.js] library, which needed subtantial adaptations to work in a web browser.
+Geographical information is currently encoded in KLV+ST0601, which is a standard for transmitting the attitude and status of an unmanned aerial vehicle via radio link, in real time, to a ground station. This encoded is handled with https://github.com/vidterra/misb.js/[vidterra's misb.js] library, which needed substantial adaptations to work in a web browser.
 
 Instead of KLV+ST0601, it might be preferable to store geographical information directly in the ISOBMFF metadata fields using a WKB (Well-Known Binary) encoding. The non-domain-specific https://geopose.org/[GeoPose] OGC standard should also be considered. Further research would be needed to explore the technical viability of WKB and/or GeoPose when a GIMI file contains video instead of a single still image.
 
@@ -48,7 +48,7 @@ image::images/gimi_security_metadata.png[]
 
 Web browsers have native support for a very limited number of image formats/codecs, and supporting additional codecs requires explicit effort in the web application. Support for the HVC1 codec could not be implemented (due to time constraints), this being the reason why <<img_gimi_security_metadata>> displays an empty rectangle instead of the imagery.
 
-By constrast, the file in <<img_gimi_viewer_1>> uses the HEIF codec, which can be decodec with the aid of the https://github.com/alexcorvi/heic2any[heic2any] library.
+By contrast, the file in <<img_gimi_viewer_1>> uses the HEIF codec, which can be decoded with the aid of the https://github.com/alexcorvi/heic2any[heic2any] library.
 
 [[img_gimi_viewer_1]]
 .Screenshot of the prototype web-gimi-viewer displaying a GIMI file with HEIF imagery. Contains Sentinel-2 data.
