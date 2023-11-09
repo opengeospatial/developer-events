@@ -1,3 +1,4 @@
+[[ogcapifeatures_results]]
 ==== OGC API - Features
 
 The OGC API - Features team held a breakout to review the https://docs.ogc.org/DRAFTS/23-058.html[initial version of the new Part 5: Schemas].
