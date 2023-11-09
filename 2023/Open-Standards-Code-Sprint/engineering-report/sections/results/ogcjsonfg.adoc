@@ -22,9 +22,13 @@ image::images/json-fg-validator-ets-report.png[align="center"]
 
 * A https://ivansanchez.gitlab.io/gleo/demos/jsonfg-drag-drop.html[JSON-FG map client] was deployed by sprint participants that supported viewing JSON-FG documents by drag-and-drop.
 
+* MUDDI data was loaded into MariaDB and published via an OGC Web API, including in JSON-FG; see <<mariadb_results>> for details.
+
 * The ldproxy implementation was updated to JSON-FG version 0.2.1 during the sprint, see <<ldproxy_results>> for details.
 
 One topic during the breakout was support for different coordinate reference systems and the GeoJSON compatibility. Since the sprint took place in London, the British National Grid (EPSG:27700) was used as the coordinate reference system in example requests to an API implementing OGC API Features:
+
+* The <<mariadb_results,MariaDB results section>> includes a "Manhole" feature being presented as JSON-FG using CRS EPSG:27700 as provided from the MariaDB feature server.
 
 * An airport feature from the OS Open Zoomstack dataset in the default coordinate reference system (OGC:CRS84):
 
