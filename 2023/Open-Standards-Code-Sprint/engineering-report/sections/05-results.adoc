@@ -33,6 +33,8 @@ include::results/web_gimi_viewer_results.adoc[]
 
 include::results/gnosis.adoc[]
 
+include::results/gimi_creaf_miramon_web_browser.adoc[]
+
 include::results/ldproxy.adoc[]
 
 include::results/pycsw.adoc[]
