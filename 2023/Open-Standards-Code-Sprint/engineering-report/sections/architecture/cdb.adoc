@@ -1,0 +1,4 @@
+[[cdb]]
+==== OGC CDB
+
+The CDB Standard defines a standardized model and structure for a single virtual representation of the earth. A CDB structured data store provides for a geospatial content and model definition repository that is plug-and-play interoperable between database authoring workstations. The CDB Standard defines an open format for the storage, access and modification of a database, typically but not exclusively a synthetic environment database used for computer simulation.

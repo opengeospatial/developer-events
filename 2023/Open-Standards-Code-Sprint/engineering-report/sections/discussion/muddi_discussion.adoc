@@ -1,0 +1,6 @@
+[[muddi_discussion]]
+==== MUDDI
+
+The work done by multiple sprint participants demonstrated that the MUDDI conceptual model could be used as the basis for implementing database. MariaDB, Ordnance Survey, Safe Software are some of the participants that implemented databases based on the MUDDI model. The draft JSON-FG and GML schemas of MUDDI that has been provided by interactive instruments were applied to enable data to be served through an interface conforming to the OGC API - Features Standard. The analysis by IIT Bombay provided further insight into the similarity of feature properties in synthetic datasets versus those in the draft MUDDI schemas. 
+
+It is clear from the aforementioned implementations of MUDDI that MUDDI can be implemented. However, as the candidate Standard is that of a Conceptual Model, there is a need to specify a Standard for a logical model and data encoding. This need is evidenced by the observation that some developers had to make design-decisions (such as how to represent relationships between tables) during their implementation of MUDDI. An encoding standard would formalize some of the those design-decisions so that that they become common to all implementations of MUDDI.

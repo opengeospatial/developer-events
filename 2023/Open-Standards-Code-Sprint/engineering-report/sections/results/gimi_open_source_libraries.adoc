@@ -1,26 +1,162 @@
 [[results_gimi_open_source_libraries]]
 ==== Towards open source libraries for GIMI
 
-This section presents findings of the prototyping GIMI support in a selection of open source libraries. The prototyping and assessment was carried out by Brad Hards.
+This section presents findings of prototyping GIMI support in a selection of open source libraries. The prototyping and assessment was carried out by Brad Hards.
 
-As a community we have an ecosystem that has some key dependencies that include GDAL + libheif, mp4box.js, rasterio, rio-tiler, pygeoapi etc. There are also some commercial libraries that sit alongside these open source libraries. GDAL is used by several applications such as GDAL. Rasterio is a very import tool. So the combination of tools and libraries presents a big stack is illustrated in Figure TBA. The sprint participants sought to show how this stack could be used to support GIMI.
+Prior to the code sprint, a selection of GIMI files were produced using a custom application. The application used open data provided by the Australian Capital
+Territory (ACT) Government under a CC-BY license. The source format was GeoTIFF, and the resulting GIMI files used HEVC (H.265), JPEG 2000 and uncompressed
+encodings. Non-standard JPEG and AV1 (AVIF) files were also produced, along with a sample that did not include security metadata and a sample that did not
+include corner points.
 
+Additional files were produced during the sprint from Synthetic Aperture Radar (SAR) data in NITF-formatted Sensor Independent Derived Data (SIDD) format, sourced
+from Capella Space via the AWS Open Data Program, also under a CC-BY license.
+
+These GIMI files were read back in using modified versions of libheif and GDAL,
+where GDAL already used libheif for image content, but required an external "sidecar" PAM file to provide any geopositioning or associated metadata.
+
+The changes to libheif were to support metadata that is not attached to an image item. This occurs in GIMI files for the security metadata, which is scoped to the entire
+HEIF file content. The changes included suppressing a parsing error, and exposing the resulting metadata item through the libheif API.
+
+The changes to GDAL were to support the security metadata as a GDAL metadata item, and to use the KLV metadata as a GDAL metadata item, and also to provide
+corner point geopositioning. The changes to libheif enabled access to the security metadata. With these changes, GDAL was able to extract and expose the additional GIMI
+metadata without use of sidecar files. An example showing the GIMI-specific metadata domains, along with GCPs and the derived coordinate system transformation, is 
+shown below.
+
+....
+$ gdalinfo -mdd all ~/ogc-developer-events/2023/Open-Standards-Code-Sprint/publicly-releasable-sample-data/bradh/ACT2020_wgs_84_trimmed.heif 
+Driver: HEIF/ISO/IEC 23008-12:2017 High Efficiency Image File Format
+Files: /home/bradh/ogc-developer-events/2023/Open-Standards-Code-Sprint/publicly-releasable-sample-data/bradh/ACT2020_wgs_84_trimmed.heif
+Size is 2048, 1024
+Coordinate System is:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["geodetic latitude (Lat)",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["geodetic longitude (Lon)",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+Origin = (149.102048999999994,-35.315807000000000)
+Pixel Size = (0.000001009277344,-0.000001009765625)
+GCP Projection = 
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["geodetic latitude (Lat)",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["geodetic longitude (Lon)",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+GCP[  0]: Id=GCP_1, Info=
+          (0,0) -> (149.102049,-35.315807,0)
+GCP[  1]: Id=GCP_2, Info=
+          (2048,0) -> (149.104116,-35.315807,0)
+GCP[  2]: Id=GCP_3, Info=
+          (2048,1024) -> (149.104116,-35.316841,0)
+GCP[  3]: Id=GCP_4, Info=
+          (0,1024) -> (149.102049,-35.316841,0)
+Metadata (GIMI File Security):
+  XML=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><FakeSecurity xmlns="http://www.opengis.net/CodeSprint2023Oct/Security"><FakeLevel>SECRETIVE-ISH</FakeLevel>
+<FakeCaveat>ButterPopcorn</FakeCaveat><FakeCaveat>LowPlaces</FakeCaveat><FakeRelTo>US</FakeRelTo><FakeRelTo>AUS</FakeRelTo><FakeRelTo>UK</FakeRelTo>
+<FakeDeclassOn>2024-11-01</FakeDeclassOn></FakeSecurity>
+Metadata (GIMI ST0601):
+  Checksum=0x5f 0x77
+  Corner Latitude Point 1 (Full)=-35.315807
+  Corner Latitude Point 2 (Full)=-35.315807
+  Corner Latitude Point 3 (Full)=-35.316841
+  Corner Latitude Point 4 (Full)=-35.316841
+  Corner Longitude Point 1 (Full)=149.102049
+  Corner Longitude Point 2 (Full)=149.104116
+  Corner Longitude Point 3 (Full)=149.104116
+  Corner Longitude Point 4 (Full)=149.102049
+  Mission ID=Mission3
+  Precision Time Stamp=1589944740032704
+  ST 0601 Version=ST 0601.19
+Metadata (DERIVED_SUBDATASETS):
+  DERIVED_SUBDATASET_1_NAME=DERIVED_SUBDATASET:LOGAMPLITUDE:/home/bradh/ogc-developer-events/2023/Open-Standards-Code-Sprint/publicly-releasable-sample-data/bradh/ACT2020_wgs_84_trimmed.heif
+  DERIVED_SUBDATASET_1_DESC=log10 of amplitude of input bands from /home/bradh/ogc-developer-events/2023/Open-Standards-Code-Sprint/publicly-releasable-sample-data/bradh/ACT2020_wgs_84_trimmed.heif
+Corner Coordinates:
+Upper Left  ( 149.1020490, -35.3158070) (149d 6' 7.38"E, 35d18'56.91"S)
+Lower Left  ( 149.1020490, -35.3168410) (149d 6' 7.38"E, 35d19' 0.63"S)
+Upper Right ( 149.1041160, -35.3158070) (149d 6'14.82"E, 35d18'56.91"S)
+Lower Right ( 149.1041160, -35.3168410) (149d 6'14.82"E, 35d19' 0.63"S)
+Center      ( 149.1030825, -35.3163240) (149d 6'11.10"E, 35d18'58.77"S)
+Band 1 Block=2048x1 Type=Byte, ColorInterp=Red
+Band 2 Block=2048x1 Type=Byte, ColorInterp=Green
+Band 3 Block=2048x1 Type=Byte, ColorInterp=Blue
+....
+
+GDAL serves as a key component within the geospatial software ecosystem, with broad direct and indirect use by a wide range of open source and proprietary software.
+A view of the ecosystem is shown below, with components higher in the stack reliant on capabilities provided by components lower in the stack.
+
+[[img_ecosystem]]
+.Illustration of the ecosystem
 image::images/ecosystem.png[]
 
-Figure TBA shows a screenshot of an unmodified version of QGIS displaying two GIMI test files, overlayed on top of OpenStreetMap.
+As noted above, libheif and GDAL were modified to expose GIMI features within existing GDAL interfaces. This allows use of these features by existing software, often without change.
+An example is shown in <<img_gimi_qgis_1>>, which is a screenshot of an unmodified version of QGIS displaying two GIMI test files (using different compression methods), overlaid on top of OpenStreetMap.
+A small script is running in the QGIS Python console to extract the XML-encoded security metadata and provide an on-screen, human-readable, colour-coded representation of the key aspects of the
+security data.
 
+[[img_gimi_qgis_1]]
+.Screenshot of a test GIMI image displayed in QGIS
 image::images/gimi_qgis_1.png[]
 
-The sprint participants created a Jupyter Notebook, shown in Figure TBA, that used many of the aforementioned libraries to perform some data science analysis on GIMI imagery files.
+Similarly, rebuilding rasterio against the modified GDAL library makes the GIMI features available within a Python context.
+The sprint participants created a Jupyter Notebook, shown in <<img_gimi_jupyter_1>> and <<img_gimi_jupyter_2>>, that used rasterio to perform basic analysis / data science on GIMI imagery files.
+Note that this required development of the notebook, but there were no changes to rasterio or to the general design of the Juypter notebook specific to GIMI or HEIF. Instead, the
+abstraction provided by GDAL meant that the notebook could basically follow the rasterio introductory tutorial.
 
+[[img_gimi_jupyter_1]]
+.Screenshot of a jupyter notebook for displaying a GIMI file
 image::images/gimi_jupyter_1.png[]
 
-Further work on pygeoapi involved importing a GIMI file into pygeoapi for serving through an interface conforming to OGC API – Coverages. This exposed coverage metadata as illustrated in Figure TBA.
+[[img_gimi_jupyter_2]]
+.Second screenshot of a jupyter notebook for displaying a GIMI file
+image::images/gimi_jupyter_2.png[]
 
+In addition to custom development, there are a wide range of open source geospatial tools written in Python that make heavy use of rasterio for raster processing. An example of this is
+pygeoapi. Installing pygeoapi with the local copy of rasterio was required to ensure that a second copy of the rasterio stack (including GDAL) was not used. Configuring pygeoapi with
+a GIMI file as a dataset was the only other activity required to serve the GIMI file in a range of formats, including as an OGC API - Coverages endpoint. A screenshot of the bounds,
+domain set and ranges of a coverage from a GIMI file on pygeoapi is shown in <<img_gimi_pygeoapi_coverage>>.
+
+[[img_gimi_pygeoapi_coverage]]
+.Overview of bounds, domain set and ranges of a coverage from a GIMI file on pygeoapi
 image::images/gimi_pygeoapi_coverage.png[]
 
-Using the open source TiTiler toolkit, the sprint participants were able to partition GIMI test files into a tileset and to provision a pygeoapi instance with the tileset. This made it possible for the imagery to be accessible through an interface conforming to OGC API – Tiles and thus be displayed on an instance of OpenLayers.
+That coverage endpoint could then be used with the open-source TiTiler application to dynamically generate tiles at various zoom levels. Like pygeoapi, TiTiler also uses
+rasterio, and only required minor install-time customisation to use the local copy of the rasterio stack (including the modified GDAL and libheif versions). No code
+changes were required. With this installation, TiTiler served raster tiles in a range of formats, including as an OGC API - Tiles endpoint.
 
+Those raster tiles could then be displayed in a web map such as OpenLayers as shown in <<img_gimi_openlayers>>.
+
+[[img_gimi_openlayers]]
+.GIMI image file displayed in OpenLayers
 image::images/gimi_openlayers.png[]
 
-In conclusion, the sprint participants found that there are a number of base libraries that are needed to improve the migration path for several applications. Amongst those base libraries are GDAL and libheif. Also needed are more tools, more examples of test data, and validators to facilitate the evaluation of test files.
+In conclusion, the sprint participants found that with some changes to libheif and GDAL, a wide range of software can quickly and simply make use of GIMI capabilities, including
+making those available in standards-compliant OGC API services. However to fully 
+unlock those GIMI capabilities, the base libraries will need to ship with the required functionality "out of the box", including:
+
+ - comprehensive codec support (noting that AVC/H.264 and High Throughput JPEG 2000 are not supported in libheif at this time)
+ - a finalised version of the geolocation metadata
+ - flexible support for security metadata
+ - support for overviews, grid representation and byte range requests (equivalent to Cloud Optimised GeoTIFF)
+ - GIMI writing support within GDAL
+ - unit testing and integration testing with a wider range of sample data
+ - a GIMI validator
+

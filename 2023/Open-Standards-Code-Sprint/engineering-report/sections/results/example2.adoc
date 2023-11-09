@@ -1,4 +1,0 @@
-[[example_template2]]
-==== Example 2
-
-TBA

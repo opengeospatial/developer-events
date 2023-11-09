@@ -1,6 +1,6 @@
-==== MariaDB CubeWerx CubeServ
+==== MariaDB Geospatial Data Server
 
-The CubeWerx server (“cubeserv”) is implemented in C and currently implements the following OGC Standards and draft specifications.
+The MariaDB Geospatial Data Server (“cubeserv”) is implemented in C and currently implements the following OGC Standards and draft specifications.
 
 * Multiple conformance classes and recommendations of the OGC API — Tiles — Part 1: Core Standard.
 * Multiple conformance classes and recommendations of the OGC API — Maps — Part 1: Core candidate Standard.
@@ -11,4 +11,4 @@ The CubeWerx server (“cubeserv”) is implemented in C and currently implement
 * Multiple versions of the Web Map Service (WMS), Web Processing Service (WPS), Web Map Tile Service (WMTS) and Web Feature Service (WFS) Standards.
 * A number of other “un-adopted” OGC Web Service draft specifications including the Testbed-12 Web Integration Service, OWS-7 Engineering Report — GeoSynchronization Service, and the Web Object Service prototype.
 
-The cubeserv executable supports a wide variety of back ends including Oracle, MariaDB, SHAPE files, etc. It also supports a wide array of service-dependent output formats (e.g., GML, GeoJSON, Mapbox Vector Tiles, MapMP, etc.) and coordinate reference systems.
+The `cubeserv` executable supports a wide variety of back ends including Oracle, MariaDB, SHAPE files, etc. It also supports a wide array of service-dependent output formats (e.g., GML, GeoJSON, Mapbox Vector Tiles, MapMP, etc.) and coordinate reference systems.

@@ -1,0 +1,11 @@
+==== web-gimi-viewer
+
+https://gitlab.com/IvanSanchez/web-gimi-viewer[web-gimi-viewer] is a proof-of-concept viewer for NGIIS GIMI imagery. It is designed to run entirely in a web browser, intended to be a stepping stone towards more refined web client implementations as well as a testing platform for the integration of all the components needed to consume GIMI imagery.
+
+It leverages:
+
+* https://github.com/gpac/mp4box.js/[mp4box] for the ISOBMFF container
+* https://github.com/vidterra/misb.js/[vidterra's misb.js] for the ST0601 KLV metadata
+* The https://developer.mozilla.org/en-US/docs/Web/API/DOMParser[browser's XML parser] for the security metadata
+* https://github.com/alexcorvi/heic2any[heic2any] for the HEIC image codec, and
+* https://ivansanchez.gitlab.io/gleo/[Gleo] for the web map interface.

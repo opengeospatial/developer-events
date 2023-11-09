@@ -11,7 +11,11 @@ include::results/ogcapiedr.adoc[]
 
 include::results/ogcapifeatures.adoc[]
 
+include::results/ogcapimaps.adoc[]
+
 include::results/ogcjsonfg.adoc[]
+
+include::results/cdb.adoc[]
 
 include::results/geonovum.adoc[]
 
@@ -23,16 +27,15 @@ include::results/nuar_muddi.adoc[]
 
 include::results/muddi_lm.adoc[]
 
-include::results/example.adoc[]
-
-
-=== Specifications from the Community
+=== Software Projects and Products
 
 include::results/gimi_open_source_libraries.adoc[]
 
-include::results/example2.adoc[]
+include::results/pixalytics-gimi.adoc[]
 
-=== Software Projects and Products
+include::results/web_gimi_viewer_results.adoc[]
+
+include::results/gnosis.adoc[]
 
 include::results/ldproxy.adoc[]
 
@@ -44,6 +47,5 @@ include::results/fme.adoc[]
 
 include::results/hexagon.adoc[]
 
-include::results/geo_heif_viewer_results.adoc[]
+include::results/mariadb.adoc[]
 
-include::results/example3.adoc[]

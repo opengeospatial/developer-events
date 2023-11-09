@@ -26,6 +26,10 @@ include::architecture/ogcapiedr.adoc[]
 
 include::architecture/geopose.adoc[]
 
+include::architecture/cdb.adoc[]
+
+include::architecture/geopackage.adoc[]
+
 
 === Candidate OGC Standards
 
@@ -47,8 +51,6 @@ include::architecture/asyncapi.adoc[]
 
 include::architecture/geonetwork.adoc[]
 
-include::architecture/geo_heif_viewer.adoc[]
-
 include::architecture/pygeoapi.adoc[]
 
 include::architecture/pycsw.adoc[]
@@ -58,3 +60,5 @@ include::architecture/ldproxy.adoc[]
 include::architecture/cubeserv.adoc[]
 
 include::architecture/gnosis.adoc[]
+
+include::architecture/web_gimi_viewer.adoc[]
