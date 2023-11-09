@@ -14,7 +14,7 @@ Sprint participatns from MariaDB worked on the following items:
 * Loading London MUDDI data into MariaDB
 * Updated the MariaDB OGC API Records implementation to align with the
   current state of the Part 1 editor's draft.
-* Updated the MariDB OGC API Processes implementation to align with the 
+* Updated the MariaDB OGC API Processes implementation to align with the 
   current state of the Part 1 & 2 editor's drafts.
 
 ===== Code sprint results

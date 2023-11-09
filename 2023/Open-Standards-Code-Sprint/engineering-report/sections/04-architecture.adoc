@@ -39,6 +39,8 @@ include::architecture/ogcapirecords.adoc[]
 
 include::architecture/ogcpubsub.adoc[]
 
+include::architecture/jsonfg.adoc[]
+
 === Specifications from the Community
 
 include::architecture/gimi.adoc[]

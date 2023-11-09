@@ -9,6 +9,8 @@ include::results/ogcapirecords.adoc[]
 
 include::results/ogcapiedr.adoc[]
 
+include::results/ogcapifeatures.adoc[]
+
 include::results/ogcapimaps.adoc[]
 
 include::results/ogcjsonfg.adoc[]
@@ -22,6 +24,8 @@ include::results/iit_muddi_analysis.adoc[]
 include::results/staplus.adoc[]
 
 include::results/nuar_muddi.adoc[]
+
+include::results/muddi_lm.adoc[]
 
 === Software Projects and Products
 

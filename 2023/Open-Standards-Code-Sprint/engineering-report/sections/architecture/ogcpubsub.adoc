@@ -1,3 +1,4 @@
+[[ogcapi_pubsub]]
 ==== OGC Publish/Subscribe extension of OGC API Standards
 
-OGC APIs provide Web based capabilities which are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a time, efficient and low latency approach for delivery of data updates.
+OGC Web APIs provide Web based capabilities which are typically based on HTTP requests initiated by clients. Clients have to poll APIs for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection's temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a time, efficient and low latency approach for delivery of data updates.

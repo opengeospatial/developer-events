@@ -1,10 +1,154 @@
 [[ogcjsonfg_results]]
 ==== OGC Features and Geometries JSON
 
-A free and open source json-fg-validator[https://github.com/tomkralidis/json-fg-validator] tool was created as an executable test suite
-to test JSON FG documents against the ETS requirements.  The initial implementation provides a framework to test and report.  The first pass covered most of the "Core" Requirements Class.
+JSON-FG was approved by the OGC Architecture Board for Public Comments. The JSON-FG team held one breakout during the sprint to answer questions on the specification and provide an overview over changes introduced in the new draft version 0.2.
 
+The following list summarizes JSON-FG-related results achieved during the sprint:
+
+* Participants from Geonovum tested the new JSON-FG driver in GDAL, see <<geonovum_results>> for details.
+
+* A free and open source https://github.com/tomkralidis/json-fg-validator[json-fg-validator] tool was created as an executable test suite to test JSON FG documents against the requirements. The initial implementation provides a framework to test and report. The first pass covered most of the "Core" Requirements Class.
+
++
 The tool is implemented in Python and contributions are welcome and encouraged.
 
++
 .Screenshot of the json-fg-validator tool providing an ETS report.
 image::images/json-fg-validator-ets-report.png[align="center"]
+
+* Development on another https://github.com/Geonovum-labs/json-fg-linter[json-fg-linter] tool was started by Geonovum. The linter rules are based on JSON-FG requirements classes Core, 3D and Features types and Schemas. In addition, the linter does some consistency checks that are useful but not based on explicit requirements.
+
+* An initial version of a https://github.com/Geonovum-labs/json-fg-java[json-fg-java] library was developed by Geonovum. The library aims to make encoding and decoding of JSON-FG documents as easy as possible in Java. The status of the library is experimental. The implementation is compatible with v0.2.1 of the JSON-FG specification.
+
+* A https://ivansanchez.gitlab.io/gleo/demos/jsonfg-drag-drop.html[JSON-FG map client] was deployed by sprint participants that supported viewing JSON-FG documents by drag-and-drop.
+
+* MUDDI data was loaded into MariaDB and published via an OGC Web API, including in JSON-FG; see <<mariadb_results>> for details.
+
+* The ldproxy implementation was updated to JSON-FG version 0.2.1 during the sprint, see <<ldproxy_results>> for details.
+
+One topic during the breakout was support for different coordinate reference systems and the GeoJSON compatibility. Since the sprint took place in London, the British National Grid (EPSG:27700) was used as the coordinate reference system in example requests to an API implementing OGC API Features:
+
+* The <<mariadb_results,MariaDB results section>> includes a "Manhole" feature being presented as JSON-FG using CRS EPSG:27700 as provided from the MariaDB feature server.
+
+* An airport feature from the OS Open Zoomstack dataset in the default coordinate reference system (OGC:CRS84):
+
++
+[%unnumbered%]
+[source,json]
+----
+{
+  "type": "FeatureCollection",
+  "numberReturned": 1,
+  "timeStamp": "2023-11-08T06:30:45Z",
+  "featureType": "Airport",
+  "featureSchema": "https://demo.ldproxy.net/zoomstack/collections/airports/schema",
+  "coordRefSys": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+  "conformsTo": [
+    "http://www.opengis.net/spec/json-fg-1/0.2/conf/core",
+    "http://www.opengis.net/spec/json-fg-1/0.2/conf/types-schemas"
+  ],
+  "geometryDimension": 0,
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2918826,
+          59.8783475
+        ]
+      },
+      "properties": {
+        "name": "Sumburgh Airport"
+      },
+      "place": null,
+      "time": null
+    }
+  ]
+}
+----
+
+* The same airport in the British National Grid (EPSG:27700):
+
++
+[%unnumbered%]
+[source,json]
+----
+{
+  "type": "FeatureCollection",
+  "numberReturned": 1,
+  "timeStamp": "2023-11-08T06:32:22Z",
+  "featureType": "Airport",
+  "featureSchema": "https://demo.ldproxy.net/zoomstack/collections/airports/schema",
+  "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/27700",
+  "conformsTo": [
+    "http://www.opengis.net/spec/json-fg-1/0.2/conf/core",
+    "http://www.opengis.net/spec/json-fg-1/0.2/conf/types-schemas"
+  ],
+  "geometryDimension": 0,
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": null,
+      "properties": {
+        "name": "Sumburgh Airport"
+      },
+      "place": {
+        "type": "Point",
+        "coordinates": [
+          439742.86,
+          1110569.17
+        ]
+      },
+      "time": null
+    }
+  ]
+}
+----
+
+* The same airport in the British National Grid (EPSG:27700), but for GeoJSON compatibility also with the geometry in OGC:CRS84:
+
++
+[%unnumbered%]
+[source,json]
+----
+{
+  "type": "FeatureCollection",
+  "numberReturned": 1,
+  "timeStamp": "2023-11-08T06:32:41Z",
+  "featureType": "Airport",
+  "featureSchema": "https://demo.ldproxy.net/zoomstack/collections/airports/schema",
+  "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/27700",
+  "conformsTo": [
+    "http://www.opengis.net/spec/json-fg-1/0.2/conf/core",
+    "http://www.opengis.net/spec/json-fg-1/0.2/conf/types-schemas"
+  ],
+  "geometryDimension": 0,
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2918826,
+          59.8783475
+        ]
+      },
+      "properties": {
+        "name": "Sumburgh Airport"
+      },
+      "place": {
+        "type": "Point",
+        "coordinates": [
+          439742.86,
+          1110569.17
+        ]
+      },
+      "time": null
+    }
+  ]
+}
+----
