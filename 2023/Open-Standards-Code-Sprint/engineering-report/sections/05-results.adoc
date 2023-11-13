@@ -51,3 +51,5 @@ include::results/hexagon.adoc[]
 
 include::results/mariadb.adoc[]
 
+include::results/gimi_storage_update.adoc[]
+

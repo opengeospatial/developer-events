@@ -1,0 +1,205 @@
+[[update_storage]]
+==== Storage and update of GIMI files through a Web API
+
+Ahead of the three-day code sprint, one of the objectives was to demonstrate the update and storage of GIMI files through the Create, Replace, Update, Delete (CRUD) approach adopted by other OGC API Standards. However due to limitations in the built-in capabilities of the Python ecosystem, it was not possible to implement the approach during the three-day code sprint. The experimentation conducted during the code sprint also highlighted that the OGC API - Processes Standard may be more appropriate for supporting the storage and update requirements. This is because OGC API - Processes allows for different types of payload to be submitted to an API. Therefore, following the three-day code sprint, OGC staff prototyped an approach that leverages the OGC API - Processes Standard to achieve both storage and update of GIMI files.
+
+The prototype involved modifying the hello-world process that comes built into pygeoapi following the instructions on the https://opengeospatial.github.io/e-learning/wps/text/towards-ogc-api-processes.html#creating-an-ogc-api-processes-proxy-in-front-of-the-wps[OGC e-learning resource]. The process implemented by the prototype was called 'imagery-utils' and was designed to recieve a GIMI image encoded as a base64 string and then to store that image locally on the server.
+
+To create a process in pygeoapi for storing an image through the OGC API - Processes interface, the first step is to clone and build pygeoapi by following the steps below. The steps are copied from the pygeoapi.io website.
+
+[%unnumbered%]
+[source]
+----
+python3 -m venv pygeoapi
+cd pygeoapi
+. bin/activate
+git clone https://github.com/geopython/pygeoapi.git
+cd pygeoapi
+pip3 install -r requirements.txt
+python3 setup.py install
+cp pygeoapi-config.yml example-config.yml
+vi example-config.yml  # edit as required
+export PYGEOAPI_CONFIG=example-config.yml
+export PYGEOAPI_OPENAPI=example-openapi.yml
+pygeoapi openapi generate $PYGEOAPI_CONFIG --output-file $PYGEOAPI_OPENAPI
+pygeoapi serve
+# in another terminal
+curl http://localhost:5000  # or open in a web browser
+----
+
+The next step is to modify the example-config.yml file by adding the following process to the resources element.
+
+[%unnumbered%]
+[source]
+----
+    imagery-utils:
+        type: process
+        processor:
+            name: ImageryUtilities
+----
+
+The next step is to add the following paths to the example-openapi.yml.
+
+[%unnumbered%]
+[source]
+----
+  /processes/imagery-utils:
+    get:
+      description: An example imagery utility process.
+      operationId: describeimagery-utilsProcess
+      parameters:
+      - $ref: '#/components/parameters/f'
+      responses:
+        '200':
+          $ref: '#/components/responses/200'
+        default:
+          $ref: '#/components/responses/default'
+      summary: Get process metadata
+      tags:
+      - imagery-utils
+  /processes/imagery-utils/execution:
+    post:
+      description: Execution of an example imagery utility process.
+      operationId: executeimagery-utilsJob
+      requestBody:
+        content:
+          application/json:
+            example:
+              inputs:
+                message: An optional message.
+                name: World
+            schema:
+              $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/execute.yaml
+        description: Mandatory execute request JSON
+        required: true
+      responses:
+        '200':
+          $ref: '#/components/responses/200'
+        '201':
+          $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/ExecuteAsync.yaml
+        '404':
+          $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/NotFound.yaml
+        '500':
+          $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/ServerError.yaml
+        default:
+          $ref: '#/components/responses/default'
+      summary: Imagery utility process execution
+      tags:
+      - imagery-utils
+----
+
+Then add the following to the root-level list of tags in example-openapi.yml.
+
+[%unnumbered%]
+[source]
+----
+- description: Imagery processing utilities
+  name: imagery-utils
+----
+
+Thereafter, add the ImageryUtilities process to the plugin.py file as shown below.
+
+[%unnumbered%]
+[source]
+----
+    'process': {
+        'ImageryUtilities': 'pygeoapi.process.imagery_utilities.ImageryUtilitiesProcessor'
+    },
+----
+
+Thereafter copy and modify the file process/hello_world.py to create one called imagery_utilities.py. Within that file replace 'hello-world' with 'imagery-utils', 'HelloWorld' with 'ImageryUtilities', and 'hello_world' with 'imagery_utilities'. Most importantly the execute function should look as shown below.
+
+[%unnumbered%]
+[source,python]
+----
+import base64, binascii,time
+from urllib.request import urlopen
+
+    def execute(self, data):
+
+        mimetype = 'application/json'
+        image_dataset = data.get('message', None)
+
+        url_of_results = 'No results'
+
+        output_filename = "savedimage"+str(time.time_ns())
+        print(output_filename)
+
+        fh2 = open("../storage/"+output_filename+".txt", "w")
+        print(image_dataset)
+        fh2.write(image_dataset)
+        fh2.close()
+
+        try:
+            image = base64.b64decode(image_dataset, validate=True)
+            with open("../storage/"+output_filename+".heic", "wb") as f:
+                f.write(image)
+                url_of_results = 'Storage successful'
+        except binascii.Error as e:
+            print(e)
+
+
+        if image_dataset is None:
+            raise ProcessorExecuteError('Cannot process')
+
+
+        value = ' {}'.format(url_of_results).strip()
+
+
+        outputs = {
+            'id': 'result',
+            'value': value
+        }
+
+        return mimetype, outputs
+----
+
+Thereafter, to start the application, run the following commands.
+
+
+[%unnumbered%]
+[source]
+----
+python3 setup.py install
+pygeoapi serve
+# in another terminal
+curl http://localhost:5000  # or open in a web browser
+----
+
+To test the process, we can use Postman, curl, or any other HTTP client. Postman is an application that offers a Graphical User Interface for testing HTTP endpoints such as those provided by Web APIs. In contrast, curl offers some of the same capability but through a command line interface.
+
+Now from the HTTP client such as Postman or curl, send the following request via POST to http://localhost:5000/processes/imagery-utils/execution
+
+
+[%unnumbered%]
+[source,json]
+----
+{
+        "inputs": {
+            "name": "example",
+            "message": "AAAAJGZ0eXBoZWljAAAAAG1pZjFoZWljZ2VvMXVuaWZtaWFmAAAFr21ldGEAAAAAAAAAIWhkbHIAAAAAAAAAAHBpY3QAAAAAAAAAAAAAAAAAAAAADnBpdG0AAAAAAAIAAAI1aWRhdDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04IiBzdGFuZGFsb25lPSJ5ZXMiPz4gCjxGYWtlU2VjdXJpdHkgeG1sbnM9Imh0dHA6Ly93d3cub3Blbmdpcy5uZXQvQ29kZVNwcmludDIwMjNPY3QvU2VjdXJpdHkiPiAKICAgIDxGYWtlTGV2ZWw+VE9UQUxMWSBTRUNSRVQ8L0Zha2VMZXZlbD4KICAgIDxGYWtlQ2F2ZWF0PkNyb3AgaXQgbGlrZSBpdCdzIGhvdC48L0Zha2VDYXZlYXQOy4O0tEBmtq9YVVtqiXOLq6pfO/liXQNZ9muB9K5h8K2Uxkb48DBst6LdWwUHu1ZaUYupq2LqmVMyqJjUB5JNXhfG73nEWXAhwEtoRSQ8bS9SWgxfIjIELput9gWU0K6/            
+            (..TRUNCATED for BREVITY..)            
+            xBzMXU3ecl0VCQk02dYsggLfbPY0kBSH3wDMORoHSfPUcQf4s4pBnilqQacZoPiHvC+S0wdblK9+C3+Uyvb8ihKYcOg44t9wSlD+G6iB6CeceKS7TmpzOZ0FkRv5qmvU0n5vGLbPw8ci+HjWbgkjmvbtMy+YdplAF7PwHmx9M7uAq7BO86NrMk451Nl786M54VDLwXko6kXNy1ryaze78WdiJxtvQDR7bSOLHUaEoxY1Pq40pRBmG390knItLsb2yBga4UjNiHJqFTykPBXpwE0KMRhOdbW5rEuI2PewliPDDACc+mAEd3bh5kI7Et2rM6kSgOorVpnREeNSF5sB1ofr6nfluzBh1jXAvPA92lFv7USmDH0YDUy7oyuBsH4gJkcQCu0wuUPo2EWJxYx65sf7gpEt3OW4jMzcl5500w3RSI2kEJTdOfiv+wLBlWM2zTFLaWK4eJrq9Lh/IqOWwO9DW7wnG987Bq7xnlDHXLHZfA5z6wU11iDAZxBiWwhYbFGk0H+a/uNj748wcg2FZ3ZUwDVSB+/fRl7H4eAlxciDoUMw6KxPWatpnEdTEiWXvSFYiDoPwQ4rOU2jv7BKyxpLLozcYQRYGzcA0YEpBMqZEgiaQUqTKqi+tyWa1wKD13ZCHvapqc6A+0G4pMyewS+pAC35AsiAnawUcSO8TeKvk2M/oi6MAbgVzXrUrRLM+4+K3kv3cM4rES9q/C+M4Iu42XvF3+hMMLecOP7xMW82XggIC3aNCb05ks+XYih+rL7KEHnJZuxR2dmUSWZprJbkAZEXUPYWXymyXJVhk6Bc3m5llRX9SND5hailb9o5aFem2mHfKs5lqt7/DApcZBaP05VAiVLLU+GX/cYJnQ0rDHsE4S0aGosDXE0RkwKIXs86WYYoYHPeOzH4xTvG8TreBAyxAFlvpErWwSwfmjKA"
+        }
+}
+
+----
+
+If successful, the response will be as shown below.
+
+[%unnumbered%]
+[source]
+----
+{
+    "id": "result",
+    "value": "Storage successful"
+}
+----
+
+<<img_gimi_storage>> shows an image sent using postman (right handside), and stored (lower-left), through a process in pygeoapi (upper-left).
+
+[[img_gimi_storage]]
+.Screenshot showing an image sent using postman (right handside), and stored (lower-left), through a process in pygeoapi (upper-left)
+image::images/gimi_crud.png[]
+
+During the three-day code sprint, participants were able to implement tools for creating GIMI files. Multiple sample files were created as a result. However, due to time constraints, it was not possible to integrate the tools used for creating the GIMI files into a Web API. 
