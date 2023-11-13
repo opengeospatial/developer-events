@@ -22,7 +22,9 @@ corner point geopositioning. The changes to libheif enabled access to the securi
 metadata without use of sidecar files. An example showing the GIMI-specific metadata domains, along with GCPs and the derived coordinate system transformation, is 
 shown below.
 
-....
+[%unnumbered%]
+[source]
+----
 $ gdalinfo -mdd all ~/ogc-developer-events/2023/Open-Standards-Code-Sprint/publicly-releasable-sample-data/bradh/ACT2020_wgs_84_trimmed.heif 
 Driver: HEIF/ISO/IEC 23008-12:2017 High Efficiency Image File Format
 Files: /home/bradh/ogc-developer-events/2023/Open-Standards-Code-Sprint/publicly-releasable-sample-data/bradh/ACT2020_wgs_84_trimmed.heif
@@ -98,7 +100,7 @@ Center      ( 149.1030825, -35.3163240) (149d 6'11.10"E, 35d18'58.77"S)
 Band 1 Block=2048x1 Type=Byte, ColorInterp=Red
 Band 2 Block=2048x1 Type=Byte, ColorInterp=Green
 Band 3 Block=2048x1 Type=Byte, ColorInterp=Blue
-....
+----
 
 GDAL serves as a key component within the geospatial software ecosystem, with broad direct and indirect use by a wide range of open source and proprietary software.
 A view of the ecosystem is shown below, with components higher in the stack reliant on capabilities provided by components lower in the stack.
