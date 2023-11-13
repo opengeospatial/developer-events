@@ -42,6 +42,8 @@ The cs2310.ldproxy.net deployment was configured to support notifications for ch
 
 The PubSub capabilities are described in an AsyncAPI definition document. Links to both the OpenAPI and AsyncAPI definition documents are clearly visible on the landing page, as shown in the following figure.
 
+[[img_ldproxy_landing_page]]
+.ldproxy landing page
 image::images/ldproxy_cs2310.png[]
 
 Below is a fragment of the AsyncAPI definition document created to describe the supported PubSub capability. The fragment shows two of the thirty channels created for monitoring changes on feature collections provided by the API.
@@ -109,6 +111,8 @@ Below is a fragment of the AsyncAPI definition document created to describe the 
 
 The deployment uses the broker for subscribing to the messages from the testbed. The ldproxy instance offers access to approximately 30 different feature collections. Whenever something is created or changed in a feature collection, a message is sent to the broker. A screenshot showing the channels being monitored through an application called MQTT Explorer is presented in the following figure.
 
+[[img_ldproxy_mqtt]]
+.ldproxy accessed from MQTT Explorer
 image::images/ldproxy_mqtt.png[]
 
 ===== Securing the Daraa API

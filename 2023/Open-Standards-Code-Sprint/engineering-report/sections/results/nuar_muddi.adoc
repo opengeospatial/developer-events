@@ -7,7 +7,7 @@ They startd by reviewing the MUDDI conceptual model. All of the feature types in
 
 [[img_nuar_muddi_database]]
 .Illustration of a MUDDI logical schema for a relational database
-image::images/nuar_muddi_database.png[]
+image::images/muddi/nuar_muddi_database.png[]
 
 The figure shows the tables that were created and how they relate to another another. As shown on the figure, there is big table in the middle which ensures that you can record a MUDDI Event type. The sprint participants had to create a relationship table to document relationships between different tables. Another example of a table that had to be created to support representation of MUDDI in a relational model is the accessory tables e.g. for linking conveyance information against network information. The figure has been created using an online tool called dbdocs.io. 
 
@@ -15,12 +15,12 @@ One thing that the sprint participants found unclear in the candidate standard w
 
 [[img_nuar_muddi_networks]]
 .Relationships between types of networks in MUDDI
-image::images/nuar_muddi_networks.jpg[]
+image::images/muddi/nuar_muddi_networks.jpg[]
 
 To demonstrate that sample data conforming to the logical schema could be displayed on a web application, the sprint participants uploaded the data into a pygeoapi instance. The pygeoapi instance was then linked into a web application. A screenshot of the web application is shown in <<img_nuar_muddi_webapp>>.
 
 [[img_nuar_muddi_webapp]]
 .A screenshot of a web application displaying underground asset data
-image::images/nuar_muddi_webapp.png[]
+image::images/muddi/nuar_muddi_webapp.png[]
 
 Future work on the storage aspects of the NUAR MUDDI task could involve using the NUAR MUDDI logical schema as a template for MUDDI compiance. The logical schema does not currently have much attribution about the assets themselves. Therefore any implementation would be expected to  introduce additional attributes. 

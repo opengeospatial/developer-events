@@ -107,7 +107,7 @@ A view of the ecosystem is shown below, with components higher in the stack reli
 
 [[img_ecosystem]]
 .Illustration of the ecosystem
-image::images/ecosystem.png[]
+image::images/gimi/ecosystem.png[]
 
 As noted above, libheif and GDAL were modified to expose GIMI features within existing GDAL interfaces. This allows use of these features by existing software, often without change.
 An example is shown in <<img_gimi_qgis_1>>, which is a screenshot of an unmodified version of QGIS displaying two GIMI test files (using different compression methods), overlaid on top of OpenStreetMap.
@@ -116,7 +116,7 @@ security data.
 
 [[img_gimi_qgis_1]]
 .Screenshot of a test GIMI image displayed in QGIS
-image::images/gimi_qgis_1.png[]
+image::images/gimi/gimi_qgis_1.png[]
 
 Similarly, rebuilding rasterio against the modified GDAL library makes the GIMI features available within a Python context.
 The sprint participants created a Jupyter Notebook, shown in <<img_gimi_jupyter_1>> and <<img_gimi_jupyter_2>>, that used rasterio to perform basic analysis / data science on GIMI imagery files.
@@ -125,11 +125,11 @@ abstraction provided by GDAL meant that the notebook could basically follow the 
 
 [[img_gimi_jupyter_1]]
 .Screenshot of a jupyter notebook for displaying a GIMI file
-image::images/gimi_jupyter_1.png[]
+image::images/gimi/gimi_jupyter_1.png[]
 
 [[img_gimi_jupyter_2]]
 .Second screenshot of a jupyter notebook for displaying a GIMI file
-image::images/gimi_jupyter_2.png[]
+image::images/gimi/gimi_jupyter_2.png[]
 
 In addition to custom development, there are a wide range of open source geospatial tools written in Python that make heavy use of rasterio for raster processing. An example of this is
 pygeoapi. Installing pygeoapi with the local copy of rasterio was required to ensure that a second copy of the rasterio stack (including GDAL) was not used. Configuring pygeoapi with
@@ -138,7 +138,7 @@ domain set and ranges of a coverage from a GIMI file on pygeoapi is shown in <<i
 
 [[img_gimi_pygeoapi_coverage]]
 .Overview of bounds, domain set and ranges of a coverage from a GIMI file on pygeoapi
-image::images/gimi_pygeoapi_coverage.png[]
+image::images/gimi/gimi_pygeoapi_coverage.png[]
 
 That coverage endpoint could then be used with the open-source TiTiler application to dynamically generate tiles at various zoom levels. Like pygeoapi, TiTiler also uses
 rasterio, and only required minor install-time customisation to use the local copy of the rasterio stack (including the modified GDAL and libheif versions). No code
@@ -148,7 +148,7 @@ Those raster tiles could then be displayed in a web map such as OpenLayers as sh
 
 [[img_gimi_openlayers]]
 .GIMI image file displayed in OpenLayers
-image::images/gimi_openlayers.png[]
+image::images/gimi/gimi_openlayers.png[]
 
 In conclusion, the sprint participants found that with some changes to libheif and GDAL, a wide range of software can quickly and simply make use of GIMI capabilities, including
 making those available in standards-compliant OGC API services. However to fully 

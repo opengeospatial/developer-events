@@ -8,7 +8,7 @@ include::discussion/muddi_discussion.adoc[]
 include::discussion/ogcapi_standards_discussion.adoc[]
 
 
-//OGC API - Features - Part 5, Addition of units in schema (see ldproxy demo 00:29:00 on recording)
+
 
 
 

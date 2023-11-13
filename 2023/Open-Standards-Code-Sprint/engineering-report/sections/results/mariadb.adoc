@@ -27,16 +27,19 @@ The goal of MariaDB's MUDDI work as to load MUDDI data into MariaDB and then be 
 
 The following image of MariaDB's Geospatial GeoPortlet illustrates the MUDDI data layers loaded into MariaDB.
 
-image::images/mariadb_muddi_layers.png[]
+[[img_mariadb_muddi_layers]]
+.MariaDB's Geospatial GeoPortlet listing layers created from MUDDI conformant data
+image::images/muddi/mariadb_muddi_layers.png[]
 
 The following image illustrates several of these layers, "Distribution Main", "Hydrant" and "Manhole", being accessed through the Maps API:
 
-
-image::images/mariadb_muddi_mapsapi.png[]
+[[img_mariadb_muddi_mapsapi]]
+.Layers displayed on a map on MariaDB's Geospatial GeoPortlet
+image::images/muddi/mariadb_muddi_mapsapi.png[]
 
 The following images illustrates one of these layers, "Manhole", being accessed using the Features API:
 
-image::images/mariadb_muddi_featuresapi.png[]
+image::images/muddi/mariadb_muddi_featuresapi.png[]
 
 The following code fragment shows the "Manhole" data being accessed from the MariadDB feature server as GeoJSON using the EPSG:27700 CRS:
 

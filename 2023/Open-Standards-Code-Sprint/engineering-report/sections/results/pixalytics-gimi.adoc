@@ -7,10 +7,13 @@ The first part of the experiment was to try and read the metadata from within a 
 
 First, the Python code was updated so it ran for the example GIMI files. This required a change in one line, from extent to item:
 
-image::images/pixalytics-GIMI-metadata-bug-fix.png[]
+[[img_pyisobmff_bug_fix]]
+.Code change in Python script for parsing GIMI file with pyisobmff
+image::images/gimi/pixalytics-GIMI-metadata-bug-fix.png[]
 
 Then, the next experiment focused on reading the images. For this, the https://www.libvips.org/[libvips] image processing library was tested. On Windows, pre-compiled DLLs are needed for the Python library https://pypi.org/project/pyvips/[pyvips], and they should be specified in the Windows Advanced System Settings control panel, or via the PATH in the Python code. The second approach was used:
 
+[%unnumbered%]
 --------------------------------------
 import os
 vipsbin = r'C:\DDrive\OGC-code-sprint\vips-dev-8.15\bin'
@@ -25,6 +28,7 @@ Through trial and error, it was found that the easiest way to compile the DLLs w
 
 . Then, the bash script could be run, which downloads a Docker image, builds a libvips Docker image and then compiles all the DLLs required for pyvips:
 +
+[%unnumbered%]
 --------------------------------------
 ./build.sh all --with-hevc
 --------------------------------------
@@ -33,5 +37,7 @@ This allowed the HEIF and HEIC examples to be read, but not the HEJ2 sample. The
 
 The code in the https://github.com/pixalytics-ltd/pyisobmff/tree/OGC-code-sprint[pixalytics pyisobmff branch] was updated to add an option, using the function extract_items, to read the images and output them as JPEG files:
 
-image::images/pixalytics-GIMI-read-image-function.png[]
+[[img_pyisobmff_readimage]]
+.Using pyisobmff for reading GIMI image
+image::images/gimi/pixalytics-GIMI-read-image-function.png[]
 
