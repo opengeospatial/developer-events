@@ -5,7 +5,30 @@ TBA
 
 === Future Work
 
-The sprint participants made the following recommendations for future work items:
+==== OGC API Standards
+
+The sprint participants made the following recommendations for future work items on OGC API Standards:
+
+* Extension of OGC API - Records to support faceting.
+* Use case experimentation to examine how OGC API - Pub/Sub can support various OGC API standards workflows:
+** OGC API - Records use cases could include aggregation/metadata or ingest/publication.  
+** OGC API - Processes use cases could include subscribing to async jobs channels
+** OGC API - Common - Part 2 use cases could include publishing of data updates (e.g. publication of new NWP model run for EDR or Maps, or associating OGC API collections from AsyncAPI (x-ogc-api-collectionId)
+* Prototyping and specification on an OpenAPI definition document for SensorThings API
+* Multiband rasters in OGC API - Maps/Tiles/Coverages (e.g. multispectral imagery, etc). This could include drafting of a Best Practice of when to use OGC API - Maps/Tiles/Coverages.
+
+==== OGC Encoding Standards
+
+The sprint participants made the following recommendations for future work items on OGC Encoding Standards:
+
+* Tiled complex, signed, and floating point data in multiband raster data. This could include experimentation where the tiles provide a way for machines to process an area of interest (potentially in parallel), rather than as pictures to show to the user.
+* Performance benchmarking between GIMI, GeoTIFF, COG, JPEG2000 and other imagery formats for a variety of use cases.
+* Extraction of a conceptual model from GMLJP2 to make it applicable to any ISOBMFF profile.
+* Development of an Implementation Standard for the MUDDI logical model. This could be designed as a multi-part standard with serparate parts for JSON-FG, GML, and GeoPackage.
+
+==== GIMI
+
+The sprint participants made the following recommendations for future work items on GIMI:
 
 * TBA
 * TBA

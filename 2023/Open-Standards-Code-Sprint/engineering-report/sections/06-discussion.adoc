@@ -7,6 +7,7 @@ include::discussion/muddi_discussion.adoc[]
 
 include::discussion/ogcapi_standards_discussion.adoc[]
 
+include::discussion/gimi_discussion.adoc[]
 
 
 
