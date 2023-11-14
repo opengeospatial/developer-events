@@ -31,7 +31,8 @@ The sprint participants made the following recommendations for future work:
 
 All questions regarding this document should be directed to the editor or the contributors:
 
-[%unnumbered]
+[%unnumbered%]
+.Submitters
 [options="header"]
 |===
 | Name | Organization | Role

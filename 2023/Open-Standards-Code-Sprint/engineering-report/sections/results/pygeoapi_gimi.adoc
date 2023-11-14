@@ -1,5 +1,5 @@
 [[pygeoapi_gimi_results]]
-===== pygeoapi support for the draft GIMI profile
+==== pygeoapi support for the draft GIMI profile
 
 Sprint participants from Geobeyond worked on the GIMI thread of the code sprint. Their goal was to implement the
 ability to serve files using OGC API – Coverages and OGC API – Tiles capabilities offered by pygeoapi. An additional
@@ -30,7 +30,7 @@ interface.
 
 [[img_pygeoapi_gimi_coverage]]
 .Screenshot of pygeoapi's HTML interface, showing a GIMI coverage collection. The collection's geographic bounds are displayed by pygeoapi.
-image::images/pygeoapi-gimi-coverage.png[]
+image::images/gimi/pygeoapi-gimi-coverage.png[]
 
 Afterwards, they sought to enable pygeoapi to support the reading of GIMI files, which would make it possible to serve
 the imagery files through interfaces conforming to OGC API Standards.
@@ -61,7 +61,7 @@ tiles for sample GIMI files. <<img_pygeoapi_gimi_tiles>> shows a screenshot of a
 
 [[img_pygeoapi_gimi_tiles]]
 .Screenshot of the leaflet client consuming tiles, which are served by pygeoapi, in the PNG format, and are generated from the GIMI file.
-image::images/pygeoapi-gimi-tiles.png[]
+image::images/gimi/pygeoapi-gimi-tiles.png[]
 
 The final goal was implementing support for CRUD operations on GIMI files via a WEB API, leveraging OGC API standards.
 Unfortunately this goal proved unattainable, as the team found substantial blockers and there was not enough time

@@ -9,7 +9,7 @@ The workflow for converting from plain GeoJSON to MUDDI GML is illustrated in <<
 
 [[img_fme_workflow]]
 .Screenshot of workflow for converting from plain GeoJSON to MUDDI GML
-image::images/fme_workflow.png[]
+image::images/fme_workflow.jpg[]
 
 A summary of the workflow is below:
 
@@ -30,7 +30,7 @@ The FME Desktop application was able to write to MUDDI GML and then to read it b
 
 [[img_fme_output_muddi_gml]]
 .Screenshot of MUDDI GML data displayed in FME
-image::images/fme_output_muddi_gml.png[]
+image::images/muddi/fme_output_muddi_gml.png[]
 
 On the right-hand side of <<img_fme_output_muddi_gml>> is shown the attribution from the data. Most of the attribution is carried through from the source data, however for illustrative purposes in this Code Sprint some attribution is synthetic. The workflow also added an elevation dimension to the geometries, which was taken from another feature which had up and down elevation feature properties. 
 

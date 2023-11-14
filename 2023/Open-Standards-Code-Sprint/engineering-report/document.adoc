@@ -24,7 +24,6 @@
 :pdf-uri: ./document.pdf
 :xml-uri: ./document.xml
 :doc-uri: ./document.doc
-:edition: 1.0
 
 ////
 Make sure to complete each included document
