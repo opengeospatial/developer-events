@@ -13,7 +13,7 @@
 :fullname: Gobe Hobona
 :fullname_2: Joana Simoes
 :docsubtype: implementation
-:keywords: ogcdoc, OGC document, API, openapi, html
+:keywords: ogcdoc, OGC document, API, openapi, html, underground, json-fg, nuar, gimi, heif, muddi
 :submitting-organizations: Organization One; Organization Two
 :mn-document-class: ogc
 :mn-output-extensions: xml,html,doc,pdf

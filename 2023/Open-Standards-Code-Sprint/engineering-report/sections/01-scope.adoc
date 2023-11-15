@@ -1,4 +1,4 @@
 
 == Introduction
 
-This Engineering Report (ER) presents the high level architecture of the code sprint and describes each of the standards and software packages that were deployed in support of the code sprint. The ER also discusses the results and presents a set of conclusions and recommendations.
+The subject of this Engineering Report (ER) is the OGC's October 2023 Open Standards Code Sprint that was held from October 30th to November 1st in London, England. The ER presents the high-level architecture of the code sprint and describes each of the standards and software packages that were deployed in support of the code sprint. The ER also discusses the results and presents a set of conclusions and recommendations.

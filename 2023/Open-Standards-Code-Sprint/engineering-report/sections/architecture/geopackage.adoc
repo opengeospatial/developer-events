@@ -1,5 +1,4 @@
 [[geopackage]]
 ==== OGC GeoPackage
 
-A GeoPackage is an open, standards-based, platform-independent, portable, self-describing, compact format for transferring geospatial information. 
-Specifically, a GeoPackage is the container and the GeoPackage Encoding Standard governs the rules and requirements of content stored in a GeoPackage container. The GeoPackage standard defines the schema for a GeoPackage, including table definitions, integrity assertions, format limitations, and content constraints.
+The GeoPackage Encoding Standard specifies the rules and requirements for an open, standards-based, platform-independent, portable, self-describing, compact format for transferring geospatial information. The GeoPackage standard defines the schema for a GeoPackage, including table definitions, integrity assertions, format limitations, and content constraints.

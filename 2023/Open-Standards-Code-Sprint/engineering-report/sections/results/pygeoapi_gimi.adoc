@@ -7,7 +7,7 @@ goal was to enable a workflow that supports modification of the files. The libra
 implemented for this work are available on the https://github.com/ricardogsilva/gimirrai[gimirrai repository on GitHub].
 
 As an initial objective, they set out to see whether the https://github.com/strukturag/libheif[libheif] library, which
-is commonly used by to read HEIF files, could be enabled to support reading and writing of GIMI files. libheif is used
+is commonly used to read HEIF files, could be enabled to support reading and writing of GIMI files. libheif is used
 by https://gdal.org/drivers/raster/heif.html[GDAL to provide support for HEIF], so the expectation was that it would
 be possible to use Python to leverage GDAL's HEIF support via https://rasterio.readthedocs.io/en/stable/[rasterio].
 However, upon testing libheif, they found that it does not support some of the needed capabilities specific to the
@@ -36,9 +36,9 @@ Afterwards, they sought to enable pygeoapi to support the reading of GIMI files,
 the imagery files through interfaces conforming to OGC API Standards.
 
 The pygeoapi integration efforts relied upon its existing extensibility mechanism, whereby it is possible to write
-custom providers and plug them in to dataset collections via configuration.
+custom providers and plug them into dataset collections via configuration.
 
-For OGC API – Coverages, they were able to write a custom provider inspired by the stock rasterio one. The GIMI provider
+For OGC API - Coverages, they were able to write a custom provider inspired by the stock rasterio one. The GIMI provider
 differed in the sense that instead of letting rasterio retrieve the geographical bounds transparently, via GDAL, it
 needed to use the KLV bytestream parser mentioned above.
 
@@ -51,8 +51,8 @@ rasterio plugin that provides means to generate raster tiles. The final implemen
 tied all parts together, reading KLV metadata, then using a GDAL VRT definition to allow rio-tiler to be able to read
 the sample GIMI files and generate tiles. As such, and for brevity, the implemented provider was simplified to:
 
-* Basically serve tiles, the other OGC API related endpoints were not given much attention
-* Support only the the familiar WebMercatorQuad tile matrix set
+* Serve tiles, the other OGC API related endpoints were not given much attention
+* Support only the familiar WebMercatorQuad tile matrix set
 * Serve tiles in PNG format
 * Generate tiles at runtime, without any caching strategy
 
@@ -63,18 +63,16 @@ tiles for sample GIMI files. <<img_pygeoapi_gimi_tiles>> shows a screenshot of a
 .Screenshot of the leaflet client consuming tiles, which are served by pygeoapi, in the PNG format, and are generated from the GIMI file.
 image::images/gimi/pygeoapi-gimi-tiles.png[]
 
-The final goal was implementing support for CRUD operations on GIMI files via a WEB API, leveraging OGC API standards.
-Unfortunately this goal proved unattainable, as the team found substantial blockers and there was not enough time
-during the code sprint to solve them.
+The final goal was implementing support for CRUD operations on GIMI files via a Web API, leveraging OGC API Standards. Unfortunately, this goal proved unattainable during the code sprint, as the team found substantial technical blockers that could not be solved during the code sprint.
 
-An initial research showed that GDAL does not have support for creating HEIF files. So the plan was to use libheif
+Initial research showed that GDAL does not have support for creating HEIF files. So the plan was to use libheif
 instead, by leveraging its existing Python bindings. However, none of the efforts related to using pillow-heif to
 create or update one of the sample GIMI files was successful. Several attempts were made, by leveraging the different
 https://pillow.readthedocs.io/en/stable/[Pillow] and pillow-heif capabilities, but they all ended abruptly due to
 various lower-level errors. Having failed at being able to modify an existing GIMI file with the existing libraries,
 the team could not move forward with the web and pygeoapi related aspects of the goal.
 
-In conclusion, the team found that it is currently not very easy to work with GIMI files at the Python level (i.e. those conforming to draft version 0.4 of the GIMI profile). Reading and georeferencing GIMI files is possible, but requires a larger effort, especially when compared to common geospatial file formats. Creating and updating existing GIMI files seems to not be possible through the the more popular tools used in the Python ecosystem (e.g. Pillow). Therefore, a custom writer is required to support the creation and updating of GIMI files.
+In conclusion, the team found that it is currently not very easy to work with GIMI files at the Python level (i.e. those conforming to draft version 0.4 of the GIMI profile). Reading and georeferencing GIMI files is possible, but requires a larger effort, especially when compared to common geospatial file formats. Creating and updating existing GIMI files seems to not be possible through the more popular tools used in the Python ecosystem (e.g. Pillow). Therefore, a custom writer is required to support the creation and updating of GIMI files.
 
 On a more positive note, because Python tools mostly depend on libheif and GDAL, if proper GIMI support would be added to these lower-level libraries, working with GIMI files would become as easy as working with GeoTiff and the other popular formats. Having this lower-level support in place would open up the possibility of using rasterio, rio-tiler and other libraries with GIMI files in a transparent way. Additionally, pygeoapi proved to be a very flexible choice when
 implementing OGC API-based servers, as it is easy to integrate custom bits of code.

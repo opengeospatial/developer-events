@@ -1,9 +1,9 @@
 [[results_pixalytics_gimi]]
 ==== Testing Windows open source support for GIMI
 
-This section presents findings of prototyping GIMI support within Windows using Python and open source libraries. The prototyping and assessment was carried out by Samantha Lavender.
+This section presents findings of prototyping GIMI support within Windows using Python and open source libraries. The prototyping and assessment were carried out by Samantha Lavender.
 
-The first part of the experiment was to try and read the metadata from within a GIMI files using Python. The GitHub repository was searched and the https://github.com/chemag/pyisobmff[pyisobmff] repository was found. This was forked and a https://github.com/pixalytics-ltd/pyisobmff/tree/OGC-code-sprint[branch] created so that testing and updates could be undertaken.
+The first part of the experiment was to try and read the metadata from within GIMI files using Python. The GitHub repository was searched and the https://github.com/chemag/pyisobmff[pyisobmff] repository was found. This was forked and a https://github.com/pixalytics-ltd/pyisobmff/tree/OGC-code-sprint[branch] created so that testing and updates could be undertaken.
 
 First, the Python code was updated so it ran for the example GIMI files. This required a change in one line, from extent to item:
 
@@ -20,7 +20,7 @@ vipsbin = r'C:\DDrive\OGC-code-sprint\vips-dev-8.15\bin'
 os.environ['PATH'] = vipsbin + ';' + os.environ['PATH']
 --------------------------------------
 
-However, by default, the compiled DLLs don't come with the support for the needed codec compression. Therefore, it was decided to recompile the DLLs following the option described in the https://github.com/libvips/build-win64-mxe#hevc-related-dependencies[build-win64-mxe] repository.
+However, by default, the compiled DLLs do not come with the support for the needed codec compression. Therefore, it was decided to recompile the DLLs following the option described in the https://github.com/libvips/build-win64-mxe#hevc-related-dependencies[build-win64-mxe] repository.
 
 Through trial and error, it was found that the easiest way to compile the DLLs was to:
 

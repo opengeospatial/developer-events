@@ -1,6 +1,6 @@
 ==== web-gimi-viewer
 
-https://gitlab.com/IvanSanchez/web-gimi-viewer[web-gimi-viewer] is a proof-of-concept viewer for NGIIS GIMI imagery. It is designed to run entirely in a web browser, intended to be a stepping stone towards more refined web client implementations as well as a testing platform for the integration of all the components needed to consume GIMI imagery.
+https://gitlab.com/IvanSanchez/web-gimi-viewer[web-gimi-viewer] is a proof-of-concept viewer for NGIIS GIMI imagery. It is designed to run entirely in a web browser, intended to be a steppingstone towards more refined web client implementations as well as a testing platform for the integration of all the components needed to consume GIMI imagery.
 
 It leverages:
 

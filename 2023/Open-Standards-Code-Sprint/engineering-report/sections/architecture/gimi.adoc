@@ -2,7 +2,7 @@
 
 ==== NGIIS GIMI
 
-Next Generation ISR Imagery Standards (NGIIS) is a program of work to modernise ISR still and motion imagery standards. Key priorities are:
+Next Generation ISR Imagery Standards (NGIIS) is a program of work to modernize Intelligence, Surveillance, and Reconnaissance (ISR) still and motion imagery standards. Key priorities are:
 
  - Leverage open commercial media standards to integrate still and motion imagery into a single container
  - Harmonization of still and motion imagery metadata through development of an imagery domain ontology
@@ -22,11 +22,11 @@ GIMI builds on top of the HEIF and ISOBMFF standards. Key additions include secu
 
 The security metadata provides a way to label the file with overall security classification, security caveats, countries to which the data may be released, and declassification information.
 This would typically be in the form of a US Intelligence Community marking standard known as Information Security Marking (ISM), which makes use of XML. NATO marking may use STANAG
-4774 and STANAG 4778. Other countries may choose a different data model and encoding, depending on national policies. For the purpose of the sprint, an indicative but imaginary format
+4774 and STANAG 4778 standards. Other countries may choose a different data model and encoding, depending on national policies. For the purpose of the sprint, an indicative but imaginary format
 was used. Use of fake markings avoided any possible perception that test files were actually security classified data.
 
-The final general purpose metadata for GIMI is still in development, but is likely to be a form of Resource Description Format (RDF), likely encoded in SMTPE ST 336 Key-Length-Value (KLV) for
-efficiency. For the purpose of the sprint, MISB ST 0601 UAS KLV was used to provide this metadata. The primary metadata was the geospatial location of each image corner points. There is no expectation
+The final general-purpose metadata for GIMI is still in development, but is likely to be a form of Resource Description Format (RDF), likely encoded in SMTPE ST 336 Key-Length-Value (KLV) for
+efficiency. For the purpose of the sprint, the MISB ST 0601 UAS KLV standard was used to provide this metadata. The primary metadata was the geospatial location of the corner points of each image. There is no expectation
 that ST 0601 will form part of the final GIMI metadata solution, but ST 0601 KLV is possibly the best known and most widely implemented KLV encoding, and provided enough information to 
 support image geopositioning.
 

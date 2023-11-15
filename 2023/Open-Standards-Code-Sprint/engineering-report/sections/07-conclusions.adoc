@@ -1,7 +1,18 @@
 [[conclusions]]
 == Conclusions
 
-TBA
+Over a period of three days, the code sprint provided an environment for the development and testing of prototype implementations of open standards. The standards included implementations of draft and approved OGC Standards, as well as the draft GIMI specification and AsyncAPI. The participation, in-person, of several editors of OGC Standards meant that developers could provide feedback to the editors almost instantly. Furthermore, the collaborative environment enabled developers to fix open issues in products, identify new issues, develop new product features, improve documentation and test interoperability with 3rd party products.
+
+Regarding JSON-FG, the engineering report concludes that due to the evident increase in adoption across the developer community, there is an increasing need to offer validators so that developers can check for compliance more easily. Such validators may include unofficial utilities, in addition to the official executable test suite that will be provided by the OGC Compliance Program.  
+
+In relation to MUDDI, the engineering report concludes that the MUDDI Conceptual Model is implementable, and could easily be used as the basis for a logical model that can be encoded in a variety of formats. Once the Conceptual Model has been approved as an OGC Standard, the SWG should therefore consider developing standards for encoding MUDDI-conformant data in GeoPackage, GML, or JSON-FG. 
+
+The conclusions regarding the emerging extensions to OGC API Standards can be summarised as follows. The PubSub, Security, and Schemas capabilities examined in this code sprint could potentially support other OGC API Standards. Therefore, there is a need for the various OGC API SWGs to consider the potential application of the extensions to the standards within the remit of the SWGs.
+
+Regarding GIMI, the engineering report concludes that with minor changes to popular open-source base libraries a wide range of software can quickly make use of GIMI capabilities, that includes software that implements OGC API Standards. However, to fully leverage the capabilities of the GIMI specification, the base libraries will need to include the required functionality at production.
+
+Overall, this engineering report concludes that the code sprint met all of its objectives and achieved its goal of accelerating the development of OGC Standards and their implementation in software products. The following subsection presents recommendations for future work.
+
 
 === Future Work
 
@@ -10,26 +21,27 @@ TBA
 The sprint participants made the following recommendations for future work items on OGC API Standards:
 
 * Extension of OGC API - Records to support faceting.
-* Use case experimentation to examine how OGC API - Pub/Sub can support various OGC API standards workflows:
+* Use case experimentation to examine how the draft PubSub extension of OGC API Standards can support various OGC API Standards workflows:
 ** OGC API - Records use cases could include aggregation/metadata or ingest/publication.  
 ** OGC API - Processes use cases could include subscribing to async jobs channels
 ** OGC API - Common - Part 2 use cases could include publishing of data updates (e.g. publication of new NWP model run for EDR or Maps, or associating OGC API collections from AsyncAPI (x-ogc-api-collectionId)
 * Prototyping and specification on an OpenAPI definition document for SensorThings API
-* Multiband rasters in OGC API - Maps/Tiles/Coverages (e.g. multispectral imagery, etc). This could include drafting of a Best Practice of when to use OGC API - Maps/Tiles/Coverages.
+* Additional support for multiband raster data in OGC API - Maps/Tiles/Coverages (e.g. multispectral imagery, etc). This could include drafting of a Best Practice of when to use OGC API - Maps/Tiles/Coverages.
 
 ==== OGC Encoding Standards
 
 The sprint participants made the following recommendations for future work items on OGC Encoding Standards:
 
 * Tiled complex, signed, and floating point data in multiband raster data. This could include experimentation where the tiles provide a way for machines to process an area of interest (potentially in parallel), rather than as pictures to show to the user.
-* Performance benchmarking between GIMI, GeoTIFF, COG, JPEG2000 and other imagery formats for a variety of use cases.
-* Extraction of a conceptual model from GMLJP2 to make it applicable to any ISOBMFF profile.
-* Development of an Implementation Standard for the MUDDI logical model. This could be designed as a multi-part standard with serparate parts for JSON-FG, GML, and GeoPackage.
+* Performance benchmarking between GIMI, GeoTIFF, COG, JPEG 2000 and other imagery formats for a variety of use cases.
+* Extraction of a conceptual model from GMLJP2 to make it applicable to any ISOBMFF profile, and encodable in different formats.
+* Development of an Implementation Standard for the MUDDI logical model. This could be designed as a multi-part standard with separate parts for JSON-FG, GML, and GeoPackage.
+* Future work on the storage aspects of the MUDDI task could involve using the MUDDI logical schema as a template for MUDDI compliance.
 
 ==== GIMI
 
 The sprint participants made the following recommendations for future work items on GIMI:
 
-* TBA
-* TBA
-* TBA
+* Extension of open-source base libraries used by several other products (e.g. libheif and GDAL) for creation and modification of GIMI files
+* Prototype streaming of large images from client application to server for storage through OGC API - Processes
+* Prototyping of a JSON alternative to KLV metadata (e.g. a future ontology for GIMI could include the same information that is in the KLV bytestream and have it encoded in JSON-LD)
