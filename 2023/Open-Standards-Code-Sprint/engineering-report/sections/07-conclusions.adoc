@@ -11,7 +11,7 @@ The conclusions regarding the emerging extensions to OGC API Standards can be su
 
 Regarding GIMI, the engineering report concludes that with minor changes to popular open-source base libraries a wide range of software can quickly make use of GIMI capabilities, that includes software that implements OGC API Standards. However, to fully leverage the capabilities of the GIMI specification, the base libraries will need to include the required functionality at production.
 
-Overall, this engineering report concludes that the code sprint met all of its objectives and achieved its goal of accelerating the support of open standards within the developer community. The following subsection presents recommendations for future work.
+Overall, this engineering report concludes that the code sprint met all of its objectives and achieved its goal of accelerating the development of OGC Standards and their implementation in software products. The following subsection presents recommendations for future work.
 
 
 === Future Work
