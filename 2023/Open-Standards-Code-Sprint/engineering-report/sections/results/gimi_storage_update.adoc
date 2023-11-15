@@ -1,9 +1,9 @@
 [[update_storage]]
-==== Storage and update of GIMI files through a Web API
+==== Storage of GIMI files through a Web API
 
-Ahead of the three-day code sprint, one of the objectives was to demonstrate the update and storage of GIMI files through the Create, Replace, Update, Delete (CRUD) approach adopted by other OGC API Standards. However due to limitations in the built-in capabilities of the Python ecosystem, it was not possible to implement the approach during the three-day code sprint. The experimentation conducted during the code sprint also highlighted that the OGC API - Processes Standard may be more appropriate for supporting the storage and update requirements. This is because OGC API - Processes allows for different types of payload to be submitted to an API. Therefore, following the three-day code sprint, OGC staff prototyped an approach that leverages the OGC API - Processes Standard to achieve both storage and update of GIMI files.
+Ahead of the three-day code sprint, one of the objectives was to demonstrate the update and storage of GIMI files through the Create, Replace, Update, Delete (CRUD) approach adopted by other OGC API Standards. However due to limitations in the built-in capabilities of the Python ecosystem, it was not possible to implement the approach during the three-day code sprint. The experimentation conducted during the code sprint also highlighted that the OGC API - Processes Standard may be more appropriate for supporting the storage and update requirements. This is because OGC API - Processes allows for different types of payload to be submitted to an API. Therefore, following the three-day code sprint, OGC staff prototyped an approach that leverages the OGC API - Processes Standard to achieve storage of GIMI files.
 
-The prototype involved modifying the hello-world process that comes built into pygeoapi following the instructions on the https://opengeospatial.github.io/e-learning/wps/text/towards-ogc-api-processes.html#creating-an-ogc-api-processes-proxy-in-front-of-the-wps[OGC e-learning resource]. The process implemented by the prototype was called 'imagery-utils' and was designed to recieve a GIMI image encoded as a base64 string and then to store that image locally on the server.
+The prototype involved modifying the hello-world process that comes built into pygeoapi following the instructions on the https://opengeospatial.github.io/e-learning/wps/text/towards-ogc-api-processes.html#creating-an-ogc-api-processes-proxy-in-front-of-the-wps[OGC e-learning resource]. The process implemented by the prototype was called 'imagery-utils' and was designed to receive a GIMI image encoded as a base64 string and then to store that image locally on the server.
 
 To create a process in pygeoapi for storing an image through the OGC API - Processes interface, the first step is to clone and build pygeoapi by following the steps below. The steps are copied from the pygeoapi.io website.
 
@@ -88,7 +88,7 @@ The next step is to add the following paths to the example-openapi.yml.
       - imagery-utils
 ----
 
-Then add the following to the root-level list of tags in example-openapi.yml.
+Then add the following to the root-level list of tags in the example-openapi.yml file.
 
 [%unnumbered%]
 [source]
@@ -107,7 +107,7 @@ Thereafter, add the ImageryUtilities process to the plugin.py file as shown belo
     },
 ----
 
-Thereafter copy and modify the file process/hello_world.py to create one called imagery_utilities.py. Within that file replace 'hello-world' with 'imagery-utils', 'HelloWorld' with 'ImageryUtilities', and 'hello_world' with 'imagery_utilities'. Most importantly the execute function should look as shown below.
+Thereafter copy and modify the hello_world.py file to create one called imagery_utilities.py. Within that file replace 'hello-world' with 'imagery-utils', 'HelloWorld' with 'ImageryUtilities', and 'hello_world' with 'imagery_utilities'. Most importantly the execute function should look as shown below.
 
 [%unnumbered%]
 [source,python]
@@ -166,9 +166,9 @@ pygeoapi serve
 curl http://localhost:5000  # or open in a web browser
 ----
 
-To test the process, we can use Postman, curl, or any other HTTP client. Postman is an application that offers a Graphical User Interface for testing HTTP endpoints such as those provided by Web APIs. In contrast, curl offers some of the same capability but through a command line interface.
+To test the process, Postman, curl, or any other HTTP client can be used. Postman is an application that offers a Graphical User Interface for testing HTTP endpoints such as those provided by Web APIs. In contrast, curl offers some of the same capability but through a command line interface.
 
-Now from the HTTP client such as Postman or curl, send the following request via POST to http://localhost:5000/processes/imagery-utils/execution
+Now from an HTTP client such as Postman or curl, send the following request via POST to http://localhost:5000/processes/imagery-utils/execution
 
 
 [%unnumbered%]
@@ -196,10 +196,12 @@ If successful, the response will be as shown below.
 }
 ----
 
-<<img_gimi_storage>> shows an image sent using postman (right handside), and stored (lower-left), through a process in pygeoapi (upper-left).
+<<img_gimi_storage>> shows an image sent using postman (right hand-side), and stored (lower-left), through a process in pygeoapi (upper-left).
 
 [[img_gimi_storage]]
-.Screenshot showing an image sent using postman (right handside), and stored (lower-left), through a process in pygeoapi (upper-left)
+.Screenshot showing an image sent using postman (right hand-side), and stored (lower-left), through a process in pygeoapi (upper-left)
 image::images/gimi_crud.png[]
+
+One of the observations from the prototype is that the approach of sending base64 encoded bytes via a POST request is appropriate for small images. However, for large images such as motion imagery collected over several hours, it may be necessary to send a request that includes a URL from which the server may stream the data from.
 
 During the three-day code sprint, participants were able to implement tools for creating GIMI files. Multiple sample files were created as a result. However, due to time constraints, it was not possible to integrate the tools used for creating the GIMI files into a Web API. 

@@ -141,7 +141,7 @@ domain set and ranges of a coverage from a GIMI file on pygeoapi is shown in <<i
 image::images/gimi/gimi_pygeoapi_coverage.png[]
 
 That coverage endpoint could then be used with the open-source TiTiler application to dynamically generate tiles at various zoom levels. Like pygeoapi, TiTiler also uses
-rasterio, and only required minor install-time customisation to use the local copy of the rasterio stack (including the modified GDAL and libheif versions). No code
+rasterio, and only required minor install-time customization to use the local copy of the rasterio stack (including the modified GDAL and libheif versions). No code
 changes were required. With this installation, TiTiler served raster tiles in a range of formats, including as an OGC API - Tiles endpoint.
 
 Those raster tiles could then be displayed in a web map such as OpenLayers as shown in <<img_gimi_openlayers>>.
@@ -151,13 +151,13 @@ Those raster tiles could then be displayed in a web map such as OpenLayers as sh
 image::images/gimi/gimi_openlayers.png[]
 
 In conclusion, the sprint participants found that with some changes to libheif and GDAL, a wide range of software can quickly and simply make use of GIMI capabilities, including
-making those available in standards-compliant OGC API services. However to fully 
+making those available in standards-compliant OGC API services. However, to fully 
 unlock those GIMI capabilities, the base libraries will need to ship with the required functionality "out of the box", including:
 
  - comprehensive codec support (noting that AVC/H.264 and High Throughput JPEG 2000 are not supported in libheif at this time)
- - a finalised version of the geolocation metadata
+ - a finalized version of the geolocation metadata
  - flexible support for security metadata
- - support for overviews, grid representation and byte range requests (equivalent to Cloud Optimised GeoTIFF)
+ - support for overviews, grid representation and byte range requests (equivalent to Cloud Optimized GeoTIFF)
  - GIMI writing support within GDAL
  - unit testing and integration testing with a wider range of sample data
  - a GIMI validator

@@ -1,17 +1,17 @@
 [[ldproxy_results]]
 ==== ldproxy
 
-Sprint participants from interactive instruments worked on upgrades of several ldproxy modules during the sprint: JSON-FG, Feature Schemas, and PubSub. The upgrades are documented in the next sub-sections.
+Sprint participants from interactive instruments worked on upgrades of several ldproxy modules during the sprint. The modules included support for JSON-FG, Feature Schemas, and PubSub. The upgrades are documented in the next sub-sections.
 
 The upgraded version of ldproxy was used in two deployments:
 
-1. The ldproxy demonstration deployment at https://demo.ldproxy.net/[demo.ldproxy.net]. The deployment and the APIs in the deployment are documented in the https://github.com/ldproxy/demo[ldproxy/demo] GitHub repository. All APIs supporting OGC API Features used the upgraded modules for JSON-FG and Feature Schemas.
+1. The ldproxy demonstration deployment at https://demo.ldproxy.net/[demo.ldproxy.net]. The deployment and the APIs in the deployment are documented in the https://github.com/ldproxy/demo[ldproxy/demo] GitHub repository. All APIs supporting OGC API - Features used the upgraded modules for JSON-FG and Feature Schemas.
 
-2. A new deployment for the sprint at https://cs2310.ldproxy.net/[cs2310.ldproxy.net]. This deployment provides access to the Daraa dataset that is also available in the ldproxy demonstration deployment. The data is derived from OpenStreetMap in the region of Daraa, Syria, converted by NGA to NGA's Topographic Data Store schema. This deployment also adds support for OGC API - Features - Part 4: Create, Replace, Update and Delete, authentication using OpenID Connect, role-based access control through OAuth2 scopes, and support for PubSub. The deployment is described below to illustrate the additional capabilities.
+2. A new deployment for the sprint at https://cs2310.ldproxy.net/[cs2310.ldproxy.net]. This deployment provides access to the Daraa dataset that is also available in the ldproxy demonstration deployment. The data is derived from OpenStreetMap in the region of Daraa, Syria, converted by NGA to NGA's Topographic Data Store schema. This deployment also adds support for OGC API - Features - Part 4: Create, Replace, Update and Delete, as well as authentication using OpenID Connect and role-based access control through OAuth2 scopes. The deployment also supports PubSub capabilities. The deployment is described below to illustrate the additional capabilities.
 
 ===== Support for JSON-FG 0.2.1
 
-During the sprint, a https://github.com/interactive-instruments/ldproxy/pull/1094[pull request] was created to upgrade ldproxy to the latest JSON-FG version 0.2.1. The changes are:
+During the sprint, multiple pull requests were created to upgrade ldproxy to the latest JSON-FG draft version 0.2.1. The changes in https://github.com/interactive-instruments/ldproxy/pull/1094[Pull Request 1094] are:
 
 * Add "conformsTo";
 * Add "featureSchema";
@@ -22,13 +22,13 @@ The pull request was merged in the days after the sprint once the internal revie
 
 ===== Support for OGC API - Features - Part 5: Schemas
 
-During the sprint, a https://github.com/interactive-instruments/ldproxy/pull/1093[pull request] was created to upgrade ldproxy to the latest JSON-FG version 0.2.1. The changes implement the changes to the specification discussed in the <<ogcapifeatures_results,OGC API Features breakout>>:
+The changes in https://github.com/interactive-instruments/ldproxy/pull/1093[Pull Request 1093], which was created during the code sprint, implement the edits to the specification discussed in the <<ogcapifeatures_results,OGC API - Features breakout session>>. The changes include:
 
 * Add support for "x-ogc-unit" (rename from "unit", which previously was an ldproxy extension);
 * Restrict to JSON Schema 2020-12;
 * Fix an error in the link relation type ("schema" instead of "schema-item").
 
-The pull request was merged in the days after the sprint once the internal review process was completed.
+The pull request was merged in the days after the code sprint once the internal review process was completed.
 
 ===== Support for PubSub
 
@@ -109,7 +109,7 @@ Below is a fragment of the AsyncAPI definition document created to describe the 
 }
 ----
 
-The deployment uses the broker for subscribing to the messages from the testbed. The ldproxy instance offers access to approximately 30 different feature collections. Whenever something is created or changed in a feature collection, a message is sent to the broker. A screenshot showing the channels being monitored through an application called MQTT Explorer is presented in the following figure.
+The deployment uses the broker for subscribing to the messages from the testbed. The ldproxy instance offers access to approximately 30 different feature collections. Whenever something is created or changed in a feature collection, a message is sent to the broker. A screenshot showing the channels being monitored through an application called MQTT Explorer is presented in <<img_ldproxy_mqtt>>.
 
 [[img_ldproxy_mqtt]]
 .ldproxy accessed from MQTT Explorer
@@ -124,4 +124,4 @@ The deployment was therefore connected to an https://auth.ldproxy.net/realms/dem
 * a user "writer" to log-in in the Swagger UI client of the OpenAPI definition using the OAuth2 Authorization Code Flow and execute create, replace, update or delete operations;
 * a client "writer" to execute create, replace, update or delete operations using the OAuth2 Client Credentials Flow using a client secret.
 
-Both capabilities and flows were demonstrated during the sprint. All features changes could be monitored via the PubSub broker described above.
+Both capabilities and flows were demonstrated during the sprint. All changes to features could be monitored via the PubSub broker described above.

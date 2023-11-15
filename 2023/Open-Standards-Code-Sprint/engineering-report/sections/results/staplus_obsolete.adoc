@@ -1,0 +1,35 @@
+////
+Obsolete text. Retained for archiving purposes.
+Replaced by staplus.adoc
+////
+
+[[staplus_results]]
+==== STAplus SensorThings API Extension
+
+Sprint participants from UAB-CREAF and Secure Dimensions conducted experimentation involving a Citizen Science application developed for the CitiObs project.  The application includes a multi-sensor device implemented on a Raspberry Pi to demonstrate the use of STAplus.
+
+The CitiObs project has a use case whereby not all of the observations can be shared with everyone else. Therefore, the Integrity and Confidentiality of the data are important. So when it comes to reading data there are several important aspects that need to be considered, meaning that the supported business model needs to be flexible. The experimentation conducted during the code sprint sought to demonstrate that GeoXACML, STAplus, OpenID, OAuth2 could offer that flexibility. The architecture, which is implemented by the CitiObs project, is illustrated in <<img_citiobs_architecture>>.
+
+[[img_citiobs_architecture]]
+.The STAplus and GeoXACML based architecture implemented by the CitiObs project
+image::images/citiobs_architecture.png[]
+
+To connect to the system a user needs an access token, as well as to subscribe to the observation channels through MQTT. From an MQTT monitoring application such as MQTT Explorer a user can then see the observations that are being collected every specified period (e.g. 10 seconds). The access control policies are such that if a user is not logged in, they cannot see any observations. If User Alpha is logged in, they can see only observations collected by User Alpha. If User Delta is logged in, they can only see the observations collected by User Delta. 
+
+A screenshot showing the interface when a user is logged into the TAPIS system of the CitiObs project is presented in <<img_tapis_landing_page>>.
+
+[[img_tapis_landing_page]]
+.Screenshot of the interface when a user is logged into the TAPIS system
+image::images/tapis_landing_page.png[]
+
+A screenshot showing the TAPIS interface displaying a stream of data from a STAplus implementation is shown in <<img_tapis_datastream>>.
+
+[[img_tapis_datastream]]
+.Screenshot of the TAPIS interface displaying a stream of data
+image::images/tapis_datastream.png[]
+
+A screenshot showing the TAPIS interface displaying a graph of observations collected by a STAplus-enabled sensor is shown in <<img_tapis_observations>>.
+
+[[img_tapis_observations]]
+.Screenshot of the TAPIS interface displaying a graph of collected observations
+image::images/tapis_observations.png[]

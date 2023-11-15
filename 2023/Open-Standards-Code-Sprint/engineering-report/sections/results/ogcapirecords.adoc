@@ -24,4 +24,4 @@ Discussions included:
 *** how to sort results; this could be accomplished by a front-end client (in Python or JavaScript, for example)
 ** some organizations want to provide a unified single catalogue that streamlines the search experience for users
 ** could also be put forth as a best practice on implementation
-** way forward is to put forth a proposal for discussion on requirements
+** way forward could be to put forth a proposal for discussion on requirements
