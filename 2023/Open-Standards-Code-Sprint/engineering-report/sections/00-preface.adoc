@@ -16,13 +16,32 @@ The subject of this Engineering Report (ER) is a code sprint that was held from 
 [.preface]
 == Executive Summary
 
-TBA
+Standards in focus for this code sprint included several OGC API, data model, and encoding standards. In addition to OGC Standards, the code sprint also included a thread focusing on the “GEOINT Imagery Media for ISR” (GIMI) profile of the ISO Base Media File Format (ISOBMFF) and the High Efficiency Image Format (HEIF).
 
-The sprint participants made the following recommendations for future work:
+Overall, this engineering report concludes that the code sprint met all of its objectives and achieved its goal of accelerating the support of open standards within the developer community. Regarding emerging extensions to OGC API Standards, the engineering report concludes that the Publish/Subscribe (PubSub), Security, and Schemas capabilities examined in this code sprint could potentially support other OGC API Standards. Regarding GIMI, the engineering report concludes that with minor changes to popular open-source base libraries a wide range of software can quickly make use of GIMI capabilities.
 
-* TBA
-* TBA
-* TBA
+Regarding the Model for Underground Data Definition and Integration (MUDDI), the engineering report concludes that the MUDDI Conceptual Model is implementable, and could easily be used as the basis for a logical model that can be encoded in a variety of formats. As for JSON-FG, the engineering report concludes that due to the evident increase in adoption across the developer community, there is an increasing need to offer validators so that developers can check for compliance more easily. 
+
+The sprint participants made the following recommendations for future work items on OGC API Standards:
+
+* Extension of OGC API - Records to support faceting and federated search.
+* Use case experimentation to examine how the Publish/Subscribe approach can support various OGC API standards workflows
+* Prototyping and specification on an OpenAPI definition document for the OGC SensorThings API Standard
+* Additional support for multiband raster data in OGC API - Maps/Tiles/Coverages (e.g. multispectral imagery, etc). 
+
+The sprint participants made the following recommendations for future work items on OGC Encoding Standards:
+
+* Tiled complex, signed, and floating-point data in multiband raster data. 
+* Performance benchmarking between various imagery formats, for a variety of use cases.
+* Extraction of the conceptual model of GMLJP2 to make it applicable to any ISOBMFF profile.
+* Development of an Implementation Standard for the logical model and encoding of data that conforms to the MUDDI.
+* Use of the MUDDI logical schema as a template for MUDDI compliance. 
+
+The sprint participants made the following recommendations for future work items on GIMI:
+
+* Extension of open-source base libraries used by several other products for creation and modification of GIMI files
+* Prototype streaming of large images from client applications to servers for storage through OGC API - Processes
+* Prototyping of a JavaScript Object Notation (JSON) encoded alternative to Key-Length-Value (KLV) metadata for use in GIMI files
 
 
 
