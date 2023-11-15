@@ -8,13 +8,13 @@ Sprint participants from MariaDB worked on the following items:
 * Attended and participated in the following breakout sessions:
 ** MUDDI Breakout Sessions
 ** JSON-FG Breakout session
-** OGC API Records Breakout session
-** OGC API Processes Breakout session
-** OGC API Features Breakout session
+** OGC API - Records Breakout session
+** OGC API - Processes Breakout session
+** OGC API - Features Breakout session
 * Loading London MUDDI data into MariaDB
-* Updated the MariaDB OGC API Records implementation to align with the
+* Updated the MariaDB OGC API - Records implementation to align with the
   current state of the Part 1 editor's draft.
-* Updated the MariaDB OGC API Processes implementation to align with the 
+* Updated the MariaDB OGC API - Processes implementation to align with the 
   current state of the Part 1 & 2 editor's drafts.
 
 ===== Code sprint results
@@ -1025,7 +1025,7 @@ The MUDDI data was loaded from SHAPE files and as such does not conform to the M
 
 There were several aspects of MariaDB's Feature server JSON-FG output that did not conform to the https://docs.ogc.org/DRAFTS/21-045.html#types-schemas_feature-type[latest editor's draft of the JSON-FG specification] and these issues were addressed during the code sprint.  Specifically, the MariaDB server did not previously generate the "conformsTo", "featureType" and "featureSchema" members.  These members can now be seen in the <<jsonfg-example,JSON-FG example above>>.
 
-====== OGC API Records
+====== OGC API - Records
 
 **Discussion topics**
 
@@ -1039,7 +1039,7 @@ Two main topics were discussed in the OGC API - Records breakout session.
 
 https://github.com/opengeospatial/ogcapi-records/issues/275[Issue 275] from the OGC API - Records SWG discusses templated links and how unaware clients, trying to resolve a templated link, would encounter errors because the unaware client would not know to replace the substitution variables in the template.  This issue presented several approaches to resolving the problem which were discussed in a subsequent OGC Architecture DWG meeting convened to agree on an OGC-wide approach for handling templated links.  At that meeting it was agreed that the approach described in https://github.com/opengeospatial/ogcapi-records/pull/290[Pull request 290] was most consistent with current practices on the Web.
 
-During the code sprint, the MariaDB OGC API Records implementation was updated to handle templated links as described in https://github.com/opengeospatial/ogcapi-records/pull/290[Pull request 290].  Below is a sample record containing a templated links section:
+During the code sprint, the MariaDB OGC API - Records implementation was updated to handle templated links as described in https://github.com/opengeospatial/ogcapi-records/pull/290[Pull request 290].  Below is a sample record containing a templated links section:
 
 [%unnumbered%collapsible]
 [source,json]
@@ -1562,15 +1562,16 @@ During the code sprint, the MariaDB OGC API Records implementation was updated t
 }
 ----
 
+[[mariadb_processes_results]]
 ====== OGC API - Processes
 
 **Discussion topics**
 
-The https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html[OGC API Processes - Part 1: Core] Standard defines two ways that a server can use to notify a client that an asynchronously executed process has completed execution.  The first method involves polling using the https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html#_d93504cb-971a-4587-be84-d2c0d3c5c6ad[GetStatus] operation.  The second method involves https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html#_7731df77-078f-409f-b1fe-f0028e562419[OpenAPI callbacks].  This topic was discussed during a breakout session at the code sprint. The approach involves applying the https://docs.ogc.org/dp/23-013.html[Publish-Subscribe workflow] used by OGC API - EDR.  It was agreed that, subject to SWG approval, https://www.asyncapi.com/docs/reference/specification/v2.6.0[AsyncAPI] and the PubSub workflow should be offered as a notification option in addition the current polling and callback mechanisms (which should be preserved for backward compatability).
+The https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html[OGC API - Processes - Part 1: Core] Standard defines two ways that a server can use to notify a client that an asynchronously executed process has completed execution.  The first method involves polling using the https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html#_d93504cb-971a-4587-be84-d2c0d3c5c6ad[GetStatus] operation.  The second method involves https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html#_7731df77-078f-409f-b1fe-f0028e562419[OpenAPI callbacks].  This topic was discussed during a breakout session at the code sprint. The approach involves applying the https://docs.ogc.org/dp/23-013.html[Publish-Subscribe workflow] used by OGC API - EDR.  It was agreed that, subject to SWG approval, https://www.asyncapi.com/docs/reference/specification/v2.6.0[AsyncAPI] and the PubSub workflow should be offered as a notification option in addition the current polling and callback mechanisms (which should be preserved for backward compatability).
 
 **Implementation**
 
-During the code sprint, changes were made to the MariaDB OGC API Processes server to align with editor's drafts of https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html[Part 1] and https://docs.ogc.org/DRAFTS/20-044.html[Part 2].  The following images illustrate the MariaDB thematic exploitation test harness using the MariaDB OGC API Records and OGC API Processes servers updated during the code sprint.
+During the code sprint, changes were made to the MariaDB OGC API - Processes server to align with editor's drafts of https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html[Part 1] and https://docs.ogc.org/DRAFTS/20-044.html[Part 2].  The following images illustrate the MariaDB thematic exploitation test harness using the MariaDB OGC API - Records and OGC API - Processes servers updated during the code sprint.
 
 A series of screenshots illustrating interaction with the system are shown in the following figures. <<img_mariadb_tep_records_access>> shows the TEP accessing a catalog to locate images of interest.
 
