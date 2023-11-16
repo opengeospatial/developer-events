@@ -76,8 +76,6 @@ All questions regarding this document should be directed to the editor or the co
 |	George Kolokotronis	|	VOLTQUANT	|	Contributor
 |	Mete Ercan Pakdil	|	Mott MacDonald	|	Contributor
 |	Núria Julià Selvas	|	CREAF	|	Contributor
-|	Bryan Seeds	|	Dstl	|	Contributor
-|	Christopher Budas	|	Dstl	|	Contributor
 |	Satish Sankaran	|	Esri	|	Contributor
 |	Jonathan Bates	|	GeoPlace LLP	|	Contributor
 |	Conor Lambert	|	Ordnance Survey	|	Contributor
@@ -93,14 +91,9 @@ All questions regarding this document should be directed to the editor or the co
 |	Alex Scott-Johns	|	Envitia Ltd	|	Contributor
 |	Dave Rowe	|	Ordnance Survey	|	Contributor
 |	Carsten Roensdorf	|	Ordnance Survey	|	Contributor
-|	Iain Burnell	|	Dstl	|	Contributor
-|	Simon Knight	|	Dstl	|	Contributor
 |	Simon Smith	|	Ordnance Survey	|	Contributor
 |	Chris Popplestone	|	Ordnance Survey	|	Contributor
 |	Neil Brammall	|	Geospatial Commission	|	Contributor
-|	Jacqueline Carr	|	NGA	|	Contributor
-|	Amanda Morgan	|	NGA	|	Contributor
-|	Stanley Grossman	|	NGA	|	Contributor
 |	Gareth Boyes	|	MGISS	|	Contributor
 |	Michael Gordon	|	Ordnance Survey	|	Contributor
 |	Colin Sawkins	|	Cadent Gas Limited	|	Contributor
