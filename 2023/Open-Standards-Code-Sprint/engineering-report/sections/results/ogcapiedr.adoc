@@ -5,7 +5,7 @@ The OGC API - Environmental Data Retrieval (EDR) team and PubSub enthusiasts pro
 
 The 5-minute pitch presentations focused on Part 1: Core and Part 2: Publish-Subscribe capabilities to help position the subsequent mentor and breakout sessions.
 
-The EDR PubSub mentor session included demonstrations from the joint Open Software and Open Standards Code Sprint between OGC/OSGeo/ASF that was held in Lausanne during the month of April 2023, as well as a demo from NOAA demonstrating PubSub integration with EDR.
+The EDR PubSub mentor session included demonstrations from the joint Open Software and Open Standards Code Sprint between OGC/OSGeo/ASF that was held in Lausanne during the month of April 2023 (<<OGC23-025>>), as well as a demo from NOAA demonstrating PubSub integration with EDR.
 
 A breakout session was also held, focusing on technical details of EDR Part 2.
 

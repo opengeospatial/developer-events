@@ -5,10 +5,17 @@
 == Bibliography
 
 * [[[OGC17-069r4,OGC 17-069r4]]]
-* [[[OGC19-086r5,OGC 19-086r5]]]
+* [[[OGC18-058r1,OGC 18-058r1]]]
+* [[[OGC19-086r6,OGC 19-086r6]]]
 * [[[OGC18-062r2,OGC 18-062r2]]]
 * [[[OGC20-057,OGC 20-057]]]
-* [[[OGC19-072,OGC 19-072]]]
 * [[[OGC23-025,OGC 23-025]]]
-* [[[OGC22-043r1,OGC 22-043r1]]]
+* [[[OGC18-088,OGC 18-088]]]
+* [[[OGC22-022r1,OGC 22-022r1]]]
+* [[[OGC21-006r2,OGC 21-006r2]]]
+* [[[OGC15-113r6,OGC 15-113r6]]]
+* [[[OGC08-085r8,OGC 08-085r8]]]
+* [[[OGC12-128r18,OGC 12-128r18]]]
+* [[[bib_jsonfg,OGC 21-045]]], Clemens Portele, Panagiotis (Peter) A. Vretanos: OGC Features and Geometries JSON - Part 1: Core draft, Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/21-045.html
+* [[[bib_muddi,OGC 23-024]]], Alan Leidner, Andrew Hughes, Carsten Roensdorf, Neil Brammall, Liesbeth Rombouts, Joshua Lieberman: OGC MUDDI Conceptual Model draft, Open Geospatial Consortium. https://portal.ogc.org/files/106383
 * [[[geonovum_report,6]]], Linda van den Brink, Arnoud de Boer: Testing OGC JSON-FG Draft Specification and its GDAL-DEV Implementation. Geonovum (2023). https://geonovum-labs.github.io/test-ogc-json-fg

@@ -35,7 +35,7 @@ include::sections/01-scope.adoc[]
 
 include::sections/02-terms_and_definitions.adoc[]
 
-//include::sections/03-references.adoc[]
+
 
 // Add clause files as needed
 
