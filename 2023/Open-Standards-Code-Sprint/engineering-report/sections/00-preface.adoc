@@ -113,7 +113,8 @@ All questions regarding this document should be directed to the editor or the co
 |	Ingo Simonis	|	OGC	|	Contributor
 |	Thomas Hodson	|	ECMWF	|	Contributor
 |	Joan Maso	|	UAB-CREAF	|	Contributor
-|	Devon Sookhoo	|	Trax	|	Contributor
+|	Devon Sookhoo	|	TRAX International Corporation	|	Contributor
+|	Joe Stufflebeam	|	TRAX International Corporation	|	Contributor
 |	Dean Hintz	|	Safe Software	|	Contributor
 |	Ryan Franz	|	FlightSafety International	|	Contributor
 |	Hylke van der Schaaf	|	Fraunhofer Gesellschaft	|	Contributor
