@@ -20,15 +20,17 @@ include::architecture/ogcapifeatures.adoc[]
 
 include::architecture/ogcapitiles.adoc[]
 
-include::architecture/ogcapicoverages.adoc[]
-
 include::architecture/ogcapiedr.adoc[]
 
-include::architecture/geopose.adoc[]
+include::architecture/ogcapiprocesses.adoc[]
+
+include::architecture/citygml.adoc[]
 
 include::architecture/cdb.adoc[]
 
 include::architecture/geopackage.adoc[]
+
+include::architecture/gmljp2.adoc[]
 
 
 === Candidate OGC Standards
@@ -36,6 +38,8 @@ include::architecture/geopackage.adoc[]
 include::architecture/muddi.adoc[]
 
 include::architecture/ogcapirecords.adoc[]
+
+include::architecture/ogcapicoverages.adoc[]
 
 include::architecture/ogcpubsub.adoc[]
 
@@ -49,7 +53,7 @@ include::architecture/asyncapi.adoc[]
 
 === Software Projects and Products
 
-include::architecture/geonetwork.adoc[]
+
 
 include::architecture/pygeoapi.adoc[]
 
