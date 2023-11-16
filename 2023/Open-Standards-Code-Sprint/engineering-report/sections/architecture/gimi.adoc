@@ -10,7 +10,7 @@ Next Generation ISR Imagery Standards (NGIIS) is a program of work to modernize 
  - Enable automation
  - Support to disadvantaged and remote users
 
-NGA Standard 0076 (NGA.STND.0076) "GEOINT Imagery Media for ISR" (GIMI), currently in draft, defines a profile of the International Standards
+NGA Standard 0076 (<<bib_gimi>>) "GEOINT Imagery Media for ISR" (GIMI), currently in draft, defines a profile of the International Standards
 Organization / International Electrotechnical Commission (ISO/IEC) 14496-12 ISO Base Media File Format (ISOBMFF) video/audio standard and the
 ISO/IEC 23008-12 High Efficiently Image File Format (HEIF) Still Imagery standard. The GIMI Profile is a central element of the NGIIS program.
 GIMI is expected to replace the National Imagery Transmission Format (NITF) that is widely used within the US Department of Defense for ISR.
