@@ -58,22 +58,64 @@ All questions regarding this document should be directed to the editor or the co
 .Submitters
 [options="header"]
 |===
-| Name | Organization | Role
-| Gobe Hobona| Open Geospatial Consortium | Editor
-| Joana Simoes | Open Geospatial Consortium |Editor
-| Tom Kralidis | Meteorological Service of Canada |Editor
-| Andreas Matheus	|	Secure Dimensions	|	Contributor
-| Paul van Genuchten	| ISRIC- World soil information	|	Contributor
-| Iván Sánchez Ortega	| OSGeo	|	Contributor
-| Florent Gravin	|	Camptocamp	|	Contributor
-| Clemens Portele	|	interactive instruments GmbH	|	Contributor
-| Jérôme Jacovella-St-Louis	| Ecere Corporation	|	Contributor
-| Brad Hards	| 	|	Contributor
-| TBA	| TBA	|	Contributor
-| TBA	| TBA	|	Contributor
-| TBA	| TBA	|	Contributor
-| TBA	| TBA	|	Contributor
-| TBA	| TBA	|	Contributor
-| TBA	| TBA	|	Contributor
+|	Name | Organization | Role
+|	Gobe Hobona| OGC | Editor
+|	Joana Simoes | OGC |Editor
+|	Tom Kralidis | Meteorological Service of Canada |Editor
+|	Andreas Matheus	|	Secure Dimensions	|	Contributor
+|	Iván Sánchez Ortega	| OSGeo	|	Contributor
+|	Florent Gravin	|	Camptocamp	|	Contributor
+|	Clemens Portele	|	interactive instruments GmbH	|	Contributor
+|	Johannes Echterhoff	|	interactive instruments GmbH	|	Contributor
+|	Jérôme Jacovella-St-Louis	| Ecere Corporation	|	Contributor
+|	Brad Hards	| 	|	Contributor
+|	Sine Kelly	|	Esri UK Ltd	|	Contributor
+|	Rebecca Aspin	|	Ordnance Survey	|	Contributor
+|	Miles Austen	|	Ordnance Survey	|	Contributor
+|	Nikita Dabizha	|	VOLTQUANT	|	Contributor
+|	George Kolokotronis	|	VOLTQUANT	|	Contributor
+|	Mete Ercan Pakdil	|	Mott MacDonald	|	Contributor
+|	Núria Julià Selvas	|	CREAF	|	Contributor
+|	Satish Sankaran	|	Esri	|	Contributor
+|	Jonathan Bates	|	GeoPlace LLP	|	Contributor
+|	Conor Lambert	|	Ordnance Survey	|	Contributor
+|	Ricardo Silva	|	Geobeyond	|	Contributor
+|	Arnoud de Boer	|	Geonovum	|	Contributor
+|	Goncalo Lopes	|	NeuroGEARS Ltd	|	Contributor
+|	Joe Guyatt	|	Ordnance Survey	|	Contributor
+|	Devon Sookhoo	|	Trax	|	Contributor
+|	Rob Smith	|	Away Team Software	|	Contributor
+|	James Clarke	|	Ordnance Survey	|	Contributor
+|	Richard Hargreaves	|	Ordnance Survey	|	Contributor
+|	Neil Kirk	|	Envitia Ltd	|	Contributor
+|	Alex Scott-Johns	|	Envitia Ltd	|	Contributor
+|	Dave Rowe	|	Ordnance Survey	|	Contributor
+|	Carsten Roensdorf	|	Ordnance Survey	|	Contributor
+|	Simon Smith	|	Ordnance Survey	|	Contributor
+|	Chris Popplestone	|	Ordnance Survey	|	Contributor
+|	Neil Brammall	|	Geospatial Commission	|	Contributor
+|	Gareth Boyes	|	MGISS	|	Contributor
+|	Michael Gordon	|	Ordnance Survey	|	Contributor
+|	Colin Sawkins	|	Cadent Gas Limited	|	Contributor
+|	Matthew Lewis	|	Esri UK	|	Contributor
+|	Sumit Sen	|	GISE Hub, IIT Bombay	|	Contributor
+|	Paul Hann	|	Esri UK	|	Contributor
+|	Joost Farla	|	Geonovum	|	Contributor
+|	Samantha Lavender	|	Pixalytics Ltd	|	Contributor
+|	Panagiotis (Peter) Vretanos	|	MariaDB / CubeWerx	|	Contributor
+|	Lucio Colaiacomo	|	EU SatCen	|	Contributor
+|	Scott Simmons	|	OGC	|	Contributor
+|	Chris Little	|	Met Office	|	Contributor
+|	Rahul Sharma	|	Cognizant UK	|	Contributor
+|	Michael Leedahl	|	Maxar	|	Contributor
+|	Ashiraf Kyabainze	|	AT HAUSE LIMITED	|	Contributor
+|	Linda van den Brink	|	Geonovum	|	Contributor
+|	Ingo Simonis	|	OGC	|	Contributor
+|	Thomas Hodson	|	ECMWF	|	Contributor
+|	Joan Maso	|	UAB-CREAF	|	Contributor
+|	Devon Sookhoo	|	Trax	|	Contributor
+|	Dean Hintz	|	Safe Software	|	Contributor
+|	Ryan Franz	|	FlightSafety International	|	Contributor
+|	Hylke van der Schaaf	|	Fraunhofer Gesellschaft	|	Contributor
 
 |=== 
