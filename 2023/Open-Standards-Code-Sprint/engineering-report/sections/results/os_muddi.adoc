@@ -18,12 +18,12 @@ One thing that the sprint participants found unclear in the candidate standard w
 
 [[img_os_muddi_networks]]
 .Relationships between types of networks in MUDDI
-image::images/muddi/os_muddi_networks.jpg[]
+image::images/muddi/muddi_networks.png[]
 
 To demonstrate that sample data conforming to the logical schema could be displayed on a web application, the sprint participants uploaded the data into a pygeoapi instance. The pygeoapi instance was then linked into a web application. A screenshot of the web application is shown in <<img_os_muddi_webapp>>.
 
 [[img_os_muddi_webapp]]
 .A screenshot of a web application displaying underground asset data
-image::images/muddi/os_muddi_webapp.png[]
+image::images/muddi/muddi_os_webapp.png[]
 
 Future work on the storage aspects of the MUDDI task could involve using the MUDDI logical schema as a template for MUDDI compliance. The logical schema does not currently have much attribution about the assets themselves. Therefore any implementation would be expected to introduce additional attributes. The code for the logical schema is available at: https://github.com/Geovation/muddi_compliance  
