@@ -7,7 +7,7 @@ They started by reviewing the MUDDI extended conceptual model. All of the featur
 
 [[img_os_muddi_database]]
 .Illustration of a MUDDI logical schema for a relational database
-image::images/muddi/os_muddi_database.png[]
+image::images/muddi/os_muddi_database.png[image,width=1200]
 
 The figure shows the tables that were created and how they relate to one another. It consists of tables for each real feature type. These tables are mostly linked by foreign keys e.g. for linking conveyance information against network information. 
 

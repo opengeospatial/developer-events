@@ -34,7 +34,7 @@ The sprint participants proposed to enable OAuth2/OpenID Connect authentication 
 
 [[img_citiobs_architecture]]
 .The STAplus and GeoXACML based architecture implemented by the CitiObs project
-image::images/staplus_image1.png[image,width=800]
+image::images/staplus_image1.png[image,width=1200]
 
 For the code sprint, they proposed to extend the existing STAplus implementation with a GeoXACML Policy Enforcement Point (PEP) to enforce policies executed by the GeoXACML 3.0 Policy Decision Point (PDP). They planned to leverage the https://github.com/securedimensions/authzforce-ce-geoxacml3[GeoXACML 3.0 implementation] from Secure Dimensions and the https://github.com/authzforce[XACML 3.0 implementation] from Thales. They also planned to visualize the access control results (enforcing a GeoXACML 3.0 policy) by using the generic STAplus visualization application https://www.tapis.grumets.cat/[TAPIS], implemented by CREAF.
 
@@ -55,7 +55,7 @@ The ”interesting” part of the policy is the obligation that undertakes the S
 
 [[img_staplus_entity]]
 .STAplus Entity Type diagram
-image::images/staplus_image3.png[image,width=800]
+image::images/staplus_image3.png[image,width=1200]
 
 The following example illustrates the obligation to filter on “my” obligations.
 
@@ -113,7 +113,7 @@ The visualization of the “my observations” was done via the TAPIS implementa
 
 [[img_anonymous_access]]
 .Screenshot of the interface when a user is NOT logged into the TAPIS system
-image::images/staplus_image4.png[image,width=800]
+image::images/staplus_image4.png[image,width=1200]
 
 <<img_anonymous_access>> shows that for anonymous access, no observations are returned.
 
@@ -121,12 +121,12 @@ image::images/staplus_image4.png[image,width=800]
 
 [[img_authenticated_access1]]
 .Screenshot of the interface showing observations when a user has been authenticated
-image::images/staplus_image5.png[image,width=800]
+image::images/staplus_image5.png[image,width=1200]
 
 <<img_authenticated_access1>> shows that Long John Silver [.underline]#can fetch his# observations.
 
 [[img_authenticated_access2]]
 .Screenshot of the interface when authenticated user is prevented from accessing other user's observations
-image::images/staplus_image6.png[image,width=800]
+image::images/staplus_image6.png[image,width=1200]
 
 <<img_authenticated_access2>> shows that Long John Silver [.underline]#cannot fetch# Joan’s observations; the attempt to access observations results in “no data”.
