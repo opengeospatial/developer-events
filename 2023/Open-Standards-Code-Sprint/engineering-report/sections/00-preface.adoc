@@ -106,7 +106,6 @@ All questions regarding this document should be directed to the editor or the co
 |	Lucio Colaiacomo	|	EU SatCen	|	Contributor
 |	Scott Simmons	|	OGC	|	Contributor
 |	Chris Little	|	Met Office	|	Contributor
-|	Rahul Sharma	|	Cognizant UK	|	Contributor
 |	Michael Leedahl	|	Maxar	|	Contributor
 |	Ashiraf Kyabainze	|	AT HAUSE LIMITED	|	Contributor
 |	Linda van den Brink	|	Geonovum	|	Contributor
