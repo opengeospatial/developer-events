@@ -5,7 +5,7 @@ The focus of the code sprint was on the support of implementations of open geosp
 
 [[img_architecture]]
 .High Level Overview of the Sprint Architecture
-image::images/architecture.png[align="center",width=800]
+image::images/architecture.png[align="center",width=1200]
 
 The rest of this section describes the software deployed, and standards implemented during the code sprint.
 
