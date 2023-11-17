@@ -83,7 +83,6 @@ All questions regarding this document should be directed to the editor or the co
 |	Arnoud de Boer	|	Geonovum	|	Contributor
 |	Goncalo Lopes	|	NeuroGEARS Ltd	|	Contributor
 |	Joe Guyatt	|	Ordnance Survey	|	Contributor
-|	Devon Sookhoo	|	Trax	|	Contributor
 |	Rob Smith	|	Away Team Software	|	Contributor
 |	James Clarke	|	Ordnance Survey	|	Contributor
 |	Richard Hargreaves	|	Ordnance Survey	|	Contributor
