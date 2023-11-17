@@ -112,6 +112,8 @@ All questions regarding this document should be directed to the editor or the co
 |	Linda van den Brink	|	Geonovum	|	Contributor
 |	Ingo Simonis	|	OGC	|	Contributor
 |	Thomas Hodson	|	ECMWF	|	Contributor
+|	Steven McDaniel	|	Hexagon	|	Contributor
+|	Charla Harbin	|	Hexagon	|	Contributor
 |	Joan Maso	|	UAB-CREAF	|	Contributor
 |	Devon Sookhoo	|	TRAX International Corporation	|	Contributor
 |	Joe Stufflebeam	|	TRAX International Corporation	|	Contributor
