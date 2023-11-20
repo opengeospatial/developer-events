@@ -16,6 +16,7 @@ Discussions included:
   * advertising facets and their types (options: separate endpoints, addition of `facet: true` properties in (`.../queryables`)
   * specifying facets on `.../items` requests
   * agreement to review / approve proposed Pull Request (PR) and move forward as an extension
+  * A detailed description of the proposal is presented in <<ogcapirecords_facets>>.
 
 * disussion on federation/distributed search
 ** how to address live / distributed search (without metadata harvesting/metadata aggregation)
@@ -25,3 +26,5 @@ Discussions included:
 ** some organizations want to provide a unified single catalogue that streamlines the search experience for users
 ** could also be put forth as a best practice on implementation
 ** way forward could be to put forth a proposal for discussion on requirements
+
+include::ogcapirecords-facets.adoc[]

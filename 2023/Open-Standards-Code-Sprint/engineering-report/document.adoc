@@ -7,14 +7,13 @@
 :draft: 1.0
 :external-id: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
 :docnumber: 23-059
-:received-date: 2029-03-30
+:received-date: 2023-11-20
 :issued-date: 2029-03-30
 :published-date: 2029-03-30
 :fullname: Gobe Hobona
 :fullname_2: Joana Simoes
 :docsubtype: implementation
 :keywords: ogcdoc, OGC document, API, openapi, html, underground, json-fg, nuar, gimi, heif, muddi
-:submitting-organizations: Organization One; Organization Two
 :mn-document-class: ogc
 :mn-output-extensions: xml,html,doc,pdf
 :toclevels: 3
