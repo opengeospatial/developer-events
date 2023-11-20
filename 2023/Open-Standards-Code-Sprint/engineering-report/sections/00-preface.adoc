@@ -43,9 +43,9 @@ The sprint participants made the following recommendations for future work items
 
 The sprint participants made the following recommendations for future work items on GIMI:
 
-* Extension of open-source base libraries used by several other products for creation and modification of GIMI files
-* Prototype streaming of large images from client applications to servers for storage through OGC API - Processes
-* Prototyping of a JavaScript Object Notation (JSON) encoded alternative to Key-Length-Value (KLV) metadata for use in GIMI files
+* Extension of open-source base libraries used by several other products for creation and modification of GIMI files.
+* Prototype streaming of large images from client applications to servers for storage through OGC API - Processes.
+* Prototyping of a JavaScript Object Notation (JSON) encoded alternative to Key-Length-Value (KLV) metadata for use in GIMI files.
 
 
 
