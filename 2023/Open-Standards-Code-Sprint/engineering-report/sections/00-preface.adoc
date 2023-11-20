@@ -102,7 +102,7 @@ All questions regarding this document should be directed to the editor or the co
 |	Joost Farla	|	Geonovum	|	Contributor
 |	Samantha Lavender	|	Pixalytics Ltd	|	Contributor
 |	Panagiotis (Peter) Vretanos	|	MariaDB / CubeWerx	|	Contributor
-|	Lucio Colaiacomo	|	EU SatCen	|	Contributor
+|	Lucio Colaiacomo	|	EU Satellite Centre	|	Contributor
 |	Scott Simmons	|	OGC	|	Contributor
 |	Chris Little	|	Met Office	|	Contributor
 |	Michael Leedahl	|	Maxar	|	Contributor
@@ -113,6 +113,11 @@ All questions regarding this document should be directed to the editor or the co
 |	Steven McDaniel	|	Hexagon	|	Contributor
 |	Charla Harbin	|	Hexagon	|	Contributor
 |	Joan Maso	|	UAB-CREAF	|	Contributor
+|	Iain Burnell	|	Dstl	|	Contributor
+|	Bryan Seeds	|	Dstl	|	Contributor
+|	Christopher Budas	|	Dstl	|	Contributor
+|	Simon Knight	|	Dstl	|	Contributor
+|	Amy Baker	|	Dstl	|	Contributor
 |	Devon Sookhoo	|	TRAX International Corporation	|	Contributor
 |	Joe Stufflebeam	|	TRAX International Corporation	|	Contributor
 |	Dean Hintz	|	Safe Software	|	Contributor
