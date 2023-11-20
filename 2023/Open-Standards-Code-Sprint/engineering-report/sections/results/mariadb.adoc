@@ -39,6 +39,8 @@ image::images/muddi/mariadb_muddi_mapsapi.png[]
 
 The following image illustrates one of these layers, "Manhole", being accessed using the Features API:
 
+[[img_mariadb_muddi_featuresapi_1]]
+.Accessing a layer through the Features API
 image::images/muddi/mariadb_muddi_featuresapi.png[]
 
 The following code fragment shows the "Manhole" data being accessed from the MariaDB feature server as GeoJSON using the EPSG:27700 CRS:
