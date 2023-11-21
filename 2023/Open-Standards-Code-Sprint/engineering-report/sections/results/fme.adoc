@@ -26,7 +26,7 @@ The workflow invokes the GML writer capability of FME. An overview of the GML wr
 
 The sprint participants reported that they encountered an issue whereby some of the required attribution was not available from the source dataset. Fortunately, in such situations, the software logged an error message that listed the required attributes that had not been filled.
 
-The FME Desktop application was able to write to MUDDI GML and then to read it back, as illustrated in <<img_fme_output_muddi_gml>>. From the screenshot it can be seen on the top left that there were 11,000 fittings. The screenshot also shows the two networks. Those networks are associated with service lines. One of the service lines is associated with names. The Network covariance link is the actual line. The Service Area is represented by a bounding box.
+The FME Desktop application was able to write to MUDDI GML and then to read it back, as illustrated in <<img_fme_output_muddi_gml>>. From the screenshot it can be seen on the top left that there were 11,000 fittings. The screenshot also shows the two networks. Those networks are associated with service lines. One of the service lines is associated with names. The Network conveyance link is the actual line. The Service Area is represented by a bounding box.
 
 [[img_fme_output_muddi_gml]]
 .Screenshot of MUDDI GML data displayed in FME
