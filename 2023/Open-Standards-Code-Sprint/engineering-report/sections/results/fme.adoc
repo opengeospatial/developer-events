@@ -70,6 +70,8 @@ The output CityGML is presented in <<img_fme_output_citygml>>. The figure shows 
 .Screenshot of the output CityGML data displayed in FME
 image::images/fme_output_citygml.png[]
 
-In summary, sprint participants from Safe Software were able to write to MUDDI GML using the application schemas provided by interactive instruments. The workflows for writing to MUDDI GML captured multiple two-dimensional (2D) and three-dimensional (3D) geometry types (points, lines, polygons). Topology was also populated with xlink_hrefs. 
+===== Summary
+
+In summary, sprint participants from Safe Software were able to write schema valid MUDDI GML using the application schemas provided by interactive instruments. The workflows for writing to MUDDI GML captured multiple two-dimensional (2D) and three-dimensional (3D) geometry types (points, lines, polygons). Topology was also populated with xlink_hrefs. The Safe team was also able to convert this MUDDI GML into several other common encodings including OGC Geopackage, ESRI Geodatabase and GeoJSON.
 
 The sprint participants from Safe Software also started experimenting with the CityGML3 Dynamizer to explore how it might work in future versions of the workflow. They successfully converted CityGML2 data to CityGML3 data, as well as IFC data to CityGML3 data. They were able to store IFC spaces as rooms and support a range of other new CityGML3 feature types and properties. They also confirmed that they could read the output back with the new CityGML3 reader.
