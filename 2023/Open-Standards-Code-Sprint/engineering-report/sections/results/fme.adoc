@@ -1,7 +1,7 @@
 [[fme_results]]
 ==== Safe Software FME
 
-The purpose for Safe Software to participate in the code sprint was to run some experiments to use a logical model based on MUDDI to encode underground data to GML and other popular encodings such as GeoJSON, Geopackage and geodatabase. Safe Software also ran some transformations from CityGML2 and IFC to CityGML3.
+The purpose for Safe Software to participate in the code sprint was to run some experiments with a logical model based on MUDDI, to encode underground data into GML and other popular encodings, such as GeoJSON, Geopackage and geodatabase. Safe Software also ran some transformations from CityGML2 and IFC to CityGML3.
 
 ===== MUDDI
 
