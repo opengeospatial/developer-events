@@ -10,8 +10,8 @@ In order to exercise the MUDDI GML encoding for the code sprint, Safe Software o
 The workflow for converting from plain GeoJSON to MUDDI GML is illustrated in <<img_fme_workflow>>. The workflow takes source data and copies attributes across to output feature types. Excess attribution that is not required in the output feature type can be thrown away. A Network feature acts as a parent to all of the other associated features. Therefore, the mains and service lines are associated with a network. This includes fittings, mains and service lines to which some date fields are added. The workflow also creates a service area which represents the bounding box around the features.
 
 [[img_fme_workflow]]
-.Screenshot of FME workflow for converting from plain GeoJSON to MUDDI GML
-image::images/fme_workflow.jpg[]
+.Screenshot of FME workflow for converting Burnaby underground data from plain GeoJSON to MUDDI GML
+image::images/muddi/fme_muddi_workflow.png[]
 
 A summary of the workflow is below:
 
