@@ -7,6 +7,8 @@ Regarding JSON-FG, the engineering report concludes that due to the evident incr
 
 In relation to MUDDI, the engineering report concludes that the MUDDI Conceptual Model is implementable, and could easily be used as the basis for a logical model that can be encoded in a variety of formats. Once the Conceptual Model has been approved as an OGC Standard, the SWG should therefore consider developing standards for encoding MUDDI-conformant data in GeoPackage, GML, or JSON-FG. 
 
+In relation to CityGML version 3, the engineering report concludes that there are clear pathways for generating CityGML v3 data based on CityGML v2 and also from other related standards such as IFC.
+
 The conclusions regarding the emerging extensions to OGC API Standards can be summarised as follows. The PubSub, Security, and Schemas capabilities examined in this code sprint could potentially support other OGC API Standards. Therefore, there is a need for the various OGC API SWGs to consider the potential application of the extensions to the standards within the remit of the SWGs.
 
 Regarding GIMI, the engineering report concludes that with minor changes to popular open-source base libraries a wide range of software can quickly make use of GIMI capabilities, that includes software that implements OGC API Standards. However, to fully leverage the capabilities of the GIMI specification, the base libraries will need to include the required functionality at production.
