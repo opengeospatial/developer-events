@@ -24,7 +24,7 @@ Standards in focus for this code sprint included several OGC API, data model, an
 
 In relation to emerging extensions to OGC API Standards, the engineering report concludes that the Publish/Subscribe (PubSub), Security, and Schemas capabilities examined in this code sprint could potentially support other OGC API Standards. Regarding GIMI, the engineering report concludes that with minor changes to popular open-source base libraries a wide range of software can quickly make use of GIMI capabilities.
 
-Regarding the Model for Underground Data Definition and Integration (MUDDI), the engineering report concludes that the MUDDI Conceptual Model is implementable, and could easily be used as the basis for a logical model that can be encoded in a variety of formats. As for JSON-FG, the engineering report concludes that due to the evident increase in adoption across the developer community, there is an increasing need to offer validators so that developers can check for compliance more easily. 
+Regarding the Model for Underground Data Definition and Integration (MUDDI), the engineering report concludes that the MUDDI Conceptual Model is implementable, and could easily be used as the basis for a logical model that can be encoded in a variety of formats including GML, GeoJSON and Geopackage. As for JSON-FG, the engineering report concludes that due to the evident increase in adoption across the developer community, there is an increasing need to offer validators so that developers can check for compliance more easily. 
 
 The sprint participants made the following recommendations for future work items on OGC API Standards:
 
