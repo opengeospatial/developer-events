@@ -51,8 +51,8 @@ During code sprint discussions, some noted that many applications may have troub
 .Screenshot of MUDDI GeoJSON data displayed in FME. Note the simplified schema with empty properties not shown.
 image::images/muddi/fme_output_muddi_geojson.png[]
 
-[[img_fme_output_muddi_gml]]
-.Screenshot of MUDDI Geopackage data displayed in FME.
+[[img_fme_output_muddi_geopackage]]
+.Screenshot of MUDDI Geopackage data displayed in FME showing a NetworkConveyanceNode feature. Note that the gml_id of this node matches the hasInlet.xlink_href of the connected NetworkConveyanceLink feature shown in the MUDDI GML output above.
 image::images/muddi/fme_output_muddi_geopackage.png[]
 
 
