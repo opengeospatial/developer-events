@@ -10,8 +10,8 @@ In order to exercise the MUDDI GML encoding for the code sprint, Safe Software o
 The workflow for converting from plain GeoJSON to MUDDI GML is illustrated in <<img_fme_workflow>>. The workflow takes source data and copies attributes across to output feature types. Excess attribution that is not required in the output feature type can be thrown away. A Network feature acts as a parent to all of the other associated features. Therefore, the mains and service lines are associated with a network. This includes fittings, mains and service lines to which some date fields are added. The workflow also creates a service area which represents the bounding box around the features.
 
 [[img_fme_workflow]]
-.Screenshot of FME workflow for converting from plain GeoJSON to MUDDI GML
-image::images/fme_workflow.jpg[]
+.Screenshot of FME workflow for converting Burnaby underground data from plain GeoJSON to MUDDI GML
+image::images/muddi/fme_muddi_workflow.png[]
 
 A summary of the workflow is below:
 
@@ -47,6 +47,10 @@ image::images/muddi/fme_output_muddi_gml.png[]
 On the right-hand side of <<img_fme_output_muddi_gml>> is shown the attribution from the data. Most of the attribution is carried through from the source data, however for illustrative purposes in this Code Sprint some additional synthetic attribution was inserted. The workflow also added an elevation dimension to the geometries, which was taken from another feature which had up and down elevation feature properties. 
 
 During code sprint discussions, some noted that some applications may have trouble consuming data in the GML encoding. To make the MUDDI test results more widely sharable, the Safe Software team decided to also convert MUDDI GML to a number of other common encodings, including GeoJSON, OGC Geopackage, and ESRI geodatabase. This involved a fairly simple MUDDI GML to GeoJSON and MUDDI GML to database conversion workflow. In some cases limitations on destination schema required conversion of dot notation to slash, such a for geodatabase. We also read the GeoJSON point value from the NetworkConveyanceNode description field so that in these datasets NetworkConveyanceNode has a valid point geometry. It was noted that overall the most compact output form seemed to be GeoJSON as the optional fields with missing values were simply not written out, resulting in a more streamlined output.
+
+[[img_fme_workflow_muddi_geojson_geopkg_geodb]]
+.Screenshot of FME workflow for converting from MUDDI GML to MUDDI compliant GeoJSON, Geopackage and Geodatabase.
+image::images/fme_workflow_muddigml_to_geojson_geopkg_geodb.png[]
 
 [[img_fme_output_muddi_geojson]]
 .Screenshot of MUDDI GeoJSON data displayed in FME. Note the simplified schema with empty properties not shown.
@@ -84,3 +88,8 @@ image::images/fme_output_citygml.png[]
 In summary, sprint participants from Safe Software were able to use the FME platform to write schema valid MUDDI GML using the application schemas provided by interactive instruments. The workflows for writing to MUDDI GML captured multiple two-dimensional (2D) and three-dimensional (3D) geometry types (points, lines, polygons). Topology was also populated with xlink_hrefs. The Safe team was also able to convert this MUDDI GML into several other common encodings including OGC Geopackage, ESRI Geodatabase and GeoJSON.
 
 The sprint participants from Safe Software also started experimenting with the CityGML3 Dynamizer to explore how it might work in future versions of the workflow. They successfully converted CityGML2 data to CityGML3 data, as well as IFC data to CityGML3 data. They were able to store IFC spaces as rooms and support a range of other new CityGML3 feature types and properties. They also confirmed that they could read the output back with the new FME CityGML3 reader.
+
+For more information, examples and sample datasets produced by Safe Software for this code sprint and Safe's other OGC activities please see:  
+.https://github.com/opengeospatial/developer-events/tree/master/2023/Open-Standards-Code-Sprint/muddi/safe-software[Open-Standards-Code-Sprint/muddi/safe-software]
+.https://community.safe.com/s/article/OGC-Code-Sprints[Safe Software participation in OGC Code Sprints]
+.https://community.safe.com/s/article/FME-and-OGC-Open-Standards[FME and OGC Open Standards]
