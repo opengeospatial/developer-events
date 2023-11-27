@@ -20,9 +20,6 @@
 :htmltoclevels: 3
 :local-cache-only:
 :data-uri-image:
-:pdf-uri: ./document.pdf
-:xml-uri: ./document.xml
-:doc-uri: ./document.doc
 
 ////
 Make sure to complete each included document
