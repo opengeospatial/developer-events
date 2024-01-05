@@ -3,7 +3,9 @@
 
 Sprint participants from Ordnance Survey and the Geospatial Commission sought to examine how a schema that conformed to MUDDI could be created to support the ingestion of typical utility source data. They organised their code sprint work into creation of a backend to store MUDDI-compliant data and a front end to display it. To facilitate the task, they had to transform open utility data into MUDDI-compliant data.
 
-They started by reviewing the MUDDI extended conceptual model. All of the feature types in the model were translated associated tables in a database, as illustrated in <<img_os_muddi_database>>. They considered the inheritance between feature types, creating tables for 'real' feature types which inherit attribution from 'abstract' feature types in the conceptual model.
+The Geospatial Commission and Ordnance Survey actively supported the MUDDI logical schema experimentation because the UK's National Underground Asset Register (NUAR) data model is an implementation of the MUDDI model <<nuar_blogpost>>. The Geospatial Commission therefore provided a range of artifacts and sample data in support of the experimentation.
+
+The sprint participants started by reviewing the MUDDI extended conceptual model. All of the feature types in the model were translated associated tables in a database, as illustrated in <<img_os_muddi_database>>. They considered the inheritance between feature types, creating tables for 'real' feature types which inherit attribution from 'abstract' feature types in the conceptual model.
 
 [[img_os_muddi_database]]
 .Illustration of a MUDDI logical schema for a relational database
