@@ -1,9 +1,27 @@
 
 [appendix,obligation=informative]
-[[annex-bibliography]]
+[[annex_bibliography]]
 [bibliography]
 == Bibliography
 
-* [[[ogc21-008,1]]], OGC: OGC 21-008: Joint OGC OSGeo ASF Code Sprint 2021 Summary Engineering Report, 2021
-
-* [[[ogc21-019,2]]], Aleksandar Balaban: OGC 21-019, OGC Testbed-17: Attracting Developers: Lowering the entry barrier for implementing OGC Web APIs. Open Geospatial Consortium (2022). https://docs.ogc.org/per/21-019.html
+* [[[OGC17-069r4,OGC 17-069r4]]]
+* [[[OGC18-058r1,OGC 18-058r1]]]
+* [[[OGC19-086r6,OGC 19-086r6]]]
+* [[[OGC18-062r2,OGC 18-062r2]]]
+* [[[OGC20-057,OGC 20-057]]]
+* [[[OGC23-025,OGC 23-025]]]
+* [[[OGC18-088,OGC 18-088]]]
+* [[[OGC22-022r1,OGC 22-022r1]]]
+* [[[OGC21-006r2,OGC 21-006r2]]]
+* [[[OGC15-113r6,OGC 15-113r6]]]
+* [[[OGC08-085r8,OGC 08-085r8]]]
+* [[[OGC12-128r18,OGC 12-128r18]]]
+* [[[bib_gimi,NGA.STND.0076]]], GEOINT Imagery Media for ISR (GIMI) Profile of ISOBMFF (draft 0.4)
+* [[[bib_ogcapicoverages,OGC 20-058]]], OGC API - Coverages - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/19-087.html
+* [[[bib_ogcapimaps,OGC 20-058]]], OGC API - Maps - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/20-058.html
+* [[[bib_ogcapirecords,OGC 20-004]]], OGC API - Records - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/20-004.html
+* [[[bib_edrpart2,OGC 23-057]]], Tom Kralidis, Mark Burgoyne, Steve Olson, Shane Mill: OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe workflow, (draft),  Open Geospatial Consortium. https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/tree/master/extensions/pubsub/standard
+* [[[bib_jsonfg,OGC 21-045]]], Clemens Portele, Panagiotis (Peter) A. Vretanos: OGC Features and Geometries JSON - Part 1: Core draft, Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/21-045.html
+* [[[bib_muddi,OGC 23-024]]], Alan Leidner, Andrew Hughes, Carsten Roensdorf, Neil Brammall, Liesbeth Rombouts, Joshua Lieberman: OGC MUDDI Conceptual Model draft, Open Geospatial Consortium. https://portal.ogc.org/files/106383
+* [[[geonovum_report,0]]], Linda van den Brink, Arnoud de Boer: Testing OGC JSON-FG Draft Specification and its GDAL-DEV Implementation. Geonovum (2023). https://geonovum-labs.github.io/test-ogc-json-fg
+* [[[nuar_blogpost,0]]], Neil Brammall: Going underground: developing and testing an international standard for subsurface data. Geospatial Commission (2023). https://geospatialcommission.blog.gov.uk/2023/12/19/going-underground-developing-and-testing-an-international-standard-for-subsurface-data/

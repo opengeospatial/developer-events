@@ -1,0 +1,4 @@
+[[pycsw_results]]
+==== OSGeo pycsw
+
+The pycsw project upgraded support for the OGC API - Records `q` parameter based on the latest updates (changes in https://github.com/geopython/pycsw/pull/912[Pull Request 912] and https://github.com/geopython/pycsw/pull/913[Pull Request 913]).  In addition, record parsing and ingest updates and fixes were implemented, as described in https://github.com/geopython/pycsw/pull/914[Pull Request 914], given specification / schema updates.

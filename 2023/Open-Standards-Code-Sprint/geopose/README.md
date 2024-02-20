@@ -22,7 +22,8 @@ Use Cases with WebVMT:
 
 **Mikel Salazar** 
 * The GeoPose Sandbox - An Introduction and demonstration on how to install and work with it to create a rudimentary web-based project.
-* Technologies: Hillfields Bubble - Datasets, ROS, Python. Object Tracking - WebVMT GeoPose Sandbox - Typescript/JavaScript implantation
+
+Technologies: Hillfields Bubble - Datasets, ROS, Python. Object Tracking - WebVMT GeoPose Sandbox - Typescript/JavaScript implementation
 
 Requirements:
 

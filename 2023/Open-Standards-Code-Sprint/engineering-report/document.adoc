@@ -1,28 +1,25 @@
 = 2023 Open Standards Code Sprint Summary Engineering Report
-:doctype: standard
+:doctype: engineering-report
 :encoding: utf-8
 :lang: en
 :status: draft
 :committee: technical
-:draft: 3.0
+:draft: 1.0
 :external-id: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
 :docnumber: 23-059
-:received-date: 2029-03-30
+:received-date: 2023-11-20
 :issued-date: 2029-03-30
 :published-date: 2029-03-30
 :fullname: Gobe Hobona
 :fullname_2: Joana Simoes
-:docsubtype: Interface
-:keywords: ogcdoc, OGC document, API, openapi, html
-:submitting-organizations: Organization One; Organization Two
+:docsubtype: implementation
+:keywords: ogcdoc, OGC document, API, openapi, html, underground, json-fg, nuar, gimi, heif, muddi
 :mn-document-class: ogc
 :mn-output-extensions: xml,html,doc,pdf
+:toclevels: 3
+:htmltoclevels: 3
 :local-cache-only:
 :data-uri-image:
-:pdf-uri: ./document.pdf
-:xml-uri: ./document.xml
-:doc-uri: ./document.doc
-:edition: 1.0
 
 ////
 Make sure to complete each included document
@@ -34,7 +31,7 @@ include::sections/01-scope.adoc[]
 
 include::sections/02-terms_and_definitions.adoc[]
 
-include::sections/03-references.adoc[]
+
 
 // Add clause files as needed
 

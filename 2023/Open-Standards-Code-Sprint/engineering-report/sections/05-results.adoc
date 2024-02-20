@@ -1,17 +1,65 @@
 [[results]]
 == Results
 
-The code sprint included multiple software libraries, OWS implementations, OGC API implementations and a variety of client applications. This section presents the key results from the code sprint.
+The code sprint included multiple software applications and experimented with several standards. This section presents the key results from the code sprint.
 
-=== Approved and Candidate OGC Standards
+=== Approved and Candidate OGC API Standards
 
-include::results/example.adoc[]
+include::results/ogcapirecords.adoc[]
+
+include::results/ogcapiedr.adoc[]
+
+include::results/ogcapifeatures.adoc[]
+
+include::results/ogcapimaps.adoc[]
+
+include::results/staplus.adoc[]
+
+=== Approved and Candidate OGC Encoding Standards
+
+include::results/ogcjsonfg.adoc[]
+
+include::results/cdb.adoc[]
+
+include::results/muddi_lm.adoc[]
+
+include::results/os_muddi.adoc[]
+
+include::results/iit_muddi_analysis.adoc[]
 
 
-=== Other Specifications
+=== Products applied to OGC Standards in this code sprint
 
-include::results/example2.adoc[]
+include::results/mariadb.adoc[]
 
-=== Software Projects and Products
+include::results/ldproxy.adoc[]
 
-include::results/example3.adoc[]
+include::results/pycsw.adoc[]
+
+include::results/fme.adoc[]
+
+include::results/hexagon.adoc[]
+
+include::results/geonovum.adoc[]
+
+include::results/pygeoapi.adoc[]
+
+
+
+=== Products applied to OGC Standards and GIMI in this code sprint
+
+include::results/pygeoapi_gimi.adoc[]
+
+include::results/gimi_storage_update.adoc[]
+
+include::results/gimi_open_source_libraries.adoc[]
+
+include::results/pixalytics-gimi.adoc[]
+
+include::results/web_gimi_viewer_results.adoc[]
+
+include::results/gnosis.adoc[]
+
+include::results/gimi_creaf_miramon_web_browser.adoc[]
+
+

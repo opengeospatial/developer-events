@@ -1,0 +1,7 @@
+[[gmljp2]]
+==== OGC GML in JPEG 2000 (GMLJP2)
+
+The OGC's GML in JPEG 2000 for Geographic Imagery Encoding Standard (GMLJP2) defines the means by which the Geography Markup Language (GML) Standard is used within JPEG 2000 images for geographically referenced imagery (<<OGC08-085r8>>). The primary role of GMLJP2 is to geographically reference imagery placed in JPEG 2000 files. This is achieved through description of the image geometry (domainSet) and radiometry (rangeType) by using the OGC's Coverage Implementation Schema (CIS) Standard. GMLJP2 makes use of a built-in ability of JPEG 2000 files to include XML data for description of an image within a JPEG 2000 data file.
+
+
+

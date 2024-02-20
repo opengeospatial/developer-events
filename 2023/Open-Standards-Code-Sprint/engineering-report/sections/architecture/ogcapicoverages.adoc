@@ -1,3 +1,3 @@
 ==== OGC API - Coverages
 
-TBA
+The https://ogcapi.ogc.org/coverages[OGC API - Coverages] candidate standard establishes an access mechanism for coverages as defined by the OGC Abstract Specification Topic 6 Schema for coverage geometry and functions (<<bib_ogcapicoverages>>). The mechanism is established through a Web API which can be described by an API description language such as the OpenAPI specification. Arguably the most popular type of coverage is that of a gridded coverage. Gridded coverages, such as raster imagery, have a grid as their domain set describing the direct positions in multi-dimensional coordinate space, depending on the type of grid.

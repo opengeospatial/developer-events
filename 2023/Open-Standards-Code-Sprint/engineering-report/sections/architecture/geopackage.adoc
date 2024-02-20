@@ -1,0 +1,4 @@
+[[geopackage]]
+==== OGC GeoPackage
+
+The GeoPackage Encoding Standard specifies the rules and requirements for an open, standards-based, platform-independent, portable, self-describing, compact format for transferring geospatial information (<<OGC12-128r18>>). The GeoPackage standard defines the schema for a GeoPackage, including table definitions, integrity assertions, format limitations, and content constraints.

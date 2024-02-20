@@ -1,0 +1,31 @@
+[[os_muddi_results]]
+==== MUDDI logical schema experimentation
+
+Sprint participants from Ordnance Survey and the Geospatial Commission sought to examine how a schema that conformed to MUDDI could be created to support the ingestion of typical utility source data. They organised their code sprint work into creation of a backend to store MUDDI-compliant data and a front end to display it. To facilitate the task, they had to transform open utility data into MUDDI-compliant data.
+
+The Geospatial Commission and Ordnance Survey actively supported the MUDDI logical schema experimentation because the UK's National Underground Asset Register (NUAR) data model is an implementation of the MUDDI model <<nuar_blogpost>>. The Geospatial Commission therefore provided a range of artifacts and sample data in support of the experimentation.
+
+The sprint participants started by reviewing the MUDDI extended conceptual model. All of the feature types in the model were translated associated tables in a database, as illustrated in <<img_os_muddi_database>>. They considered the inheritance between feature types, creating tables for 'real' feature types which inherit attribution from 'abstract' feature types in the conceptual model.
+
+[[img_os_muddi_database]]
+.Illustration of a MUDDI logical schema for a relational database
+image::images/muddi/os_muddi_database.png[image,width=1200]
+
+The figure shows the tables that were created and how they relate to one another. It consists of tables for each real feature type. These tables are mostly linked by foreign keys e.g. for linking conveyance information against network information. 
+
+Some fields are related to multiple tables so in order to maintain the relationship structure, the sprint participants had to create relationship tables to document relationships between different tables. As shown on the figure, there is a 'big' table in the middle which ensures that you can record the relationships between a MUDDI Event type and any MUDDI Object type.  Another example of a relationship table that had to be created to support representation of MUDDI in a relational model is the accessory table, which links Network Accessories (e.g. containers and sensors) to the relevant network conveyance (node or link). The figure has been created using an online tool called https://dbdocs.io/richard.hargreaves/MUDDI-Logical-Schema[dbdocs.io].
+
+
+One thing that the sprint participants found unclear in the candidate standard was the relationship between a network, subnetworks, and subordinate networks. The relationships between these types of networks is illustrated in <<img_os_muddi_networks>>. A network is the entirety of the graph consisting of all nodes and edges, as highlighted by the blue oval on the diagram. The subnetwork is a geographic subset of the network, for example one owned by a county. This is illustrated on the diagram through the three green ovals. There is also a subordinate network which is based on an asset property rather than geographic subsetting. 
+
+[[img_os_muddi_networks]]
+.Relationships between types of networks in MUDDI
+image::images/muddi/muddi_networks.png[]
+
+To demonstrate that sample data conforming to the logical schema could be displayed on a web application, the sprint participants uploaded the data into a pygeoapi instance. The pygeoapi instance was then linked into a web application. A screenshot of the web application is shown in <<img_os_muddi_webapp>>.
+
+[[img_os_muddi_webapp]]
+.A screenshot of a web application displaying underground asset data
+image::images/muddi/muddi_os_webapp.png[]
+
+Future work on the storage aspects of the MUDDI task could involve using the MUDDI logical schema as a template for MUDDI compliance. The logical schema does not currently have much attribution about the assets themselves. Therefore any implementation would be expected to introduce additional attributes. The code for the logical schema is available at: https://github.com/Geovation/muddi_compliance  

@@ -1,0 +1,8 @@
+[[citygml]]
+==== OGC CityGML
+
+The CityGML Standard specifies a conceptual model and encoding format for the representation, exchange, and storage of virtual 3D city models (<<OGC21-006r2>>). 
+The standard facilitates the integration of urban geodata for variety of use cases, for example Urban Digital Twins, Smart Cities, Building Information Modeling (BIM), transportation and environmental management.
+
+
+

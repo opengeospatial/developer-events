@@ -1,0 +1,18 @@
+[[ogcapi_discussion]]
+==== OGC API Standards
+
+This section discusses findings that apply to multiple OGC API Standards, as well as implications of those findings.
+
+===== Towards a common Publish/Subscribe Event Driven Approach
+
+Activity during the code sprint included implementation of support for the Publish/Subscribe extension of OGC API - EDR. Through collaboration during the code sprint, the approach was also tested with OGC API - Features. As documented in <<mariadb_processes_results>>, initial discussion was started regarding the possibility of applying the approach in OGC API - Processes and is captured in a https://github.com/opengeospatial/ogcapi-processes/issues/374[GitHub Issue]. It is envisaged that common requirements can be identified and specified once the Publish/Subscribe approach has been tested with three or more OGC API Standards. 
+
+This code sprint had at least three different products implementing MQTT in support of Publish/Subscribe operations. It would be helpful for future code sprints to include other Event Driven architecture solutions such as Apache Kafka and RabbitMQ. Therefore, along with demonstrating that the Publish/Subscribe approach can support multiple OGC API Standards, the SWGs should endeavor to demonstrate support for different event notification tools in future code sprints.
+
+===== Security
+
+Multiple implementations of OGC API Standards demonstrated access control during the code sprint. For example, the Create, Replace, Update, Delete capabilities implemented by interactive instruments in ldproxy were protected through an access control layer. Another example was the CREAF and Secure Dimensions implementation of the STAplus extension of the OGC SensorThings API, described in <<staplus_results>>. The STAplus implementation was protected by an access control layer at the observation and feature level. These implementations, as well as others, demonstrate that OGC API Standards can support a variety of security models. 
+
+===== Schemas
+
+A key aspect of the OGC API - Features work during the code sprint was in relation to the Schemas-focused part of the Standard (i.e Part 5). The changes, which are listed in this https://github.com/opengeospatial/ogcapi-features/pull/867[GitHub Issue] and described in <<ogcapifeatures_results>>, point to the standard becoming more flexible in regard to data types of queryables and the logical model requirement becoming informative. These changes potentially make the conformance class better able to support some of the requirements of other OGC API Standards that may need schema-support in future versions. 
