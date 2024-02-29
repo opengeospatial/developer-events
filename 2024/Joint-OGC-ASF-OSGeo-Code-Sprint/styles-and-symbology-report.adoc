@@ -1,0 +1,17 @@
+= OGC Styles & Symbology
+
+==  Additional capabilities required for completeness
+
+The work carried out as part of the codesprint consisted firstly of completing the https://opengeospatial.github.io/ogcna-auto-review/18-067r4.html[SymCore 2.0 draft specification] requirements classes in relation to issue https://github.com/opengeospatial/styles-and-symbology/issues/45[#45]. The changes made will be merged into the main branch in the near future.
+
+It should be borne in mind that the current draft standard offers a multitude of possibilities for cartographic representations which will most certainly be integrated as extensions of a more compact basic standard and proably limited to the capabilities of https://www.ogc.org/standard/se/[OGC SLD/SE] (cf https://opengeospatial.github.io/ogcna-auto-review/18-067r4.html#toc20[Requirements Class "Core"]).  However, https://opengeospatial.github.io/ogcna-auto-review/18-067r4.html#toc77[mapping] with OGC SLD/SE and other notable vendor extensions (discussed in more detail during the code sprint) should provide a clearer picture. Finally, a large number of corrections have been made to the structure of the document and in particular to the uml class diagrams.
+
+== BNF Grammar
+
+As a reminder, the https://opengeospatial.github.io/ogcna-auto-review/18-067r4.html[SymCore 2.0 draft specification] aims to describe a conceptual model and several encodings, in particular CartoSym-CSS, enabling more compact code and nested rules. With a new language comes the need for a BNF grammar... 
+
+A 1st draft of the https://github.com/opengeospatial/styles-and-symbology/blob/newCapabilities/core/schemas/CartoSym-CSS.bnf[BNF grammar] for CartoSym-CSS was produced. We then tried to validate a https://github.com/opengeospatial/styles-and-symbology/blob/newCapabilities/core/schemas/input-style.cscss[basic example of Style] in CartoSym-CSS with the https://www.antlr.org/[ANTLR] tool, which led us to realise that it would be better to sequence the grammar in **Lexer** and **Parser**. A discussion with @cportele enabled us to learn about a https://github.com/interactive-instruments/xtraplatform-spatial/blob/master/xtraplatform-cql/src/main/antlr/de/ii/xtraplatform/cql/infra/CqlLexer.g4[CQL2 Lexer] developed by https://github.com/interactive-instruments/[interactive instruments] which enabled us to create a first draft of https://github.com/opengeospatial/styles-and-symbology/blob/newCapabilities/core/schemas/CartoSym-CSS-Parser.g4[Parser] for CartoSym-CSS.
+
+Although this is only a first step, it should gradually enable us to validate the CartoSym-CSS styles that will illustrate the SymCore 2.0 requirements classes. It should also make it possible to create a transcoder between CartoSym-CSS, CartoSym-JSON, SLD/SE and MapboxGL, as well as to support the rendering of styles in our GNOSIS SDK.
+
+
