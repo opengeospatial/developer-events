@@ -1,7 +1,7 @@
 [[hexagon_results]]
 ==== Hexagon Catalog Explorer
 
-Sprint participants from Hexagon demonstrated their implementation of a client application for OGC API - Records. They demonstrated that the client application could access 3rd party catalogs served through implementations of OGC API - Records. One of the issues that they sought to resolve during the code sprint was the format and source of the thumbnails. For example, whether the thumbnails could be served by a WMS or OGC API - Maps implementation. Following the code sprint, the issue was discussed by the SWG and https://github.com/opengeospatial/ogcapi-records/issues/316#issuecomment-1808377763[consensus reached].
+Sprint participants from Hexagon demonstrated the implementation of a client application for OGC API - Records and demonstrated that the client application could access 3rd party catalogs served through implementations of OGC API - Records. One of the issues that was sought to be resolved during the code sprint was the format and source of the thumbnails. For example, whether the thumbnails could be served by a WMS or OGC API - Maps implementation. Following the code sprint, the issue was discussed by the SWG and https://github.com/opengeospatial/ogcapi-records/issues/316#issuecomment-1808377763[consensus reached].
 
 [[img_hexagon_catalog]]
 .Screenshot of the Hexagon Catalog Explorer accessing an implementation of OGC API - Records

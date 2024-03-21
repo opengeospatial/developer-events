@@ -1,11 +1,11 @@
 [[fme_results]]
 ==== Safe Software FME
 
-The purpose for Safe Software's participation in the code sprint was to run some experiments with a logical model based on MUDDI, in order to encode underground data into GML and other popular encodings, such as GeoJSON, GeoPackage and ESRI Geodatabase. Safe Software also ran some transformations from CityGML2 and IFC to CityGML3. To accomplish these data transformations, the team from Safe Software used the FME data modelling platform. FME is a geospatial data integration and automation platform that supports extract, transformation, load and many other data and schema transformation and geoprocessing functions. It also supports data conversion between more than 500 different data formats, services and APIs. The 2021 version of FME Desktop is Certified OGC Compliant to GML 3.2.1, GeoPackage 1.2, KML 2.2 and GeoTIFF (https://www.ogc.org/resources/product-details/?pid=1681).
+The purpose for Safe Software's participation in the code sprint was to run some experiments with a logical model based on MUDDI in order to encode underground data into GML and other popular encodings, such as GeoJSON, GeoPackage, and ESRI Geodatabase. Safe Software also ran some transformations from CityGML2 and IFC to CityGML3. To accomplish these data transformations, the team from Safe Software used the FME data modeling platform. FME is a geospatial data integration and automation platform that supports extract, transformation, load, and many other data and schema transformation and geoprocessing functions. It also supports data conversion between more than 500 different data formats, services, and APIs. The 2021 version of FME Desktop is Certified OGC Compliant to GML 3.2.1, GeoPackage 1.2, KML 2.2 and GeoTIFF (https://www.ogc.org/resources/product-details/?pid=1681).
 
 ===== MUDDI
 
-In order to exercise the MUDDI GML encoding for the code sprint, Safe Software obtained Sanitary system from the City of Burnaby in Canada from their publically accessible data portal. The data is available from the City as https://data.burnaby.ca/datasets/burnaby::sanitary-main-/explore[open data].  The data includes information about the Sanitary system and connectors, including the main service lines and service connections, as well as manhole covers. Using the FME product, the team sought to load this Burnaby utilities data into a schema, based on the logical model described by the MUDDI application schema, that had been provided to sprint participants in support of the code sprint. 
+In order to exercise the MUDDI GML encoding for the code sprint, Safe Software obtained Sanitary system data from the City of Burnaby in Canada from their publicly accessible data portal. The data is available from the City as https://data.burnaby.ca/datasets/burnaby::sanitary-main-/explore[open data]. The data includes information about the Sanitary system and connectors, including the main service lines and service connections, as well as manhole covers. Using the FME product, the team sought to load this Burnaby utilities data into a schema, based on the logical model described by the MUDDI application schema, that had been provided to sprint participants in support of the code sprint. 
 
 The workflow for converting from plain GeoJSON to MUDDI GML is illustrated in <<img_fme_workflow>>. The workflow takes source data and copies attributes across to output feature types. Excess attribution that is not required in the output feature type can be thrown away. A Network feature acts as a parent to all of the other associated features. Therefore, the mains and service lines are associated with a network. This includes fittings, mains and service lines to which some date fields are added. The workflow also creates a service area which represents the bounding box around the features.
 
@@ -15,29 +15,29 @@ image::images/muddi/fme_muddi_workflow.png[]
 
 A summary of the workflow is below:
 
-. Read GeoJSON
-. Generate and convert timestamps to ISO format
-. Map attributes from source to MUDDI schema
-. Create missing attributes, including all attributes required by the application schema
-. Create parent network features
-. Generate gml_ids from UUIDs and gml_parent_ids to associate network elements with parent networkds
-. Set geometry property
-. Write MUDDI GML using ApplicationSchema.xsd from interactive instruments GmbH.
+. read GeoJSON;
+. generate and convert timestamps to ISO format;
+. map attributes from source to MUDDI schema;
+. create missing attributes, including all attributes required by the application schema;
+. create parent network features;
+. generate gml_ids from UUIDs and gml_parent_ids to associate network elements with parent networks;
+. set geometry property; and
+. write MUDDI GML using ApplicationSchema.xsd from interactive instruments GmbH.
 
 The workflow invokes the GML writer capability of FME. An overview of the GML writer’s schema capability is available on the Safe Software website (https://community.safe.com/s/article/gml-writing-with-application-schemas). 
 
-The team from Safe Software reported that they encountered issues whereby some of the attribution required by the MUDDI schema was not available from the source dataset. Fortunately, in such situations, the software logged detailed error messages that listed the required attributes that had not been filled and the location in the output data where the errors occur. There were also some errors encoutered where invalid default values were set - such as wrong date format, wrong data type (string vs float) or invalid coded domain value. The participants were then able to add the required attributes using an AttributeCreator function and set these to a valid default values. A NullAttributeMapper function was used to set default values where null values are not allowed. DateTimeConverter function was used to convert date time values to the valid ISO format. After this the XML schema validation was successful.
+The team from Safe Software reported encountering issues whereby some of the attribution required by the MUDDI schema was not available from the source dataset. Fortunately, in such situations, the software logged detailed error messages that listed the required attributes that had not been filled and the location in the output data where the errors occur. There were also some errors encountered where invalid default values were set - such as wrong date format, wrong data type (string vs float), or invalid coded domain value. The participants were then able to add the required attributes using an AttributeCreator function and set these to valid default values. A NullAttributeMapper function was used to set default values where null values are not allowed. DateTimeConverter function was used to convert date time values to the valid ISO format. After this the XML schema validation was successful.
 
-Based on the above tests, the FME platform was able to read the publically available Burnaby GeoJSON data, write it to MUDDI GML, and then to read it back, as illustrated in <<img_fme_output_muddi_gml>>. From the screenshot it can be seen on the top left that there were 11,000 fittings. The screenshot also shows the two networks. Those networks are associated with service lines. One of the service lines is associated with names. The Network conveyance link is the actual line. The Service Area is represented by a bounding box. 
+Based on the above tests, the FME platform was able to read the publicly available Burnaby GeoJSON data, write it to MUDDI GML, and then read it back, as illustrated in <<img_fme_output_muddi_gml>>. From the screenshot it can be seen on the top left that there were 11,000 fittings. The screenshot also shows the two networks. Those networks are associated with service lines. One of the service lines is associated with names. The Network conveyance link is the actual line. The Service Area is represented by a bounding box. 
 
 While this test did not utilize all the available MUDDI feature types, it did accomplish the following:
 
-. Wrote typical simple MUDDI geometry types including null, point, line, polygon / surface.
-. Wrote georeferenced data with the defined OGC WGS84 CRS (urn:ogc:def:crs:EPSG::4326).
-. Mapped available properties to the MUDDI schema
-. Created populated xlink:href links to associate network edges (NetworkConveyanceLinks) and nodes (NetworkConveyanceNodes).
-. Wrote both 2D and 3D geometries, in some cases within the same feature type. 3D geometries were derived and interpolated for NetworkConveyanceLink from the start and end depth properties where available using the FME 3DInterpolator function.
-. Successfully validate the output GML against the interactive instruments MUDDI application schema.
+. wrote typical simple MUDDI geometry types including null, point, line, polygon / surface;
+. wrote georeferenced data with the defined OGC WGS84 CRS (urn:ogc:def:crs:EPSG::4326);
+. mapped available properties to the MUDDI schema;
+. created populated xlink:href links to associate network edges (NetworkConveyanceLinks) and nodes (NetworkConveyanceNodes);
+. wrote both 2D and 3D geometries, in some cases within the same feature type (3D geometries were derived and interpolated for NetworkConveyanceLink from the start and end depth properties where available using the FME 3DInterpolator function); and
+. successfully validated the output GML against the interactive instruments MUDDI application schema.
 
 Note that the schema was only made available to sprint participants less than a week before the code sprint. It was also the first draft schema available that had any geometry definitions. Also it is worth noting that while NetworkConveyanceNode was designed to support point features, for some reason it was not possible to successfully generate point geometries for this feature type. This may be the result of a problem with the underlying draft GML application schema. As a workaround the team from Safe Software wrote the point geometry as a GeoJSON blob into the description field. 
 
@@ -47,7 +47,7 @@ image::images/muddi/fme_output_muddi_gml.png[]
 
 On the right-hand side of <<img_fme_output_muddi_gml>> is shown the attribution from the data. Most of the attribution is carried through from the source data, however for illustrative purposes in this Code Sprint some additional synthetic attribution was inserted. The workflow also added an elevation dimension to the geometries, which was taken from another feature which had up and down elevation feature properties. 
 
-During code sprint discussions, some noted that some applications may have trouble consuming data in the GML encoding. To make the MUDDI test results more widely sharable, the Safe Software team decided to also convert MUDDI GML to a number of other common encodings, including GeoJSON, OGC GeoPackage, and ESRI geodatabase. This involved a fairly simple MUDDI GML to GeoJSON and MUDDI GML to database conversion workflow. In some cases limitations on destination schema required conversion of dot notation to slash, such as for geodatabase. The team from Safe Software also read the GeoJSON point value from the NetworkConveyanceNode description field so that in these datasets NetworkConveyanceNode has a valid point geometry. It was noted that overall the most compact output form seemed to be GeoJSON as the optional fields with missing values were simply not written out, resulting in a more streamlined output.
+During code sprint discussions, it was noted that some applications may have trouble consuming data in the GML encoding. To make the MUDDI test results more widely sharable, the Safe Software team decided to also convert MUDDI GML to a number of other common encodings, including GeoJSON, OGC GeoPackage, and ESRI Geodatabase. This involved a fairly simple MUDDI GML to GeoJSON and MUDDI GML to database conversion workflow. In some cases limitations on destination schemas required conversion of dot notation to slash, such as for Geodatabase. The team from Safe Software also read the GeoJSON point value from the NetworkConveyanceNode description field so that in these datasets NetworkConveyanceNode has a valid point geometry. It was noted that overall the most compact output form seemed to be GeoJSON as the optional fields with missing values were simply not written out, resulting in a more streamlined output.
 
 [[img_fme_workflow_muddi_geojson_geopkg_geodb]]
 .Screenshot of FME workflow for converting from MUDDI GML to MUDDI compliant GeoJSON, GeoPackage and Geodatabase.
@@ -78,7 +78,7 @@ A separate workflow was created for converting from IFC to CityGML3. An illustra
 image::images/fme_ifc_workbench.png[]
 
 
-The output CityGML is presented in <<img_fme_output_citygml>>. The figure shows rooms in a building, with one of the rooms selected. The attributes of the selected room, which are presented on the right-hand side, report that the room is a Living Room.
+The output CityGML is presented in <<img_fme_output_citygml>>. The figure shows rooms in a building with one of the rooms selected. The attributes of the selected room, which are presented on the right-hand side, report that the room is a living room.
 
 [[img_fme_output_citygml]]
 .Screenshot of the output CityGML data displayed in FME
@@ -86,11 +86,11 @@ image::images/fme_output_citygml.png[]
 
 ===== Summary
 
-In summary, sprint participants from Safe Software were able to use the FME platform to write schema valid MUDDI GML using the application schemas provided by interactive instruments. The workflows for writing to MUDDI GML captured multiple two-dimensional (2D) and three-dimensional (3D) geometry types (points, lines, polygons). Topology was also populated with xlink_hrefs. The team was also able to convert this MUDDI GML into several other common encodings including OGC GeoPackage, ESRI Geodatabase and GeoJSON.
+In summary, sprint participants from Safe Software were able to use the FME platform to write schema valid MUDDI GML using the application schemas provided by interactive instruments. The workflows for writing to MUDDI GML captured multiple two-dimensional (2D) and three-dimensional (3D) geometry types (points, lines, polygons). Topology was also populated with xlink_hrefs. The team was also able to convert this MUDDI GML into several other common encodings including OGC GeoPackage, ESRI Geodatabase, and GeoJSON.
 
-The sprint participants from Safe Software also started experimenting with the CityGML3 Dynamizer to explore how it might work in future versions of the workflow. They successfully converted CityGML2 data to CityGML3 data, as well as IFC data to CityGML3 data. They were able to store IFC spaces as rooms and support a range of other new CityGML3 feature types and properties. They also confirmed that they could read the output back with the new FME CityGML3 reader.
+The sprint participants from Safe Software also started experimenting with the CityGML3 Dynamizer to explore how it might work in future versions of the workflow. They successfully converted CityGML2 data to CityGML3 data, as well as IFC data to CityGML3 data. The participants from Safe Software were able to store IFC spaces as rooms and support a range of other new CityGML3 feature types and properties and also confirmed that the output back with the new FME CityGML3 reader could be read.
 
-For more information, examples and sample datasets produced by Safe Software for this code sprint and Safe Software's other OGC activities please see:  
+For more information, examples, and sample datasets produced by Safe Software for this code sprint and Safe Software's other OGC activities please see:
 
 . https://github.com/opengeospatial/developer-events/tree/master/2023/Open-Standards-Code-Sprint/muddi/safe-software[Open-Standards-Code-Sprint/muddi/safe-software]
 . https://community.safe.com/s/article/OGC-Code-Sprints[Safe Software participation in OGC Code Sprints]

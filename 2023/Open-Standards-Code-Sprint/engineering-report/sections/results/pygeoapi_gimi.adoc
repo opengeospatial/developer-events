@@ -1,22 +1,22 @@
 [[pygeoapi_gimi_results]]
 ==== pygeoapi support for the draft GIMI profile
 
-Sprint participants from Geobeyond worked on the GIMI thread of the code sprint. Their goal was to implement the
+Sprint participants from Geobeyond worked on the GIMI thread of the code sprint with the goal to implement the
 ability to serve files using OGC API – Coverages and OGC API – Tiles capabilities offered by pygeoapi. An additional
-goal was to enable a workflow that supports modification of the files. The libraries that they modified or
+goal was to enable a workflow that supports modification of the files. The libraries that were modified or
 implemented for this work are available on the https://github.com/ricardogsilva/gimirrai[gimirrai repository on GitHub].
 
-As an initial objective, they set out to see whether the https://github.com/strukturag/libheif[libheif] library, which
+As an initial objective, the sprint participants set out to see whether the https://github.com/strukturag/libheif[libheif] library, which
 is commonly used to read HEIF files, could be enabled to support reading and writing of GIMI files. libheif is used
 by https://gdal.org/drivers/raster/heif.html[GDAL to provide support for HEIF], so the expectation was that it would
-be possible to use Python to leverage GDAL's HEIF support via https://rasterio.readthedocs.io/en/stable/[rasterio].
-However, upon testing libheif, they found that it does not support some of the needed capabilities specific to the
+be possible to use libheif to leverage GDAL's HEIF support via https://rasterio.readthedocs.io/en/stable/[rasterio].
+However, upon testing libheif, it was found that Python does not support some of the needed capabilities specific to the
 GIMI profile. This lack of support in libheif means that popular raster-handling tools based on GDAL are not by default
 able to support GIMI files. Some modifications are thus required to enable such tools to support for the format.
 
-With help from Brad Hards, they compiled a patched version of libheif that could read GIMI files. They then compiled
+With help from Brad Hards, the sprint participants compiled a patched version of libheif that could read GIMI files and then compiled
 GDAL, https://pillow-heif.readthedocs.io/en/latest/[pillow-heif] and rasterio to enable the reading of GIMI files
-through Python, which was successful. Note that, even though they were now working with a version of libheif that was
+through Python, which was successful. Note that, even though the spring participants were now working with a version of libheif that was
 able to read the sample GIMI files, and even though GDAL was now able to leverage libheif to provide read support,
 GDAL still did not know how to read the sample GIMI files' georeferencing metadata, as this is stored in a KLV-encoded
 bytestream, which is specific to GIMI.
@@ -32,13 +32,13 @@ interface.
 .Screenshot of pygeoapi's HTML interface, showing a GIMI coverage collection. The collection's geographic bounds are displayed by pygeoapi.
 image::images/gimi/pygeoapi-gimi-coverage.png[]
 
-Afterwards, they sought to enable pygeoapi to support the reading of GIMI files, which would make it possible to serve
+Afterwards, the sprint participants sought to enable pygeoapi to support the reading of GIMI files, which would make it possible to serve
 the imagery files through interfaces conforming to OGC API Standards.
 
-The pygeoapi integration efforts relied upon its existing extensibility mechanism, whereby it is possible to write
+The pygeoapi integration efforts relied upon pygeoapi's existing extensibility mechanism, whereby it is possible to write
 custom providers and plug them into dataset collections via configuration.
 
-For OGC API - Coverages, they were able to write a custom provider inspired by the stock rasterio one. The GIMI provider
+For OGC API - Coverages, the sprint participants were able to write a custom provider inspired by the stock rasterio provider. The GIMI provider
 differed in the sense that instead of letting rasterio retrieve the geographical bounds transparently, via GDAL, it
 needed to use the KLV bytestream parser mentioned above.
 
@@ -51,10 +51,10 @@ rasterio plugin that provides means to generate raster tiles. The final implemen
 tied all parts together, reading KLV metadata, then using a GDAL VRT definition to allow rio-tiler to be able to read
 the sample GIMI files and generate tiles. As such, and for brevity, the implemented provider was simplified to:
 
-* Serve tiles, the other OGC API related endpoints were not given much attention
-* Support only the familiar WebMercatorQuad tile matrix set
-* Serve tiles in PNG format
-* Generate tiles at runtime, without any caching strategy
+* serve tiles, the other OGC API related endpoints were not given much attention;
+* support only the familiar WebMercatorQuad tile matrix set;
+* serve tiles in PNG format; and
+* generate tiles at runtime, without any caching strategy.
 
 The end result was then visualized on a simple leaflet-based web client, which used the pygeoapi endpoints to serve
 tiles for sample GIMI files. <<img_pygeoapi_gimi_tiles>> shows a screenshot of a GIMI file displayed on a web map served by pygeoapi.
@@ -68,11 +68,11 @@ The final goal was implementing support for CRUD operations on GIMI files via a 
 Initial research showed that GDAL does not have support for creating HEIF files. So the plan was to use libheif
 instead, by leveraging its existing Python bindings. However, none of the efforts related to using pillow-heif to
 create or update one of the sample GIMI files was successful. Several attempts were made, by leveraging the different
-https://pillow.readthedocs.io/en/stable/[Pillow] and pillow-heif capabilities, but they all ended abruptly due to
+https://pillow.readthedocs.io/en/stable/[Pillow] and pillow-heif capabilities, but all attempts ended abruptly due to
 various lower-level errors. Having failed at being able to modify an existing GIMI file with the existing libraries,
 the team could not move forward with the web and pygeoapi related aspects of the goal.
 
-In conclusion, the team found that it is currently not very easy to work with GIMI files at the Python level (i.e. those conforming to draft version 0.4 of the GIMI profile). Reading and georeferencing GIMI files is possible, but requires a larger effort, especially when compared to common geospatial file formats. Creating and updating existing GIMI files seems to not be possible through the more popular tools used in the Python ecosystem (e.g. Pillow). Therefore, a custom writer is required to support the creation and updating of GIMI files.
+In conclusion, the team found that it is currently not very easy to work with GIMI files at the Python level (i.e. those conforming to draft version 0.4 of the GIMI profile). Reading and georeferencing GIMI files is possible, but requires a larger effort, especially when compared to common geospatial file formats. Creating and updating existing GIMI files seems not to be possible through the more popular tools used in the Python ecosystem (e.g., Pillow). Therefore, a custom writer is required to support the creation and updating of GIMI files.
 
-On a more positive note, because Python tools mostly depend on libheif and GDAL, if proper GIMI support would be added to these lower-level libraries, working with GIMI files would become as easy as working with GeoTiff and the other popular formats. Having this lower-level support in place would open up the possibility of using rasterio, rio-tiler and other libraries with GIMI files in a transparent way. Additionally, pygeoapi proved to be a very flexible choice when
+On a more positive note, because Python tools mostly depend on libheif and GDAL, if proper GIMI support would be added to these lower-level libraries, working with GIMI files would become as easy as working with GeoTiff and other popular formats. Having this lower-level support in place would open up the possibility of using rasterio, rio-tiler, and other libraries with GIMI files in a transparent way. Additionally, pygeoapi proved to be a very flexible choice when
 implementing OGC API-based servers, as it is easy to integrate custom bits of code.

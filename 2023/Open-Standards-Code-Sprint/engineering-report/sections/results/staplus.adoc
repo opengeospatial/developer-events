@@ -3,31 +3,31 @@
 
 ===== Statement of the Challenge
 
-The STAplus use case for the code sprint is the following: A bus company “X-Bus” operates diesel buses on different routes in the city. X-Bus has ordered some electric buses to replace the diesel buses. But because there are not enough electric buses to replace the diesel buses on all routes, X-Bus would like to replace those routes first where the air quality is the lowest. X-Bus heard that a parcel delivery service “Green Delivery” captures air quality in the city based on sensors mounted on their delivery vehicles. Green Delivery provides access to available observations via an implementation of the https://docs.ogc.org/is/22-022r1/22-022r1.html[STAplus] extension of the OGC SensorThings API Standard. Access Control is in place for the air quality data captured by Green Delivery that makes the observations readable for their users only. After coming to an agreement with X-Bus, Green Delivery allows X-Bus to read observations within the area of the city for the last 30 days.
+The STAplus use case for the code sprint is the following: A bus company “X-Bus” operates diesel buses on different routes in the city. X-Bus has ordered some electric buses to replace diesel buses. But, because there are not enough electric buses to replace the diesel buses on all routes, X-Bus would like to replace those routes first where the air quality is the lowest. X-Bus heard that a parcel delivery service “Green Delivery” captures air quality in the city based on sensors mounted on their delivery vehicles. Green Delivery provides access to available observations via an implementation of the https://docs.ogc.org/is/22-022r1/22-022r1.html[STAplus] extension of the OGC SensorThings API Standard. Access Control is in place for the air quality data captured by Green Delivery that makes the observations readable for their users only. After coming to an agreement with X-Bus, Green Delivery allows X-Bus to read observations within the area of the city for the last 30 days.
 
-The actual technical challenge is to protect access to the STAplus implementation. A STAplus implementation can be used to provide multiple users Create/Update/Delete/Read access to manage their own air quality measurements. The business logic to be implemented has two aspects: Integrity and confidentiality of the uploaded observations; the air quality measurements. As described in the https://docs.ogc.org/bp/21-068.pdf[OGC Best Practice for using SensorThings API with Citizen Science], the implementation of the concept of ownership is one possible solution towards integrity. The implementation of integrity can take place in the implementation itself, which allows the execution of a well-defined test harness.
+The actual technical challenge is to protect access to the STAplus implementation. A STAplus implementation can be used to provide multiple users Create/Update/Delete/Read access to manage the users own air quality measurements. The business logic to be implemented has two aspects: Integrity and confidentiality of the uploaded observations; and the air quality measurements. As described in the https://docs.ogc.org/bp/21-068.pdf[OGC Best Practice for using SensorThings API with Citizen Science], the implementation of the concept of ownership is one possible solution towards integrity. The implementation of integrity can take place in the implementation itself, which allows the execution of a well-defined test harness.
 
-Regarding the confidentiality of observations available via STAplus, there are many different use cases that would filter the requested observations differently. The following use cases are typical examples:
+Regarding the confidentiality of observations available via STAplus, there are many different use cases that would filter the requested observations differently. The following use cases are typical examples.
 
 * A First Responder may have access to air quality data near the incident location to determine a hazardous situation.
 * Air quality data for a given area may only be readable to users in the area.
 * Air quality data with extreme measurements may get blocked dynamically until validated.
-* Access may be limited to display of observations for a given duration into the past, e.g. last 48 hours.
-* Access may be limited over a given absolute timeframe.
-* A user may declare all his data private which requires that all other users cannot access the observations of the user.
+* Access may be limited to display of observations for a given duration into the past, e.g., last 48 hours.
+* Access may be limited over a given absolute time frame.
+* A user may declare all of the user's data private which requires that all other users cannot access the observations of the user.
 
 So, the challenging questions are:
 
-* What would an architecture look like?
-* Is it possible to implement a performant solution based on open standards?
+* what would an architecture look like; and
+* is it possible to implement a performant solution based on open standards?
 
 ===== Purpose
 
-The work on the challenge shall prove that a solution can be based on open standards from OGC, IETF and OpenID Connect. Further, the sprint participants sought to prove that a solution could be implemented without having to modify the existing https://docs.ogc.org/is/18-088/18-088.html[OGC SensorThings API] nor https://docs.ogc.org/is/22-022r1/22-022r1.html[STAplus] standards. To enforce spatio-temporal access control conditions, they also sought to prove that the combined use with the https://docs.ogc.org/is/22-049r1/22-049r1.html[OGC GeoXACML 3] standard provided a flexible interoperable solution.
+The work on the challenge shall prove that a solution can be based on open standards from OGC, IETF, and OpenID Connect. Further, the sprint participants sought to prove that a solution could be implemented without having to modify the existing https://docs.ogc.org/is/18-088/18-088.html[OGC SensorThings API] nor https://docs.ogc.org/is/22-022r1/22-022r1.html[STAplus] standards. To enforce spatio-temporal access control conditions, the sprint participants also sought to prove that the combined use with the https://docs.ogc.org/is/22-049r1/22-049r1.html[OGC GeoXACML 3] standard provided a flexible interoperable solution.
 
 ===== Proposed Solution
 
-The deployment of an OGC API implementation is described with OpenAPI. This provides the ability to enable authentication for endpoints of the deployed API. The available security schemes are listed on the https://swagger.io/docs/specification/authentication/[OpenAPI Authentication] page. Once the user’s identity is known, different access control rules can be enforced.
+The deployment of an OGC API implementation is described with OpenAPI providing the ability to enable authentication for endpoints of the deployed API. The available security schemes are listed on the https://swagger.io/docs/specification/authentication/[OpenAPI Authentication] page. Once the user’s identity is known, different access control rules can be enforced.
 
 The sprint participants proposed to enable OAuth2/OpenID Connect authentication on a codesprint demo endpoint which was based on the https://github.com/securedimensions/FROST-Server-PLUS[STAplus implementation] by Secure Dimensions and the https://github.com/FraunhoferIOSB/FROST-Server[SensorThings API implementation] by Fraunhofer.
 
@@ -36,22 +36,22 @@ The sprint participants proposed to enable OAuth2/OpenID Connect authentication 
 .The STAplus and GeoXACML based architecture implemented by the CitiObs project
 image::images/staplus_image1.png[image,width=1200]
 
-For the code sprint, they proposed to extend the existing STAplus implementation with a GeoXACML Policy Enforcement Point (PEP) to enforce policies executed by the GeoXACML 3.0 Policy Decision Point (PDP). They planned to leverage the https://github.com/securedimensions/authzforce-ce-geoxacml3[GeoXACML 3.0 implementation] from Secure Dimensions and the https://github.com/authzforce[XACML 3.0 implementation] from Thales. They also planned to visualize the access control results (enforcing a GeoXACML 3.0 policy) by using the generic STAplus visualization application https://www.tapis.grumets.cat/[TAPIS], implemented by CREAF.
+For the code sprint, the participants proposed extending the existing STAplus implementation with a GeoXACML Policy Enforcement Point (PEP) to enforce policies executed by the GeoXACML 3.0 Policy Decision Point (PDP). The participants planned to leverage the https://github.com/securedimensions/authzforce-ce-geoxacml3[GeoXACML 3.0 implementation] from Secure Dimensions and the https://github.com/authzforce[XACML 3.0 implementation] from Thales and also planned to visualize the access control results (enforcing a GeoXACML 3.0 policy) by using the generic STAplus visualization application https://www.tapis.grumets.cat/[TAPIS] implemented by CREAF.
 
 ===== Achievement
 
-During the Code Sprint, a demo was implemented that included the following components:
+During the Code Sprint, a demo was implemented that included the following components.
 
 * STAplus endpoint: https://ogc.demo.secure-dimensions.de/staplus/v1.1
 * TAPIS endpoint: https://www.tapis.grumets.cat/
 
-As per the architecture diagram, the (Geo)XACML policy controls the SQL query rewriting. To demonstrate the functionality, a GeoXACML 3.0 wrapper was implemented. To leverage this functionality, a policy must be written using XACML 3 obligations. An obligation can be understood as an object that gets executed by the PEP. In this implementation, the obligation targets to rewrite the SQL query that was constructed from the HTTP request. To ease the policy construction, the sprint participants used an extension to ALFA, a JavaScript alike notation for writing policies. This resolves to the following simplistic structure of a policy:
+As per the architecture diagram, the (Geo)XACML policy controls the SQL query rewriting. To demonstrate the functionality, a GeoXACML 3.0 wrapper was implemented. To leverage this functionality, a policy must be written using XACML 3 obligations. An obligation can be understood as an object that gets executed by the PEP. In this implementation, the obligation targets to rewrite the SQL query that was constructed from the HTTP request. To ease the policy construction, the sprint participants used an extension to ALFA, a JavaScript alike notation for writing policies which resolves to the following simplistic structure of a policy:
 
 [[img_example_geoxacml]]
 .Fragment from example GeoXACML policy
 image::images/staplus_image2.png[image,width=800]
 
-The ”interesting” part of the policy is the obligation that undertakes the SQL rewrite. The implementation is generic, as it supports to declare obligations based on parameterized SQL expressions. In technical terms, the SQL expression must leverage the actual database structure but also honor the relations among the STAplus entities.
+The ”interesting” part of the policy is the obligation that undertakes the SQL rewrite. The implementation is generic, as it supports declaring obligations based on parameterized SQL expressions. In technical terms, the SQL expression must leverage the actual database structure but also honor the relations among the STAplus entities.
 
 [[img_staplus_entity]]
 .STAplus Entity Type diagram

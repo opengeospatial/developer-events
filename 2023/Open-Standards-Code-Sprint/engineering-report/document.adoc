@@ -8,7 +8,7 @@
 :external-id: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
 :docnumber: 23-059
 :received-date: 2023-11-20
-:issued-date: 2029-03-30
+:issued-date: 2024-01-25
 :published-date: 2029-03-30
 :fullname: Gobe Hobona
 :fullname_2: Joana Simoes

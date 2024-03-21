@@ -4,7 +4,7 @@
 This section presents findings of prototyping GIMI support in a selection of open source libraries. The prototyping and assessment was carried out by Brad Hards.
 
 Prior to the code sprint, a selection of GIMI files were produced using a custom application. The application used open data provided by the Australian Capital
-Territory (ACT) Government under a CC-BY license. The source format was GeoTIFF, and the resulting GIMI files used HEVC (H.265), JPEG 2000 and uncompressed
+Territory (ACT) Government under a CC-BY license. The source format was GeoTIFF, and the resulting GIMI files used HEVC (H.265), JPEG 2000, and uncompressed
 encodings. Non-standard JPEG and AV1 (AVIF) files were also produced, along with a sample that did not include security metadata and a sample that did not
 include corner points.
 
@@ -15,7 +15,7 @@ These GIMI files were read back in using modified versions of libheif and GDAL,
 where GDAL already used libheif for image content, but required an external "sidecar" PAM file to provide any geopositioning or associated metadata.
 
 The changes to libheif were to support metadata that is not attached to an image item. This occurs in GIMI files for the security metadata, which is scoped to the entire
-HEIF file content. The changes included suppressing a parsing error, and exposing the resulting metadata item through the libheif API.
+HEIF file content. The changes included suppressing a parsing error and exposing the resulting metadata item through the libheif API.
 
 The changes to GDAL were to support the security metadata as a GDAL metadata item, and to use the KLV metadata as a GDAL metadata item, and also to provide
 corner point geopositioning. The changes to libheif enabled access to the security metadata. With these changes, GDAL was able to extract and expose the additional GIMI
@@ -111,7 +111,7 @@ image::images/gimi/ecosystem.png[]
 
 As noted above, libheif and GDAL were modified to expose GIMI features within existing GDAL interfaces. This allows use of these features by existing software, often without change.
 An example is shown in <<img_gimi_qgis_1>>, which is a screenshot of an unmodified version of QGIS displaying two GIMI test files (using different compression methods), overlaid on top of OpenStreetMap.
-A small script is running in the QGIS Python console to extract the XML-encoded security metadata and provide an on-screen, human-readable, colour-coded representation of the key aspects of the
+A small script is running in the QGIS Python console to extract the XML-encoded security metadata and provide an on-screen, human-readable, color-coded representation of the key aspects of the
 security data.
 
 [[img_gimi_qgis_1]]
@@ -154,11 +154,11 @@ In conclusion, the sprint participants found that with some changes to libheif a
 making those available in standards-compliant OGC API services. However, to fully 
 unlock those GIMI capabilities, the base libraries will need to ship with the required functionality "out of the box", including:
 
- - comprehensive codec support (noting that AVC/H.264 and High Throughput JPEG 2000 are not supported in libheif at this time)
- - a finalized version of the geolocation metadata
- - flexible support for security metadata
- - support for overviews, grid representation and byte range requests (equivalent to Cloud Optimized GeoTIFF)
- - GIMI writing support within GDAL
- - unit testing and integration testing with a wider range of sample data
- - a GIMI validator
+ - comprehensive codec support (noting that AVC/H.264 and High Throughput JPEG 2000 are not supported in libheif at this time);
+ - a finalized version of the geolocation metadata;
+ - flexible support for security metadata;
+ - support for overviews, grid representation, and byte range requests (equivalent to Cloud Optimized GeoTIFF);
+ - GIMI writing support within GDAL;
+ - unit testing and integration testing with a wider range of sample data; and
+ - a GIMI validator.
 

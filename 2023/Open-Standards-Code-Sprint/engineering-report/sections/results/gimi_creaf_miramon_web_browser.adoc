@@ -5,15 +5,16 @@ Sprint participants from UAB-CREAF worked on the implementation of a web client 
 
 ===== Accessing GIMI data through a UAB-CREAF web client
 
-The sprint participants began developing a simple client that is capable through an HEIF file or URL to read the boxes to get the data and metadata to show the timing, the content id, the bounding box and the security information and to display the imagery in a web browser. The client is capable of reading HEIF files with JPEG, JPEG 2000 and HEIC images format. Note that HEIC refers to HEIF images containing HEVC-encoded images (i.e. H.265 encoded images).
+The sprint participants began developing a simple client that is capable through an HEIF file or URL to read the boxes to get the data and metadata to show the timing, content id, bounding box, and security information and to display the imagery in a web browser. The client is capable of reading HEIF files with JPEG, JPEG 2000, and HEIC images format. Note that HEIC refers to HEIF images containing HEVC-encoded images (i.e., H.265 encoded images).
 
-It uses several JavaScript libraries:
+The client uses several JavaScript libraries:
 
-*	“mp4box” library to read the HEIF file, construct the boxes and get the items and the data.
-*	“vidterra’s” library adapted to a ST0601 Metadata format by Iván Sanchéz during the code sprint to have the metadata information.
-*	“openjpeg” library to have the JPEG 2000 images into an object than they can uses to construct an “ArrayBuffer” to display the image into a canvas.
+*	“mp4box” library to read the HEIF file, construct the boxes, and get the items and the data;
+*	“vidterra’s” library adapted to a ST0601 Metadata format by Iván Sanchéz during the code sprint to provide the metadata information;
+*	“openjpeg” library to convert the JPEG 2000 images into an object that can be used to construct an “ArrayBuffer” to display the image into a canvas; and
 *	“heic2any” library to convert the HEIC images to a JPEG/PNG format.
-They use a native HTML method to display JPEG/PNG images, codifying the image in base64 in an IMG element.
+
+The client uses a native HTML method to display JPEG/PNG images, codifying the image in base64 in an IMG element.
 
 [[GIMI_MiraMon_WebClient]]
 .Screenshot of the web interface showing the data and image extracted from the heif file
@@ -23,7 +24,7 @@ image::images/GIMI_MiraMon_WebClient.png[]
 
 The UAB-CREAF Sprint participants implemented an extension to the MiraMon Web Map Browser that allows access to data in GIMI (HEIF) format from an OGC API - Maps server, as well as the ability to display and operate on the obtained images.
 
-The map browser connects to an OGC API - Maps interface with HEIF images and makes the necessary requests to get the images, display, zoom, pan them etc. The image in HEIF format following the GIMI profile obtained as a response to each request is converted into a binary array. This allows display of the data on a canvas, selection of the symbolization and operation on the data by making calculations, histograms, etc.
+The map browser connects to an OGC API - Maps interface with HEIF images and makes the necessary requests to get the images, display, zoom, pan them, etc. The image in HEIF format following the GIMI profile obtained as a response to each request is converted into a binary array allowing the display of the data on a canvas, selection of the symbolization and operation on the data by making calculations, histograms, etc.
 
 During the code sprint, the sprint participants from CREAF used the OGC API - Maps server implemented by Jerome Jacovella-St-Louis (Ecere) and deployed at https://maps.gnosis.earth/ogcapi.
 
