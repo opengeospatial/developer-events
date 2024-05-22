@@ -2,29 +2,29 @@
 
 The OGC API - Records team held two breakout sessions which focused on advancing the specification for review by the OGC Architecture Board (OAB).
 
-Discussions included:
+Discussions included the following.
 
-* target of December 2023 for OGC API - Records - Part 1: Core document submission for OAB
-  * issue sweep
-  * requirements refactoring (shared query parameters)
-  * resulting https://github.com/opengeospatial/ogcapi-records/pull/207[ATS refactoring]
-  * update on templating links (allowing for using one of `variables` or `varBase`)
-  * clarification on `.../items` `q` parameter
-  * clean-up and validation of example JSON documents; agreement to tidy up YAML schemas and build CI workflow to ensure schemas are always valid, a bundle is built, and examples are schema valid
+* Target of December 2023 for OGC API - Records - Part 1: Core document submission for OAB:
+  ** issue sweep;
+  ** requirements refactoring (shared query parameters);
+  ** resulting https://github.com/opengeospatial/ogcapi-records/pull/207[ATS refactoring];
+  ** update on templating links (allowing for using one of `variables` or `varBase`);
+  ** clarification on `.../items` `q` parameter; and
+  ** clean-up and validation of example JSON documents; agreement to tidy up YAML schemas and build CI workflow to ensure schemas are always valid, a bundle is built, and examples are schema valid.
 
-* proposal for https://github.com/opengeospatial/ogcapi-records/pull/320[facets]
-  * advertising facets and their types (options: separate endpoints, addition of `facet: true` properties in (`.../queryables`)
-  * specifying facets on `.../items` requests
-  * agreement to review / approve proposed Pull Request (PR) and move forward as an extension
-  * A detailed description of the proposal is presented in <<ogcapirecords_facets>>.
+* Proposal for https://github.com/opengeospatial/ogcapi-records/pull/320[facets]:
+  ** advertising facets and their types (options: separate endpoints, addition of `facet: true` properties in (`.../queryables`);
+  ** specifying facets on `.../items` requests;
+  ** agreement to review / approve proposed Pull Request (PR) and move forward as an extension; and
+  ** A detailed description of the proposal is presented in <<ogcapirecords_facets>>.
 
-* disussion on federation/distributed search
-** how to address live / distributed search (without metadata harvesting/metadata aggregation)
-** current issues such as:
-*** how to present results (multipart, single document with 'grouped' records [would break GeoJSON interoperability])
-*** how to sort results; this could be accomplished by a front-end client (in Python or JavaScript, for example)
-** some organizations want to provide a unified single catalogue that streamlines the search experience for users
-** could also be put forth as a best practice on implementation
-** way forward could be to put forth a proposal for discussion on requirements
+* Discussion on federation/distributed search as follows.
+** How to address live / distributed search (without metadata harvesting/metadata aggregation).
+** Current issues such as:
+*** how to present results (multipart, single document with 'grouped' records [would break GeoJSON interoperability]); and
+*** how to sort results; this could be accomplished by a front-end client (in Python or JavaScript, for example).
+** Some organizations want to provide a unified single catalog that streamlines the search experience for users.
+** Could also be put forth as a best practice on implementation.
+** Way forward could be to put forth a proposal for discussion on requirements.
 
 include::ogcapirecords-facets.adoc[]

@@ -3,7 +3,7 @@
 
 The JSON-FG candidate Standard was approved by the OGC Architecture Board for Public Comment shortly before the code sprint. The JSON-FG team held one breakout session during the sprint to answer questions on the specification and provide an overview over changes introduced in the new draft version 0.2.
 
-The following list summarizes JSON-FG-related results achieved during the sprint:
+The following list summarizes JSON-FG-related results achieved during the sprint.
 
 * Participants from Geonovum tested the new JSON-FG driver in GDAL, see <<geonovum_results>> for details.
 
@@ -16,7 +16,7 @@ The tool is implemented in Python and contributions are welcome and encouraged.
 .Screenshot of the json-fg-validator tool providing an ETS report.
 image::images/json-fg-validator-ets-report.png[align="center"]
 
-* Development of a https://github.com/Geonovum-labs/json-fg-linter[json-fg-linter] tool was started by Geonovum. The linter rules are based on JSON-FG requirements classes Core, 3D and Feature Types and Schemas. In addition, the linter does some consistency checks that are useful but not based on explicit requirements.
+* Development of a https://github.com/Geonovum-labs/json-fg-linter[json-fg-linter] tool was started by Geonovum. The linter rules are based on JSON-FG requirements classes Core, 3D and Feature Types, and Schemas. In addition, the linter does some consistency checks that are useful but not based on explicit requirements.
 
 * An initial version of a https://github.com/Geonovum-labs/json-fg-java[json-fg-java] library was developed by Geonovum. The library aims to make encoding and decoding of JSON-FG documents as easy as possible in Java. The status of the library is experimental. The implementation is compatible with v0.2.1 of the JSON-FG specification.
 
@@ -26,7 +26,7 @@ image::images/json-fg-validator-ets-report.png[align="center"]
 
 * The ldproxy implementation was updated to JSON-FG version 0.2.1 during the sprint, see <<ldproxy_results>> for details.
 
-One topic during the breakout was support for different coordinate reference systems and the GeoJSON compatibility. Since the sprint took place in London, the British National Grid (EPSG:27700) was used as the coordinate reference system in example requests to an API implementing OGC API - Features:
+One topic during the breakout was support for different coordinate reference systems and the GeoJSON compatibility. Since the sprint took place in London, the British National Grid (EPSG:27700) was used as the coordinate reference system in example requests to an API implementing OGC API - Features as follows.
 
 * The <<mariadb_results,MariaDB results section>> includes a "Manhole" feature being presented as JSON-FG using the EPSG:27700 CRS as provided from the MariaDB feature server.
 

@@ -107,7 +107,7 @@ Thereafter, add the ImageryUtilities process to the plugin.py file as shown belo
     },
 ----
 
-Thereafter copy and modify the hello_world.py file to create one called imagery_utilities.py. Within that file replace 'hello-world' with 'imagery-utils', 'HelloWorld' with 'ImageryUtilities', and 'hello_world' with 'imagery_utilities'. Most importantly the execute function should look as shown below.
+Thereafter copy and modify the hello_world.py file to create one called imagery_utilities.py. Within that file replace 'hello-world' with 'imagery-utils,' 'HelloWorld' with 'ImageryUtilities,' and 'hello_world' with 'imagery_utilities.' Most importantly the execute function should look as shown below.
 
 [%unnumbered%]
 [source,python]
@@ -202,6 +202,6 @@ If successful, the response will be as shown below.
 .Screenshot showing an image sent using postman (right hand-side), and stored (lower-left), through a process in pygeoapi (upper-left)
 image::images/gimi_crud.png[]
 
-One of the observations from the prototype is that the approach of sending base64 encoded bytes via a POST request is appropriate for small images. However, for large images such as motion imagery collected over several hours, it may be necessary to send a request that includes a URL from which the server may stream the data from.
+One of the observations from the prototype is that the approach of sending base64 encoded bytes via a POST request is appropriate for small images. However, for large images, such as motion imagery collected over several hours, it may be necessary to send a request that includes a URL from which the server may stream the data.
 
 During the three-day code sprint, participants were able to implement tools for creating GIMI files. Multiple sample files were created as a result. However, due to time constraints, it was not possible to integrate the tools used for creating the GIMI files into a Web API. 

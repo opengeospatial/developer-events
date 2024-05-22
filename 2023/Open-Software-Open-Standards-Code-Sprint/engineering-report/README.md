@@ -2,7 +2,7 @@
 
 ### Preview
 
-A review of the Engineering Report is [here](https://htmlpreview.github.io/?https://github.com/opengeospatial/ogcna-auto-review/blob/main/23-025.html).
+The Engineering Report is [here](https://docs.ogc.org/per/23-025.html).
 
 
 ### Building

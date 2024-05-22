@@ -3,7 +3,7 @@
 
 The OGC API - Features team held a breakout to review the https://docs.ogc.org/DRAFTS/23-058.html[initial version of the new Part 5: Schemas].
 
-The general approach taken by the new part was supported. Several proposals for changes were indentified during the review:
+The general approach taken by the new part was supported. Several proposals for changes were identified during the review as follows.
 
 * Change `/req/schemas/logical-model` into informative text (the requirement is not testable).
 * Add a "x-ogc-property-index" keyword in "Schemas" to express the sequence of the properties (in a coverage or for a feature encoding that is ordered, e.g. GML).
@@ -14,14 +14,14 @@ The general approach taken by the new part was supported. Several proposals for 
 * Additional ones, like the URI of a definition should be added in an extension, if needed.
 * Do not use "id" as the property name of an "id" property in the examples.
 * Improve the wording in some normative statements.
-* Consider to add a "primary-interval" role with a proper interval representation (array of two instants).
+* Consider adding a "primary-interval" role with a proper interval representation (array of two instants).
 * Fix a typo ("roadSegement" instead of "roadSegment").
 * Remove broken dependency in Clause 13.
 * The data types of queryables should not be restricted. What is supported will depend on the filter language. Add a note that filter languages may not support data types.
 
-A https://github.com/opengeospatial/ogcapi-features/pull/867[pull request] was created during the sprint. The pull request was discussed, approved and merged in the Features API SWG meeting after the sprint with the following changes:
+A https://github.com/opengeospatial/ogcapi-features/pull/867[pull request] was created during the sprint. The pull request was discussed, approved, and merged in the Features API SWG meeting after the sprint with the following changes.
 
-* Changed "x-ogc-property-index" to "x-ogc-property-seq".
+* Changed "x-ogc-property-index" to "x-ogc-property-seq."
 * For the languages to specify units of measurement, a keyword "x-ogc-unit-lang" was added with the only value "UCUM" (the default). A note was added to clarify that communities or other standards can add more languages.
 
 During the code sprint, ldproxy was updated to support the changes, notably the new "x-ogc-unit" keyword:

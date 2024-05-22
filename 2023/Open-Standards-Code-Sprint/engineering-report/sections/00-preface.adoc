@@ -16,7 +16,7 @@ The subject of this Engineering Report (ER) is a code sprint that was held from 
 [.preface]
 == Executive Summary
 
-Advances in computing, storage, sensing and other technology areas continue to find a place in the geospatial ecosystem that makes location information findable, accessible, interoperable and reusable. To enable geospatial standards to meet the likely interoperability needs of future technologies, it is necessary for Standards Development Organizations (SDOs) such as the OGC to continue to innovate. Such innovation relies on the ability to develop new standards and improve existing ones to better address emerging interoperability challenges. Code sprints are one of a number of initiative types that the OGC conducts to accelerate such innovation. A code sprint is a collaborative and inclusive event driven by innovative and rapid programming with minimal process and organization constraints to support the development of new applications and candidate standards.
+Advances in computing, storage, sensing, and other technology areas continue to find a place in the geospatial ecosystem that makes location information findable, accessible, interoperable, and reusable. To enable geospatial standards to meet the likely interoperability needs of future technologies, it is necessary for Standards Development Organizations (SDOs) such as OGC to continue to innovate. Such innovation relies on the ability to develop new standards and improve existing ones to better address emerging interoperability challenges. Code sprints are one of a number of initiative types that OGC conducts to accelerate such innovation. A code sprint is a collaborative and inclusive event driven by innovative and rapid programming with minimal process and organization constraints to support the development of new applications and candidate standards.
 
 The focus of this Engineering Report (ER) is a code sprint that was held from October 30th to November 1st, 2023. The code sprint was organized by the Open Geospatial Consortium (OGC) and hosted by Geovation in London, England. The code sprint was sponsored by Ordnance Survey (OS) at the Gold-level, as well as the European Union Satellite Centre (SatCen), US National Geospatial Intelligence Agency (NGA), and the UK Defence Science and Technology Laboratory (Dstl) at the Silver-level. As with previous OGC Code Sprints, a key goal of the October 2023 Open Standards Code Sprint was the acceleration of the development of OGC Standards and their implementation in software products. 
 
@@ -24,16 +24,16 @@ Standards in focus for this code sprint included several OGC API, data model, an
 
 In relation to emerging extensions to OGC API Standards, the engineering report concludes that the Publish/Subscribe (PubSub), Security, and Schemas capabilities examined in this code sprint could potentially support other OGC API Standards. Regarding GIMI, the engineering report concludes that with minor changes to popular open-source base libraries a wide range of software can quickly make use of GIMI capabilities.
 
-Regarding the Model for Underground Data Definition and Integration (MUDDI), the engineering report concludes that the MUDDI Conceptual Model is implementable, and could easily be used as the basis for a logical model that can be encoded in a variety of formats including GML, GeoJSON and Geopackage. As for JSON-FG, the engineering report concludes that due to the evident increase in adoption across the developer community, there is an increasing need to offer validators so that developers can check for compliance more easily. 
+Regarding the Model for Underground Data Definition and Integration (MUDDI), the engineering report concludes that the MUDDI Conceptual Model is implementable and could easily be used as the basis for a logical model that can be encoded in a variety of formats including GML, GeoJSON, and Geopackage. As for JSON-FG, the engineering report concludes that due to the evident increase in adoption across the developer community, there is an increasing need to offer validators so that developers can check for compliance more easily. 
 
-The sprint participants made the following recommendations for future work items on OGC API Standards:
+The sprint participants made the following recommendations for future work items on OGC API Standards.
 
 * Extension of OGC API - Records to support faceting and federated search.
-* Use case experimentation to examine how the Publish/Subscribe approach can support various OGC API standards workflows
-* Prototyping and specification on an OpenAPI definition document for the OGC SensorThings API Standard
-* Additional support for multiband raster data in OGC API - Maps/Tiles/Coverages (e.g. multispectral imagery, etc). 
+* Use case experimentation to examine how the Publish/Subscribe approach can support various OGC API standards workflows.
+* Prototyping and specification on an OpenAPI definition document for the OGC SensorThings API Standard.
+* Additional support for multiband raster data in OGC API - Maps/Tiles/Coverages (e.g., multispectral imagery, etc). 
 
-The sprint participants made the following recommendations for future work items on OGC Encoding Standards:
+The sprint participants made the following recommendations for future work items on OGC Encoding Standards.
 
 * Tiled complex, signed, and floating-point data in multiband raster data. 
 * Performance benchmarking between various imagery formats, for a variety of use cases.
@@ -41,7 +41,7 @@ The sprint participants made the following recommendations for future work items
 * Development of an Implementation Standard for the logical model and encoding of data that conforms to the MUDDI.
 * Use of the MUDDI logical schema as a template for MUDDI compliance. 
 
-The sprint participants made the following recommendations for future work items on GIMI:
+The sprint participants made the following recommendations for future work items on GIMI.
 
 * Extension of open-source base libraries used by several other products for creation and modification of GIMI files.
 * Prototype streaming of large images from client applications to servers for storage through OGC API - Processes.
@@ -52,7 +52,7 @@ The sprint participants made the following recommendations for future work items
 
 == Submitters
 
-All questions regarding this document should be directed to the editor or the contributors:
+All questions regarding this document should be directed to the editors or the contributors:
 
 [%unnumbered%]
 .Submitters
