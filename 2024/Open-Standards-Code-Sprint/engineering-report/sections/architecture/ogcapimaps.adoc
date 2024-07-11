@@ -1,0 +1,3 @@
+==== OGC API - Maps
+
+The https://ogcapi.ogc.org/maps[OGC API - Maps] candidate Standard describes an API that can serve spatially referenced and dynamically rendered electronic maps (<<bib_ogcapimaps>>). The specification describes the discovery and query operations of an API that provides access to electronic maps in a manner independent of the underlying data store. The query operations allow dynamically rendered maps to be retrieved from the underlying data store based upon simple selection criteria as defined by the client.

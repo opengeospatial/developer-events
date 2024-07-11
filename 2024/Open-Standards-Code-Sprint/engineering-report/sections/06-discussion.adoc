@@ -1,0 +1,12 @@
+[[discussion]]
+== Discussion
+
+include::discussion/jsonfg_discussion.adoc[]
+
+include::discussion/ogcapi_standards_discussion.adoc[]
+
+include::discussion/data_quality_ai_discussion.adoc[]
+
+
+
+

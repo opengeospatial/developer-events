@@ -1,0 +1,39 @@
+
+////
+Preface sections must include [.preface] attribute
+in order to get them placed in the preface area (and not in the main content).
+
+Keywords specified in document preamble will display in this area
+after the abstract
+////
+
+[.preface]
+== Abstract
+
+The subject of this Engineering Report (ER) is a code sprint that was held from July 10th to 12th, 2024 to advance the support and development of open standards within the developer community. The code sprint was organized by the Open Geospatial Consortium (OGC) and hosted by Geovation in London, England. The code sprint was sponsored by Google and supported by Natural Resources Canada (NRCan). 
+
+
+[.preface]
+== Executive Summary
+
+TBA
+
+
+
+== Submitters
+
+All questions regarding this document should be directed to the editors or the contributors:
+
+[%unnumbered%]
+.Submitters
+[options="header"]
+|===
+|	Name | Organization | Role
+|	Gobe Hobona| OGC | Editor
+|	Joana Simoes | OGC |Editor
+|	TBA | TBA | Contributor
+|	TBA | TBA | Contributor
+|	TBA | TBA | Contributor
+|	TBA | TBA | Contributor
+|	TBA | TBA | Contributor
+|=== 

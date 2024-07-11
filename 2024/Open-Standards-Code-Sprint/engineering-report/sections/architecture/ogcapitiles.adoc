@@ -1,0 +1,8 @@
+[[ogcapi_tiles]]
+==== OGC API - Tiles
+
+https://ogcapi.ogc.org/tiles[OGC API - Tiles] specifies a Standard for Web APIs that provide tiles of geospatial information (<<OGC20-057>>). The Standard supports different forms of geospatial data, such as tiles of vector features (colloquially called “vector tiles”), coverages, maps (or imagery), and potentially eventually additional types of tiles of geospatial data.
+
+Vector data represents geospatial objects such as points, lines, and polygons. Tiles of vector feature data (i.e., 'vector tiles') represent partitions of vector data covering an area (e.g., lines representing rivers in a country).
+
+In this context, a map is essentially an image representing at least one type of geospatial information. Tiles of maps (i.e., map tiles) represent subsets of maps covering an area.

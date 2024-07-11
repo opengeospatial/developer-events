@@ -1,0 +1,26 @@
+[[conclusions]]
+== Conclusions
+
+TBA
+
+=== Future Work
+
+==== OGC API Standards
+
+TBA
+
+==== OGC Encoding Standards
+
+TBA
+
+==== MapML
+
+TBA
+
+==== Data Quality and Artificial Intelligence
+
+TBA
+
+==== Validators
+
+TBA
