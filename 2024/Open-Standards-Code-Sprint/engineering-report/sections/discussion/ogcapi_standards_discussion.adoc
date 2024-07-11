@@ -1,0 +1,12 @@
+[[ogcapi_discussion]]
+==== OGC API Standards
+
+This section discusses findings that apply to multiple OGC API Standards, as well as implications of those findings.
+
+===== TBA
+
+TBA
+
+===== TBA
+
+TBA

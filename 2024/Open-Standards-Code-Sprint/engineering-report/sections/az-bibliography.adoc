@@ -1,0 +1,19 @@
+
+[appendix,obligation=informative]
+[[annex_bibliography]]
+[bibliography]
+== Bibliography
+
+* [[[OGC17-069r4,OGC 17-069r4]]]
+* [[[OGC18-058r1,OGC 18-058r1]]]
+* [[[OGC19-086r6,OGC 19-086r6]]]
+* [[[OGC18-062r2,OGC 18-062r2]]]
+* [[[OGC20-057,OGC 20-057]]]
+* [[[OGC23-025,OGC 23-025]]]
+* [[[OGC18-088,OGC 18-088]]]
+* [[[OGC22-022r1,OGC 22-022r1]]]
+* [[[OGC21-006r2,OGC 21-006r2]]]
+* [[[OGC15-113r6,OGC 15-113r6]]]
+* [[[OGC08-085r8,OGC 08-085r8]]]
+* [[[OGC12-128r18,OGC 12-128r18]]]
+* [[[bib_ogcapicoverages,OGC 20-058]]], OGC API - Coverages - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/19-087.html
