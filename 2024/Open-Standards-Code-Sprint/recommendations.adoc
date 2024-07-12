@@ -7,7 +7,7 @@
 * An activity building on the ISO metadata activity
 * Experimentation on consistency of parameter and schema fragements in APIs
 * Prototyping and experimentation on OGC API - Features and Geocoding
-* Prototyping of an HTML MapML validator, possibly as a service (add link)
+* Prototyping of an HTML MapML validator, possibly as a service. See https://github.com/Maps4HTML/validator-mapml for ideas.
 
 
 
