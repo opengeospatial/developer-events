@@ -1,1 +1,18 @@
+=== Innovation
 
+* Initiative for urban digital twins
+* CDB2 experimentation in the context of DT
+* OGC API - 3D Geovolumes experimentation in the context of DT
+* Experimentation on consistency of metadata frameworks
+* An activity building on the ISO metadata activity
+* Experimentation on consistency of parameter and schema fragements in APIs
+* Prototyping and experimentation on OGC API - Features and Geocoding
+* Prototyping of an HTML MapML validator, possibly as a service (add link)
+
+
+
+=== Standards Program
+
+* Discussions on consistency of parameter and schema fragements in APIs
+* Discussion possibility of TrainingDML-AI conf class for Records
+* Discuss consistency of scale of OMS and APIs
