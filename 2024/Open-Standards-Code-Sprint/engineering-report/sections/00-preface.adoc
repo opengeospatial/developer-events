@@ -31,7 +31,7 @@ All questions regarding this document should be directed to the editors or the c
 |	Name | Organization | Role
 |	Gobe Hobona| OGC | Editor
 |	Joana Simoes | OGC |Editor
-|	TBA | TBA | Contributor
+|	Tom Kralidis | OSGeo | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor

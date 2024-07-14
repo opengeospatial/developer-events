@@ -44,6 +44,10 @@ include::architecture/iso19157_3.adoc[]
 
 include::architecture/pygeoapi.adoc[]
 
+include::architecture/pygeometa.adoc[]
+
+include::architecture/owslib.adoc[]
+
 include::architecture/ldproxy.adoc[]
 
 include::architecture/cubeserv.adoc[]

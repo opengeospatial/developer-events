@@ -10,4 +10,5 @@
 |===
 |Date |Release |Author | Primary clauses modified |Description
 |2024-07-11 |0.1 |G. Hobona |all |initial version
+|2024-07-14 |0.2 |T. Kralidis |all |OSGeo updates
 |===

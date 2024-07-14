@@ -37,6 +37,10 @@ include::results/iso19157_3.adoc[]
 
 include::results/pygeoapi.adoc[]
 
+include::results/pygeometa.adoc[]
+
+include::results/owslib.adoc[]
+
 include::results/ldproxy.adoc[]
 
 include::results/cubeserv.adoc[]

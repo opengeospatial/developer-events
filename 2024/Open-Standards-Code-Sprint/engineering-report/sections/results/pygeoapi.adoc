@@ -1,4 +1,31 @@
 [[results_pygeoapi]]
 ==== OSGeo pygeoapi
 
-TBA
+===== Mentor stream: Adding a new OGC API to pygeoapi
+
+Given recent updates to pygeoapi in support of API implementation modularity, a mentor stream
+was given, focusing on adding a new OGC API to pygeoapi.  Developers were shown how to add
+and hook new API functionality / endpoints into the pygeoapi core, as well as exposing via
+pygeoapi's OpenAPI functionality.  A https://docs.google.com/presentation/d/16IP1g_MNjNRsvHEDkbrdSpU2VR5uZi9l4a8sgFC2VcA[presentation]
+and https://github.com/tomkralidis/pygeoapi/tree/add-new-api[example application] were
+demonstrated and made available as proof of concept.
+
+image::../images/pygeoapi-mentor-stream.png[align="center"]
+
+====== OGC API - Processes - Part 2 implementation
+
+An initial prototype was implemented to support the OGC API - Processes - Part 2: Deploy, Replace, Undeploy https://docs.ogc.org/DRAFTS/20-044.html[draft standard].  Process creation was implemented by way of ingesting a https://commonwl.org[Common Workflow Language (CWL)] definition which referenced a Python application made available as a Docker image.  The Python application implemented water body detection, which took as input Copernicus Sentinel-2 or USSG Landsat-9 data and detected water bodies by applying the Otsu thresholding technique on the Normalized Difference Water Index (NDWI)footnote:[https://eoap.github.io/quickwin/app/water-bodies-detection].  This application was made available as an example in support of the https://docs.ogc.org/bp/20-089r1.html[OGC Best Practice for Earth Observation Application Package].
+
+image::../images/pygeoapi-oaproc-part2-new-process.png[align="center"]
+
+The CWL was published and made available as an OGC API Process.  The process description included an ``executionUnit`` object providing the CWL definition.
+
+Process execution then invoked the https://cwltool.readthedocs.io[cwltool reference implementation] to deploy and run the application in a portable manner, producing a manifest of a STAC Catalog of the NDWI outputs.
+
+image::../images/pygeoapi-oaproc-part2-new-process-execution.png[align="center"]
+
+The architecture of the implementation can be found below, and the associated implementation on https://github.com/tomkralidis/pygeoapi/tree/oaproc-part2[GitHub].  Future work includes process replace and delete functionality, as well as describing CWL inputs and outputs as part of the native process description model.
+
+image::../images/pygeoapi-oaproc-part2-architecture.png[align="center"]
+
+Special thanks is given to the https://github.com/eoap[Earth Observation Application Package] resources and examples provided on GitHub as well as Gérald Fenoy of GeoLabs SARL for providing valuable explanation, advice and recommendation.
