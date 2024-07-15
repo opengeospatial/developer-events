@@ -1,0 +1,12 @@
+[[results_pygeometa]]
+==== OSGeo pygeometa
+
+Upon participating in the special track and breakout session focused on Data Quality and Artificial Intelligence, an initial Training Data Markup Language for AI (TrainingDML-AI) encoder was implemented in pygeometa.  This enabled configuring a training dataset as a pygeometa metadata control file (MCF) configuration and generating TrainingDataML-AI (or any other metadata format supported by pygeometa).  Note that the MCF model was extended to support specifics of TrainingDataML-AI.
+
+The initial exercise illustrated a number of intersections between TrainingDataML-AI and common metadata constructs (spatiotemporal extents, keywords, contacts, data quality, etc.) in support of discovery and documentation.  As a result, an additional implementation was put forth to create a TrainingDataML-AI profile of the OGC API - Records - Part 1: Core, Record Core model.  This implementation mapped the common metadata constructs into the Record Core model, and encoded TrainingDataML-AI specifics accordingly.
+
+The result of this experiment was the encoding of a training dataset description as a metadata record that could then enable low barrier, broad interoperability via GeoJSON and OGC API - Records.
+
+image::../images/pygeometa-tdml-ai-oarec.png[align="center"]
+
+The resulting implementation can be found on https://github.com/geopython/pygeometa/tree/tdml-ai[GitHub].
