@@ -7,6 +7,6 @@ The initial exercise illustrated a number of intersections between TrainingDataM
 
 The result of this experiment was the encoding of a training dataset description as a metadata record that could then enable low barrier, broad interoperability via GeoJSON and OGC API - Records.
 
-image::../images/pygeometa-tdml-ai-oarec.png[align="center"]
+image::images/pygeometa-tdml-ai-oarec.png[align="center"]
 
 The resulting implementation can be found on https://github.com/geopython/pygeometa/tree/tdml-ai[GitHub].
