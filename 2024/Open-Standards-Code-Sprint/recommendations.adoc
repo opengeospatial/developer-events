@@ -16,3 +16,4 @@
 * Discussions on consistency of parameter and schema fragements in APIs
 * Discussion possibility of TrainingDML-AI conf class for Records
 * Discuss consistency of scale of OMS and APIs
+* Addition of a security element in future versions of TrainingDML-AI and other metadata encodings
