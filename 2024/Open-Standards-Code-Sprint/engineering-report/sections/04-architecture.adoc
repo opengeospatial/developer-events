@@ -14,8 +14,6 @@ The rest of this section describes the software deployed, and standards implemen
 
 include::architecture/ogcsensorthingsapi.adoc[]
 
-include::architecture/ogcstaplus.adoc[]
-
 include::architecture/ogcapifeatures.adoc[]
 
 include::architecture/ogcapitiles.adoc[]
@@ -24,15 +22,24 @@ include::architecture/ogcapiedr.adoc[]
 
 include::architecture/ogcapiprocesses.adoc[]
 
+include::architecture/trainingdmlai.adoc[]
+
 
 === Candidate OGC Standards
 
+include::architecture/ogcapiconnectedsystems.adoc[]
+
+include::architecture/ogcapimaps.adoc[]
 
 include::architecture/ogcapirecords.adoc[]
 
-include::architecture/ogcapicoverages.adoc[]
+include::architecture/ogcapidggs.adoc[]
 
 include::architecture/jsonfg.adoc[]
+
+include::architecture/dggsjson.adoc[]
+
+include::architecture/cartosym.adoc[]
 
 === Specifications from the Community
 
@@ -41,6 +48,14 @@ include::architecture/mapml.adoc[]
 include::architecture/iso19157_3.adoc[]
 
 === Software Projects and Products
+
+include::architecture/miramon.adoc[]
+
+include::architecture/qgis.adoc[]
+
+include::architecture/openlayers.adoc[]
+
+include::architecture/jsonlinter.adoc[]
 
 include::architecture/pygeoapi.adoc[]
 
@@ -53,3 +68,9 @@ include::architecture/ldproxy.adoc[]
 include::architecture/cubeserv.adoc[]
 
 include::architecture/gnosis.adoc[]
+
+include::architecture/opensensorhub.adoc[]
+
+include::architecture/teamengine.adoc[]
+
+include::architecture/rainbow.adoc[]

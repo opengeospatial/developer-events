@@ -1,5 +1,0 @@
-[[ogcstaplus]]
-
-==== OGC STAplus - an extension of the OGC SensorThings API
-
-https://docs.ogc.org/is/22-022r1/22-022r1.html[STAplus] is an extension to the OGC SensorThings data model (<<OGC22-022r1>>). Inspired by Citizen Science applications, STAplus supports the 'ownership concept' whereby observations collected by sensors are owned by (different) users that may express the license for re-use. In addition to the ownership and license abilities, the extension specified by STAplus supports the expression of explicit relations between observations and the creation of group(s) of observations.
