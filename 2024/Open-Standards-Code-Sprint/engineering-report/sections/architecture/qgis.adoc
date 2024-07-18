@@ -12,4 +12,4 @@ image::images/QGISTemporalController.jpg[align="center",width=1200]
 
 [[img_qgis2]]
 .Screenshot of QGIS EDR Plugin menu
-image::images/QGISEDRplugine.jpg[align="center",width=1200]
+image::images/QGISEDRplugin.jpg[align="center",width=1200]
