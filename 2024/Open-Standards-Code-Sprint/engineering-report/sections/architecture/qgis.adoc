@@ -13,3 +13,9 @@ image::images/QGISTemporalController.jpg[align="center",width=1200]
 [[img_qgis2]]
 .Screenshot of QGIS EDR Plugin menu
 image::images/QGISEDRplugin.jpg[align="center",width=1200]
+
+During this code sprint, the support for OGC API in QGIS using the GDAL/OGR driver was tested.
+
+The current status (using QGIS version 3.39.0-Master QGIS code revision 399f7df and GDAL/OGR version 3.10.0dev-1b32f9f6cf-dirty) is:
+* OGC API - Features is not working as expected, as described on this https://github.com/qgis/QGIS/issues/58087[issue].
+* OGC API - Tiles is also not working, and it seems to be a QGIS issue, rather than a GDAL issue, so it is worth filing another issue in the QGIS repository.
