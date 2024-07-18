@@ -53,7 +53,7 @@ All questions regarding this document should be directed to the editors or the c
 |	Gobe Hobona| OGC | Editor
 |	Joana Simoes | OGC |Editor
 |	Tom Kralidis | OSGeo | Contributor
-|	TBA | TBA | Contributor
+|	Chris Little | Met Office | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
