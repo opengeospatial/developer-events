@@ -1,8 +1,8 @@
 ==== QGIS
 
-The stable release V3.28.6-Firenze has a Time Slider/Cntroller added to the menu bar. It behaves like a video controller if relevant to the data being displayed. 
+The https://www.qgis.org/[QGIS] stable release V3.28.6-Firenze has a Time Slider/Cntroller added to the menu bar. It behaves like a video controller if relevant to the data being displayed. 
 
-This and later versions also support the OGC API-EDR queries via a plugin.
+This and https://www.qgis.org/download/[later versions] also support the OGC API-EDR queries via a plugin.
 
-A later release, V3.37, now supports a Vertical Slider for data and layers that have a vertical extent.
+Release V3.37 and https://www.qgis.org/download/[later] now supports a Vertical Slider for data and layers that have a vertical extent.
 
