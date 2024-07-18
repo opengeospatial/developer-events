@@ -14,8 +14,36 @@ image::images/QGISTemporalController.jpg[align="center",width=1200]
 .Screenshot of QGIS EDR Plugin menu
 image::images/QGISEDRplugin.jpg[align="center",width=1200]
 
-During this code sprint, the support for OGC API in QGIS using the GDAL/OGR driver was tested.
+==== Status of OGCAPI SourceType support in QGIS 
 
-The current status (using QGIS version 3.39.0-Master QGIS code revision 399f7df and GDAL/OGR version 3.10.0dev-1b32f9f6cf-dirty) is:
+QGIS supports adding a Raster or Vector Layer, using an `OGC API` Source Type. 
+Under the hood, QGIS uses the https://gdal.org/drivers/raster/ogcapi.html[OGCAPI] GDAL driver. 
+During this code sprint, this functionality was tested for different OGC APIs, in order to figure out what is working and to try to understand if the issue is on GDAL or QGIS.
+
+An issue with relative links was identified on GDAL, which was affecting all the APIs. The issue was already fixed and is described https://opengeospatial.github.io/ogcna-auto-review/24-034.html#_gdal[here].
+
+The current status (using QGIS version 3.39.0-Master QGIS code revision 399f7df1c7 and GDAL/OGR version 3.10.0dev-126a88523a) is:
+
 * OGC API - Features is not working as expected, as described on this https://github.com/qgis/QGIS/issues/58087[issue].
-* OGC API - Tiles is also not working, and it seems to be a QGIS issue, rather than a GDAL issue, so it is worth filing another issue in the QGIS repository.
+* OGC API - Tiles (vector) is not working, as described on this https://github.com/qgis/QGIS/issues/58174[issue].
+* OGC API - Tiles (raster) is working.
+* OGC API - Maps is working.
+* OGC API - Coverages is working.
+
+[[img_qgis_oam_gnosis]]
+.Screenshot an OGCAPI - Maps collection from Gnosis on QGIS
+image::images/qgis-oam-gnosis.png[align="center",width=1200]
+
+[[img_qgis_oam_pygeoapi]]
+.Screenshot an OGCAPI - Maps collection from pygeoapi on QGIS
+image::images/qgis-oam-pygeoapi.png[align="center",width=1200]
+
+[[img_qgis_oat]]
+.Screenshot an OGCAPI - Tiles (raster) collection on QGIS
+image::images/qgis-oat.png[align="center",width=1200]
+
+[[img_qgis_oac]]
+.Screenshot an OGCAPI - Coverages collection on QGIS
+image::images/qgis-oac.png[align="center",width=1200]
+
+More details about the setup for testing this functionality can be found on this https://github.com/qgis/QGIS/issues/50296[issue].
