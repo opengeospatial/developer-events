@@ -6,3 +6,10 @@ This and https://www.qgis.org/download/[later versions] also support the OGC API
 
 Release V3.37 and https://www.qgis.org/download/[later] now supports a Vertical Slider for data and layers that have a vertical extent.
 
+[[img_qgis1]]
+.Screenshot of QGIS Time Controller
+image::images/QGISTemporalController.jpg[align="center",width=1200]
+
+[[img_qgis2]]
+.Screenshot of QGIS EDR Plugin menu
+image::images/QGISEDRplugine.jpg[align="center",width=1200]
