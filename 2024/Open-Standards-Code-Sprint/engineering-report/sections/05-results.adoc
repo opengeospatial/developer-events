@@ -17,6 +17,8 @@ include::results/ogcapiedr.adoc[]
 
 include::results/ogcapiprocesses.adoc[]
 
+include::results/coveragejson.adoc[]
+
 
 === Candidate OGC Standards
 
