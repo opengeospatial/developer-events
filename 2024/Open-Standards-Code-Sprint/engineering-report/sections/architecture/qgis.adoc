@@ -1,6 +1,6 @@
 ==== QGIS
 
-The https://www.qgis.org/[QGIS] stable release V3.28.6-Firenze has a Time Slider/Cntroller added to the menu bar. It behaves like a video controller if relevant to the data being displayed. 
+The https://www.qgis.org/[QGIS] stable release V3.28.6-Firenze, and later versions, has a Time Slider/Controller added to the menu bar. It behaves like a video controller if relevant to the data being displayed. 
 
 This and https://www.qgis.org/download/[later versions] also support the OGC API-EDR queries via a plugin.
 
