@@ -54,6 +54,7 @@ All questions regarding this document should be directed to the editors or the c
 |	Joana Simoes | OGC |Editor
 |	Tom Kralidis | OSGeo | Contributor
 |	Chris Little | Met Office | Contributor
+|	Frank Terpstra | Geonovum | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
