@@ -1,0 +1,6 @@
+==== GDAL
+
+https://github.com/osgeo/gdal[GDAL] is an open source MIT licensed translator library for raster and vector geospatial data formats.
+It supports OGC API, using the https://gdal.org/drivers/raster/ogcapi.html[OGCAPI] driver (for Tiles, Maps and Coverages) and the  and the https://gdal.org/drivers/vector/oapif.html[OAPIF] (for Features).
+During this code sprint, an https://github.com/OSGeo/gdal/issues/10410[issue] was found with the way it resolves relative links on the OAPIF driver.
+The issue was addressed on https://github.com/OSGeo/gdal/pull/10413[this] PR.
