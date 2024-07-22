@@ -1,0 +1,46 @@
+[[ogc_styles_and_symbology_results]]
+
+==== OGC Styles and Symbology
+
+During this code sprint, the sprint participants worked on drafting the OGC Styles & Symbology candidate standard. The work included:
+
+* explaining the SymCore concept to Louis-Martin from Bentley Systems and discuss possible link:https://github.com/opengeospatial/styles-and-symbology/issues/24#issuecomment-2222335333[use cases] for `hatch`, `stipple` & `pattern` fills,
+* addition of a `Metadata` section in the link:https://docs.ogc.org/DRAFTS/18-067r4.html#rc-core [Requirements Class "Core"] with `keywords` and `geoDataClasses` parameters in line with the JSON schema,
+* discussion and clarification of the concepts of link:https://github.com/opengeospatial/styles-and-symbology/issues/64[Stipples] and link:https://github.com/opengeospatial/styles-and-symbology/issues/59[Hatches],
+* drafting requirements with portrayal examples,
+* creating placeholders for the Abstract Test Suite,
+* discussion and clarification of `viz.pass`, `feature.pass` and `zOrder` concepts,
+* a discussion also took place on consistency of UML class diagrams (see link:https://github.com/opengeospatial/styles-and-symbology/issues/74[#74]),
+* work on a future link:https://github.com/maxcollombin/CartoSymTranscoder[CartoSym transcoder],
+* discussion with Tom Kralidis on the possibility of implementing OGC API - Styles in pygeoapi based on the `GetStyles` operation of a `WMS` service,
+* discussion with Gobe Hobona on the relevance of using link:https://sparxsystems.com/products/ea/[Enterprise Architect] for UML modelling,
+* work on updating the SWG charter, clarifying the work items for Cartographic Symbology 2.0 parts 1-4, and proposing to rename the SWG to "Cartographic Symbology" to align with the name of the standard as well as
+the "CartoSym" encodings, and avoiding confusion with the scope of the _OGC API - Styles_ SWG.
+
+A number of GitHub link:https://github.com/opengeospatial/styles-and-symbology/issues?q=label%3A%222024-07+Sprint%22[issues] were created as a result of this work. This included:
+
+* link:https://github.com/opengeospatial/styles-and-symbology/issues/24[#24]: Custom fill
+* link:https://github.com/opengeospatial/styles-and-symbology/issues/57[#57]: Add keywords element in Style node
+* link:https://github.com/opengeospatial/styles-and-symbology/issues/59[#59]: Rename hatchstyle to hatch and new properties
+* link:https://github.com/opengeospatial/styles-and-symbology/issues/62[#62]: Move Metadata in 1-core
+* link:https://github.com/opengeospatial/styles-and-symbology/issues/63[#63]: Complete full list of requirements for 1-core
+* link:https://github.com/opengeospatial/styles-and-symbology/issues/64[#64]: Rename stippleStyle to stipple
+* link:https://github.com/opengeospatial/styles-and-symbology/issues/71[#71]: Add support to allow arbitrary Expressions (not only literals) for all Symbolizer properties
+* link:https://github.com/opengeospatial/styles-and-symbology/issues/74[#74]: UML class diagrams
+* link:https://github.com/opengeospatial/styles-and-symbology/issues/76[#76]: Clarify viz.pass, feature.pass and zOrder concepts
+
+===== Conclusion
+
+The code sprint enabled the editors of the OGC Cartographic Symbology candidate standard to work together on drafting the standard.
+They were able to clarify some concepts, requirements and use cases and moved the standard forward. A number of important tasks remain to be completed before CartoSym 2.0 - Part 1 can be finalized.
+
+These tasks include:
+
+* detailing the requirements, including examples of rendering with the corresponding link:https://docs.ogc.org/DRAFTS/18-067r4.html#rc-cscss[CartoSym-CSS encoding] examples in the Requirements Classes
+and appendix B: link:https://docs.ogc.org/DRAFTS/18-067r4.html#annex-sldse[Mapping of SLD/SE and notable vendor extensions to the Conceptual Model]
+* update the UML class diagrams (see link:https://github.com/opengeospatial/styles-and-symbology/issues/74[#74]),
+* writing the Annex A: "Abstract Test Suite (Normative)" as already started link:https://github.com/maxcollombin/styles-and-symbology/tree/ats[here],
+* implementing transcoders and rendering engines,
+* define a global UML class hierarchy diagram covering all of the Requirements Classes. Enterprise Architect could be a useful tool for this. It would also allow us to generate an XSD schema and a JSON schema so that we can
+check the consistency of the existing schema. The UML to JSON conversion tool link:https://github.com/maykinmedia/imvertor-lite[imvertor-lite] could also be considered,
+* check that the JSON schema complies with the candidate link:https://github.com/Geonovum/uml2json[Best Practice for OGC - UML to JSON Encoding Rules].

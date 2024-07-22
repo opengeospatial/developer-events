@@ -29,6 +29,8 @@ include::results/ogcapicoverages.adoc[]
 
 include::results/jsonfg.adoc[]
 
+include::results/ogcstylessymbology.adoc[]
+
 === Specifications from the Community
 
 include::results/mapml.adoc[]
