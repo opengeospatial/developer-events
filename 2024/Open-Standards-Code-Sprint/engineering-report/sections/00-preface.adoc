@@ -55,6 +55,8 @@ All questions regarding this document should be directed to the editors or the c
 |	Tom Kralidis | OSGeo | Contributor
 |	Chris Little | Met Office | Contributor
 |	Frank Terpstra | Geonovum | Contributor
+|	Maxime Collombin | University of Applied Sciences, Western Switzerland (HEIG-VD)  | Contributor
+|	Sam Meek |  Helyx Secure Information Systems | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
