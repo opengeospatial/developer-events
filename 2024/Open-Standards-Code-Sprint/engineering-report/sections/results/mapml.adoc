@@ -2,4 +2,28 @@
 
 ==== MapML
 
-TBA
+Several participants worked on this MapML track.
+
+mailto:rpcavaco@gmail.com[Rui Cavaco]'s work (in person at code sprint) had three different 'tracks':
+
+* get a more complete understanding of MapML concept, experimenting with reference implementation polyfill's examples;
+* experimenting with JavaScript, possibly extending some polyfill's funcionality;
+* understand polyfill suport to projected CRS's such as 'national grids'.
+
+At first experiments it was clear that MapML itself, and the reference implementation polyfill, show several complexities which manifest themselves when one goes beyond the simplest OSM tiling examples.
+
+Three examples of this: 
+
+* the map-extent element (and the possibility of existing several for each layer);
+* the combining of “projection” attribute and of “units” attribute;
+* the OSMTILES, CBTILES and other keywords for “projection” or “units”.
+
+The necessity to go through several examples to fully grasp the MapML complexity became very clear. 
+
+Also became quite clear that it is not crucial to extend polyfill's functionality, since it is supposed that such functionality should be, sooner or later, transferred to browser's code bases.
+
+So Rui Cavaco's final work was dedicated to JavaScript DOM manipulation using, one of MapML's most interesting features: the ability to, easily, add dynamic changes to web maps. In this case, a real world problem was addressed, the ability to add to and remove from, a web map, at user's request, some municipal-scale themes from Northern Portugal region.
+
+To this purpose a webapp was built using MapML polyfill from https://github.com/Maps4HTML/Web-Map-Custom-Element[Maps4HTML] and https://panel.holoviz.org/[Holoviz Panel] Python web framework.
+
+Slides describing this work in more detail can be found https://github.com/rpcavaco/panel_mapml/blob/main/MapML_Experiments.pdf[here]. The code repository on GitHub you can find it https://github.com/rpcavaco/panel_mapml[here].
