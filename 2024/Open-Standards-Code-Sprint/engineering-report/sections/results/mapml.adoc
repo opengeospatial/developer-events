@@ -10,7 +10,7 @@ mailto:rpcavaco@gmail.com[Rui Cavaco]'s work (in person at code sprint) had thre
 * experimenting with JavaScript, possibly extending some polyfill's funcionality;
 * understand polyfill suport to projected CRS's such as 'national grids'.
 
-At first experiments it was clear that MapML itself, and the reference implementation polyfill, show several complexities which manifest themselves when one goes beyond the simplest OSM tiling examples.
+At first experiments it was clear that MapML itself, and the reference implementation polyfill, show several capabilities which manifest themselves when one goes beyond the simplest OSM tiling examples.
 
 Three examples of this: 
 
@@ -18,7 +18,7 @@ Three examples of this:
 * the combining of “projection” attribute and of “units” attribute;
 * the OSMTILES, CBTILES and other keywords for “projection” or “units”.
 
-The necessity to go through several examples to fully grasp the MapML complexity became very clear. 
+The necessity to go through several examples to fully grasp the MapML capability became very clear. 
 
 Also became quite clear that it is not crucial to extend polyfill's functionality, since it is supposed that such functionality should be, sooner or later, transferred to browser's code bases.
 
