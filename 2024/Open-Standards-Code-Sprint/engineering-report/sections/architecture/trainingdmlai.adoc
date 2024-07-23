@@ -1,3 +1,3 @@
 ==== Training Data Markup Language for Artificial Intelligence
 
-TBA
+The Training Data Markup Language for Artificial Intelligence (TrainingDML-AI) is an encoding to support the storage of Machine Learning Training Datasets. Version 1.0 of the https://docs.ogc.org/is/23-008r3/23-008r3.html[Part 1: Conceptual Model Standard] has been published. Parts 2 & 3 with JSON and XML encodings have been submitted to OGC.  

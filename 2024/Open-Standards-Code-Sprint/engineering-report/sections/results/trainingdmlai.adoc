@@ -1,0 +1,7 @@
+==== Training Data Markup Language for Artificial Intelligence
+
+The Training Data Markup Language for Artificial Intelligence (TrainingDML-AI) standard was the focus for a mentoring session, and there was active discussion within the Discord platform.
+
+Wuhan University (WHU) were present online to support the discussions and implementations, which included:
+
+** Pixalytics Ltd (Sam Lavender) worked on updating their implementation, using the https://github.com/openrsgis/pytdml[pytdml] Python library. Problems were faced with recent updates to the library and so an https://github.com/openrsgis/pytdml/issues/11[issue] was raised.
