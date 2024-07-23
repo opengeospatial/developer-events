@@ -58,6 +58,10 @@ All questions regarding this document should be directed to the editors or the c
 |	Maxime Collombin | University of Applied Sciences, Western Switzerland (HEIG-VD)  | Contributor
 |	Sam Meek |  Helyx Secure Information Systems | Contributor
 |	Rui Cavaco | Norte Portugal Regional Coordination and Development Commission | Contributor
+|	Ivana Ivanova | Curtin University | Contributor
+|	TBA | TBA | Contributor
+|	TBA | TBA | Contributor
+|	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
 |=== 
