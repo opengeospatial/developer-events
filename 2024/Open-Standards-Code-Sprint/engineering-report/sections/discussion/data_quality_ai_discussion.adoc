@@ -2,17 +2,9 @@
 
 ==== Data Quality and Artificial Intelligence
 
-
-Concepts around data quality have evolved over the past 20 or so years with the advent and proliferation of open sourced, non-authoritative data sources. Standards such at ISO 19115 Geospatial Metadata and ISO 19157 Geospatial Data Quality have been used and incorporated into metadata profiles to record the quality of geospatial datasets. One of the grounding concepts within the ISO standards is the _universe of discourse_ which is poorly translated to _ground truth_ or _real world_. In the early days of ISO concepts of data quality, the universe of discourse was much more simple to determine because the authoritative datasets were routinely ground truthed for accuracy. A salient example of this aerial photography where flight paths were planned and a ground crew would lay out tie points on the ground to be captured by the imagery. Distances then could be physically measured to create an overall positional accuracy for the image. In the modern world of non-authoritative, crowdsourced or open source data, the _universe of discourse_ concept does not apply in the same way. The data quality model reports on concepts such as:
-
-* Completeness - the number or percentage of features that appear within the dataset compared to the universe of discourse.
-* Thematic Accuracy - the number or percentage of misclassified features.
-* Logical Consistency - the number of missing links in a road dataset.
-* Conceptual Consistency - number of overlapping surfaces in a dataset.
-
 A key element of data quality is a record of how the dataset has been processed including information about the computational manipulation as well as individuals and organizations who have completed the processing. In ISO 19115, this is described in the lineage classes, and specifically through the LE_Processing Class. This class enables recording of the specific processing and runtime parameters required to create a data quality metric and recreate the lineage if necessary.
 
-The OGC has been exploring the use of reusable building blocks to enable elements of standards to be re-used, extended, and modified with a FAIR (Findable, Accessible, Interoperable, Reusable) way. The objective of the data quality exploration work in this codesprint was to take these concepts to address the following questions:
+The OGC has been exploring the use of reusable building blocks to enable elements of standards to be re-used, extended, and modified with a FAIR (Findable, Accessible, Interoperable, Reusable) way. As presented in <<results_iso19157_3>>, the code sprint participants examined the potential use of the ISO 19157-3 data quality measures register to support the documentation of TrainingDML-AI data quality reports. Some of the objectives of the data quality exploration work in this code sprint were to take these concepts to address the following questions:
 
 . Can we create machine readable provenance chains to enable scientific data re-creation?
 . Can machine readable provenance chains be automatable, and executable?
@@ -20,55 +12,8 @@ The OGC has been exploring the use of reusable building blocks to enable element
 . Can the formulae be parsed into machine readable formats, new variables injected, and the provenance chain executed?
  
 
-===== Approach
+The research question "Can we create machine readable provenance chains to enable scientific data re-creation?" was addressed through the work on pygeoapi. As presented in <<results_pygeoapi_processes_part2>>, pygeoapi was extended to implement support for ingesting a Common Workflow Language (CWL) definition document in accordnance with the OGC API - Processes - Part 2: Deploy, Replace, Undeploy candidate Standard. The successful execution of the CWL workflows through pygeoapi also addressed the research question "Can machine readable provenance chains be automatable, and executable?". Finally, the research question "Can we use the OGC building block RAINBOW server to store and refer to mathematical formulae?" was partly addressed through the creation of data quality reports that referenced RAINBOW-provided definitions containing mathematical formulae as reported in <<results_iso19157_3>>. Unfortunately, it was not possible to inject new variables into the formula to execute the chain for another dataset. Therefore the research question "Can the formulae be parsed into machine readable formats, new variables injected, and the provenance chain executed?" remains to be answered in future code sprints.
 
-One of the major focuses of the CodeSprint was the use, testing, and enhancement of Training Data Markup Language (TrainingDML). Therefore, this was used as the target standard to test the approach. The example link:https://github.com/openrsgis/trainingdml-ai-extension/blob/main/examples/WHU-building_Dataset/collection.json[dataset] is a simple, reduced and modified version of the dataset link. This is shown below:
-
-[source, json]
-----
-{
-    "type": "DataQuality",
-    "scope": {
-      "level": "dataset",
-      "levelDescription": [
-        {
-          "dataset": "main.bld_fts_building"
-        }
-      ]
-    },
-    "report": [
-      {
-        "type": "PositionalAccuracy",
-        "measure": {
-            "measureIdentification": {
-                "code": "FT28_2",
-                "authority": "https://defs-dev.opengis.net/vocprez-hosted/object?uri=https%3A//standards.isotc211.org/19157/-3/1/dqc/content/formulaType/"
-            },
-            "nameOfMeasure": [
-                "Absolute Value of mean error to the standard deviation",
-                "Horizontal"
-            ],
-            "measureDescription": "Calculates the mean error of the standard deviation"
-        },
-        "evaluationMethod": {
-          "evaluationMethodDescription": "Uses the standard mathematical formula"
-        },
-        "result": [
-          {
-            "quantitativeResult": {
-              "value": [
-                0.75643
-              ],
-              "valueUnit": "real"
-            }
-          }
-        ]
-      }
-    ]
-}
-----
-
-The test dataset contains the the _PositionalAccuracy_ element which implements the the _measureIdentification_ element that in turn includes the reference to the authority and a code that corresponds to the data quality formula expressed in MathML. The objective of the software developed in this CodeSprint was to parse the MathML to make it machine readable, machine executable, and parsable. The output was successful to a point of making the formula machine readable, but it was not possible to inject new variables into the formula to execute the chain for another dataset.
 
 ====== Recommendations & Next Steps
 
