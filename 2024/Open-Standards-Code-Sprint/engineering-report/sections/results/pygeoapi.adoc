@@ -12,6 +12,8 @@ demonstrated and made available as proof of concept.
 
 image::images/pygeoapi-mentor-stream.png[align="center"]
 
+
+[[results_pygeoapi_processes_part2]]
 ====== OGC API - Processes - Part 2 implementation
 
 An initial prototype was implemented to support the OGC API - Processes - Part 2: Deploy, Replace, Undeploy https://docs.ogc.org/DRAFTS/20-044.html[draft standard].  Process creation was implemented by way of ingesting a https://commonwl.org[Common Workflow Language (CWL)] definition which referenced a Python application made available as a Docker image.  The Python application implemented water body detection, which took as input Copernicus Sentinel-2 or USSG Landsat-9 data and detected water bodies by applying the Otsu thresholding technique on the Normalized Difference Water Index (NDWI)footnote:[https://eoap.github.io/quickwin/app/water-bodies-detection].  This application was made available as an example in support of the https://docs.ogc.org/bp/20-089r1.html[OGC Best Practice for Earth Observation Application Package].

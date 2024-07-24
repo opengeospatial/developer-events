@@ -1,3 +1,63 @@
-==== ISO 19157-3
 
-TBA
+[[results_iso19157_3]]
+==== ISO 19157-3 Data Quality Measures Register
+
+A current version of the ISO 19157-3 register that is available through OGC RAINBOW contains an initial set of more than 80 recognized standard data quality measures (e.g. such as the Root Mean Square Error used for evaluation positional accuracy, or the Misclassification Matrix used to evaluate the attribute accuracy). A screenshot of the register is shown in <<img_vocprez_dqm>>. The data quality measures were used in the first few tests as part of the Code Sprint. 
+
+[#img_vocprez_dqm]
+.A screenshot of the data quality measures register display on OGC RAINBOW
+image::images/vocprez.png[]
+
+As one of the major focuses of the code sprint was the use, testing, and enhancement of data quality documentation in AI applications, the JSON encoding of the Training Data Markup Language for AI (TrainingDML-AI) Standard was used as the target for testing the potential use of the ISO 19157-3 data quality measures register in the context of AI. The example link:https://github.com/openrsgis/trainingdml-ai-extension/blob/main/examples/WHU-building_Dataset/collection.json[dataset] is a simple, reduced and modified version of the dataset link. This is shown below:
+
+[source, json]
+----
+{
+    "type": "DataQuality",
+    "scope": {
+      "level": "dataset",
+      "levelDescription": [
+        {
+          "dataset": "main.bld_fts_building"
+        }
+      ]
+    },
+    "report": [
+      {
+        "type": "PositionalAccuracy",
+        "measure": {
+            "measureIdentification": {
+                "code": "FT28_2",
+                "authority": "https://defs-dev.opengis.net/vocprez-hosted/object?uri=https%3A//standards.isotc211.org/19157/-3/1/dqc/content/formulaType/"
+            },
+            "nameOfMeasure": [
+                "Absolute Value of mean error to the standard deviation",
+                "Horizontal"
+            ],
+            "measureDescription": "Calculates the mean error of the standard deviation"
+        },
+        "evaluationMethod": {
+          "evaluationMethodDescription": "Uses the standard mathematical formula"
+        },
+        "result": [
+          {
+            "quantitativeResult": {
+              "value": [
+                0.75643
+              ],
+              "valueUnit": "real"
+            }
+          }
+        ]
+      }
+    ]
+}
+----
+
+The test dataset contains the the _PositionalAccuracy_ element which implements the the _measureIdentification_ element that in turn includes the reference to the authority and a code that corresponds to the data quality formula expressed in MathML. The _measureIdentification_ element in the listing above references a data quality measure that is defined through a mathematical formula. The URI reference leads to a page as shown in <<img_formula_example>> when displayed in a web browser.
+
+[#img_formula_example]
+.A screenshot of a mathematical formular from the data quality measures register
+image::images/formula.png[]
+
+The objective of the software developed in this code sprint was to parse the MathML to make it machine readable, machine executable, and parsable. The output was successful to a point of making the formula machine readable, but it was not possible to inject new variables into the formula to execute the chain for another dataset.
