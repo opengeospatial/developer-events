@@ -1,3 +1,3 @@
-==== OGC CartoSym
+==== OGC Cartographic Symbology candidate Standard
 
-TBA
+The OGC Cartographic Symbology candidate Standard (CartoSym) defines a Conceptual Model, a Logical Model and Encodings for describing symbology rules for the portrayal of geographical data (<<bib_cartosym>>). The targets of this candidate Standard are symbology encodings and cartographic rendering engines. The candidate Standard is modularized into multiple requirements classes, with a minimal core describing an extensible framework, with clear extension points, for defining styles consisting of styling rules selected through expressions and applying symbolizers configured using properties. The candidate Standard defines two encodings for the logical model: one based on JSON which can be readily parsed by JSON parsers, as well as a more expressive encoding better suited for hand-editing inspired from Web Cartographic Styled Sheets (CSS) and related cartographic symbology encodings.

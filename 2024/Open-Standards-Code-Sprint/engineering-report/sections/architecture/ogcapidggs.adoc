@@ -1,3 +1,3 @@
 ==== OGC API - Discrete Global Grid Systems
 
-TBA
+The OGC API - Discrete Global Grid Systems candidate Standard defines building blocks which can be used as part of a Web API to retrieve geospatial data for a specific area, time and resolution of interest, based on a specific Discrete Global Grid System (DGGS) and indexing scheme (<<bib_ogcapidggs>>). The candidate Standard also supports querying of the list of DGGS zones from which data is available.

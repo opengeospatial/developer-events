@@ -1,3 +1,3 @@
 ==== OGC API - Connected Systems
 
-TBA
+The OGC API - Connected Systems candidate Standard specifies the fundamental API building blocks for interacting with Connected Systems and associated resources (<<bib_ogcapiconnectedsystems>>). A Connected System represents any kind of system that can either directly transmit data via communication networks (being connected to them in a permanent or temporary fashion), or whose data is made available in one form or another via such networks. This definition encompasses systems of all kinds, including in-situ and remote sensors, actuators, fixed and mobile platforms, airborne and space-borne systems, robots and drones, and even humans who collect data or execute specific tasks.
