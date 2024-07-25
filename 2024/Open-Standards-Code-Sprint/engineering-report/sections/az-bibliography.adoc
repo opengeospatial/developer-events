@@ -19,3 +19,6 @@
 * [[[bib_ogcapiconnectedsystems,OGC 20-058]]], OGC: OGC API - Connected Systems - Part 1: Feature Resources (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/23-001r0.html
 * [[[bib_ogcapidggs,OGC 21-038]]], OGC: OGC API - Discrete Global Grid Systems - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/21-038.html
 * [[[bib_cartosym,OGC 18-067r4]]], OGC: OGC Cartographic Symbology - Part 1: Core Model & Encodings (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/18-067r4.html
+* [[[bib_ogcapirecords,OGC 20-004]]], OGC: OGC API - Records - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/20-004.html
+* [[[bib_ogcapiedrpart2,OGC 23-057]]], OGC: OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/23-057.html
+* [[[bib_jsonfg,OGC 21-045r1]]], OGC: OGC Features and Geometries JSON - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/21-045r1.html
