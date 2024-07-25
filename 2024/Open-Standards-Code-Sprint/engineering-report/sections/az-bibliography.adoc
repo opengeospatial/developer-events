@@ -12,5 +12,13 @@
 * [[[OGC18-062r2,OGC 18-062r2]]]
 * [[[OGC20-057,OGC 20-057]]]
 * [[[OGC18-088,OGC 18-088]]]
-* [[[bib_ogcapicoverages,OGC 20-058]]], OGC API - Coverages - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/19-087.html
-* [[[bib_iso19157_3,ISO/AWI 19157-3]]], ISO/AWI 19157-3 Geographic information - Data quality - Part 3: Data quality measures register (Draft). https://www.iso.org/standard/87032.html
+* [[[MapML, MapML]]], Peter Rushforth: Map Markup Language - Draft Community Group Report, Maps For HTML Community Group. https://maps4html.org/MapML/spec
+* [[[bib_ogcapicoverages,OGC 20-058]]], OGC: OGC API - Coverages - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/19-087.html
+* [[[bib_iso19157_3,ISO/AWI 19157-3]]], ISO: ISO/AWI 19157-3 Geographic information - Data quality - Part 3: Data quality measures register (Draft). https://www.iso.org/standard/87032.html
+* [[[bib_ogcapimaps,OGC 20-058]]], OGC: OGC API - Maps - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/20-058.html
+* [[[bib_ogcapiconnectedsystems,OGC 20-058]]], OGC: OGC API - Connected Systems - Part 1: Feature Resources (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/23-001r0.html
+* [[[bib_ogcapidggs,OGC 21-038]]], OGC: OGC API - Discrete Global Grid Systems - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/21-038.html
+* [[[bib_cartosym,OGC 18-067r4]]], OGC: OGC Cartographic Symbology - Part 1: Core Model & Encodings (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/18-067r4.html
+* [[[bib_ogcapirecords,OGC 20-004]]], OGC: OGC API - Records - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/20-004.html
+* [[[bib_ogcapiedrpart2,OGC 23-057]]], OGC: OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/23-057.html
+* [[[bib_jsonfg,OGC 21-045r1]]], OGC: OGC Features and Geometries JSON - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/21-045r1.html
