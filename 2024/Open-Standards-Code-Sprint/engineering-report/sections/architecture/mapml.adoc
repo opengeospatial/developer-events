@@ -2,4 +2,41 @@
 
 ==== MapML
 
-TBA
+
+===== Introduction
+
+Map Markup Language (MapML) is a text-based format which enables web page authors to insert maps into web pages as hypertext documents exchanged over HTTP. One of the well known implementations of MapML is the open source GeoServer software product. Through this code sprint, the MapML community sought to tackle integration of MapML into OGC APIs and potentially to demonstrate both the serving of MapML documents through such APIs and the accessing of content encoded as MapML. Experimenting with the implementation of MapML in OGC APIs is important because of the need to obtain feedback from the developer community and because MapML is a proposal to the browser community from the spatial community for natively integrating maps into web pages. In order to make that case to the browser community, there is a need to have the widest possible review and feedback from the geospatial community. 
+
+Across society, HTML plays a key role on the Web.  Maps are therefore important enough to fit into web browsers because maps play a key role in how location is communicated across society. So on the day that browsers handle maps natively the same way that they handle images, therefore should be a wealth of content waiting to be displayed on the possibly billions of web pages that will display location information. So integrating MapML support into geospatial content management systems that are fronted by implementations of OGC Web Service Standards and OGC API Standards will be essential and so the OGC community and the MapML viewer polyfill are key to meeting that goal. 
+
+===== Structure
+
+The MapML Viewer is a media-like widget that can be controlled with attributes like other forms of media that can be embedded in a web page. The Map content is represented by the layer element and it comes in two flavors, _inline_ and _remote_, shown in <<mapml_structure>> on the left and right respectively. Inline content is interactive and has a Document Object Model (DOM) footprint in the web browser. In contrast, remote content can be identified by the fact that the layer has a source attribute pointing to a remote web service of OGC API. Remote content is essential mashups of ad hoc content from around the Web.
+
+[#mapml_structure]
+.The structure of MapML
+image::images/mapml_structure.png[]
+
+Although interactive content or any inline content in MapML comes in the form of map extent, map feature or map tile elements as well as metadata, all content is encoded according to the HTML rules. Of course, that means it has to be parsed by the web browser by accessing it from the HTML page, so it is encoded according to HTML rules nonetheless. Remote content is encoded according to the XHTML Namespace, and XML parsing rules, and it is naturally more rigid in terms of parsing rules and therefore can be incorporated quite readily into HTML pages. 
+
+Map extents represent templated feature content. Map features are of course features and tiles are individual tiles. The geospatial data can be viewed through the viewer in a web page as one or more view ports on the document canvas and single or as a single or a multi page web application by using the MapML viewer element as many times as needed. 
+
+The viewer is conceptually like the video or audio element. It has a set of built-in controls that are exemplified in <<mapml_viewer>>, and they can be turned on or off as a group or individually. The default controls are keyboard accessible and are navigable with Tab and Shift buttons. Controls are are not styleable, so if custom controls are needed, then a developer has to greater their own. That is why the controls are toggleable.
+
+[#mapml_viewer]
+.MapML Viewer
+image::images/mapml_viewer.png[]
+
+===== Layers
+
+In MapML, a map can have zero or more layers and although for map layers fewer is oftentimes better, a map can get very visually cluttered and quickly if it has too many layers. Layers are exposed to the user through the layer control in DOM order, from the closest to the furthest. The documents are parsed in sequence based on distance from the document start. Layers control contains one level of content, so there cannot be infinitely nested content. There can only be a single layer and a single node of depth in a layer. 
+
+===== Map
+
+A map extent is a templated form of content that allows you to fetch more content and obscure earlier data. So a map extent is exposed in the layer control under layers, whereas individual features are not. So if control of individual features is needed, the features need to be wrapped in a layer of their own. Layers can contain feature collections, and layer content is rendered according to the 'painters model'. Features on a map are keyboard navigable, whereas projections and coordinate reference systems are dealt with as a single concept. 
+
+WMS can be integrated into MapML using a templated form of markup that is called the map extent and in within a map extent there are inputs which are coded according to the capabilities supported by the WMS, for example the bounds of the layers. These inputs are are like an HTML form in the sense of how they are treated and handled. The values of those inputs can be serialized into the templated link value and thereby enabling an application to bind a number of variables of different names into into a request and make a whole map request. 
+
+===== Tiles
+
+MapML supports map tiles through a coordinate reference system called the Tiled Coordinate Reference System (TCRS) - a set of Coordinate Reference Systems which share a common origin in space, but which differ by the size of their smallest unit at defined locations, e.g. meters/pixel along the equator (<<MapML>>). A TCRS binds an instance of a coordinate reference system with an instance of a tile matrix set and into a single well known value of projection. An example of how the TCRS is handled can be seen in GeoServer's handling of the TCRS. GeoServer manages the association between the tile matrix set and the coordinate reference system internally. There are a few well known or proof of concept TCRS defined by the MapML specification, and there are custom TCRS which can be defined by Web developers. 
