@@ -45,11 +45,11 @@ On the other hand, UAB-CREAF participated in the sprint by contributing their Mi
 
 [#img_mapmlInChrome,reftext='{figure-caption} {counter:figure-num}']
 .Contiguous tiles from different services and APIs sharing same WebMercatorQuad tile matrix set and the tile matrix identified as 15 (sometimes called "zoom")
-image::../../images/mapmlInChrome.png[width=800,align="center"]
+image::images/mapmlInChrome.png[width=800,align="center"]
 
 [#img_HTMLwithMapML,reftext='{figure-caption} {counter:figure-num}']
 .Contiguous tiles from different services and APIs sharing same WebMercatorQuad tile matrix set and the tile matrix identified as 15 (sometimes called "zoom")
-image::../../images/HTMLwithMapML.png[width=800,align="center"]
+image::images/HTMLwithMapML.png[width=800,align="center"]
 
 In both cases the MiraMon Map Server implementing OGC API map API is used twice:
 
@@ -76,7 +76,7 @@ In case the API implementation supports MapML it is convenient that the collecti
 
 [#img_CollectionIdWithMapML,reftext='{figure-caption} {counter:figure-num}']
 .Contiguous tiles from different services and APIs sharing same WebMercatorQuad tile matrix set and the tile matrix identified as 15 (sometimes called "zoom")
-image::../../images/CollectionIdWithMapML.png[width=800,align="center"]
+image::images/CollectionIdWithMapML.png[width=800,align="center"]
 
 
 
