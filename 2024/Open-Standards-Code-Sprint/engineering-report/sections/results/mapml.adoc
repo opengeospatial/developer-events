@@ -4,6 +4,16 @@
 
 Several participants worked on this MapML track.
 
+===== pygeoapi
+
+TBA
+
+===== Miramon
+
+TBA
+
+===== Experimentation by Rui Cavaco
+
 mailto:rpcavaco@gmail.com[Rui Cavaco]'s work (in person at code sprint) had three different 'tracks':
 
 * get a more complete understanding of MapML concept, experimenting with reference implementation polyfill's examples;
