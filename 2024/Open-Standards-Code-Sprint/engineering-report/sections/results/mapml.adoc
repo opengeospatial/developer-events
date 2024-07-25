@@ -28,18 +28,27 @@ To this purpose a webapp was built using MapML polyfill from https://github.com/
 
 Slides describing this work in more detail can be found https://github.com/rpcavaco/panel_mapml/blob/main/MapML_Experiments.pdf[here]. The code repository on GitHub you can find it https://github.com/rpcavaco/panel_mapml[here].
 
-On the other hand, UAB-CREAF participated in the spring by contributing their MiraMon Map Server. This application has been addapted to OGC API Maps and Tiles during previous sprints. In this particular sprint, two modifications were introduced to include support to MapML. 
+On the other hand, UAB-CREAF participated in the sprint by contributing their MiraMon Map Server. This application was adapted to OGC API Maps and Tiles during previous sprints. The OGC API Maps allow for requesting a map of a collection. If the request is done to this endpoint `/collections/{collectionId}/map` with no parameters, the server is free to respond with a "nice" map that represents the collection or a representative area of it. If the negotiated media type is static, the selection of the area is particularly important. In the case of MapML, the map is interactive, giving freedom to the user to correct the server decision by panning and zooming. In this particular sprint, two modifications were introduced in the MiraMon Map Server to include MapML support.
 
-* A request to a /collections/{collectionId}/map with no extra parameters that negociates HTML, will result in the creation of an HTML page that includes a MapML section to preview the map. This results in an HTML interactive page.
-* A request to a /collections/{collectionId}/map with no extra parameters that negociates MapML, will result in a MapML document that can be visualized in Chrome if the rigth add-in has been previously setup.
+* A request to a `/collections/{collectionId}/map` with no extra parameters that negotiates HTML will result in the creation of an HTML page that includes some metadata about the collection and a MapML section to show the interactive map. This web page can be visualized in the map browser with the help of MapML common JavaScript libraries.  
+* A request to a `/collections/{collectionId}/map` with no extra parameters that negotiates MapML, will result in a MapML document that can be visualized in Chrome if an specific add-in has been previously setup.
 
-In both cases the map API is used twice:
+[#img_mapmlInChrome,reftext='{figure-caption} {counter:figure-num}']
+.Contiguous tiles from different services and APIs sharing same WebMercatorQuad tile matrix set and the tile matrix identified as 15 (sometimes called "zoom")
+image::../../images/mapmlInChrome.png[width=800,align="center"]
+
+[#img_HTMLwithMapML,reftext='{figure-caption} {counter:figure-num}']
+.Contiguous tiles from different services and APIs sharing same WebMercatorQuad tile matrix set and the tile matrix identified as 15 (sometimes called "zoom")
+image::../../images/HTMLwithMapML.png[width=800,align="center"]
+
+In both cases the MiraMon Map Server implementing OGC API map API is used twice:
 
 * It produces the initial respond to the "minimalistic" map request (with no parameters) asking for a the HTML or MapML representation of the collection.
-* The MapML content uses the URL template mechanims to get a PNG map of the current view and the subsequent views that the user will generate by panning ans zooming into the map.
+* The MapML content uses the URL template mechanism to get a image map (in this case a PNG) of the current view and the subsequent views that the user will generate by panning ans zooming into the map.
 
-The following code is common to both MapML responses (HTML or MapML versions). Please note that the OGC Map API is used to generate the PNGs maps. This demonstrates that MapML can use the new OGC API Maps with no modification in the current especification.
-[source]
+The following code is common to both MapML responses (HTML or MapML versions). Please note that the OGC Map API is used to generate the PNGs maps. The HTML element `map-link` contains a link to a URL template that once "resolved" with the right `map-input` values become a call that conforms to the OGC API maps. This demonstrates that the current specification of MapML can use the new OGC API Maps with no modification.
+
+[source, HTML]
 ----
   <map-extent units="WGS84" label="etopo2" checked="checked">
     <map-input name="z" type="zoom" min="1" max="15"></map-input>
@@ -52,4 +61,15 @@ The following code is common to both MapML responses (HTML or MapML versions). P
 		<map-link rel="image" tref="https://www.ogc3.grumets.cat/cgi-bin/world/miramon.cgi/collections/etopo2/map?crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84&amp;bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84&amp;bbox={xmin},{ymin},{xmax},{ymax}&amp;width={w}&amp;height={h}&amp;f=PNG&amp;transparent=true"></map-link>
   </map-extent>
 ----
+
+In case the API implementation supports MapML it is convenient that the collection description page advertize a link to the map. The following figure illustrates who this looks like in the HTML representation of the response.
+
+[#img_CollectionIdWithMapML,reftext='{figure-caption} {counter:figure-num}']
+.Contiguous tiles from different services and APIs sharing same WebMercatorQuad tile matrix set and the tile matrix identified as 15 (sometimes called "zoom")
+image::../../images/CollectionIdWithMapML.png[width=800,align="center"]
+
+
+
+
+
 

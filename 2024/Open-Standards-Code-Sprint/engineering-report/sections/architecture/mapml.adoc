@@ -2,4 +2,7 @@
 
 ==== MapML
 
-TBA
+https://maps4html.org/MapML/spec/[Map Markup Language] (MapML) is an extended subset of HTML, for maps. MapML extends the semantics of several HTML Standard elements, and specifies a small set of new, mapping-specific elements, in the HTML namespace (http://www.w3.org/1999/xhtml).
+
+MapML is a text-based format which allows map authors to encode map information as hypertext documents exchanged over HTTP. The format is defined using some characteristics of HTML Standard, The GeoJSON Format, Web Map Service Implementation Specification, Web Map Tile Service Implementation Standard, and other standards as noted. Currently, there is only an XHTML syntax of MapML, that relies on custom elements' standard syntax. In the future, the intention is to extend the HTML parser to include the definitions of the new elements, and thereby enable an HTML syntax of MapML, one that is compatible with existing browsers' HTML parser modes.
+
