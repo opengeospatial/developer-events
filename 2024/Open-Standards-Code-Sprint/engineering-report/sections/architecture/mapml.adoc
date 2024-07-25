@@ -2,7 +2,6 @@
 
 ==== MapML
 
-
 ===== Introduction
 
 Map Markup Language (MapML) is a text-based format which enables web page authors to insert maps into web pages as hypertext documents exchanged over HTTP. One of the well known implementations of MapML is the open source GeoServer software product, which provides access to MapML through WMS, WMTS and WFS so far. Through this code sprint, the MapML community sought to tackle integration of MapML into OGC APIs and potentially to demonstrate both the serving of MapML documents through such APIs and the accessing of content encoded as MapML. Experimenting with the implementation of MapML in OGC APIs is important because of the need to obtain feedback from the developer community and because MapML is a proposal to the browser community from the spatial community for natively integrating maps into web pages. In order to make that case to the browser community, there is a need to have the widest possible review and feedback from the geospatial community. 
