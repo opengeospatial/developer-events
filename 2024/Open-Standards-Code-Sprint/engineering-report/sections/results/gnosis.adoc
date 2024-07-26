@@ -38,13 +38,13 @@ There is no need to provide the coordinates of the zone geometry, of the centroi
 {
    "dggrs" : "https://www.opengis.net/def/dggrs/OGC/1.0/ISEA3H",
    "zoneId" : "B2-1-A",
-   "depths" : [ 7 ],
+   "depths" : [ 9 ],
    "values" : {
       "Elevation" : [
          {
-            "depth" : 7,
-            "shape" : { "count" : 2269, "subZones" : 2269 },
-            "data" : [ -43.212332564804, -49.3541585971952, ..., -5158.8415987109893 ]
+            "depth" : 9,
+            "shape" : { "count" : 19927, "subZones" : 19927 },
+            "data" : [ -43.212332564804, -43.553545122159, ..., -5158.8415987109893 ]
          }
       ]
    }
