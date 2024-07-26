@@ -59,9 +59,10 @@ All questions regarding this document should be directed to the editors or the c
 |	Sam Meek |  Helyx Secure Information Systems | Contributor
 |	Rui Cavaco | Norte Portugal Regional Coordination and Development Commission | Contributor
 |	Ivana Ivanova | Curtin University | Contributor
+|	Jerome St-Louis | Ecere | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
-|=== 
+|===

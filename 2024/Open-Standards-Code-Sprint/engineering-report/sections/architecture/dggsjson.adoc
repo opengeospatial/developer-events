@@ -1,3 +1,11 @@
-==== DGGS JSON and UBJSON
+[[dggs-json]]
+==== DGGS-JSON and DGGS-UBJSON
 
-TBA
+The https://docs.ogc.org/DRAFTS/21-038.html#rc_data-json[DGGS-JSON] and https://docs.ogc.org/DRAFTS/21-038.html#rc_data-ubjson[DGGS-UBJSON] (based on https://ubjson.org/[Universal Binary JSON])
+formats, defined as part of requirement classes for OGC API - DGGS, provide a compact and efficient way to retrieve data quantized to a particular Discrete Global Grid Reference System (DGGRS).
+By leveraging a shared knowledge of the DGGRS between the client and server (or the producer and consumer in the case of an offline file), the large majority of the payload
+is simply the data values associated with each sub-zone at a given relative depth of the parent zone for which data is being encoded.
+A fixed deterministic sub-zone order needs to be defined as part of the DGGRS in order to enable this.
+
+A draft https://github.com/opengeospatial/ogcapi-discrete-global-grid-systems/blob/master/core/schemas/dggs-json/dggs-json.json[JSON schema] for DGGS-JSON is available.
+See also the <<gnosis-dggsjson,first implementation deployed in the GNOSIS Map Server>> during this code sprint.
