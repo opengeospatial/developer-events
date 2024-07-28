@@ -15,7 +15,15 @@ TBA
 
 ==== MapML
 
-TBA
+===== pygeoapi-based prototype
+
+This exercise proved successful in being able to implement a prototype server application with support for MapML in the context of OGC APIs and indeed it was possible to have working MapML support in the short span of the code sprint.
+
+The implementation of the simple client web application is where MapML really shines, as it makes it simple for consumers of geospatial data to setup an HTML document with a map and relevant data.
+
+However, with regard to the work done in order to support MapML on the backend, there seems to be some duplication of effort, which clashes with the perscriptions found in the OGC API standards. The adoption of a custom MapML document type, based on XHTML, while apropriate for the frontend, leads to the server having to perform additional serialization of basically the same payloads which are being generated as JSON. This can be seen both in the case of serving MapML tile metadata and also when serving MapML features.
+
+Perhaps MapML would be more appealing to backend developers if, for remote content, it were able to consume the JSON-based payloads that are described in the OGC API family of standards rather than requiring them to be re-encoded in `+text/mapml+`.
 
 ==== Data Quality and Artificial Intelligence
 
