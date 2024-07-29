@@ -10,7 +10,7 @@ Across society, HTML plays a key role on the Web.  Maps are therefore important 
 
 ===== Structure
 
-The MapML viewer is a media-like widget that can be controlled with attributes like other forms of media that can be embedded in a web page. The Map content is represented by the layer element and it comes in two flavors, _inline_ and _remote_, shown in <<mapml_structure>> on the left and right respectively. Inline content is interactive and has a Document Object Model (DOM) footprint in the web browser. In contrast, remote content can be identified by the fact that the layer has a source `src` attribute pointing to a remote web service or OGC API. Remote content is essential to enabling mashups of ad hoc content from around the Web, and can be provided by OGC APIs directly.
+The MapML viewer is a media-like widget that can be controlled with attributes like other forms of media that can be embedded in a web page. The Map content is represented by the layer element and it comes in two flavors, _inline_ and _remote_, shown in <<mapml_structure>> on the left and right respectively. Inline content is interactive and has a Document Object Model (DOM) footprint in the web browser. In contrast, remote content can be identified by the fact that the layer has a source `src` attribute pointing to a remote web service or OGC API. Remote content is essential to enabling mashups of ad hoc content from around the Web, and would be provided by OGC APIs directly.
 
 [#mapml_structure]
 .The structure of MapML
@@ -20,7 +20,7 @@ Inline content in MapML comes in the form of `map-extent`, `map-feature`, `map-t
 
 Map extents (`map-extent` elements) represent templated tiled, feature, or image map content that is repeatedly fetched as needed, based on movement of the map viewer. Map features are of course OGC Simple Features and tiles are either feature- or image-based. Geospatial data can be viewed in a web page as one or more maps on the document canvas in a single or multi page web application, by using the MapML viewer element as many times as needed. 
 
-The viewer is conceptually like the video or audio element. It has a set of built-in controls that are exemplified in <<mapml_viewer>>, and they can be turned on or off as a group or individually. The default controls are keyboard accessible and are navigable with Tab and Shift+Tab keys. The default controls are are not styleable, so if custom controls are needed, then a developer has to create their own. That is why the controls are toggleable.
+The viewer is conceptually like the video or audio element. It has a set of built-in controls that are exemplified in <<mapml_viewer>>, and they can be turned on or off as a group or individually. The default controls are keyboard accessible and are navigable with Tab and Shift+Tab keys. The default controls are not styleable, so if custom controls are needed, then a developer has to create their own. That is why the controls are toggleable.
 
 [#mapml_viewer]
 .MapML Viewer

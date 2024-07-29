@@ -6,7 +6,134 @@ Several participants worked on this MapML track.
 
 ===== pygeoapi
 
-TBA
+Pygeoapi was used as the base for a prototype web application that is able to serve MapML remote content.
+
+The original goal was to add MapML support by leveraging pygeoapi's plugin framework. However, after inspection of the code this proved to not be possible - proper integration of MapML would require modifications to the core pygeoapi code, something which was deemed out of scope for the code sprint. As such, development efforts consisted in developing a thin wrapper around pygeoapi which would add the relevant bits of MapML-related codewhile still keeping pygeoapi as the main agent. This approach worked out well.
+
+The prototype thus consisted in two-components:
+
+- A pygeoapi plugin that defined a tile-based data provider which knew how to respond to requests with
+the `Accept:text/mapml` header
+
+- A small middleware for pygeoapi's Flask application which intercepted relevant requests and performed post-processing of the pygeoapi response in order to add support for MapML
+
+In order to test the results, a simple web-based client was also implemented as a separate application. This web client featured the `+<mapml-viewer>+` element and configured remote layers that were being fetched from our prototype.
+
+
+====== pygeoapi MapML tile provider plugin
+
+Taking advantage of pygeoapi's extensibility the existing tile provider was subclassed in order to add support for responding with a MapML document to requests for tileset metadata. In the context of the code sprint, support was restricted to the `+WebMercatorQuad+` tileset. A sample request would be:
+
+.Request
+----
+GET /collections/{collection-id}/tiles/WebMercatorQuad "Accept:text/mapml"
+----
+
+The custom tile provider was implemented as to recognize the MapML media type being requested in the request's `+Accept+` header and to generate a suitable MapML document as the response. This allowed the pygeoapi-based prototype to serve as a server for OGC API Tiles, which generic clients would be able to use for requesting MapML data. The server thus generated a response like:
+
+.pygeoapi-based prototype response to tile metadata request
+[source, xml]
+----
+<mapml- xmlns="http://www.w3.org/1999/xhtml">
+<map-head>
+<map-title>Prevalence rates of mental health issues in London</map-title>
+<map-meta http-equiv="Content-Type" content="text/mapml;projection=OSMTILE"></map-meta>
+<map-meta charset="utf-8"></map-meta>
+<map-meta name="extent" content="top-left-easting=-29028.26648413821, top-left-northing=6694074.574114459, bottom-right-easting=14106.427797324195, bottom-right-northing=6724542.93687513"></map-meta>
+<map-link rel="license" href="" title=""></map-link>
+</map-head>
+<map-body>
+<map-extent units="OSMTILE" checked="checked">
+<map-input name="tileMatrix" type="zoom" value="0" min="0" max="18"></map-input>
+<map-input name="tileCol" type="location" units="tilematrix" axis="column"></map-input>
+<map-input name="tileRow" type="location" units="tilematrix" axis="row"></map-input>
+<map-link rel="tile" tref="http://localhost:5000/collections/grid_mental/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}?f=png"></map-link>
+</map-extent>
+</map-body>
+</mapml->
+----
+
+
+====== pygeoapi wrapper code
+
+The pygeoapi wrapper code, which was implemented as a https://flask.palletsprojects.com/en/2.3.x/api/#flask.Flask.after_request[Flask after_request()] callback, dealt with adding support for the `+text/mapml+` media type for some endpoints and mostly with converting features encoded in `+GeoJSON+` to their respective `+MapML+` representations, thus making it possible to have support for remote `MapML` features.
+
+.Example request for features using the mapml media-type
+----
+http /collections/{collection-id}/items "Accept:text/mapml" limit==1
+----
+
+With the prototype pygeoapi-based application generating the following response:
+
+.Response
+[source, xml]
+----
+<mapml- xmlns="http://www.w3.org/1999/xhtml">
+    <map-head>
+        <map-title>Observations</map-title>
+        <map-meta name="projection" content="OSMTILE"></map-meta>
+        <map-meta http-equiv="Content-Type" content="text/mapml;projection=OSMTILE"></map-meta>
+        <map-meta charset="utf-8"></map-meta>
+        <map-meta name="cs" content="gcrs"></map-meta>
+        <map-meta name="extent" content="top-left-longitude=-122, top-left-latitude=49, bottom-right-longitude=-75, bottom-right-latitude=43"></map-meta>
+        <map-link rel="license" href="" title=""></map-link>
+    </map-head>
+    <map-body><map-feature>
+            <map-properties>
+                <table>
+                    <tbody><tr>
+                            <td>stn_id</td>
+                            <td>35</td>
+                        </tr><tr>
+                            <td>datetime</td>
+                            <td>2001-10-30T14:24:55Z</td>
+                        </tr><tr>
+                            <td>value</td>
+                            <td>89.9</td>
+                        </tr></tbody>
+                </table>
+            </map-properties>
+            <map-geometry><map-point><map-coordinates>-75.00000000 45.00000000</map-coordinates></map-point></map-geometry>
+        </map-feature></map-body>
+</mapml->
+----
+
+====== Simple MapML web client
+
+In order to test how the pygeoapi-based prototype worked as a server of remote MapML data, a small web client was implemented, maing use of the https://www.npmjs.com/package/@maps4html/web-map-custom-element[@maps4html/web-map-custom-element] javascript library, which emulates support for MapML in the browser.
+
+The client asked for a couple of remote layers, being served by the pygeoapi-based prototype application. One of these remote layers served image tiles, while the other served MapML features.
+
+.Simple web based client for testing the MapML remote content being served by the pygeoapi-based prototype
+[source, html]
+----
+        <mapml-viewer projection="OSMTILE" zoom="1" lat="0.0" lon="0.0" controls>
+            <layer- label="OpenStreetMap" checked>
+                <map-extent units="OSMTILE" checked>
+                    <map-input name="z" type="zoom"  value="18" min="0" max="18"></map-input>
+                    <map-input name="x" type="location" units="tilematrix" axis="column" min="0"  max="262144" ></map-input>
+                    <map-input name="y" type="location" units="tilematrix" axis="row" min="0"  max="262144" ></map-input>
+                    <map-link rel="tile" tref="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" ></map-link>
+                </map-extent>
+            </layer->
+            <layer-
+                    label="grid mental from pygeoapi"
+                    src="https://da08-167-98-97-210.ngrok-free.app/collections/grid_mental/tiles/WebMercatorQuad"
+                    checked
+            ></layer->
+            <layer-
+                    label="obs from pygeoapi"
+                    src="https://da08-167-98-97-210.ngrok-free.app/collections/obs/items"
+                    checked
+            ></layer->
+        </mapml-viewer>
+----
+
+Below is a sample image demonstrating the operation of this simple web client.
+
+.Simple web client displaying a layer fetched from the remote pygeoapi-based prototype.
+image::images/pygeoapi-mapml-app1.png[width=700,align="center"]
+
 
 ===== Miramon
 
