@@ -19,7 +19,7 @@ include::results/ogcapiprocesses.adoc[]
 
 include::results/coveragejson.adoc[]
 
-include::architecture/trainingdmlai.adoc[]
+include::results/trainingdmlai.adoc[]
 
 === Candidate OGC Standards
 
