@@ -7,8 +7,6 @@ The code sprint included multiple software applications and experimented with se
 
 include::results/ogcsensorthingsapi.adoc[]
 
-include::results/ogcstaplus.adoc[]
-
 include::results/ogcapifeatures.adoc[]
 
 include::results/ogcapitiles.adoc[]
