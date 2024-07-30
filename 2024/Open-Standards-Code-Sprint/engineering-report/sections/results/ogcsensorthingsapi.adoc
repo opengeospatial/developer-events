@@ -1,3 +1,325 @@
-==== OGC SensorThings API
+==== OGC SensorThings API WebSub Extension
 
-TBA
+One objective of the EU [CitiObs](https://citiobs.eu) project is to enable decision makers with fit-for-purpose information about air quality collected from different base systems. Each system is collecting sensor information using their own APIs but make the sensor data available (to project partners) and the CitiObs decision support system via [STAplus](https://docs.ogc.org/is/22-022r1/22-022r1.html). STAplus, the [OGC SensorThings API](https://docs.ogc.org/is/18-088/18-088.html) PLUS extension defines additional entities in the data model that support the sensor data management for Citizen Science.
+
+When building such a decision support system, two important functional requirements have to be considered:
+
+* Fetching sensor data via STAplus using modern clients like [Orange](https://orangedatamining.com/) or [Jupiter Notebook](https://jupyter.org/). The Orange plugin is currently work in progress, but for managing sensor data via SensorThings API or STAplus, the first version of a Python library is available on PyPi: [STAplus on PyPi](https://pypi.org/project/staplus-client/).
+* Receiving updates of sensor reading based on self-set criteria. To support this requirement, the CitiObs team has started to develop (yet another) extension to SensorThings API: The WebSub Extension.
+
+This section of the Code Sprint Engineering Report introduces the WebSub extension and illustrates the current state of the implementation.
+
+The draft OGC Standard for [SensorThings API WebSub Extension](https://github.com/opengeospatial/sensorthings/tree/24-032) is currently work in progress. The idea of this extension has been contributed to the OGC membership during the 2024 Delft and Montreal meetings. There seem to be great interest in the functionality of the WebSub Extension which sparked the idea to contribute to the 2024 Code Sprint in London and improve the current prototype.
+
+===== Introduction to SensorThings API WebSub Extension
+
+The OGC SensorThings API Extension `WebSub` is based on the [W3C WebSub Recommendation](https://www.w3.org/TR/websub/). In particular the WebSub API for subscribe/unsubscribe and the opaque discovery via link data headers make the WebSub extension potentially applicable to other OGC APIs.
+
+The idea behind WebSub, as illustrated in [WebSub - High Level Protocol Flow](https://www.w3.org/TR/websub/#x2-high-level-protocol-flow) is quite simple: A `Subscriber` uses a service's synchronous API to fetch data. If interested in receiving event driven data via a provided WebHook, the subscriber can use the `Link rel='self'` to subscribe for updates. The subscription requires that the subscriber provides a callback URL which is a regular HTTP(S) POST endpoint that conforms to the W3C Recommendation.
+
+The `Publisher` is a SensorThings API implementation that implements the WebSub extension. The requirement is that the implementation returns the Link headers `role='self'` and `role='hub'` for an HTTP GET and HEAD request. The HTTP HEAD request can be used by the subscriber if only interested in the WebSub discovery without fetching data. 
+
+A SensorThings API WebSub Hub implementation uses the SensorThings MQTT functionality to subscribe for updates. Any SensorThings API service deployment that offers the `Link rel='hub'` header must support MQTT notifications as defined in the SensorThings API Requirement Classes
+
+* `SERVICE_VERSION/RESOURCE_PATH/COLLECTION_NAME` as defined in https://docs.ogc.org/is/18-088/18-088.html#mqtt-subscribe-entity-set[14.2.1] can be extended with a `?` followed by an ODATA query - e.g. `v1.1/Datastreams(1)/Observations?$filter=result gt 30`
+* `SERVICE_VERSION/RESOURCE_PATH_TO_AN_ENTITY` as defined in https://docs.ogc.org/is/18-088/18-088.html#mqtt-entity-updates[14.2.2] can be extended with a `?` followed by an ODATA query - e.g. `v1.1/Observations?$select=result`
+* `SERVICE_VERSION/RESOURCE_PATH_TO_AN_ENTITY/PROPERTY_NAME` as defined in https://docs.ogc.org/is/18-088/18-088.html#mqtt-subscribe-entity-property[14.2.3] - e.g. `v1.1/Observations/result`
+
+===== WebSub Extension Implementation (SensorThings API Service)
+
+A SensorThings API Service must support the W3C WebSub discovery. This functionality was implemented as a plugin to the [FROST-Server](https://github.com/FraunhoferIOSB/FROST-Server) that will be made available in a public Github repository once the WebSub extension idea has matured. For testing purposes, the plugin is deployed on the [CitiObs STAplus test endpoint](https://citiobs.demo.secure-dimensions.de/staplus/v1.1).
+
+[%unnumbered%]
+[source]
+----
+curl --head https://citiobs.demo.secure-dimensions.de/staplus/v1.1/Observations
+----
+
+return the following HTTP headers
+
+[%unnumbered%]
+[source]
+----
+HTTP/2 200 
+server: nginx/1.27.0
+date: Mon, 15 Jul 2024 07:35:00 GMT
+content-type: application/json;charset=UTF-8
+content-length: 0
+link: <https://hub.demo.secure-dimensions.de/>; rel="hub"
+link: <https://citiobs.demo.secure-dimensions.de/staplus/v1.1/Observations>; rel="self"
+----
+
+===== WebSub Extension Implementation (Hub)
+
+The Hub implementation's functionality is described in the W3C WebSub Recommendation. The SensorThings specific aspect is that the Hub uses MQTT to subscribe to the SensorThings API service. The Hub must derive the MQTT topic from the URL received via the subscription API. Basically, the Hub removes the SensorThings rootURL as advertized in the SensorThings API service's landing page. As an example, the `link: <https://citiobs.demo.secure-dimensions.de/staplus/v1.1/Observations>; rel="self"` transforms into the MQTT topic `v1.1/Observations`.
+
+The Hub associates the MQTT notifications to the callback URL provided with the subscription request. For example, the following subscription request triggers the Hub to link the MQTT topic `v1.1/Observations` with callback (Webhook) URL `https://webhook.site/e40fa5de-239b-4dd6-a0dd-25e50f805d4e`:
+
+[%unnumbered%]
+[source]
+----
+curl --location 'https://hub.demo.secure-dimensions.de/' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'hub.mode=subscribe' \
+--data-urlencode 'hub.topic=https://citiobs.demo.secure-dimensions.de/staplustest/v1.1/Observations' \
+--data-urlencode 'hub.callback=	https://webhook.site/e40fa5de-239b-4dd6-a0dd-25e50f805d4e' \
+--data-urlencode 'hub.secret=this is a good secret :)' \
+--data-urlencode 'hub.callback.x_api_key=this is a good key :)'
+----
+
+To link the callback with the topic, the implementation can use Redis for example:
+
+[%unnumbered%]
+[source]
+----
+let client = redis.createClient();
+let key = md5(topic);
+let value = JSON.stringify({'url': 'https://webhook.site/e40fa5de-239b-4dd6-a0dd-25e50f805d4e'})
+client.set( key, value, function(err, result) {
+    if (err) throw err; // do something here...
+
+    result is 'OK'
+});
+----
+
+The distribution of the notification message can be achieved by implementing the following pseudo code:
+
+[%unnumbered%]
+[source]
+----
+let client = redis.createClient();
+
+mqtt_client.on('message', function (topic, message, packet) {
+    let key = md5(topic);
+    callbacks = client.get(key);
+    callbacks.foreach(callback) {
+        url = JSON.parse(callback).url;
+        request.post(
+            'http://www.yoursite.com/formpage',
+            { json: message },
+            function (error, response, body) {
+                ...
+            }
+        );
+    }
+}
+----
+
+===== WebSub Extension Implementation (Webhook)
+
+Any Webhook to be used with the W3C WebSub protocol must support the validation of subscription intent as defined in [W3C WebSub - §5.3 Hub Verifies Intent of the Subscriber](https://www.w3.org/TR/websub/#x5-3-hub-verifies-intent-of-the-subscriber). Setting up a simple WebSub Webhook can be achieved quickly. How to setup a WebSub WebHook using []() is illustrated below (after signing up for the basic plan).
+
+The Webhook.site menu offers `Custom Actions` to configure the functionality using JavaScript. The following steps illustrate the setup for the demo Webhook used during the Code Sprint:
+
+First, set global variables `$hub.topic = https://citiobs.demo.secure-dimensions.de/staplustest/v1.1/Observations` and `$hub.secret = 'my great secret'`.
+
+Then, configure HTTP GET functionality via JavaScript
+
+[%unnumbered%]
+[source]
+----
+if ('GET' == get('request.method')) {
+    
+    mode = get('request.query.hub_mode', null)
+    topic = get('request.query.hub_topic', null)
+    challenge = get('request.query.hub_challenge', null)
+    lease_seconds = get('request.query.hub_lease_seconds', null)
+    
+    
+    if (mode == null) {
+		respond('hub.mode required', 400, ['Content-Type: text/plain'])
+		return
+    }
+    if (topic == null) {
+		respond('hub.topic required', 400, ['Content-Type: text/plain'])
+		return
+	} 
+	if (challenge == null) {
+		respond('hub.challenge required', 400, ['Content-Type: text/plain'])
+		return
+	} 
+	    
+	console.log('topic: ' + topic)
+	console.log('hub.topic: ' + get('hub.topic'))
+	    
+	if (mode == 'unsubscribe') {
+	    if (topic == get('hub.topic')) {
+    	    respond(challenge, 200, ['Content-Type: text/plain'])
+    	    return
+	    } else {
+	        respond('hub.topic unknown', 404, ['Content-Type: text/plain'])
+            return
+        }
+	}
+	
+	if (mode == 'subscribe') {
+	    if (lease_seconds == null) {
+		    respond('hub.lease_seconds required', 400, ['Content-Type: text/plain'])
+	    	return
+    	} 
+
+	    if (topic == get('hub.topic')) {
+    	    respond(challenge, 200, ['Content-Type: text/plain'])
+    	    return
+	    } else {
+	        respond('hub.topic unknown', 404, ['Content-Type: text/plain'])
+            return
+        }
+	}
+}
+----
+
+To protect the Webhook from unauthorized execution, you can set an execution condition on the HTTP header `X-API-Key`:
+
+[%unnumbered%]
+[source]
+----
+$request.header.x-api-key$ 'is equal to' $hub.secret
+----
+
+And finally, to process the POSTed message from the Hub, the Webhook must validate the received HMAC to ensure that the source is the Hub. The following code implements this behavior:
+
+[%unnumbered%]
+[source]
+----
+crypto = require("crypto");
+
+method = get('request.method')
+secret = get('hub.secret')
+
+if ('POST == method') {
+    
+    x_hub_signature = get('request.header.x-hub-signature', null)
+    if (x_hub_signature == null) {
+        respond('HTTP header x-hub-signature is required', 400, ['Content-Type: text/plain'])
+        return
+    }
+    console.log("X-Hub-Signature: " + x_hub_signature) 
+    
+    signature = x_hub_signature.split('=');
+    if (signature.length != 2) {
+        console.log("X-Hub-Signature has wrong format: " + x_hub_signature);
+        console.log("Not sending message to client");
+        respond('', 204, ['Content-Type: text/plain'])
+        return
+    }
+    alg = signature[0];
+    console.log("signature algorithm: " + alg)
+    value = signature[1];
+    console.log("signature value: " + value)
+
+    data = get('request.content')
+    hmac = crypto.createHmac(alg, secret).update(data).digest("hex");
+    console.log("HMAC value computed from request: " + hmac)
+    
+    if (hmac !== value) {
+        console.log("X-Hub-Signature validation failed. Not sending message to client");
+        respond('', 204, ['Content-Type: text/plain'])
+        return
+    }
+    
+    console.log("processing data")
+    respond('', 204, ['Content-Type: text/plain'])
+}
+----
+
+===== Code Sprint Contribution
+
+The contribution to the OGC Codesprint focused on improving the Hub's distribution of messages to callback URLs (Webhooks). The simple approach to send HTTP POST messages from inside the `MQTT.on_message` callback was modified such that the Hub now pushes the message to a processing queue. The queue was implemented using [RabbitMQ](https://www.rabbitmq.com/). The use of a RabbitMQ Exchange is illustrated [here](https://cdn.prod.website-files.com/5ff66329429d880392f6cba2/619f53ce469a19d18a61ef94_AMQP%20Broker.png). The use of a message queueing system improves the responsiveness of the Hub as the peculiabilities of WebHooks (slow latency, offline, etc.) are now taken care of by the RabbitMQ queue consumer processes. To achieve scalability, it is possible to deploy multiple workers in the cloud. The Hub improvement during the Codesprint boils down to the following code snippet:
+
+[%unnumbered%]
+[source]
+----
+const amqp = require("amqplib");
+(async () => {
+	try {
+	  	var connection = await amqp.connect("amqp://localhost");
+		var channel = await connection.createChannel();
+		await channel.assertQueue("websub", {durable: false});
+	}
+	catch (err) {
+		console.warn(err);
+	}
+})();
+
+channel.sendToQueue("websub", Buffer.from(JSON.stringify(body)),
+						{
+							appId: callback,
+							contentType: 'application/json',
+							headers: headers,
+							correlationId: secret
+						});
+----
+
+On the message queue consumer side, the following code snippet illustrates the HTTP POSTing to the Webhooks:
+
+[%unnumbered%]
+[source]
+----
+const amqp = require("amqplib");
+const request = require('request');
+const crypto = require('crypto');
+const log = require('loglevel');
+
+log.setLevel(process.env.LOG_LEVEL || log.levels.DEBUG);
+
+(async () => {
+  try {
+    const connection = await amqp.connect("amqp://localhost");
+    const channel = await connection.createChannel();
+
+    process.once("SIGINT", async () => {
+      await channel.close();
+      await connection.close();
+    });
+
+    await channel.consume(
+      "websub",
+      (message) => {
+        if (message) {
+            let body = JSON.parse(message.content);
+            let headers = message.properties.headers;
+            let content_type = message.properties.contentType;
+            let secret = message.properties.correlationId;
+            let callback = message.properties.appId;
+            log.debug(" [x] Received '%s'", body);
+            log.debug(" [x] Headers '%s'", JSON.stringify(headers));
+            log.debug(" [x] Content-Type '%s'", content_type);
+            log.debug(" [x] secret '%s'", secret);
+            log.debug(" [x] callback '%s'", callback);
+
+            if (secret !== null) {
+                log.debug("message: " + body);
+                log.debug("secret: " + secret);
+                var hmac = crypto.createHmac("sha256", secret).update(body).digest("hex");
+                log.debug("hmac: " + hmac);
+                headers['X-Hub-Signature'] = 'sha256=' + hmac;
+            }
+
+            request.post({
+                headers: headers,
+                url: callback,
+                body: body
+            }, function (error, response, body) {
+                log.info("message sent with HMAC: " + hmac);
+                if (error) {
+                    log.debug(error);
+                }
+            });
+        }
+      },
+      { noAck: true }
+    );
+
+    console.log(" [*] Waiting for messages. To exit press CTRL+C");
+  } catch (err) {
+    console.warn(err);
+  }
+})();
+----
+
+For achieving scalability it is required that a queue workers is stateless. As illustrated above, this achieved by adding all relevant information to the message itself. In the example above, the AMQP message property `message.properties.appId` refers to the Webhook URL, `message.properties.correlationId` refers to the HMAC secret. The 'mis'use of these properties like this or in a similar fashion is required as the RabbitMQ implementation does not seem to support a generic message property like 'userdata' or 'options'. When conveying more information, it is also possible to JSON.stringify({...}) all relevant information into one of the message properties. This does not create an interoperability challenge as it is likely that the Hub and the Worker is implemented by the same entity. And therefore, the 'mis'use of RabbitMQ message properties for a specific purpose can easily be done.
+
+Beside the fault tolerant distribution of messages to Webhooks, the calculation of the HMAC for each message is now computed at the Worker. This also improves the deployment responsiveness, as different queues for different message size can be deployed to hosting environments with fit-for-purpose CPU and memory requirements. This ensures an optimized throughput even for large messages that require HMAC calculation.
+
+Future work will focus on the proper use of a RabbitMQ Exchange leveraging the use of multiple message queues connected to distributed worker systems. Even though the implementation based on RabbitMQ is simple, the routing policy for the exchange needs to consider the characteristics of the receiving Webhook, the message size, HMAC calculation requirements, etc. 
