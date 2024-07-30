@@ -1,3 +1,3 @@
 ==== OGC RAINBOW 
 
-TBA
+OGC RAINBOW is a Web accessible source of information about things ('Concepts') the OGC defines or that communities ask the OGC to host on their behalf. It applies FAIR principles to the key concepts that underpin interoperability in systems using OGC specifications. It can be accessed at https://www.opengis.net/def and holds definitions for terms defined by OGC processes, along with a range of 'metamodel' resources geospatial community uses to describe and interconnect these resources. There are a number of different types of resource (all linked together to support the 'Findable' principle of FAIR). In this code sprint, RAINBOW was specifically used in support of discovery and access to Coordinate Reference System (CRS) definitions and the prototype ISO 19157-3 Data Quality Measures Register.
