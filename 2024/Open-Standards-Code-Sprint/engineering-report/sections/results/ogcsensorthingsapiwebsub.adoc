@@ -15,15 +15,15 @@ The draft OGC Standard for https://github.com/opengeospatial/sensorthings/tree/2
 
 The OGC SensorThings API Extension `WebSub` is based on the https://www.w3.org/TR/websub/[W3C WebSub Recommendation]. In particular the WebSub API for subscribe/unsubscribe and the opaque discovery via link data headers make the WebSub extension potentially applicable to other OGC APIs.
 
-The idea behind WebSub, as illustrated in https://www.w3.org/TR/websub/#x2-high-level-protocol-flow[WebSub - High Level Protocol Flow] is quite simple: A `Subscriber` uses a service's synchronous API to fetch data. If interested in receiving event driven data via a provided WebHook, the subscriber can use the `Link rel='self'` to subscribe for updates. The subscription requires that the subscriber provides a callback URL which is a regular HTTP(S) POST endpoint that conforms to the W3C Recommendation.
+The idea behind WebSub, as illustrated in link:https://www.w3.org/TR/websub/#x2-high-level-protocol-flow[WebSub - High Level Protocol Flow] is quite simple: A `Subscriber` uses a service's synchronous API to fetch data. If interested in receiving event driven data via a provided WebHook, the subscriber can use the `Link rel='self'` to subscribe for updates. The subscription requires that the subscriber provides a callback URL which is a regular HTTP(S) POST endpoint that conforms to the W3C Recommendation.
 
 The `Publisher` is a SensorThings API implementation that implements the WebSub extension. The requirement is that the implementation returns the Link headers `role='self'` and `role='hub'` for an HTTP GET and HEAD request. The HTTP HEAD request can be used by the subscriber if only interested in the WebSub discovery without fetching data. 
 
-A SensorThings API WebSub Hub implementation uses the SensorThings MQTT functionality to subscribe for updates. Any SensorThings API service deployment that offers the `Link rel='hub'` header must support MQTT notifications as defined in the SensorThings API Requirement Classes
+A SensorThings API WebSub Hub implementation uses the SensorThings MQTT functionality to subscribe for updates. Any SensorThings API service deployment that offers the `Link rel='hub'` header must support MQTT notifications as defined in the SensorThings API Requirement Classes of the OGC SensorThings API Part 1: Sensing Version 1.1 Standard:
 
-* `SERVICE_VERSION/RESOURCE_PATH/COLLECTION_NAME` as defined in https://docs.ogc.org/is/18-088/18-088.html#mqtt-subscribe-entity-set[14.2.1] can be extended with a `?` followed by an ODATA query - e.g. `v1.1/Datastreams(1)/Observations?$filter=result gt 30`
-* `SERVICE_VERSION/RESOURCE_PATH_TO_AN_ENTITY` as defined in https://docs.ogc.org/is/18-088/18-088.html#mqtt-entity-updates[14.2.2] can be extended with a `?` followed by an ODATA query - e.g. `v1.1/Observations?$select=result`
-* `SERVICE_VERSION/RESOURCE_PATH_TO_AN_ENTITY/PROPERTY_NAME` as defined in https://docs.ogc.org/is/18-088/18-088.html#mqtt-subscribe-entity-property[14.2.3] - e.g. `v1.1/Observations/result`
+* `SERVICE_VERSION/RESOURCE_PATH/COLLECTION_NAME` as defined in https://docs.ogc.org/is/18-088/18-088.html#mqtt-subscribe-entity-set[Clause 14.2.1] can be extended with a `?` followed by an ODATA query - e.g. `v1.1/Datastreams(1)/Observations?$filter=result gt 30`
+* `SERVICE_VERSION/RESOURCE_PATH_TO_AN_ENTITY` as defined in https://docs.ogc.org/is/18-088/18-088.html#mqtt-entity-updates[Clause 14.2.2] can be extended with a `?` followed by an ODATA query - e.g. `v1.1/Observations?$select=result`
+* `SERVICE_VERSION/RESOURCE_PATH_TO_AN_ENTITY/PROPERTY_NAME` as defined in https://docs.ogc.org/is/18-088/18-088.html#mqtt-subscribe-entity-property[Clause 14.2.3] - e.g. `v1.1/Observations/result`
 
 ===== WebSub Extension Implementation (SensorThings API Service)
 
