@@ -55,8 +55,6 @@ include::architecture/miramon.adoc[]
 
 include::architecture/qgis.adoc[]
 
-include::architecture/openlayers.adoc[]
-
 include::architecture/jsonlinter.adoc[]
 
 include::architecture/pygeoapi.adoc[]
