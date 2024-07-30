@@ -58,6 +58,8 @@ All questions regarding this document should be directed to the editors or the c
 |	Joost Farla | Geonovum | Contributor
 |	Maxime Collombin | University of Applied Sciences, Western Switzerland (HEIG-VD)  | Contributor
 |	Sam Meek |  Helyx Secure Information Systems | Contributor
+|	Peter Rushforth | Natural Resources Canada | Contributor
+|	Aliyan Haq | Natural Resources Canada | Contributor
 |	Rui Cavaco | Norte Portugal Regional Coordination and Development Commission | Contributor
 |	Ivana Ivanova | Curtin University | Contributor
 |	Jerome St-Louis | Ecere | Contributor
