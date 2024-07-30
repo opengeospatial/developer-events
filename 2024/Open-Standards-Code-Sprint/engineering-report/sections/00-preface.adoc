@@ -55,13 +55,15 @@ All questions regarding this document should be directed to the editors or the c
 |	Tom Kralidis | OSGeo | Contributor
 |	Chris Little | Met Office | Contributor
 |	Frank Terpstra | Geonovum | Contributor
+|	Joost Farla | Geonovum | Contributor
 |	Maxime Collombin | University of Applied Sciences, Western Switzerland (HEIG-VD)  | Contributor
 |	Sam Meek |  Helyx Secure Information Systems | Contributor
 |	Rui Cavaco | Norte Portugal Regional Coordination and Development Commission | Contributor
 |	Ivana Ivanova | Curtin University | Contributor
 |	Jerome St-Louis | Ecere | Contributor
 |	Ricardo Garcia Silva | Geobeyond | Contributor
-|	TBA | TBA | Contributor
+|	Samantha Lavender | Pixalytics Ltd | Contributor
+|	Joan Maso | UAB-CREAF | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
