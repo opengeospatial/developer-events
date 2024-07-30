@@ -107,7 +107,7 @@ mqtt_client.on('message', function (topic, message, packet) {
 
 ===== WebSub Extension Implementation (Webhook)
 
-Any Webhook to be used with the W3C WebSub protocol must support the validation of subscription intent as defined in [W3C WebSub - §5.3 Hub Verifies Intent of the Subscriber](https://www.w3.org/TR/websub/#x5-3-hub-verifies-intent-of-the-subscriber). Setting up a simple WebSub Webhook can be achieved quickly. How to setup a WebSub WebHook using []() is illustrated below (after signing up for the basic plan).
+Any Webhook to be used with the W3C WebSub protocol must support the validation of subscription intent as defined in https://www.w3.org/TR/websub/#x5-3-hub-verifies-intent-of-the-subscriber[W3C WebSub - §5.3 Hub Verifies Intent of the Subscriber]. Setting up a simple WebSub Webhook can be achieved quickly. How to setup a WebSub WebHook is illustrated below (after signing up for the basic plan).
 
 The Webhook.site menu offers `Custom Actions` to configure the functionality using JavaScript. The following steps illustrate the setup for the demo Webhook used during the Code Sprint:
 
@@ -225,7 +225,7 @@ if ('POST == method') {
 
 ===== Code Sprint Contribution
 
-The contribution to the OGC Codesprint focused on improving the Hub's distribution of messages to callback URLs (Webhooks). The simple approach to send HTTP POST messages from inside the `MQTT.on_message` callback was modified such that the Hub now pushes the message to a processing queue. The queue was implemented using [RabbitMQ](https://www.rabbitmq.com/). The use of a RabbitMQ Exchange is illustrated [here](https://cdn.prod.website-files.com/5ff66329429d880392f6cba2/619f53ce469a19d18a61ef94_AMQP%20Broker.png). The use of a message queueing system improves the responsiveness of the Hub as the peculiabilities of WebHooks (slow latency, offline, etc.) are now taken care of by the RabbitMQ queue consumer processes. To achieve scalability, it is possible to deploy multiple workers in the cloud. The Hub improvement during the Codesprint boils down to the following code snippet:
+The contribution to the OGC Codesprint focused on improving the Hub's distribution of messages to callback URLs (Webhooks). The simple approach to send HTTP POST messages from inside the `MQTT.on_message` callback was modified such that the Hub now pushes the message to a processing queue. The queue was implemented using [RabbitMQ](https://www.rabbitmq.com/). The use of a RabbitMQ Exchange is illustrated https://cdn.prod.website-files.com/5ff66329429d880392f6cba2/619f53ce469a19d18a61ef94_AMQP%20Broker.png[here]. The use of a message queueing system improves the responsiveness of the Hub as the peculiabilities of WebHooks (slow latency, offline, etc.) are now taken care of by the RabbitMQ queue consumer processes. To achieve scalability, it is possible to deploy multiple workers in the cloud. The Hub improvement during the Codesprint boils down to the following code snippet:
 
 [%unnumbered%]
 [source]
