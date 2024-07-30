@@ -1,21 +1,21 @@
 ==== OGC SensorThings API WebSub Extension
 
-One objective of the EU [CitiObs](https://citiobs.eu) project is to enable decision makers with fit-for-purpose information about air quality collected from different base systems. Each system is collecting sensor information using their own APIs but make the sensor data available (to project partners) and the CitiObs decision support system via [STAplus](https://docs.ogc.org/is/22-022r1/22-022r1.html). STAplus, the [OGC SensorThings API](https://docs.ogc.org/is/18-088/18-088.html) PLUS extension defines additional entities in the data model that support the sensor data management for Citizen Science.
+One objective of the EU https://citiobs.eu[CitiObs] project is to enable decision makers with fit-for-purpose information about air quality collected from different base systems. Each system is collecting sensor information using their own APIs but make the sensor data available (to project partners) and the CitiObs decision support system via https://docs.ogc.org/is/22-022r1/22-022r1.html[STAplus]. STAplus, the https://docs.ogc.org/is/18-088/18-088.html[OGC SensorThings API] PLUS extension defines additional entities in the data model that support the sensor data management for Citizen Science.
 
 When building such a decision support system, two important functional requirements have to be considered:
 
-* Fetching sensor data via STAplus using modern clients like [Orange](https://orangedatamining.com/) or [Jupiter Notebook](https://jupyter.org/). The Orange plugin is currently work in progress, but for managing sensor data via SensorThings API or STAplus, the first version of a Python library is available on PyPi: [STAplus on PyPi](https://pypi.org/project/staplus-client/).
+* Fetching sensor data via STAplus using modern clients like https://orangedatamining.com/[Orange] or https://jupyter.org/[Jupiter Notebook]. The Orange plugin is currently work in progress, but for managing sensor data via SensorThings API or STAplus, the first version of a Python library is available on PyPi: https://pypi.org/project/staplus-client/[STAplus on PyPi].
 * Receiving updates of sensor reading based on self-set criteria. To support this requirement, the CitiObs team has started to develop (yet another) extension to SensorThings API: The WebSub Extension.
 
 This section of the Code Sprint Engineering Report introduces the WebSub extension and illustrates the current state of the implementation.
 
-The draft OGC Standard for [SensorThings API WebSub Extension](https://github.com/opengeospatial/sensorthings/tree/24-032) is currently work in progress. The idea of this extension has been contributed to the OGC membership during the 2024 Delft and Montreal meetings. There seem to be great interest in the functionality of the WebSub Extension which sparked the idea to contribute to the 2024 Code Sprint in London and improve the current prototype.
+The draft OGC Standard for https://github.com/opengeospatial/sensorthings/tree/24-032[SensorThings API WebSub Extension] is currently work in progress. The idea of this extension has been contributed to the OGC membership during the 2024 Delft and Montreal meetings. There seem to be great interest in the functionality of the WebSub Extension which sparked the idea to contribute to the 2024 Code Sprint in London and improve the current prototype.
 
 ===== Introduction to SensorThings API WebSub Extension
 
-The OGC SensorThings API Extension `WebSub` is based on the [W3C WebSub Recommendation](https://www.w3.org/TR/websub/). In particular the WebSub API for subscribe/unsubscribe and the opaque discovery via link data headers make the WebSub extension potentially applicable to other OGC APIs.
+The OGC SensorThings API Extension `WebSub` is based on the https://www.w3.org/TR/websub/[W3C WebSub Recommendation]. In particular the WebSub API for subscribe/unsubscribe and the opaque discovery via link data headers make the WebSub extension potentially applicable to other OGC APIs.
 
-The idea behind WebSub, as illustrated in [WebSub - High Level Protocol Flow](https://www.w3.org/TR/websub/#x2-high-level-protocol-flow) is quite simple: A `Subscriber` uses a service's synchronous API to fetch data. If interested in receiving event driven data via a provided WebHook, the subscriber can use the `Link rel='self'` to subscribe for updates. The subscription requires that the subscriber provides a callback URL which is a regular HTTP(S) POST endpoint that conforms to the W3C Recommendation.
+The idea behind WebSub, as illustrated in https://www.w3.org/TR/websub/#x2-high-level-protocol-flow[WebSub - High Level Protocol Flow] is quite simple: A `Subscriber` uses a service's synchronous API to fetch data. If interested in receiving event driven data via a provided WebHook, the subscriber can use the `Link rel='self'` to subscribe for updates. The subscription requires that the subscriber provides a callback URL which is a regular HTTP(S) POST endpoint that conforms to the W3C Recommendation.
 
 The `Publisher` is a SensorThings API implementation that implements the WebSub extension. The requirement is that the implementation returns the Link headers `role='self'` and `role='hub'` for an HTTP GET and HEAD request. The HTTP HEAD request can be used by the subscriber if only interested in the WebSub discovery without fetching data. 
 
@@ -27,7 +27,7 @@ A SensorThings API WebSub Hub implementation uses the SensorThings MQTT function
 
 ===== WebSub Extension Implementation (SensorThings API Service)
 
-A SensorThings API Service must support the W3C WebSub discovery. This functionality was implemented as a plugin to the [FROST-Server](https://github.com/FraunhoferIOSB/FROST-Server) that will be made available in a public Github repository once the WebSub extension idea has matured. For testing purposes, the plugin is deployed on the [CitiObs STAplus test endpoint](https://citiobs.demo.secure-dimensions.de/staplus/v1.1).
+A SensorThings API Service must support the W3C WebSub discovery. This functionality was implemented as a plugin to the https://github.com/FraunhoferIOSB/FROST-Server[FROST-Server] that will be made available in a public Github repository once the WebSub extension idea has matured. For testing purposes, the plugin is deployed on the https://citiobs.demo.secure-dimensions.de/staplus/v1.1[CitiObs STAplus test endpoint].
 
 [%unnumbered%]
 [source]
