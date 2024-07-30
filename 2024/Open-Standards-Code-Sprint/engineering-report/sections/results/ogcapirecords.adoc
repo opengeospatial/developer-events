@@ -1,3 +1,3 @@
 ==== OGC API - Records
 
-TBA
+Experimentation related to OGC API - Records included extension of pygeoapi to enable support for TrainingDataML-AI. A detailed summary is presented in <<results_pygeoapi>>. The prototype potentially could lead to a TrainingDataML-AI profile of the Record Core model specified in OGC API - Records - Part 1: Core. The pygeoapi implementation mapped the common metadata constructs into the Record Core model, and encoded TrainingDataML-AI specifics accordingly.

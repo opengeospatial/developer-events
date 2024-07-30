@@ -11,11 +11,11 @@ During the code sprint, this initial support was deployed.
 
 [#fig_vertex_start,reftext='{figure-caption} {counter:figure-num}']
 .Example ordering of ISEA3H sub-zones starting on a vertex for an odd relative depth
-image::images/isea3h-ordering-vertex.png[width=200,align="center"]
+image::images/isea3h-ordering-vertex.png[width=600,align="center"]
 
 [#fig_edge_start,reftext='{figure-caption} {counter:figure-num}']
 .Example ordering of ISEA3H sub-zones starting on an edge for an even relative depth
-image::images/isea3h-ordering-edge.png[width=200,align="center"]
+image::images/isea3h-ordering-edge.png[width=600,align="center"]
 
 In addition to the ordering of sub-zones for polar pentagonal zones which was not yet implemented, issues were noticed with parent hexagonal zones crossing interruptions of the
 Icosahedral Snyder Equal Area planar projection. These issues were identified as new variations of problem which need to be taken into account by the sub-zone ordering algorithm,
@@ -23,11 +23,11 @@ and work was undertaken to implement these cases correctly. Progress was also ma
 
 [#fig_hex_interrupted,reftext='{figure-caption} {counter:figure-num}']
 .Proper ordering for ISEA3H sub-zones of a parent hexagonal zone crossing an ISEA interruption
-image::images/isea3h-ordering-variation5.png[width=300,align="center"]
+image::images/isea3h-ordering-variation5.png[width=600,align="center"]
 
 [#fig_dggsjson_rendering,reftext='{figure-caption} {counter:figure-num}']
 .Visualization of a DGGS-JSON file generated from the https://www.gebco.net/news_and_media/gebco_2014_grid.html[GEBCO_2014 grid]
-image::images/dggsJSON-rendered.png[width=300,align="center"]
+image::images/dggsJSON-rendered.png[width=600,align="center"]
 
 A snippet extract of the DGGS-JSON file used to render this data follows, with the full version available from the OGC API - DGGS implementation at https://maps.gnosis.earth/ogcapi/collections/gebco/dggs/ISEA3H/zones/B2-1-A/data.json?zone-depth=7.
 The snippet illustrates how the bulk of the encoded data is a simple linearized one-dimensional array of the values associated with each zone, implying a particular order.

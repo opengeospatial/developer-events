@@ -32,6 +32,7 @@ The sprint participants made the following recommendations regarding future Coll
 * Experimentation on consistency of parameter and schema fragements in APIs
 * Prototyping and experimentation on OGC API - Features and Geocoding
 * Prototyping of an HTML MapML validator, possibly as a service. See https://github.com/Maps4HTML/validator-mapml for ideas.
+* Prototyping of extension of MapML to enable it to consume the JSON-based payloads that are described in the OGC API family of standard
 
 The sprint participants made the following recommendations regarding future Standards Program initiatives:
 
