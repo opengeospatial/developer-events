@@ -52,3 +52,5 @@ include::results/ldproxy.adoc[]
 include::results/cubeserv.adoc[]
 
 include::results/gnosis.adoc[]
+
+include::results/jsonlinter.adoc[]

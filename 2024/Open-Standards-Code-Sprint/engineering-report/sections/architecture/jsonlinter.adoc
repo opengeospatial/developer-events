@@ -1,3 +1,3 @@
 ==== Geonovum JSON Linter
-We took the existing JSON-FG linter and renamed it to the OGC-Checker. We added OGC API Features part 1 functionality and a small portion of the OGC API Common standard. The tool is now capable of automatically discovering which conformance classes are implemented and can apply the appropriate rulesets for validation based on that. This allows us to add other OGC API standards in the future. With this, we’ve taken the first step toward making the linter/validator more generic. The results can be found here: https://github.com/Geonovum-labs/ogc-checker, a live demo is available here: https://geonovum-labs.github.io/ogc-checker/#/ogc-api
-Testing the linter on examples of OGC API features resulted in discovering several small issues that were resolved by Clemens during the codesprint.
+
+The Geonovum JSON Linter is a validation tool that has been designed to support testing and checking of JSON-encoded files. The tool runs in a web browser and is implemented using NodeJS. The tool is extensible to enable it to validate conformance to different formats, as well as to support the checking of requests and responses from Web APIs.

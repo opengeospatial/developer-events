@@ -1,0 +1,18 @@
+==== Geonovum JSON Linter
+
+The team from Geonovum took the existing JSON-FG linter and renamed it to the OGC-Checker. They added functionality to support the https://docs.ogc.org/is/17-069r4/17-069r4.html[OGC API - Features - Part 1: Core] Standard and a small portion of the https://docs.ogc.org/is/19-072/19-072.html[OGC API - Common - Part 1: Core] Standard. The tool is now capable of automatically discovering which conformance classes are implemented and can apply the appropriate rulesets for validation based on that. This will enable the maintainers of the tool to add support for other OGC API Standards in the future. <<img_linter1>> shows a screenshot of the linter having validated an instance of the OGC API - Features Standard. 
+
+[#img_linter1]
+.Screenshot of the JSON Linter
+image::images/linter1.png[]
+
+The linter is able to report on any errors that it detects on an implementation. <<img_linter2>> shows a screenshot of an example error message presented by the JSON Linter. In the example, the key `servers` which is required by the OpenAPI 3.0 Specification has been changed to `serves`. The linter reports the error on the right hand side of the display.
+
+[#img_linter2]
+.Screenshot of an example error message presented by the JSON Linter
+image::images/linter2.png[]
+
+
+Testing the linter on example implementations of OGC API - Features resulted in discovering several small issues that were resolved by Clemens Portele (interactive instruments) during the code sprint. With the successful implementation of the linter during the code sprint, the team has taken the first steps toward making the linter/validator more generic. The results can be found here: https://github.com/Geonovum-labs/ogc-checker, a live demo is available here: https://geonovum-labs.github.io/ogc-checker/#/ogc-api
+
+
