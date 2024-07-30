@@ -135,7 +135,7 @@ Below is a sample image demonstrating the operation of this simple web client.
 image::images/pygeoapi-mapml-app1.png[width=700,align="center"]
 
 
-===== UAB-CREAF Miramon
+===== CREAF Miramon
 
 On the other hand, UAB-CREAF participated in the sprint by contributing their MiraMon Map Server. This application was adapted to OGC API Maps and Tiles during previous sprints. The OGC API Maps allow for requesting a map of a collection. If the request is done to this endpoint `/collections/{collectionId}/map` with no parameters, the server is free to respond with a "nice" map that represents the collection or a representative area of it. If the negotiated media type is static, the selection of the area is particularly important. In the case of MapML, the map is interactive, giving freedom to the user to correct the server decision by panning and zooming. In this particular sprint, two modifications were introduced in the MiraMon Map Server to include MapML support.
 
