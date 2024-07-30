@@ -23,6 +23,7 @@ include::results/trainingdmlai.adoc[]
 
 === Candidate OGC Standards
 
+include::results/ogcapiconnectedsystems.adoc[]
 
 include::results/ogcapirecords.adoc[]
 
