@@ -1,3 +1,3 @@
 ==== OpenSensorHub 
 
-TBA
+OpenSensorHub is an open source software product for supporting web-enabled access to a variety of sensor systems (from the simple to the more complex). OpenSensorHub implements the OGC Sensor Web Enablement (SWE) Standards, as well as the OGC SensorThings API. OpenSensorHub also implements the OGC API - Connected Systems candidate Standard.
