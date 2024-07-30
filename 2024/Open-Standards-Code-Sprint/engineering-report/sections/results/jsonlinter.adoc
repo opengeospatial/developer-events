@@ -6,7 +6,7 @@ The team from Geonovum took the existing JSON-FG linter and renamed it to the OG
 .Screenshot of the JSON Linter
 image::images/linter1.png[]
 
-The linter makes use of https://stoplight.io/open-source/spectral[Spectral], an open source suite of libraries for testing compliance to the OpenAPI Specification. The linter is able to report on any errors that it detects on an implementation. <<img_linter2>> shows a screenshot of an example error message presented by the JSON Linter. In the example, the key `servers` which is required by the OpenAPI 3.0 Specification has been changed to `serves`. The linter reports the error on the right hand side of the display.
+The linter is able to report on any errors that it detects on an implementation. <<img_linter2>> shows a screenshot of an example error message presented by the JSON Linter. In the example, the key `servers` which is required by the OpenAPI 3.0 Specification has been changed to `serves`. The linter makes use of https://stoplight.io/open-source/spectral[Spectral], an open source suite of libraries for testing compliance to the OpenAPI Specification. The linter reports the error on the right hand side of the display.
 
 [#img_linter2]
 .Screenshot of an example error message presented by the JSON Linter
