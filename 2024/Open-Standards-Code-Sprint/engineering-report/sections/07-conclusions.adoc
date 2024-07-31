@@ -1,7 +1,13 @@
 [[conclusions]]
 == Conclusions
 
-The sprint participants proved that MapML has a role to play in the geospatial ecosystem and that it can be easily integrated into implementations of OGC API Standards. 
+The code sprint provided an environment for the development and testing of prototype implementations of open standards.
+
+Regarding MapML, this engineering report concludes that the sprint participants proved that MapML has a role to play in the geospatial ecosystem and that MapML can be easily integrated into implementations of OGC API Standards. 
+
+Regarding validators, the engineering report concludes that there is significant potential for client-side validators such as the Linter that was prototyped during the code sprint. Such linters could be offered as a developer resource for those developers that would like to test their products rather than certify the products. TEAM Engine, as a server-side application, continues to be the ideal solution for certification of compliance to OGC Standards.
+
+Overall, this engineering report concludes that the code sprint met all of its objectives and achieved its goal of accelerating the development and implementation of OGC Standards in software products. The following subsection presents recommendations for future work.
 
 === Future Work
 
