@@ -33,14 +33,14 @@ Cubeserv implements the following endpoints for retrieving a schema:
 . /collections/{collectionId}/queryables
 . /collections/{collectionId}/sortable
 
-These enpoints are as define in https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 5: Schemas].  These endpoint, however, only provide "logical" schemas and cannot, thus, be used for validation.  In order to support validation, cubeserv also provides the following endpoints for retrieving application schemas:
+These endpoints are as defined in https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 5: Schemas].  These endpoints, however, only provide "logical" schemas and cannot, thus, be used for validation.  In order to support validation, cubeserv also provides the following endpoints for retrieving application schemas:
 
 . /collections/{collectionId}/schemas/collection
 . /collections/{collectionId}/schemas/feature
 
-The first endpoint provides an application schema that allows a response containing a collection of features to be validated.  The latter endpoint provides an application schemas that can be used to validate a single feature.
+The first endpoint provides an application schema that allows a response containing a collection of features to be validated.  The latter endpoint provides an application schema that can be used to validate a single feature.
 
-Cubeserve implements the following conformance classes from https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 5: Schemas]:
+Cubeserv implements the following conformance classes from https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 5: Schemas]:
 
 [#conf_class_uris1,reftext='{table-caption} {counter:table-num}']
 .Conformance class URIs
@@ -1234,7 +1234,7 @@ Cubeserv implements the following conformance classes from https://docs.ogc.org/
 |Property Selection (Features) |http://www.opengis.net/spec/ogcapi-features-6/1.0/conf/properties-features
 |===
 
-In addition to the `properties` parameter, cubeserv also implement an `exclude-properties` parameter that lists the properties to exclude (rather than include) in the response.
+In addition to the `properties` parameter, cubeserv also implements an `exclude-properties` parameter that lists the properties to exclude (rather than include) in the response.
 
 ====== Examples
 
