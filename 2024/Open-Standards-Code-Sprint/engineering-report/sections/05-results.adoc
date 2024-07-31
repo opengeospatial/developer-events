@@ -15,7 +15,6 @@ include::results/ogcsensorthingsapiwebsub.adoc[]
 
 include::results/ogcapirecords.adoc[]
 
-include::results/jsonfg.adoc[]
 
 include::results/ogcstylessymbology.adoc[]
 

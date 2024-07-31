@@ -1,8 +1,6 @@
 [[discussion]]
 == Discussion
 
-include::discussion/jsonfg_discussion.adoc[]
-
 include::discussion/mapml.adoc[]
 
 include::discussion/ogcapi_standards_discussion.adoc[]
