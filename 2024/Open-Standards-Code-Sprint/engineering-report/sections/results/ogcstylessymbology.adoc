@@ -5,7 +5,7 @@
 During this code sprint, the sprint participants worked on drafting the OGC Styles & Symbology candidate standard. The work included:
 
 * discussing possible link:https://github.com/opengeospatial/styles-and-symbology/issues/24#issuecomment-2222335333[use cases] for `hatch`, `stipple` & `pattern` fills,
-* addition of a `Metadata` section in the link:https://docs.ogc.org/DRAFTS/18-067r4.html#rc-core [Requirements Class "Core"] with `keywords` and `geoDataClasses` parameters in line with the JSON schema,
+* addition of a `Metadata` section in the link:https://docs.ogc.org/DRAFTS/18-067r4.html#rc-core[Requirements Class "Core"] with `keywords` and `geoDataClasses` parameters in line with the JSON schema,
 * discussion and clarification of the concepts of link:https://github.com/opengeospatial/styles-and-symbology/issues/64[Stipples] and link:https://github.com/opengeospatial/styles-and-symbology/issues/59[Hatches],
 * drafting requirements with portrayal examples,
 * creating placeholders for the Abstract Test Suite,
@@ -29,7 +29,7 @@ A number of GitHub link:https://github.com/opengeospatial/styles-and-symbology/i
 * link:https://github.com/opengeospatial/styles-and-symbology/issues/74[#74]: UML class diagrams
 * link:https://github.com/opengeospatial/styles-and-symbology/issues/76[#76]: Clarify viz.pass, feature.pass and zOrder concepts
 
-===== Conclusion
+===== Styles and Symbology Conclusions
 
 The code sprint enabled the editors of the OGC Cartographic Symbology candidate standard to work together on drafting the standard.
 They were able to clarify some concepts, requirements and use cases and moved the standard forward. A number of important tasks remain to be completed before CartoSym 2.0 - Part 1 can be finalized.
@@ -41,6 +41,6 @@ and appendix B: link:https://docs.ogc.org/DRAFTS/18-067r4.html#annex-sldse[Mappi
 * update the UML class diagrams (see link:https://github.com/opengeospatial/styles-and-symbology/issues/74[#74]),
 * writing the Annex A: "Abstract Test Suite (Normative)" as already started link:https://github.com/maxcollombin/styles-and-symbology/tree/ats[here],
 * implementing transcoders and rendering engines,
-* define a global UML class hierarchy diagram covering all of the Requirements Classes. Enterprise Architect could be a useful tool for this. It would also allow us to generate an XSD schema and a JSON schema so that we can
+* define a global UML class hierarchy diagram covering all of the Requirements Classes. Enterprise Architect could be a useful tool for this. It would also enable the SWG to generate an XSD schema and a JSON schema so that we can
 check the consistency of the existing schema. The UML to JSON conversion tool link:https://github.com/maykinmedia/imvertor-lite[imvertor-lite] could also be considered,
 * check that the JSON schema complies with the candidate link:https://github.com/Geonovum/uml2json[Best Practice for OGC - UML to JSON Encoding Rules].
