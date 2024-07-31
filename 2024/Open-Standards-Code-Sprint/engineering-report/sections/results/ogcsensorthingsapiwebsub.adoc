@@ -1,6 +1,6 @@
 ==== OGC SensorThings API WebSub Extension
 
-One objective of the EU https://citiobs.eu[CitiObs] project is to enable decision makers with fit-for-purpose information about air quality collected from different base systems. Each system is collecting sensor information using their own APIs but make the sensor data available (to project partners) and the CitiObs decision support system via https://docs.ogc.org/is/22-022r1/22-022r1.html[STAplus]. STAplus, the https://docs.ogc.org/is/18-088/18-088.html[OGC SensorThings API] PLUS extension defines additional entities in the data model that support the sensor data management for Citizen Science.
+One objective of the EU https://citiobs.eu[CitiObs] project is to provide decision makers with fit-for-purpose information about air quality collected from different base systems. Currently, each system collects data from sensors using proprietary APIs but makes the data available (to project partners) and the CitiObs decision support system via https://docs.ogc.org/is/22-022r1/22-022r1.html[STAplus]. STAplus, the https://docs.ogc.org/is/18-088/18-088.html[OGC SensorThings API] PLUS extension defines additional entities in the data model that support the sensor data management for Citizen Science.
 
 When building such a decision support system, two important functional requirements have to be considered:
 
