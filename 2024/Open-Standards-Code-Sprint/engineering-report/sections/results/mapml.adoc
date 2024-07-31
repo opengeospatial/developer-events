@@ -8,9 +8,9 @@ Several participants worked on this MapML track.
 
 Pygeoapi was used as the base for a prototype web application that is able to serve MapML remote content.
 
-The original goal was to add MapML support by leveraging pygeoapi's plugin framework. However, after inspection of the code this proved to not be possible - proper integration of MapML would require modifications to the core pygeoapi code, something which was deemed out of scope for the code sprint. As such, development efforts consisted in developing a thin wrapper around pygeoapi which would add the relevant bits of MapML-related codewhile still keeping pygeoapi as the main agent. This approach worked out well.
+The original goal was to add MapML support by leveraging pygeoapi's plugin framework. However, after inspection of the code this proved to not be possible - proper integration of MapML would require modifications to the core pygeoapi code, something which was deemed out of scope for the code sprint. As such, development efforts consisted of developing a thin wrapper around pygeoapi which would add the relevant bits of MapML-related codewhile still keeping pygeoapi as the main agent. This approach worked out well.
 
-The prototype thus consisted in two-components:
+The prototype thus consisted of two-components:
 
 - A pygeoapi plugin that defined a tile-based data provider which knew how to respond to requests with
 the `Accept:text/mapml` header
