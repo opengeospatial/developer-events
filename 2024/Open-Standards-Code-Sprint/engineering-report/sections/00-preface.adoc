@@ -67,6 +67,7 @@ All questions regarding this document should be directed to the editors or the c
 |	Ricardo Garcia Silva | Geobeyond | Contributor
 |	Samantha Lavender | Pixalytics Ltd | Contributor
 |	Joan Maso | UAB-CREAF | Contributor
+|	Panagiotis (Peter) A. Vretanos | CubeWerx Inc. | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
 |	TBA | TBA | Contributor
