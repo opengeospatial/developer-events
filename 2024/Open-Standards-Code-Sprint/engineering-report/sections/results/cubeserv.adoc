@@ -1,3 +1,1390 @@
 ==== CubeWerx Geospatial Data Server
 
-TBA
+===== Overview
+
+CubeWerx's involvment in this code sprint consisted on updated our feature server to be compliant with the latest draft version of the stadards:
+
+* https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 5: Schemas]
+* https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 6: Property Selection]
+* https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 7: Geometry Simplification]
+* https://docs.ogc.org/DRAFTS/24-030.html[OGC API - Features - Part 8: Sorting]
+* https://docs.ogc.org/DRAFTS/24-030.html[OGC API - Features - Part 9: Text Search]
+
+CubeWerx's features server is part of the CubeWerx Geospatial Data Server (“cubeserv”) which is implemented in C and currently implements the following OGC Standards and draft specifications.
+
+* Multiple conformance classes and recommendations of the OGC API — Tiles — Part 1: Core Standard
+* Multiple conformance classes and recommendations of the OGC API — Maps — Part 1: Core candidate Standard
+* All conformance classes and recommendations of the OGC API — Features — Part 1: Core Standard
+* Multiple conformance classes and recommendations of the OGC API — Records — Part 1: Core candidate Standard
+* Multiple conformance classes and recommendations of the OGC API — Coverages — Part 1: Core candidate Standard
+* Multiple conformance classes and recommendations of the OGC API — Processes — Part 1: Core Standard
+* Multiple versions of the Web Map Service (WMS), Web Processing Service (WPS), Web Map Tile Service (WMTS), and Web Feature Service (WFS) Standards
+* A number of other “un-adopted” OGC Web Service draft specifications including the Testbed-12 Web Integration Service, OWS-7 Engineering Report — GeoSynchronization Service, and the Web Object Service prototype.
+
+The `cubeserv` executable supports a wide variety of back ends including Oracle, MariaDB, SHAPE files, etc. It also supports a wide array of service-dependent output formats, for example, Geography Markup Language (GML), GeoJSON, Mapbox Vector Tiles, MapMP, as well as several coordinate reference systems.
+
+===== Schemas
+
+====== Overview
+
+Cubeserv implements the following endpoints for retrieving a schema:
+
+. /collections/{collectionId}/schema
+. /collections/{collectionId}/queryables
+. /collections/{collectionId}/sortable
+
+These enpoints are as define in https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 5: Schemas].  These endpoint, however, only provide "logical" schemas and cannot, thus, be used for validation.  In order to support validation, cubeserv also provides the following endpoints for retrieving application schemas:
+
+. /collections/{collectionId}/schemas/collection
+. /collections/{collectionId}/schemas/feature
+
+The first endpoint provides an application schema that allows a response containing a collection of features to be validated.  The latter endpoint provides an application schemas that can be used to validate a single feature.
+
+Cubeserve implements the following conformance classes from https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 5: Schemas]:
+
+[#conf_class_uris1,reftext='{table-caption} {counter:table-num}']
+.Conformance class URIs
+[cols="25,75",options="header"]
+|===
+|Conformance class |URI
+|Schemas |`\http://www.opengis.net/spec/{standard}/{m_n}/conf/schemas`
+|Core roles for features |`\http://www.opengis.net/spec/{standard}/{m_n}/conf/core-roles-features`
+|Returnables and Receivables |`\http://www.opengis.net/spec/{standard}/{m_n}/conf/returnables-and-receivables`
+|Queryables |`\http://www.opengis.net/spec/{standard}/{m_n}/conf/queryables`
+|Sortables |`\http://www.opengis.net/spec/{standard}/{m_n}/conf/sortables`
+|===
+
+====== Examples
+
+* https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari/collections/SettlementSrf/schema?f=json
+
+.Logical schema response
+====
+[source,json]
+----
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari/collections/SettlementSrf/schema",
+  "type": "object",
+  "title": "No Title Specified",
+  "description": "No description provided.",
+  "properties": {
+    "cw_fid": {
+      "readOnly": true,
+      "x-ogc-role": "id",
+      "type": "string",
+      "format": "uuid",
+      "x-ogc-propertySeq": 1
+    },
+    "geometry": {
+      "format": "geometry-polygon",
+      "x-ogc-role": "primary-geometry",
+      "x-ogc-propertySeq": 2
+    },
+    "AOO": {
+      "type": "number",
+      "x-ogc-propertySeq": 3
+    },
+    "ARA": {
+      "type": "number",
+      "x-ogc-propertySeq": 4
+    },
+    "BAC": {
+      "type": "integer",
+      "x-ogc-propertySeq": 5
+    },
+    "BEN": {
+      "type": "string",
+      "x-ogc-propertySeq": 6
+    },
+    "CAA": {
+      "type": "integer",
+      "x-ogc-propertySeq": 7
+    },
+    "CCN": {
+      "type": "string",
+      "x-ogc-propertySeq": 8
+    },
+    "CDR": {
+      "type": "string",
+      "x-ogc-propertySeq": 9
+    },
+    "FFN": {
+      "type": "integer",
+      "x-ogc-propertySeq": 10
+    },
+    "FFN2": {
+      "type": "integer",
+      "x-ogc-propertySeq": 11
+    },
+    "FFN3": {
+      "type": "integer",
+      "x-ogc-propertySeq": 12
+    },
+    "F_CODE": {
+      "type": "string",
+      "x-ogc-propertySeq": 13
+    },
+    "HGT": {
+      "type": "number",
+      "x-ogc-propertySeq": 14
+    },
+    "LZN": {
+      "type": "number",
+      "x-ogc-propertySeq": 15
+    },
+    "OTH": {
+      "type": "string",
+      "x-ogc-propertySeq": 16
+    },
+    "PCF": {
+      "type": "integer",
+      "x-ogc-propertySeq": 17
+    },
+    "SAX_RS1": {
+      "type": "string",
+      "x-ogc-propertySeq": 18
+    },
+    "SAX_RS2": {
+      "type": "string",
+      "x-ogc-propertySeq": 19
+    },
+    "SAX_RS3": {
+      "type": "string",
+      "x-ogc-propertySeq": 20
+    },
+    "SAX_RS4": {
+      "type": "string",
+      "x-ogc-propertySeq": 21
+    },
+    "SAX_RS5": {
+      "type": "string",
+      "x-ogc-propertySeq": 22
+    },
+    "SAX_RS6": {
+      "type": "string",
+      "x-ogc-propertySeq": 23
+    },
+    "SAX_RS8": {
+      "type": "string",
+      "x-ogc-propertySeq": 24
+    },
+    "SAX_RS9": {
+      "type": "string",
+      "x-ogc-propertySeq": 25
+    },
+    "SAX_RX1": {
+      "type": "string",
+      "x-ogc-propertySeq": 26
+    },
+    "SAX_RX2": {
+      "type": "string",
+      "x-ogc-propertySeq": 27
+    },
+    "SAX_RX5": {
+      "type": "string",
+      "x-ogc-propertySeq": 28
+    },
+    "SAX_RX6": {
+      "type": "string",
+      "x-ogc-propertySeq": 29
+    },
+    "SAX_RX7": {
+      "type": "string",
+      "x-ogc-propertySeq": 30
+    },
+    "SAX_RX8": {
+      "type": "string",
+      "x-ogc-propertySeq": 31
+    },
+    "SAX_RX9": {
+      "type": "string",
+      "x-ogc-propertySeq": 32
+    },
+    "SAX_RY0": {
+      "type": "string",
+      "x-ogc-propertySeq": 33
+    },
+    "SAX_RY1": {
+      "type": "string",
+      "x-ogc-propertySeq": 34
+    },
+    "SAX_RY2": {
+      "type": "string",
+      "x-ogc-propertySeq": 35
+    },
+    "UFI": {
+      "type": "string",
+      "x-ogc-propertySeq": 36
+    },
+    "WID": {
+      "type": "number",
+      "x-ogc-propertySeq": 37
+    },
+    "WPI": {
+      "type": "string",
+      "x-ogc-propertySeq": 38
+    },
+    "ZI001_SDP": {
+      "type": "string",
+      "x-ogc-propertySeq": 39
+    },
+    "ZI001_SDV": {
+      "type": "string",
+      "x-ogc-propertySeq": 40
+    },
+    "ZI001_SPS": {
+      "type": "integer",
+      "x-ogc-propertySeq": 41
+    },
+    "ZI001_SRT": {
+      "type": "string",
+      "x-ogc-propertySeq": 42
+    },
+    "ZI001_VSC": {
+      "type": "string",
+      "x-ogc-propertySeq": 43
+    },
+    "ZI001_VSD": {
+      "type": "string",
+      "x-ogc-propertySeq": 44
+    },
+    "ZI001_VSN": {
+      "type": "string",
+      "x-ogc-propertySeq": 45
+    },
+    "ZI004_RCG": {
+      "type": "string",
+      "x-ogc-propertySeq": 46
+    },
+    "ZI005_FNA": {
+      "type": "string",
+      "x-ogc-propertySeq": 47
+    },
+    "ZI005_FNA2": {
+      "type": "string",
+      "x-ogc-propertySeq": 48
+    },
+    "ZI005_NFN": {
+      "type": "string",
+      "x-ogc-propertySeq": 49
+    },
+    "ZI005_NFN2": {
+      "type": "string",
+      "x-ogc-propertySeq": 50
+    },
+    "ZI006_MEM": {
+      "type": "string",
+      "x-ogc-propertySeq": 51
+    },
+    "ZI020_GE4": {
+      "type": "string",
+      "x-ogc-propertySeq": 52
+    },
+    "ZI026_CTUC": {
+      "type": "integer",
+      "x-ogc-propertySeq": 53
+    },
+    "ZI026_CTUL": {
+      "type": "integer",
+      "x-ogc-propertySeq": 54
+    },
+    "ZI026_CTUU": {
+      "type": "integer",
+      "x-ogc-propertySeq": 55
+    },
+    "ZSAX_RS0": {
+      "type": "string",
+      "x-ogc-propertySeq": 56
+    },
+    "ZSAX_RX0": {
+      "type": "string",
+      "x-ogc-propertySeq": 57
+    },
+    "ZSAX_RX3": {
+      "type": "string",
+      "x-ogc-propertySeq": 58
+    },
+    "ZSAX_RX4": {
+      "type": "string",
+      "x-ogc-propertySeq": 59
+    },
+    "ZVH": {
+      "type": "number",
+      "x-ogc-propertySeq": 60
+    },
+    "FCSUBTYPE": {
+      "type": "integer",
+      "x-ogc-propertySeq": 61
+    },
+    "ADR": {
+      "type": "string",
+      "x-ogc-propertySeq": 62
+    },
+    "LMC": {
+      "type": "integer",
+      "x-ogc-propertySeq": 63
+    },
+    "STL": {
+      "type": "integer",
+      "x-ogc-propertySeq": 64
+    },
+    "STL2": {
+      "type": "integer",
+      "x-ogc-propertySeq": 65
+    },
+    "STL3": {
+      "type": "integer",
+      "x-ogc-propertySeq": 66
+    },
+    "HHD": {
+      "type": "integer",
+      "x-ogc-propertySeq": 67
+    }
+  },
+  "additionalProperties": false
+}
+----
+====
+
+* https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari/collections/SettlementSrf/schemas/collection?f=json
+
+.Application schema for the collection
+[source,json]
+====
+----
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari/collections/schemas/collection",
+  "$defs": {
+    "bbox": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "number"
+      }
+    },
+    "link": {
+      "type": "object",
+      "required": [
+        "href"
+      ],
+      "properties": {
+        "href": {
+          "type": "string",
+          "format": "uri"
+        },
+        "rel": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "Point": {
+      "title": "GeoJSON Point",
+      "type": "object",
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Point"
+          ]
+        },
+        "coordinates": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "number"
+          }
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        }
+      }
+    },
+    "LineString": {
+      "title": "GeoJSON LineString",
+      "type": "object",
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "LineString"
+          ]
+        },
+        "coordinates": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        }
+      }
+    },
+    "Polygon": {
+      "title": "GeoJSON Polygon",
+      "type": "object",
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Polygon"
+          ]
+        },
+        "coordinates": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        }
+      }
+    },
+    "MultiPoint": {
+      "title": "GeoJSON MultiPoint",
+      "type": "object",
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "MultiPoint"
+          ]
+        },
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        }
+      }
+    },
+    "MultiLineString": {
+      "title": "GeoJSON MultiLineString",
+      "type": "object",
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "MultiLineString"
+          ]
+        },
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        }
+      }
+    },
+    "MultiPolygon": {
+      "title": "GeoJSON MultiPolygon",
+      "type": "object",
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "MultiPolygon"
+          ]
+        },
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "minItems": 4,
+              "items": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        }
+      }
+    },
+    "GeometryCollection": {
+      "title": "GeoJSON Geometry Collection",
+      "type": "object",
+      "required": [
+        "type",
+        "geometries"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "GeometryCollection"
+          ]
+        },
+        "geometries": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/$defs/Point"
+              },
+              {
+                "$ref": "#/$defs/MultiPoint"
+              },
+              {
+                "$ref": "#/$defs/LineString"
+              },
+              {
+                "$ref": "#/$defs/MultiLineString"
+              },
+              {
+                "$ref": "#/$defs/Polygon"
+              },
+              {
+                "$ref": "#/$defs/MultiPolygon"
+              }
+            ]
+          }
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        }
+      }
+    },
+    "SettlementSrf": {
+      "featureType": "SettlementSrf",
+      "type": "object",
+      "required": [
+        "type",
+        "geometry",
+        "properties"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Feature"
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        },
+        "geometry": {
+          "$ref": "#/$defs/Polygon"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "required": [
+              ],
+              "properties": {
+                "AOO": {
+                  "type": "number"
+                },
+                "ARA": {
+                  "type": "number"
+                },
+                "BAC": {
+                  "type": "integer"
+                },
+                "BEN": {
+                  "type": "string"
+                },
+                "CAA": {
+                  "type": "integer"
+                },
+                "CCN": {
+                  "type": "string"
+                },
+                "CDR": {
+                  "type": "string"
+                },
+                "FFN": {
+                  "type": "integer"
+                },
+                "FFN2": {
+                  "type": "integer"
+                },
+                "FFN3": {
+                  "type": "integer"
+                },
+                "F_CODE": {
+                  "type": "string"
+                },
+                "HGT": {
+                  "type": "number"
+                },
+                "LZN": {
+                  "type": "number"
+                },
+                "OTH": {
+                  "type": "string"
+                },
+                "PCF": {
+                  "type": "integer"
+                },
+                "SAX_RS1": {
+                  "type": "string"
+                },
+                "SAX_RS2": {
+                  "type": "string"
+                },
+                "SAX_RS3": {
+                  "type": "string"
+                },
+                "SAX_RS4": {
+                  "type": "string"
+                },
+                "SAX_RS5": {
+                  "type": "string"
+                },
+                "SAX_RS6": {
+                  "type": "string"
+                },
+                "SAX_RS8": {
+                  "type": "string"
+                },
+                "SAX_RS9": {
+                  "type": "string"
+                },
+                "SAX_RX1": {
+                  "type": "string"
+                },
+                "SAX_RX2": {
+                  "type": "string"
+                },
+                "SAX_RX5": {
+                  "type": "string"
+                },
+                "SAX_RX6": {
+                  "type": "string"
+                },
+                "SAX_RX7": {
+                  "type": "string"
+                },
+                "SAX_RX8": {
+                  "type": "string"
+                },
+                "SAX_RX9": {
+                  "type": "string"
+                },
+                "SAX_RY0": {
+                  "type": "string"
+                },
+                "SAX_RY1": {
+                  "type": "string"
+                },
+                "SAX_RY2": {
+                  "type": "string"
+                },
+                "UFI": {
+                  "type": "string"
+                },
+                "WID": {
+                  "type": "number"
+                },
+                "WPI": {
+                  "type": "string"
+                },
+                "ZI001_SDP": {
+                  "type": "string"
+                },
+                "ZI001_SDV": {
+                  "type": "string"
+                },
+                "ZI001_SPS": {
+                  "type": "integer"
+                },
+                "ZI001_SRT": {
+                  "type": "string"
+                },
+                "ZI001_VSC": {
+                  "type": "string"
+                },
+                "ZI001_VSD": {
+                  "type": "string"
+                },
+                "ZI001_VSN": {
+                  "type": "string"
+                },
+                "ZI004_RCG": {
+                  "type": "string"
+                },
+                "ZI005_FNA": {
+                  "type": "string"
+                },
+                "ZI005_FNA2": {
+                  "type": "string"
+                },
+                "ZI005_NFN": {
+                  "type": "string"
+                },
+                "ZI005_NFN2": {
+                  "type": "string"
+                },
+                "ZI006_MEM": {
+                  "type": "string"
+                },
+                "ZI020_GE4": {
+                  "type": "string"
+                },
+                "ZI026_CTUC": {
+                  "type": "integer"
+                },
+                "ZI026_CTUL": {
+                  "type": "integer"
+                },
+                "ZI026_CTUU": {
+                  "type": "integer"
+                },
+                "ZSAX_RS0": {
+                  "type": "string"
+                },
+                "ZSAX_RX0": {
+                  "type": "string"
+                },
+                "ZSAX_RX3": {
+                  "type": "string"
+                },
+                "ZSAX_RX4": {
+                  "type": "string"
+                },
+                "ZVH": {
+                  "type": "number"
+                },
+                "FCSUBTYPE": {
+                  "type": "integer"
+                },
+                "ADR": {
+                  "type": "string"
+                },
+                "LMC": {
+                  "type": "integer"
+                },
+                "STL": {
+                  "type": "integer"
+                },
+                "STL2": {
+                  "type": "integer"
+                },
+                "STL3": {
+                  "type": "integer"
+                },
+                "HHD": {
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": false
+            }
+          ]
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "href"
+            ],
+            "properties": {
+              "href": {
+                "type": "string",
+                "format": "uri"
+              },
+              "rel": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "title": "GeoJSON Feat Collection",
+  "type": "object",
+  "required": [
+    "type",
+    "features"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "FeatureCollection"
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/SettlementSrf"
+          }
+        ]
+      }
+    },
+    "bbox": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "number"
+      }
+    }
+  }
+}
+----
+====
+
+* https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari/collections/SettlementSrf/schemas/feature?f=json
+
+.Application schema for a feature
+[source,json]
+====
+----
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari/collections/SettlementSrf/schema",
+  "type": "object",
+  "required": [
+    "type",
+    "geometry",
+    "properties"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "Feature"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "bbox": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "number"
+      }
+    },
+    "geometry": {
+      "title": "GeoJSON Polygon",
+      "type": "object",
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Polygon"
+          ]
+        },
+        "coordinates": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "bbox": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "properties": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+          ],
+          "properties": {
+            "AOO": {
+              "type": "number"
+            },
+            "ARA": {
+              "type": "number"
+            },
+            "BAC": {
+              "type": "integer"
+            },
+            "BEN": {
+              "type": "string"
+            },
+            "CAA": {
+              "type": "integer"
+            },
+            "CCN": {
+              "type": "string"
+            },
+            "CDR": {
+              "type": "string"
+            },
+            "FFN": {
+              "type": "integer"
+            },
+            "FFN2": {
+              "type": "integer"
+            },
+            "FFN3": {
+              "type": "integer"
+            },
+            "F_CODE": {
+              "type": "string"
+            },
+            "HGT": {
+              "type": "number"
+            },
+            "LZN": {
+              "type": "number"
+            },
+            "OTH": {
+              "type": "string"
+            },
+            "PCF": {
+              "type": "integer"
+            },
+            "SAX_RS1": {
+              "type": "string"
+            },
+            "SAX_RS2": {
+              "type": "string"
+            },
+            "SAX_RS3": {
+              "type": "string"
+            },
+            "SAX_RS4": {
+              "type": "string"
+            },
+            "SAX_RS5": {
+              "type": "string"
+            },
+            "SAX_RS6": {
+              "type": "string"
+            },
+            "SAX_RS8": {
+              "type": "string"
+            },
+            "SAX_RS9": {
+              "type": "string"
+            },
+            "SAX_RX1": {
+              "type": "string"
+            },
+            "SAX_RX2": {
+              "type": "string"
+            },
+            "SAX_RX5": {
+              "type": "string"
+            },
+            "SAX_RX6": {
+              "type": "string"
+            },
+            "SAX_RX7": {
+              "type": "string"
+            },
+            "SAX_RX8": {
+              "type": "string"
+            },
+            "SAX_RX9": {
+              "type": "string"
+            },
+            "SAX_RY0": {
+              "type": "string"
+            },
+            "SAX_RY1": {
+              "type": "string"
+            },
+            "SAX_RY2": {
+              "type": "string"
+            },
+            "UFI": {
+              "type": "string"
+            },
+            "WID": {
+              "type": "number"
+            },
+            "WPI": {
+              "type": "string"
+            },
+            "ZI001_SDP": {
+              "type": "string"
+            },
+            "ZI001_SDV": {
+              "type": "string"
+            },
+            "ZI001_SPS": {
+              "type": "integer"
+            },
+            "ZI001_SRT": {
+              "type": "string"
+            },
+            "ZI001_VSC": {
+              "type": "string"
+            },
+            "ZI001_VSD": {
+              "type": "string"
+            },
+            "ZI001_VSN": {
+              "type": "string"
+            },
+            "ZI004_RCG": {
+              "type": "string"
+            },
+            "ZI005_FNA": {
+              "type": "string"
+            },
+            "ZI005_FNA2": {
+              "type": "string"
+            },
+            "ZI005_NFN": {
+              "type": "string"
+            },
+            "ZI005_NFN2": {
+              "type": "string"
+            },
+            "ZI006_MEM": {
+              "type": "string"
+            },
+            "ZI020_GE4": {
+              "type": "string"
+            },
+            "ZI026_CTUC": {
+              "type": "integer"
+            },
+            "ZI026_CTUL": {
+              "type": "integer"
+            },
+            "ZI026_CTUU": {
+              "type": "integer"
+            },
+            "ZSAX_RS0": {
+              "type": "string"
+            },
+            "ZSAX_RX0": {
+              "type": "string"
+            },
+            "ZSAX_RX3": {
+              "type": "string"
+            },
+            "ZSAX_RX4": {
+              "type": "string"
+            },
+            "ZVH": {
+              "type": "number"
+            },
+            "FCSUBTYPE": {
+              "type": "integer"
+            },
+            "ADR": {
+              "type": "string"
+            },
+            "LMC": {
+              "type": "integer"
+            },
+            "STL": {
+              "type": "integer"
+            },
+            "STL2": {
+              "type": "integer"
+            },
+            "STL3": {
+              "type": "integer"
+            },
+            "HHD": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "href"
+        ],
+        "properties": {
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "rel": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
+----
+====
+
+===== Property selection
+
+====== Overview 
+
+Cubeserv implements the `properties` parameter as defined in https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 6: Property Selection].  
+
+Cubeserv implements the following conformance classes from https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 6: Property Selection]:
+
+[#conf_class_uris2,reftext='{table-caption} {counter:table-num}']
+.Conformance class URIs
+[cols="25,75",options="header"]
+|===
+|Conformance class |URI
+|Property Selection |http://www.opengis.net/spec/ogcapi-features-6/1.0/conf/properties
+|Property Selection (Features) |http://www.opengis.net/spec/ogcapi-features-6/1.0/conf/properties-features
+|===
+
+In addition to the `properties` parameter, cubeserv also implement an `exclude-properties` parameter that lists the properties to exclude (rather than include) in the response.
+
+====== Examples
+
+* https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari/collections/SettlementSrf/items/CWFID.SETTLEMENTSRF.0.8?f=json&properties=geometry,f_code,ccn
+
+.Selecting a sub-set of properties
+[source,json]
+----
+{
+  "type": "Feature",
+  "id": "CWFID.SETTLEMENTSRF.0.8",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [ 36.33295599, 32.2828885 ], [ 36.33580536, 32.28198786 ],
+        [ 36.33954522, 32.280714 ], [ 36.3399218, 32.28064846 ],
+        [ 36.34017809, 32.28070732 ], [ 36.34043842, 32.28088291
+        ], [ 36.34077816, 32.28164959 ], [ 36.34109545, 32.28257287 ],
+        [ 36.34149681, 32.28395917 ], [ 36.34184168, 32.28532761 ],
+        [ 36.34209096, 32.2864909 ], [ 36.3422161, 32.28702197 ],
+        [ 36.34225167, 32.28733591 ], [ 36.34233647, 32.28759259 ],
+        [ 36.33597433, 32.2896979 ], [ 36.33518813, 32.28802212 ],
+        [ 36.33513818, 32.28790676 ], [ 36.33418013, 32.28569608 ],
+        [ 36.33295599, 32.2828885 ]
+      ]
+    ]
+  },
+  "properties": {
+    "CCN": "No Information",
+    "F_CODE": "AL020",
+  },
+  "links": [
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari",
+      "rel": "service,"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari/collections/SettlementSrf?f=application%2Fjson",
+      "rel": "collection",
+      "type": "application/json"
+    },
+    .
+    .
+    .
+  ]
+}
+----
+
+An equivalent request, using the `exclude-properties` parameter, that would generate the same response would be:
+
+* https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari/collections/SettlementSrf/items/CWFID.SETTLEMENTSRF.0.8?f=json&exclude-properties=AOO,ARA,BAC,BEN,CAA,CDR,FFN,FFN2,FFN3,HGT,LZN,OTH,PCF,SAX_RS1,SAX_RS2,SAX_RS3,SAX_RS4,SAX_RS5,SAX_RS6,SAX_RS8,SAX_RS9,SAX_RX1,SAX_RX2,SAX_RX5,SAX_RX6,SAX_RX7,SAX_RX8,SAX_RX9,SAX_RY0,SAX_RY1,SAX_RY2,UFI,WID,WPI,ZI001_SDP,ZI001_SDV,ZI001_SPS,ZI001_SRT,ZI001_VSC,ZI001_VSD,ZI001_VSN,ZI004_RCG,ZI005_FNA,ZI005_FNA2,ZI005_NFN,ZI005_NFN2,ZI006_MEM,ZI020_GE4,ZI026_CTUC,ZI026_CTUL,ZI026_CTUU,ZSAX_RS0,ZSAX_RX0,ZSAX_RX3,ZSAX_RX4,ZVH,FCSUBTYPE,LMC,STL,STL2,STL3,HHD
+
+===== Geometry simplification
+
+====== Overview 
+
+Cubeserv implements the `zoom-level` parameter as defined in https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 7: Geometry Simplification].
+
+Cubeserv implements the following conformance classes from https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 7: Geometry Simplification]:
+
+[#conf_class_uris3,reftext='{table-caption} {counter:table-num}']
+.Conformance class URIs
+[cols="25,75",options="header"]
+|===
+|Conformance class |URI
+|Geometry Simplification |http://www.opengis.net/spec/ogcapi-features-7/1.0/conf/zoom-level
+|Geometry Simplification (Features) |http://www.opengis.net/spec/ogcapi-features-7/1.0/conf/zoom-level-features
+|===
+
+====== Examples
+
+* https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari/collections/SettlementSrf/items/CWFID.SETTLEMENTSRF.0.8?f=json&properties=geometry
+
+.An unsimplified geometry
+[source,json]
+----
+{
+  "type": "Feature",
+  "id": "CWFID.SETTLEMENTSRF.0.8",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [ 36.33295599, 32.2828885 ], [ 36.33580536, 32.28198786 ],
+        [ 36.33954522, 32.280714 ], [ 36.3399218, 32.28064846 ],
+        [ 36.34017809, 32.28070732 ], [ 36.34043842, 32.28088291 ],
+        [ 36.34077816, 32.28164959 ], [ 36.34109545, 32.28257287 ],
+        [ 36.34149681, 32.28395917 ], [ 36.34184168, 32.28532761 ],
+        [ 36.34209096, 32.2864909 ], [ 36.3422161, 32.28702197 ],
+        [ 36.34225167, 32.28733591 ], [ 36.34233647, 32.28759259 ],
+        [ 36.33597433, 32.2896979 ], [ 36.33518813, 32.28802212 ],
+        [ 36.33513818, 32.28790676 ], [ 36.33418013, 32.28569608 ],
+        [ 36.33295599, 32.2828885 ]
+      ]
+    ]
+  },
+  "properties": {
+  },
+  "links": [
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari",
+      "rel": "service,"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari/collections/SettlementSrf?f=application%2Fjson",
+      "rel": "collection",
+      "type": "application/json"
+    },
+    .
+    .
+    .
+  ]
+}
+----
+
+A simplified version of this geometry can be retrieved with:
+
+* https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari/collections/SettlementSrf/items/CWFID.SETTLEMENTSRF.0.8?f=json&properties=geometry&zoom-level=5
+
+.A simplified geometry at zoom level 5
+[source,json]
+----
+{
+  "type": "Feature",
+  "id": "CWFID.SETTLEMENTSRF.0.8",
+  geometry": {
+    "type":"Polygon",
+    "coordinates": [
+      [
+        [ 36.33295599, 32.2828885 ], [ 36.33513818, 32.28790676 ],
+        [ 36.33418013, 32.28569608 ], [ 36.33295599, 32.2828885 ]
+      ]
+    ]
+  },
+  "properties": {
+  },
+  "links": [
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari",
+      "rel": "service,"
+    },
+    {
+      "href": "https://www.pvretano.com/cubewerx/cubeserv/default/ogcapi/zaatari/collections/SettlementSrf?f=application%2Fjson",
+      "rel": "collection",
+      "type": "application/json"
+    },
+    .
+    .
+    .
+  ]
+}
+----

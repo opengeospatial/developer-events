@@ -1,4 +1,0 @@
-[[results_ldproxy]]
-==== ldproxy
-
-TBA

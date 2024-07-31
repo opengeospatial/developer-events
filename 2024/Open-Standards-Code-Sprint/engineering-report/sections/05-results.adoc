@@ -5,14 +5,6 @@ The code sprint included multiple software applications and experimented with se
 
 === Approved OGC Standards
 
-include::results/ogcapifeatures.adoc[]
-
-include::results/ogcapitiles.adoc[]
-
-include::results/ogcapiedr.adoc[]
-
-include::results/ogcapiprocesses.adoc[]
-
 include::results/coveragejson.adoc[]
 
 include::results/trainingdmlai.adoc[]
@@ -21,11 +13,7 @@ include::results/trainingdmlai.adoc[]
 
 include::results/ogcsensorthingsapiwebsub.adoc[]
 
-include::results/ogcapiconnectedsystems.adoc[]
-
 include::results/ogcapirecords.adoc[]
-
-include::results/ogcapicoverages.adoc[]
 
 include::results/jsonfg.adoc[]
 
@@ -42,10 +30,6 @@ include::results/iso19157_3.adoc[]
 include::results/pygeoapi.adoc[]
 
 include::results/pygeometa.adoc[]
-
-include::results/owslib.adoc[]
-
-include::results/ldproxy.adoc[]
 
 include::results/cubeserv.adoc[]
 

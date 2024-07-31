@@ -1,3 +1,0 @@
-==== OGC API - Processes
-
-TBA
