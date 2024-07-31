@@ -1,7 +1,7 @@
 [[discussion_sta_cs]]
 ==== Relationship between OGC SensorThings API and OGC API - Connected Systems
 
-The code sprint hosted a discussion on the relationship between the OGC SensorThings API Standard and the OGC API - Connected Systems candidate Standard.  The purpose of the discussion was to determine the commonalities and differences between the OGC SensorThings API Standard and OGC API – Connected Systems candidate Standard so that a consistent message can be presented to the market. Early in the session, it was observed that collaboration between the SWGs could be improved. It is envisaged therefore that the discussion summarised in this section will help to improve collaboration between the SWGs and consistency in messaging.
+The code sprint hosted a discussion on the relationship between the OGC SensorThings API Standard and the OGC API - Connected Systems candidate Standard.  The purpose of the discussion was to determine the commonalities and differences between the OGC SensorThings API Standard and OGC API – Connected Systems candidate Standard so that a consistent message can be presented to the market. Early in the session, it was observed that collaboration between the SWGs could be improved. It is envisaged therefore that the discussion summarized in this section will help to improve collaboration between the SWGs and consistency in messaging.
 
 The first activity during the session was to review the table of design choices which is presented in https://docs.ogc.org/DRAFTS/23-001r0.html#_ogc_sensorthings_api_standard[Annex B.9] of OGC API - Connected Systems - Part 1: Feature Resources. The table presents a comparison of the design choices made in the development of the two standards. The participants noted that the OGC SensorThings API specifies support for ‘any’ type of observation and thus does not identify a set list of supported observation types. In contrast, OGC API – Connected Systems lists the observation types that the standard supports namely scalar, vector, N-D coverage, and video.
 
@@ -21,7 +21,7 @@ The participants noted that rather than focus on how the standards implement cer
 
 There was an observation made that the ability to identify, describe in detail and integrate different sensor systems is one of the motivations for OGC API – Connected Systems and thus a key differentiator from OGC SensorThings API. That is, as the name suggests, OGC API - Connected Systems is designed to support the deployment and connection of various systems, some of which are likely to include sensors. The domain use cases presented in the Reviewers' Guide include use cases that highlight this ability to connect different systems.
 
-The key differentiators can therefore be summarised as follows:
+The key differentiators can therefore be summarized as follows:
 
 * The level of complexity of the system(s) and what you need to describe them
 * How you can query that complexity
