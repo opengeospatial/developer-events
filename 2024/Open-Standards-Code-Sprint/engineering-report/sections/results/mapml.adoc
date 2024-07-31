@@ -171,7 +171,7 @@ The following code is common to both MapML responses (HTML or MapML versions). P
   </map-extent>
 ----
 
-In case the API implementation supports MapML it is convenient that the collection description page advertize a link to the map. The following figure illustrates who this looks like in the HTML representation of the response.
+In case the API implementation supports MapML, it is convenient that the collection description page advertises a link to the map. The following figure illustrates how this looks like in the HTML representation of the response.
 
 [#img_CollectionIdWithMapML,reftext='{figure-caption} {counter:figure-num}']
 .Contiguous tiles from different services and APIs sharing same WebMercatorQuad tile matrix set and the tile matrix identified as 15 (sometimes called "zoom")
