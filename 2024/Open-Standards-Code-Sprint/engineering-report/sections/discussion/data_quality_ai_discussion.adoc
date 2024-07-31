@@ -2,14 +2,14 @@
 
 ==== Data Quality and Artificial Intelligence
 
-A key element of data quality is a record of how the dataset has been processed including information about the computational manipulation as well as individuals and organizations who have completed the processing. In ISO 19115, this is described in the lineage classes, and specifically through the LE_Processing Class. This class enables recording of the specific processing and runtime parameters required to create a data quality metric and recreate the lineage if necessary.
+A key element of data quality is a record of how the dataset has been processed, including information about the computational manipulation as well as individuals and organizations who have completed the processing. In ISO 19115, this is described in the lineage classes, and specifically through the LE_Processing Class. This class enables recording of the specific processing and runtime parameters required to create a data quality metric and recreate the lineage if necessary.
 
-The OGC has been exploring the use of reusable building blocks to enable elements of standards to be re-used, extended, and modified with a FAIR (Findable, Accessible, Interoperable, Reusable) way. As presented in <<results_iso19157_3>>, the code sprint participants examined the potential use of the ISO 19157-3 data quality measures register to support the documentation of TrainingDML-AI data quality reports. Some of the objectives of the data quality exploration work in this code sprint were to take these concepts to address the following questions:
+OGC has been exploring the use of reusable building blocks to enable elements of standards to be re-used, extended, and modified with a FAIR (Findable, Accessible, Interoperable, Reusable) way. As presented in <<results_iso19157_3>>, the code sprint participants examined the potential use of the ISO 19157-3 data quality measures register to support the documentation of TrainingDML-AI data quality reports. Some of the objectives of the data quality exploration work in this code sprint were to take these concepts to address the following questions:
 
-. Can we create machine readable provenance chains to enable scientific data re-creation?
-. Can machine readable provenance chains be automatable, and executable?
-. Can we use the OGC building block RAINBOW server to store and refer to mathematical formulae?
-. Can the formulae be parsed into machine readable formats, new variables injected, and the provenance chain executed?
+. Can we create machine-readable provenance chains to enable scientific data re-creation?
+. Can machine-readable provenance chains be automatable, and executable?
+. Can we use OGC RAINBOW and its building block register to store and refer to mathematical formulae?
+. Can the formulae be parsed into machine-readable formats, new variables injected, and the provenance chain executed?
  
 
 The research question "Can we create machine readable provenance chains to enable scientific data re-creation?" was addressed through the work on pygeoapi. As presented in <<results_pygeoapi_processes_part2>>, pygeoapi was extended to implement support for ingesting a Common Workflow Language (CWL) definition document in accordance with the OGC API - Processes - Part 2: Deploy, Replace, Undeploy candidate Standard. The successful execution of the CWL workflows through pygeoapi also addressed the research question "Can machine readable provenance chains be automatable, and executable?". Finally, the research question "Can we use the OGC building block RAINBOW server to store and refer to mathematical formulae?" was partly addressed through the creation of data quality reports that referenced RAINBOW-provided definitions containing mathematical formulae as reported in <<results_iso19157_3>>. Unfortunately, it was not possible to inject new variables into the formula to execute the chain for another dataset. Therefore the research question "Can the formulae be parsed into machine readable formats, new variables injected, and the provenance chain executed?" remains to be answered in future code sprints.
