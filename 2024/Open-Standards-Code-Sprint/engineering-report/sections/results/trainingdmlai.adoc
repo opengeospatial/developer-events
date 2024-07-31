@@ -1,19 +1,17 @@
 ==== Training Data Markup Language for Artificial Intelligence
 
-TODO
+At the time of the code sprint, the Training Data Markup Language for Artificial Intelligence (TrainingDML-AI) Conceptual Model was a fully approved OGC Standard. However, both the JSON and XML encodings of TrainingDML-AI were still candidate Standards. Therefore several of the code sprint activities that involved TrainingDML-AI focused on the data encodings. 
 
-pygeometa
+The TrainingDML-AI Standard was the focus of a mentoring session, and there was active discussion within the Discord platform.
 
-pygeoapi 
+Another sprint activity involved configuring a training dataset as a pygeometa metadata control file and generating TrainingDataML-AI metadata from pygeometa. A more detailed description of the pygeometa activities is documented at <<results_pygeometa>>. This capability potentially makes it possible to conduct Extract-Transform-Load operations between other metadata formats supported by pygeometa and the JSON encoding on TrainingDML.
 
-ISO 19157-3 and RAINBOW
-
-TEAM Engine
-
-
-
-The Training Data Markup Language for Artificial Intelligence (TrainingDML-AI) standard was the focus for a mentoring session, and there was active discussion within the Discord platform.
-
-Wuhan University (WHU) were present online to support the discussions and implementations, which included:
+The feedback provided by sprint participants also enabled the SWG members from Wuhan University (WHU) to fix issues encountered in example files for the candidate Standard. Furthermore, the SWG members also participated in the discussions and supported the implementations by fellow sprint participants, which included:
 
 ** Pixalytics Ltd (Sam Lavender) worked on updating their implementation, using the https://github.com/openrsgis/pytdml[pytdml] Python library. Problems were faced with recent updates to the library and so an https://github.com/openrsgis/pytdml/issues/11[issue] was raised.
+** TEAM Engine maintainers from OGC Staff worked on an Executable Test Suite (ETS) which will be integrated into OGC's compliance testing tools after a period of further development and approval by the OGC Membership.
+
+[#img_teamengine]
+.Screenshot of the TEAM Engine user interface with TrainingDML test results
+image::images/teamengine.png[]
+

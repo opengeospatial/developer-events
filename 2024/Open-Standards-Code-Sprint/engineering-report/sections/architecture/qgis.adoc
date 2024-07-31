@@ -1,8 +1,6 @@
 ==== QGIS
 
-The https://www.qgis.org/[QGIS] stable release V3.28.6-Firenze, and later versions, has a Time Slider/Controller added to the menu bar. It behaves like a video controller if relevant to the data being displayed. 
-
-This and https://www.qgis.org/download/[later versions] also support the OGC API-EDR queries via a plugin.
+QGIS is a free and open-source cross-platform desktop GIS that supports viewing, editing, and analysis of geospatial data. The https://www.qgis.org/[QGIS] stable release V3.28.6-Firenze, and later versions, has a Time Slider/Controller added to the menu bar. It behaves like a video controller if relevant to the data being displayed. This and https://www.qgis.org/download/[later versions] also support the https://ogcapi.ogc.org/edr/[OGC API-EDR] queries via a plugin.
 
 Release V3.37 and https://www.qgis.org/download/[later] now supports a Vertical Slider for data and layers that have a vertical extent.
 
