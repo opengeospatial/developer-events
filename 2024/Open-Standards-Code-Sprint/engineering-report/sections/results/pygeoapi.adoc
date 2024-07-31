@@ -26,7 +26,7 @@ Process execution then invoked the https://cwltool.readthedocs.io[cwltool refere
 
 image::images/pygeoapi-oaproc-part2-new-process-execution.png[align="center"]
 
-The architecture of the implementation can be found below, and the associated implementation on https://github.com/tomkralidis/pygeoapi/tree/oaproc-part2[GitHub].  Future work includes process replace and delete functionality, as well as describing CWL inputs and outputs as part of the native process description model.
+The architecture of the implementation can be found below, and the associated implementation on https://github.com/tomkralidis/pygeoapi/tree/oaproc-part2[GitHub].  Future work includes 'process replace' and 'process delete' functionality, as well as describing CWL inputs and outputs as part of the native process description model.
 
 image::images/pygeoapi-oaproc-part2-architecture.png[align="center"]
 
