@@ -54,10 +54,10 @@ As one of the major focuses of the code sprint was the use, testing, and enhance
 }
 ----
 
-The test dataset contains the the _PositionalAccuracy_ element which implements the the _measureIdentification_ element that in turn includes the reference to the authority and a code that corresponds to the data quality formula expressed in MathML. The _measureIdentification_ element in the listing above references a data quality measure that is defined through a mathematical formula. The URI reference leads to a page as shown in <<img_formula_example>> when displayed in a web browser.
+The test dataset contains the _PositionalAccuracy_ element which implements the _measureIdentification_ element that in turn includes the reference to the authority and a code that corresponds to the data quality formula expressed in MathML. The _measureIdentification_ element in the listing above references a data quality measure that is defined through a mathematical formula. The URI reference leads to a page as shown in <<img_formula_example>> when displayed in a web browser.
 
 [#img_formula_example]
 .A screenshot of a mathematical formular from the data quality measures register
 image::images/formula.png[]
 
-The objective of the software developed in this code sprint was to parse the MathML to make it machine readable, machine executable, and parsable. The output was successful to a point of making the formula machine readable, but it was not possible to inject new variables into the formula to execute the chain for another dataset.
+One of the objectives of the software developed in this part of the code sprint was to parse the MathML to make it machine readable, machine executable, and parsable. The output was successful to a point of making the formula machine readable, but it was not possible to inject new variables into the formula to execute the chain for another dataset.
