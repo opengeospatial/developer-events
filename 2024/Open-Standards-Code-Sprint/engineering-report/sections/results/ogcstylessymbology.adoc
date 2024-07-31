@@ -4,7 +4,7 @@
 
 During this code sprint, the sprint participants worked on drafting the OGC Styles & Symbology candidate standard. The work included:
 
-* explaining the SymCore concept to Louis-Martin from Bentley Systems and discuss possible link:https://github.com/opengeospatial/styles-and-symbology/issues/24#issuecomment-2222335333[use cases] for `hatch`, `stipple` & `pattern` fills,
+* discussing possible link:https://github.com/opengeospatial/styles-and-symbology/issues/24#issuecomment-2222335333[use cases] for `hatch`, `stipple` & `pattern` fills,
 * addition of a `Metadata` section in the link:https://docs.ogc.org/DRAFTS/18-067r4.html#rc-core [Requirements Class "Core"] with `keywords` and `geoDataClasses` parameters in line with the JSON schema,
 * discussion and clarification of the concepts of link:https://github.com/opengeospatial/styles-and-symbology/issues/64[Stipples] and link:https://github.com/opengeospatial/styles-and-symbology/issues/59[Hatches],
 * drafting requirements with portrayal examples,
