@@ -2,7 +2,7 @@
 
 ===== Overview
 
-CubeWerx's involvment in this code sprint consisted on updated our feature server to be compliant with the latest draft version of the stadards:
+CubeWerx's involvement in the code sprint consisted of updating their features server to be compliant with the latest draft versions of the candidate Standards:
 
 * https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 5: Schemas]
 * https://docs.ogc.org/DRAFTS/23-058r1.html[OGC API - Features - Part 6: Property Selection]
