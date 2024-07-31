@@ -8,7 +8,7 @@ Several participants worked on this MapML track.
 
 Pygeoapi was used as the base for a prototype web application that is able to serve MapML remote content.
 
-The original goal was to add MapML support by leveraging pygeoapi's plugin framework. However, after inspection of the code this proved to not be possible - proper integration of MapML would require modifications to the core pygeoapi code, something which was deemed out of scope for the code sprint. As such, development efforts consisted of developing a thin wrapper around pygeoapi which would add the relevant bits of MapML-related codewhile still keeping pygeoapi as the main agent. This approach worked out well.
+The original goal was to add MapML support by leveraging pygeoapi's plugin framework. However, after inspection of the code this proved to not be possible - proper integration of MapML would require modifications to the core pygeoapi code, something which was deemed out of scope for the code sprint. As such, development efforts consisted of developing a thin wrapper around pygeoapi which would add the relevant bits of MapML-related code while still keeping pygeoapi as the main agent. This approach worked out well.
 
 The prototype thus consisted of two-components:
 
@@ -100,7 +100,7 @@ With the prototype pygeoapi-based application generating the following response:
 
 ====== Simple MapML web client
 
-In order to test how the pygeoapi-based prototype worked as a server of remote MapML data, a small web client was implemented, maing use of the https://www.npmjs.com/package/@maps4html/web-map-custom-element[@maps4html/web-map-custom-element] javascript library, which emulates support for MapML in the browser.
+In order to test how the pygeoapi-based prototype worked as a server of remote MapML data, a small web client was implemented, making use of the https://www.npmjs.com/package/@maps4html/web-map-custom-element[@maps4html/web-map-custom-element] javascript library, which emulates support for MapML in the browser.
 
 The client asked for a couple of remote layers, being served by the pygeoapi-based prototype application. One of these remote layers served image tiles, while the other served MapML features.
 
@@ -137,7 +137,7 @@ image::images/pygeoapi-mapml-app1.png[width=700,align="center"]
 
 ===== CREAF Miramon
 
-On the other hand, UAB-CREAF participated in the sprint by contributing their MiraMon Map Server. This application was adapted to OGC API Maps and Tiles during previous sprints. The OGC API Maps allow for requesting a map of a collection. If the request is done to this endpoint `/collections/{collectionId}/map` with no parameters, the server is free to respond with a "nice" map that represents the collection or a representative area of it. If the negotiated media type is static, the selection of the area is particularly important. In the case of MapML, the map is interactive, giving freedom to the user to correct the server decision by panning and zooming. In this particular sprint, two modifications were introduced in the MiraMon Map Server to include MapML support.
+UAB-CREAF participated in the sprint by contributing their MiraMon Map Server. This application was adapted to OGC API Maps and Tiles during previous sprints. The OGC API Maps allow for requesting a map of a collection. If the request is done to this endpoint `/collections/{collectionId}/map` with no parameters, the server is free to respond with a "nice" map that represents the collection or a representative area of it. If the negotiated media type is static, the selection of the area is particularly important. In the case of MapML, the map is interactive, giving freedom to the user to correct the server decision by panning and zooming. In this particular sprint, two modifications were introduced in the MiraMon Map Server to include MapML support.
 
 * A request to a `/collections/{collectionId}/map` with no extra parameters that negotiates HTML will result in the creation of an HTML page that includes some metadata about the collection and a MapML section to show the interactive map. This web page can be visualized in the map browser with the help of MapML common JavaScript libraries.
 * A request to a `/collections/{collectionId}/map` with no extra parameters that negotiates MapML, will result in a MapML document that can be visualized in Chrome if an specific add-in has been previously setup.
