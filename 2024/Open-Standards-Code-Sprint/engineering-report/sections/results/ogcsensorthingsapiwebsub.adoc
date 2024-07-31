@@ -27,7 +27,7 @@ A SensorThings API WebSub Hub implementation uses the SensorThings MQTT function
 
 ===== WebSub Extension Implementation (SensorThings API Service)
 
-A SensorThings API Service must support the W3C WebSub discovery. This functionality was implemented as a plugin to the https://github.com/FraunhoferIOSB/FROST-Server[FROST-Server] that will be made available in a public Github repository once the WebSub extension idea has matured. For testing purposes, the plugin is deployed on the https://citiobs.demo.secure-dimensions.de/staplus/v1.1[CitiObs STAplus test endpoint].
+A SensorThings API Service must support the W3C WebSub discovery. This functionality was implemented as a plugin to the https://github.com/FraunhoferIOSB/FROST-Server[FROST-Server] that will be made available in a public GitHub repository once the WebSub extension idea has matured. For testing purposes, the plugin is deployed on the https://citiobs.demo.secure-dimensions.de/staplus/v1.1[CitiObs STAplus test endpoint].
 
 [%unnumbered%]
 [source]
@@ -225,7 +225,7 @@ if ('POST == method') {
 
 ===== Code Sprint Contribution
 
-The contribution to the OGC Codesprint focused on improving the Hub's distribution of messages to callback URLs (Webhooks). The simple approach to send HTTP POST messages from inside the `MQTT.on_message` callback was modified such that the Hub now pushes the message to a processing queue. The queue was implemented using https://www.rabbitmq.com/[RabbitMQ]. The use of a RabbitMQ Exchange is illustrated https://cdn.prod.website-files.com/5ff66329429d880392f6cba2/619f53ce469a19d18a61ef94_AMQP%20Broker.png[here]. The use of a message queueing system improves the responsiveness of the Hub as the peculiabilities of WebHooks (slow latency, offline, etc.) are now taken care of by the RabbitMQ queue consumer processes. To achieve scalability, it is possible to deploy multiple workers in the cloud. The Hub improvement during the Codesprint boils down to the following code snippet:
+The contribution to the code sprint focused on improving the Hub's distribution of messages to callback URLs (Webhooks). The simple approach to send HTTP POST messages from inside the `MQTT.on_message` callback was modified such that the Hub now pushes the message to a processing queue. The queue was implemented using https://www.rabbitmq.com/[RabbitMQ]. The use of a RabbitMQ Exchange is illustrated https://cdn.prod.website-files.com/5ff66329429d880392f6cba2/619f53ce469a19d18a61ef94_AMQP%20Broker.png[here]. The use of a message queueing system improves the responsiveness of the Hub as the peculiarities of WebHooks (slow latency, offline, etc.) are now taken care of by the RabbitMQ queue consumer processes. To achieve scalability, it is possible to deploy multiple workers in the cloud. The Hub improvement during the code sprint boils down to the following code snippet:
 
 [%unnumbered%]
 [source]
@@ -318,7 +318,7 @@ log.setLevel(process.env.LOG_LEVEL || log.levels.DEBUG);
 })();
 ----
 
-For achieving scalability it is required that a queue workers is stateless. As illustrated above, this achieved by adding all relevant information to the message itself. In the example above, the AMQP message property `message.properties.appId` refers to the Webhook URL, `message.properties.correlationId` refers to the HMAC secret. The 'mis'use of these properties like this or in a similar fashion is required as the RabbitMQ implementation does not seem to support a generic message property like 'userdata' or 'options'. When conveying more information, it is also possible to JSON.stringify({...}) all relevant information into one of the message properties. This does not create an interoperability challenge as it is likely that the Hub and the Worker is implemented by the same entity. And therefore, the 'mis'use of RabbitMQ message properties for a specific purpose can easily be done.
+For achieving scalability, it is required that a queue worker is stateless. As illustrated above, this is achieved by adding all relevant information to the message itself. In the example above, the AMQP message property `message.properties.appId` refers to the Webhook URL, `message.properties.correlationId` refers to the HMAC secret. The 'mis'use of these properties like this or in a similar fashion is required as the RabbitMQ implementation does not seem to support a generic message property like 'userdata' or 'options'. When conveying more information, it is also possible to JSON.stringify({...}) all relevant information into one of the message properties. This does not create an interoperability challenge as it is likely that the Hub and the Worker is implemented by the same entity. And therefore, the 'mis'use of RabbitMQ message properties for a specific purpose can easily be done.
 
 Beside the fault tolerant distribution of messages to Webhooks, the calculation of the HMAC for each message is now computed at the Worker. This also improves the deployment responsiveness, as different queues for different message size can be deployed to hosting environments with fit-for-purpose CPU and memory requirements. This ensures an optimized throughput even for large messages that require HMAC calculation.
 
