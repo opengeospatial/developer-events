@@ -2,7 +2,7 @@
 
 The https://docs.ogc.org/DRAFTS/21-045.html[draft OGC Features and Geometries JSON (JSON-FG) Standard] extends the GeoJSON format to support a limited set of additional capabilities that are out-of-scope for GeoJSON but that are important for a variety of use cases involving feature data (<<bib_jsonfg>>). In particular, the JSON-FG Standard specifies the following extensions to the GeoJSON format: 
 
-* the ability to use Coordinate Reference Systems (CRSs) other than WGS 84; 
+* the ability to use Coordinate Reference Systems (CRSs) other than WGS84; 
 * support for solids and prisms as geometry types; 
 * the ability to encode temporal characteristics of a feature; and
 * the ability to declare the type and the schema of a feature.
