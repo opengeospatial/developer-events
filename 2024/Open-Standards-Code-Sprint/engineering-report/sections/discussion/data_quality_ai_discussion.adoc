@@ -14,12 +14,9 @@ The OGC has been exploring the use of reusable building blocks to enable element
 
 The research question "Can we create machine readable provenance chains to enable scientific data re-creation?" was addressed through the work on pygeoapi. As presented in <<results_pygeoapi_processes_part2>>, pygeoapi was extended to implement support for ingesting a Common Workflow Language (CWL) definition document in accordance with the OGC API - Processes - Part 2: Deploy, Replace, Undeploy candidate Standard. The successful execution of the CWL workflows through pygeoapi also addressed the research question "Can machine readable provenance chains be automatable, and executable?". Finally, the research question "Can we use the OGC building block RAINBOW server to store and refer to mathematical formulae?" was partly addressed through the creation of data quality reports that referenced RAINBOW-provided definitions containing mathematical formulae as reported in <<results_iso19157_3>>. Unfortunately, it was not possible to inject new variables into the formula to execute the chain for another dataset. Therefore the research question "Can the formulae be parsed into machine readable formats, new variables injected, and the provenance chain executed?" remains to be answered in future code sprints.
 
+The sprint participants recommended that, in the future, the use cases for machine readable and executable provenance chains should be widened to include a specific ML training data use cases. The ability to sample, correct, and train large datasets should have a reproducible method for training models. The recommendations are as follows:
 
-====== Recommendations & Next Steps
-
-The use cases for machine readable and executable provenance chains should be widened to include a specific ML training data use case. The ability to sample, correct, and train large datasets should have a reproducible method for training models. The recommendations are as follows:
-
-* Run a CodeSpring focused on machine readable provenance chains, model reproducibility, and recording data quality.
+* Run a code sprint focused on machine readable provenance chains, model reproducibility, and recording data quality.
 * Update the RAINBOW server to offer executable code and variable injection to ensure the chains are machine readable.
 * Test the process with several different datasets with a focus on model reproducibility.
 * Feedback to ISO on findings.

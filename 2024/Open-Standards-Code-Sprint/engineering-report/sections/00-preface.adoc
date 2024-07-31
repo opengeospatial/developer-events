@@ -22,7 +22,7 @@ The focus of this Engineering Report (ER) is a code sprint that was held from Ju
 
 The MapML special track of the code sprint sought to prototype integration of a MapML viewer with implementations of OGC API Standards. The MapML specification extends the semantics of several HTML Standard elements, and specifies a small set of new, mapping-specific elements, in the http://www.w3.org/1999/xhtml[HTML namespace]. This engineering report concludes that the sprint participants proved that MapML has a role to play in the geospatial ecosystem and that MapML can be easily integrated into implementations of OGC API Standards.  
 
-The Data Quality and Artificial Intelligence track of the code sprint sought to implement support for the Training Data Markup Language for Artificial Intelligence (TrainingDML-AI) Standard and for a Data Quality Measures Register based on the ISO 19157 series of Standards. The TrainingDML-AI Standard offers a conceptual model and data encodings for geospatial machine learning training data. OGC published the conceptual model of the Standard in September 2023 and is considering a proposal for the JSON and XML encodings of the Standard.
+The Data Quality and Artificial Intelligence track of the code sprint sought to implement support for the Training Data Markup Language for Artificial Intelligence (TrainingDML-AI) Standard and for a Data Quality Measures Register based on the ISO 19157 series of Standards. The TrainingDML-AI Standard offers a conceptual model and data encodings for geospatial machine learning training data. The engineering report concludes that the use cases for machine readable and executable provenance chains should be widened to include a specific Machine Learning (ML) training data use cases. The ability to sample, correct, and train large datasets should have a reproducible method for training models.
 
 The Validators track of the code sprint sought to extend and implement various tools for testing datasets and products for compliance to OGC Standards. In a previous code sprint a https://geonovum-labs.github.io/json-fg-linter/[JSON-FG Linter] was developed. A linter checks the correctness of code or encoding format inside your editor while you are writing or editing. In this code sprint, some of the participants sought to expand on the previous work by creating a linter for OGC API - Features. Another team of participants sought to implement an Executable Test Suite (ETS) for TrainingDML-AI. The engineering report concludes that there is significant potential for client-side validators such as the Linter to enhance the developer experience, alongside server-side validators such as TEAM Engine.
 
@@ -49,6 +49,10 @@ The sprint participants made the following recommendations regarding future disc
 * Development of a roadmap for a possible TrainingDML-AI conformance class for OGC API - Records
 * Guidance on the consistency of scale between Observations, Measurements, and Samples (OMS) and the API Standards
 * Addition of a security element in future versions of TrainingDML-AI and other metadata encodings
+* Run a code sprint focused on machine readable provenance chains, model reproducibility, and recording data quality.
+* Update OGC RAINBOW to offer executable code and variable injection to ensure the chains are machine readable.
+* Test the process of machine readable provenance chains with several different datasets with a focus on model reproducibility.
+* Provide feedback to ISO/TC 211 on findings regarding Data Quality and AI.
 
 
 == Submitters

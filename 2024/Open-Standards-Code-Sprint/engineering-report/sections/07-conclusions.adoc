@@ -1,11 +1,13 @@
 [[conclusions]]
 == Conclusions
 
-The code sprint provided an environment for the development and testing of prototype implementations of open standards.
+The code sprint provided an environment for the development and testing of prototype implementations of open standards. The in-person participation of several editors of OGC Standards meant that developers could provide feedback to the editors almost instantly. Further, the collaborative environment enabled developers to identify issues in products, fix open issues, develop new product features, improve documentation, and test interoperability with 3rd party products. Futhermore, participants were able to share knowledge in the mentor stream sessions.
 
-Regarding MapML, this engineering report concludes that the sprint participants proved that MapML has a role to play in the geospatial ecosystem and that MapML can be easily integrated into implementations of OGC API Standards. 
+Regarding MapML, this engineering report concludes that the sprint participants proved that MapML has a role to play in the geospatial ecosystem and that MapML can be easily integrated into implementations of OGC API Standards. There are several potential avenues for future MapML within the OGC community, on both the innovation and standardization side. Therefore further discussion with the MapML community is needed to help chart a way forward for the specification.
 
 Regarding validators, the engineering report concludes that there is significant potential for client-side validators such as the Linter to enhance the developer experience, alongside server-side validators such as TEAM Engine. Such linters could be offered as a developer resource for those developers that would like to test their products rather than certify the products. TEAM Engine, as a server-side application, continues to be the ideal solution for certification of compliance to OGC Standards.
+
+Regarding Data Quality and AI, the engineering report concludes that the use cases for machine readable and executable provenance chains should be widened to include a specific Machine Learning (ML) training data use cases. The ability to sample, correct, and train large datasets should have a reproducible method for training models.
 
 Overall, this engineering report concludes that the code sprint met all of its objectives and achieved its goal of accelerating the development and implementation of OGC Standards in software products. The following subsection presents recommendations for future work.
 
@@ -38,4 +40,8 @@ The sprint participants made the following recommendations regarding future disc
 * Development of a roadmap for a possible TrainingDML-AI conformance class for OGC API - Records
 * Guidance on the consistency of scale between Observations, Measurements, and Samples (OMS) and the API Standards
 * Addition of a security element in future versions of TrainingDML-AI and other metadata encodings
+* Run a code sprint focused on machine readable provenance chains, model reproducibility, and recording data quality.
+* Update OGC RAINBOW to offer executable code and variable injection to ensure the chains are machine readable.
+* Test the process of machine readable provenance chains with several different datasets with a focus on model reproducibility.
+* Provide feedback to ISO/TC 211 on findings regarding Data Quality and AI.
 
