@@ -13,6 +13,6 @@ The linter is able to report on any errors that it detects on an implementation.
 image::images/linter2.png[]
 
 
-Testing the linter on example implementations of OGC API - Features resulted in discovering several small issues that were resolved by Clemens Portele (interactive instruments) during the code sprint. With the successful implementation of the linter during the code sprint, the team has taken the first steps toward making the linter/validator more generic. The results can be found here: https://github.com/Geonovum-labs/ogc-checker, a live demo is available here: https://geonovum-labs.github.io/ogc-checker/#/ogc-api
+Testing the linter on example implementations of OGC API - Features led to the discovery of a number of small issues that were resolved by Clemens Portele (interactive instruments) during the code sprint. With the successful implementation of the linter during the code sprint, the team has taken the first steps toward making the linter/validator more generic. The results can be found here: https://github.com/Geonovum-labs/ogc-checker, a live demo is available here: https://geonovum-labs.github.io/ogc-checker/#/ogc-api
 
 
