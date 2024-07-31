@@ -7,7 +7,7 @@ Regarding MapML, this engineering report concludes that the sprint participants 
 
 Regarding validators, the engineering report concludes that there is significant potential for client-side validators such as the Linter to enhance the developer experience, alongside server-side validators such as TEAM Engine. Such linters could be offered as a developer resource for those developers that would like to test their products rather than certify the products. TEAM Engine, as a server-side application, continues to be the ideal solution for certification of compliance to OGC Standards.
 
-Regarding Data Quality and AI, the engineering report concludes that the use cases for machine readable and executable provenance chains should be widened to include a specific Machine Learning (ML) training data use cases. The ability to sample, correct, and train large datasets should have a reproducible method for training models.
+Regarding Data Quality and AI, the engineering report concludes that the use cases for machine readable and executable provenance chains should be widened to include specific ML training data use cases. The ability to sample, correct, and train large datasets should have a reproducible method for training models.
 
 Overall, this engineering report concludes that the code sprint met all of its objectives and achieved its goal of accelerating the development and implementation of OGC Standards in software products. The following subsection presents recommendations for future work.
 
