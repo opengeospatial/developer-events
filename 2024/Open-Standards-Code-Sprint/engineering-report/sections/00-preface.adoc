@@ -22,23 +22,26 @@ The focus of this Engineering Report (ER) is a code sprint that was held from Ju
 
 The code sprint was held as a generic code sprint meaning that all OGC working groups were encouraged to participate in the event. As a result, several OGC Standards Working Groups (SWGs) set up teams of developers to collaborate during the three-day event. In addition to providing software developers with an environment for collaborative coding and experimentation, the code sprint also provided opportunities for thought leadership through presentations and tutorials in the Mentor Stream. This made the code sprint a rich environment for knowledge transfer across teams, as well as for nurturing cross-functional teams.
 
-The sprint participants made the following recommendations regarding future Collaborative Solutions and Innovation Program initiatives:
+The sprint participants made the following recommendations regarding potential experiments in future Collaborative Solutions and Innovation (COSI) Program initiatives:
 
-* Initiative for urban Digital Twins
-* CDB2 experimentation in the context of Digital Twins
 * OGC API - 3D Geovolumes experimentation in the context of Digital Twins
+* CDB2 experimentation in the context of Digital Twins
 * Experimentation on consistency of metadata frameworks
-* An activity building on the ISO metadata activity
 * Experimentation on consistency of parameter and schema fragements in APIs
-* Prototyping and experimentation on OGC API - Features and Geocoding
+* Experimentation on OGC API - Features and Geocoding
+
+The sprint participants made the following recommendations regarding prototype development in future COSI initiatives:
+
+* Initiative on Urban Digital Twins
+* An activity building on the ISO metadata activity
 * Prototyping of an HTML MapML validator, possibly as a service. See https://github.com/Maps4HTML/validator-mapml for ideas.
 * Prototyping of extension of MapML to enable it to consume the JSON-based payloads that are described in the OGC API family of standard
 
-The sprint participants made the following recommendations regarding future Standards Program initiatives:
+The sprint participants made the following recommendations regarding future discussions in working groups and the Standards Program:
 
-* Discussions on consistency of parameter and schema fragements in APIs
-* Discussion possibility of TrainingDML-AI conf class for Records
-* Discuss consistency of scale of OMS and APIs
+* Discussion on consistency of parameter and schema fragements in APIs
+* Discussion and a roadmap on possibility of a TrainingDML-AI conformance class for OGC API - Records
+* Guidnance on the consistency of scale between Observations, Measurements, and Samples (OMS) and the API Standards
 * Addition of a security element in future versions of TrainingDML-AI and other metadata encodings
 
 

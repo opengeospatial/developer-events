@@ -1,27 +1,35 @@
 [[conclusions]]
 == Conclusions
 
-TBA
+The sprint participants proved that MapML has a role to play in the geospatial ecosystem and that it can be easily integrated into implementations of OGC API Standards. 
 
 === Future Work
 
-==== OGC API Standards
+==== Experimentation
 
-TBA
+The sprint participants made the following recommendations regarding potential experiments in future Collaborative Solutions and Innovation (COSI) Program initiatives:
 
-==== OGC Encoding Standards
+* OGC API - 3D Geovolumes experimentation in the context of Digital Twins
+* CDB2 experimentation in the context of Digital Twins
+* Experimentation on consistency of metadata frameworks
+* Experimentation on consistency of parameter and schema fragements in APIs
+* Experimentation on OGC API - Features and Geocoding
 
-TBA
+==== Prototyping
 
-[[future_work_mapml]]
-==== MapML
+The sprint participants made the following recommendations regarding prototype development in future COSI initiatives:
 
-To make MapML more appealing to developers of server-side software, there should be consideration of how to enable MapML to consume the JSON-based payloads that are described in the OGC API family of standards rather than requiring them to be re-encoded in `text/mapml`. This could be an area for future development in a code sprint or other OGC initiative.
+* Initiative on Urban Digital Twins
+* An activity building on the ISO metadata activity
+* Prototyping of an HTML MapML validator, possibly as a service. See https://github.com/Maps4HTML/validator-mapml for ideas.
+* Prototyping of extension of MapML to enable it to consume the JSON-based payloads that are described in the OGC API family of standard
 
-==== Data Quality and Artificial Intelligence
+==== Standardization
 
-TBA
+The sprint participants made the following recommendations regarding future discussions in working groups and the Standards Program:
 
-==== Validators
+* Discussion on consistency of parameter and schema fragements in APIs
+* Discussion and a roadmap on possibility of a TrainingDML-AI conformance class for OGC API - Records
+* Guidnance on the consistency of scale between Observations, Measurements, and Samples (OMS) and the API Standards
+* Addition of a security element in future versions of TrainingDML-AI and other metadata encodings
 
-TBA
