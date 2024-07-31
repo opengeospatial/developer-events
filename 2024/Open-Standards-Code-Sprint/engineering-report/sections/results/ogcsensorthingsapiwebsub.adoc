@@ -268,7 +268,7 @@ log.setLevel(process.env.LOG_LEVEL || log.levels.DEBUG);
     const connection = await amqp.connect("amqp://localhost");
     const channel = await connection.createChannel();
 
-    process.once("SIGINT", async () => {
+    process.once("SIG---", async () => {
       await channel.close();
       await connection.close();
     });
