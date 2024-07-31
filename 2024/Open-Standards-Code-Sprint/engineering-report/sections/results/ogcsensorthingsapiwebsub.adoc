@@ -4,12 +4,12 @@ One objective of the EU https://citiobs.eu[CitiObs] project is to provide decisi
 
 When building such a decision support system, two important functional requirements have to be considered:
 
-* Fetching sensor data via STAplus using modern clients like https://orangedatamining.com/[Orange] or https://jupyter.org/[Jupiter Notebook]. The Orange plugin is currently work in progress, but for managing sensor data via SensorThings API or STAplus, the first version of a Python library is available on PyPi: https://pypi.org/project/staplus-client/[STAplus on PyPi].
-* Receiving updates of sensor reading based on self-set criteria. To support this requirement, the CitiObs team has started to develop (yet another) extension to SensorThings API: The WebSub Extension.
+* Fetching sensor data via STAplus using modern clients like https://orangedatamining.com/[Orange] or https://jupyter.org/[Jupiter Notebook]. The Orange plugin is currently in development, but for managing sensor data via SensorThings API or STAplus, the first version of a Python library is available on PyPi: https://pypi.org/project/staplus-client/[STAplus on PyPi].
+* Receiving updates of sensor readings based on self-set criteria. To support this requirement, the CitiObs team has started to develop (yet another) extension to SensorThings API: The WebSub Extension.
 
 This section of the Code Sprint Engineering Report introduces the WebSub extension and illustrates the current state of the implementation.
 
-The draft OGC Standard for https://github.com/opengeospatial/sensorthings/tree/24-032[SensorThings API WebSub Extension] is currently work in progress. The idea of this extension has been contributed to the OGC membership during the 2024 Delft and Montreal meetings. There seem to be great interest in the functionality of the WebSub Extension which sparked the idea to contribute to the 2024 Code Sprint in London and improve the current prototype.
+The https://github.com/opengeospatial/sensorthings/tree/24-032[SensorThings API WebSub Extension] candidate Standard is currently in development. The idea of this extension was presented to the OGC membership during the 2024 Delft and Montreal meetings. There seems to be great interest in the functionality of the WebSub Extension which sparked the idea to contribute to the 2024 Code Sprint in London and improve the current prototype.
 
 ===== Introduction to SensorThings API WebSub Extension
 
