@@ -1,0 +1,15 @@
+[appendix]
+== Example Use of Model Driven Standards with OGC API - Common
+
+This appendix presents a use of the Model Driven Standards (MDS) approach described in the OGC Guidance for the Development of Model-Driven Standards Discussion Paper (https://docs.ogc.org/dp/23-040.html[OGC 23-040]).
+
+The appendix is added here as input into future code sprints, which are expected to increasingly use MDS as the more editors and developers become familiar with the approach.
+
+[[conceptual-model]]
+[lutaml_uml_datamodel_description,./xmi-full/xmi-v2-4-2-default.xmi,lutaml_data_dictionary.yml]
+----
+[.diagram_include_block,base_path="./xmi-images",format="png"]
+....
+....
+
+----
