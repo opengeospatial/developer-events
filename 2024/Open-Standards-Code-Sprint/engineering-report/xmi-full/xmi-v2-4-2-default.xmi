@@ -1,5 +1,5 @@
 <?xml  version='1.0' encoding='windows-1252' ?>
-<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.omg.org/spec/UML/20110701">
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0">
 	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5" exporterID="1628"/>
 	<uml:Model xmi:type="uml:Model" name="EA_Model">
 		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_3DD366A7_7B35_491c_A006_293403765415" name="OGC API - Common">
@@ -359,7 +359,7 @@
 					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000094_72A5_4b04_8D59_21D0B54C3428" value="1"/>
 				</ownedAttribute>
 			</packagedElement>
-			<packagedElement xmi:type="uml:Class" xmi:id="EAID_00475E43_99B3_4782_BEFB_9B286AB7DE7D" name="Spatial">
+			<packagedElement xmi:type="uml:Class" xmi:id="EAID_00475E43_99B3_4782_BEFB_9B286AB7DE7D" name="SpatialExtent">
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_4408605A_E7A5_4b30_8A73_9AE92D625547" name="crs">
 					<type xmi:type="uml:PrimitiveType" href="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#String"/>
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000095_E7A5_4b30_8A73_9AE92D625547" value="1"/>
@@ -375,7 +375,7 @@
 					<type xmi:idref="EAID_DDE280A2_76D9_4fa0_A432_FC4267E8F809"/>
 				</ownedAttribute>
 			</packagedElement>
-			<packagedElement xmi:type="uml:Class" xmi:id="EAID_1FE5AFFC_C176_41e0_9D62_22095DBBF22A" name="Temporal">
+			<packagedElement xmi:type="uml:Class" xmi:id="EAID_1FE5AFFC_C176_41e0_9D62_22095DBBF22A" name="TemporalExtent">
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_439B0813_D84D_4fae_A13F_D4EDE78AB7D5" name="trs">
 					<type xmi:type="uml:PrimitiveType" href="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#String"/>
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000097_D84D_4fae_A13F_D4EDE78AB7D5" value="1"/>
@@ -386,6 +386,9 @@
 				</ownedAttribute>
 			</packagedElement>
 		</packagedElement>
+		<profileApplication xmi:type="uml:ProfileApplication" xmi:id="profileap_thecustomprofile">
+			<appliedProfile xmi:type="uml:Profile" href="http://www.sparxsystems.com/profiles/thecustomprofile/1.0#thecustomprofile"/>
+		</profileApplication>
 	</uml:Model>
 	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
 		<elements>
@@ -405,12 +408,12 @@
 			</element>
 			<element xmi:idref="EAID_547BEB7F_CDEA_48e0_A323_3172C0215FD6" xmi:type="uml:Class" name="CollectionDesc" scope="public">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" tpos="0" ea_localid="30" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:15:23" modified="2024-08-09 19:03:40" complexity="1" status="Proposed"/>
+				<properties documentation="Description of a collection" isSpecification="false" sType="Class" nType="0" scope="public" stereotype="type" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:15:23" modified="2024-08-09 20:56:43" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
-				<xrefs/>
+				<xrefs value="$XREFPROP=$XID={9BEC5DEF-C2CF-4dc7-87EF-210BAB86CB34}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=type;GUID={8B5D2040-A674-47e1-9C50-622A6406C071};@ENDSTEREO;$DES;$CLT={547BEB7F-CDEA-48e0-A323-3172C0215FD6}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="OGC API - Common"/>
 				<attributes>
 					<attribute xmi:idref="EAID_3DE8F3FF_306D_47ae_BF3C_3545F4C5B0EA" name="id" scope="Public">
@@ -617,12 +620,12 @@
 			</element>
 			<element xmi:idref="EAID_FB9693DE_C210_4a56_9260_020F6AE50A01" xmi:type="uml:Class" name="Collections" scope="public">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" tpos="0" ea_localid="29" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:15:15" modified="2024-08-09 19:03:27" complexity="1" status="Proposed"/>
+				<properties documentation="A set of geospatial resources that may be available as one or more sub-resource distributions that conform to one or more OGC API standards." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="type" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:15:15" modified="2024-08-09 20:58:42" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
-				<xrefs/>
+				<xrefs value="$XREFPROP=$XID={C1F3EA6E-FE1D-4e32-A488-E0D1B0E433D3}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=type;GUID={8B5D2040-A674-47e1-9C50-622A6406C071};@ENDSTEREO;$DES;$CLT={FB9693DE-C210-4a56-9260-020F6AE50A01}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="OGC API - Common"/>
 				<attributes>
 					<attribute xmi:idref="EAID_B128F4A4_EB89_4a35_9838_7FABF07AB8A1" name="timeStamp" scope="Public">
@@ -678,12 +681,12 @@
 			</element>
 			<element xmi:idref="EAID_7DCF586A_D9BF_4809_852E_23CF592B57E1" xmi:type="uml:Class" name="ConfClasses" scope="public">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" tpos="0" ea_localid="27" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 15:58:59" modified="2024-08-09 19:03:05" complexity="1" status="Proposed"/>
+				<properties documentation="A declaration of conformance classes that the API conforms to&#xA;" isSpecification="false" sType="Class" nType="0" scope="public" stereotype="type" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 15:58:59" modified="2024-08-09 20:59:50" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
-				<xrefs/>
+				<xrefs value="$XREFPROP=$XID={048EF8D4-3E4D-4545-9B4D-E6A16689B12C}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=type;GUID={8B5D2040-A674-47e1-9C50-622A6406C071};@ENDSTEREO;$DES;$CLT={7DCF586A-D9BF-4809-852E-23CF592B57E1}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="OGC API - Common"/>
 				<attributes>
 					<attribute xmi:idref="EAID_A345CE85_7042_4793_8995_E173D8252D3F" name="conformsTo" scope="Public">
@@ -705,12 +708,12 @@
 			</element>
 			<element xmi:idref="EAID_95559DCC_057D_4a1d_887A_383DE5327477" xmi:type="uml:Class" name="Enumeration" scope="public">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" tpos="0" ea_localid="37" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:16:36" modified="2024-08-09 19:03:33" complexity="1" status="Proposed"/>
+				<properties documentation="An enumerated list of valid string values." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="type" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:16:36" modified="2024-08-09 21:02:19" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
-				<xrefs/>
+				<xrefs value="$XREFPROP=$XID={971CCEA6-E6E9-46b0-BD3A-71902EFEC52E}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=type;GUID={8B5D2040-A674-47e1-9C50-622A6406C071};@ENDSTEREO;$DES;$CLT={95559DCC-057D-4a1d-887A-383DE5327477}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="OGC API - Common"/>
 				<attributes>
 					<attribute xmi:idref="EAID_E2A9B5B6_84F1_4caf_AA57_A7DEBCDD6C71" name="type" scope="Public">
@@ -747,12 +750,12 @@
 			</element>
 			<element xmi:idref="EAID_FAC86D55_9FB6_4a85_AC5F_2E85B85AE146" xmi:type="uml:Class" name="Exception" scope="public">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" tpos="0" ea_localid="28" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:15:06" modified="2024-08-09 19:03:20" complexity="1" status="Proposed"/>
+				<properties documentation="A schema for exceptions based on RFC 7807" isSpecification="false" sType="Class" nType="0" scope="public" stereotype="type" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:15:06" modified="2024-08-09 21:00:56" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
-				<xrefs/>
+				<xrefs value="$XREFPROP=$XID={B34F99B3-BF58-46d8-86FB-C59162262E78}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=type;GUID={8B5D2040-A674-47e1-9C50-622A6406C071};@ENDSTEREO;$DES;$CLT={FAC86D55-9FB6-4a85-AC5F-2E85B85AE146}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="OGC API - Common"/>
 				<attributes>
 					<attribute xmi:idref="EAID_121BA0B6_ED38_4a2a_B478_B0BD882056D3" name="type" scope="Public">
@@ -834,12 +837,12 @@
 			</element>
 			<element xmi:idref="EAID_C905273B_C3A7_4620_B55D_D82EC8717CB3" xmi:type="uml:Class" name="Extent" scope="public">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" tpos="0" ea_localid="31" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:15:36" modified="2024-08-09 19:03:54" complexity="1" status="Proposed"/>
+				<properties documentation="The extent of the data in the collection. In the Core only spatial and temporal extents are specified. Extensions may add additional members to represent other extents, for example, thermal or pressure ranges. The first item in the array describes the overall extent of the data. All subsequent items describe more precise extents, e.g., to identify clusters of data. Clients only interested in the overall extent will only need to access the first item in each array." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="type" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:15:36" modified="2024-08-09 21:04:20" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
-				<xrefs/>
+				<xrefs value="$XREFPROP=$XID={A1CD3DB8-8C24-42e0-9A12-39CFD258703C}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=type;GUID={8B5D2040-A674-47e1-9C50-622A6406C071};@ENDSTEREO;$DES;$CLT={C905273B-C3A7-4620-B55D-D82EC8717CB3}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="OGC API - Common"/>
 				<links>
 					<Association xmi:id="EAID_50F458AC_84A9_4fe9_BB18_595F34EFC165" start="EAID_C905273B_C3A7_4620_B55D_D82EC8717CB3" end="EAID_00475E43_99B3_4782_BEFB_9B286AB7DE7D"/>
@@ -849,12 +852,12 @@
 			</element>
 			<element xmi:idref="EAID_47E6F491_2986_4ace_96FF_7837235F4354" xmi:type="uml:Class" name="Extent-UAD" scope="public">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" tpos="0" ea_localid="32" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:16:11" modified="2024-08-09 19:03:49" complexity="1" status="Proposed"/>
+				<properties documentation="Extent with Uniform Additional Dimensions Schema" isSpecification="false" sType="Class" nType="0" scope="public" stereotype="type" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:16:11" modified="2024-08-09 21:05:09" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
-				<xrefs/>
+				<xrefs value="$XREFPROP=$XID={0B3CD1F2-E60C-43ac-BABB-E9FFE7C41221}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=type;GUID={8B5D2040-A674-47e1-9C50-622A6406C071};@ENDSTEREO;$DES;$CLT={47E6F491-2986-4ace-96FF-7837235F4354}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="OGC API - Common"/>
 				<attributes>
 					<attribute xmi:idref="EAID_F507993D_A28A_49de_8428_D2506A9A5864" name="interval" scope="Public">
@@ -956,12 +959,12 @@
 			</element>
 			<element xmi:idref="EAID_DDE280A2_76D9_4fa0_A432_FC4267E8F809" xmi:type="uml:Class" name="Grid" scope="public">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" tpos="0" ea_localid="45" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 17:28:42" modified="2024-08-09 19:04:09" complexity="1" status="Proposed"/>
+				<properties documentation="Provides information about the limited availability of data within the collection organized as a grid (regular or irregular) along the dimension." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="type" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 17:28:42" modified="2024-08-09 21:06:01" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
-				<xrefs/>
+				<xrefs value="$XREFPROP=$XID={F6A2030A-B08F-4691-B6D9-B524A12C0F5C}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=type;GUID={8B5D2040-A674-47e1-9C50-622A6406C071};@ENDSTEREO;$DES;$CLT={DDE280A2-76D9-4fa0-A432-FC4267E8F809}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="OGC API - Common"/>
 				<attributes>
 					<attribute xmi:idref="EAID_3F8AA017_FF52_43f8_A040_F5BAA30F6DB8" name="coordinates" scope="Public">
@@ -1018,12 +1021,12 @@
 			</element>
 			<element xmi:idref="EAID_60EBC506_D48B_4fc2_9068_9C175730DFBB" xmi:type="uml:Class" name="Items" scope="public">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" tpos="0" ea_localid="47" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 18:29:57" modified="2024-08-09 19:04:18" complexity="1" status="Proposed"/>
+				<properties documentation="Items in an array" isSpecification="false" sType="Class" nType="0" scope="public" stereotype="type" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 18:29:57" modified="2024-08-09 21:06:51" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
-				<xrefs/>
+				<xrefs value="$XREFPROP=$XID={0F38054C-3F1A-4faa-96F6-B6B5B340ADA4}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=type;GUID={8B5D2040-A674-47e1-9C50-622A6406C071};@ENDSTEREO;$DES;$CLT={60EBC506-D48B-4fc2-9068-9C175730DFBB}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="OGC API - Common"/>
 				<attributes>
 					<attribute xmi:idref="EAID_742826EE_49C7_4bb0_A599_1EE977DE2667" name="items" scope="Public">
@@ -1049,12 +1052,12 @@
 			</element>
 			<element xmi:idref="EAID_1ED8F45A_4E9E_4827_8B08_46359121FDD3" xmi:type="uml:Class" name="LandingPage" scope="public">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" tpos="0" ea_localid="38" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:09:34" modified="2024-08-09 19:06:53" complexity="1" status="Proposed"/>
+				<properties documentation="A page that serves as the root node of the API Resource tree and provides the information needed to navigate all the resources exposed through the API." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="type" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 16:09:34" modified="2024-08-09 21:09:30" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
-				<xrefs/>
+				<xrefs value="$XREFPROP=$XID={B7620CC7-A7AA-4053-BE9C-8798EA5DB904}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=type;GUID={8B5D2040-A674-47e1-9C50-622A6406C071};@ENDSTEREO;$DES;$CLT={1ED8F45A-4E9E-4827-8B08-46359121FDD3}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="OGC API - Common"/>
 				<attributes>
 					<attribute xmi:idref="EAID_56B03C90_E3CC_4894_AB6B_A1993C8FA03E" name="title" scope="Public">
@@ -1121,12 +1124,12 @@
 			</element>
 			<element xmi:idref="EAID_9F2CD02D_C0B5_4096_B84A_C3B7F6499680" xmi:type="uml:Class" name="Link" scope="public">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" tpos="0" ea_localid="39" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 15:58:59" modified="2024-08-09 19:03:15" complexity="1" status="Proposed"/>
+				<properties documentation="An expression of a relationship between resources." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="type" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 15:58:59" modified="2024-08-09 21:10:59" complexity="1" status="Proposed"/>
 				<code product_name="&lt;none&gt;" gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
-				<xrefs/>
+				<xrefs value="$XREFPROP=$XID={A970090A-E51B-4531-9E1B-3C64F36C866F}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=type;GUID={8B5D2040-A674-47e1-9C50-622A6406C071};@ENDSTEREO;$DES;$CLT={9F2CD02D-C0B5-4096-B84A-C3B7F6499680}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="OGC API - Common"/>
 				<attributes>
 					<attribute xmi:idref="EAID_797C05FA_B2C8_44c8_A82A_5083638ED312" name="href" scope="Public">
@@ -1225,14 +1228,14 @@
 					<Association xmi:id="EAID_91D0AF65_91DA_473c_B673_0345D6A8B6A5" start="EAID_547BEB7F_CDEA_48e0_A323_3172C0215FD6" end="EAID_9F2CD02D_C0B5_4096_B84A_C3B7F6499680"/>
 				</links>
 			</element>
-			<element xmi:idref="EAID_00475E43_99B3_4782_BEFB_9B286AB7DE7D" xmi:type="uml:Class" name="Spatial" scope="public">
+			<element xmi:idref="EAID_00475E43_99B3_4782_BEFB_9B286AB7DE7D" xmi:type="uml:Class" name="SpatialExtent" scope="public">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" tpos="0" ea_localid="41" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 17:21:55" modified="2024-08-09 19:04:05" complexity="1" status="Proposed"/>
+				<properties documentation="Spatial extent" isSpecification="false" sType="Class" nType="0" scope="public" stereotype="type" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 17:21:55" modified="2024-08-09 21:11:55" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
-				<xrefs/>
+				<xrefs value="$XREFPROP=$XID={4FCA7B87-63A6-4c8e-A810-6C986FF7F095}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=type;GUID={8B5D2040-A674-47e1-9C50-622A6406C071};@ENDSTEREO;$DES;$CLT={00475E43-99B3-4782-BEFB-9B286AB7DE7D}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="OGC API - Common"/>
 				<attributes>
 					<attribute xmi:idref="EAID_4408605A_E7A5_4b30_8A73_9AE92D625547" name="crs" scope="Public">
@@ -1258,14 +1261,14 @@
 					<Association xmi:id="EAID_50F458AC_84A9_4fe9_BB18_595F34EFC165" start="EAID_C905273B_C3A7_4620_B55D_D82EC8717CB3" end="EAID_00475E43_99B3_4782_BEFB_9B286AB7DE7D"/>
 				</links>
 			</element>
-			<element xmi:idref="EAID_1FE5AFFC_C176_41e0_9D62_22095DBBF22A" xmi:type="uml:Class" name="Temporal" scope="public">
+			<element xmi:idref="EAID_1FE5AFFC_C176_41e0_9D62_22095DBBF22A" xmi:type="uml:Class" name="TemporalExtent" scope="public">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" tpos="0" ea_localid="43" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 17:22:03" modified="2024-08-09 19:04:01" complexity="1" status="Proposed"/>
+				<properties documentation="Temporal extent" isSpecification="false" sType="Class" nType="0" scope="public" stereotype="type" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="gobehobona" version="1.0" phase="1.0" created="2024-08-09 17:22:03" modified="2024-08-09 21:11:50" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
-				<xrefs/>
+				<xrefs value="$XREFPROP=$XID={123C3F10-41C7-4515-944A-8CCA573923D2}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=type;GUID={8B5D2040-A674-47e1-9C50-622A6406C071};@ENDSTEREO;$DES;$CLT={1FE5AFFC-C176-41e0-9D62-22095DBBF22A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="OGC API - Common"/>
 				<attributes>
 					<attribute xmi:idref="EAID_439B0813_D84D_4fae_A13F_D4EDE78AB7D5" name="trs" scope="Public">
@@ -1444,7 +1447,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_00475E43_99B3_4782_BEFB_9B286AB7DE7D">
-					<model ea_localid="41" type="Class" name="Spatial"/>
+					<model ea_localid="41" type="Class" name="SpatialExtent"/>
 					<role name="spatial" visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -1479,7 +1482,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_1FE5AFFC_C176_41e0_9D62_22095DBBF22A">
-					<model ea_localid="43" type="Class" name="Temporal"/>
+					<model ea_localid="43" type="Class" name="TemporalExtent"/>
 					<role name="temporal" visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -1573,7 +1576,7 @@
 			</connector>
 			<connector xmi:idref="EAID_9AC4D7E2_8429_4ed1_869C_35617C5330EC">
 				<source xmi:idref="EAID_1FE5AFFC_C176_41e0_9D62_22095DBBF22A">
-					<model ea_localid="43" type="Class" name="Temporal"/>
+					<model ea_localid="43" type="Class" name="TemporalExtent"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="shared" containment="Unspecified"/>
 					<constraints/>
@@ -1608,7 +1611,7 @@
 			</connector>
 			<connector xmi:idref="EAID_E61ADD08_FD49_4385_AC59_8FE5061211B0">
 				<source xmi:idref="EAID_00475E43_99B3_4782_BEFB_9B286AB7DE7D">
-					<model ea_localid="41" type="Class" name="Spatial"/>
+					<model ea_localid="41" type="Class" name="SpatialExtent"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="shared" containment="Unspecified"/>
 					<constraints/>
@@ -1643,7 +1646,7 @@
 			</connector>
 			<connector xmi:idref="EAID_3072ED6B_2B2B_4132_92EC_E21D33338EEC">
 				<source xmi:idref="EAID_00475E43_99B3_4782_BEFB_9B286AB7DE7D">
-					<model ea_localid="41" type="Class" name="Spatial"/>
+					<model ea_localid="41" type="Class" name="SpatialExtent"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="shared" containment="Unspecified"/>
 					<constraints/>
@@ -1678,7 +1681,7 @@
 			</connector>
 			<connector xmi:idref="EAID_67221282_88A0_4a99_BACD_6F618102AE63">
 				<source xmi:idref="EAID_00475E43_99B3_4782_BEFB_9B286AB7DE7D">
-					<model ea_localid="41" type="Class" name="Spatial"/>
+					<model ea_localid="41" type="Class" name="SpatialExtent"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="shared" containment="Unspecified"/>
 					<constraints/>
@@ -1715,32 +1718,49 @@
 		<primitivetypes>
 			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package"/>
 		</primitivetypes>
-		<profiles/>
+		<profiles>
+			<uml:Profile xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmi:id="thecustomprofile" nsPrefix="thecustomprofile" name="thecustomprofile" metamodelReference="mmref01">
+				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="thecustomprofile">
+					<body> Version:1.0</body>
+				</ownedComment>
+				<packageImport xmi:id="mmref01">
+					<importedPackage href="http://www.omg.org/spec/UML/20110701"/>
+				</packageImport>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="type" name="type">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="type-base_Class" name="base_Class" association="Class_type">
+						<type href="http://www.omg.org/spec/UML/20110701/UML.xmi#Class"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_type" name="A_Class_type" memberEnd="extension_type type-base_Class">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_type" name="extension_type" type="type" isComposite="true" lower="0" upper="1" memberEnd="extension_type type-base_Class"/>
+				</packagedElement>
+			</uml:Profile>
+		</profiles>
 		<diagrams>
 			<diagram xmi:id="EAID_1D4EEC35_FEDC_4ab6_A5CD_C6E4081F5F3F">
 				<model package="EAPK_3DD366A7_7B35_491c_A006_293403765415" localID="2" owner="EAPK_3DD366A7_7B35_491c_A006_293403765415"/>
 				<properties name="Part 2 Classes" type="Logical"/>
-				<project author="gobehobona" version="1.0" created="2024-08-09 15:58:59" modified="2024-08-09 19:10:07"/>
+				<project author="gobehobona" version="1.0" created="2024-08-09 15:58:59" modified="2024-08-09 21:12:04"/>
 				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=826;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
-				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=02A83562;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=711AAE9F;"/>
 				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
 				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
 				<extendedProperties/>
-				<persistentstyle value="DGS=On=0:CNT=8:W=120:H=40:SG=0:SGH=0:AEB=0:;AR=0;DCL=0;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;Swimlanes=locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;"/>
+				<persistentstyle value="DGS=On=0:CNT=8:W=120:H=40:SG=0:SGH=0:AEB=0:;AR=0;DCL=0;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;Swimlanes=locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;;"/>
 				<xrefs/>
 				<elements>
 					<element geometry="Left=734;Top=651;Right=873;Bottom=721;imgL=888;imgT=912;imgR=1078;imgB=1007;" subject="EAID_60EBC506_D48B_4fc2_9068_9C175730DFBB" seqno="1" style="DUID=DF16AB99;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
-					<element geometry="Left=312;Top=662;Right=451;Bottom=732;imgL=312;imgT=927;imgR=502;imgB=1022;" subject="EAID_DDE280A2_76D9_4fa0_A432_FC4267E8F809" seqno="2" style="DUID=6ECC74A2;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
-					<element geometry="Left=464;Top=520;Right=603;Bottom=590;imgL=520;imgT=733;imgR=710;imgB=828;" subject="EAID_1FE5AFFC_C176_41e0_9D62_22095DBBF22A" seqno="3" style="DUID=F353C6BA;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=312;Top=662;Right=451;Bottom=747;imgL=312;imgT=927;imgR=502;imgB=1043;" subject="EAID_DDE280A2_76D9_4fa0_A432_FC4267E8F809" seqno="2" style="DUID=6ECC74A2;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=463;Top=520;Right=602;Bottom=590;imgL=519;imgT=733;imgR=708;imgB=828;" subject="EAID_1FE5AFFC_C176_41e0_9D62_22095DBBF22A" seqno="3" style="DUID=F353C6BA;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
 					<element geometry="Left=705;Top=496;Right=844;Bottom=566;imgL=849;imgT=700;imgR=1038;imgB=796;" subject="EAID_00475E43_99B3_4782_BEFB_9B286AB7DE7D" seqno="4" style="DUID=2FC15E9D;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
-					<element geometry="Left=766;Top=250;Right=891;Bottom=364;imgL=932;imgT=364;imgR=1103;imgB=520;" subject="EAID_9F2CD02D_C0B5_4096_B84A_C3B7F6499680" seqno="5" style="DUID=B4E6C1AA;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
-					<element geometry="Left=754;Top=131;Right=887;Bottom=219;imgL=916;imgT=202;imgR=1097;imgB=322;" subject="EAID_1ED8F45A_4E9E_4827_8B08_46359121FDD3" seqno="6" style="DUID=C4A638E6;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
-					<element geometry="Left=411;Top=382;Right=550;Bottom=496;imgL=448;imgT=544;imgR=637;imgB=700;" subject="EAID_47E6F491_2986_4ace_96FF_7837235F4354" seqno="7" style="DUID=F67DAEF6;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=766;Top=250;Right=891;Bottom=374;imgL=932;imgT=364;imgR=1103;imgB=534;" subject="EAID_9F2CD02D_C0B5_4096_B84A_C3B7F6499680" seqno="5" style="DUID=B4E6C1AA;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=754;Top=131;Right=887;Bottom=229;imgL=916;imgT=202;imgR=1097;imgB=336;" subject="EAID_1ED8F45A_4E9E_4827_8B08_46359121FDD3" seqno="6" style="DUID=C4A638E6;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=411;Top=382;Right=550;Bottom=506;imgL=448;imgT=544;imgR=637;imgB=714;" subject="EAID_47E6F491_2986_4ace_96FF_7837235F4354" seqno="7" style="DUID=F67DAEF6;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
 					<element geometry="Left=615;Top=374;Right=754;Bottom=444;imgL=726;imgT=534;imgR=916;imgB=629;" subject="EAID_C905273B_C3A7_4620_B55D_D82EC8717CB3" seqno="8" style="DUID=5A569B25;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
-					<element geometry="Left=584;Top=78;Right=723;Bottom=179;imgL=684;imgT=130;imgR=873;imgB=267;" subject="EAID_FAC86D55_9FB6_4a85_AC5F_2E85B85AE146" seqno="9" style="DUID=BF8EB357;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=584;Top=78;Right=723;Bottom=189;imgL=684;imgT=130;imgR=873;imgB=281;" subject="EAID_FAC86D55_9FB6_4a85_AC5F_2E85B85AE146" seqno="9" style="DUID=BF8EB357;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
 					<element geometry="Left=751;Top=29;Right=890;Bottom=99;imgL=912;imgT=63;imgR=1101;imgB=158;" subject="EAID_7DCF586A_D9BF_4809_852E_23CF592B57E1" seqno="10" style="DUID=9C29722E;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
 					<element geometry="Left=462;Top=194;Right=630;Bottom=295;imgL=517;imgT=288;imgR=746;imgB=426;" subject="EAID_FB9693DE_C210_4a56_9260_020F6AE50A01" seqno="11" style="DUID=42C2C51A;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
-					<element geometry="Left=118;Top=272;Right=302;Bottom=477;imgL=48;imgT=394;imgR=299;imgB=674;" subject="EAID_547BEB7F_CDEA_48e0_A323_3172C0215FD6" seqno="12" style="DUID=E11EEAF6;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=118;Top=272;Right=302;Bottom=487;imgL=48;imgT=394;imgR=299;imgB=688;" subject="EAID_547BEB7F_CDEA_48e0_A323_3172C0215FD6" seqno="12" style="DUID=E11EEAF6;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
 					<element geometry="Left=179;Top=149;Right=318;Bottom=219;imgL=131;imgT=227;imgR=321;imgB=322;" subject="EAID_95559DCC_057D_4a1d_887A_383DE5327477" seqno="13" style="DUID=790B00A9;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
 					<element geometry="SX=0;SY=-17;EX=0;EY=-13;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=CX=27:CY=14:OX=-31:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=CX=17:CY=14:OX=-13:OY=4:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_91D0AF65_91DA_473c_B673_0345D6A8B6A5" style="Mode=3;EOID=B4E6C1AA;SOID=E11EEAF6;Color=-1;LWidth=0;Hidden=0;"/>
 					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=CX=36:CY=14:OX=-1:OY=-9:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_2C326E33_E0AC_4850_BF42_6620FF9255F8" style="Mode=3;EOID=F67DAEF6;SOID=E11EEAF6;Color=-1;LWidth=0;Hidden=0;"/>
@@ -1758,4 +1778,17 @@
 			</diagram>
 		</diagrams>
 	</xmi:Extension>
+	<thecustomprofile:type base_Class="EAID_547BEB7F_CDEA_48e0_A323_3172C0215FD6"/>
+	<thecustomprofile:type base_Class="EAID_FB9693DE_C210_4a56_9260_020F6AE50A01"/>
+	<thecustomprofile:type base_Class="EAID_7DCF586A_D9BF_4809_852E_23CF592B57E1"/>
+	<thecustomprofile:type base_Class="EAID_95559DCC_057D_4a1d_887A_383DE5327477"/>
+	<thecustomprofile:type base_Class="EAID_FAC86D55_9FB6_4a85_AC5F_2E85B85AE146"/>
+	<thecustomprofile:type base_Class="EAID_C905273B_C3A7_4620_B55D_D82EC8717CB3"/>
+	<thecustomprofile:type base_Class="EAID_47E6F491_2986_4ace_96FF_7837235F4354"/>
+	<thecustomprofile:type base_Class="EAID_DDE280A2_76D9_4fa0_A432_FC4267E8F809"/>
+	<thecustomprofile:type base_Class="EAID_60EBC506_D48B_4fc2_9068_9C175730DFBB"/>
+	<thecustomprofile:type base_Class="EAID_1ED8F45A_4E9E_4827_8B08_46359121FDD3"/>
+	<thecustomprofile:type base_Class="EAID_9F2CD02D_C0B5_4096_B84A_C3B7F6499680"/>
+	<thecustomprofile:type base_Class="EAID_00475E43_99B3_4782_BEFB_9B286AB7DE7D"/>
+	<thecustomprofile:type base_Class="EAID_1FE5AFFC_C176_41e0_9D62_22095DBBF22A"/>
 </xmi:XMI>
