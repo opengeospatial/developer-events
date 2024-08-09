@@ -1,0 +1,23 @@
+packages:
+  - "OGC API - Common"
+#  - "Extended Conceptual Model"
+# external_classes:
+#   Boolean: "_boolean"
+#   Character: "_character"
+#   Characterstring: "_characterstring"
+#   CharacterString: "_characterstring"
+#   Date: "_date"
+#   Datetime: "_datetime"
+#   DateTime: "_datetime"
+#   Decimal: "_decimal"
+#   integer: "_integer"
+#   Integer: "_integer"
+#   number: "_number"
+#   Number: "_number"
+#   Real: "_real"
+#   Time: "_time"
+#   Uri: "_uri"
+#   URI: "_uri"
+section_depth: 3
+# render_style: data_dictionary
+# include_root: true
