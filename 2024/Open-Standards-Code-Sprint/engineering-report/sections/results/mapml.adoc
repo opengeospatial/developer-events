@@ -13,9 +13,9 @@ The original goal was to add MapML support by leveraging pygeoapi's plugin frame
 The prototype thus consisted of two-components:
 
 - A pygeoapi plugin that defined a tile-based data provider which knew how to respond to requests with
-the `Accept:text/mapml` header
+the `Accept:text/mapml` header; and
 
-- A small middleware for pygeoapi's Flask application which intercepted relevant requests and performed post-processing of the pygeoapi response in order to add support for MapML
+- A small middleware for pygeoapi's Flask application which intercepted relevant requests and performed post-processing of the pygeoapi response in order to add support for MapML.
 
 In order to test the results, a simple web-based client was also implemented as a separate application. This web client featured the `+<mapml-viewer>+` element and configured remote layers that were being fetched from our prototype.
 
@@ -152,7 +152,7 @@ image::images/HTMLwithMapML.png[width=800,align="center"]
 
 In both cases the MiraMon Map Server implementing OGC API - Maps is used twice:
 
-* It produces the initial response to the "minimalistic" map request (with no parameters) asking for  the HTML or MapML representation of the collection.
+* It produces the initial response to the "minimalistic" map request (with no parameters) asking for  the HTML or MapML representation of the collection; and
 * The MapML content uses the URL template mechanism to get an image map (in this case a PNG) of the current view and the subsequent views that the user will generate by panning and zooming into the map.
 
 The following code is common to both MapML responses (HTML or MapML versions). Please note that the OGC API - Maps is used to generate the PNGs maps. The HTML element `map-link` contains a link to a URL template that once "resolved" with the right `map-input` values become a call that conforms to the OGC API maps. This demonstrates that the current specification of MapML can use the new OGC API Maps with no modification.

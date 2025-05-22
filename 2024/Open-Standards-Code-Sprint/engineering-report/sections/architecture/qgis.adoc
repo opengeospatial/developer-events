@@ -20,7 +20,7 @@ During this code sprint, this functionality was tested for different OGC APIs, i
 
 An issue with relative links was identified on GDAL, which was affecting all the APIs. The issue was already fixed and is described https://opengeospatial.github.io/ogcna-auto-review/24-034.html#_gdal[here].
 
-The current status (using QGIS version 3.39.0-Master QGIS code revision 399f7df1c7 and GDAL/OGR version 3.10.0dev-126a88523a) is:
+The current status (using QGIS version 3.39.0-Master QGIS code revision 399f7df1c7 and GDAL/OGR version 3.10.0dev-126a88523a) is as follows.
 
 * OGC API - Features is not working as expected, as described on this https://github.com/qgis/QGIS/issues/58087[issue].
 * OGC API - Tiles (vector) is not working, as described on this https://github.com/qgis/QGIS/issues/58174[issue].

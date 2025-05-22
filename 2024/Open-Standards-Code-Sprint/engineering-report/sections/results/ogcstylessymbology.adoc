@@ -37,7 +37,7 @@ They were able to clarify some concepts, requirements and use cases and moved th
 These tasks include:
 
 * detailing the requirements, including examples of rendering with the corresponding link:https://docs.ogc.org/DRAFTS/18-067r4.html#rc-cscss[CartoSym-CSS encoding] examples in the Requirements Classes
-and appendix B: link:https://docs.ogc.org/DRAFTS/18-067r4.html#annex-sldse[Mapping of SLD/SE and notable vendor extensions to the Conceptual Model]
+and appendix B: link:https://docs.ogc.org/DRAFTS/18-067r4.html#annex-sldse[Mapping of SLD/SE and notable vendor extensions to the Conceptual Model],
 * update the UML class diagrams (see link:https://github.com/opengeospatial/styles-and-symbology/issues/74[#74]),
 * writing the Annex A: "Abstract Test Suite (Normative)" as already started link:https://github.com/maxcollombin/styles-and-symbology/tree/ats[here],
 * implementing transcoders and rendering engines,

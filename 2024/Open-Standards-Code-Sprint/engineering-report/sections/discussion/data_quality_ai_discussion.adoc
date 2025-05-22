@@ -4,7 +4,7 @@
 
 A key element of data quality is a record of how the dataset has been processed, including information about the computational manipulation as well as individuals and organizations who have completed the processing. In ISO 19115, this is described in the lineage classes, and specifically through the LE_Processing Class. This class enables recording of the specific processing and runtime parameters required to create a data quality metric and recreate the lineage if necessary.
 
-OGC has been exploring the use of reusable building blocks to enable elements of standards to be re-used, extended, and modified with a FAIR (Findable, Accessible, Interoperable, Reusable) way. As presented in <<results_iso19157_3>>, the code sprint participants examined the potential use of the ISO 19157-3 data quality measures register to support the documentation of TrainingDML-AI data quality reports. Some of the objectives of the data quality exploration work in this code sprint were to take these concepts to address the following questions:
+OGC has been exploring the use of reusable building blocks to enable elements of standards to be re-used, extended, and modified with a FAIR (Findable, Accessible, Interoperable, Reusable) way. As presented in <<results_iso19157_3>>, the code sprint participants examined the potential use of the ISO 19157-3 data quality measures register to support the documentation of TrainingDML-AI data quality reports. Some of the objectives of the data quality exploration work in this code sprint were to take these concepts to address the following questions.
 
 . Can we create machine-readable provenance chains to enable scientific data re-creation?
 . Can machine-readable provenance chains be automatable, and executable?
@@ -16,7 +16,7 @@ The research question "Can we create machine-readable provenance chains to enabl
 
 The sprint participants recommended that, in the future, the use cases for machine-readable and executable provenance chains should be widened to include specific ML training data use cases. The ability to sample, correct, and train large datasets should have a reproducible method for training models. The recommendations are as follows:
 
-* Run a code sprint focused on machine-readable provenance chains, model reproducibility, and recording data quality.
-* Update OGC RAINBOW to offer executable code and variable injection to ensure the chains are machine readable.
-* Test the process with several different datasets with a focus on model reproducibility.
+* Run a code sprint focused on machine-readable provenance chains, model reproducibility, and recording data quality;
+* Update OGC RAINBOW to offer executable code and variable injection to ensure the chains are machine readable;
+* Test the process with several different datasets with a focus on model reproducibility; and
 * Provide feedback to ISO/TC 211 on findings.

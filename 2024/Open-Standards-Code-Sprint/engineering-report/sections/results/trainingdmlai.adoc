@@ -6,8 +6,8 @@ Another sprint activity involved configuring a training dataset as a pygeometa m
 
 The feedback provided by sprint participants also enabled the SWG members from Wuhan University (WHU) to fix issues encountered in example files for the candidate Standard. Furthermore, the SWG members also participated in the discussions and supported the implementations by fellow sprint participants, which included:
 
-** Pixalytics Ltd (Sam Lavender) worked on updating their implementation, using the https://github.com/openrsgis/pytdml[pytdml] Python library. Problems were faced with recent updates to the library and so an https://github.com/openrsgis/pytdml/issues/11[issue] was raised.
-** TEAM Engine maintainers from OGC Staff worked on an Executable Test Suite (ETS) which will be integrated into OGC's compliance testing tools, in the future, to provide compliance testing of TrainingDML-AI datasets. A screenshot of TEAM Engine is shown in <<img_teamengine>>.
+* Pixalytics Ltd (Sam Lavender) worked on updating their implementation, using the https://github.com/openrsgis/pytdml[pytdml] Python library. Problems were faced with recent updates to the library and so an https://github.com/openrsgis/pytdml/issues/11[issue] was raised.
+* TEAM Engine maintainers from OGC Staff worked on an Executable Test Suite (ETS) which will be integrated into OGC's compliance testing tools, in the future, to provide compliance testing of TrainingDML-AI datasets. A screenshot of TEAM Engine is shown in <<img_teamengine>>.
 
 [#img_teamengine]
 .Screenshot of the TEAM Engine user interface with TrainingDML test results

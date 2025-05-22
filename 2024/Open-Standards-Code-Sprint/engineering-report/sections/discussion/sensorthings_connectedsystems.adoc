@@ -23,8 +23,8 @@ There was an observation made that the ability to identify, describe in detail a
 
 The key differentiators can therefore be summarized as follows:
 
-* The level of complexity of the system(s) and what you need to describe them
-* How you can query that complexity
-* Connectivity between the systems
+* The level of complexity of the system(s) and what you need to describe them;
+* How you can query that complexity; and
+* Connectivity between the systems.
 
 Taking the example of a satellite, the participants explained that an application that required knowledge of where a satellite was, how the satellite was operated, and the resulting observational data would require the capabilities offered by OGC API - Connected Systems. In contrast, an application that only required the resulting observational data and not details of the system collecting the data could be sufficiently supported by an implementation of the OGC SensorThings API.

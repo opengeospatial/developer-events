@@ -2,7 +2,7 @@
 
 One objective of the EU https://citiobs.eu[CitiObs] project is to provide decision makers with fit-for-purpose information about air quality collected from different base systems. Currently, each system collects data from sensors using proprietary APIs but makes the data available (to project partners) and the CitiObs decision support system via https://docs.ogc.org/is/22-022r1/22-022r1.html[STAplus]. STAplus, the https://docs.ogc.org/is/18-088/18-088.html[OGC SensorThings API] PLUS extension defines additional entities in the data model that support the sensor data management for Citizen Science.
 
-When building such a decision support system, two important functional requirements have to be considered:
+When building such a decision support system, two important functional requirements have to be considered.
 
 * Fetching sensor data via STAplus using modern clients like https://orangedatamining.com/[Orange] or https://jupyter.org/[Jupiter Notebook]. The Orange plugin is currently in development, but for managing sensor data via SensorThings API or STAplus, the first version of a Python library is available on PyPi: https://pypi.org/project/staplus-client/[STAplus on PyPi].
 * Receiving updates of sensor readings based on self-set criteria. To support this requirement, the CitiObs team has started to develop (yet another) extension to SensorThings API: The WebSub Extension.
@@ -111,7 +111,7 @@ Any Webhook to be used with the W3C WebSub protocol must support the validation 
 
 The Webhook.site menu offers `Custom Actions` to configure the functionality using JavaScript. The following steps illustrate the setup for the demo Webhook used during the Code Sprint:
 
-First, set global variables `$hub.topic = https://citiobs.demo.secure-dimensions.de/staplustest/v1.1/Observations` and `$hub.secret = 'my great secret'`.
+First, set global variables `$hub.topic = https://citiobs.demo.secure-dimensions.de/staplustest/v1.1/Observations` and `$hub.secret = 'my great secret'.'
 
 Then, configure HTTP GET functionality via JavaScript
 
@@ -169,7 +169,7 @@ if ('GET' == get('request.method')) {
 }
 ----
 
-To protect the Webhook from unauthorized execution, you can set an execution condition on the HTTP header `X-API-Key`:
+To protect the Webhook from unauthorized execution, you can set an execution condition on the HTTP header `X-API-Key:`
 
 [%unnumbered%]
 [source]
@@ -318,7 +318,7 @@ log.setLevel(process.env.LOG_LEVEL || log.levels.DEBUG);
 })();
 ----
 
-For achieving scalability, it is required that a queue worker is stateless. As illustrated above, this is achieved by adding all relevant information to the message itself. In the example above, the AMQP message property `message.properties.appId` refers to the Webhook URL, `message.properties.correlationId` refers to the HMAC secret. The 'mis'use of these properties like this or in a similar fashion is required as the RabbitMQ implementation does not seem to support a generic message property like 'userdata' or 'options'. When conveying more information, it is also possible to JSON.stringify({...}) all relevant information into one of the message properties. This does not create an interoperability challenge as it is likely that the Hub and the Worker is implemented by the same entity. And therefore, the 'mis'use of RabbitMQ message properties for a specific purpose can easily be done.
+For achieving scalability, it is required that a queue worker is stateless. As illustrated above, this is achieved by adding all relevant information to the message itself. In the example above, the AMQP message property `message.properties.appId` refers to the Webhook URL, `message.properties.correlationId` refers to the HMAC secret. The 'mis'use of these properties like this or in a similar fashion is required as the RabbitMQ implementation does not seem to support a generic message property like 'userdata' or 'options.' When conveying more information, it is also possible to JSON.stringify({...}) all relevant information into one of the message properties. This does not create an interoperability challenge as it is likely that the Hub and the Worker is implemented by the same entity. And therefore, the 'mis'use of RabbitMQ message properties for a specific purpose can easily be done.
 
 Beside the fault tolerant distribution of messages to Webhooks, the calculation of the HMAC for each message is now computed at the Worker. This also improves the deployment responsiveness, as different queues for different message size can be deployed to hosting environments with fit-for-purpose CPU and memory requirements. This ensures an optimized throughput even for large messages that require HMAC calculation.
 

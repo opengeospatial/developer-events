@@ -7,9 +7,9 @@
 :draft: 1.0
 :external-id: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
 :docnumber: 24-034
-:received-date: 2999-11-20
-:issued-date: 2999-01-25
-:published-date: 2999-03-30
+:received-date: 2024-09-17
+:issued-date: 2024-11-08
+:published-date: YYYY-MM-DD
 :fullname: Gobe Hobona
 :fullname_2: Joana Simoes
 :docsubtype: implementation

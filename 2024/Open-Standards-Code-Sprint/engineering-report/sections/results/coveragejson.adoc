@@ -4,7 +4,7 @@ CoverageJSON maintainers participated in the code sprint with a focus on identif
 
 Some of the potential opportunities for CoverageJSON identified during the code sprint included:
 
-* Registration of a media type application/cov+json with Internet Assigned Numbers Authority (IANA). 
-* Migration from an OGC Community Standard to a full OGC Standard. 
-* Improvement of the CoverageJSON ecosystem through GDAL and STAC Browser support, as well as through implementation of a Python-based validator.
+* Registration of a media type application/cov+json with Internet Assigned Numbers Authority (IANA);
+* Migration from an OGC Community Standard to a full OGC Standard;
+* Improvement of the CoverageJSON ecosystem through GDAL and STAC Browser support, as well as through implementation of a Python-based validator; and
 * Addition of CoverageJSON to the OGC Developer Website.

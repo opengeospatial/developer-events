@@ -30,28 +30,28 @@ The code sprint was held as a generic code sprint meaning that all OGC working g
 
 The sprint participants made the following recommendations regarding potential experiments in future Collaborative Solutions and Innovation (COSI) Program initiatives:
 
-* OGC API - 3D Geovolumes experimentation in the context of Digital Twins
-* CDB2 experimentation in the context of Digital Twins
-* Experimentation on consistency of metadata frameworks
-* Experimentation on consistency of parameter and schema fragments in APIs
-* Experimentation on OGC API - Features and Geocoding
+* OGC API - 3D Geovolumes experimentation in the context of Digital Twins;
+* CDB2 experimentation in the context of Digital Twins;
+* Experimentation on consistency of metadata frameworks;
+* Experimentation on consistency of parameter and schema fragments in APIs; and
+* Experimentation on OGC API - Features and Geocoding.
 
 The sprint participants made the following recommendations regarding prototype development in future COSI initiatives:
 
-* Initiative on Urban Digital Twins
-* An activity building on the ISO metadata activity
-* Prototyping of an HTML MapML validator, possibly as a service. See https://github.com/Maps4HTML/validator-mapml for ideas.
-* Prototyping of extension of MapML to enable it to consume the JSON-based payloads that are described in the OGC API family of standards
+* Initiative on Urban Digital Twins;
+* An activity building on the ISO metadata activity;
+* Prototyping of an HTML MapML validator, possibly as a service - see https://github.com/Maps4HTML/validator-mapml for ideas; and
+* Prototyping of extension of MapML to enable it to consume the JSON-based payloads that are described in the OGC API family of standards.
 
 The sprint participants made the following recommendations regarding future discussions in working groups and the Standards Program:
 
-* Discussion on consistency of parameter and schema fragments in APIs
-* Development of a roadmap for a possible TrainingDML-AI conformance class for OGC API - Records
-* Guidance on the consistency of scale between Observations, Measurements, and Samples (OMS) and the API Standards
-* Addition of a security element in future versions of TrainingDML-AI and other metadata encodings
-* Run a code sprint focused on machine-readable provenance chains, model reproducibility, and recording data quality.
-* Update OGC RAINBOW to offer executable code and variable injection to ensure the chains are machine readable.
-* Test the process of machine-readable provenance chains with several different datasets with a focus on model reproducibility.
+* Discussion on consistency of parameter and schema fragments in APIs;
+* Development of a roadmap for a possible TrainingDML-AI conformance class for OGC API - Records;
+* Guidance on the consistency of scale between Observations, Measurements, and Samples (OMS) and the API Standards;
+* Addition of a security element in future versions of TrainingDML-AI and other metadata encodings;
+* Run a code sprint focused on machine-readable provenance chains, model reproducibility, and recording data quality;
+* Update OGC RAINBOW to offer executable code and variable injection to ensure the chains are machine readable;
+* Test the process of machine-readable provenance chains with several different datasets with a focus on model reproducibility; and
 * Provide feedback to ISO/TC 211 on findings regarding Data Quality and AI.
 
 
